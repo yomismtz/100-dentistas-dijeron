@@ -9,18 +9,27 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 - Seguridad de datos: https://yomismtz.github.io/100-dentistas-dijeron/data-safety.html
 - Términos de uso: https://yomismtz.github.io/100-dentistas-dijeron/terms.html
 
-## Funciones actuales
+## Funciones V2
 
-- Base de 116 preguntas de distintas áreas de odontología.
-- 6 preguntas aleatorias por partida, sin repetirse dentro de la misma partida.
+- Base de 116 preguntas auditadas de distintas áreas de odontología.
+- 6 preguntas por partida, con selección equilibrada por especialidades y menor repetición de preguntas recientes.
 - Rondas 1–2 ×1, rondas 3–4 ×2 y rondas 5–6 ×3.
-- Respuestas ocultas, banco de puntos y marcador para dos equipos.
+- Careo al inicio de cada ronda; el equipo ganador puede jugar o pasar.
+- Respuesta por texto o por reconocimiento de voz del servicio instalado en Android.
+- Coincidencia local de respuestas con normalización, variantes y similitud aproximada.
+- Confirmación del docente cuando una respuesta es dudosa.
 - Máximo de 3 strikes; al tercero cambia el control y puede activarse el robo.
-- Cronómetro de 10 segundos por respuesta; al agotarse registra un strike.
+- Cronómetro configurable de 10, 15 o 20 segundos; por defecto 10 s.
+- Aviso sonoro en los últimos 3 segundos y strike automático al terminar el tiempo.
 - Selección de nombres y personajes para los equipos.
-- Celebración final con personaje ganador y trofeo.
-- Sonidos de inicio, acierto y error.
-- Funcionamiento local/offline en la versión actual.
+- Reacciones visuales de personajes y mensajes del diente-locutor.
+- Desempate mediante muerte súbita.
+- Resultados por ronda y marcador final.
+- Modo docente para pausar, revelar respuestas, corregir strikes, cambiar turno y consultar fuentes.
+- Explicación y fuente de referencia desde cada pregunta.
+- Modo estudio individual de 10 preguntas.
+- Editor local e importación JSON de preguntas personalizadas del docente.
+- Ajustes de accesibilidad: texto grande, reducción de animaciones, sonido y tiempo de respuesta.
 - Validación automática del banco: cada pregunta debe tener 3–5 respuestas y sumar 100 puntos base.
 
 ## Contenido académico
@@ -29,7 +38,7 @@ Los puntos del tablero son ponderaciones lúdicas y no porcentajes obtenidos de 
 
 ## Privacidad
 
-La versión actual no requiere cuenta y no declara permisos sensibles como ubicación, cámara, contactos o micrófono. Las preferencias del juego se guardan localmente. La política deberá actualizarse antes de publicar cualquier versión que incorpore reconocimiento de voz, analítica, servicios en línea u otros tratamientos de datos.
+La aplicación no requiere cuenta, no integra publicidad ni analítica propia y no transmite partidas a servidores del proyecto. La función opcional de voz utiliza el servicio de reconocimiento instalado en Android; la app recibe el texto reconocido pero no almacena grabaciones de audio. Las preferencias, preguntas recientes y preguntas personalizadas se guardan localmente.
 
 ## Compilar
 
@@ -41,4 +50,4 @@ gradle assembleDebug
 
 El APK queda en `app/build/outputs/apk/debug/app-debug.apk`.
 
-También puede compilarse desde **GitHub Actions**. El workflow valida primero el banco de preguntas y después genera el artefacto `100-dentistas-dijeron-debug-apk`.
+GitHub Actions valida el banco de preguntas y la sintaxis JavaScript antes de compilar el APK. Las ramas `chatgpt/**` también se compilan para pruebas sin sustituir automáticamente la versión estable de `main`.
