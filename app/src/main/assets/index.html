@@ -19,8 +19,8 @@
     <header class="topbar">
       <button id="prev" class="iconBtn" aria-label="Ronda anterior">◀</button>
       <div class="roundInfo">
-        <span id="round">Ronda 1</span>
-        <span id="progress">1 / 8</span>
+        <span id="round">Ronda 1 · ×1</span>
+        <span id="progress">1 / 6</span>
         <span id="turn">TURNO: EQUIPO 1</span>
       </div>
       <button id="menu" class="iconBtn" aria-label="Menú">☰</button>
@@ -29,6 +29,10 @@
     <section class="board">
       <div class="questionRow">
         <h1 id="question"></h1>
+        <div class="timerBox" title="Tiempo para responder">
+          <span>TIEMPO</span>
+          <div><strong id="timer">10</strong><small>s</small></div>
+        </div>
         <div class="bank" title="Puntos revelados en esta ronda"><span>BANCO</span><strong id="bank">0</strong></div>
       </div>
       <div id="answers" class="answers"></div>
