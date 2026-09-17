@@ -8,7 +8,7 @@ android {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
         targetSdk 35
-        versionCode 3
-        versionName '2.0-beta'
+        versionCode 4
+        versionName '2.1-tv-beta'
     }
 }
