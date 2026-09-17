@@ -2,6 +2,7 @@
 
 const $ = (s) => document.querySelector(s);
 const GAME_SIZE = 6;
+const TURN_SECONDS = 10;
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -27,6 +28,8 @@ let teamNames = ['EQUIPO 1', 'EQUIPO 2'];
 let awardHistory = [];
 let currentTeam = 0;
 let phase = 'play'; // play | steal | over
+let timerRemaining = TURN_SECONDS;
+let timerHandle = null;
 
 const audio = {
   start: $('#sndStart'),
@@ -74,6 +77,46 @@ function roundMultiplier(index = roundIndex) {
   return 3;
 }
 
+function gameVisible() {
+  return $('#game') && !$('#game').classList.contains('hidden');
+}
+
+function updateTimerUI() {
+  const timer = $('#timer');
+  if (!timer) return;
+  timer.textContent = phase === 'over' ? '—' : String(timerRemaining);
+  timer.classList.toggle('urgent', phase !== 'over' && timerRemaining <= 3);
+  timer.classList.toggle('paused', phase === 'over');
+}
+
+function stopTimer() {
+  if (timerHandle) {
+    clearInterval(timerHandle);
+    timerHandle = null;
+  }
+}
+
+function startTimer() {
+  stopTimer();
+  if (phase === 'over' || !gameVisible()) {
+    updateTimerUI();
+    return;
+  }
+
+  timerRemaining = TURN_SECONDS;
+  updateTimerUI();
+
+  timerHandle = setInterval(() => {
+    timerRemaining -= 1;
+    updateTimerUI();
+
+    if (timerRemaining <= 0) {
+      stopTimer();
+      addStrike('timeout');
+    }
+  }, 1000);
+}
+
 function updateScoreUI() {
   $('#s1').textContent = scores[0];
   $('#s2').textContent = scores[1];
@@ -109,10 +152,12 @@ function updateTurnUI() {
 
   $('#buzz').disabled = phase === 'over';
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || bank <= 0);
+  updateTimerUI();
 }
 
 function showRound(reset = true) {
   if (!questions.length) return;
+  stopTimer();
   roundIndex = Math.max(0, Math.min(roundIndex, questions.length - 1));
 
   if (reset) {
@@ -143,11 +188,13 @@ function showRound(reset = true) {
   });
 
   updateTurnUI();
+  startTimer();
 }
 
 function revealAnswer(idx, btn) {
   if (phase === 'over' || revealed[idx]) return;
 
+  stopTimer();
   revealed[idx] = true;
   btn.classList.remove('covered');
   btn.classList.add('revealed');
@@ -175,6 +222,7 @@ function revealAnswer(idx, btn) {
     );
   } else {
     updateTurnUI();
+    startTimer();
   }
 }
 
@@ -184,8 +232,9 @@ function flashThreeStrikes() {
   setTimeout(() => flash.classList.add('hidden'), 900);
 }
 
-function addStrike() {
+function addStrike(reason = 'manual') {
   if (phase === 'over') return;
+  stopTimer();
 
   if (phase === 'steal') {
     play(audio.bad);
@@ -197,7 +246,7 @@ function addStrike() {
     updateTurnUI();
 
     openModal(
-      `<h2>ROBO FALLIDO</h2>
+      `<h2>${reason === 'timeout' ? 'TIEMPO AGOTADO · ROBO FALLIDO' : 'ROBO FALLIDO'}</h2>
        <p><b>${teamNames[currentTeam]}</b> no encontró una respuesta del tablero.</p>
        <p>Los <b>${lostPoints} puntos</b> del banco se pierden y la ronda termina.</p>
        <p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
@@ -223,8 +272,8 @@ function addStrike() {
       openModal(
         `<h2>3 ERRORES · CAMBIO DE TURNO</h2>
          <p><b>${teamNames[previousTeam]}</b> pierde el control de la ronda.</p>
-         <p><b>${teamNames[currentTeam]}</b> tiene <b>una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p>
-         <p>Si acierta una respuesta todavía oculta, gana todo el banco. Si falla, esos puntos se pierden.</p>`
+         <p><b>${teamNames[currentTeam]}</b> tiene <b>10 segundos y una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p>
+         <p>Si acierta una respuesta todavía oculta, gana todo el banco. Si falla o se termina el tiempo, esos puntos se pierden.</p>`
       );
     } else {
       strikes = 0;
@@ -234,16 +283,18 @@ function addStrike() {
       openModal(
         `<h2>3 ERRORES · CAMBIO DE TURNO</h2>
          <p><b>${teamNames[previousTeam]}</b> pierde el turno.</p>
-         <p>Ahora juega <b>${teamNames[currentTeam]}</b>.</p>`
+         <p>Ahora juega <b>${teamNames[currentTeam]}</b> y tendrá 10 segundos para responder.</p>`
       );
     }
   } else {
     updateTurnUI();
+    startTimer();
   }
 }
 
 function awardBank(team) {
   if (bank <= 0 || phase === 'over') return;
+  stopTimer();
 
   const idx = team - 1;
   const pointsWon = bank;
@@ -277,6 +328,7 @@ function undoAward() {
   updateBankUI();
   updateStrikesUI();
   updateTurnUI();
+  startTimer();
 }
 
 function resetRound() {
@@ -289,6 +341,7 @@ function startNewGame() {
     return;
   }
 
+  stopTimer();
   chooseGameQuestions();
   scores = [0, 0];
   roundIndex = 0;
@@ -307,6 +360,7 @@ function startNewGame() {
 }
 
 function finishGame() {
+  stopTimer();
   phase = 'over';
   updateTurnUI();
 
@@ -331,19 +385,19 @@ function finishGame() {
   );
 
   $('#mAgain').onclick = () => {
-    closeModal();
+    closeModal(false);
     startNewGame();
   };
 
   $('#mHomeFinal').onclick = () => {
-    closeModal();
+    closeModal(false);
     $('#game').classList.add('hidden');
     $('#home').classList.remove('hidden');
   };
 }
 
 function nextRound() {
-  closeModal();
+  closeModal(false);
   if (roundIndex >= questions.length - 1) {
     finishGame();
     return;
@@ -353,7 +407,7 @@ function nextRound() {
 }
 
 function previousRound() {
-  closeModal();
+  closeModal(false);
   if (roundIndex <= 0) return;
   roundIndex -= 1;
   showRound(true);
@@ -361,6 +415,7 @@ function previousRound() {
 
 function renameTeam(team) {
   const idx = team - 1;
+  stopTimer();
   const name = prompt(`Nombre del equipo ${team}:`, teamNames[idx]);
   if (name && name.trim()) {
     teamNames[idx] = name.trim().toUpperCase().slice(0, 18);
@@ -368,15 +423,18 @@ function renameTeam(team) {
     updateTurnUI();
     saveState();
   }
+  if (gameVisible() && phase !== 'over') startTimer();
 }
 
 function openModal(html) {
+  stopTimer();
   $('#modalContent').innerHTML = html;
   $('#modal').classList.remove('hidden');
 }
 
-function closeModal() {
+function closeModal(resumeTimer = true) {
   $('#modal').classList.add('hidden');
+  if (resumeTimer && gameVisible() && phase !== 'over') startTimer();
 }
 
 function showHelp() {
@@ -386,12 +444,15 @@ function showHelp() {
       <li>La partida es para <b>2 equipos</b>.</li>
       <li>Cada partida usa <b>6 preguntas aleatorias</b> elegidas de toda la base.</li>
       <li>Las preguntas no se repiten dentro de la misma partida.</li>
+      <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
+      <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
+      <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 10 segundos.</li>
       <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
       <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
       <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
       <li>Al tercer error pierde el control y el turno pasa al rival.</li>
-      <li>Si había puntos en el banco, el rival dispone de <b>una sola respuesta</b> para robarlo.</li>
-      <li>Si el rival acierta, gana todo el banco. Si falla, el banco se pierde.</li>
+      <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
+      <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
       <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
       <li>Después de la ronda 6 se muestra el marcador final y el ganador.</li>
     </ol>
@@ -412,12 +473,13 @@ function showMenu() {
   $('#mHelp').onclick = showHelp;
   $('#mNew').onclick = () => {
     if (confirm('¿Terminar esta partida y sortear 6 preguntas nuevas?')) {
-      closeModal();
+      closeModal(false);
       startNewGame();
     }
   };
   $('#mHome').onclick = () => {
-    closeModal();
+    closeModal(false);
+    stopTimer();
     $('#game').classList.add('hidden');
     $('#home').classList.remove('hidden');
   };
@@ -442,18 +504,19 @@ async function loadQuestionPool() {
 
 loadState();
 loadQuestionPool();
+updateTimerUI();
 
 $('#start').onclick = startNewGame;
 $('#help').onclick = showHelp;
 $('#prev').onclick = previousRound;
 $('#next').onclick = nextRound;
-$('#buzz').onclick = addStrike;
+$('#buzz').onclick = () => addStrike('manual');
 $('#undo').onclick = undoAward;
 $('#resetRound').onclick = resetRound;
 $('#menu').onclick = showMenu;
-$('#closeModal').onclick = closeModal;
+$('#closeModal').onclick = () => closeModal(true);
 $('#modal').addEventListener('click', (e) => {
-  if (e.target === $('#modal')) closeModal();
+  if (e.target === $('#modal')) closeModal(true);
 });
 document.querySelectorAll('.award').forEach(b => b.onclick = () => awardBank(Number(b.dataset.team)));
 document.querySelectorAll('.teamName').forEach(b => b.onclick = () => renameTeam(Number(b.dataset.team)));
