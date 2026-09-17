@@ -1,7 +1,7 @@
 'use strict';
 
 const $ = (s) => document.querySelector(s);
-const GAME_SIZE = 8;
+const GAME_SIZE = 6;
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -68,6 +68,12 @@ function chooseGameQuestions() {
   questions = shuffle(questionPool).slice(0, Math.min(GAME_SIZE, questionPool.length));
 }
 
+function roundMultiplier(index = roundIndex) {
+  if (index <= 1) return 1;
+  if (index <= 3) return 2;
+  return 3;
+}
+
 function updateScoreUI() {
   $('#s1').textContent = scores[0];
   $('#s2').textContent = scores[1];
@@ -118,7 +124,8 @@ function showRound(reset = true) {
   }
 
   const q = questions[roundIndex];
-  $('#round').textContent = `RONDA ${roundIndex + 1}`;
+  const mult = roundMultiplier();
+  $('#round').textContent = `RONDA ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
   $('#question').textContent = q.q;
 
@@ -144,7 +151,10 @@ function revealAnswer(idx, btn) {
   revealed[idx] = true;
   btn.classList.remove('covered');
   btn.classList.add('revealed');
-  bank += Number(questions[roundIndex].a[idx][1]) || 0;
+
+  const basePoints = Number(questions[roundIndex].a[idx][1]) || 0;
+  const gainedPoints = basePoints * roundMultiplier();
+  bank += gainedPoints;
   updateBankUI();
   play(audio.good);
 
@@ -311,6 +321,8 @@ function finishGame() {
 
   openModal(
     `${result}
+     <p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p>
+     <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
      <p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>
      <div class="menuStack">
        <button id="mAgain">NUEVA PARTIDA ALEATORIA</button>
@@ -372,15 +384,16 @@ function showHelp() {
     <h2>¿Cómo se juega VS?</h2>
     <ol>
       <li>La partida es para <b>2 equipos</b>.</li>
-      <li>Cada partida usa <b>8 preguntas aleatorias</b> elegidas de toda la base.</li>
+      <li>Cada partida usa <b>6 preguntas aleatorias</b> elegidas de toda la base.</li>
       <li>Las preguntas no se repiten dentro de la misma partida.</li>
-      <li>Una respuesta correcta revela la casilla y suma sus puntos al <b>Banco</b>.</li>
+      <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
+      <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
       <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
       <li>Al tercer error pierde el control y el turno pasa al rival.</li>
       <li>Si había puntos en el banco, el rival dispone de <b>una sola respuesta</b> para robarlo.</li>
       <li>Si el rival acierta, gana todo el banco. Si falla, el banco se pierde.</li>
       <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
-      <li>Después de la ronda 8 se muestra el ganador y puede iniciarse otra partida con una combinación distinta.</li>
+      <li>Después de la ronda 6 se muestra el marcador final y el ganador.</li>
     </ol>
     <p>Base actual: <b>${questionPool.length || 116} preguntas</b>.</p>
   `);
@@ -398,7 +411,7 @@ function showMenu() {
 
   $('#mHelp').onclick = showHelp;
   $('#mNew').onclick = () => {
-    if (confirm('¿Terminar esta partida y sortear 8 preguntas nuevas?')) {
+    if (confirm('¿Terminar esta partida y sortear 6 preguntas nuevas?')) {
       closeModal();
       startNewGame();
     }
