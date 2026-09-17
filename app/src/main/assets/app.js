@@ -9,6 +9,9 @@ let bank = 0;
 let scores = [0, 0];
 let teamNames = ['EQUIPO 1', 'EQUIPO 2'];
 let awardHistory = [];
+let currentTeam = 0;
+let phase = 'play'; // play | steal | over
+let stealFromTeam = null;
 
 const audio = {
   start: $('#sndStart'),
@@ -51,6 +54,29 @@ function updateStrikesUI() {
   $('#strikes').textContent = '✖ '.repeat(strikes).trim();
 }
 
+function updateTurnUI() {
+  const turn = $('#turn');
+  const teams = document.querySelectorAll('.team');
+  teams.forEach((el, idx) => {
+    el.classList.toggle('active', phase !== 'over' && idx === currentTeam);
+    el.classList.toggle('steal', phase === 'steal' && idx === currentTeam);
+  });
+
+  if (phase === 'steal') {
+    turn.textContent = `ROBO: ${teamNames[currentTeam]}`;
+    $('#buzz').textContent = '✖ FALLÓ ROBO';
+  } else if (phase === 'over') {
+    turn.textContent = 'RONDA TERMINADA';
+    $('#buzz').textContent = '✖ ERROR';
+  } else {
+    turn.textContent = `TURNO: ${teamNames[currentTeam]}`;
+    $('#buzz').textContent = '✖ ERROR';
+  }
+
+  $('#buzz').disabled = phase === 'over';
+  document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || bank <= 0);
+}
+
 function showRound(reset = true) {
   if (!questions.length) return;
   roundIndex = (roundIndex + questions.length) % questions.length;
@@ -58,6 +84,9 @@ function showRound(reset = true) {
     revealed = Array(questions[roundIndex].a.length).fill(false);
     strikes = 0;
     bank = 0;
+    phase = 'play';
+    stealFromTeam = null;
+    currentTeam = roundIndex % 2;
   }
   const q = questions[roundIndex];
   $('#round').textContent = `RONDA ${roundIndex + 1}`;
@@ -74,40 +103,98 @@ function showRound(reset = true) {
     btn.addEventListener('click', () => revealAnswer(idx, btn));
     box.appendChild(btn);
   });
+  updateTurnUI();
   saveState();
 }
 
 function revealAnswer(idx, btn) {
-  if (revealed[idx]) return;
+  if (phase === 'over' || revealed[idx]) return;
   revealed[idx] = true;
   btn.classList.remove('covered');
   btn.classList.add('revealed');
   bank += Number(questions[roundIndex].a[idx][1]) || 0;
   updateBankUI();
   play(audio.good);
+
+  if (phase === 'steal') {
+    const pointsWon = bank;
+    awardHistory.push({team: currentTeam, points: pointsWon});
+    scores[currentTeam] += pointsWon;
+    bank = 0;
+    phase = 'over';
+    updateScoreUI();
+    updateBankUI();
+    updateTurnUI();
+    saveState();
+    openModal(`<h2>¡ROBO EXITOSO!</h2><p><b>${teamNames[currentTeam]}</b> encontró una respuesta del tablero y gana <b>${pointsWon} puntos</b>.</p><p>La ronda terminó. Pulsa ▶ para continuar.</p>`);
+  } else {
+    updateTurnUI();
+  }
+}
+
+function flashThreeStrikes() {
+  const flash = $('#strikeFlash');
+  flash.classList.remove('hidden');
+  setTimeout(() => flash.classList.add('hidden'), 900);
 }
 
 function addStrike() {
+  if (phase === 'over') return;
+
+  if (phase === 'steal') {
+    play(audio.bad);
+    flashThreeStrikes();
+    const lostPoints = bank;
+    bank = 0;
+    phase = 'over';
+    updateBankUI();
+    updateStrikesUI();
+    updateTurnUI();
+    saveState();
+    openModal(`<h2>ROBO FALLIDO</h2><p><b>${teamNames[currentTeam]}</b> no encontró una respuesta del tablero.</p><p>Los <b>${lostPoints} puntos</b> del banco se pierden y la ronda termina.</p><p>Pulsa ▶ para continuar.</p>`);
+    return;
+  }
+
   if (strikes >= 3) return;
   strikes += 1;
   updateStrikesUI();
   play(audio.bad);
+
   if (strikes === 3) {
-    const flash = $('#strikeFlash');
-    flash.classList.remove('hidden');
-    setTimeout(() => flash.classList.add('hidden'), 900);
+    flashThreeStrikes();
+    const previousTeam = currentTeam;
+    strikes = 0;
+    updateStrikesUI();
+    currentTeam = 1 - currentTeam;
+
+    if (bank > 0) {
+      phase = 'steal';
+      stealFromTeam = previousTeam;
+      updateTurnUI();
+      openModal(`<h2>3 ERRORES · CAMBIO DE TURNO</h2><p><b>${teamNames[previousTeam]}</b> pierde el control de la ronda.</p><p><b>${teamNames[currentTeam]}</b> tiene <b>una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p><p>Si acierta una respuesta que aún está oculta, gana todo el banco. Si falla, esos puntos se pierden.</p>`);
+    } else {
+      phase = 'play';
+      updateTurnUI();
+      openModal(`<h2>3 ERRORES · CAMBIO DE TURNO</h2><p><b>${teamNames[previousTeam]}</b> pierde el turno.</p><p>Ahora juega <b>${teamNames[currentTeam]}</b>.</p>`);
+    }
+  } else {
+    updateTurnUI();
   }
 }
 
 function awardBank(team) {
-  if (bank <= 0) return;
+  if (bank <= 0 || phase === 'over') return;
   const idx = team - 1;
-  awardHistory.push({team: idx, points: bank});
-  scores[idx] += bank;
+  const pointsWon = bank;
+  awardHistory.push({team: idx, points: pointsWon});
+  scores[idx] += pointsWon;
   bank = 0;
+  phase = 'over';
   updateScoreUI();
   updateBankUI();
+  updateTurnUI();
   saveState();
+  openModal(`<h2>BANCO ASIGNADO</h2><p><b>${teamNames[idx]}</b> recibe <b>${pointsWon} puntos</b>.</p><p>La ronda terminó. Pulsa ▶ para continuar.</p>`);
 }
 
 function undoAward() {
@@ -115,8 +202,13 @@ function undoAward() {
   if (!last) return;
   scores[last.team] = Math.max(0, scores[last.team] - last.points);
   bank += last.points;
+  currentTeam = last.team;
+  phase = 'play';
+  strikes = 0;
   updateScoreUI();
   updateBankUI();
+  updateStrikesUI();
+  updateTurnUI();
   saveState();
 }
 
@@ -137,6 +229,7 @@ function renameTeam(team) {
   if (name && name.trim()) {
     teamNames[idx] = name.trim().toUpperCase().slice(0, 18);
     updateScoreUI();
+    updateTurnUI();
     saveState();
   }
 }
@@ -149,15 +242,18 @@ function closeModal() { $('#modal').classList.add('hidden'); }
 
 function showHelp() {
   openModal(`
-    <h2>¿Cómo se juega?</h2>
+    <h2>¿Cómo se juega VS?</h2>
     <ol>
-      <li>Toca una respuesta para revelarla y sumar sus puntos al <b>Banco</b>.</li>
-      <li>Usa <b>✖ Error</b> para registrar hasta tres fallos.</li>
-      <li>Al terminar la ronda, pulsa <b>+ Banco</b> bajo el equipo que ganó esos puntos.</li>
-      <li>Usa ◀ y ▶ para cambiar de ronda. ↶ deshace la última asignación de puntos.</li>
-      <li>Toca el nombre de un equipo para cambiarlo.</li>
+      <li>La partida es para <b>2 equipos</b>. El equipo activo aparece resaltado.</li>
+      <li>Una respuesta correcta revela la casilla y suma sus puntos al <b>Banco</b>.</li>
+      <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
+      <li>Al tercer error pierde el control de la ronda y el turno pasa automáticamente al rival.</li>
+      <li>Si ya había puntos en el banco, el rival entra en <b>modo ROBO</b> y tiene una sola respuesta.</li>
+      <li>Si el rival acierta, gana todo el banco. Si falla, el banco se pierde.</li>
+      <li><b>DAR BANCO</b> queda como control manual del moderador para cerrar una ronda cuando sea necesario.</li>
+      <li>◀ y ▶ cambian de ronda. ↶ deshace la última asignación de puntos.</li>
     </ol>
-    <p>El juego funciona completamente sin internet.</p>
+    <p>Las rondas alternan qué equipo comienza para que ambos tengan oportunidad de iniciar.</p>
   `);
 }
 
