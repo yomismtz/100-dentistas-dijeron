@@ -139,21 +139,33 @@ function orDrawQr(canvas,url){
 function orQrCard(label,url,id){
   return '<div class="qrCard"><h3>'+label+'</h3><canvas id="'+id+'"></canvas><input readonly value="'+orEsc(url)+'"></div>';
 }
+function offlineTeacherAccessPanel(){
+  const base=orBase();
+  if(!base){openModal('<h2>🎓 CONTROL DOCENTE</h2><p>Servidor local no disponible todavía.</p>');return;}
+  const url=base+'/t';
+  let pin='';
+  try{if(window.Android&&Android.getTeacherPin)pin=String(Android.getTeacherPin()||'');}catch(_){}
+  openModal('<h2>🎓 ACCESO DOCENTE PRIVADO</h2>'+
+    '<p>No proyectes esta pantalla a los estudiantes.</p>'+
+    '<div class="teacherPinBox"><span>PIN DOCENTE</span><b>'+orEsc(pin||'—')+'</b></div>'+
+    '<div class="qrGrid singleQr">'+orQrCard('CONTROL DOCENTE',url,'qrt')+'</div>');
+  const q=$('#qrt');if(q)orDrawQr(q,url);
+}
 function offlineClassroomPanel(){
   const base=orBase();
-  if(!base){openModal('<h2>📡 AULA OFFLINE</h2><p>Servidor local no disponible.</p>');return;}
-  const u1=base+'/1',u2=base+'/2',ut=base+'/t',ue=base+'/e',ur=base+'/r';
+  if(!base){openModal('<h2>📡 AULA OFFLINE</h2><p>El servidor local todavía no está disponible. Espera un momento o activa Wi‑Fi/hotspot y vuelve a abrir esta pantalla.</p>');return;}
+  const u1=base+'/1',u2=base+'/2',ue=base+'/e',ur=base+'/r';
   const warning=base.indexOf('127.0.0.1')>=0?'<p class="warningBox">⚠️ Activa Wi‑Fi o hotspot para obtener una dirección local que los otros celulares puedan abrir.</p>':'';
   openModal('<h2>📡 AULA OFFLINE · QR</h2>'+
     '<p>Todos los equipos deben estar en la misma red Wi‑Fi o hotspot. No se requiere Internet.</p>'+warning+
     '<div class="qrGrid">'+
       orQrCard('🔴 PULSADOR EQUIPO 1',u1,'qr1')+
       orQrCard('🔴 PULSADOR EQUIPO 2',u2,'qr2')+
-      orQrCard('🎓 CONTROL DOCENTE',ut,'qrt')+
       orQrCard('📝 EXAMEN INDIVIDUAL',ue,'qre')+
       orQrCard('📚 REFERENCIA ACTUAL',ur,'qrr')+
-    '</div>');
-  [['qr1',u1],['qr2',u2],['qrt',ut],['qre',ue],['qrr',ur]].forEach(function(x){const c=$('#'+x[0]);if(c)orDrawQr(c,x[1]);});
+    '</div><button id="showTeacherAccess" class="secondaryWide">🔐 MOSTRAR ACCESO DOCENTE PRIVADO</button>');
+  [['qr1',u1],['qr2',u2],['qre',ue],['qrr',ur]].forEach(function(x){const c=$('#'+x[0]);if(c)orDrawQr(c,x[1]);});
+  $('#showTeacherAccess').onclick=offlineTeacherAccessPanel;
 }
 
 window.onRemoteTeacherCommand=function(command,arg){
