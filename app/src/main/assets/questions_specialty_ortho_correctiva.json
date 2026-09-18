@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "registros",
+    "q": "¿Qué registros son habituales en planificación ortodóncica correctiva?",
+    "a": [
+      [
+        "Historia y examen clínico",
+        40
+      ],
+      [
+        "Fotografías",
+        30
+      ],
+      [
+        "Modelos o escaneos",
+        20
+      ],
+      [
+        "Radiografías indicadas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "componentes fijos",
+    "q": "¿Qué componentes forman parte de una aparatología fija convencional?",
+    "a": [
+      [
+        "Brackets",
+        40
+      ],
+      [
+        "Tubos o bandas molares",
+        30
+      ],
+      [
+        "Arcos de alambre",
+        20
+      ],
+      [
+        "Ligaduras o mecanismos de sujeción",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "movimientos",
+    "q": "¿Qué movimientos dentarios pueden buscarse con ortodoncia?",
+    "a": [
+      [
+        "Inclinación",
+        40
+      ],
+      [
+        "Traslación",
+        30
+      ],
+      [
+        "Rotación",
+        20
+      ],
+      [
+        "Intrusión o extrusión",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "retencion",
+    "q": "¿Qué objetivos tiene la retención tras tratamiento correctivo?",
+    "a": [
+      [
+        "Mantener posiciones logradas",
+        40
+      ],
+      [
+        "Permitir reorganización periodontal",
+        30
+      ],
+      [
+        "Disminuir recaída",
+        20
+      ],
+      [
+        "Mantener estabilidad oclusal",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "anchorage",
+    "q": "¿Qué fuentes de anclaje pueden utilizarse durante tratamiento?",
+    "a": [
+      [
+        "Dientes",
+        40
+      ],
+      [
+        "Arcos dentarios opuestos",
+        30
+      ],
+      [
+        "Aparatos extraorales",
+        20
+      ],
+      [
+        "Dispositivos de anclaje temporal",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "elastics",
+    "q": "¿Qué objetivos pueden tener los elásticos intermaxilares?",
+    "a": [
+      [
+        "Corrección sagital",
+        40
+      ],
+      [
+        "Asentamiento oclusal",
+        30
+      ],
+      [
+        "Corrección de líneas medias",
+        20
+      ],
+      [
+        "Correcciones verticales seleccionadas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "cefalometria",
+    "q": "¿Qué relaciones puede ayudar a valorar una cefalometría lateral?",
+    "a": [
+      [
+        "Sagitales esqueléticas",
+        40
+      ],
+      [
+        "Verticales esqueléticas",
+        30
+      ],
+      [
+        "Inclinación dentaria",
+        20
+      ],
+      [
+        "Perfil de tejidos blandos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "extracciones",
+    "q": "¿Qué factores se valoran antes de indicar extracciones ortodóncicas?",
+    "a": [
+      [
+        "Discrepancia de espacio",
+        40
+      ],
+      [
+        "Perfil facial",
+        30
+      ],
+      [
+        "Relaciones sagitales",
+        20
+      ],
+      [
+        "Posición e inclinación incisiva",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "higiene",
+    "q": "¿Qué cuidados reducen problemas durante tratamiento fijo?",
+    "a": [
+      [
+        "Cepillado cuidadoso",
+        40
+      ],
+      [
+        "Limpieza interdental",
+        30
+      ],
+      [
+        "Control dietético",
+        20
+      ],
+      [
+        "Revisiones periodontales y de caries",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "basic",
+    "subtopic": "finalizacion",
+    "q": "¿Qué aspectos se revisan al finalizar tratamiento correctivo?",
+    "a": [
+      [
+        "Alineación y nivelación",
+        40
+      ],
+      [
+        "Relaciones oclusales",
+        30
+      ],
+      [
+        "Líneas medias",
+        20
+      ],
+      [
+        "Plan de retención",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "cefalometria",
+    "q": "¿Qué medidas o relaciones suelen interpretarse junto con otras para valorar discrepancia sagital?",
+    "a": [
+      [
+        "SNA",
+        40
+      ],
+      [
+        "SNB",
+        30
+      ],
+      [
+        "ANB",
+        20
+      ],
+      [
+        "Evaluación clínica del perfil y oclusión",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "vertical",
+    "q": "¿Qué variables ayudan a valorar patrón vertical en cefalometría?",
+    "a": [
+      [
+        "Ángulo del plano mandibular",
+        40
+      ],
+      [
+        "Alturas faciales",
+        30
+      ],
+      [
+        "Relación de planos de referencia",
+        20
+      ],
+      [
+        "Rotación mandibular",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "space closure",
+    "q": "¿Qué factores influyen en cierre de espacios ortodóncicos?",
+    "a": [
+      [
+        "Magnitud de fuerza",
+        40
+      ],
+      [
+        "Control de anclaje",
+        30
+      ],
+      [
+        "Fricción del sistema",
+        20
+      ],
+      [
+        "Posición radicular",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "torque tip",
+    "q": "¿Qué características del bracket y arco influyen en expresión de tip y torque?",
+    "a": [
+      [
+        "Prescripción del bracket",
+        40
+      ],
+      [
+        "Dimensión del arco",
+        30
+      ],
+      [
+        "Holgura arco-ranura",
+        20
+      ],
+      [
+        "Posición de pegado",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "anchorage reinforcement",
+    "q": "¿Qué métodos pueden reforzar anclaje?",
+    "a": [
+      [
+        "Arcos auxiliares",
+        40
+      ],
+      [
+        "Elásticos o aparatos extraorales",
+        30
+      ],
+      [
+        "Dispositivos de anclaje temporal",
+        20
+      ],
+      [
+        "Distribución estratégica de fuerzas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "root resorption",
+    "q": "¿Qué factores ameritan vigilancia por riesgo de reabsorción radicular externa durante ortodoncia?",
+    "a": [
+      [
+        "Duración prolongada de tratamiento",
+        40
+      ],
+      [
+        "Movimientos extensos",
+        30
+      ],
+      [
+        "Historia de raíces anómalas o traumatizadas",
+        20
+      ],
+      [
+        "Fuerzas inapropiadamente elevadas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "periodonto",
+    "q": "¿Qué condiciones periodontales deben controlarse antes y durante ortodoncia?",
+    "a": [
+      [
+        "Inflamación gingival",
+        40
+      ],
+      [
+        "Pérdida de inserción",
+        30
+      ],
+      [
+        "Higiene deficiente",
+        20
+      ],
+      [
+        "Biotipo y recesiones en movimientos de riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "aligners",
+    "q": "¿Qué variables influyen en éxito de alineadores transparentes?",
+    "a": [
+      [
+        "Selección del movimiento",
+        40
+      ],
+      [
+        "Uso suficiente por el paciente",
+        30
+      ],
+      [
+        "Diseño de attachments",
+        20
+      ],
+      [
+        "Planificación secuencial",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "tads",
+    "q": "¿Qué indicaciones pueden justificar dispositivos de anclaje temporal?",
+    "a": [
+      [
+        "Anclaje máximo",
+        40
+      ],
+      [
+        "Intrusión seleccionada",
+        30
+      ],
+      [
+        "Distalización o mesialización controlada",
+        20
+      ],
+      [
+        "Corrección asimétrica",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "intermediate",
+    "subtopic": "finishing",
+    "q": "¿Qué detalles forman parte del acabado ortodóncico?",
+    "a": [
+      [
+        "Paralelismo radicular",
+        40
+      ],
+      [
+        "Contactos interproximales",
+        30
+      ],
+      [
+        "Intercuspidación",
+        20
+      ],
+      [
+        "Coordinación transversal de arcos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "center resistance",
+    "q": "¿Qué conceptos biomecánicos dependen de la relación entre línea de acción de la fuerza y centro de resistencia?",
+    "a": [
+      [
+        "Tendencia a traslación",
+        40
+      ],
+      [
+        "Tendencia a rotación",
+        30
+      ],
+      [
+        "Momento generado por la fuerza",
+        20
+      ],
+      [
+        "Necesidad de un par de fuerzas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "moment force",
+    "q": "¿Qué tipos de movimiento pueden modularse variando la relación momento/fuerza?",
+    "a": [
+      [
+        "Inclinación no controlada",
+        40
+      ],
+      [
+        "Inclinación controlada",
+        30
+      ],
+      [
+        "Traslación",
+        20
+      ],
+      [
+        "Movimiento radicular",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "couple",
+    "q": "¿Qué caracteriza a un par de fuerzas o couple en biomecánica ortodóncica?",
+    "a": [
+      [
+        "Dos fuerzas paralelas opuestas",
+        40
+      ],
+      [
+        "Separación entre líneas de acción",
+        30
+      ],
+      [
+        "Generación de momento sin fuerza neta",
+        20
+      ],
+      [
+        "Capacidad de controlar rotación",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "friction",
+    "q": "¿Qué variables pueden influir en fricción arco-bracket?",
+    "a": [
+      [
+        "Material del arco",
+        40
+      ],
+      [
+        "Material y diseño del bracket",
+        30
+      ],
+      [
+        "Angulación entre arco y ranura",
+        20
+      ],
+      [
+        "Método de ligación",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "anchorage loss",
+    "q": "¿Qué signos pueden indicar pérdida de anclaje durante cierre de espacios?",
+    "a": [
+      [
+        "Mesialización no planeada de molares",
+        40
+      ],
+      [
+        "Cambios indeseados de incisivos",
+        30
+      ],
+      [
+        "Alteración de relación molar",
+        20
+      ],
+      [
+        "Reducción de espacio disponible para el objetivo",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "tad complications",
+    "q": "¿Qué complicaciones pueden presentarse con microtornillos de anclaje temporal?",
+    "a": [
+      [
+        "Movilidad o fracaso",
+        40
+      ],
+      [
+        "Inflamación periimplantaria local",
+        30
+      ],
+      [
+        "Contacto o lesión radicular",
+        20
+      ],
+      [
+        "Irritación de tejidos blandos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "extraction mechanics",
+    "q": "¿Qué variables deben controlarse en mecánica de extracción?",
+    "a": [
+      [
+        "Anclaje",
+        40
+      ],
+      [
+        "Torque incisivo",
+        30
+      ],
+      [
+        "Paralelismo radicular",
+        20
+      ],
+      [
+        "Control vertical",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "aligner biomechanics",
+    "q": "¿Qué movimientos pueden requerir auxiliares o planificación especial con alineadores?",
+    "a": [
+      [
+        "Extrusión",
+        40
+      ],
+      [
+        "Rotaciones de dientes redondeados",
+        30
+      ],
+      [
+        "Torque radicular",
+        20
+      ],
+      [
+        "Movimientos de gran magnitud",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "retention relapse",
+    "q": "¿Qué factores aumentan riesgo de recaída ortodóncica?",
+    "a": [
+      [
+        "Rotaciones severas previas",
+        40
+      ],
+      [
+        "Cambios en forma de arco",
+        30
+      ],
+      [
+        "Crecimiento residual",
+        20
+      ],
+      [
+        "Falta de adherencia a retención",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_correctiva",
+    "difficulty": "advanced",
+    "subtopic": "limits",
+    "q": "¿Qué principios ayudan a mantener movimientos dentro de límites biológicos?",
+    "a": [
+      [
+        "Evaluación periodontal",
+        40
+      ],
+      [
+        "Control de magnitud y dirección de fuerzas",
+        30
+      ],
+      [
+        "Respeto al soporte alveolar",
+        20
+      ],
+      [
+        "Monitorización clínica y radiográfica indicada",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  }
+]
