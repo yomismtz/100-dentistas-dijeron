@@ -155,7 +155,7 @@ function offlineTeacherAccessPanel(){
 function offlineClassroomPanel(){
   const base=orBase();
   if(!base){openModal('<h2>📡 AULA OFFLINE</h2><p>El servidor local todavía no está disponible. Espera un momento o activa Wi‑Fi/hotspot y vuelve a abrir esta pantalla.</p>');return;}
-  const u1=base+'/1',u2=base+'/2',ue=base+'/e',ur=base+'/r';
+  const u1=base+'/1',u2=base+'/2',ue=base+'/e';
   const warning=base.indexOf('127.0.0.1')>=0?'<p class="warningBox">⚠️ Activa Wi‑Fi o hotspot para obtener una dirección local que los otros celulares puedan abrir.</p>':'';
   openModal('<h2>📡 AULA OFFLINE · QR</h2>'+
     '<p>Todos los equipos deben estar en la misma red Wi‑Fi o hotspot. No se requiere Internet.</p>'+warning+
@@ -163,9 +163,8 @@ function offlineClassroomPanel(){
       orQrCard('🔴 PULSADOR EQUIPO 1',u1,'qr1')+
       orQrCard('🔴 PULSADOR EQUIPO 2',u2,'qr2')+
       orQrCard('📝 EXAMEN INDIVIDUAL',ue,'qre')+
-      orQrCard('📚 REFERENCIA ACTUAL',ur,'qrr')+
-    '</div><button id="showTeacherAccess" class="secondaryWide">🔐 MOSTRAR ACCESO DOCENTE PRIVADO</button>');
-  [['qr1',u1],['qr2',u2],['qre',ue],['qrr',ur]].forEach(function(x){const c=$('#'+x[0]);if(c)orDrawQr(c,x[1]);});
+    '</div><p class="specialtyLead">La referencia científica se comparte desde el botón 📚 ¿Por qué? cuando el docente decida.</p><button id="showTeacherAccess" class="secondaryWide">🔐 MOSTRAR ACCESO DOCENTE PRIVADO</button>');
+  [['qr1',u1],['qr2',u2],['qre',ue]].forEach(function(x){const c=$('#'+x[0]);if(c)orDrawQr(c,x[1]);});
   $('#showTeacherAccess').onclick=offlineTeacherAccessPanel;
 }
 
