@@ -63,7 +63,8 @@ window.onRemoteBuzz=function(team){orAcceptBuzz(Number(team)-1);};
 
 careoShowBuzzers=function(){
   const q=orQuestion();if(!q)return;
-  careoState={first:null,second:null,attempts:0,answerIdx:null};
+  const sudden=!!(careoState&&careoState.sudden);
+  careoState={first:null,second:null,attempts:0,answerIdx:null,sudden:sudden};
   try{if(window.Android&&Android.armRemoteBuzz)Android.armRemoteBuzz();}catch(_){}
   openModal('<div class="careoBuzzScreen">'+
     '<div class="careoKicker">⚡ ¿QUIÉN CONTESTA PRIMERO?</div>'+
@@ -203,3 +204,31 @@ function offlineExamCollect(proceed){
   const close=$('#closeModal');if(close)close.classList.add('careoNoClose');
   $('#examClose').onclick=function(){offlineExamCollecting=false;proceed();};
 }
+
+
+const orStartFaceoffBase=v2StartFaceoff;
+v2StartFaceoff=function(sudden=false){
+  if(!sudden)return orStartFaceoffBase(false);
+  stopTimer();
+  careoState={first:null,second:null,attempts:0,answerIdx:null,sudden:true};
+  if(typeof tvShowCue==='function')tvShowCue('⚡ MUERTE SÚBITA ⚡','EL PRIMER ACIERTO DECIDE EL JUEGO','sudden',1350);
+  if(typeof tvSfx==='function')tvSfx('drumroll');
+  setTimeout(function(){careoQuestionScreen();},900);
+};
+
+const orCareoCorrectBase=careoCorrect;
+careoCorrect=function(team,m){
+  if(careoState&&careoState.sudden){
+    careoStopClock();
+    try{if(window.Android&&Android.closeRemoteBuzz)Android.closeRemoteBuzz();}catch(_){}
+    if(typeof omRec==='function'){
+      const r=omRec();
+      if(r&&r.correct.indexOf(m.idx)<0)r.correct.push(m.idx);
+      if(r&&m.idx===0)r.top=true;
+    }
+    closeModal(false);careoLockBoard(false);
+    if(typeof tvSfx==='function')tvSfx(m.idx===0?'topAnswer':'correct');
+    return v2DeclareWinner(team,true);
+  }
+  return orCareoCorrectBase(team,m);
+};
