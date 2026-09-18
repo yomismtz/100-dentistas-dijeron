@@ -9,6 +9,9 @@ let offlineAudioChecked=false;
 let offlineLastSpokenSecond=null;
 let offlineLightning=null;
 let offlineAmbientHandle=null;
+let omCareoRemaining=10;
+let omCareoTeam=0;
+let omCareoSecond=false;
 
 try{offlineSettings={...offlineSettings,...JSON.parse(localStorage.getItem(OM_SETTINGS)||'{}')};}catch(_){}
 
@@ -181,11 +184,33 @@ careoFail=function(team,isSecond,reason){
   if(typeof orSync==='function')orSync();
 };
 
+function omRunCareoClock(reset){
+  careoStopClock();
+  if(reset)omCareoRemaining=10;
+  const el=$('#careoSeconds');if(el)el.textContent=String(omCareoRemaining);
+  if(v2Paused)return;
+  careoTimerHandle=setInterval(function(){
+    omCareoRemaining--;
+    const node=$('#careoSeconds');
+    if(node){node.textContent=String(Math.max(0,omCareoRemaining));node.classList.toggle('urgent',omCareoRemaining<=3);}
+    if(omCareoRemaining<=3&&omCareoRemaining>0){tvSfx('tick');omSpeakNumber(omCareoRemaining);}
+    if(omCareoRemaining<=0){careoStopClock();careoFail(omCareoTeam,omCareoSecond,'TIEMPO AGOTADO');}
+  },1000);
+}
 const omCareoClock=careoStartAnswerClock;
 careoStartAnswerClock=function(team,isSecond){
-  careoStopClock();let remaining=10;const el=$('#careoSeconds');if(el)el.textContent=String(remaining);
-  careoTimerHandle=setInterval(function(){remaining--;if(el){el.textContent=String(Math.max(0,remaining));el.classList.toggle('urgent',remaining<=3);}if(remaining<=3&&remaining>0){tvSfx('tick');omSpeakNumber(remaining);}if(remaining<=0){careoStopClock();careoFail(team,isSecond,'TIEMPO AGOTADO');}},1000);
+  omCareoTeam=team;omCareoSecond=isSecond;omRunCareoClock(true);
 };
+function offlineTogglePause(){
+  v2Paused=!v2Paused;
+  if($('#careoSeconds')&&careoState&&careoState.attempts){
+    if(v2Paused)careoStopClock();else omRunCareoClock(false);
+  }else{
+    if(v2Paused)stopTimer();else if(gameVisible()&&phase!=='over')startTimer();
+    updateTimerUI();
+  }
+  return v2Paused;
+}
 
 const omBaseCareoQuestion=careoQuestionScreen;
 careoQuestionScreen=function(){
