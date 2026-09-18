@@ -178,22 +178,22 @@
     "specialty": "periodoncia",
     "difficulty": "basic",
     "subtopic": "maintenance",
-    "q": "¿Qué incluye el mantenimiento periodontal?",
+    "q": "¿Qué objetivos persigue la terapia periodontal de soporte?",
     "a": [
       [
-        "Reevaluación clínica",
+        "Detectar recurrencia temprana",
         40
       ],
       [
-        "Control profesional de biofilm",
+        "Mantener control de biofilm",
         30
       ],
       [
-        "Refuerzo de autocuidado",
+        "Reforzar control de factores de riesgo",
         20
       ],
       [
-        "Control de factores de riesgo",
+        "Preservar estabilidad de inserción y dientes",
         10
       ]
     ],
