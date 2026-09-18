@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · TV Show Edition layer
-const TV_SHOW_VERSION = '2.1-tv-beta';
+const TV_SHOW_VERSION = '2.6-show-beta';
 let tvTransitionUntil = 0;
 let tvWinnerPending = false;
 let tvAudioCtx = null;
@@ -99,7 +99,12 @@ function tvNoiseHit(start=0, dur=.07, gain=.045, center=1600){
 
 function tvSfx(name){
   if (!tvSettings.effects && !['applause','bigApplause','fanfare','drumroll'].includes(name)) return;
-  if (name==='tick'){ tvTone(880,0,.06,.035,'square'); }
+  if (name==='click'){ tvTone(520,0,.045,.022,'triangle'); }
+  else if(name==='select'){ tvTone(560,0,.055,.025,'triangle');tvTone(760,.045,.07,.022,'triangle'); }
+  else if(name==='listen'){ tvTone(330,0,.08,.025,'sine');tvTone(440,.075,.1,.022,'sine'); }
+  else if(name==='ready'){ tvTone(620,0,.065,.03,'triangle');tvTone(830,.07,.075,.035,'triangle');tvTone(1040,.145,.11,.04,'triangle'); }
+  else if(name==='buzzerHit'){ tvTone(220,0,.08,.055,'square');tvTone(440,.055,.12,.045,'triangle'); }
+  else if (name==='tick'){ tvTone(880,0,.06,.035,'square'); }
   else if(name==='buzz'){ tvTone(155,0,.22,.07,'sawtooth'); tvTone(120,.04,.23,.05,'square'); }
   else if(name==='correct'){ tvTone(660,0,.08,.045,'triangle'); tvTone(880,.08,.11,.05,'triangle'); }
   else if(name==='topAnswer'){ tvTone(660,0,.07,.05,'triangle');tvTone(880,.07,.08,.05,'triangle');tvTone(1100,.15,.16,.055,'triangle');tvApplause(.55); }
