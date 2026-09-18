@@ -23,6 +23,7 @@ jobs:
       - name: Validar banco de preguntas
         run: |
           python3 scripts/validate_questions.py
+          python3 scripts/validate_ui_offline.py
 
       - name: Validar sintaxis JavaScript V2
         run: |
