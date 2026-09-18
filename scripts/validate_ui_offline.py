@@ -63,8 +63,11 @@ for name,token,text in js_required:
     if token not in text:
         errors.append(f'{name}: falta {token}')
 
-if 'setInterval(refresh,500)' in main and "private String teamPage" in main:
-    errors.append('MainActivity.java: el pulsador remoto conserva polling antiguo de 500 ms')
+team_start=main.find('private String teamPage')
+teacher_start=main.find('private String teacherPage')
+team_block=main[team_start:teacher_start] if team_start>=0 and teacher_start>team_start else ''
+if 'setInterval(refresh,120)' not in team_block:
+    errors.append('MainActivity.java: el pulsador remoto no usa polling rápido de 120 ms')
 if 'answers:(q&&q.a||[])' not in remote:
     errors.append('offline-remote.js: el host debe seguir enviando respuestas al estado nativo privado')
 
