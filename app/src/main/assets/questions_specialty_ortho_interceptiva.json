@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "indicaciones",
+    "q": "¿Qué problemas pueden ser candidatos a tratamiento interceptivo durante la dentición mixta?",
+    "a": [
+      [
+        "Mordida cruzada posterior funcional",
+        40
+      ],
+      [
+        "Mordida cruzada anterior seleccionada",
+        30
+      ],
+      [
+        "Pérdida de espacio",
+        20
+      ],
+      [
+        "Ectopia eruptiva",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "crossbite",
+    "q": "¿Qué objetivos tiene corregir una mordida cruzada posterior con desplazamiento funcional?",
+    "a": [
+      [
+        "Eliminar el desplazamiento mandibular",
+        40
+      ],
+      [
+        "Mejorar relación transversal",
+        30
+      ],
+      [
+        "Favorecer cierre más simétrico",
+        20
+      ],
+      [
+        "Reducir adaptación funcional asimétrica",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "anterior",
+    "q": "¿Qué problemas puede abordar una terapia 2×4 en dentición mixta seleccionada?",
+    "a": [
+      [
+        "Alineación de incisivos",
+        40
+      ],
+      [
+        "Mordida cruzada anterior dental",
+        30
+      ],
+      [
+        "Rotaciones incisivas",
+        20
+      ],
+      [
+        "Control de posiciones anteriores",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40723090/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "espacio",
+    "q": "¿Qué dispositivos pueden recuperar o preservar espacio según el caso?",
+    "a": [
+      [
+        "Arco lingual",
+        40
+      ],
+      [
+        "Arco transpalatino",
+        30
+      ],
+      [
+        "Lip bumper",
+        20
+      ],
+      [
+        "Aparatos removibles o fijos de recuperación",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35241896/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "clase III",
+    "q": "¿Qué recursos pueden usarse en una Clase III temprana por deficiencia maxilar seleccionada?",
+    "a": [
+      [
+        "Expansión maxilar cuando está indicada",
+        40
+      ],
+      [
+        "Máscara facial",
+        30
+      ],
+      [
+        "Control de interferencias funcionales",
+        20
+      ],
+      [
+        "Seguimiento del crecimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "open bite",
+    "q": "¿Qué intervenciones pueden considerarse en mordida abierta asociada a hábito?",
+    "a": [
+      [
+        "Eliminar o reducir el hábito",
+        40
+      ],
+      [
+        "Reeducación funcional seleccionada",
+        30
+      ],
+      [
+        "Criba o recordatorio cuando está indicado",
+        20
+      ],
+      [
+        "Seguimiento del patrón de crecimiento",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41399602/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "ectopia molar",
+    "q": "¿Qué objetivos tiene interceptar una erupción ectópica de molar permanente?",
+    "a": [
+      [
+        "Liberar el trayecto eruptivo",
+        40
+      ],
+      [
+        "Reducir reabsorción del temporal",
+        30
+      ],
+      [
+        "Recuperar posición del molar",
+        20
+      ],
+      [
+        "Preservar espacio del arco",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "apiñamiento",
+    "q": "¿Qué datos se evalúan antes de interceptar apiñamiento en dentición mixta?",
+    "a": [
+      [
+        "Discrepancia de espacio",
+        40
+      ],
+      [
+        "Tamaño dentario",
+        30
+      ],
+      [
+        "Secuencia eruptiva",
+        20
+      ],
+      [
+        "Relación esquelética",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "funcion",
+    "q": "¿Qué problemas funcionales pueden requerir intervención temprana o interconsulta?",
+    "a": [
+      [
+        "Desplazamiento mandibular funcional",
+        40
+      ],
+      [
+        "Respiración oral persistente",
+        30
+      ],
+      [
+        "Deglución alterada",
+        20
+      ],
+      [
+        "Hábitos orales con efecto dentoalveolar",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "basic",
+    "subtopic": "objetivos",
+    "q": "¿Qué busca un tratamiento interceptivo bien indicado?",
+    "a": [
+      [
+        "Detener una evolución desfavorable",
+        40
+      ],
+      [
+        "Simplificar tratamiento posterior",
+        30
+      ],
+      [
+        "Mejorar función durante crecimiento",
+        20
+      ],
+      [
+        "Aprovechar una ventana biológica útil",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42330087/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "quad helix",
+    "q": "¿Qué efectos puede lograr un quad-helix en casos seleccionados?",
+    "a": [
+      [
+        "Expansión dentoalveolar maxilar",
+        40
+      ],
+      [
+        "Corrección de mordida cruzada posterior",
+        30
+      ],
+      [
+        "Aumento de ancho intermolar",
+        20
+      ],
+      [
+        "Modificación de rotaciones molares según activación",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "expansion plate",
+    "q": "¿Qué factores influyen en el éxito de una placa removible de expansión?",
+    "a": [
+      [
+        "Cooperación",
+        40
+      ],
+      [
+        "Activación correcta",
+        30
+      ],
+      [
+        "Selección del caso",
+        20
+      ],
+      [
+        "Retención y uso suficiente",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "space regaining",
+    "q": "¿Qué causas deben identificarse antes de intentar recuperar espacio?",
+    "a": [
+      [
+        "Migración mesial",
+        40
+      ],
+      [
+        "Pérdida prematura de temporal",
+        30
+      ],
+      [
+        "Ectopia eruptiva",
+        20
+      ],
+      [
+        "Apiñamiento preexistente",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35241896/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "2x4",
+    "q": "¿Qué componentes básicos tiene un aparato fijo 2×4 típico?",
+    "a": [
+      [
+        "Bandas o tubos molares",
+        40
+      ],
+      [
+        "Brackets en incisivos",
+        30
+      ],
+      [
+        "Arco de alambre",
+        20
+      ],
+      [
+        "Elementos auxiliares según necesidad",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40723090/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "crossbite functional",
+    "q": "¿Qué hallazgos ayudan a diferenciar una mordida cruzada funcional de una asimetría esquelética fija?",
+    "a": [
+      [
+        "Cambio de línea media entre posiciones",
+        40
+      ],
+      [
+        "Desviación al cierre",
+        30
+      ],
+      [
+        "Contacto prematuro",
+        20
+      ],
+      [
+        "Simetría mayor al guiar la mandíbula",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "clase II temprana",
+    "q": "¿En qué situaciones puede justificarse tratar temprano una Clase II pese a beneficios finales limitados?",
+    "a": [
+      [
+        "Riesgo elevado de trauma por overjet",
+        40
+      ],
+      [
+        "Problemas psicosociales importantes",
+        30
+      ],
+      [
+        "Indicación funcional específica",
+        20
+      ],
+      [
+        "Necesidad individual de intervención temprana",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41155841/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "open bite appliances",
+    "q": "¿Qué aparatos se han utilizado para mordida abierta anterior en dentición mixta?",
+    "a": [
+      [
+        "Criba palatina",
+        40
+      ],
+      [
+        "Espolones adheridos",
+        30
+      ],
+      [
+        "Aparatos funcionales seleccionados",
+        20
+      ],
+      [
+        "Dispositivos con control posterior",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41399602/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "eruption guidance",
+    "q": "¿Qué medidas pueden formar parte del manejo interceptivo de erupción alterada?",
+    "a": [
+      [
+        "Eliminar obstáculos cuando está indicado",
+        40
+      ],
+      [
+        "Crear o conservar espacio",
+        30
+      ],
+      [
+        "Guiar posición dentaria",
+        20
+      ],
+      [
+        "Vigilar mediante controles clínicos e imagen",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "canino maxilar",
+    "q": "¿Qué hallazgos pueden motivar intervención interceptiva ante un canino maxilar con trayecto ectópico?",
+    "a": [
+      [
+        "Ausencia de prominencia vestibular esperada",
+        40
+      ],
+      [
+        "Superposición radiográfica desfavorable",
+        30
+      ],
+      [
+        "Persistencia del temporal",
+        20
+      ],
+      [
+        "Falta de espacio",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "intermediate",
+    "subtopic": "estabilidad",
+    "q": "¿Qué medidas favorecen estabilidad tras una corrección interceptiva?",
+    "a": [
+      [
+        "Retención cuando está indicada",
+        40
+      ],
+      [
+        "Eliminar factores etiológicos",
+        30
+      ],
+      [
+        "Conseguir relaciones oclusales funcionales",
+        20
+      ],
+      [
+        "Seguimiento durante la erupción",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "evidencia crossbite",
+    "q": "¿Qué conclusiones resume mejor la evidencia sobre corrección temprana de mordida cruzada posterior funcional?",
+    "a": [
+      [
+        "Puede corregir la relación transversal",
+        40
+      ],
+      [
+        "Quad-helix puede ser eficiente frente a placas en algunos estudios",
+        30
+      ],
+      [
+        "Existe posibilidad de recaída",
+        20
+      ],
+      [
+        "La certeza de evidencia varía entre resultados",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "evidencia 2x4",
+    "q": "¿Qué precauciones deben acompañar el uso de terapia 2×4 en dentición mixta?",
+    "a": [
+      [
+        "Seleccionar indicación concreta",
+        40
+      ],
+      [
+        "Controlar efectos sobre incisivos y raíces",
+        30
+      ],
+      [
+        "Mantener higiene adecuada",
+        20
+      ],
+      [
+        "Reconocer que la evidencia a largo plazo es limitada",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40723090/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "early class II",
+    "q": "¿Qué resultados no deben prometerse de forma rutinaria con tratamiento temprano de Clase II?",
+    "a": [
+      [
+        "Gran crecimiento mandibular permanente",
+        40
+      ],
+      [
+        "Eliminación segura de tratamiento posterior",
+        30
+      ],
+      [
+        "Mejor resultado final en todos los pacientes",
+        20
+      ],
+      [
+        "Estabilidad superior garantizada",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41155841/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "serial extraction",
+    "q": "¿Qué elementos son indispensables antes de considerar una secuencia de extracciones interceptivas?",
+    "a": [
+      [
+        "Discrepancia severa de espacio",
+        40
+      ],
+      [
+        "Diagnóstico esquelético favorable o compatible",
+        30
+      ],
+      [
+        "Secuencia eruptiva evaluada",
+        20
+      ],
+      [
+        "Plan ortodóncico longitudinal",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "class III prognosis",
+    "q": "¿Qué factores pueden empeorar el pronóstico de una Clase III tratada tempranamente?",
+    "a": [
+      [
+        "Componente mandibular marcado",
+        40
+      ],
+      [
+        "Patrón de crecimiento desfavorable",
+        30
+      ],
+      [
+        "Historia familiar fuerte",
+        20
+      ],
+      [
+        "Crecimiento residual prolongado",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "open bite etiology",
+    "q": "¿Qué componentes deben investigarse antes de interceptar una mordida abierta?",
+    "a": [
+      [
+        "Hábitos",
+        40
+      ],
+      [
+        "Patrón esquelético vertical",
+        30
+      ],
+      [
+        "Función lingual y deglución",
+        20
+      ],
+      [
+        "Obstrucción respiratoria o factores médicos",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41399602/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "space evidence",
+    "q": "¿Qué posibles efectos no deseados deben vigilarse con algunos recuperadores o mantenedores de espacio?",
+    "a": [
+      [
+        "Proclinación incisiva",
+        40
+      ],
+      [
+        "Cambios molares no deseados",
+        30
+      ],
+      [
+        "Descalcificación o caries alrededor del aparato",
+        20
+      ],
+      [
+        "Interferencia eruptiva",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35241896/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "timing",
+    "q": "¿Qué principios ayudan a decidir si una maloclusión debe interceptarse ahora o vigilarse?",
+    "a": [
+      [
+        "Riesgo de daño si se posterga",
+        40
+      ],
+      [
+        "Ventana de crecimiento útil",
+        30
+      ],
+      [
+        "Probabilidad de autocorrección",
+        20
+      ],
+      [
+        "Balance entre beneficio y carga terapéutica",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42330087/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "transverse diagnosis",
+    "q": "¿Qué registros pueden ayudar a cuantificar un problema transversal antes y después de interceptarlo?",
+    "a": [
+      [
+        "Anchuras intercanina e intermolar",
+        40
+      ],
+      [
+        "Relación de cúspides y fosas",
+        30
+      ],
+      [
+        "Líneas medias",
+        20
+      ],
+      [
+        "Modelos o escaneos seriados",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_interceptiva",
+    "difficulty": "advanced",
+    "subtopic": "plan integral",
+    "q": "¿Qué condiciones definen una intervención interceptiva basada en evidencia?",
+    "a": [
+      [
+        "Problema claramente diagnosticado",
+        40
+      ],
+      [
+        "Objetivo limitado y mensurable",
+        30
+      ],
+      [
+        "Beneficio esperado durante crecimiento",
+        20
+      ],
+      [
+        "Plan de seguimiento y posible segunda fase",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42330087/"
+  }
+]
