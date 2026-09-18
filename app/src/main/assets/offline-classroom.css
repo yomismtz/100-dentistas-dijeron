@@ -22,3 +22,8 @@
 .projectorMode .board{height:73%}.projectorMode .scorebar{height:18%}
 @media(max-width:760px){.qrGrid{grid-template-columns:1fr}.academicCards{grid-template-columns:repeat(2,1fr)}}
 @media(max-height:560px){.qrCard canvas{width:130px}.clinicalQuestionImage{max-height:22vh}.academicCards b{font-size:1.25rem}.homeActions button{font-size:clamp(13px,1.7vw,19px)!important;padding:.55rem .85rem!important;min-width:150px!important}}
+
+.teacherPinBox{display:grid;justify-items:center;gap:.25rem;margin:.8rem auto;padding:.8rem 1rem;max-width:300px;border:2px solid #e2b55f;border-radius:16px;background:#130707}
+.teacherPinBox span{font-size:.78rem;letter-spacing:.12em;color:#d9bd84;font-weight:900}
+.teacherPinBox b{font-size:clamp(32px,5vw,58px);letter-spacing:.2em;color:#ffe09a}
+.singleQr{grid-template-columns:minmax(220px,360px);justify-content:center}
