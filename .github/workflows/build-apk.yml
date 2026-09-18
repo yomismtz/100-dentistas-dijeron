@@ -30,7 +30,8 @@ jobs:
           node --check app/src/main/assets/v2-extras.js
           node --check app/src/main/assets/tvshow.js
           node --check app/src/main/assets/specialties.js
-          node --check app/src/main/assets/careo.js\n          node --check app/src/main/assets/narrator.js
+          node --check app/src/main/assets/careo.js
+          node --check app/src/main/assets/narrator.js
 
       - name: Set up JDK 17
         uses: actions/setup-java@v5
