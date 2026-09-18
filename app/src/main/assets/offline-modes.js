@@ -60,13 +60,14 @@ function offlineRecordIndividual(answer,correct){
   const r=omRec();if(!r)return;r.individualTotal++;if(correct)r.individualCorrect++;
 }
 function omFinish(){
-  if(!offlineSession)return;
+  if(!offlineSession||offlineSession.saved)return;
   offlineSession.finished=new Date().toISOString();offlineSession.scores=[...scores];
   const qs=offlineSession.questions;
   const hits=qs.filter(function(q){return q.correct.length>0;}).length;
   const strikes=qs.reduce(function(s,q){return s+q.strikes;},0);
   offlineSession.summary={played:qs.length,hits:hits,strikes:strikes,percent:qs.length?Math.round(hits/qs.length*100):0,individualTotal:qs.reduce(function(s,q){return s+q.individualTotal;},0),individualCorrect:qs.reduce(function(s,q){return s+q.individualCorrect;},0)};
   const a=[];if(strikes===0&&qs.length)a.push('🛡️ SIN ERRORES');if(qs.some(function(q){return q.top;}))a.push('⭐ RESPUESTA #1');if(hits>=5)a.push('🔥 RACHA CLÍNICA');offlineSession.achievements=a;
+  offlineSession.saved=true;
   try{let list=JSON.parse(localStorage.getItem(OM_REPORTS)||'[]');list.unshift(offlineSession);localStorage.setItem(OM_REPORTS,JSON.stringify(list.slice(0,120)));}catch(_){}
 }
 function omShowReport(s){
@@ -140,8 +141,17 @@ revealAnswer=function(idx,btn){
 };
 const omStrike=addStrike;
 addStrike=function(reason){
-  const before=strikes,old=phase;omStrike(reason||'manual');const r=omRec();if(r)r.strikes++;
-  if(old!=='steal'){if(before===0)offlinePresenterCue('x1');else if(before===1)offlinePresenterCue('x2');else if(before===2)offlinePresenterCue('steal');}
+  const before=strikes,old=phase,bankBefore=bank;
+  omStrike(reason||'manual');
+  const changed=(old==='steal'&&phase==='over')||(strikes>before)||(bankBefore!==bank&&old==='steal');
+  if(changed){
+    const r=omRec();if(r)r.strikes++;
+    if(old!=='steal'){
+      if(before===0)offlinePresenterCue('x1');
+      else if(before===1)offlinePresenterCue('x2');
+      else if(before===2)offlinePresenterCue('steal');
+    }
+  }
   if(typeof orSync==='function')orSync();
 };
 
@@ -163,6 +173,13 @@ function omAdaptNext(){
 }
 const omNext=nextRound;
 nextRound=function(){omAdaptNext();omNext();if(typeof orSync==='function')orSync();};
+
+const omCareoFailBase=careoFail;
+careoFail=function(team,isSecond,reason){
+  const r=omRec();if(r)r.strikes++;
+  omCareoFailBase(team,isSecond,reason);
+  if(typeof orSync==='function')orSync();
+};
 
 const omCareoClock=careoStartAnswerClock;
 careoStartAnswerClock=function(team,isSecond){
