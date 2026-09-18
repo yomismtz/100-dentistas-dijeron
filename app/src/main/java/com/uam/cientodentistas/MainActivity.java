@@ -28,6 +28,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Locale;
@@ -183,6 +184,11 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public String getTeacherPin() {
+            return classroomServer == null ? "" : classroomServer.getTeacherPin();
+        }
+
+        @JavascriptInterface
         public void armRemoteBuzz() {
             if (classroomServer != null) classroomServer.armBuzz();
         }
@@ -233,13 +239,16 @@ public class MainActivity extends Activity {
     private class LocalClassroomServer extends Thread {
         private final int port;
         private volatile boolean running = true;
+        private volatile boolean ready = false;
         private volatile boolean buzzArmed = false;
         private volatile String stateJson = "{}";
+        private final String teacherPin;
         private ServerSocket serverSocket;
 
         LocalClassroomServer(int port) {
             super("DentistasClassroomServer");
             this.port = port;
+            this.teacherPin = String.format(Locale.US, "%04d", new SecureRandom().nextInt(10000));
             setDaemon(true);
         }
 
@@ -247,7 +256,7 @@ public class MainActivity extends Activity {
         public void run() {
             try {
                 serverSocket = new ServerSocket(port);
-                serverSocket.setReuseAddress(true);
+                ready = true;
                 while (running) {
                     final Socket client = serverSocket.accept();
                     Thread handler = new Thread(() -> handle(client), "DentistasRemoteClient");
@@ -255,6 +264,8 @@ public class MainActivity extends Activity {
                     handler.start();
                 }
             } catch (IOException ignored) {
+            } finally {
+                ready = false;
             }
         }
 
@@ -281,7 +292,12 @@ public class MainActivity extends Activity {
         }
 
         String getBaseUrl() {
+            if (!ready) return "";
             return "http://" + findLocalIpv4() + ":" + port;
+        }
+
+        String getTeacherPin() {
+            return teacherPin;
         }
 
         private String findLocalIpv4() {
@@ -344,12 +360,17 @@ public class MainActivity extends Activity {
                     boolean accepted = (team == 1 || team == 2) && tryBuzz(team, true);
                     respond(output, 200, "application/json; charset=utf-8", "{\"accepted\":" + accepted + "}");
                 } else if ("/api/cmd".equals(path)) {
-                    String name = queryValue(query, "name");
-                    String arg = queryValue(query, "arg");
-                    String js = "if(window.onRemoteTeacherCommand){window.onRemoteTeacherCommand("
-                            + JSONObject.quote(name) + "," + JSONObject.quote(arg) + ");}";
-                    sendJs(js);
-                    respond(output, 200, "application/json; charset=utf-8", "{\"ok\":true}");
+                    String pin = queryValue(query, "pin");
+                    if (!teacherPin.equals(pin)) {
+                        respond(output, 403, "application/json; charset=utf-8", "{\"ok\":false,\"error\":\"PIN\"}");
+                    } else {
+                        String name = queryValue(query, "name");
+                        String arg = queryValue(query, "arg");
+                        String js = "if(window.onRemoteTeacherCommand){window.onRemoteTeacherCommand("
+                                + JSONObject.quote(name) + "," + JSONObject.quote(arg) + ");}";
+                        sendJs(js);
+                        respond(output, 200, "application/json; charset=utf-8", "{\"ok\":true}");
+                    }
                 } else if ("/api/exam".equals(path)) {
                     String answer = queryValue(query, "answer");
                     sendJs("if(window.onRemoteExamAnswer){window.onRemoteExamAnswer(" + JSONObject.quote(answer) + ");}");
@@ -385,7 +406,8 @@ public class MainActivity extends Activity {
 
         private void respond(OutputStream output, int code, String contentType, String body) throws IOException {
             byte[] bytes = body.getBytes(StandardCharsets.UTF_8);
-            String headers = "HTTP/1.1 " + code + " OK\r\n"
+            String reason = code == 200 ? "OK" : code == 403 ? "Forbidden" : "Error";
+            String headers = "HTTP/1.1 " + code + " " + reason + "\r\n"
                     + "Content-Type: " + contentType + "\r\n"
                     + "Content-Length: " + bytes.length + "\r\n"
                     + "Cache-Control: no-store\r\n"
@@ -415,15 +437,15 @@ public class MainActivity extends Activity {
                     + baseCss() + "</style><div class='card'><h1 id='name'>EQUIPO " + team + "</h1>"
                     + "<div class='status' id='status'>Esperando careo…</div><button id='b' class='buzz'>PULSAR</button></div><script>"
                     + stateScript()
-                    + ";async function refresh(){let j=await st();if(!j)return;let s=j.state||{};let n=(s.teams||[])["
-                    + (team - 1) + "];if(n)document.getElementById('name').textContent=n;let b=document.getElementById('b');b.disabled=!j.buzzArmed;b.classList.toggle('muted',!j.buzzArmed);document.getElementById('status').textContent=j.buzzArmed?'¡LISTOS!':'Esperando que se abra el pulsador…'}"
-                    + "document.getElementById('b').onpointerdown=async()=>{let r=await fetch('/api/buzz?team=" + team + "&x='+Date.now());let j=await r.json();document.getElementById('status').textContent=j.accepted?'¡TU EQUIPO FUE PRIMERO!':'El otro equipo fue primero.';refresh()};setInterval(refresh,500);refresh();</script>";
+                    + ";let lastArmed=false,result='';async function refresh(){let j=await st();if(!j)return;let s=j.state||{};let n=(s.teams||[])["
+                    + (team - 1) + "];if(n)document.getElementById('name').textContent=n;if(j.buzzArmed&&!lastArmed)result='';lastArmed=!!j.buzzArmed;let b=document.getElementById('b');b.disabled=!j.buzzArmed;b.classList.toggle('muted',!j.buzzArmed);document.getElementById('status').textContent=j.buzzArmed?'¡LISTOS!':(result||'Esperando que se abra el pulsador…')}"
+                    + "document.getElementById('b').onpointerdown=async()=>{let r=await fetch('/api/buzz?team=" + team + "&x='+Date.now());let j=await r.json();result=j.accepted?'¡TU EQUIPO FUE PRIMERO!':'El otro equipo fue primero.';document.getElementById('status').textContent=result;document.getElementById('b').disabled=true};setInterval(refresh,120);refresh();</script>";
         }
 
         private String teacherPage() {
             return "<!doctype html><meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'><style>"
-                    + baseCss() + ".grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.small{font-size:15px;min-height:48px}</style>"
-                    + "<div class='card'><h1>🎓 CONTROL DOCENTE</h1><div id='q' class='status'>Conectando…</div><div id='meta'></div>"
+                    + baseCss() + ".grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.small{font-size:15px;min-height:48px}.pin{display:grid;grid-template-columns:1fr auto;gap:8px;margin:10px 0}</style>"
+                    + "<div class='card'><h1>🎓 CONTROL DOCENTE</h1><div class='pin'><input id='pin' inputmode='numeric' maxlength='4' placeholder='PIN docente'><button id='savePin'>USAR PIN</button></div><div id='auth' class='status'>Introduce el PIN mostrado en la app.</div><div id='q' class='status'>Conectando…</div><div id='meta'></div>"
                     + "<div class='grid'><button onclick=\"cmd('pause')\">⏯ PAUSA</button><button onclick=\"cmd('read')\">🎙 LEER</button>"
                     + "<button onclick=\"cmd('strike')\">✖ ERROR</button><button onclick=\"cmd('revealNext')\">👁 REVELAR SIG.</button>"
                     + "<button onclick=\"cmd('accept')\">✅ ACEPTAR</button><button onclick=\"cmd('reject')\">❌ RECHAZAR</button>"
@@ -432,7 +454,8 @@ public class MainActivity extends Activity {
                     + "<button onclick=\"cmd('projector')\">📺 PROYECTOR</button><button onclick=\"cmd('finish')\">🏁 TERMINAR</button></div>"
                     + "<h2>Respuestas privadas</h2><div id='answers' class='answers'></div></div><script>"
                     + stateScript()
-                    + ";async function cmd(n,a=''){await fetch('/api/cmd?name='+encodeURIComponent(n)+'&arg='+encodeURIComponent(a)+'&x='+Date.now())}"
+                    + ";let pin=sessionStorage.getItem('dentistasTeacherPin')||'';document.getElementById('pin').value=pin;document.getElementById('savePin').onclick=()=>{pin=document.getElementById('pin').value.trim();sessionStorage.setItem('dentistasTeacherPin',pin);document.getElementById('auth').textContent=pin?'PIN guardado en este navegador.':'Introduce el PIN.'};"
+                    + "async function cmd(n,a=''){pin=document.getElementById('pin').value.trim();let r=await fetch('/api/cmd?pin='+encodeURIComponent(pin)+'&name='+encodeURIComponent(n)+'&arg='+encodeURIComponent(a)+'&x='+Date.now());document.getElementById('auth').textContent=r.ok?'✓ Comando enviado':'⛔ PIN incorrecto'}"
                     + "async function refresh(){let j=await st();if(!j)return;let s=j.state||{};document.getElementById('q').textContent=s.question||'Sin pregunta';document.getElementById('meta').textContent='Ronda '+(s.round||'-')+' · Banco '+(s.bank||0)+' · X '+(s.strikes||0)+' · '+(s.phase||'');let el=document.getElementById('answers');el.innerHTML='';(s.answers||[]).forEach((a,i)=>{let d=document.createElement('button');d.className='small';d.textContent=(a.revealed?'✓ ':'')+(i+1)+'. '+a.label+' · '+a.points;d.onclick=()=>cmd('reveal',String(i));el.appendChild(d)})}"
                     + "setInterval(refresh,650);refresh();</script>";
         }
@@ -442,8 +465,8 @@ public class MainActivity extends Activity {
                     + baseCss() + "</style><div class='card'><h1>📝 RESPUESTA INDIVIDUAL</h1><div id='q' class='status'>Esperando pregunta…</div>"
                     + "<input id='a' placeholder='Escribe una respuesta'><button id='send'>ENVIAR RESPUESTA</button><div id='msg'></div></div><script>"
                     + stateScript()
-                    + ";async function refresh(){let j=await st();if(!j)return;document.getElementById('q').textContent=(j.state||{}).question||'Esperando pregunta…'}"
-                    + "document.getElementById('send').onclick=async()=>{let v=document.getElementById('a').value.trim();if(!v)return;await fetch('/api/exam?answer='+encodeURIComponent(v)+'&x='+Date.now());document.getElementById('a').value='';document.getElementById('msg').textContent='✓ Respuesta registrada';};setInterval(refresh,800);refresh();</script>";
+                    + ";let current='',sent=false;async function refresh(){let j=await st();if(!j)return;let q=(j.state||{}).question||'Esperando pregunta…';if(q!==current){current=q;sent=false;document.getElementById('send').disabled=false;document.getElementById('a').disabled=false;document.getElementById('msg').textContent=''}document.getElementById('q').textContent=q}"
+                    + "document.getElementById('send').onclick=async()=>{if(sent)return;let v=document.getElementById('a').value.trim();if(!v)return;await fetch('/api/exam?answer='+encodeURIComponent(v)+'&x='+Date.now());sent=true;document.getElementById('send').disabled=true;document.getElementById('a').disabled=true;document.getElementById('msg').textContent='✓ Respuesta registrada para esta pregunta';};setInterval(refresh,500);refresh();</script>";
         }
 
         private String referencePage() {
