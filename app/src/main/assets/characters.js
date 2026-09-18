@@ -130,7 +130,7 @@ function showCharacterSetup() {
         <div id="charactersTeam2" class="characterGrid"></div>
       </section>
     </div>
-    <button id="confirmTeams" class="setupStart">COMENZAR PARTIDA · 6 RONDAS</button>
+    <button id="confirmTeams" class="setupStart">COMENZAR PARTIDA · 8 RONDAS</button>
   `);
 
   setupCharacterCards(0, $('#charactersTeam1'));
@@ -180,8 +180,8 @@ finishGame = function finishGameWithCharacters() {
 
   openModal(`
     ${result}
-    <p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p>
-    <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
+    <p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p>
+    <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–8: <b>×3</b>.</p>
     <div class="menuStack">
       <button id="mAgain">OTRA PARTIDA · MISMOS EQUIPOS</button>
       <button id="mCharacters">CAMBIAR EQUIPOS / PERSONAJES</button>
