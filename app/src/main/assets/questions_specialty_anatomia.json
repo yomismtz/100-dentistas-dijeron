@@ -1,0 +1,740 @@
+[
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "tejidos dentales",
+    "q": "¿Qué tejidos principales forman el diente?",
+    "a": [
+      [
+        "Esmalte",
+        40
+      ],
+      [
+        "Dentina",
+        30
+      ],
+      [
+        "Cemento",
+        20
+      ],
+      [
+        "Pulpa",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "denticiones",
+    "q": "¿Qué grupos dentarios existen en la dentición permanente?",
+    "a": [
+      [
+        "Incisivos",
+        40
+      ],
+      [
+        "Caninos",
+        30
+      ],
+      [
+        "Premolares",
+        20
+      ],
+      [
+        "Molares",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "superficies",
+    "q": "¿Qué superficies se describen en dientes posteriores?",
+    "a": [
+      [
+        "Vestibular",
+        40
+      ],
+      [
+        "Lingual o palatina",
+        30
+      ],
+      [
+        "Mesial y distal",
+        20
+      ],
+      [
+        "Oclusal",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "periodonto",
+    "q": "¿Qué estructuras forman el periodonto?",
+    "a": [
+      [
+        "Encía",
+        40
+      ],
+      [
+        "Ligamento periodontal",
+        30
+      ],
+      [
+        "Cemento radicular",
+        20
+      ],
+      [
+        "Hueso alveolar",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "trigemino",
+    "q": "¿Cuáles son las tres divisiones principales del nervio trigémino?",
+    "a": [
+      [
+        "Oftálmica",
+        45
+      ],
+      [
+        "Maxilar",
+        35
+      ],
+      [
+        "Mandibular",
+        20
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "masticacion",
+    "q": "¿Qué músculos se consideran principales músculos de la masticación?",
+    "a": [
+      [
+        "Masetero",
+        40
+      ],
+      [
+        "Temporal",
+        30
+      ],
+      [
+        "Pterigoideo medial",
+        20
+      ],
+      [
+        "Pterigoideo lateral",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "saliva",
+    "q": "¿Cuáles son las glándulas salivales mayores?",
+    "a": [
+      [
+        "Parótida",
+        45
+      ],
+      [
+        "Submandibular",
+        35
+      ],
+      [
+        "Sublingual",
+        20
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "dientes temporales",
+    "q": "¿Qué grupos dentarios existen en la dentición temporal?",
+    "a": [
+      [
+        "Incisivos",
+        45
+      ],
+      [
+        "Caninos",
+        35
+      ],
+      [
+        "Molares",
+        20
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK573074/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "atm",
+    "q": "¿Qué elementos participan en la articulación temporomandibular?",
+    "a": [
+      [
+        "Cóndilo mandibular",
+        40
+      ],
+      [
+        "Fosa mandibular del temporal",
+        30
+      ],
+      [
+        "Disco articular",
+        20
+      ],
+      [
+        "Cápsula y ligamentos",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "funcion",
+    "q": "¿Qué funciones desempeñan los dientes en el sistema estomatognático?",
+    "a": [
+      [
+        "Masticación",
+        40
+      ],
+      [
+        "Fonación",
+        30
+      ],
+      [
+        "Soporte de tejidos y dimensión facial",
+        20
+      ],
+      [
+        "Contribución a la estética",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "desarrollo",
+    "q": "¿Qué tejidos del germen dentario originan estructuras del diente y soporte?",
+    "a": [
+      [
+        "Órgano del esmalte",
+        40
+      ],
+      [
+        "Papila dental",
+        30
+      ],
+      [
+        "Folículo dental",
+        20
+      ],
+      [
+        "Epitelio y ectomesénquima interactuantes",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "origen",
+    "q": "¿Qué estructuras derivan principalmente del ectomesénquima dental?",
+    "a": [
+      [
+        "Dentina",
+        40
+      ],
+      [
+        "Pulpa",
+        30
+      ],
+      [
+        "Cemento",
+        20
+      ],
+      [
+        "Ligamento periodontal",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "corona",
+    "q": "¿Qué accidentes anatómicos pueden observarse en superficies oclusales?",
+    "a": [
+      [
+        "Cúspides",
+        40
+      ],
+      [
+        "Fosas",
+        30
+      ],
+      [
+        "Surcos",
+        20
+      ],
+      [
+        "Rebordes",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "contactos",
+    "q": "¿Qué relaciones anatómicas ayudan a mantener estabilidad del arco dentario?",
+    "a": [
+      [
+        "Áreas de contacto proximal",
+        40
+      ],
+      [
+        "Contornos coronarios",
+        30
+      ],
+      [
+        "Relaciones oclusales",
+        20
+      ],
+      [
+        "Soporte periodontal",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "pulpa",
+    "q": "¿Qué componentes pueden encontrarse en el complejo pulpodentinario?",
+    "a": [
+      [
+        "Odontoblastos",
+        40
+      ],
+      [
+        "Vasos sanguíneos",
+        30
+      ],
+      [
+        "Fibras nerviosas",
+        20
+      ],
+      [
+        "Tejido conectivo",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "ligamento periodontal",
+    "q": "¿Qué funciones cumple el ligamento periodontal?",
+    "a": [
+      [
+        "Soporte del diente",
+        40
+      ],
+      [
+        "Propiocepción",
+        30
+      ],
+      [
+        "Distribución de fuerzas",
+        20
+      ],
+      [
+        "Participación en remodelado y nutrición",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "mandibula",
+    "q": "¿Qué regiones anatómicas importantes se reconocen en la mandíbula?",
+    "a": [
+      [
+        "Cuerpo",
+        40
+      ],
+      [
+        "Rama",
+        30
+      ],
+      [
+        "Proceso condilar",
+        20
+      ],
+      [
+        "Proceso coronoides",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "foramenes",
+    "q": "¿Qué referencias anatómicas mandibulares son importantes en anestesia y cirugía?",
+    "a": [
+      [
+        "Foramen mandibular",
+        40
+      ],
+      [
+        "Foramen mentoniano",
+        30
+      ],
+      [
+        "Língula mandibular",
+        20
+      ],
+      [
+        "Conducto mandibular",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "denticion primaria",
+    "q": "¿Qué características generales diferencian a muchos dientes temporales de sus sucesores permanentes?",
+    "a": [
+      [
+        "Coronas más pequeñas",
+        40
+      ],
+      [
+        "Esmalte y dentina relativamente más delgados",
+        30
+      ],
+      [
+        "Cámaras pulpares proporcionalmente amplias",
+        20
+      ],
+      [
+        "Mayor constricción cervical",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK573074/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "intermediate",
+    "subtopic": "odontogenesis",
+    "q": "¿Qué etapas morfológicas clásicas se describen durante el desarrollo del germen dentario?",
+    "a": [
+      [
+        "Brote",
+        40
+      ],
+      [
+        "Casquete",
+        30
+      ],
+      [
+        "Campana",
+        20
+      ],
+      [
+        "Aposición y maduración posteriores",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "hertwig",
+    "q": "¿Qué funciones se relacionan con la vaina epitelial de Hertwig durante el desarrollo radicular?",
+    "a": [
+      [
+        "Guiar la forma inicial de la raíz",
+        40
+      ],
+      [
+        "Inducir diferenciación de odontoblastos radiculares",
+        30
+      ],
+      [
+        "Delimitar el contorno radicular",
+        20
+      ],
+      [
+        "Participar en el proceso que precede a formación de cemento",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "foliculo",
+    "q": "¿Qué tejidos de soporte derivan del folículo dental?",
+    "a": [
+      [
+        "Cemento",
+        40
+      ],
+      [
+        "Ligamento periodontal",
+        30
+      ],
+      [
+        "Hueso alveolar",
+        20
+      ],
+      [
+        "Tejidos conectivos de soporte asociados",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "dentina",
+    "q": "¿Qué rasgos histológicos caracterizan a la dentina?",
+    "a": [
+      [
+        "Túbulos dentinarios",
+        40
+      ],
+      [
+        "Matriz mineralizada",
+        30
+      ],
+      [
+        "Prolongaciones odontoblásticas",
+        20
+      ],
+      [
+        "Variación estructural entre dentina peritubular e intertubular",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "esmalte",
+    "q": "¿Qué características distinguen al esmalte maduro?",
+    "a": [
+      [
+        "Alta mineralización",
+        40
+      ],
+      [
+        "Ausencia de células",
+        30
+      ],
+      [
+        "Organización en prismas o bastones",
+        20
+      ],
+      [
+        "Incapacidad de regeneración biológica verdadera",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "cemento",
+    "q": "¿Qué funciones puede cumplir el cemento radicular?",
+    "a": [
+      [
+        "Inserción de fibras periodontales",
+        40
+      ],
+      [
+        "Protección de dentina radicular",
+        30
+      ],
+      [
+        "Adaptación y reparación superficial",
+        20
+      ],
+      [
+        "Contribución al anclaje periodontal",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "variantes",
+    "q": "¿Qué anomalías del desarrollo pueden alterar tamaño o forma dental?",
+    "a": [
+      [
+        "Microdoncia",
+        40
+      ],
+      [
+        "Macrodoncia",
+        30
+      ],
+      [
+        "Fusión o geminación",
+        20
+      ],
+      [
+        "Taurodontismo",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK574555/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "canal mandibular",
+    "q": "¿Qué estructuras o relaciones deben considerarse al evaluar el conducto mandibular?",
+    "a": [
+      [
+        "Trayecto del nervio alveolar inferior",
+        40
+      ],
+      [
+        "Relación con raíces de molares",
+        30
+      ],
+      [
+        "Posición del foramen mentoniano",
+        20
+      ],
+      [
+        "Variación anatómica individual",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "furcacion",
+    "q": "¿Qué aspectos anatómicos influyen en el acceso y mantenimiento de furcaciones molares?",
+    "a": [
+      [
+        "Número y divergencia de raíces",
+        40
+      ],
+      [
+        "Tronco radicular",
+        30
+      ],
+      [
+        "Concavidades radiculares",
+        20
+      ],
+      [
+        "Entrada y dimensión de la furcación",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "cej",
+    "q": "¿Qué relaciones pueden observarse entre esmalte y cemento en la unión amelocementaria?",
+    "a": [
+      [
+        "Contacto borde a borde",
+        40
+      ],
+      [
+        "Cemento superpuesto al esmalte",
+        30
+      ],
+      [
+        "Pequeña separación con dentina expuesta",
+        20
+      ],
+      [
+        "Variación entre superficies del mismo diente",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "advanced",
+    "subtopic": "desarrollo permanente",
+    "q": "¿Qué principios describen el desarrollo de la dentición permanente?",
+    "a": [
+      [
+        "Inicia durante etapas prenatales para varios dientes",
+        40
+      ],
+      [
+        "Los sucesores se desarrollan linguales a temporales",
+        30
+      ],
+      [
+        "Los molares permanentes no sustituyen dientes temporales",
+        20
+      ],
+      [
+        "La odontogénesis depende de interacción epitelio-ectomesénquima",
+        10
+      ]
+    ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  }
+]
