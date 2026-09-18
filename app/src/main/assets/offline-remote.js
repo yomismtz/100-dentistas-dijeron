@@ -170,7 +170,7 @@ function offlineClassroomPanel(){
 
 window.onRemoteTeacherCommand=function(command,arg){
   function click(ids){for(const id of ids){const el=$('#'+id);if(el){el.click();return true;}}return false;}
-  if(command==='pause'){v2Paused=!v2Paused;if(v2Paused)stopTimer();else if(gameVisible()&&phase!=='over')startTimer();updateTimerUI();}
+  if(command==='pause'){if(typeof offlineTogglePause==='function')offlineTogglePause();else{v2Paused=!v2Paused;if(v2Paused)stopTimer();else if(gameVisible()&&phase!=='over')startTimer();updateTimerUI();}}
   else if(command==='read'&&typeof narratorReadQuestion==='function')narratorReadQuestion(function(){});
   else if(command==='strike')addStrike('remote');
   else if(command==='revealNext'){const i=revealed.findIndex(function(x){return !x;});if(i>=0)revealAnswer(i,$('#answers')&&$('#answers').children[i]);}
