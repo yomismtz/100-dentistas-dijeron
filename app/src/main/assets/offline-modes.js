@@ -128,7 +128,7 @@ if(typeof narratorRead==='function'){
 }
 
 function omAmbient(){
-  if(!offlineSettings.ambient||!tvSettings.music||narratorReading||!gameVisible())return;
+  if(!offlineSettings.ambient||!tvSettings.music||narratorReading||!gameVisible()||phase==='over')return;
   const ns=phase==='steal'?[196,247]:phase==='faceoff'?[220,277]:[262,330];
   ns.forEach(function(f,i){tvTone(f,i*.16,.36,.006,'sine');});
 }
