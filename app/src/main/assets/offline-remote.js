@@ -216,6 +216,22 @@ v2StartFaceoff=function(sudden=false){
   setTimeout(function(){careoQuestionScreen();},900);
 };
 
+
+
+const orCareoFailBase=careoFail;
+careoFail=function(team,isSecond,reason){
+  if(careoState&&careoState.sudden&&isSecond){
+    careoStopClock();
+    if(typeof tvSfx==='function')tvSfx('buzz');
+    bank=0;strikes=0;phase='over';updateBankUI();updateStrikesUI();updateTurnUI();
+    openModal('<div class="careoFailScreen"><div class="careoBigX">✖ ✖</div><h2>NINGÚN EQUIPO ACERTÓ</h2><p>Se sorteará otra pregunta de muerte súbita.</p></div>');
+    const close=$('#closeModal');if(close)close.classList.add('careoNoClose');
+    setTimeout(function(){if(close)close.classList.remove('careoNoClose');closeModal(false);finishGame();},1300);
+    return;
+  }
+  return orCareoFailBase(team,isSecond,reason);
+};
+
 const orCareoCorrectBase=careoCorrect;
 careoCorrect=function(team,m){
   if(careoState&&careoState.sudden){
