@@ -353,8 +353,16 @@ public class MainActivity extends Activity {
                 } else if ("/r".equals(path)) {
                     respond(output, 200, "text/html; charset=utf-8", referencePage());
                 } else if ("/api/state".equals(path)) {
-                    String payload = "{\"buzzArmed\":" + buzzArmed + ",\"state\":" + safeJsonObject(stateJson) + "}";
+                    String payload = "{\"buzzArmed\":" + buzzArmed + ",\"state\":" + publicStateJson() + "}";
                     respond(output, 200, "application/json; charset=utf-8", payload);
+                } else if ("/api/teacher-state".equals(path)) {
+                    String pin = queryValue(query, "pin");
+                    if (!teacherPin.equals(pin)) {
+                        respond(output, 403, "application/json; charset=utf-8", "{\"ok\":false,\"error\":\"PIN\"}");
+                    } else {
+                        String payload = "{\"buzzArmed\":" + buzzArmed + ",\"state\":" + safeJsonObject(stateJson) + "}";
+                        respond(output, 200, "application/json; charset=utf-8", payload);
+                    }
                 } else if ("/api/buzz".equals(path)) {
                     int team = parseInt(queryValue(query, "team"), 0);
                     boolean accepted = (team == 1 || team == 2) && tryBuzz(team, true);
@@ -385,6 +393,17 @@ public class MainActivity extends Activity {
         private String safeJsonObject(String raw) {
             String t = raw == null ? "{}" : raw.trim();
             return t.startsWith("{") && t.endsWith("}") ? t : "{}";
+        }
+
+        private String publicStateJson() {
+            try {
+                JSONObject obj = new JSONObject(safeJsonObject(stateJson));
+                obj.remove("answers");
+                obj.remove("scores");
+                return obj.toString();
+            } catch (Exception ignored) {
+                return "{}";
+            }
         }
 
         private int parseInt(String value, int fallback) {
@@ -453,10 +472,10 @@ public class MainActivity extends Activity {
                     + "<button onclick=\"cmd('prev')\">◀ ANTERIOR</button><button onclick=\"cmd('next')\">SIGUIENTE ▶</button>"
                     + "<button onclick=\"cmd('projector')\">📺 PROYECTOR</button><button onclick=\"cmd('finish')\">🏁 TERMINAR</button></div>"
                     + "<h2>Respuestas privadas</h2><div id='answers' class='answers'></div></div><script>"
-                    + stateScript()
                     + ";let pin=sessionStorage.getItem('dentistasTeacherPin')||'';document.getElementById('pin').value=pin;document.getElementById('savePin').onclick=()=>{pin=document.getElementById('pin').value.trim();sessionStorage.setItem('dentistasTeacherPin',pin);document.getElementById('auth').textContent=pin?'PIN guardado en este navegador.':'Introduce el PIN.'};"
                     + "async function cmd(n,a=''){pin=document.getElementById('pin').value.trim();let r=await fetch('/api/cmd?pin='+encodeURIComponent(pin)+'&name='+encodeURIComponent(n)+'&arg='+encodeURIComponent(a)+'&x='+Date.now());document.getElementById('auth').textContent=r.ok?'✓ Comando enviado':'⛔ PIN incorrecto'}"
-                    + "async function refresh(){let j=await st();if(!j)return;let s=j.state||{};document.getElementById('q').textContent=s.question||'Sin pregunta';document.getElementById('meta').textContent='Ronda '+(s.round||'-')+' · Banco '+(s.bank||0)+' · X '+(s.strikes||0)+' · '+(s.phase||'');let el=document.getElementById('answers');el.innerHTML='';(s.answers||[]).forEach((a,i)=>{let d=document.createElement('button');d.className='small';d.textContent=(a.revealed?'✓ ':'')+(i+1)+'. '+a.label+' · '+a.points;d.onclick=()=>cmd('reveal',String(i));el.appendChild(d)})}"
+                    + "async function teacherState(){pin=document.getElementById('pin').value.trim();if(!pin)return null;try{let r=await fetch('/api/teacher-state?pin='+encodeURIComponent(pin)+'&x='+Date.now());if(!r.ok){document.getElementById('auth').textContent='⛔ PIN incorrecto';return null}return await r.json()}catch(e){return null}}"
+                    + "async function refresh(){let j=await teacherState();if(!j)return;let s=j.state||{};document.getElementById('q').textContent=s.question||'Sin pregunta';document.getElementById('meta').textContent='Ronda '+(s.round||'-')+' · Banco '+(s.bank||0)+' · X '+(s.strikes||0)+' · '+(s.phase||'');let el=document.getElementById('answers');el.innerHTML='';(s.answers||[]).forEach((a,i)=>{let d=document.createElement('button');d.className='small';d.textContent=(a.revealed?'✓ ':'')+(i+1)+'. '+a.label+' · '+a.points;d.onclick=()=>cmd('reveal',String(i));el.appendChild(d)})}"
                     + "setInterval(refresh,650);refresh();</script>";
         }
 
