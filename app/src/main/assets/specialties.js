@@ -128,7 +128,7 @@ function spFreshPool(id,pool){
 
 function spRemember(id,selected,history){
   const prev=Array.isArray(history[id])?history[id]:[];
-  history[id]=[...selected.map(q=>q.q),...prev].filter((x,i,a)=>a.indexOf(x)===i).slice(0,Math.max(SPECIALTY_TARGET,48));
+  history[id]=[...selected.map(q=>q.q),...prev].filter((x,i,a)=>a.indexOf(x)===i).slice(0,Math.max(180,SPECIALTY_TARGET));
   spWriteHistory(history);
 }
 
