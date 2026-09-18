@@ -22,7 +22,11 @@ function otExplain(q){return q&&q.explanation?q.explanation:(q&&q.source?'Las re
 function otApplyOverrides(){
   if(!questionPool||!questionPool.length)return;
   let all={};try{all=JSON.parse(localStorage.getItem(OT_OVERRIDES)||'{}');}catch(_){}
-  questionPool.forEach(function(q){if(all[q.q])Object.assign(q,all[q.q]);});
+  questionPool.forEach(function(q){
+    const key=q._overrideKey||q.q;
+    q._overrideKey=key;
+    if(all[key])Object.assign(q,all[key]);
+  });
 }
 const otWait=setInterval(function(){if(questionPool&&questionPool.length){otApplyOverrides();clearInterval(otWait);}},400);
 
@@ -44,7 +48,8 @@ function otEditQuestion(){
     '<div class="menuStack"><button id="otSave">💾 GUARDAR LOCALMENTE</button><button id="otClone">⧉ DUPLICAR COMO PERSONAL</button></div>');
   $('#otd').value=q.difficulty||(typeof spDifficultyOf==='function'?spDifficultyOf(q):'intermediate');$('#ote').value=otEditorial(q);
   $('#otSave').onclick=function(){
-    const original=q.q,patch={q:$('#otq').value.trim()||q.q,difficulty:$('#otd').value,source:$('#ots').value.trim(),explanation:$('#otw').value.trim(),aliases:otParseAliases($('#ota').value),editorialStatus:$('#ote').value,reviewedAt:new Date().toISOString().slice(0,10),disabled:$('#otx').checked};
+    const original=q._overrideKey||q.q;q._overrideKey=original;
+    const patch={q:$('#otq').value.trim()||q.q,difficulty:$('#otd').value,source:$('#ots').value.trim(),explanation:$('#otw').value.trim(),aliases:otParseAliases($('#ota').value),editorialStatus:$('#ote').value,reviewedAt:new Date().toISOString().slice(0,10),disabled:$('#otx').checked};
     let all={};try{all=JSON.parse(localStorage.getItem(OT_OVERRIDES)||'{}');}catch(_){}
     all[original]=patch;localStorage.setItem(OT_OVERRIDES,JSON.stringify(all));Object.assign(q,patch);closeModal(false);if(typeof orSync==='function')orSync();
   };
@@ -66,8 +71,9 @@ const otBaseMatch=v2Match;
 v2Match=function(text,q){
   q=q||otQ();let best=otBaseMatch(text,q);if(!q)return best;
   const input=v2Norm(text),custom=q.aliases||{};
+  const isCurrent=(Array.isArray(questions)&&q===questions[roundIndex]);
   q.a.forEach(function(ans,idx){
-    if(revealed&&revealed[idx]&&phase!=='faceoff'&&phase!=='sudden')return;
+    if(isCurrent&&revealed&&revealed[idx]&&phase!=='faceoff'&&phase!=='sudden')return;
     const extras=custom[ans[0]]||[];
     extras.forEach(function(raw){
       const a=v2Norm(raw);let score=0;
