@@ -88,7 +88,8 @@ v2Match=function(text,q){
 function otReferenceQr(){
   const base=typeof orBase==='function'?orBase():'';
   const url=base?base+'/r':'';
-  openModal('<h2>📚 QR DE REFERENCIA ACTUAL</h2><p>Este QR abre una página local con la pregunta, explicación y referencia. No necesita Internet para mostrar esos datos.</p><div class="qrCard"><canvas id="otRefQr"></canvas><input readonly value="'+v2Escape(url)+'"></div>');
+  try{if(window.Android&&Android.setReferenceUnlocked)Android.setReferenceUnlocked(true);}catch(_){}
+  openModal('<h2>📚 QR DE REFERENCIA ACTUAL</h2><p>Este QR abre una página local con la pregunta, explicación y referencia. Se volverá a bloquear automáticamente al cambiar de pregunta.</p><div class="qrCard"><canvas id="otRefQr"></canvas><input readonly value="'+v2Escape(url)+'"></div>');
   if($('#otRefQr')&&typeof orDrawQr==='function')orDrawQr($('#otRefQr'),url);
 }
 v2QuestionInfo=function(){
