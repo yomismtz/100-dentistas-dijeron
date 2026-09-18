@@ -5,13 +5,13 @@ showHelp=function(){
     <h2>¿CÓMO SE JUEGA?</h2>
     <ol>
       <li>Dos equipos eligen nombre y personaje.</li>
-      <li>Se juegan <b>6 rondas</b> con preguntas elegidas de toda la base.</li>
+      <li>Se juegan <b>8 rondas</b> con preguntas elegidas de toda la base.</li>
       <li>Cada ronda comienza con un <b>careo</b>. La respuesta de mayor valor obtiene el control y el equipo decide <b>JUGAR</b> o <b>PASAR</b>.</li>
       <li>Las respuestas pueden darse por <b>voz</b> o escribirse. Si la coincidencia es dudosa, decide el docente.</li>
       <li>El tiempo por respuesta es de <b>${v2TimerSeconds} segundos</b>. Al llegar a cero se marca un strike.</li>
       <li>Cada equipo puede acumular hasta <b>3 strikes</b>. Al tercero pierde el control.</li>
       <li>Si hay banco, el rival dispone de una respuesta para intentar el <b>robo</b>.</li>
-      <li>Rondas 1–2 valen ×1, 3–4 valen ×2 y 5–6 valen ×3.</li>
+      <li>Rondas 1–2 valen ×1, 3–4 valen ×2 y 5–8 valen ×3.</li>
       <li>Si terminan empatados, se activa una <b>muerte súbita</b>.</li>
       <li>El botón 🎓 abre el <b>modo docente</b>: pausa, fuentes, corrección de strikes, preguntas personalizadas y accesibilidad.</li>
     </ol>
