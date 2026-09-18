@@ -209,6 +209,11 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public void setReferenceUnlocked(boolean unlocked) {
+            if (classroomServer != null) classroomServer.setReferenceUnlocked(unlocked);
+        }
+
+        @JavascriptInterface
         public void openUrl(String url) {
             runOnUiThread(() -> {
                 try {
@@ -241,6 +246,8 @@ public class MainActivity extends Activity {
         private volatile boolean running = true;
         private volatile boolean ready = false;
         private volatile boolean buzzArmed = false;
+        private volatile boolean referenceUnlocked = false;
+        private volatile int lastRound = -1;
         private volatile String stateJson = "{}";
         private final String teacherPin;
         private ServerSocket serverSocket;
@@ -271,6 +278,7 @@ public class MainActivity extends Activity {
 
         synchronized void armBuzz() {
             buzzArmed = true;
+            referenceUnlocked = false;
         }
 
         synchronized void closeBuzz() {
@@ -286,9 +294,25 @@ public class MainActivity extends Activity {
             return true;
         }
 
-        void setState(String json) {
-            if (json == null || json.trim().isEmpty()) stateJson = "{}";
-            else stateJson = json;
+        synchronized void setState(String json) {
+            if (json == null || json.trim().isEmpty()) {
+                stateJson = "{}";
+                return;
+            }
+            try {
+                JSONObject obj = new JSONObject(json);
+                int round = obj.optInt("round", -1);
+                if (round != -1 && round != lastRound) {
+                    referenceUnlocked = false;
+                    lastRound = round;
+                }
+            } catch (Exception ignored) {
+            }
+            stateJson = json;
+        }
+
+        synchronized void setReferenceUnlocked(boolean unlocked) {
+            referenceUnlocked = unlocked;
         }
 
         String getBaseUrl() {
@@ -355,6 +379,12 @@ public class MainActivity extends Activity {
                 } else if ("/api/state".equals(path)) {
                     String payload = "{\"buzzArmed\":" + buzzArmed + ",\"state\":" + publicStateJson() + "}";
                     respond(output, 200, "application/json; charset=utf-8", payload);
+                } else if ("/api/reference".equals(path)) {
+                    if (!referenceUnlocked) {
+                        respond(output, 403, "application/json; charset=utf-8", "{\"ok\":false,\"error\":\"LOCKED\"}");
+                    } else {
+                        respond(output, 200, "application/json; charset=utf-8", "{\"ok\":true,\"state\":" + referenceStateJson() + "}");
+                    }
                 } else if ("/api/teacher-state".equals(path)) {
                     String pin = queryValue(query, "pin");
                     if (!teacherPin.equals(pin)) {
@@ -400,7 +430,26 @@ public class MainActivity extends Activity {
                 JSONObject obj = new JSONObject(safeJsonObject(stateJson));
                 obj.remove("answers");
                 obj.remove("scores");
+                obj.remove("source");
+                obj.remove("explanation");
+                obj.remove("editorial");
+                obj.remove("reviewedAt");
                 return obj.toString();
+            } catch (Exception ignored) {
+                return "{}";
+            }
+        }
+
+        private String referenceStateJson() {
+            try {
+                JSONObject src = new JSONObject(safeJsonObject(stateJson));
+                JSONObject ref = new JSONObject();
+                ref.put("question", src.optString("question", ""));
+                ref.put("source", src.optString("source", ""));
+                ref.put("explanation", src.optString("explanation", ""));
+                ref.put("editorial", src.optString("editorial", ""));
+                ref.put("reviewedAt", src.optString("reviewedAt", ""));
+                return ref.toString();
             } catch (Exception ignored) {
                 return "{}";
             }
@@ -490,9 +539,8 @@ public class MainActivity extends Activity {
 
         private String referencePage() {
             return "<!doctype html><meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'><style>"
-                    + baseCss() + "</style><div class='card'><h1>📚 REFERENCIA DE LA PREGUNTA</h1><div id='q' class='status'></div><p id='why'></p><p id='src'></p></div><script>"
-                    + stateScript()
-                    + ";async function refresh(){let j=await st();if(!j)return;let s=j.state||{};document.getElementById('q').textContent=s.question||'';document.getElementById('why').textContent=s.explanation||'La explicación específica está pendiente de revisión editorial.';document.getElementById('src').textContent=s.source?'Fuente: '+s.source:'Fuente específica pendiente.'}setInterval(refresh,1000);refresh();</script>";
+                    + baseCss() + "</style><div class='card'><h1>📚 REFERENCIA DE LA PREGUNTA</h1><div id='q' class='status'>Esperando que el docente comparta la referencia…</div><p id='why'></p><p id='src'></p></div><script>"
+                    + "async function refresh(){try{let r=await fetch('/api/reference?x='+Date.now());if(!r.ok){document.getElementById('q').textContent='🔒 Referencia bloqueada hasta que el docente la comparta.';document.getElementById('why').textContent='';document.getElementById('src').textContent='';return}let j=await r.json();let s=j.state||{};document.getElementById('q').textContent=s.question||'';document.getElementById('why').textContent=s.explanation||'Explicación específica pendiente.';document.getElementById('src').textContent=s.source?'Fuente: '+s.source:'Fuente específica pendiente.'}catch(e){}}setInterval(refresh,1000);refresh();</script>";
         }
 
         private String landingPage() {
