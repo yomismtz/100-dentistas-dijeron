@@ -51,3 +51,10 @@ gradle assembleDebug
 El APK queda en `app/build/outputs/apk/debug/app-debug.apk`.
 
 GitHub Actions valida el banco de preguntas y la sintaxis JavaScript antes de compilar el APK. Las ramas `chatgpt/**` también se compilan para pruebas sin sustituir automáticamente la versión estable de `main`.
+
+
+## Aula offline
+
+La edición 2.7 puede iniciar un servidor HTTP dentro de la red local para pulsadores de equipo, respuesta individual y control docente. Los teléfonos se conectan a la misma Wi‑Fi o hotspot del dispositivo anfitrión; no se requiere un servidor externo ni salida a Internet. El control docente está protegido por un PIN local y las respuestas correctas no se incluyen en el estado público de los equipos.
+
+Android declara el permiso `INTERNET` porque este permiso también habilita sockets de red local. Esto no significa que las partidas se transmitan a Internet.
