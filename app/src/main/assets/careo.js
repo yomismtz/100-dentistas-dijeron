@@ -1,7 +1,7 @@
 'use strict';
 
 // Careo de pulsadores · v2.5
-const CAREO_VERSION = '2.5-buzzer-faceoff-beta';
+const CAREO_VERSION = '2.6-narrated-faceoff-beta';
 const careoLegacyFaceoff = v2StartFaceoff;
 const careoOriginalSpeechResult = window.onSpeechResult;
 const careoOriginalShowRound = showRound;
@@ -30,7 +30,8 @@ function careoPlayLongIntro(){
     s.volume=.72;
     const p=s.play();
     if(p&&p.catch)p.catch(()=>{});
-    careoIntroStopHandle=setTimeout(()=>careoStopIntro(true),9000);
+    // La música continúa durante selección de equipos/especialidad.
+    // Se desvanece al comenzar la primera pregunta, no por un temporizador fijo.
   }catch(_){}
 }
 
@@ -57,18 +58,29 @@ function careoTeamLabel(team){
 function careoQuestionScreen(){
   const q=questions[roundIndex];
   if(!q)return;
-  stopTimer(); careoStopClock(); careoLockBoard(true);
+  stopTimer(); careoStopClock(); careoLockBoard(true); careoStopIntro(true);
   phase='faceoff';
-  if(typeof tvShowCue==='function') tvShowCue(`RONDA ${roundIndex+1}`,'🎤 CAREO','round',950);
+  if(typeof tvShowCue==='function') tvShowCue(`RONDA ${roundIndex+1}`,'🎤 ESCUCHA LA PREGUNTA','round',950);
   openModal(`
     <div class="careoQuestionScreen">
       <div class="careoKicker">🎤 CAREO · RONDA ${roundIndex+1}</div>
       <h2>${v2Escape(q.q)}</h2>
-      <p>Lean la pregunta. Cuando estén listos aparecerán los dos pulsadores.</p>
-      <button id="careoReady" class="setupStart">⚡ LISTOS · MOSTRAR PULSADORES</button>
+      <div class="careoListenState">🔊 La voz del presentador está leyendo la pregunta…</div>
+      <p>Los pulsadores aparecerán cuando termine la lectura. <b>El tiempo todavía no corre.</b></p>
+      <button id="careoSkipRead" class="secondaryWide">⏭ OMITIR LECTURA</button>
     </div>`);
   const close=$('#closeModal'); if(close)close.classList.add('careoNoClose');
-  $('#careoReady').onclick=careoShowBuzzers;
+  let advanced=false;
+  const proceed=()=>{
+    if(advanced)return;
+    advanced=true;
+    if(typeof narratorStop==='function')narratorStop();
+    if(typeof tvSfx==='function')tvSfx('ready');
+    setTimeout(careoShowBuzzers,420);
+  };
+  $('#careoSkipRead').onclick=proceed;
+  if(typeof narratorReadQuestion==='function') narratorReadQuestion(proceed);
+  else setTimeout(proceed,700);
 }
 
 function careoShowBuzzers(){
@@ -93,7 +105,7 @@ function careoShowBuzzers(){
     [a,b].forEach(x=>{if(x)x.disabled=true;});
     const winner=team===0?a:b;
     if(winner)winner.classList.add('buzzWinner');
-    if(typeof tvSfx==='function')tvSfx('correct');
+    if(typeof tvSfx==='function')tvSfx('buzzerHit');
     if(typeof tvVibrate==='function')tvVibrate(45);
     setTimeout(()=>careoAsk(team,false),360);
   };
@@ -220,8 +232,5 @@ window.onSpeechResult=function(text){
 };
 
 document.addEventListener('visibilitychange',()=>{if(document.hidden)careoStopClock();});
-
-const careoStart=$('#start');
-if(careoStart)careoStart.addEventListener('pointerdown',()=>careoStopIntro(true),{capture:true});
 
 setTimeout(careoPlayLongIntro,220);
