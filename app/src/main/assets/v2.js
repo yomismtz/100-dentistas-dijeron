@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · V2 gameplay layer
-const V2_VERSION = '2.3-specialties-beta';
+const V2_VERSION = '2.4-360-questions-beta';
 const RECENT_LIMIT = 24;
 let v2RoundStartScores = [0, 0];
 let v2RoundHistory = [];
@@ -249,9 +249,14 @@ function v2GiveControl(team,sudden){
 }
 
 function v2QuestionInfo(){
-  const q=questions[roundIndex]; if(!q)return; const cat=q.cat||'Ortodoncia y funciones orales'; const src=V2_SOURCES[cat]||V2_SOURCES['Ortodoncia y funciones orales'];
-  openModal(`<h2>📚 EXPLICACIÓN Y FUENTE</h2><p><b>${v2Escape(q.q)}</b></p><p>En este tablero se aceptan como respuestas correctas: <b>${q.a.map(x=>v2Escape(x[0])).join(', ')}</b>.</p><p>Los puntos son una ponderación didáctica del juego; no representan una encuesta real a 100 dentistas.</p><p><b>Área:</b> ${v2Escape(cat)}</p><p><b>Fuente de referencia:</b> ${v2Escape(src[0])}</p><button id="openSource" class="setupStart">ABRIR FUENTE EN EL NAVEGADOR</button>`);
-  $('#openSource').onclick=()=>v2OpenUrl(src[1]);
+  const q=questions[roundIndex]; if(!q)return;
+  const cat=q.cat||q.specialty||'Odontología';
+  const fallback=V2_SOURCES[cat]||V2_SOURCES['Ortodoncia y funciones orales'];
+  const sourceUrl=q.source||fallback[1];
+  const sourceLabel=q.source?'Fuente clínica/indexada asociada a esta pregunta':fallback[0];
+  const level=q.difficulty==='basic'?'Básica':q.difficulty==='intermediate'?'Media':q.difficulty==='advanced'?'Extra difícil':'No etiquetada';
+  openModal(`<h2>📚 EXPLICACIÓN Y FUENTE</h2><p><b>${v2Escape(q.q)}</b></p><p>En este tablero se aceptan como respuestas correctas: <b>${q.a.map(x=>v2Escape(x[0])).join(', ')}</b>.</p><p>Los puntos son una ponderación didáctica del juego; no representan una encuesta real a 100 dentistas.</p><p><b>Área:</b> ${v2Escape(cat)} · <b>Nivel:</b> ${v2Escape(level)}</p><p><b>Fuente de referencia:</b> ${v2Escape(sourceLabel)}</p><button id="openSource" class="setupStart">ABRIR FUENTE EN EL NAVEGADOR</button>`);
+  $('#openSource').onclick=()=>v2OpenUrl(sourceUrl);
 }
 
 function v2TeacherMode(){
