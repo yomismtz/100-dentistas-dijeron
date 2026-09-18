@@ -178,7 +178,7 @@ function careoFail(team,isSecond,reason){
   openModal(`<div class="careoFailScreen"><div class="careoBigX">✖ ✖</div><h2>NINGÚN EQUIPO ACERTÓ</h2><p>La ronda termina sin puntos y se pasa a la siguiente.</p><button id="careoNextNow" class="setupStart">SIGUIENTE RONDA ▶</button></div>`);
   const close=$('#closeModal'); if(close)close.classList.add('careoNoClose');
   let advanced=false;
-  const go=()=>{if(advanced)return;advanced=true;careoStopClock();closeModal(false);careoLockBoard(true);nextRound();};
+  const go=()=>{if(advanced)return;advanced=true;careoStopClock();const close=$('#closeModal');if(close)close.classList.remove('careoNoClose');closeModal(false);careoLockBoard(true);nextRound();};
   $('#careoNextNow').onclick=go;
   setTimeout(go,1800);
 }
