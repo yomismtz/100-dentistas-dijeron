@@ -43,13 +43,17 @@
     <p>Las preferencias del juego y, cuando el docente lo elige, las preguntas personalizadas se almacenan localmente mediante mecanismos del componente web de Android. Dependiendo de la configuración del dispositivo, Android puede incluir determinados datos de la aplicación en sus mecanismos de copia de seguridad. El proyecto no opera un servidor propio para almacenar esos datos.</p>
     <p>El usuario puede eliminar los datos locales desinstalando la aplicación o utilizando las opciones de almacenamiento de Android para borrar los datos de la app.</p>
 
+    <h2>5. Aula offline y red local</h2>
+    <p>La versión 2.7 incorpora un modo aula que puede crear un pequeño servidor HTTP <strong>únicamente en la red local del dispositivo</strong> para que los equipos usen sus teléfonos como pulsadores, envíen respuestas individuales y para que el docente use un control remoto protegido por PIN. Los dispositivos deben estar conectados a la misma red Wi‑Fi o hotspot.</p>
+    <p>Por este motivo la aplicación declara el permiso Android <strong>INTERNET</strong>, que Android utiliza también para comunicaciones por red local. El modo aula no requiere un servidor externo del proyecto ni necesita que la red tenga salida a Internet. Las partidas, respuestas y controles se procesan entre dispositivos de la red local y en el dispositivo anfitrión.</p>
+    <p>El estado público que consultan los equipos no incluye las respuestas correctas ni las fuentes/explicaciones privadas. El panel docente utiliza un PIN local generado al iniciar la app. Las referencias científicas locales se desbloquean únicamente cuando el docente decide compartirlas.</p>
     <h2>5. Reconocimiento de voz opcional</h2>
     <p>La aplicación ofrece un botón opcional para responder por voz. Al utilizarlo, la app solicita al sistema Android que abra el <strong>servicio de reconocimiento de voz instalado en el dispositivo</strong>. La aplicación 100 Dentistas Dijeron no captura ni conserva directamente el archivo de audio.</p>
     <p>El servicio de reconocimiento seleccionado por el sistema puede procesar la voz localmente o enviarla a los servidores de su proveedor, según el dispositivo, la configuración, los paquetes de idioma instalados y las políticas de dicho proveedor. Ese procesamiento externo no es controlado por 100 Dentistas Dijeron.</p>
     <p>Cuando el servicio termina, devuelve a la aplicación únicamente el texto reconocido. Ese texto se usa localmente para compararlo con las respuestas del tablero y no se envía a un servidor del proyecto ni se conserva como historial de voz.</p>
     <p>La función de voz es opcional: todas las respuestas pueden escribirse manualmente. Si el dispositivo no dispone de un servicio de reconocimiento compatible, el juego sigue funcionando mediante texto y controles del docente.</p>
 
-    <h2>6. Fuentes científicas y navegador externo</h2>
+    <h2>10. Fuentes científicas y navegador externo</h2>
     <p>El modo docente puede abrir una fuente científica o institucional en el navegador externo del dispositivo. Al abrir un enlace, el tratamiento de datos queda sujeto a las políticas del navegador y del sitio visitado. La aplicación no incorpora rastreadores propios para estos enlaces.</p>
 
     <h2>7. Sitio web y GitHub Pages</h2>
