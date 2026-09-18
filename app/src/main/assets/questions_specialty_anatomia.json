@@ -28,22 +28,22 @@
     "specialty": "anatomia",
     "difficulty": "basic",
     "subtopic": "denticiones",
-    "q": "¿Qué grupos dentarios existen en la dentición permanente?",
+    "q": "¿Qué funciones predominantes se relacionan con los distintos grupos dentarios permanentes?",
     "a": [
       [
-        "Incisivos",
+        "Incisión por incisivos",
         40
       ],
       [
-        "Caninos",
+        "Desgarro por caninos",
         30
       ],
       [
-        "Premolares",
+        "Trituración inicial por premolares",
         20
       ],
       [
-        "Molares",
+        "Molienda por molares",
         10
       ]
     ],
@@ -78,10 +78,10 @@
     "specialty": "anatomia",
     "difficulty": "basic",
     "subtopic": "periodonto",
-    "q": "¿Qué estructuras forman el periodonto?",
+    "q": "¿Qué estructuras participan directamente en la unión funcional del diente con el alveolo?",
     "a": [
       [
-        "Encía",
+        "Cemento radicular",
         40
       ],
       [
@@ -89,11 +89,11 @@
         30
       ],
       [
-        "Cemento radicular",
+        "Hueso alveolar",
         20
       ],
       [
-        "Hueso alveolar",
+        "Fibras gingivales de soporte",
         10
       ]
     ],
@@ -170,19 +170,23 @@
     "specialty": "anatomia",
     "difficulty": "basic",
     "subtopic": "dientes temporales",
-    "q": "¿Qué grupos dentarios existen en la dentición temporal?",
+    "q": "¿Qué rasgos anatómicos generales caracterizan a la dentición temporal?",
     "a": [
       [
-        "Incisivos",
-        45
+        "Veinte dientes en total",
+        40
       ],
       [
-        "Caninos",
-        35
+        "Ausencia de premolares",
+        30
       ],
       [
-        "Molares",
+        "Coronas con marcada constricción cervical",
         20
+      ],
+      [
+        "Raíces de molares relativamente divergentes",
+        10
       ]
     ],
     "source": "https://www.ncbi.nlm.nih.gov/books/NBK573074/"
