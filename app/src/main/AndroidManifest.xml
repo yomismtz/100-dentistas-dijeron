@@ -2,6 +2,8 @@
   <application
       android:theme="@style/AppTheme"
       android:label="100 Dentistas Dijeron"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher"
       android:allowBackup="true"
       android:usesCleartextTraffic="false">
     <activity
