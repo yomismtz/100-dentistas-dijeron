@@ -8,7 +8,7 @@ android {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
         targetSdk 35
-        versionCode 10
-        versionName '2.6-narrator-beta'
+        versionCode 11
+        versionName '2.7-offline-classroom-beta'
     }
 }
