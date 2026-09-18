@@ -199,10 +199,11 @@ const tvOriginalShowRound = showRound;
 showRound = function(reset=true){
   tvOriginalShowRound(reset);
   const mult=roundMultiplier();
-  const title=`RONDA ${roundIndex+1}`;
-  const sub=mult===1?'PUNTUACIÓN NORMAL':mult===2?'¡PUNTOS DOBLES! ×2':'🔥 ¡PUNTOS TRIPLES! ×3';
-  tvShowCue(title,sub,mult===3?'triple':mult===2?'double':'round',1450);
-  tvSfx(mult===3?'triple':mult===2?'double':'round');
+  const finalRound = typeof GAME_SIZE!=='undefined' && roundIndex===GAME_SIZE-1;
+  const title=finalRound?'🏆 GRAN FINAL':`RONDA ${roundIndex+1}`;
+  const sub=finalRound?`RONDA ${roundIndex+1} · ×${mult}`:mult===1?'PUNTUACIÓN NORMAL':mult===2?'¡PUNTOS DOBLES! ×2':'🔥 ¡PUNTOS TRIPLES! ×3';
+  tvShowCue(title,sub,finalRound?'winner':mult===3?'triple':mult===2?'double':'round',finalRound?1650:1450);
+  tvSfx(finalRound?'fanfare':mult===3?'triple':mult===2?'double':'round');
 };
 
 const tvOriginalFaceoff = v2StartFaceoff;
