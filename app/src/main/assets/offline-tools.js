@@ -179,6 +179,11 @@ function offlineToolsMenu(){
   $('#otEditM').onclick=otEditQuestion;$('#otTourM').onclick=otTournamentSetup;$('#otTourV').onclick=otTournamentView;$('#otQrM').onclick=offlineClassroomPanel;
 }
 
-(function(){
-  const home=$('.homeActions');if(home&&!$('#offlineToolsBtn')){const b=document.createElement('button');b.id='offlineToolsBtn';b.textContent='🧰 DOCENTE';b.onclick=offlineToolsMenu;home.appendChild(b);}
-})();
+const otBaseModes=typeof omModes==='function'?omModes:null;
+if(otBaseModes){
+  omModes=function(){
+    otBaseModes();
+    const stack=document.querySelector('#modalContent .menuStack');
+    if(stack&&!$('#otToolsMenu')){const b=document.createElement('button');b.id='otToolsMenu';b.textContent='🧰 HERRAMIENTAS DOCENTES';b.onclick=offlineToolsMenu;stack.appendChild(b);}
+  };
+}
