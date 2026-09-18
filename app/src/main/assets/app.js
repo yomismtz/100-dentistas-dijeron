@@ -14,7 +14,19 @@ const BANK_FILES = [
   'questions_patologia.json',
   'questions_odonto_ortho.json',
   'questions_infecciones_medicina.json',
-  'questions_materiales_implantes.json'
+  'questions_materiales_implantes.json',
+  'questions_specialty_operatoria.json',
+  'questions_specialty_anestesia.json',
+  'questions_specialty_ortopedia.json',
+  'questions_specialty_ortho_preventiva.json',
+  'questions_specialty_ortho_interceptiva.json',
+  'questions_specialty_ortho_correctiva.json',
+  'questions_specialty_odontopediatria.json',
+  'questions_specialty_cirugia.json',
+  'questions_specialty_periodoncia.json',
+  'questions_specialty_protesis.json',
+  'questions_specialty_endodoncia.json',
+  'questions_specialty_anatomia.json'
 ];
 
 let questionPool = [];
