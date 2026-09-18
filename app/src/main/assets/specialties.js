@@ -333,3 +333,48 @@ showHelp=function(){
   }
   const round=$('#round');if(round&&round.textContent.includes('Ronda 1'))round.textContent='Ronda 1 · ×1';
 })();
+
+
+const spOriginalDeclareWinner = v2DeclareWinner;
+v2DeclareWinner=function(winner,sudden=false){
+  closeModal(false);
+  const char=typeof characterFor==='function'?characterFor(winner):{icon:'🦷'};
+  openModal(`<div class="winnerStage">
+    <div class="winnerCharacters">${char.icon} 🏆</div>
+    <div class="winnerName">¡${v2Escape(teamNames[winner])} GANA!</div>
+    <div class="winnerScore">${scores[winner]} PUNTOS${sudden?' · MUERTE SÚBITA':''}</div>
+    <p><b>${spSpecialtyName()}</b> · 8 rondas</p>
+  </div>
+  ${v2ResultsTable()}
+  <div class="menuStack">
+    <button id="spAgainSame">🎲 OTRA PARTIDA · MISMA ESPECIALIDAD</button>
+    <button id="spChangeBank">📚 CAMBIAR ESPECIALIDAD</button>
+    <button id="spHomeWinner">⌂ VOLVER A PORTADA</button>
+  </div>`);
+  $('#spAgainSame').onclick=()=>{closeModal(false);v2RoundHistory=[];startNewGame();};
+  $('#spChangeBank').onclick=()=>{closeModal(false);spShowSpecialties();};
+  $('#spHomeWinner').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
+};
+
+showMenu=function(){
+  openModal(`<h2>MENÚ · ${spSpecialtyName()}</h2>
+    <div class="menuStack">
+      <button id="spMenuHelp">📋 Instrucciones</button>
+      <button id="spMenuTeacher">🎓 Modo docente</button>
+      <button id="spMenuSettings">⚙️ Accesibilidad y Show</button>
+      <button id="spMenuInfo">📚 Explicación / fuente</button>
+      <button id="spMenuBanks">📊 Estado de bancos</button>
+      <button id="spMenuChange">🔁 Cambiar especialidad</button>
+      <button id="spMenuNew">🎲 Nueva partida · mismo banco</button>
+      <button id="spMenuHome">⌂ Portada</button>
+    </div>`);
+  $('#spMenuHelp').onclick=showHelp;
+  $('#spMenuTeacher').onclick=v2TeacherMode;
+  $('#spMenuSettings').onclick=v2Settings;
+  $('#spMenuInfo').onclick=v2QuestionInfo;
+  $('#spMenuBanks').onclick=spBankStatusModal;
+  $('#spMenuChange').onclick=spShowSpecialties;
+  $('#spMenuNew').onclick=()=>{if(confirm('¿Terminar esta partida e iniciar otra de la misma especialidad?')){closeModal(false);v2RoundHistory=[];startNewGame();}};
+  $('#spMenuHome').onclick=()=>{closeModal(false);stopTimer();$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
+};
+$('#menu').onclick=showMenu;
