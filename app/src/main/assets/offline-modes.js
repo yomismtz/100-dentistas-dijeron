@@ -215,9 +215,10 @@ function offlineTogglePause(){
 const omBaseCareoQuestion=careoQuestionScreen;
 careoQuestionScreen=function(){
   const q=omQ();if(!q)return;
+  const sudden=!!(careoState&&careoState.sudden);
   stopTimer();careoStopClock();careoLockBoard(true);careoStopIntro(true);phase='faceoff';
-  tvShowCue('RONDA '+(roundIndex+1),'🎤 ESCUCHA LA PREGUNTA','round',950);
-  openModal('<div class="careoQuestionScreen"><div class="careoKicker">🎤 CAREO · RONDA '+(roundIndex+1)+'</div>'+omMedia(q)+'<h2>'+v2Escape(q.q)+'</h2><div class="careoListenState">🔊 El presentador está leyendo…</div><p>El tiempo todavía no corre.</p><button id="skipRead" class="secondaryWide">⏭ OMITIR LECTURA</button></div>');
+  tvShowCue(sudden?'⚡ MUERTE SÚBITA':'RONDA '+(roundIndex+1),'🎤 ESCUCHA LA PREGUNTA',sudden?'sudden':'round',950);
+  openModal('<div class="careoQuestionScreen"><div class="careoKicker">'+(sudden?'⚡ MUERTE SÚBITA':'🎤 CAREO · RONDA '+(roundIndex+1))+'</div>'+omMedia(q)+'<h2>'+v2Escape(q.q)+'</h2><div class="careoListenState">🔊 El presentador está leyendo…</div><p>El tiempo todavía no corre.</p><button id="skipRead" class="secondaryWide">⏭ OMITIR LECTURA</button></div>');
   const close=$('#closeModal');if(close)close.classList.add('careoNoClose');let done=false;
   function go(){if(done)return;done=true;if(typeof narratorStop==='function')narratorStop();tvSfx('ready');setTimeout(function(){if(offlineSettings.examMode&&typeof offlineExamCollect==='function')offlineExamCollect(careoShowBuzzers);else careoShowBuzzers();},320);}
   $('#skipRead').onclick=go;if(typeof narratorReadQuestion==='function')narratorReadQuestion(go);else setTimeout(go,500);
