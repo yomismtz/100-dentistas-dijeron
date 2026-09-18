@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
@@ -20,10 +22,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends Activity {
     private static final int SPEECH_REQUEST_CODE = 1001;
     private WebView webView;
+    private TextToSpeech textToSpeech;
+    private volatile boolean ttsReady = false;
 
     @Override
     @SuppressWarnings("deprecation")
@@ -50,9 +55,54 @@ public class MainActivity extends Activity {
         settings.setAllowUniversalAccessFromFileURLs(false);
         settings.setAllowContentAccess(false);
 
+        initNarrator();
+
         webView.addJavascriptInterface(new AndroidBridge(), "Android");
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
+    }
+
+    private void initNarrator() {
+        textToSpeech = new TextToSpeech(getApplicationContext(), status -> {
+            if (status != TextToSpeech.SUCCESS || textToSpeech == null) {
+                ttsReady = false;
+                return;
+            }
+
+            int language = textToSpeech.setLanguage(new Locale("es", "MX"));
+            if (language == TextToSpeech.LANG_MISSING_DATA || language == TextToSpeech.LANG_NOT_SUPPORTED) {
+                language = textToSpeech.setLanguage(new Locale("es"));
+            }
+
+            ttsReady = language != TextToSpeech.LANG_MISSING_DATA
+                    && language != TextToSpeech.LANG_NOT_SUPPORTED;
+            textToSpeech.setSpeechRate(0.90f);
+            textToSpeech.setPitch(1.02f);
+            textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                @Override
+                public void onStart(String utteranceId) {
+                    notifyNarrationEvent("window.onNarrationStarted", utteranceId);
+                }
+
+                @Override
+                public void onDone(String utteranceId) {
+                    notifyNarrationEvent("window.onNarrationDone", utteranceId);
+                }
+
+                @Override
+                @SuppressWarnings("deprecation")
+                public void onError(String utteranceId) {
+                    notifyNarrationEvent("window.onNarrationDone", utteranceId);
+                }
+            });
+        });
+    }
+
+    private void notifyNarrationEvent(String callback, String utteranceId) {
+        if (webView == null) return;
+        final String quoted = JSONObject.quote(utteranceId == null ? "" : utteranceId);
+        runOnUiThread(() -> webView.evaluateJavascript(
+                "if(" + callback + "){" + callback + "(" + quoted + ");}", null));
     }
 
     public class AndroidBridge {
@@ -71,6 +121,35 @@ public class MainActivity extends Activity {
                     sendSpeechError("No hay un servicio de reconocimiento de voz instalado.");
                 }
             });
+        }
+
+        @JavascriptInterface
+        public void speakText(String text, String utteranceId) {
+            runOnUiThread(() -> {
+                String safeId = (utteranceId == null || utteranceId.trim().isEmpty())
+                        ? "question"
+                        : utteranceId;
+                if (!ttsReady || textToSpeech == null || text == null || text.trim().isEmpty()) {
+                    notifyNarrationEvent("window.onNarrationDone", safeId);
+                    return;
+                }
+                int result = textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, safeId);
+                if (result == TextToSpeech.ERROR) {
+                    notifyNarrationEvent("window.onNarrationDone", safeId);
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void stopSpeaking() {
+            runOnUiThread(() -> {
+                if (textToSpeech != null) textToSpeech.stop();
+            });
+        }
+
+        @JavascriptInterface
+        public boolean isTtsReady() {
+            return ttsReady;
         }
 
         @JavascriptInterface
@@ -129,6 +208,16 @@ public class MainActivity extends Activity {
         if (webView == null) return;
         String quoted = JSONObject.quote(message);
         webView.evaluateJavascript("window.onSpeechError(" + quoted + ")", null);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+            textToSpeech.shutdown();
+            textToSpeech = null;
+        }
+        super.onDestroy();
     }
 
     @Override
