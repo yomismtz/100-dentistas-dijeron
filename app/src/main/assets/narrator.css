@@ -1,0 +1,7 @@
+/* Narrador y estado de lectura */
+.narratorBadge{position:fixed;z-index:13000;left:50%;top:max(10px,env(safe-area-inset-top));transform:translateX(-50%);padding:.55rem 1rem;border:2px solid #f0ca74;border-radius:999px;background:#250706ee;color:#fff1b7;font-weight:1000;letter-spacing:.05em;box-shadow:0 0 22px #000,0 0 18px #c8782255;pointer-events:none;animation:narratorPulse .9s ease-in-out infinite alternate}
+.careoListenState{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;margin:.45rem auto;padding:.55rem .9rem;border:1px solid #b9904d;border-radius:999px;background:#1d0907;color:#ffe5a1;font-weight:900}
+.careoQuestionScreen h2{max-height:48vh;overflow:auto}
+@keyframes narratorPulse{to{filter:brightness(1.22);transform:translateX(-50%) scale(1.025)}}
+.reduceMotion .narratorBadge{animation:none}
+@media(max-height:520px){.narratorBadge{font-size:.78rem;padding:.38rem .7rem}.careoListenState{font-size:.78rem;margin:.2rem auto;padding:.35rem .65rem}}
