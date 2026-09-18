@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · Bancos por especialidad
-const SPECIALTY_VERSION = '2.3-specialties-beta';
+const SPECIALTY_VERSION = '2.4-360-questions-beta';
 const SPECIALTY_TARGET = 100;
 const SPECIALTY_HISTORY_KEY = 'dentistas-specialty-history-v1';
 const SPECIALTY_PREF_KEY = 'dentistas-specialty-preferences-v1';
@@ -43,6 +43,7 @@ function spTagsForQuestion(q){
   const cat=spNorm(q?.cat||'');
   const text=spNorm((q?.q||'')+' '+cat);
   const tags=new Set();
+  if(q?.specialty && SPECIALTY_DEFS.some(d=>d.id===q.specialty)) tags.add(q.specialty);
 
   if(cat.includes('anatomia y fisiologia') || spHas(text,['tejidos forman un diente','periodonto','glandulas salivales','musculos de la masticacion','nervio trigemino','superficies anatomicas','grupos dentarios','articulacion temporomandibular'])) tags.add('anatomia');
 
@@ -85,6 +86,7 @@ function spBank(id){
 }
 
 function spDifficultyOf(q){
+  if(['basic','intermediate','advanced'].includes(q?.difficulty)) return q.difficulty;
   const n=Array.isArray(q?.a)?q.a.length:0;
   if(n<=3) return 'basic';
   if(n===4) return 'intermediate';
@@ -240,7 +242,7 @@ function spShowSpecialties(){
           <option value="mix">🎲 Mezcla</option>
           <option value="basic">🌱 Básica</option>
           <option value="intermediate">🦷 Intermedia</option>
-          <option value="advanced">🔥 Avanzada</option>
+          <option value="advanced">🔥 Extra difícil</option>
         </select>
       </label>
       <button id="spStartGame" class="setupStart">COMENZAR · 8 RONDAS</button>
