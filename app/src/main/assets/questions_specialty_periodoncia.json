@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "gingivitis",
+    "q": "¿Qué signos son frecuentes en gingivitis inducida por biofilm?",
+    "a": [
+      [
+        "Sangrado al sondaje",
+        40
+      ],
+      [
+        "Eritema",
+        30
+      ],
+      [
+        "Edema",
+        20
+      ],
+      [
+        "Cambios de contorno gingival",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "periodontitis",
+    "q": "¿Qué hallazgos apoyan diagnóstico de periodontitis?",
+    "a": [
+      [
+        "Pérdida de inserción clínica",
+        40
+      ],
+      [
+        "Pérdida ósea radiográfica",
+        30
+      ],
+      [
+        "Bolsas periodontales",
+        20
+      ],
+      [
+        "Sangrado o supuración en sitios afectados",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "charting",
+    "q": "¿Qué parámetros se registran en un periodontograma?",
+    "a": [
+      [
+        "Profundidad de sondaje",
+        40
+      ],
+      [
+        "Nivel de inserción clínica",
+        30
+      ],
+      [
+        "Sangrado al sondaje",
+        20
+      ],
+      [
+        "Movilidad o furcaciones cuando corresponde",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "risk factors",
+    "q": "¿Qué factores modificables se relacionan con peor control periodontal?",
+    "a": [
+      [
+        "Tabaquismo",
+        40
+      ],
+      [
+        "Control glucémico deficiente",
+        30
+      ],
+      [
+        "Biofilm persistente",
+        20
+      ],
+      [
+        "Baja adherencia al mantenimiento",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "instruments",
+    "q": "¿Qué instrumentos se utilizan en terapia periodontal no quirúrgica?",
+    "a": [
+      [
+        "Sonda periodontal",
+        40
+      ],
+      [
+        "Curetas",
+        30
+      ],
+      [
+        "Instrumentos ultrasónicos",
+        20
+      ],
+      [
+        "Instrumentos para higiene supragingival",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "step1",
+    "q": "¿Qué acciones forman parte del primer paso de tratamiento periodontal?",
+    "a": [
+      [
+        "Control de biofilm supragingival",
+        40
+      ],
+      [
+        "Instrucción de higiene",
+        30
+      ],
+      [
+        "Control de factores de riesgo",
+        20
+      ],
+      [
+        "Remoción profesional de depósitos supragingivales",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "step2",
+    "q": "¿Qué procedimientos son centrales en el tratamiento subgingival de periodontitis?",
+    "a": [
+      [
+        "Instrumentación subgingival",
+        40
+      ],
+      [
+        "Control de cálculo y biofilm",
+        30
+      ],
+      [
+        "Reevaluación de respuesta",
+        20
+      ],
+      [
+        "Refuerzo de higiene",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "maintenance",
+    "q": "¿Qué incluye el mantenimiento periodontal?",
+    "a": [
+      [
+        "Reevaluación clínica",
+        40
+      ],
+      [
+        "Control profesional de biofilm",
+        30
+      ],
+      [
+        "Refuerzo de autocuidado",
+        20
+      ],
+      [
+        "Control de factores de riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "periimplant",
+    "q": "¿Qué hallazgos pueden aparecer en mucositis periimplantaria?",
+    "a": [
+      [
+        "Sangrado al sondaje",
+        40
+      ],
+      [
+        "Inflamación de mucosa",
+        30
+      ],
+      [
+        "Supuración en algunos casos",
+        20
+      ],
+      [
+        "Ausencia de pérdida ósea progresiva atribuible a periimplantitis",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/news-events/news/efp-publishes-guideline-on-the-prevention-and-treatment-of-peri-implant-diseases-30965/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "basic",
+    "subtopic": "mucogingival",
+    "q": "¿Qué hallazgos mucogingivales pueden evaluarse?",
+    "a": [
+      [
+        "Recesión",
+        40
+      ],
+      [
+        "Ancho de tejido queratinizado",
+        30
+      ],
+      [
+        "Profundidad vestibular",
+        20
+      ],
+      [
+        "Inserciones de frenillos",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "staging",
+    "q": "¿Qué dominios se consideran para estadificar periodontitis?",
+    "a": [
+      [
+        "Severidad de pérdida de inserción",
+        40
+      ],
+      [
+        "Pérdida ósea",
+        30
+      ],
+      [
+        "Pérdida dentaria atribuible a periodontitis",
+        20
+      ],
+      [
+        "Complejidad del manejo",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "grading",
+    "q": "¿Qué elementos ayudan a graduar progresión o riesgo de periodontitis?",
+    "a": [
+      [
+        "Evidencia directa de progresión",
+        40
+      ],
+      [
+        "Relación pérdida ósea/edad",
+        30
+      ],
+      [
+        "Tabaquismo",
+        20
+      ],
+      [
+        "Control de diabetes",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "reevaluation",
+    "q": "¿Qué se valora tras instrumentación subgingival?",
+    "a": [
+      [
+        "Profundidad residual de bolsas",
+        40
+      ],
+      [
+        "Sangrado al sondaje",
+        30
+      ],
+      [
+        "Control de biofilm",
+        20
+      ],
+      [
+        "Necesidad de tratamiento adicional",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "surgery",
+    "q": "¿Qué situaciones pueden motivar cirugía periodontal tras terapia inicial?",
+    "a": [
+      [
+        "Bolsas profundas residuales",
+        40
+      ],
+      [
+        "Defectos óseos tratables",
+        30
+      ],
+      [
+        "Furcaciones seleccionadas",
+        20
+      ],
+      [
+        "Necesidad de acceso para descontaminación",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "regeneration",
+    "q": "¿Qué defectos pueden ser candidatos a procedimientos regenerativos seleccionados?",
+    "a": [
+      [
+        "Defectos intraóseos",
+        40
+      ],
+      [
+        "Furcaciones seleccionadas",
+        30
+      ],
+      [
+        "Sitios con anatomía favorable",
+        20
+      ],
+      [
+        "Pacientes con buen control de placa y riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "antimicrobials",
+    "q": "¿Qué principios deben guiar uso de antimicrobianos sistémicos como adyuvantes periodontales?",
+    "a": [
+      [
+        "No sustituyen instrumentación mecánica",
+        40
+      ],
+      [
+        "Se reservan para indicaciones seleccionadas",
+        30
+      ],
+      [
+        "Deben considerar riesgos y resistencia",
+        20
+      ],
+      [
+        "Requieren diagnóstico y seguimiento",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "periimplantitis",
+    "q": "¿Qué hallazgos apoyan periimplantitis?",
+    "a": [
+      [
+        "Inflamación periimplantaria",
+        40
+      ],
+      [
+        "Sangrado o supuración al sondaje",
+        30
+      ],
+      [
+        "Aumento de profundidad comparado con referencia",
+        20
+      ],
+      [
+        "Pérdida ósea progresiva",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/news-events/news/efp-publishes-guideline-on-the-prevention-and-treatment-of-peri-implant-diseases-30965/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "occlusal trauma",
+    "q": "¿Qué hallazgos pueden motivar evaluar trauma oclusal en un paciente periodontal?",
+    "a": [
+      [
+        "Movilidad aumentada",
+        40
+      ],
+      [
+        "Fremitus",
+        30
+      ],
+      [
+        "Migración dentaria",
+        20
+      ],
+      [
+        "Facetas o signos funcionales asociados",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "prognosis",
+    "q": "¿Qué factores influyen en pronóstico periodontal de un diente?",
+    "a": [
+      [
+        "Soporte periodontal remanente",
+        40
+      ],
+      [
+        "Furcación",
+        30
+      ],
+      [
+        "Movilidad",
+        20
+      ],
+      [
+        "Control de factores de riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "supportive care",
+    "q": "¿Qué factores modifican la frecuencia de terapia periodontal de soporte?",
+    "a": [
+      [
+        "Riesgo de recurrencia",
+        40
+      ],
+      [
+        "Control de biofilm",
+        30
+      ],
+      [
+        "Tabaquismo o diabetes",
+        20
+      ],
+      [
+        "Estabilidad clínica",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "stage IV",
+    "q": "¿Qué problemas de complejidad pueden caracterizar periodontitis estadio IV?",
+    "a": [
+      [
+        "Disfunción masticatoria",
+        40
+      ],
+      [
+        "Movilidad o migración avanzada",
+        30
+      ],
+      [
+        "Pérdida dentaria extensa",
+        20
+      ],
+      [
+        "Necesidad de rehabilitación multidisciplinaria",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/news-events/news/efp-guideline-on-stage-iv-periodontitis-therapy-has-been-published-and-will-be-discussed-at-europerio10-30769/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "endpoints",
+    "q": "¿Qué objetivos clínicos orientan el avance entre pasos de terapia periodontal?",
+    "a": [
+      [
+        "Control de inflamación",
+        40
+      ],
+      [
+        "Reducción de bolsas profundas",
+        30
+      ],
+      [
+        "Buen control de biofilm",
+        20
+      ],
+      [
+        "Estabilidad compatible con mantenimiento",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "furcation",
+    "q": "¿Qué factores determinan dificultad de tratar una furcación?",
+    "a": [
+      [
+        "Grado de compromiso horizontal",
+        40
+      ],
+      [
+        "Acceso anatómico",
+        30
+      ],
+      [
+        "Morfología radicular",
+        20
+      ],
+      [
+        "Control de placa del paciente",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "risk grade",
+    "q": "¿Por qué el grado de periodontitis puede cambiar aunque el estadio permanezca igual?",
+    "a": [
+      [
+        "El grado refleja velocidad o riesgo de progresión",
+        40
+      ],
+      [
+        "Puede cambiar el control glucémico",
+        30
+      ],
+      [
+        "Puede cambiar exposición al tabaco",
+        20
+      ],
+      [
+        "Puede obtenerse nueva evidencia longitudinal",
+        10
+      ]
+    ],
+    "source": "https://www.perio.org/research-science/2017-classification-of-periodontal-and-peri-implant-diseases-and-conditions/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "bone defects",
+    "q": "¿Qué características anatómicas pueden influir en potencial regenerativo de un defecto intraóseo?",
+    "a": [
+      [
+        "Número de paredes remanentes",
+        40
+      ],
+      [
+        "Profundidad del defecto",
+        30
+      ],
+      [
+        "Ángulo del defecto",
+        20
+      ],
+      [
+        "Control de infección y estabilidad del sitio",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "periimplant prevention",
+    "q": "¿Qué medidas reducen riesgo de enfermedad periimplantaria?",
+    "a": [
+      [
+        "Control periodontal previo",
+        40
+      ],
+      [
+        "Higiene eficaz",
+        30
+      ],
+      [
+        "Diseño protésico higienizable",
+        20
+      ],
+      [
+        "Mantenimiento periódico",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/news-events/news/efp-publishes-guideline-on-the-prevention-and-treatment-of-peri-implant-diseases-30965/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "periimplant treatment",
+    "q": "¿Qué principios forman parte del tratamiento de periimplantitis?",
+    "a": [
+      [
+        "Control de biofilm y factores de riesgo",
+        40
+      ],
+      [
+        "Descontaminación de la superficie",
+        30
+      ],
+      [
+        "Terapia no quirúrgica o quirúrgica según caso",
+        20
+      ],
+      [
+        "Mantenimiento posterior",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/news-events/news/efp-publishes-guideline-on-the-prevention-and-treatment-of-peri-implant-diseases-30965/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "systemic links",
+    "q": "¿Qué enfoque es apropiado ante enfermedades sistémicas asociadas a riesgo periodontal?",
+    "a": [
+      [
+        "Registrar y actualizar historia médica",
+        40
+      ],
+      [
+        "Coordinar atención médica cuando procede",
+        30
+      ],
+      [
+        "Controlar factores modificables",
+        20
+      ],
+      [
+        "Evitar atribuir causalidad individual sin evaluación",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "resective regenerative",
+    "q": "¿Qué factores influyen al elegir enfoque resectivo, regenerativo o de mantenimiento?",
+    "a": [
+      [
+        "Morfología del defecto",
+        40
+      ],
+      [
+        "Profundidad residual",
+        30
+      ],
+      [
+        "Estética y localización",
+        20
+      ],
+      [
+        "Pronóstico y preferencias del paciente",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  },
+  {
+    "specialty": "periodoncia",
+    "difficulty": "advanced",
+    "subtopic": "multidisciplinary",
+    "q": "¿Qué situaciones periodontales pueden requerir manejo multidisciplinario?",
+    "a": [
+      [
+        "Estadio IV",
+        40
+      ],
+      [
+        "Migración patológica",
+        30
+      ],
+      [
+        "Necesidad protésica compleja",
+        20
+      ],
+      [
+        "Lesiones endoperiodontales seleccionadas",
+        10
+      ]
+    ],
+    "source": "https://www.efp.org/education/continuing-education/clinical-guidelines/guideline-on-treatment-of-stage-i-iii-periodontitis/"
+  }
+]
