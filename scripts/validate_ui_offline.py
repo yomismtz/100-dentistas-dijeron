@@ -45,7 +45,10 @@ if '@mipmap/ic_launcher' not in manifest:
 
 native_required=[
     'getTeacherPin()','/api/teacher-state','teacherPin.equals(pin)',
-    'publicStateJson()','obj.remove("answers")','obj.remove("scores")'
+    'publicStateJson()','obj.remove("answers")','obj.remove("scores")',
+    'setReferenceUnlocked(boolean unlocked)','/api/reference',
+    'obj.remove("source")','obj.remove("explanation")',
+    'referenceUnlocked','referenceStateJson()'
 ]
 for token in native_required:
     if token not in main:
@@ -56,6 +59,8 @@ js_required=[
     ('offline-remote.js','Android.getTeacherPin',remote),
     ('offline-modes.js','offlineTogglePause',modes),
     ('offline-tools.js','_overrideKey',tools),
+    ('offline-tools.js','Android.setReferenceUnlocked(true)',tools),
+    ('offline-remote.js','offlineTeacherAccessPanel',remote),
     ('v2.js','v2OppositeConflict',v2),
     ('v2.js','v2ContainmentScore',v2),
 ]
@@ -70,6 +75,10 @@ if 'setInterval(refresh,120)' not in team_block:
     errors.append('MainActivity.java: el pulsador remoto no usa polling rápido de 120 ms')
 if 'answers:(q&&q.a||[])' not in remote:
     errors.append('offline-remote.js: el host debe seguir enviando respuestas al estado nativo privado')
+if "orQrCard('📚 REFERENCIA ACTUAL'" in remote or "'qrr'" in remote:
+    errors.append('offline-remote.js: la referencia no debe aparecer en el panel público del aula')
+if "Android.setReferenceUnlocked(true)" not in tools:
+    errors.append('offline-tools.js: el QR de referencia debe requerir desbloqueo docente')
 
 if errors:
     print('VALIDACIÓN UI/OFFLINE FALLÓ:')
