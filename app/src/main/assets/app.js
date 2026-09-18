@@ -1,7 +1,7 @@
 'use strict';
 
 const $ = (s) => document.querySelector(s);
-const GAME_SIZE = 6;
+const GAME_SIZE = 8;
 const TURN_SECONDS = 10;
 const BANK_FILES = [
   'questions.json',
@@ -375,8 +375,8 @@ function finishGame() {
 
   openModal(
     `${result}
-     <p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p>
-     <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
+     <p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p>
+     <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–8: <b>×3</b>.</p>
      <p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>
      <div class="menuStack">
        <button id="mAgain">NUEVA PARTIDA ALEATORIA</button>
@@ -442,7 +442,7 @@ function showHelp() {
     <h2>¿Cómo se juega VS?</h2>
     <ol>
       <li>La partida es para <b>2 equipos</b>.</li>
-      <li>Cada partida usa <b>6 preguntas aleatorias</b> elegidas de toda la base.</li>
+      <li>Cada partida usa <b>8 preguntas aleatorias</b> elegidas de toda la base.</li>
       <li>Las preguntas no se repiten dentro de la misma partida.</li>
       <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
       <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
@@ -454,7 +454,7 @@ function showHelp() {
       <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
       <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
       <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
-      <li>Después de la ronda 6 se muestra el marcador final y el ganador.</li>
+      <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
     </ol>
     <p>Base actual: <b>${questionPool.length || 116} preguntas</b>.</p>
   `);
@@ -472,7 +472,7 @@ function showMenu() {
 
   $('#mHelp').onclick = showHelp;
   $('#mNew').onclick = () => {
-    if (confirm('¿Terminar esta partida y sortear 6 preguntas nuevas?')) {
+    if (confirm('¿Terminar esta partida y sortear 8 preguntas nuevas?')) {
       closeModal(false);
       startNewGame();
     }
