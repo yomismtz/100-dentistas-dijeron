@@ -94,16 +94,39 @@ function v2Aliases(label){
   if(n.includes('orl')) out.push('otorrino','otorrinolaringologo');
   return [...new Set(out.map(v2Norm).filter(Boolean))];
 }
+function v2OppositeConflict(a,b){
+  const A=new Set(v2Norm(a).split(' ').filter(Boolean));
+  const B=new Set(v2Norm(b).split(' ').filter(Boolean));
+  const pairs=[
+    ['maxilar','mandibular'],['superior','inferior'],['mesial','distal'],
+    ['vestibular','lingual'],['vestibular','palatina'],['unilateral','bilateral'],
+    ['abierta','profunda'],['abierto','profundo'],['aumento','disminucion'],
+    ['aumentada','disminuida'],['positivo','negativo']
+  ];
+  return pairs.some(([x,y])=>(A.has(x)&&B.has(y)&&!B.has(x))||(A.has(y)&&B.has(x)&&!B.has(y)));
+}
+function v2ContainmentScore(input,alias){
+  if(!(input.includes(alias)||alias.includes(input))) return 0;
+  const shorter=input.length<=alias.length?input:alias;
+  const longer=input.length>alias.length?input:alias;
+  const tokens=shorter.split(' ').filter(Boolean).length;
+  const ratio=shorter.length/Math.max(1,longer.length);
+  if(tokens>=2&&shorter.length>=7&&ratio>=.60) return .90;
+  return .72;
+}
 function v2Match(text, q=questions[roundIndex]){
   const input=v2Norm(text); if(!input||!q) return null;
   let best=null;
+  const isCurrent=(Array.isArray(questions)&&q===questions[roundIndex]);
   q.a.forEach((ans,idx)=>{
-    if(revealed[idx] && phase!=='faceoff' && phase!=='sudden') return;
+    if(isCurrent && revealed[idx] && phase!=='faceoff' && phase!=='sudden') return;
     let score=0;
     v2Aliases(ans[0]).forEach(alias=>{
-      if(input===alias) score=Math.max(score,1);
-      else if(input.includes(alias)||alias.includes(input)) score=Math.max(score,.93);
-      else score=Math.max(score,.58*v2Lev(input,alias)+.42*v2Jaccard(input,alias));
+      let candidate=0;
+      if(input===alias) candidate=1;
+      else candidate=Math.max(v2ContainmentScore(input,alias),.58*v2Lev(input,alias)+.42*v2Jaccard(input,alias));
+      if(v2OppositeConflict(input,alias)) candidate=Math.min(candidate,.45);
+      score=Math.max(score,candidate);
     });
     if(!best||score>best.score) best={idx,score,label:ans[0],points:Number(ans[1])||0};
   });
