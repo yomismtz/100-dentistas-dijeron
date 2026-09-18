@@ -77,7 +77,8 @@ v2Match=function(text,q){
     const extras=custom[ans[0]]||[];
     extras.forEach(function(raw){
       const a=v2Norm(raw);let score=0;
-      if(input===a)score=1;else if(input.includes(a)||a.includes(input))score=.92;else score=.58*v2Lev(input,a)+.42*v2Jaccard(input,a);
+      if(input===a)score=1;else score=Math.max(v2ContainmentScore(input,a),.58*v2Lev(input,a)+.42*v2Jaccard(input,a));
+      if(v2OppositeConflict(input,a))score=Math.min(score,.45);
       if(!best||score>best.score)best={idx:idx,score:score,label:ans[0],points:Number(ans[1])||0};
     });
   });
