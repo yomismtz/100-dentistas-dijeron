@@ -52,6 +52,9 @@ jobs:
           node --check app/src/main/assets/offline-modes.js
           node --check app/src/main/assets/offline-remote.js
           node --check app/src/main/assets/round-polish.js
+          node --check app/src/main/assets/v3-show.js
+          node --check app/src/main/assets/v3-academic.js
+          node --check app/src/main/assets/v3-core.js
 
       - name: Set up JDK 17
         uses: actions/setup-java@v5
