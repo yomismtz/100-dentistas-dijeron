@@ -105,7 +105,7 @@ function v3AssessmentCompare(){
 function v3Quality(q){
   if(!q||q.disabled||!q.source)return {level:'red',label:'🔴 NO UTILIZAR / REVISAR'};
   const e=String(q.editorialStatus||'').toLowerCase();
-  if(e.includes('pendiente')||e.includes('actualizar')||!q.reviewedAt)return {level:'yellow',label:'🟡 REVISIÓN PENDIENTE'};
+  if(e.includes('pendiente')||e.includes('actualizar')||!q.reviewedAt||!q.reviewer||!q.questionVersion)return {level:'yellow',label:'🟡 REVISIÓN PENDIENTE'};
   return {level:'green',label:'🟢 VERIFICADA'};
 }
 function v3QualityDashboard(){
