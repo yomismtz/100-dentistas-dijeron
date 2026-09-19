@@ -8,6 +8,7 @@ let narratorCurrentId = '';
 let narratorDoneCallback = null;
 let narratorFallbackHandle = null;
 let narratorReading = false;
+let narratorStatusText = '🔊 ESCUCHA LA PREGUNTA…';
 
 (function loadNarratorSettings(){
   try{
@@ -54,8 +55,9 @@ function narratorFinish(id){
   if(typeof done==='function')done();
 }
 
-function narratorRead(text,onDone){
+function narratorRead(text,onDone,statusText='🔊 ESCUCHA LA PREGUNTA…'){
   narratorStop();
+  narratorStatusText=statusText||'🔊 ESCUCHA LA PREGUNTA…';
   narratorDoneCallback=typeof onDone==='function'?onDone:null;
 
   if(!narratorEnabled || !String(text||'').trim()){
@@ -65,7 +67,7 @@ function narratorRead(text,onDone){
 
   narratorReading=true;
   narratorCurrentId='question_'+Date.now()+'_'+Math.floor(Math.random()*10000);
-  narratorBadge(true);
+  narratorBadge(true,narratorStatusText);
   if(typeof tvSfx==='function')tvSfx('listen');
 
   const value=String(text).trim();
@@ -99,11 +101,15 @@ function narratorReadQuestion(onDone){
   const q=questions?.[roundIndex];
   if(!q){if(onDone)onDone();return;}
   stopTimer();
-  narratorRead(q.q,onDone);
+  narratorRead(q.q,onDone,'🔊 ESCUCHA LA PREGUNTA…');
+}
+
+function narratorReadAnnouncement(text,onDone,statusText='🔊 ESCUCHA…'){
+  narratorRead(text,onDone,statusText);
 }
 
 window.onNarrationStarted=function(id){
-  if(id===narratorCurrentId) narratorBadge(true,'🔊 ESCUCHA LA PREGUNTA…');
+  if(id===narratorCurrentId) narratorBadge(true,narratorStatusText);
 };
 window.onNarrationDone=function(id){
   narratorFinish(String(id||''));
