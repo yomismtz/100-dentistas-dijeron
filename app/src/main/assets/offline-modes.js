@@ -124,7 +124,7 @@ updateTimerUI=function(){omBaseTimer();if(timerRemaining>=1&&timerRemaining<=3&&
 function omDuck(on){const a=$('#sndStart');if(a&&!a.paused)try{a.volume=on?.08:.68;}catch(_){}}
 if(typeof narratorRead==='function'){
   const bRead=narratorRead,bStop=narratorStop;
-  narratorRead=function(t,done){bRead(t,function(){omDuck(false);if(done)done();});omDuck(true);};
+  narratorRead=function(t,done,statusText){bRead(t,function(){omDuck(false);if(done)done();},statusText);omDuck(true);};
   narratorStop=function(){bStop();omDuck(false);};
 }
 
