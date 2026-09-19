@@ -1,9 +1,10 @@
 'use strict';
 
 // Ajustes de tablero y cierre de ronda.
-const ROUND_POLISH_VERSION='2.8-round-review';
+const ROUND_POLISH_VERSION='3.0.3-spoken-missing-answers';
 
 let rpReviewing=false;
+let rpSkipReviewOnce=false;
 
 function rpCurrentAnswers(){
   const q=Array.isArray(questions)?questions[roundIndex]:null;
@@ -41,6 +42,12 @@ function rpRevealMissingBeforeAdvance(){
   const missing=rpMissingIndices();
   if(!missing.length)return false;
 
+  const answers=rpCurrentAnswers();
+  const labels=missing.map(idx=>String(answers[idx]?.[0]||'').trim()).filter(Boolean);
+  const speech=labels.length===1
+    ? 'La respuesta faltante es: '+labels[0]+'.'
+    : 'Las respuestas faltantes son: '+labels.map((label,i)=>(i+1)+', '+label).join('. ')+'.';
+
   rpReviewing=true;
   stopTimer();
   if(typeof careoStopClock==='function')careoStopClock();
@@ -53,7 +60,34 @@ function rpRevealMissingBeforeAdvance(){
   phase='over';
   updateTurnUI();
 
+  rpRemovePrompt();
+  const prompt=document.createElement('div');
+  prompt.id='roundReviewPrompt';
+  prompt.className='roundReviewPrompt';
+  prompt.innerHTML=
+    '<div><b>📋 RESPUESTAS FALTANTES</b><span id="roundReviewStatus">🔊 Escucha las respuestas que faltaron…</span></div>'+
+    '<button id="roundReviewContinue" disabled>'+(roundIndex>=questions.length-1?'VER RESULTADO FINAL ▶':'SIGUIENTE RONDA ▶')+'</button>';
+  document.body.appendChild(prompt);
+
+  if(typeof tvSfx==='function')tvSfx('review');
+  else if(typeof tvTone==='function'){
+    tvTone(330,0,.13,.04,'triangle');
+    tvTone(494,.22,.15,.045,'triangle');
+    tvTone(659,.46,.28,.05,'triangle');
+  }
+
   const box=$('#answers');
+  let visualDone=false;
+  let speechDone=false;
+
+  const maybeEnable=()=>{
+    if(!visualDone||!speechDone)return;
+    const status=$('#roundReviewStatus');
+    if(status)status.textContent='✓ Ya puedes pasar a la siguiente ronda.';
+    const b=$('#roundReviewContinue');
+    if(b)b.disabled=false;
+  };
+
   missing.forEach((idx,pos)=>{
     const btn=box&&box.children[idx];
     setTimeout(()=>{
@@ -61,52 +95,63 @@ function rpRevealMissingBeforeAdvance(){
       if(btn){
         btn.classList.remove('covered');
         btn.classList.add('revealed','missedAnswer');
-        btn.setAttribute('aria-label','Respuesta no encontrada: '+rpCurrentAnswers()[idx][0]);
+        btn.setAttribute('aria-label','Respuesta no encontrada: '+answers[idx][0]);
       }
-      if(typeof tvTone==='function')tvTone(410+pos*55,0,.12,.018,'sine');
       if(typeof orSync==='function')orSync();
-    },pos*180);
+      if(pos===missing.length-1){
+        setTimeout(()=>{visualDone=true;maybeEnable();},160);
+      }
+    },240+pos*320);
   });
 
-  rpRemovePrompt();
-  const prompt=document.createElement('div');
-  prompt.id='roundReviewPrompt';
-  prompt.className='roundReviewPrompt';
-  prompt.innerHTML=
-    '<div><b>📋 RESPUESTAS QUE FALTARON</b><span>Se muestran '+missing.length+' respuesta'+(missing.length===1?'':'s')+' sin sumar puntos.</span></div>'+
-    '<button id="roundReviewContinue" disabled>'+(roundIndex>=questions.length-1?'VER RESULTADO FINAL ▶':'SIGUIENTE RONDA ▶')+'</button>';
-  document.body.appendChild(prompt);
+  const visualFallback=240+Math.max(0,missing.length-1)*320+420;
+  setTimeout(()=>{visualDone=true;maybeEnable();},visualFallback);
 
-  if(typeof offlinePresenterCue==='function'){
-    setTimeout(()=>offlinePresenterCue('review'),250);
-  }
-
-  const delay=Math.max(650,missing.length*180+220);
   setTimeout(()=>{
-    const b=$('#roundReviewContinue');
-    if(b)b.disabled=false;
-  },delay);
+    if(typeof narratorReadAnnouncement==='function'){
+      narratorReadAnnouncement(
+        speech,
+        ()=>{speechDone=true;maybeEnable();},
+        '🔊 RESPUESTAS FALTANTES…'
+      );
+    }else if(typeof narratorRead==='function'){
+      narratorRead(
+        speech,
+        ()=>{speechDone=true;maybeEnable();},
+        '🔊 RESPUESTAS FALTANTES…'
+      );
+    }else{
+      speechDone=true;
+      maybeEnable();
+    }
+  },820);
 
   $('#roundReviewContinue').onclick=()=>{
     const b=$('#roundReviewContinue');
     if(b&&b.disabled)return;
     rpRemovePrompt();
     rpReviewing=false;
-    rpBaseNextRound();
+    rpSkipReviewOnce=true;
+    nextRound();
   };
   return true;
 }
 
 const rpBaseNextRound=nextRound;
 nextRound=function(){
+  if(rpSkipReviewOnce){
+    rpSkipReviewOnce=false;
+    return rpBaseNextRound();
+  }
   if(phase==='over'&&rpRevealMissingBeforeAdvance())return;
-  rpBaseNextRound();
+  return rpBaseNextRound();
 };
 
 const rpBaseResetRound=resetRound;
 resetRound=function(){
   rpRemovePrompt();
   rpReviewing=false;
+  rpSkipReviewOnce=false;
   rpBaseResetRound();
 };
 
@@ -114,6 +159,7 @@ const rpBaseStartNewGame=startNewGame;
 startNewGame=function(){
   rpRemovePrompt();
   rpReviewing=false;
+  rpSkipReviewOnce=false;
   rpBaseStartNewGame();
 };
 
