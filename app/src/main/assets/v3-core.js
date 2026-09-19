@@ -348,12 +348,29 @@ function v3Championship(){
   $('#v3ChampReset').onclick=()=>{if(confirm('¿Borrar la clasificación acumulada?')){localStorage.removeItem(V3_CHAMP_KEY);v3Championship();}};
 }
 
+function v3RoundName(round,totalRounds){
+  if(totalRounds===1)return 'FINAL';
+  if(round===totalRounds)return 'FINAL';
+  if(round===totalRounds-1)return 'SEMIFINAL';
+  if(round===totalRounds-2)return 'CUARTOS';
+  return 'RONDA '+round;
+}
 function v3Bracket(){
   if(typeof otTournament==='undefined'||!otTournament){if(typeof otTournamentSetup==='function')return otTournamentSetup();return;}
-  const matches=otTournament.matches||[];
-  openModal('<h2>🏆 BRACKET · RONDA '+(otTournament.round||1)+'</h2><div class="bracket">'+
-    matches.map((m,i)=>'<div class="bracketMatch '+(i===otTournament.current?'active':'')+'"><span>'+v2Escape(m[0])+'</span><b>VS</b><span>'+v2Escape(m[1])+'</span></div>').join('')+
-    (otTournament.champion?'<div class="bracketChampion">🏆 '+v2Escape(otTournament.champion)+'</div>':'')+'</div>');
+  const history=Array.isArray(otTournament.history)?otTournament.history:[];
+  const current=otTournament.matches||[];
+  const allRounds=[...history];
+  if(otTournament.active&&current.length)allRounds.push({round:otTournament.round,matches:current,winners:[]});
+  const totalRounds=Math.max(1,...allRounds.map(r=>r.round||1));
+  openModal('<h2>🏆 BRACKET DEL TORNEO</h2><div class="bracketTree">'+
+    allRounds.map((r,ri)=>'<section class="bracketRound"><h3>'+v3RoundName(r.round,totalRounds)+'</h3>'+
+      (r.matches||[]).map((m,i)=>{
+        const winner=(r.winners||[])[i]||'';
+        const active=otTournament.active&&r.round===otTournament.round&&i===otTournament.current;
+        return '<div class="bracketMatch '+(active?'active':'')+'"><span class="'+(winner===m[0]?'winner':'')+'">'+v2Escape(m[0])+'</span><b>VS</b><span class="'+(winner===m[1]?'winner':'')+'">'+v2Escape(m[1])+'</span></div>';
+      }).join('')+'</section>').join('')+
+    (otTournament.champion?'<div class="bracketChampion">🏆 '+v2Escape(otTournament.champion)+'</div>':'')+
+    '</div>');
 }
 
 window.v3AfterGameStarted=function(){
