@@ -199,7 +199,7 @@ function otTournamentView(){
 function otFinalSetup(winner){
   const p1=prompt('Nombre del jugador 1 del equipo ganador:','JUGADOR 1')||'JUGADOR 1';
   const p2=prompt('Nombre del jugador 2:','JUGADOR 2')||'JUGADOR 2';
-  let pool=typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool];
+  let pool=(typeof v3ActivePack==='function'&&v3ActivePack())?v3PackPool(v3ActivePack()):(typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool]);
   const used=new Set(questions.map(function(q){return q.q;}));pool=shuffle(pool.filter(function(q){return !used.has(q.q)&&!q.disabled;})).slice(0,10);
   if(pool.length<10){alert('No hay suficientes preguntas frescas para el reto final.');return;}
   otFinal={winner:winner,names:[p1,p2],pool:pool,index:0,player:0,score:0,playerScores:[0,0],remaining:25,handle:null};otFinalPlayer();
