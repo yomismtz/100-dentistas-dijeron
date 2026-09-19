@@ -44,3 +44,5 @@
   .strikes{font-size:clamp(18px,2.6vw,34px)}
   .roundReviewPrompt{bottom:17.5%}
 }
+
+.answer.covered{pointer-events:none}
