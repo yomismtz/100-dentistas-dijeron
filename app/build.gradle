@@ -8,7 +8,7 @@ android {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
         targetSdk 35
-        versionCode 16
-        versionName '2.8.2-full-one-shot-audio-beta'
+        versionCode 17
+        versionName '3.0-classroom-research-beta'
     }
 }
