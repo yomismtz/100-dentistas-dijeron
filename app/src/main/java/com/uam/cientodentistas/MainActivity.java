@@ -18,6 +18,7 @@ import android.webkit.WebViewClient;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,6 +39,7 @@ import java.util.Locale;
 public class MainActivity extends Activity {
     private static final int SPEECH_REQUEST_CODE = 1001;
     private static final int EXPORT_REQUEST_CODE = 1002;
+    private static final int IMAGE_IMPORT_REQUEST_CODE = 1003;
     private static final int CLASSROOM_PORT = 8787;
     private static final int CLASSROOM_WS_PORT = 8788;
     private WebView webView;
@@ -269,6 +271,20 @@ public class MainActivity extends Activity {
         public void updateRemoteState(String json) {
             if (classroomServer != null) classroomServer.setState(json);
             if (classroomWebSocket != null) classroomWebSocket.updateState(json);
+        }
+
+        @JavascriptInterface
+        public void pickImageFile() {
+            runOnUiThread(() -> {
+                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                intent.setType("image/*");
+                try {
+                    startActivityForResult(intent, IMAGE_IMPORT_REQUEST_CODE);
+                } catch (Exception ignored) {
+                    sendJs("if(window.onImageImportError){window.onImageImportError('No se pudo abrir el selector de imágenes.');}");
+                }
+            });
         }
 
         @JavascriptInterface
@@ -683,6 +699,35 @@ public class MainActivity extends Activity {
     @SuppressWarnings("deprecation")
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == IMAGE_IMPORT_REQUEST_CODE) {
+            if (resultCode == RESULT_OK && data != null && data.getData() != null) {
+                Uri uri = data.getData();
+                try (InputStream in = getContentResolver().openInputStream(uri);
+                     ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+                    if (in != null) {
+                        byte[] buffer = new byte[8192];
+                        int n;
+                        int total = 0;
+                        final int maxBytes = 8 * 1024 * 1024;
+                        while ((n = in.read(buffer)) > 0) {
+                            total += n;
+                            if (total > maxBytes) throw new IOException("Imagen demasiado grande");
+                            out.write(buffer, 0, n);
+                        }
+                        String mime = getContentResolver().getType(uri);
+                        if (mime == null || !mime.startsWith("image/")) mime = "image/jpeg";
+                        String dataUrl = "data:" + mime + ";base64,"
+                                + Base64.encodeToString(out.toByteArray(), Base64.NO_WRAP);
+                        sendJs("if(window.onImageImported){window.onImageImported("
+                                + JSONObject.quote(dataUrl) + ");}");
+                    }
+                } catch (Exception ex) {
+                    sendJs("if(window.onImageImportError){window.onImageImportError('La imagen no pudo importarse o supera 8 MB.');}");
+                }
+            }
+            return;
+        }
 
         if (requestCode == EXPORT_REQUEST_CODE) {
             if (resultCode == RESULT_OK && data != null && data.getData() != null && pendingExportBytes != null) {
