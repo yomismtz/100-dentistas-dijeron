@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
     private WebView webView;
     private TextToSpeech textToSpeech;
     private volatile boolean ttsReady = false;
+    private volatile float narratorVolume = 1.0f;
     private LocalClassroomServer classroomServer;
     private ClassroomWebSocketServer classroomWebSocket;
     private byte[] pendingExportBytes;
@@ -187,7 +188,9 @@ public class MainActivity extends Activity {
                     notifyNarrationEvent("window.onNarrationDone", safeId);
                     return;
                 }
-                int result = textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, safeId);
+                Bundle params = new Bundle();
+                params.putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME, narratorVolume);
+                int result = textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, params, safeId);
                 if (result == TextToSpeech.ERROR) {
                     notifyNarrationEvent("window.onNarrationDone", safeId);
                 }
@@ -198,7 +201,9 @@ public class MainActivity extends Activity {
         public void speakCue(String text) {
             runOnUiThread(() -> {
                 if (!ttsReady || textToSpeech == null || text == null || text.trim().isEmpty()) return;
-                textToSpeech.speak(text, TextToSpeech.QUEUE_ADD, null, "cue_" + System.nanoTime());
+                Bundle params = new Bundle();
+                params.putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME, narratorVolume);
+                textToSpeech.speak(text, TextToSpeech.QUEUE_ADD, params, "cue_" + System.nanoTime());
             });
         }
 
@@ -212,6 +217,11 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public boolean isTtsReady() {
             return ttsReady;
+        }
+
+        @JavascriptInterface
+        public void setNarratorVolume(float volume) {
+            narratorVolume = Math.max(0.0f, Math.min(1.0f, volume));
         }
 
         @JavascriptInterface
