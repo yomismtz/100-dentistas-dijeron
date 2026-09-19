@@ -5,6 +5,11 @@ const V3_ASSESS_KEY='dentistas-v3-assessments';
 const V3_CASES_KEY='dentistas-v3-case-series';
 const V3_MEDIA_SETTINGS='dentistas-v3-media-settings';
 
+const V3_MEDIA_ASSETS=[
+  {id:'tooth_anatomy',name:'Anatomía dental esquemática',src:'media/tooth_anatomy.svg',note:'Esquema educativo; no diagnóstico.'},
+  {id:'tooth_surfaces',name:'Superficies dentales',src:'media/tooth_surfaces.svg',note:'Vestibular, lingual/palatina, mesial, distal y oclusal.'},
+  {id:'canal_schematic',name:'Conductos radiculares esquemáticos',src:'media/canal_schematic.svg',note:'Esquema educativo; no representa una radiografía.'}
+];
 let v3AcademicSettings={imageMode:'together'};
 try{v3AcademicSettings={...v3AcademicSettings,...JSON.parse(localStorage.getItem(V3_MEDIA_SETTINGS)||'{}')};}catch(_){}
 let v3Assessment=null;
@@ -154,9 +159,19 @@ function v3PlayCase(item){
   closeModal(false);$('#home').classList.add('hidden');$('#game').classList.remove('hidden');updateScoreUI();showRound(true);
 }
 
+function v3AttachMedia(asset){
+  const q=typeof otQ==='function'?otQ():(questions&&questions[roundIndex]);
+  if(!q){alert('Abre una pregunta primero para adjuntar el recurso.');return;}
+  const key=q._overrideKey||q.q;q._overrideKey=key;q.image=asset.src;
+  let all={};try{all=JSON.parse(localStorage.getItem('dentistas-question-overrides-v2')||'{}');}catch(_){}
+  all[key]={...(all[key]||{}),image:asset.src,reviewedAt:new Date().toISOString().slice(0,10)};
+  localStorage.setItem('dentistas-question-overrides-v2',JSON.stringify(all));
+  alert('Recurso adjuntado localmente a la pregunta actual.');
+}
 function v3MediaLibrary(){
   const items=(questionPool||[]).filter(q=>q.image||q.case);
-  openModal('<h2>🖼 BANCO MULTIMEDIA OFFLINE</h2><p>Las imágenes con rutas locales se empaquetan dentro del APK y no requieren Internet.</p><div class="mediaLibrary">'+(items.map((q,i)=>'<button data-media="'+i+'">'+(q.image?'🖼':'🩺')+' '+v2Escape(q.q)+'</button>').join('')||'<p>La infraestructura está activa; todavía no hay suficientes preguntas con imagen clínica incorporada.</p>')+'</div><button id="v3ImageMode" class="secondaryWide">⚙ MODO DE REVELADO DE IMAGEN</button>');
+  openModal('<h2>🖼 BANCO MULTIMEDIA OFFLINE</h2><p>Estos recursos vienen dentro del APK y no requieren Internet. Los esquemas son educativos y no sustituyen imágenes diagnósticas reales.</p><div class="mediaAssetGrid">'+V3_MEDIA_ASSETS.map((a,i)=>'<button data-v3asset="'+i+'"><img src="'+a.src+'" alt=""><b>'+v2Escape(a.name)+'</b><span>'+v2Escape(a.note)+'</span></button>').join('')+'</div><h3>Preguntas que ya usan multimedia</h3><div class="mediaLibrary">'+(items.map((q,i)=>'<button data-media="'+i+'">'+(q.image?'🖼':'🩺')+' '+v2Escape(q.q)+'</button>').join('')||'<p>Todavía ninguna pregunta del banco principal usa imagen.</p>')+'</div><button id="v3ImageMode" class="secondaryWide">⚙ MODO DE REVELADO DE IMAGEN</button>');
+  document.querySelectorAll('[data-v3asset]').forEach(b=>b.onclick=()=>{const a=V3_MEDIA_ASSETS[Number(b.dataset.v3asset)];openModal('<h2>'+v2Escape(a.name)+'</h2><div class="v3ImageZoom"><img src="'+a.src+'" alt="'+v2Escape(a.name)+'"></div><p>'+v2Escape(a.note)+'</p><button id="v3AttachAsset" class="setupStart">📎 ADJUNTAR A PREGUNTA ACTUAL</button><button id="v3MediaBack" class="secondaryWide">VOLVER</button>');$('#v3AttachAsset').onclick=()=>v3AttachMedia(a);$('#v3MediaBack').onclick=v3MediaLibrary;});
   document.querySelectorAll('[data-media]').forEach(b=>b.onclick=()=>v3PreviewQuestion(items[Number(b.dataset.media)]));
   $('#v3ImageMode').onclick=v3ImageSettings;
 }
