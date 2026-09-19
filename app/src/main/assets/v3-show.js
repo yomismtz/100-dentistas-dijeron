@@ -131,7 +131,6 @@ revealAnswer=function(idx,btn){
   if(!was&&revealed?.[idx]){
     if(oldPhase==='steal')v3Celebrate('steal',team);
     else if(idx===0)v3Celebrate('top',team);
-    else v3Celebrate('normal',team);
   }
   return r;
 };
