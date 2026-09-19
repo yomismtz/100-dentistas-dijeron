@@ -127,7 +127,7 @@ document.addEventListener('change',event=>{
 const narratorBaseSettings=v2Settings;
 v2Settings=function(){
   openModal(`<h2>⚙️ ACCESIBILIDAD, VOZ Y SHOW</h2>
-    <label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option></select></label>
+    <label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option><option>30</option></select></label>
     <label class="settingRow"><input id="setNarrator" type="checkbox" ${narratorEnabled?'checked':''}> 🎙️ Leer preguntas en voz alta antes del cronómetro</label>
     <label class="settingRow"><input id="setSound" type="checkbox" ${v2Sound?'checked':''}> 🔊 Sonidos básicos</label>
     <label class="settingRow"><input id="setMusic" type="checkbox" ${tvSettings.music?'checked':''}> 🎵 Música / fanfarrias</label>
