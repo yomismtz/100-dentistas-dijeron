@@ -25,6 +25,10 @@ jobs:
           python3 scripts/validate_questions.py
           python3 scripts/validate_ui_offline.py
 
+      - name: Generar intro completa
+        run: |
+          python3 scripts/generate_intro_audio.py
+
       - name: Validar sintaxis JavaScript V2
         run: |
           node --check app/src/main/assets/v2.js
