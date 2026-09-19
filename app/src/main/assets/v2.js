@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · V2 gameplay layer
-const V2_VERSION = '2.8.1-long-audio-answer-lock-beta';
+const V2_VERSION = '2.8.2-full-one-shot-audio-beta';
 const RECENT_LIMIT = 24;
 let v2RoundStartScores = [0, 0];
 let v2RoundHistory = [];
