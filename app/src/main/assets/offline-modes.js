@@ -9,7 +9,7 @@ let offlineAudioChecked=false;
 let offlineLastSpokenSecond=null;
 let offlineLightning=null;
 let offlineAmbientHandle=null;
-let omCareoRemaining=10;
+let omCareoRemaining=30;
 let omCareoTeam=0;
 let omCareoSecond=false;
 
@@ -186,7 +186,7 @@ careoFail=function(team,isSecond,reason){
 
 function omRunCareoClock(reset){
   careoStopClock();
-  if(reset)omCareoRemaining=10;
+  if(reset)omCareoRemaining=v2TimerSeconds;
   const el=$('#careoSeconds');if(el)el.textContent=String(omCareoRemaining);
   if(v2Paused)return;
   careoTimerHandle=setInterval(function(){
@@ -262,7 +262,7 @@ function omSettings(){
   openModal('<h2>⚙️ VOZ, AULA Y SHOW</h2>'+
     '<label class="settingRow">Grupo <input id="sg" value="'+v2Escape(offlineSettings.group||'')+'" placeholder="Ej. 3.º A"></label>'+
     '<label class="settingRow">Presentador <select id="spres"><option value="formal">Formal</option><option value="show">Concurso</option><option value="fun">Divertido</option></select></label>'+
-    '<label class="settingRow">Tiempo <select id="st"><option>10</option><option>15</option><option>20</option></select></label>'+
+    '<label class="settingRow">Tiempo <select id="st"><option>10</option><option>15</option><option>20</option><option>30</option></select></label>'+
     '<label class="settingRow"><input id="sn" type="checkbox" '+(narratorEnabled?'checked':'')+'> 🎙 Leer preguntas</label>'+
     '<label class="settingRow"><input id="sa" type="checkbox" '+(offlineSettings.adaptive?'checked':'')+'> 🧠 Adaptativo</label>'+
     '<label class="settingRow"><input id="se" type="checkbox" '+(offlineSettings.examMode?'checked':'')+'> 📝 Examen-juego</label>'+
