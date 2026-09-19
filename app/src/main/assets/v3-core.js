@@ -1,6 +1,6 @@
 'use strict';
 
-const V3_CORE_VERSION='3.0.1-classroom-research';
+const V3_CORE_VERSION='3.0.2-classroom-research';
 const V3_SNAPSHOT_KEY='dentistas-v3-live-snapshot';
 const V3_HISTORY_KEY='dentistas-v3-session-history';
 const V3_CORE_SETTINGS='dentistas-v3-core-settings';
