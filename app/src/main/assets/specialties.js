@@ -341,8 +341,9 @@ const spOriginalDeclareWinner = v2DeclareWinner;
 v2DeclareWinner=function(winner,sudden=false){
   closeModal(false);
   const char=typeof characterFor==='function'?characterFor(winner):{icon:'🦷'};
+  const art=typeof characterArtHtml==='function'?characterArtHtml(winner):char.icon;
   openModal(`<div class="winnerStage">
-    <div class="winnerCharacters">${char.icon} 🏆</div>
+    <div class="winnerCharacters">${art} <span class="trophy">🏆</span></div>
     <div class="winnerName">¡${v2Escape(teamNames[winner])} GANA!</div>
     <div class="winnerScore">${scores[winner]} PUNTOS${sudden?' · MUERTE SÚBITA':''}</div>
     <p><b>${spSpecialtyName()}</b> · 8 rondas</p>
