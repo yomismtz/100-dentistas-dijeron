@@ -377,6 +377,14 @@ function v3Bracket(){
     '</div>');
 }
 
+if(typeof spShowSpecialties==='function'){
+  const v3BaseSpecialtyPicker=spShowSpecialties;
+  spShowSpecialties=function(){
+    v3Settings.activePack='';v3SaveSettings();
+    return v3BaseSpecialtyPicker();
+  };
+}
+
 window.v3AfterGameStarted=function(){
   if(!Array.isArray(questions)||!questions.length)return;
   v3ApplyDifficultySchedule();
