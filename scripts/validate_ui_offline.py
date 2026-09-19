@@ -18,6 +18,7 @@ v2=read(Path('app/src/main/assets/v2.js'))
 app=read(Path('app/src/main/assets/app.js'))
 careo=read(Path('app/src/main/assets/careo.js'))
 roundpolish=read(Path('app/src/main/assets/round-polish.js'))
+intro_generator=read(Path('scripts/generate_intro_audio.py'))
 roundcss=read(Path('app/src/main/assets/round-polish.css'))
 careo=read(Path('app/src/main/assets/careo.js'))
 offtools=read(Path('app/src/main/assets/offline-tools.js'))
@@ -94,8 +95,14 @@ if ".answer.covered{pointer-events:none}" not in roundcss:
     errors.append('round-polish.css: las casillas cubiertas deben bloquear toque manual')
 if "if(phase!=='over')" not in offtools or "RESPUESTAS BLOQUEADAS" not in offtools:
     errors.append('offline-tools.js: la consulta de respuestas debe bloquearse mientras la ronda está activa')
-if "vol-.03" not in careo or "},120)" not in careo:
-    errors.append('careo.js: el desvanecimiento de intro debe ser lento y prolongado')
+if 's.loop=true' in careo:
+    errors.append('careo.js: la música de entrada no debe usar bucle')
+if 'careoStopIntro(true)' in careo:
+    errors.append('careo.js: la música no debe cortarse por cambios de fase')
+if 'intro_full_original.wav' not in index:
+    errors.append('index.html: debe usar la intro completa generada')
+if 'DURATION=28.0' not in intro_generator:
+    errors.append('generate_intro_audio.py: la intro completa debe durar 28 segundos')
 if 'answers:(q&&q.a||[])' not in remote:
     errors.append('offline-remote.js: el host debe seguir enviando respuestas al estado nativo privado')
 if "orQrCard('📚 REFERENCIA ACTUAL'" in remote or "'qrr'" in remote:
