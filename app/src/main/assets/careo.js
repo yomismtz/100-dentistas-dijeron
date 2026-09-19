@@ -41,13 +41,13 @@ function careoStopIntro(fade=false){
   if(!fade){try{s.loop=false;s.pause();s.currentTime=0;}catch(_){} return;}
   let vol=Number(s.volume)||.72;
   const id=setInterval(()=>{
-    vol=Math.max(0,vol-.12);
+    vol=Math.max(0,vol-.03);
     try{s.volume=vol;}catch(_){}
     if(vol<=0){
       clearInterval(id);
       try{s.loop=false;s.pause();s.currentTime=0;s.volume=.72;}catch(_){}
     }
-  },70);
+  },120);
 }
 
 function careoTeamLabel(team){
@@ -58,7 +58,7 @@ function careoTeamLabel(team){
 function careoQuestionScreen(){
   const q=questions[roundIndex];
   if(!q)return;
-  stopTimer(); careoStopClock(); careoLockBoard(true); careoStopIntro(true);
+  stopTimer(); careoStopClock(); careoLockBoard(true);
   phase='faceoff';
   if(typeof tvShowCue==='function') tvShowCue(`RONDA ${roundIndex+1}`,'🎤 ESCUCHA LA PREGUNTA','round',950);
   openModal(`
@@ -174,6 +174,7 @@ function careoCheck(team,isSecond){
 
 function careoFail(team,isSecond,reason){
   careoStopClock();
+  if(isSecond)careoStopIntro(true);
   if(typeof tvSfx==='function')tvSfx('buzz');
   if(typeof tvVibrate==='function')tvVibrate([70,35,70]);
   if(typeof v2React==='function')v2React(team,'bad');
@@ -197,6 +198,7 @@ function careoFail(team,isSecond,reason){
 
 function careoCorrect(team,m){
   careoStopClock();
+  careoStopIntro(true);
   currentTeam=team;phase='play';strikes=0;updateStrikesUI();
   closeModal(false);careoLockBoard(false);updateTurnUI();
   const close=$('#closeModal'); if(close)close.classList.remove('careoNoClose');
