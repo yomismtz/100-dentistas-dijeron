@@ -50,7 +50,17 @@ checks=[
 failed=[(n,name) for n,name,ok in checks if not ok]
 for n,name,ok in checks:
     print(f"{'OK' if ok else 'FAIL'} {n:02d}. {name}")
+extra=[
+ ('Recuperación conserva pausa','paused:typeof v2Paused' in core and 'v2Paused=!!s.paused' in core),
+ ('Recuperación de careo es justa','restoreFaceoff' in core and 'careoQuestionScreen()' in core),
+ ('Postest queda enlazado a su pretest','pairedPreDate' in academic and 'Comparación enlazada' in academic),
+ ('WebSocket conserva respaldo HTTP',"fetch('/api/buzz?team='+TEAM" in main),
+ ('Respuestas privadas siguen protegidas','state.remove("answers")' in ws and 'teacherPin.equals(pin)' in main),
+]
+for name,ok in extra:
+    print(f"{'OK' if ok else 'FAIL'} EXTRA. {name}")
+    if not ok: failed.append((0,name))
 if failed:
     print('\nFaltan:',failed)
     sys.exit(1)
-print('\nVALIDACIÓN V3 CORRECTA: las 30 funciones están conectadas estructuralmente.')
+print('\nVALIDACIÓN V3 CORRECTA: 30/30 funciones + salvaguardas de integración.')
