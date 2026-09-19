@@ -390,7 +390,7 @@ public class MainActivity extends Activity {
                     if (!teacherPin.equals(pin)) {
                         respond(output, 403, "application/json; charset=utf-8", "{\"ok\":false,\"error\":\"PIN\"}");
                     } else {
-                        String payload = "{\"buzzArmed\":" + buzzArmed + ",\"state\":" + safeJsonObject(stateJson) + "}";
+                        String payload = "{\"buzzArmed\":" + buzzArmed + ",\"state\":" + teacherStateJson() + "}";
                         respond(output, 200, "application/json; charset=utf-8", payload);
                     }
                 } else if ("/api/buzz".equals(path)) {
@@ -404,10 +404,14 @@ public class MainActivity extends Activity {
                     } else {
                         String name = queryValue(query, "name");
                         String arg = queryValue(query, "arg");
-                        String js = "if(window.onRemoteTeacherCommand){window.onRemoteTeacherCommand("
-                                + JSONObject.quote(name) + "," + JSONObject.quote(arg) + ");}";
-                        sendJs(js);
-                        respond(output, 200, "application/json; charset=utf-8", "{\"ok\":true}");
+                        if (("reveal".equals(name) || "revealNext".equals(name)) && !isRoundOver()) {
+                            respond(output, 423, "application/json; charset=utf-8", "{\"ok\":false,\"error\":\"ROUND_ACTIVE\"}");
+                        } else {
+                            String js = "if(window.onRemoteTeacherCommand){window.onRemoteTeacherCommand("
+                                    + JSONObject.quote(name) + "," + JSONObject.quote(arg) + ");}";
+                            sendJs(js);
+                            respond(output, 200, "application/json; charset=utf-8", "{\"ok\":true}");
+                        }
                     }
                 } else if ("/api/exam".equals(path)) {
                     String answer = queryValue(query, "answer");
@@ -437,6 +441,27 @@ public class MainActivity extends Activity {
                 return obj.toString();
             } catch (Exception ignored) {
                 return "{}";
+            }
+        }
+
+        private String teacherStateJson() {
+            try {
+                JSONObject obj = new JSONObject(safeJsonObject(stateJson));
+                if (!"over".equals(obj.optString("phase", ""))) {
+                    obj.remove("answers");
+                }
+                return obj.toString();
+            } catch (Exception ignored) {
+                return "{}";
+            }
+        }
+
+        private boolean isRoundOver() {
+            try {
+                JSONObject obj = new JSONObject(safeJsonObject(stateJson));
+                return "over".equals(obj.optString("phase", ""));
+            } catch (Exception ignored) {
+                return false;
             }
         }
 
@@ -474,7 +499,7 @@ public class MainActivity extends Activity {
 
         private void respond(OutputStream output, int code, String contentType, String body) throws IOException {
             byte[] bytes = body.getBytes(StandardCharsets.UTF_8);
-            String reason = code == 200 ? "OK" : code == 403 ? "Forbidden" : "Error";
+            String reason = code == 200 ? "OK" : code == 403 ? "Forbidden" : code == 423 ? "Locked" : "Error";
             String headers = "HTTP/1.1 " + code + " " + reason + "\r\n"
                     + "Content-Type: " + contentType + "\r\n"
                     + "Content-Length: " + bytes.length + "\r\n"
@@ -515,16 +540,16 @@ public class MainActivity extends Activity {
                     + baseCss() + ".grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.small{font-size:15px;min-height:48px}.pin{display:grid;grid-template-columns:1fr auto;gap:8px;margin:10px 0}</style>"
                     + "<div class='card'><h1>🎓 CONTROL DOCENTE</h1><div class='pin'><input id='pin' inputmode='numeric' maxlength='4' placeholder='PIN docente'><button id='savePin'>USAR PIN</button></div><div id='auth' class='status'>Introduce el PIN mostrado en la app.</div><div id='q' class='status'>Conectando…</div><div id='meta'></div>"
                     + "<div class='grid'><button onclick=\"cmd('pause')\">⏯ PAUSA</button><button onclick=\"cmd('read')\">🎙 LEER</button>"
-                    + "<button onclick=\"cmd('strike')\">✖ ERROR</button><button onclick=\"cmd('revealNext')\">👁 REVELAR SIG.</button>"
+                    + "<button onclick=\"cmd('strike')\">✖ ERROR</button><button id='revealNextBtn' onclick=\"cmd('revealNext')\">🔒 RESPUESTAS AL CERRAR RONDA</button>"
                     + "<button onclick=\"cmd('accept')\">✅ ACEPTAR</button><button onclick=\"cmd('reject')\">❌ RECHAZAR</button>"
                     + "<button onclick=\"cmd('award','1')\">🏦 BANCO E1</button><button onclick=\"cmd('award','2')\">🏦 BANCO E2</button>"
                     + "<button onclick=\"cmd('prev')\">◀ ANTERIOR</button><button onclick=\"cmd('next')\">SIGUIENTE ▶</button>"
                     + "<button onclick=\"cmd('projector')\">📺 PROYECTOR</button><button onclick=\"cmd('finish')\">🏁 TERMINAR</button></div>"
                     + "<h2>Respuestas privadas</h2><div id='answers' class='answers'></div></div><script>"
                     + ";let pin=sessionStorage.getItem('dentistasTeacherPin')||'';document.getElementById('pin').value=pin;document.getElementById('savePin').onclick=()=>{pin=document.getElementById('pin').value.trim();sessionStorage.setItem('dentistasTeacherPin',pin);document.getElementById('auth').textContent=pin?'PIN guardado en este navegador.':'Introduce el PIN.'};"
-                    + "async function cmd(n,a=''){pin=document.getElementById('pin').value.trim();let r=await fetch('/api/cmd?pin='+encodeURIComponent(pin)+'&name='+encodeURIComponent(n)+'&arg='+encodeURIComponent(a)+'&x='+Date.now());document.getElementById('auth').textContent=r.ok?'✓ Comando enviado':'⛔ PIN incorrecto'}"
+                    + "async function cmd(n,a=''){pin=document.getElementById('pin').value.trim();let r=await fetch('/api/cmd?pin='+encodeURIComponent(pin)+'&name='+encodeURIComponent(n)+'&arg='+encodeURIComponent(a)+'&x='+Date.now());if(r.ok)document.getElementById('auth').textContent='✓ Comando enviado';else if(r.status===423)document.getElementById('auth').textContent='🔒 Las respuestas se habilitan cuando termina la ronda';else document.getElementById('auth').textContent='⛔ PIN incorrecto'}"
                     + "async function teacherState(){pin=document.getElementById('pin').value.trim();if(!pin)return null;try{let r=await fetch('/api/teacher-state?pin='+encodeURIComponent(pin)+'&x='+Date.now());if(!r.ok){document.getElementById('auth').textContent='⛔ PIN incorrecto';return null}return await r.json()}catch(e){return null}}"
-                    + "async function refresh(){let j=await teacherState();if(!j)return;let s=j.state||{};document.getElementById('q').textContent=s.question||'Sin pregunta';document.getElementById('meta').textContent='Ronda '+(s.round||'-')+' · Banco '+(s.bank||0)+' · X '+(s.strikes||0)+' · '+(s.phase||'');let el=document.getElementById('answers');el.innerHTML='';(s.answers||[]).forEach((a,i)=>{let d=document.createElement('button');d.className='small';d.textContent=(a.revealed?'✓ ':'')+(i+1)+'. '+a.label+' · '+a.points;d.onclick=()=>cmd('reveal',String(i));el.appendChild(d)})}"
+                    + "async function refresh(){let j=await teacherState();if(!j)return;let s=j.state||{};document.getElementById('q').textContent=s.question||'Sin pregunta';document.getElementById('meta').textContent='Ronda '+(s.round||'-')+' · Banco '+(s.bank||0)+' · X '+(s.strikes||0)+' · '+(s.phase||'');let locked=s.phase!=='over';let rb=document.getElementById('revealNextBtn');if(rb){rb.disabled=locked;rb.textContent=locked?'🔒 RESPUESTAS AL CERRAR RONDA':'👁 REVELAR SIG.'}let el=document.getElementById('answers');el.innerHTML='';if(locked){el.innerHTML='<div class="status">🔒 Respuestas ocultas mientras la ronda esté activa.</div>';return}(s.answers||[]).forEach((a,i)=>{let d=document.createElement('button');d.className='small';d.textContent=(a.revealed?'✓ ':'')+(i+1)+'. '+a.label+' · '+a.points;d.onclick=()=>cmd('reveal',String(i));el.appendChild(d)})}"
                     + "setInterval(refresh,650);refresh();</script>";
         }
 
