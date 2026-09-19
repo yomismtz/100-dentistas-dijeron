@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "riesgo caries",
+    "q": "¿Qué factores se consideran al valorar riesgo de caries en un niño?",
+    "a": [
+      [
+        "Experiencia previa de caries",
+        40
+      ],
+      [
+        "Hábitos dietéticos",
+        30
+      ],
+      [
+        "Exposición a fluoruro",
+        20
+      ],
+      [
+        "Higiene y factores protectores",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "prevencion",
+    "q": "¿Qué medidas preventivas son frecuentes en odontopediatría?",
+    "a": [
+      [
+        "Fluoruro",
+        40
+      ],
+      [
+        "Selladores",
+        30
+      ],
+      [
+        "Consejería dietética",
+        20
+      ],
+      [
+        "Instrucción de higiene oral",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "conducta",
+    "q": "¿Qué técnicas básicas de guía de conducta pueden utilizarse?",
+    "a": [
+      [
+        "Decir-mostrar-hacer",
+        40
+      ],
+      [
+        "Refuerzo positivo",
+        30
+      ],
+      [
+        "Distracción",
+        20
+      ],
+      [
+        "Comunicación adaptada a la edad",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/behavior-guidance-for-the-pediatric-dental-patient/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "pulpa temporal",
+    "q": "¿Qué terapias pulpares pueden emplearse en dientes temporales según diagnóstico?",
+    "a": [
+      [
+        "Tratamiento pulpar indirecto",
+        40
+      ],
+      [
+        "Pulpotomía",
+        30
+      ],
+      [
+        "Pulpectomía",
+        20
+      ],
+      [
+        "Extracción cuando el diente no es conservable",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pulp-therapy-for-primary-and-immature-permanent-teeth/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "mantenedores",
+    "q": "¿Qué tipos de mantenedor de espacio pueden usarse en niños?",
+    "a": [
+      [
+        "Banda y ansa",
+        40
+      ],
+      [
+        "Arco lingual",
+        30
+      ],
+      [
+        "Botón de Nance",
+        20
+      ],
+      [
+        "Arco transpalatino",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "restauracion",
+    "q": "¿Qué materiales restauradores se usan en dientes pediátricos según el caso?",
+    "a": [
+      [
+        "Resina compuesta",
+        40
+      ],
+      [
+        "Ionómero de vidrio",
+        30
+      ],
+      [
+        "Ionómero modificado con resina",
+        20
+      ],
+      [
+        "Corona de acero inoxidable",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pediatric-restorative-dentistry/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "anestesia",
+    "q": "¿Qué factores son importantes antes de anestesia local en un niño?",
+    "a": [
+      [
+        "Peso",
+        40
+      ],
+      [
+        "Historia médica",
+        30
+      ],
+      [
+        "Duración del procedimiento",
+        20
+      ],
+      [
+        "Riesgo de mordedura de tejidos blandos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "primeros años",
+    "q": "¿Qué temas forman parte de la orientación preventiva en la infancia?",
+    "a": [
+      [
+        "Cepillado con fluoruro apropiado",
+        40
+      ],
+      [
+        "Dieta y frecuencia de azúcares",
+        30
+      ],
+      [
+        "Prevención de trauma",
+        20
+      ],
+      [
+        "Visitas periódicas según riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "erupcion",
+    "q": "¿Qué alteraciones del desarrollo dentario deben vigilarse en niños?",
+    "a": [
+      [
+        "Erupción ectópica",
+        40
+      ],
+      [
+        "Dientes supernumerarios",
+        30
+      ],
+      [
+        "Ausencias congénitas",
+        20
+      ],
+      [
+        "Anquilosis de temporales",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "basic",
+    "subtopic": "cirugia pediatrica",
+    "q": "¿Qué situaciones pueden requerir extracción o manejo quirúrgico pediátrico?",
+    "a": [
+      [
+        "Diente no restaurable",
+        40
+      ],
+      [
+        "Diente supernumerario obstructivo",
+        30
+      ],
+      [
+        "Diente impactado seleccionado",
+        20
+      ],
+      [
+        "Infección que no puede resolverse conservadoramente",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-considerations-for-pediatric-oral-surgery-and-oral-pathology/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "sdf",
+    "q": "¿Qué objetivos puede tener el fluoruro diamino de plata en caries pediátrica?",
+    "a": [
+      [
+        "Arrestar lesiones cavitadas seleccionadas",
+        40
+      ],
+      [
+        "Reducir actividad de caries",
+        30
+      ],
+      [
+        "Posponer tratamiento invasivo en casos indicados",
+        20
+      ],
+      [
+        "Facilitar manejo en pacientes con cooperación limitada",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "vpt primaria",
+    "q": "¿Qué factores orientan la selección de terapia pulpar vital en un temporal con caries profunda?",
+    "a": [
+      [
+        "Estado pulpar",
+        40
+      ],
+      [
+        "Signos y síntomas",
+        30
+      ],
+      [
+        "Hallazgos radiográficos",
+        20
+      ],
+      [
+        "Restaurabilidad del diente",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pulp-therapy-for-primary-and-immature-permanent-teeth/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "pulpectomia",
+    "q": "¿Qué datos apoyan considerar terapia no vital en un diente temporal?",
+    "a": [
+      [
+        "Necrosis pulpar",
+        40
+      ],
+      [
+        "Signos de infección",
+        30
+      ],
+      [
+        "Irreversibilidad pulpar diagnosticada",
+        20
+      ],
+      [
+        "Diente aún restaurable y estratégicamente útil",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pulp-therapy-for-primary-and-immature-permanent-teeth/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "corona acero",
+    "q": "¿Qué situaciones pueden favorecer una corona de acero inoxidable en un molar temporal?",
+    "a": [
+      [
+        "Lesión extensa multisuperficie",
+        40
+      ],
+      [
+        "Después de ciertas terapias pulpares",
+        30
+      ],
+      [
+        "Alto riesgo de caries",
+        20
+      ],
+      [
+        "Defecto estructural importante",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pediatric-restorative-dentistry/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "conducta plan",
+    "q": "¿Qué factores deben documentarse al elegir una técnica de guía de conducta?",
+    "a": [
+      [
+        "Historia médica",
+        40
+      ],
+      [
+        "Temperamento y experiencia previa",
+        30
+      ],
+      [
+        "Necesidad y urgencia de tratamiento",
+        20
+      ],
+      [
+        "Consentimiento y alternativas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/behavior-guidance-for-the-pediatric-dental-patient/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "nitroso",
+    "q": "¿Qué factores deben valorarse antes de usar óxido nitroso/oxígeno?",
+    "a": [
+      [
+        "Estado médico",
+        40
+      ],
+      [
+        "Madurez y cooperación",
+        30
+      ],
+      [
+        "Tratamiento previsto",
+        20
+      ],
+      [
+        "Capacidad de respirar adecuadamente por la nariz",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-nitrous-oxide-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "mih",
+    "q": "¿Qué problemas clínicos puede producir la hipomineralización molar-incisivo?",
+    "a": [
+      [
+        "Hipersensibilidad",
+        40
+      ],
+      [
+        "Fractura posteruptiva",
+        30
+      ],
+      [
+        "Mayor dificultad restauradora",
+        20
+      ],
+      [
+        "Impacto estético en incisivos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "itr",
+    "q": "¿Qué situaciones pueden justificar una restauración terapéutica interina?",
+    "a": [
+      [
+        "Niño muy pequeño",
+        40
+      ],
+      [
+        "Cooperación limitada",
+        30
+      ],
+      [
+        "Necesidades especiales de salud",
+        20
+      ],
+      [
+        "Control provisional de múltiples lesiones",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/interim-therapeutic-restorations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "infeccion",
+    "q": "¿Qué hallazgos en una infección odontogénica pediátrica aumentan necesidad de valoración urgente y manejo adicional?",
+    "a": [
+      [
+        "Fiebre",
+        40
+      ],
+      [
+        "Celulitis o edema difuso",
+        30
+      ],
+      [
+        "Linfadenopatía o mal estado general",
+        20
+      ],
+      [
+        "Compromiso de espacios faciales",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-considerations-for-pediatric-oral-surgery-and-oral-pathology/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "intermediate",
+    "subtopic": "special needs",
+    "q": "¿Qué adaptaciones pueden facilitar atención de un paciente pediátrico con necesidades especiales?",
+    "a": [
+      [
+        "Citas y ambiente individualizados",
+        40
+      ],
+      [
+        "Comunicación adaptada",
+        30
+      ],
+      [
+        "Prevención intensiva",
+        20
+      ],
+      [
+        "Coordinación con cuidadores y equipo médico",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-dental-patients-with-special-health-care-needs/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "pulp diagnosis",
+    "q": "¿Qué elementos deben integrarse para diagnosticar el estado pulpar en un niño?",
+    "a": [
+      [
+        "Historia de dolor",
+        40
+      ],
+      [
+        "Exploración clínica",
+        30
+      ],
+      [
+        "Pruebas apropiadas a edad y diente",
+        20
+      ],
+      [
+        "Hallazgos radiográficos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pulp-therapy-for-primary-and-immature-permanent-teeth/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "immature permanent",
+    "q": "¿Qué terapias pueden conservar o promover desarrollo radicular en permanentes inmaduros seleccionados?",
+    "a": [
+      [
+        "Tratamiento pulpar indirecto",
+        40
+      ],
+      [
+        "Recubrimiento pulpar directo indicado",
+        30
+      ],
+      [
+        "Pulpotomía parcial o completa",
+        20
+      ],
+      [
+        "Procedimientos regenerativos en dientes necróticos seleccionados",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pulp-therapy-for-primary-and-immature-permanent-teeth/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "apexification regen",
+    "q": "¿Qué opciones pueden considerarse en un permanente inmaduro necrótico?",
+    "a": [
+      [
+        "Endodoncia regenerativa",
+        40
+      ],
+      [
+        "Apexificación",
+        30
+      ],
+      [
+        "Tratamiento endodóntico convencional cuando la anatomía lo permite",
+        20
+      ],
+      [
+        "Restauración coronal con sellado adecuado",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pulp-therapy-for-primary-and-immature-permanent-teeth/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "deep caries",
+    "q": "¿Qué principios reducen riesgo de exposición pulpar al tratar caries profunda en un diente vital?",
+    "a": [
+      [
+        "Selección conservadora de remoción de caries",
+        40
+      ],
+      [
+        "Sellado periférico",
+        30
+      ],
+      [
+        "Diagnóstico pulpar correcto",
+        20
+      ],
+      [
+        "Restauración definitiva adecuada",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/pediatric-restorative-dentistry/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "protective stabilization",
+    "q": "¿Qué requisitos deben cumplirse al considerar estabilización protectora?",
+    "a": [
+      [
+        "Indicación individual clara",
+        40
+      ],
+      [
+        "Consentimiento informado",
+        30
+      ],
+      [
+        "Monitorización y seguridad",
+        20
+      ],
+      [
+        "Documentación de alternativas y técnica",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/protective-stabilization-for-the-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "behavior advanced",
+    "q": "¿Qué variables pueden hacer necesario escalar desde técnicas básicas a técnicas avanzadas de conducta?",
+    "a": [
+      [
+        "Urgencia y complejidad del tratamiento",
+        40
+      ],
+      [
+        "Edad y desarrollo",
+        30
+      ],
+      [
+        "Fracaso de técnicas básicas",
+        20
+      ],
+      [
+        "Condición médica o necesidades especiales",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/behavior-guidance-for-the-pediatric-dental-patient/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "surgery growth",
+    "q": "¿Qué precauciones son especialmente importantes en cirugía oral pediátrica?",
+    "a": [
+      [
+        "Proteger gérmenes permanentes",
+        40
+      ],
+      [
+        "Considerar crecimiento",
+        30
+      ],
+      [
+        "Adaptar conducta y consentimiento",
+        20
+      ],
+      [
+        "Planificar control posoperatorio",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-considerations-for-pediatric-oral-surgery-and-oral-pathology/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "space decision",
+    "q": "¿Qué factores influyen en decidir mantenimiento, recuperación o cierre de un espacio?",
+    "a": [
+      [
+        "Etapa de dentición",
+        40
+      ],
+      [
+        "Desarrollo del sucesor",
+        30
+      ],
+      [
+        "Discrepancia de arco",
+        20
+      ],
+      [
+        "Relación oclusal y plan futuro",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "radiographs",
+    "q": "¿Qué principios deben guiar la prescripción radiográfica en niños?",
+    "a": [
+      [
+        "Indicación clínica individual",
+        40
+      ],
+      [
+        "Riesgo de caries",
+        30
+      ],
+      [
+        "Historia y hallazgos clínicos",
+        20
+      ],
+      [
+        "Minimizar exposición innecesaria",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  },
+  {
+    "specialty": "odontopediatria",
+    "difficulty": "advanced",
+    "subtopic": "integrated plan",
+    "q": "¿Qué elementos caracterizan un plan pediátrico integral basado en riesgo?",
+    "a": [
+      [
+        "Control de enfermedad",
+        40
+      ],
+      [
+        "Prevención personalizada",
+        30
+      ],
+      [
+        "Restauración conservadora cuando está indicada",
+        20
+      ],
+      [
+        "Seguimiento ajustado al riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/"
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "caries",
+    "q": "¿Qué objetivos persigue el tratamiento restaurador de una lesión de caries cavitada?",
+    "a": [
+      [
+        "Controlar la enfermedad y detener su progresión",
+        40
+      ],
+      [
+        "Restablecer forma y función",
+        30
+      ],
+      [
+        "Preservar la mayor cantidad posible de tejido sano",
+        20
+      ],
+      [
+        "Facilitar higiene y mantenimiento",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "materiales",
+    "q": "¿Qué materiales se emplean con frecuencia en restauraciones directas?",
+    "a": [
+      [
+        "Resina compuesta",
+        40
+      ],
+      [
+        "Ionómero de vidrio",
+        30
+      ],
+      [
+        "Ionómero de vidrio modificado con resina",
+        20
+      ],
+      [
+        "Amalgama dental",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "aislamiento",
+    "q": "¿Qué recursos ayudan a controlar humedad durante una restauración adhesiva?",
+    "a": [
+      [
+        "Dique de hule",
+        40
+      ],
+      [
+        "Eyector o aspiración",
+        30
+      ],
+      [
+        "Rollos de algodón",
+        20
+      ],
+      [
+        "Retracción gingival cuando está indicada",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "adhesion",
+    "q": "¿Qué pasos forman parte de una restauración directa adhesiva con resina?",
+    "a": [
+      [
+        "Acondicionar o preparar la superficie según el sistema",
+        40
+      ],
+      [
+        "Aplicar el adhesivo",
+        30
+      ],
+      [
+        "Insertar y adaptar la resina",
+        20
+      ],
+      [
+        "Fotopolimerizar adecuadamente",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "selladores",
+    "q": "¿Qué situaciones favorecen considerar un sellador de fosas y fisuras?",
+    "a": [
+      [
+        "Fosas y fisuras retentivas",
+        40
+      ],
+      [
+        "Diente con riesgo de caries",
+        30
+      ],
+      [
+        "Superficie oclusal susceptible",
+        20
+      ],
+      [
+        "Posibilidad de mantener aislamiento adecuado",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "matrices",
+    "q": "¿Qué funciones cumple una matriz en una restauración proximal?",
+    "a": [
+      [
+        "Contener el material restaurador",
+        40
+      ],
+      [
+        "Ayudar a reconstruir el contorno proximal",
+        30
+      ],
+      [
+        "Contribuir a formar el punto de contacto",
+        20
+      ],
+      [
+        "Proteger tejidos vecinos durante la inserción",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "acabado",
+    "q": "¿Qué objetivos tiene el acabado y pulido de una restauración?",
+    "a": [
+      [
+        "Regularizar la superficie",
+        40
+      ],
+      [
+        "Mejorar el contorno anatómico",
+        30
+      ],
+      [
+        "Reducir retención de biofilm",
+        20
+      ],
+      [
+        "Mejorar la estética",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "diagnostico",
+    "q": "¿Qué datos clínicos ayudan a decidir si una restauración existente requiere reparación o reemplazo?",
+    "a": [
+      [
+        "Presencia y extensión de caries recurrente",
+        40
+      ],
+      [
+        "Integridad marginal",
+        30
+      ],
+      [
+        "Fractura o pérdida de material",
+        20
+      ],
+      [
+        "Síntomas y función del diente",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "ionomero",
+    "q": "¿Qué características se asocian al ionómero de vidrio convencional?",
+    "a": [
+      [
+        "Adhesión química al tejido dental",
+        40
+      ],
+      [
+        "Liberación de fluoruro",
+        30
+      ],
+      [
+        "Reacción ácido-base de fraguado",
+        20
+      ],
+      [
+        "Menor resistencia a fractura que algunos materiales de resina",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "basic",
+    "subtopic": "resina",
+    "q": "¿Qué componentes básicos puede contener una resina compuesta?",
+    "a": [
+      [
+        "Matriz orgánica de resina",
+        40
+      ],
+      [
+        "Partículas de relleno inorgánico",
+        30
+      ],
+      [
+        "Agente de acoplamiento",
+        20
+      ],
+      [
+        "Sistema iniciador de polimerización",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "caries profunda",
+    "q": "¿Qué principios apoyan un manejo conservador de caries profunda en dientes vitales restaurables?",
+    "a": [
+      [
+        "Evitar exposición pulpar innecesaria",
+        40
+      ],
+      [
+        "Remover tejido cariado de forma selectiva cuando está indicado",
+        30
+      ],
+      [
+        "Conseguir un sellado periférico adecuado",
+        20
+      ],
+      [
+        "Realizar seguimiento clínico según riesgo",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "adhesion",
+    "q": "¿Qué factores pueden disminuir la calidad de una unión adhesiva?",
+    "a": [
+      [
+        "Contaminación con saliva o sangre",
+        40
+      ],
+      [
+        "Evaporación insuficiente del solvente",
+        30
+      ],
+      [
+        "Fotopolimerización inadecuada",
+        20
+      ],
+      [
+        "Manejo incorrecto del sustrato dentario",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "fotopolimerizacion",
+    "q": "¿Qué variables influyen en una fotopolimerización adecuada de resina?",
+    "a": [
+      [
+        "Irradiancia de la lámpara",
+        40
+      ],
+      [
+        "Tiempo de exposición",
+        30
+      ],
+      [
+        "Distancia y orientación de la punta",
+        20
+      ],
+      [
+        "Espesor y opacidad del incremento",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "contraccion",
+    "q": "¿Qué medidas ayudan a controlar los efectos de la contracción de polimerización?",
+    "a": [
+      [
+        "Incrementos adecuados de material",
+        40
+      ],
+      [
+        "Buena adaptación de la resina",
+        30
+      ],
+      [
+        "Fotopolimerización suficiente",
+        20
+      ],
+      [
+        "Diseño restaurador conservador y control de contactos",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "clase II",
+    "q": "¿Qué elementos ayudan a reconstruir una restauración proximal posterior?",
+    "a": [
+      [
+        "Matriz adecuada",
+        40
+      ],
+      [
+        "Cuña interproximal",
+        30
+      ],
+      [
+        "Adaptación cervical de la matriz",
+        20
+      ],
+      [
+        "Conformación del contacto proximal",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "seleccion material",
+    "q": "¿Qué factores clínicos influyen en la selección de un material restaurador directo?",
+    "a": [
+      [
+        "Carga oclusal",
+        40
+      ],
+      [
+        "Posibilidad de aislamiento",
+        30
+      ],
+      [
+        "Extensión y localización de la lesión",
+        20
+      ],
+      [
+        "Requerimientos estéticos",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "hipersensibilidad",
+    "q": "¿Qué medidas pueden formar parte del manejo de hipersensibilidad dentinaria?",
+    "a": [
+      [
+        "Controlar factores etiológicos",
+        40
+      ],
+      [
+        "Usar dentífricos desensibilizantes",
+        30
+      ],
+      [
+        "Aplicar agentes tópicos profesionales cuando están indicados",
+        20
+      ],
+      [
+        "Restaurar defectos cervicales seleccionados",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "reparacion",
+    "q": "¿Qué ventajas potenciales tiene reparar una restauración localizada en vez de reemplazarla por completo?",
+    "a": [
+      [
+        "Conservar tejido dentario",
+        40
+      ],
+      [
+        "Reducir tamaño de la nueva preparación",
+        30
+      ],
+      [
+        "Disminuir riesgo de daño pulpar",
+        20
+      ],
+      [
+        "Acortar el ciclo de reemplazo restaurador",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "caries no restaurativa",
+    "q": "¿Qué estrategias no restauradoras pueden indicarse para lesiones de caries seleccionadas?",
+    "a": [
+      [
+        "Control de biofilm e higiene",
+        40
+      ],
+      [
+        "Uso de fluoruro",
+        30
+      ],
+      [
+        "Modificación dietética",
+        20
+      ],
+      [
+        "Sellado o infiltración cuando corresponde al tipo de lesión",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "intermediate",
+    "subtopic": "fallas",
+    "q": "¿Qué causas pueden contribuir al fracaso de una restauración directa?",
+    "a": [
+      [
+        "Caries recurrente o nueva adyacente",
+        40
+      ],
+      [
+        "Fractura del material o del diente",
+        30
+      ],
+      [
+        "Desgaste o pérdida anatómica",
+        20
+      ],
+      [
+        "Problemas marginales o de adhesión",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "adhesivos universales",
+    "q": "¿Qué modos de aplicación pueden utilizar los adhesivos universales según el producto y el caso?",
+    "a": [
+      [
+        "Grabado y lavado",
+        40
+      ],
+      [
+        "Autograbado",
+        30
+      ],
+      [
+        "Grabado selectivo de esmalte",
+        20
+      ],
+      [
+        "Aplicación multimodo según sustrato y restauración",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "sustrato dentinario",
+    "q": "¿Qué características de la dentina hacen más compleja la adhesión que en esmalte?",
+    "a": [
+      [
+        "Mayor contenido orgánico",
+        40
+      ],
+      [
+        "Mayor contenido de agua",
+        30
+      ],
+      [
+        "Presencia de túbulos dentinarios",
+        20
+      ],
+      [
+        "Variación con profundidad y condición del sustrato",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "composite",
+    "q": "¿Qué propiedades del relleno inorgánico pueden modificar el comportamiento de una resina compuesta?",
+    "a": [
+      [
+        "Tamaño de partícula",
+        40
+      ],
+      [
+        "Fracción o carga de relleno",
+        30
+      ],
+      [
+        "Composición del relleno",
+        20
+      ],
+      [
+        "Distribución de partículas",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "polimerizacion",
+    "q": "¿Qué consecuencias puede favorecer una polimerización insuficiente de resina?",
+    "a": [
+      [
+        "Menor grado de conversión",
+        40
+      ],
+      [
+        "Peor resistencia mecánica",
+        30
+      ],
+      [
+        "Mayor desgaste o degradación",
+        20
+      ],
+      [
+        "Mayor riesgo de problemas marginales",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "cavidades",
+    "q": "¿Qué factores aumentan el desafío de controlar tensiones de contracción en una preparación?",
+    "a": [
+      [
+        "Alta relación de superficies adheridas",
+        40
+      ],
+      [
+        "Gran volumen de material polimerizado",
+        30
+      ],
+      [
+        "Geometría restrictiva de la cavidad",
+        20
+      ],
+      [
+        "Dificultad de acceso de la luz",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "margen profundo",
+    "q": "¿Qué aspectos deben valorarse antes de restaurar un margen proximal profundo?",
+    "a": [
+      [
+        "Posibilidad de aislamiento",
+        40
+      ],
+      [
+        "Acceso para adaptación del material",
+        30
+      ],
+      [
+        "Relación con el periodonto",
+        20
+      ],
+      [
+        "Capacidad de acabado y control de exceso",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "lesion no cariosa",
+    "q": "¿Qué factores etiológicos deben investigarse en lesiones cervicales no cariosas?",
+    "a": [
+      [
+        "Ácidos extrínsecos o intrínsecos",
+        40
+      ],
+      [
+        "Fricción mecánica",
+        30
+      ],
+      [
+        "Carga oclusal y concentración de tensiones",
+        20
+      ],
+      [
+        "Hábitos de higiene traumáticos",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/materials-for-direct-restorations"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "control caries",
+    "q": "¿Qué hallazgos favorecen valorar actividad de una lesión de caries y no solo su profundidad?",
+    "a": [
+      [
+        "Textura superficial",
+        40
+      ],
+      [
+        "Brillo o aspecto visual",
+        30
+      ],
+      [
+        "Localización retentiva de biofilm",
+        20
+      ],
+      [
+        "Cambios clínicos en seguimientos",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "longevidad",
+    "q": "¿Qué factores del paciente pueden influir en longevidad de restauraciones?",
+    "a": [
+      [
+        "Riesgo de caries",
+        40
+      ],
+      [
+        "Higiene oral",
+        30
+      ],
+      [
+        "Carga funcional o parafunción",
+        20
+      ],
+      [
+        "Asistencia a mantenimiento",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  },
+  {
+    "specialty": "operatoria",
+    "difficulty": "advanced",
+    "subtopic": "decision clinica",
+    "q": "¿Qué elementos deben integrarse para decidir entre tratamiento no restaurador, reparación o restauración nueva?",
+    "a": [
+      [
+        "Actividad y extensión de la lesión",
+        40
+      ],
+      [
+        "Restaurabilidad del diente",
+        30
+      ],
+      [
+        "Riesgo individual de caries",
+        20
+      ],
+      [
+        "Beneficio de preservar tejido dentario",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/research/science/evidence-based-dental-research/caries-management-clinical-practice-guidelines/evidence-based-clinical-practice-guideline-on-restorative-treatments-for-caries-lesions/"
+  }
+]

@@ -8,6 +8,8 @@ FILES = sorted(glob.glob('app/src/main/assets/questions*.json'))
 errors = []
 seen_questions = set()
 total = 0
+specialty_counts = {}
+specialty_levels = {}
 
 if not FILES:
     errors.append('No se encontraron archivos questions*.json')
@@ -24,6 +26,13 @@ for filename in FILES:
         errors.append(f'{filename}: el archivo debe contener una lista de preguntas')
         continue
 
+    if path.name.startswith('questions_specialty_'):
+        specialty_id = path.stem.replace('questions_specialty_', '')
+        specialty_counts[specialty_id] = len(data)
+        specialty_levels[specialty_id] = {'basic': 0, 'intermediate': 0, 'advanced': 0}
+    else:
+        specialty_id = None
+
     for idx, item in enumerate(data, start=1):
         total += 1
         prefix = f'{filename} pregunta {idx}'
@@ -33,6 +42,17 @@ for filename in FILES:
 
         q = str(item.get('q', '')).strip()
         answers = item.get('a')
+        if specialty_id:
+            if item.get('specialty') != specialty_id:
+                errors.append(f'{prefix}: specialty debe ser {specialty_id!r}; es {item.get("specialty")!r}')
+            level = item.get('difficulty')
+            if level not in ('basic', 'intermediate', 'advanced'):
+                errors.append(f'{prefix}: difficulty inválida: {level!r}')
+            else:
+                specialty_levels[specialty_id][level] += 1
+            source = str(item.get('source', '')).strip()
+            if not source.startswith('http'):
+                errors.append(f'{prefix}: falta fuente web válida')
         if not q:
             errors.append(f'{prefix}: falta el texto de la pregunta')
             continue
@@ -67,8 +87,25 @@ for filename in FILES:
         if point_sum != 100:
             errors.append(f'{prefix}: los puntos deben sumar 100; suman {point_sum}')
 
-if total != 116:
-    errors.append(f'La base debe contener 116 preguntas; contiene {total}')
+EXPECTED_TOTAL = 476
+if total != EXPECTED_TOTAL:
+    errors.append(f'La base debe contener {EXPECTED_TOTAL} preguntas; contiene {total}')
+
+expected_specialties = {
+    'operatoria','anestesia','ortopedia','ortho_preventiva','ortho_interceptiva',
+    'ortho_correctiva','odontopediatria','cirugia','periodoncia','protesis',
+    'endodoncia','anatomia'
+}
+if set(specialty_counts) != expected_specialties:
+    errors.append(f'Bancos de especialidad inesperados: {sorted(specialty_counts)}')
+for specialty in sorted(expected_specialties):
+    count = specialty_counts.get(specialty, 0)
+    if count != 30:
+        errors.append(f'{specialty}: debe tener 30 preguntas nuevas; tiene {count}')
+    levels = specialty_levels.get(specialty, {})
+    for level in ('basic','intermediate','advanced'):
+        if levels.get(level, 0) != 10:
+            errors.append(f'{specialty}: debe tener 10 preguntas {level}; tiene {levels.get(level, 0)}')
 
 if errors:
     print('VALIDACIÓN FALLIDA')
@@ -76,4 +113,4 @@ if errors:
         print(f'- {error}')
     sys.exit(1)
 
-print(f'VALIDACIÓN CORRECTA: {total} preguntas en {len(FILES)} archivos; todas tienen 3–5 respuestas y 100 puntos base.')
+print(f'VALIDACIÓN CORRECTA: {total} preguntas en {len(FILES)} archivos; 360 nuevas = 12 bancos × 30, cada uno con 10 básicas, 10 medias y 10 extra difíciles; todas tienen 3–5 respuestas y 100 puntos base.')

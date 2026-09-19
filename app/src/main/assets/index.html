@@ -6,10 +6,22 @@
   <meta name="theme-color" content="#090505">
   <title>100 Dentistas Dijeron</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="v2.css">
+  <link rel="stylesheet" href="tvshow.css">
+  <link rel="stylesheet" href="specialties.css">
+  <link rel="stylesheet" href="careo.css">
+  <link rel="stylesheet" href="narrator.css">
+  <link rel="stylesheet" href="offline-classroom.css">
+  <link rel="stylesheet" href="round-polish.css">
+  <link rel="stylesheet" href="v3.css">
 </head>
 <body>
   <main id="home" class="screen home">
-    <img src="portada_tiny.jpg" alt="100 Dentistas Dijeron">
+    <div class="homeHero">
+      <img class="homeLogo" src="home_logo.webp" alt="Diente locutor de 100 Dentistas Dijeron">
+      <div class="homeTitle">100 <span>DENTISTAS</span> DIJERON</div>
+      <div class="homeSubtitle">CONCURSO ODONTOLÓGICO</div>
+    </div>
     <div class="homeActions">
       <button id="start" class="primary">JUGAR VS · 2 EQUIPOS</button>
       <button id="help">¿CÓMO SE JUEGA?</button>
@@ -20,7 +32,7 @@
       <button id="prev" class="iconBtn" aria-label="Ronda anterior">◀</button>
       <div class="roundInfo">
         <span id="round">Ronda 1 · ×1</span>
-        <span id="progress">1 / 6</span>
+        <span id="progress">1 / 8</span>
         <span id="turn">TURNO: EQUIPO 1</span>
       </div>
       <button id="menu" class="iconBtn" aria-label="Menú">☰</button>
@@ -31,7 +43,7 @@
         <h1 id="question"></h1>
         <div class="timerBox" title="Tiempo para responder">
           <span>TIEMPO</span>
-          <div><strong id="timer">10</strong><small>s</small></div>
+          <div><strong id="timer">30</strong><small>s</small></div>
         </div>
         <div class="bank" title="Puntos revelados en esta ronda"><span>BANCO</span><strong id="bank">0</strong></div>
       </div>
@@ -63,10 +75,24 @@
     </div>
   </div>
   <div id="strikeFlash" class="strikeFlash hidden"><div>✖ ✖ ✖</div></div>
-  <audio id="sndStart" src="intro_short.mp3" preload="auto"></audio>
+  <audio id="sndStart" src="intro_full_original.wav" preload="auto"></audio>
   <audio id="sndGood" src="good.mp3" preload="auto"></audio>
   <audio id="sndBad" src="error.mp3" preload="auto"></audio>
+  <script src="questions-loader.js"></script>
   <script src="app.js"></script>
   <script src="characters.js"></script>
+  <script src="v2.js"></script>
+  <script src="v2-extras.js"></script>
+  <script src="specialties.js"></script>
+  <script src="tvshow.js"></script>
+  <script src="careo.js"></script>
+  <script src="narrator.js"></script>
+  <script src="offline-remote.js"></script>
+  <script src="offline-modes.js"></script>
+  <script src="offline-tools.js"></script>
+  <script src="round-polish.js"></script>
+  <script src="v3-core.js"></script>
+  <script src="v3-academic.js"></script>
+  <script src="v3-show.js"></script>
 </body>
 </html>

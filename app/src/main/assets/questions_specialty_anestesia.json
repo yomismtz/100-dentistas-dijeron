@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "agentes",
+    "q": "¿Qué anestésicos locales se utilizan con frecuencia en odontología?",
+    "a": [
+      [
+        "Lidocaína",
+        40
+      ],
+      [
+        "Articaína",
+        30
+      ],
+      [
+        "Mepivacaína",
+        20
+      ],
+      [
+        "Prilocaína",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "evaluacion",
+    "q": "¿Qué datos deben revisarse antes de administrar anestesia local?",
+    "a": [
+      [
+        "Historia médica",
+        40
+      ],
+      [
+        "Alergias y reacciones previas",
+        30
+      ],
+      [
+        "Medicamentos actuales",
+        20
+      ],
+      [
+        "Peso y edad cuando influyen en la dosificación",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "documentacion",
+    "q": "¿Qué información debe documentarse sobre la anestesia local administrada?",
+    "a": [
+      [
+        "Agente y concentración",
+        40
+      ],
+      [
+        "Cantidad o dosis administrada",
+        30
+      ],
+      [
+        "Técnica o tipo de inyección",
+        20
+      ],
+      [
+        "Sitio de inyección",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "complicaciones",
+    "q": "¿Qué complicaciones pueden asociarse con anestesia local dental?",
+    "a": [
+      [
+        "Toxicidad sistémica",
+        40
+      ],
+      [
+        "Hematoma",
+        30
+      ],
+      [
+        "Parestesia",
+        20
+      ],
+      [
+        "Lesión autoinfligida de tejidos blandos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "mandibular",
+    "q": "¿Qué técnicas pueden anestesiar dientes mandibulares según la indicación?",
+    "a": [
+      [
+        "Bloqueo del nervio alveolar inferior",
+        40
+      ],
+      [
+        "Técnica de Gow-Gates",
+        30
+      ],
+      [
+        "Técnica de Vazirani-Akinosi",
+        20
+      ],
+      [
+        "Infiltración suplementaria en casos seleccionados",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "maxilar",
+    "q": "¿Qué técnicas pueden utilizarse para anestesia maxilar?",
+    "a": [
+      [
+        "Infiltración supraperióstica",
+        40
+      ],
+      [
+        "Bloqueo infraorbitario",
+        30
+      ],
+      [
+        "Bloqueo alveolar superior posterior",
+        20
+      ],
+      [
+        "Bloqueo palatino según el área",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "vasoconstrictor",
+    "q": "¿Qué efectos clínicos puede aportar un vasoconstrictor añadido al anestésico local?",
+    "a": [
+      [
+        "Prolongar la duración anestésica",
+        40
+      ],
+      [
+        "Reducir absorción sistémica rápida",
+        30
+      ],
+      [
+        "Mejorar profundidad anestésica",
+        20
+      ],
+      [
+        "Ayudar al control de sangrado en sitios seleccionados",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "topica",
+    "q": "¿Para qué puede utilizarse anestesia tópica en odontología?",
+    "a": [
+      [
+        "Disminuir molestia de penetración de aguja",
+        40
+      ],
+      [
+        "Anestesiar mucosa superficial",
+        30
+      ],
+      [
+        "Facilitar procedimientos superficiales seleccionados",
+        20
+      ],
+      [
+        "Mejorar tolerancia del paciente a la inyección",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "seguridad",
+    "q": "¿Qué medidas ayudan a mejorar la seguridad al inyectar anestésico local?",
+    "a": [
+      [
+        "Calcular una dosis apropiada",
+        40
+      ],
+      [
+        "Aspirar cuando la técnica lo requiere",
+        30
+      ],
+      [
+        "Inyectar lentamente",
+        20
+      ],
+      [
+        "Vigilar al paciente durante y después",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "basic",
+    "subtopic": "postoperatorio",
+    "q": "¿Qué instrucciones son importantes tras anestesia de tejidos blandos?",
+    "a": [
+      [
+        "Evitar morder labios o mejillas",
+        40
+      ],
+      [
+        "Esperar recuperación sensitiva antes de masticar con riesgo",
+        30
+      ],
+      [
+        "Supervisar a niños pequeños",
+        20
+      ],
+      [
+        "Informar si aparece una reacción inusual",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "fracaso anestesico",
+    "q": "¿Qué factores pueden contribuir a un bloqueo alveolar inferior incompleto?",
+    "a": [
+      [
+        "Variación anatómica",
+        40
+      ],
+      [
+        "Depósito lejos del sitio objetivo",
+        30
+      ],
+      [
+        "Inervación accesoria",
+        20
+      ],
+      [
+        "Inflamación o infección local",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "duracion",
+    "q": "¿Qué variables influyen en duración clínica de un anestésico local?",
+    "a": [
+      [
+        "Tipo de anestésico",
+        40
+      ],
+      [
+        "Presencia y concentración de vasoconstrictor",
+        30
+      ],
+      [
+        "Vascularidad del sitio",
+        20
+      ],
+      [
+        "Dosis y técnica empleadas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "toxicidad",
+    "q": "¿Qué manifestaciones pueden alertar sobre toxicidad sistémica por anestésico local?",
+    "a": [
+      [
+        "Alteraciones neurológicas iniciales",
+        40
+      ],
+      [
+        "Cambios del estado de conciencia",
+        30
+      ],
+      [
+        "Convulsiones en toxicidad importante",
+        20
+      ],
+      [
+        "Alteraciones cardiovasculares",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "hematoma",
+    "q": "¿Qué medidas ayudan a reducir el riesgo o consecuencias de un hematoma por inyección?",
+    "a": [
+      [
+        "Conocer la anatomía vascular",
+        40
+      ],
+      [
+        "Usar técnica cuidadosa",
+        30
+      ],
+      [
+        "Aplicar presión local si ocurre",
+        20
+      ],
+      [
+        "Dar instrucciones y seguimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "dolor inyeccion",
+    "q": "¿Qué medidas pueden disminuir el dolor de la inyección?",
+    "a": [
+      [
+        "Aplicar anestésico tópico",
+        40
+      ],
+      [
+        "Introducir la solución lentamente",
+        30
+      ],
+      [
+        "Usar aguja apropiada",
+        20
+      ],
+      [
+        "Estabilizar y tensar tejidos cuando corresponde",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "inyecciones suplementarias",
+    "q": "¿Qué técnicas suplementarias pueden considerarse cuando la anestesia convencional es insuficiente?",
+    "a": [
+      [
+        "Intraligamentaria",
+        40
+      ],
+      [
+        "Intraósea",
+        30
+      ],
+      [
+        "Intrapulpar cuando está indicada",
+        20
+      ],
+      [
+        "Infiltración adicional",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "nino",
+    "q": "¿Qué factores son especialmente importantes al dosificar anestesia local en niños?",
+    "a": [
+      [
+        "Peso corporal",
+        40
+      ],
+      [
+        "Concentración del fármaco",
+        30
+      ],
+      [
+        "Volumen total administrado",
+        20
+      ],
+      [
+        "Uso simultáneo de otros fármacos o sedación",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "parestesia",
+    "q": "¿Qué datos deben documentarse y valorar ante parestesia posterior a una inyección?",
+    "a": [
+      [
+        "Nervio o territorio afectado",
+        40
+      ],
+      [
+        "Inicio y evolución de síntomas",
+        30
+      ],
+      [
+        "Tipo de anestésico y técnica utilizada",
+        20
+      ],
+      [
+        "Exploración y seguimiento neurosensorial",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "aspiracion",
+    "q": "¿Por qué es importante evitar una inyección intravascular no intencionada?",
+    "a": [
+      [
+        "Puede aumentar rápidamente niveles sistémicos",
+        40
+      ],
+      [
+        "Eleva riesgo de toxicidad",
+        30
+      ],
+      [
+        "Puede intensificar efectos del vasoconstrictor",
+        20
+      ],
+      [
+        "Reduce seguridad del procedimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "intermediate",
+    "subtopic": "sedacion",
+    "q": "¿Qué aspectos deben considerarse al combinar anestesia local con sedación?",
+    "a": [
+      [
+        "Dosis total de fármacos",
+        40
+      ],
+      [
+        "Estado médico del paciente",
+        30
+      ],
+      [
+        "Monitorización apropiada",
+        20
+      ],
+      [
+        "Interacciones y efectos aditivos",
+        10
+      ]
+    ],
+    "source": "https://www.ada.org/resources/ada-library/oral-health-topics/anesthesia-and-sedation"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "farmacologia",
+    "q": "¿Qué propiedades farmacológicas influyen en el comportamiento clínico de un anestésico local?",
+    "a": [
+      [
+        "pKa",
+        40
+      ],
+      [
+        "Unión a proteínas",
+        30
+      ],
+      [
+        "Liposolubilidad",
+        20
+      ],
+      [
+        "Vascularidad del sitio de depósito",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "tejido inflamado",
+    "q": "¿Qué factores explican que una zona inflamada pueda ser más difícil de anestesiar?",
+    "a": [
+      [
+        "pH tisular bajo",
+        40
+      ],
+      [
+        "Sensibilización de nociceptores",
+        30
+      ],
+      [
+        "Mayor perfusión local",
+        20
+      ],
+      [
+        "Cambios inflamatorios del tejido",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "methemoglobinemia",
+    "q": "¿Qué agentes o circunstancias requieren atención por riesgo de metahemoglobinemia?",
+    "a": [
+      [
+        "Prilocaína",
+        40
+      ],
+      [
+        "Benzocaína tópica",
+        30
+      ],
+      [
+        "Dosis acumuladas elevadas de agentes asociados",
+        20
+      ],
+      [
+        "Pacientes con susceptibilidad o antecedentes relevantes",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "vasoconstrictor riesgo",
+    "q": "¿Qué situaciones exigen valorar cuidadosamente la cantidad de vasoconstrictor?",
+    "a": [
+      [
+        "Enfermedad cardiovascular significativa",
+        40
+      ],
+      [
+        "Uso de medicamentos con interacciones relevantes",
+        30
+      ],
+      [
+        "Hipertiroidismo no controlado",
+        20
+      ],
+      [
+        "Necesidad de múltiples cartuchos o procedimientos extensos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "gow gates",
+    "q": "¿Qué nervios mandibulares puede abarcar un bloqueo alto como Gow-Gates cuando es exitoso?",
+    "a": [
+      [
+        "Alveolar inferior",
+        40
+      ],
+      [
+        "Lingual",
+        30
+      ],
+      [
+        "Milohoideo",
+        20
+      ],
+      [
+        "Auriculotemporal",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "akinosi",
+    "q": "¿Qué características describen la técnica Vazirani-Akinosi?",
+    "a": [
+      [
+        "Bloqueo mandibular a boca cerrada",
+        40
+      ],
+      [
+        "Útil cuando la apertura está limitada",
+        30
+      ],
+      [
+        "Depósito en región pterigomandibular superior",
+        20
+      ],
+      [
+        "No requiere contacto óseo como punto final",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "dosis",
+    "q": "¿Qué variables deben integrar el cálculo seguro de dosis máxima de anestesia local?",
+    "a": [
+      [
+        "Peso del paciente cuando aplica",
+        40
+      ],
+      [
+        "Límite recomendado del agente",
+        30
+      ],
+      [
+        "Concentración de la solución",
+        20
+      ],
+      [
+        "Cantidad total ya administrada",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "complicacion neurologica",
+    "q": "¿Qué causas potenciales deben considerarse ante alteración neurosensorial después de anestesia?",
+    "a": [
+      [
+        "Trauma mecánico de la aguja",
+        40
+      ],
+      [
+        "Hematoma o compresión",
+        30
+      ],
+      [
+        "Toxicidad local o irritación química",
+        20
+      ],
+      [
+        "Daño neural relacionado con el procedimiento dental",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "fallo pulpar",
+    "q": "¿Qué estrategias pueden emplearse frente a anestesia pulpar insuficiente en un diente con pulpitis?",
+    "a": [
+      [
+        "Reevaluar la técnica primaria",
+        40
+      ],
+      [
+        "Añadir infiltración suplementaria",
+        30
+      ],
+      [
+        "Considerar técnica intraósea o intraligamentaria",
+        20
+      ],
+      [
+        "Usar anestesia intrapulpar si se expone la pulpa y está indicada",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  },
+  {
+    "specialty": "anestesia",
+    "difficulty": "advanced",
+    "subtopic": "seguridad integral",
+    "q": "¿Qué elementos forman parte de un protocolo seguro de anestesia local?",
+    "a": [
+      [
+        "Selección individualizada del agente",
+        40
+      ],
+      [
+        "Cálculo y registro de dosis",
+        30
+      ],
+      [
+        "Técnica anatómica correcta",
+        20
+      ],
+      [
+        "Reconocimiento y manejo de complicaciones",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/use-of-local-anesthesia-for-pediatric-dental-patients/"
+  }
+]

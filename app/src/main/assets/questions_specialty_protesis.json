@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "scope",
+    "q": "¿Qué tratamientos forman parte de la prótesis bucal?",
+    "a": [
+      [
+        "Coronas y puentes",
+        40
+      ],
+      [
+        "Prótesis parciales removibles",
+        30
+      ],
+      [
+        "Prótesis completas",
+        20
+      ],
+      [
+        "Restauraciones sobre implantes",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "rpd components",
+    "q": "¿Qué componentes puede tener una prótesis parcial removible?",
+    "a": [
+      [
+        "Conector mayor",
+        40
+      ],
+      [
+        "Apoyos",
+        30
+      ],
+      [
+        "Retenedores directos",
+        20
+      ],
+      [
+        "Bases protésicas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "complete denture",
+    "q": "¿Qué principios clínicos son esenciales en una prótesis total?",
+    "a": [
+      [
+        "Soporte",
+        40
+      ],
+      [
+        "Retención",
+        30
+      ],
+      [
+        "Estabilidad",
+        20
+      ],
+      [
+        "Extensión adecuada de bases",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-the-frequency-of-denture-replacement/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "fixed",
+    "q": "¿Qué restauraciones se consideran prótesis fija?",
+    "a": [
+      [
+        "Corona",
+        40
+      ],
+      [
+        "Puente o prótesis parcial fija",
+        30
+      ],
+      [
+        "Carilla en contexto restaurador",
+        20
+      ],
+      [
+        "Restauración fija sobre implante",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "records",
+    "q": "¿Qué registros ayudan a planificar rehabilitación protésica?",
+    "a": [
+      [
+        "Historia y examen clínico",
+        40
+      ],
+      [
+        "Impresiones o escaneos",
+        30
+      ],
+      [
+        "Registros oclusales",
+        20
+      ],
+      [
+        "Fotografías y radiografías indicadas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "edentulous",
+    "q": "¿Qué opciones pueden reemplazar varios dientes ausentes?",
+    "a": [
+      [
+        "Prótesis parcial removible",
+        40
+      ],
+      [
+        "Prótesis parcial fija",
+        30
+      ],
+      [
+        "Prótesis sobre implantes",
+        20
+      ],
+      [
+        "Combinaciones protésicas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "implant parts",
+    "q": "¿Qué componentes básicos puede tener una restauración unitaria sobre implante?",
+    "a": [
+      [
+        "Implante",
+        40
+      ],
+      [
+        "Pilar",
+        30
+      ],
+      [
+        "Tornillo o elemento de retención",
+        20
+      ],
+      [
+        "Corona",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-dental-implants/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "maintenance",
+    "q": "¿Qué cuidados son importantes en una prótesis removible?",
+    "a": [
+      [
+        "Higiene diaria",
+        40
+      ],
+      [
+        "Limpieza de tejidos y dientes remanentes",
+        30
+      ],
+      [
+        "Revisiones de ajuste",
+        20
+      ],
+      [
+        "Evaluación de desgaste o fracturas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-the-frequency-of-denture-replacement/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "shade",
+    "q": "¿Qué factores influyen en selección de color dental?",
+    "a": [
+      [
+        "Iluminación",
+        40
+      ],
+      [
+        "Deshidratación del diente",
+        30
+      ],
+      [
+        "Entorno cromático",
+        20
+      ],
+      [
+        "Valor, croma y matiz",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "basic",
+    "subtopic": "occlusion",
+    "q": "¿Qué objetivos busca una rehabilitación oclusal estable?",
+    "a": [
+      [
+        "Contactos funcionales compatibles",
+        40
+      ],
+      [
+        "Comodidad",
+        30
+      ],
+      [
+        "Distribución adecuada de cargas",
+        20
+      ],
+      [
+        "Protección de dientes y prótesis",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "abutments",
+    "q": "¿Qué factores se valoran al seleccionar dientes pilares de una prótesis fija?",
+    "a": [
+      [
+        "Soporte periodontal",
+        40
+      ],
+      [
+        "Estructura dentaria remanente",
+        30
+      ],
+      [
+        "Relación corona-raíz y anatomía",
+        20
+      ],
+      [
+        "Distribución de cargas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "pontic",
+    "q": "¿Qué objetivos debe cumplir el diseño de un póntico?",
+    "a": [
+      [
+        "Higienizable",
+        40
+      ],
+      [
+        "Funcional",
+        30
+      ],
+      [
+        "Estético cuando corresponde",
+        20
+      ],
+      [
+        "Compatible con tejidos",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "rpd survey",
+    "q": "¿Qué información aporta el paralelómetro en prótesis parcial removible?",
+    "a": [
+      [
+        "Eje de inserción",
+        40
+      ],
+      [
+        "Áreas retentivas",
+        30
+      ],
+      [
+        "Planos guía",
+        20
+      ],
+      [
+        "Interferencias y contornos",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "rpd support",
+    "q": "¿Qué elementos contribuyen a soporte y estabilidad de una prótesis parcial removible?",
+    "a": [
+      [
+        "Apoyos",
+        40
+      ],
+      [
+        "Bases bien adaptadas",
+        30
+      ],
+      [
+        "Conectores rígidos",
+        20
+      ],
+      [
+        "Distribución apropiada de retenedores",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "impressions",
+    "q": "¿Qué características debe buscar una impresión protésica de calidad?",
+    "a": [
+      [
+        "Registro preciso de tejidos relevantes",
+        40
+      ],
+      [
+        "Ausencia de defectos críticos",
+        30
+      ],
+      [
+        "Extensión adecuada",
+        20
+      ],
+      [
+        "Estabilidad dimensional compatible con técnica",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "implant planning",
+    "q": "¿Qué factores deben integrarse antes de colocar un implante con objetivo protésico?",
+    "a": [
+      [
+        "Posición tridimensional protésicamente guiada",
+        40
+      ],
+      [
+        "Volumen óseo",
+        30
+      ],
+      [
+        "Espacio interoclusal",
+        20
+      ],
+      [
+        "Relación con estructuras anatómicas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-dental-implants/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "single missing tooth",
+    "q": "¿Qué opciones pueden discutirse para reemplazar un único diente posterior?",
+    "a": [
+      [
+        "No tratamiento con vigilancia seleccionada",
+        40
+      ],
+      [
+        "Prótesis fija dentosoportada",
+        30
+      ],
+      [
+        "Implante con corona",
+        20
+      ],
+      [
+        "Prótesis removible en casos seleccionados",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-posterior-single-tooth-replacement/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "denture fit",
+    "q": "¿Qué hallazgos sugieren que una prótesis total requiere reevaluación importante?",
+    "a": [
+      [
+        "Pérdida de retención",
+        40
+      ],
+      [
+        "Inestabilidad",
+        30
+      ],
+      [
+        "Úlceras recurrentes",
+        20
+      ],
+      [
+        "Desgaste o fractura protésica",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-the-frequency-of-denture-replacement/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "implant maintenance",
+    "q": "¿Qué medidas se recomiendan en mantenimiento de restauraciones sobre implantes?",
+    "a": [
+      [
+        "Higiene diaria",
+        40
+      ],
+      [
+        "Limpieza interdental",
+        30
+      ],
+      [
+        "Controles profesionales",
+        20
+      ],
+      [
+        "Evaluación de tejidos y componentes",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-maintenance-of-full-arch-implant-restorations/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "intermediate",
+    "subtopic": "lab communication",
+    "q": "¿Qué información debe comunicar el dentista al laboratorio protésico?",
+    "a": [
+      [
+        "Prescripción clara",
+        40
+      ],
+      [
+        "Impresión o escaneo de calidad",
+        30
+      ],
+      [
+        "Registros oclusales",
+        20
+      ],
+      [
+        "Requisitos de material y diseño",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-dental-laboratory-and-dentist-relationship/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "passive fit",
+    "q": "¿Qué problemas puede reducir un ajuste pasivo adecuado en una prótesis implantosoportada?",
+    "a": [
+      [
+        "Tensión mecánica en componentes",
+        40
+      ],
+      [
+        "Aflojamiento de tornillos",
+        30
+      ],
+      [
+        "Carga desfavorable sobre implantes",
+        20
+      ],
+      [
+        "Complicaciones protésicas",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-maintenance-of-full-arch-implant-restorations/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "screw retention",
+    "q": "¿Qué ventajas puede ofrecer retención atornillada en restauraciones implantosoportadas?",
+    "a": [
+      [
+        "Retrievabilidad",
+        40
+      ],
+      [
+        "Acceso a componentes",
+        30
+      ],
+      [
+        "Facilidad de manejo de algunas complicaciones",
+        20
+      ],
+      [
+        "Ausencia de cemento subgingival",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-maintenance-of-full-arch-implant-restorations/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "full arch hygiene",
+    "q": "¿Qué recursos pueden facilitar higiene de una rehabilitación fija de arcada completa sobre implantes?",
+    "a": [
+      [
+        "Cepillo dental",
+        40
+      ],
+      [
+        "Hilo o pasadores específicos",
+        30
+      ],
+      [
+        "Cepillos interdentales",
+        20
+      ],
+      [
+        "Irrigador oral",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-maintenance-of-full-arch-implant-restorations/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "replacement",
+    "q": "¿Qué razones pueden justificar reemplazar una prótesis removible?",
+    "a": [
+      [
+        "Inflamación crónica por mal ajuste",
+        40
+      ],
+      [
+        "Pérdida marcada de estabilidad o retención",
+        30
+      ],
+      [
+        "Fractura o degradación importante",
+        20
+      ],
+      [
+        "Incapacidad funcional persistente",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-the-frequency-of-denture-replacement/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "single tooth decision",
+    "q": "¿Qué factores pueden inclinar la elección entre puente e implante para un diente ausente?",
+    "a": [
+      [
+        "Estado de dientes vecinos",
+        40
+      ],
+      [
+        "Disponibilidad ósea",
+        30
+      ],
+      [
+        "Riesgo de caries",
+        20
+      ],
+      [
+        "Costos, preferencias y pronóstico",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-posterior-single-tooth-replacement/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "implant recall",
+    "q": "¿Qué hallazgos pueden justificar desmontar una prótesis fija de arcada completa sobre implantes?",
+    "a": [
+      [
+        "Complicación mecánica",
+        40
+      ],
+      [
+        "Imposibilidad de higiene profesional adecuada",
+        30
+      ],
+      [
+        "Signos de periimplantitis que requieren acceso",
+        20
+      ],
+      [
+        "Necesidad diagnóstica específica",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-maintenance-of-full-arch-implant-restorations/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "occlusal design",
+    "q": "¿Qué variables se consideran al diseñar oclusión en una rehabilitación extensa?",
+    "a": [
+      [
+        "Soporte disponible",
+        40
+      ],
+      [
+        "Parafunción",
+        30
+      ],
+      [
+        "Distribución de contactos",
+        20
+      ],
+      [
+        "Tipo de prótesis y materiales",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "biomechanics rpd",
+    "q": "¿Qué factores ayudan a controlar rotación de una PPR de extensión distal?",
+    "a": [
+      [
+        "Apoyos adecuados",
+        40
+      ],
+      [
+        "Retención indirecta",
+        30
+      ],
+      [
+        "Extensión y adaptación de bases",
+        20
+      ],
+      [
+        "Diseño rígido del conector",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "treatment sequencing",
+    "q": "¿Qué pasos generales mejoran pronóstico antes de rehabilitación protésica compleja?",
+    "a": [
+      [
+        "Control de enfermedad activa",
+        40
+      ],
+      [
+        "Estabilización periodontal",
+        30
+      ],
+      [
+        "Evaluación endodóntica/restauradora",
+        20
+      ],
+      [
+        "Planificación oclusal y protésica",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-is-a-prosthodontist-and-the-dental-specialty-of-prosthodontics/"
+  },
+  {
+    "specialty": "protesis",
+    "difficulty": "advanced",
+    "subtopic": "material selection",
+    "q": "¿Qué propiedades influyen al elegir material para una prótesis o restauración indirecta?",
+    "a": [
+      [
+        "Resistencia mecánica",
+        40
+      ],
+      [
+        "Estética",
+        30
+      ],
+      [
+        "Biocompatibilidad",
+        20
+      ],
+      [
+        "Desgaste y comportamiento frente al antagonista",
+        10
+      ]
+    ],
+    "source": "https://www.prosthodontics.org/about-acp/position-statement-what-patients-should-know-about-dental-materials/"
+  }
+]

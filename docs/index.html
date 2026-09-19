@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#120406">
-  <meta name="description" content="100 Dentistas Dijeron: juego educativo de odontología para dos equipos, con preguntas aleatorias, rondas multiplicadas, cronómetro y banco de puntos.">
+  <meta name="description" content="100 Dentistas Dijeron: juego educativo de odontología para dos equipos, con preguntas aleatorias, careo, reconocimiento de respuestas, cronómetro y banco de puntos.">
   <title>100 Dentistas Dijeron · Juego educativo de odontología</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="https://raw.githubusercontent.com/yomismtz/100-dentistas-dijeron/main/app/src/main/assets/portada_tiny.jpg">
@@ -26,12 +26,12 @@
       <div class="hero-copy">
         <p class="eyebrow">JUEGO EDUCATIVO · ODONTOLOGÍA</p>
         <h1>100 <span>Dentistas</span> Dijeron</h1>
-        <p class="lead">Un concurso para repasar odontología en equipo: preguntas aleatorias, respuestas ocultas, banco de puntos, tres errores, robo, cronómetro y rondas con valor creciente.</p>
+        <p class="lead">Un concurso para repasar odontología en equipo: careo, voz o texto, respuestas ocultas, banco de puntos, tres errores, robo, cronómetro y rondas con valor creciente.</p>
         <div class="actions">
           <a class="button primary" href="https://github.com/yomismtz/100-dentistas-dijeron">Ver proyecto en GitHub</a>
           <a class="button" href="privacy.html">Política de privacidad</a>
         </div>
-        <p class="status">Versión en desarrollo · Android · funcionamiento local/offline en la versión actual</p>
+        <p class="status">Versión 2.0 beta en desarrollo · Android · juego local con reconocimiento de voz opcional del sistema</p>
       </div>
       <div class="hero-art" aria-label="Mascota del juego">
         <div class="tooth-stage">
@@ -46,12 +46,15 @@
       <p class="eyebrow">MECÁNICA</p>
       <h2>Una partida diferente cada vez</h2>
       <div class="grid three">
-        <article class="card"><strong>6 rondas</strong><p>Se seleccionan seis preguntas al azar de una base amplia y no se repiten dentro de la partida.</p></article>
+        <article class="card"><strong>6 rondas</strong><p>Se seleccionan seis preguntas intentando mezclar especialidades y evitando repetir las preguntas más recientes.</p></article>
+        <article class="card"><strong>Careo</strong><p>Un jugador de cada equipo responde; quien encuentre la respuesta de mayor valor obtiene el control y puede jugar o pasar.</p></article>
+        <article class="card"><strong>Voz o texto</strong><p>La app compara la respuesta con variantes aceptadas y pide decisión del docente cuando la coincidencia es dudosa.</p></article>
         <article class="card"><strong>×1 · ×2 · ×3</strong><p>Rondas 1–2 valen normal; rondas 3–4, doble; rondas 5–6, triple.</p></article>
-        <article class="card"><strong>10 segundos</strong><p>Cada respuesta tiene cronómetro. Si el tiempo llega a cero, se registra un strike.</p></article>
+        <article class="card"><strong>10 segundos</strong><p>Tiempo configurable de 10, 15 o 20 segundos. Si llega a cero, se registra un strike.</p></article>
         <article class="card"><strong>Máximo 3 errores</strong><p>Al tercer error cambia el control de la ronda y el equipo rival puede intentar el robo.</p></article>
-        <article class="card"><strong>2 equipos</strong><p>Cada equipo puede tener nombre y personaje. El equipo ganador aparece al final con trofeo.</p></article>
-        <article class="card"><strong>Modo docente</strong><p>El proyecto está pensado para actividades de aula, repaso y aprendizaje interactivo de odontología.</p></article>
+        <article class="card"><strong>Modo docente</strong><p>Pausa, corrección de strikes, cambio de turno, revelado, explicación, fuentes y preguntas personalizadas.</p></article>
+        <article class="card"><strong>Modo estudio</strong><p>Práctica individual de 10 preguntas usando el mismo banco clínico.</p></article>
+        <article class="card"><strong>Desempate</strong><p>Si los equipos terminan iguales tras seis rondas, se activa una muerte súbita.</p></article>
       </div>
     </section>
 
@@ -66,14 +69,24 @@
     </section>
 
     <section class="section">
+      <p class="eyebrow">COMPARTIR</p>
+      <h2>Abre la página desde el teléfono</h2>
+      <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
+        <img src="qr-100-dentistas.png" alt="Código QR del sitio 100 Dentistas Dijeron" width="210" height="210" style="background:#fff;padding:.6rem;border-radius:18px">
+        <p class="wide">Escanea el QR para abrir el sitio oficial, consultar privacidad, seguridad de datos, términos y novedades del proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section">
       <p class="eyebrow">PRIVACIDAD</p>
       <h2>Diseñado para recopilar lo mínimo</h2>
       <div class="privacy-summary">
         <div><span>✓</span><p>Sin creación de cuentas</p></div>
         <div><span>✓</span><p>Sin publicidad integrada</p></div>
-        <div><span>✓</span><p>Sin analítica propia en la versión actual</p></div>
+        <div><span>✓</span><p>Sin analítica propia</p></div>
         <div><span>✓</span><p>Preferencias del juego guardadas localmente</p></div>
       </div>
+      <p>La voz es opcional y usa el servicio de reconocimiento instalado en Android; el proyecto no almacena grabaciones.</p>
       <p><a class="button" href="privacy.html">Leer política completa</a></p>
     </section>
   </main>
