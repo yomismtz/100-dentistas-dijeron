@@ -316,7 +316,8 @@ function v2ShowStudy(){
 
 function v2DeclareWinner(winner,sudden=false){
   closeModal(false); const c=typeof characterFor==='function'?characterFor(winner):{icon:'🦷'};
-  openModal(`<div class="winnerStage"><div class="winnerCharacters">${c.icon} 🏆</div><div class="winnerName">¡${v2Escape(teamNames[winner])} GANA!</div><div class="winnerScore">${scores[winner]} PUNTOS${sudden?' · MUERTE SÚBITA':''}</div></div>${v2ResultsTable()}<div class="menuStack"><button id="mAgainV2">OTRA PARTIDA</button><button id="mHomeV2">VOLVER A PORTADA</button></div>`);$('#mAgainV2').onclick=()=>{closeModal(false);v2RoundHistory=[];startNewGame();};$('#mHomeV2').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
+  const art=typeof characterArtHtml==='function'?characterArtHtml(winner):c.icon;
+  openModal(`<div class="winnerStage"><div class="winnerCharacters">${art} <span class="trophy">🏆</span></div><div class="winnerName">¡${v2Escape(teamNames[winner])} GANA!</div><div class="winnerScore">${scores[winner]} PUNTOS${sudden?' · MUERTE SÚBITA':''}</div></div>${v2ResultsTable()}<div class="menuStack"><button id="mAgainV2">OTRA PARTIDA</button><button id="mHomeV2">VOLVER A PORTADA</button></div>`);$('#mAgainV2').onclick=()=>{closeModal(false);v2RoundHistory=[];startNewGame();};$('#mHomeV2').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
 }
 function v2ResultsTable(){
   if(!v2RoundHistory.length)return''; return `<div class="resultTable">${v2RoundHistory.map(r=>`<div><span>R${r.round} ×${r.mult}</span><b>${r.delta[0]>=0?'+':''}${r.delta[0]}</b><b>${r.delta[1]>=0?'+':''}${r.delta[1]}</b></div>`).join('')}<div class="resultTotal"><span>TOTAL</span><b>${scores[0]}</b><b>${scores[1]}</b></div></div>`;
