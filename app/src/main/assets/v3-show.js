@@ -173,7 +173,4 @@ function v3ShowMenu(){
   $('#v3Mixer').onclick=v3AudioSettings;$('#v3PresenterTest').onclick=()=>offlinePresenterCue('correct');$('#v3Celebrations').onclick=()=>{closeModal(false);v3Celebrate('top',currentTeam);};
 }
 
-(function(){
-  const home=$('.homeActions');
-  if(home&&!$('#v3ShowBtn')){const b=document.createElement('button');b.id='v3ShowBtn';b.textContent='🎭 SHOW / AUDIO';b.onclick=v3ShowMenu;home.appendChild(b);}
-})();
+// Acceso integrado dentro de Classroom Research para mantener limpia la portada.
