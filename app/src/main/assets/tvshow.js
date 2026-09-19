@@ -113,6 +113,7 @@ function tvSfx(name){
   else if(name==='triple'){ [392,523,659,784].forEach((f,i)=>tvTone(f,i*.085,.15,.05,'triangle')); }
   else if(name==='steal'){ tvTone(294,0,.12,.04,'sawtooth');tvTone(370,.13,.12,.045,'sawtooth');tvTone(494,.27,.2,.05,'triangle'); }
   else if(name==='bank'){ tvTone(523,0,.08,.04,'triangle');tvTone(659,.08,.09,.045,'triangle');tvTone(784,.17,.13,.05,'triangle'); }
+  else if(name==='review'){ tvTone(330,0,.13,.04,'triangle');tvTone(392,.14,.13,.042,'triangle');tvTone(494,.29,.14,.045,'triangle');tvTone(659,.46,.30,.052,'triangle'); }
   else if(name==='applause'){ tvApplause(1.4); }
   else if(name==='bigApplause'){ tvApplause(2.7); }
   else if(name==='drumroll'){ tvDrumroll(); }
