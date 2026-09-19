@@ -125,8 +125,26 @@ function v3ProblemStats(){
   }));
   return Object.values(m).map(x=>({...x,errorRate:x.uses?x.noHit/x.uses:0})).sort((a,b)=>(b.errorRate-b.errorRate)||(b.strikes-b.strikes));
 }
+function v3ApplyProblemFlags(flagged){
+  let overrides={};try{overrides=JSON.parse(localStorage.getItem('dentistas-question-overrides-v2')||'{}');}catch(_){}
+  const flaggedSet=new Set(flagged.map(x=>x.q));
+  (questionPool||[]).forEach(q=>{
+    const key=q._overrideKey||q.q;
+    if(flaggedSet.has(q.q)){
+      const stats=flagged.find(x=>x.q===q.q);
+      q.autoFlag='⚠ REVISAR';
+      q.autoFlagReason=Math.round((stats?.errorRate||0)*100)+'% sin acierto en '+(stats?.uses||0)+' usos';
+      overrides[key]={...(overrides[key]||{}),autoFlag:q.autoFlag,autoFlagReason:q.autoFlagReason};
+    }else if(q.autoFlag==='⚠ REVISAR'){
+      delete q.autoFlag;delete q.autoFlagReason;
+      if(overrides[key]){delete overrides[key].autoFlag;delete overrides[key].autoFlagReason;}
+    }
+  });
+  localStorage.setItem('dentistas-question-overrides-v2',JSON.stringify(overrides));
+}
 function v3ProblemQuestions(){
   const flagged=v3ProblemStats().filter(x=>x.uses>=3&&(x.errorRate>=.5||x.strikes/x.uses>=1.5));
+  v3ApplyProblemFlags(flagged);
   openModal('<h2>⚠ REACTIVOS PARA REVISAR</h2><p>Se marcan por comportamiento observado; esto no significa automáticamente que estén mal redactados.</p><div class="searchResults">'+
     (flagged.map((x,i)=>'<button data-problem="'+i+'"><b>'+Math.round(x.errorRate*100)+'% sin acierto · '+x.uses+' usos</b><span>'+v2Escape(x.q)+'</span></button>').join('')||'<p>No hay suficientes datos para marcar reactivos todavía.</p>')+
     '</div>');
@@ -153,7 +171,7 @@ function v3SearchQuestions(){
     const term=v2Norm(input.value);
     if(term.length<2){out.innerHTML='<p>Escribe al menos dos caracteres.</p>';return;}
     const matches=(questionPool||[]).filter(q=>v2Norm([q.q,q.subtopic,q.specialty,...(q.a||[]).map(a=>a[0])].join(' ')).includes(term)).slice(0,60);
-    out.innerHTML=matches.map((q,i)=>'<button data-qidx="'+i+'"><span class="qualityDot '+v3Quality(q).level+'"></span><b>'+v2Escape(q.q)+'</b><small>'+v2Escape(q.specialty||'')+' · '+v2Escape(q.subtopic||'')+'</small></button>').join('')||'<p>Sin resultados.</p>';
+    out.innerHTML=matches.map((q,i)=>'<button data-qidx="'+i+'"><span class="qualityDot '+v3Quality(q).level+'"></span><b>'+v2Escape(q.q)+'</b><small>'+v2Escape(q.specialty||'')+' · '+v2Escape(q.subtopic||'')+(q.autoFlag?' · '+v2Escape(q.autoFlag):'')+'</small></button>').join('')||'<p>Sin resultados.</p>';
     document.querySelectorAll('[data-qidx]').forEach(b=>b.onclick=()=>v3PreviewQuestion(matches[Number(b.dataset.qidx)]));
   };
   input.addEventListener('input',render);setTimeout(()=>input.focus(),120);
