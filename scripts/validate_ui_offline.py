@@ -18,6 +18,9 @@ v2=read(Path('app/src/main/assets/v2.js'))
 app=read(Path('app/src/main/assets/app.js'))
 careo=read(Path('app/src/main/assets/careo.js'))
 roundpolish=read(Path('app/src/main/assets/round-polish.js'))
+roundcss=read(Path('app/src/main/assets/round-polish.css'))
+careo=read(Path('app/src/main/assets/careo.js'))
+offtools=read(Path('app/src/main/assets/offline-tools.js'))
 
 for name,text in [('index.html',index),('AndroidManifest.xml',manifest)]:
     if r'\n' in text:
@@ -51,7 +54,8 @@ native_required=[
     'publicStateJson()','obj.remove("answers")','obj.remove("scores")',
     'setReferenceUnlocked(boolean unlocked)','/api/reference',
     'obj.remove("source")','obj.remove("explanation")',
-    'referenceUnlocked','referenceStateJson()'
+    'referenceUnlocked','referenceStateJson()',
+    'teacherStateJson()','isRoundOver()','ROUND_ACTIVE'
 ]
 for token in native_required:
     if token not in main:
@@ -86,6 +90,12 @@ if 'rpRevealMissingBeforeAdvance' not in roundpolish or "classList.add('revealed
     errors.append('round-polish.js: falta revelar respuestas pendientes antes de avanzar')
 if 'bank +=' in roundpolish or 'scores[' in roundpolish:
     errors.append('round-polish.js: revelar respuestas faltantes no debe sumar puntos')
+if ".answer.covered{pointer-events:none}" not in roundcss:
+    errors.append('round-polish.css: las casillas cubiertas deben bloquear toque manual')
+if "if(phase!=='over')" not in offtools or "RESPUESTAS BLOQUEADAS" not in offtools:
+    errors.append('offline-tools.js: la consulta de respuestas debe bloquearse mientras la ronda está activa')
+if "vol-.03" not in careo or "},120)" not in careo:
+    errors.append('careo.js: el desvanecimiento de intro debe ser lento y prolongado')
 if 'answers:(q&&q.a||[])' not in remote:
     errors.append('offline-remote.js: el host debe seguir enviando respuestas al estado nativo privado')
 if "orQrCard('📚 REFERENCIA ACTUAL'" in remote or "'qrr'" in remote:
