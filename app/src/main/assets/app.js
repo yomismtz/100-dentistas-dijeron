@@ -2,7 +2,7 @@
 
 const $ = (s) => document.querySelector(s);
 const GAME_SIZE = 8;
-const TURN_SECONDS = 10;
+const TURN_SECONDS = 30;
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -284,7 +284,7 @@ function addStrike(reason = 'manual') {
       openModal(
         `<h2>3 ERRORES · CAMBIO DE TURNO</h2>
          <p><b>${teamNames[previousTeam]}</b> pierde el control de la ronda.</p>
-         <p><b>${teamNames[currentTeam]}</b> tiene <b>10 segundos y una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p>
+         <p><b>${teamNames[currentTeam]}</b> tiene <b>30 segundos y una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p>
          <p>Si acierta una respuesta todavía oculta, gana todo el banco. Si falla o se termina el tiempo, esos puntos se pierden.</p>`
       );
     } else {
@@ -295,7 +295,7 @@ function addStrike(reason = 'manual') {
       openModal(
         `<h2>3 ERRORES · CAMBIO DE TURNO</h2>
          <p><b>${teamNames[previousTeam]}</b> pierde el turno.</p>
-         <p>Ahora juega <b>${teamNames[currentTeam]}</b> y tendrá 10 segundos para responder.</p>`
+         <p>Ahora juega <b>${teamNames[currentTeam]}</b> y tendrá 30 segundos para responder.</p>`
       );
     }
   } else {
@@ -456,14 +456,14 @@ function showHelp() {
       <li>La partida es para <b>2 equipos</b>.</li>
       <li>Cada partida usa <b>8 preguntas aleatorias</b> elegidas de toda la base.</li>
       <li>Las preguntas no se repiten dentro de la misma partida.</li>
-      <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
+      <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 30 segundos</b>.</li>
       <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
-      <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 10 segundos.</li>
+      <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 30 segundos.</li>
       <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
       <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
       <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
       <li>Al tercer error pierde el control y el turno pasa al rival.</li>
-      <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
+      <li>Si había puntos en el banco, el rival dispone de <b>30 segundos y una sola respuesta</b> para robarlo.</li>
       <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
       <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
       <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
