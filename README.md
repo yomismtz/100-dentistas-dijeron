@@ -9,32 +9,31 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 - Seguridad de datos: https://yomismtz.github.io/100-dentistas-dijeron/data-safety.html
 - Términos de uso: https://yomismtz.github.io/100-dentistas-dijeron/terms.html
 
-## Funciones V2
+## Classroom Research v3.0.1
 
-- Base de 116 preguntas auditadas de distintas áreas de odontología.
-- 6 preguntas por partida, con selección equilibrada por especialidades y menor repetición de preguntas recientes.
-- Rondas 1–2 ×1, rondas 3–4 ×2 y rondas 5–6 ×3.
-- Careo al inicio de cada ronda; el equipo ganador puede jugar o pasar.
-- Respuesta por texto o por reconocimiento de voz del servicio instalado en Android.
-- Coincidencia local de respuestas con normalización, variantes y similitud aproximada.
-- Confirmación del docente cuando una respuesta es dudosa.
-- Máximo de 3 strikes; al tercero cambia el control y puede activarse el robo.
-- Cronómetro configurable de 10, 15 o 20 segundos; por defecto 10 s.
-- Aviso sonoro en los últimos 3 segundos y strike automático al terminar el tiempo.
-- Selección de nombres y personajes para los equipos.
-- Reacciones visuales de personajes y mensajes del diente-locutor.
-- Desempate mediante muerte súbita.
-- Resultados por ronda y marcador final.
-- Modo docente para pausar, revelar respuestas, corregir strikes, cambiar turno y consultar fuentes.
-- Explicación y fuente de referencia desde cada pregunta.
-- Modo estudio individual de 10 preguntas.
-- Editor local e importación JSON de preguntas personalizadas del docente.
-- Ajustes de accesibilidad: texto grande, reducción de animaciones, sonido y tiempo de respuesta.
-- Validación automática del banco: cada pregunta debe tener 3–5 respuestas y sumar 100 puntos base.
+- 476 preguntas cargadas localmente, organizadas por 12 especialidades, dificultad y subtema.
+- 8 rondas: 1–2 ×1, 3–4 ×2 y 5–8 ×3, con muerte súbita en caso de empate.
+- Cronómetro de 30 segundos; lectura de la pregunta antes de iniciar el tiempo.
+- Respuestas ocultas mientras la ronda está activa; las faltantes se revelan al cierre sin sumar puntos.
+- Pulsadores de dos celulares y control docente por WebSocket local, con HTTP como respaldo y PIN docente.
+- Autoguardado, recuperación de partidas e historial local.
+- Exportación CSV, archivo compatible con Excel y tarjeta PNG del equipo campeón.
+- Modo investigación con código anónimo y registro de versión/configuración.
+- Pretest/postest con reactivos distintos emparejados por subtema y dificultad cuando es posible.
+- Reportes por grupo, especialidad y subtema; detección automática de reactivos que requieren revisión.
+- Editor local de preguntas, respuestas, puntos, sinónimos, fuente, explicación, revisor, versión y estado editorial.
+- Paquetes de clase por especialidad, dificultad y subtemas concretos.
+- Dificultad programable por ronda y modo adaptativo compatible con paquetes.
+- Ronda relámpago, reto final, Docente vs Salón, torneo con bracket completo y campeonato acumulado.
+- Casos clínicos seriados e imágenes ampliables con presentación imagen/pregunta configurable.
+- Banco multimedia offline con esquemas incluidos y opción de importar imágenes clínicas autorizadas desde el dispositivo.
+- Mezclador independiente de música, narrador, efectos y aplausos; presentador Formal/Concurso/Divertido.
+- Personajes vectoriales offline y tarjeta final exportable.
+- Intro original completa de 28 segundos, de una sola reproducción, sin bucle.
 
 ## Contenido académico
 
-Los puntos del tablero son ponderaciones lúdicas y no porcentajes obtenidos de una encuesta real de dentistas. La revisión científica y criterios del banco están documentados en [`VALIDACION_PREGUNTAS.md`](VALIDACION_PREGUNTAS.md).
+Los puntos del tablero son ponderaciones lúdicas y no porcentajes obtenidos de una encuesta real de dentistas. El semáforo editorial distingue reactivos revisados de los que requieren revisión, pero el estado “verificado” depende de que el reactivo tenga fuente, fecha, revisor y versión registrados. La validación estructural automática no sustituye una revisión científica individual del contenido.
 
 ## Privacidad
 
@@ -55,6 +54,6 @@ GitHub Actions valida el banco de preguntas y la sintaxis JavaScript antes de co
 
 ## Aula offline
 
-La edición 2.7 puede iniciar un servidor HTTP dentro de la red local para pulsadores de equipo, respuesta individual y control docente. Los teléfonos se conectan a la misma Wi‑Fi o hotspot del dispositivo anfitrión; no se requiere un servidor externo ni salida a Internet. El control docente está protegido por un PIN local y las respuestas correctas no se incluyen en el estado público de los equipos.
+La edición 3.0.1 puede iniciar un servidor HTTP y WebSocket dentro de la red local para pulsadores de equipo, respuesta individual y control docente. Los teléfonos se conectan a la misma Wi‑Fi o hotspot del dispositivo anfitrión; no se requiere un servidor externo ni salida a Internet. El control docente está protegido por un PIN local y las respuestas correctas no se incluyen en el estado público de los equipos.
 
 Android declara el permiso `INTERNET` porque este permiso también habilita sockets de red local. Esto no significa que las partidas se transmitan a Internet.
