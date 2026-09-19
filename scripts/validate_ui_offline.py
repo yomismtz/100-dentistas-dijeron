@@ -22,6 +22,10 @@ intro_generator=read(Path('scripts/generate_intro_audio.py'))
 roundcss=read(Path('app/src/main/assets/round-polish.css'))
 careo=read(Path('app/src/main/assets/careo.js'))
 offtools=read(Path('app/src/main/assets/offline-tools.js'))
+wsjava=read(Path('app/src/main/java/com/uam/cientodentistas/ClassroomWebSocketServer.java'))
+v3core=read(Path('app/src/main/assets/v3-core.js'))
+v3academic=read(Path('app/src/main/assets/v3-academic.js'))
+v3show=read(Path('app/src/main/assets/v3-show.js'))
 
 for name,text in [('index.html',index),('AndroidManifest.xml',manifest)]:
     if r'\n' in text:
@@ -30,7 +34,8 @@ for name,text in [('index.html',index),('AndroidManifest.xml',manifest)]:
 required_scripts=[
     'questions-loader.js','app.js','characters.js','v2.js','v2-extras.js',
     'specialties.js','tvshow.js','careo.js','narrator.js',
-    'offline-remote.js','offline-modes.js','offline-tools.js','round-polish.js'
+    'offline-remote.js','offline-modes.js','offline-tools.js','round-polish.js',
+    'v3-core.js','v3-academic.js','v3-show.js'
 ]
 positions=[]
 for s in required_scripts:
@@ -41,7 +46,7 @@ for s in required_scripts:
 if any(p<0 for p in positions) or positions!=sorted(positions):
     errors.append('index.html: el orden de scripts no es el esperado')
 
-for css in ['style.css','v2.css','tvshow.css','specialties.css','careo.css','narrator.css','offline-classroom.css','round-polish.css']:
+for css in ['style.css','v2.css','tvshow.css','specialties.css','careo.css','narrator.css','offline-classroom.css','round-polish.css','v3.css']:
     if index.count(f'href="{css}"')!=1:
         errors.append(f'index.html: falta o se duplica {css}')
 
@@ -79,8 +84,12 @@ for name,token,text in js_required:
 team_start=main.find('private String teamPage')
 teacher_start=main.find('private String teacherPage')
 team_block=main[team_start:teacher_start] if team_start>=0 and teacher_start>team_start else ''
-if 'setInterval(refresh,120)' not in team_block:
-    errors.append('MainActivity.java: el pulsador remoto no usa polling rápido de 120 ms')
+if "new WebSocket('ws://'+location.hostname+':8788/ws?role=team&team='+TEAM)" not in team_block:
+    errors.append('MainActivity.java: el pulsador remoto no usa WebSocket')
+if "fetch('/api/buzz?team='+TEAM" not in team_block:
+    errors.append('MainActivity.java: falta respaldo HTTP del pulsador')
+if 'Sec-WebSocket-Accept' not in wsjava or 'onBuzz(int team)' not in wsjava:
+    errors.append('ClassroomWebSocketServer.java: servidor WebSocket incompleto')
 if 'const TURN_SECONDS = 30;' not in app:
     errors.append('app.js: el tiempo base debe ser 30 segundos')
 if 'let v2TimerSeconds = 30;' not in v2 or "timerVersion:'30s-v1'" not in v2:
@@ -109,6 +118,13 @@ if "orQrCard('📚 REFERENCIA ACTUAL'" in remote or "'qrr'" in remote:
     errors.append('offline-remote.js: la referencia no debe aparecer en el panel público del aula')
 if "Android.setReferenceUnlocked(true)" not in tools:
     errors.append('offline-tools.js: el QR de referencia debe requerir desbloqueo docente')
+
+if 'V3_SNAPSHOT_KEY' not in v3core or 'v3ExportCsv' not in v3core or 'v3LatencyPanel' not in v3core:
+    errors.append('v3-core.js: faltan recuperación/exportación/latencia')
+if 'v3AssessmentSetup' not in v3academic or 'v3QualityDashboard' not in v3academic or 'v3CaseSeriesMenu' not in v3academic:
+    errors.append('v3-academic.js: faltan herramientas académicas')
+if 'v3AudioSettings' not in v3show or 'v3ExportWinnerCard' not in v3show:
+    errors.append('v3-show.js: faltan mezclador o tarjeta final')
 
 if errors:
     print('VALIDACIÓN UI/OFFLINE FALLÓ:')
