@@ -7,7 +7,7 @@ let v2RoundStartScores = [0, 0];
 let v2RoundHistory = [];
 let v2Paused = false;
 let v2Sound = true;
-let v2TimerSeconds = 10;
+let v2TimerSeconds = 30;
 let v2Category = 'GENERAL';
 let v2Difficulty = 'TODAS';
 let v2VoiceTarget = 'main';
@@ -56,7 +56,8 @@ const V2_ALIASES = {
 (function loadV2Settings(){
   try {
     const s = JSON.parse(localStorage.getItem('dentistas-v2-settings') || '{}');
-    if ([10,15,20].includes(Number(s.timer))) v2TimerSeconds = Number(s.timer);
+    if (s.timerVersion === '30s-v1' && [10,15,20,30].includes(Number(s.timer))) v2TimerSeconds = Number(s.timer);
+    else v2TimerSeconds = 30;
     v2Sound = s.sound !== false;
     document.documentElement.classList.toggle('reduceMotion', !!s.reduceMotion);
     document.documentElement.classList.toggle('largeText', !!s.largeText);
@@ -65,7 +66,7 @@ const V2_ALIASES = {
 
 function v2SaveSettings(){
   localStorage.setItem('dentistas-v2-settings', JSON.stringify({
-    timer:v2TimerSeconds, sound:v2Sound,
+    timer:v2TimerSeconds, timerVersion:'30s-v1', sound:v2Sound,
     reduceMotion:document.documentElement.classList.contains('reduceMotion'),
     largeText:document.documentElement.classList.contains('largeText')
   }));
@@ -303,7 +304,7 @@ function v2ImportQuestions(){
 }
 function v2ExportQuestions(){let list=[];try{list=JSON.parse(localStorage.getItem('dentistas-custom-questions')||'[]');}catch(_){}openModal(`<h2>📤 PREGUNTAS PERSONALES</h2><textarea class="wideArea" readonly>${v2Escape(JSON.stringify(list,null,2))}</textarea>`);}
 function v2Settings(){
-  openModal(`<h2>⚙️ ACCESIBILIDAD</h2><label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option></select></label><label class="settingRow"><input id="setSound" type="checkbox" ${v2Sound?'checked':''}> Sonidos</label><label class="settingRow"><input id="setMotion" type="checkbox" ${document.documentElement.classList.contains('reduceMotion')?'checked':''}> Reducir animaciones</label><label class="settingRow"><input id="setText" type="checkbox" ${document.documentElement.classList.contains('largeText')?'checked':''}> Texto grande</label><button id="saveSettings" class="setupStart">GUARDAR</button>`);$('#setTimer').value=String(v2TimerSeconds);$('#saveSettings').onclick=()=>{v2TimerSeconds=Number($('#setTimer').value);v2Sound=$('#setSound').checked;document.documentElement.classList.toggle('reduceMotion',$('#setMotion').checked);document.documentElement.classList.toggle('largeText',$('#setText').checked);v2SaveSettings();closeModal(false);if(gameVisible()&&phase!=='over')startTimer();};
+  openModal(`<h2>⚙️ ACCESIBILIDAD</h2><label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option><option>30</option></select></label><label class="settingRow"><input id="setSound" type="checkbox" ${v2Sound?'checked':''}> Sonidos</label><label class="settingRow"><input id="setMotion" type="checkbox" ${document.documentElement.classList.contains('reduceMotion')?'checked':''}> Reducir animaciones</label><label class="settingRow"><input id="setText" type="checkbox" ${document.documentElement.classList.contains('largeText')?'checked':''}> Texto grande</label><button id="saveSettings" class="setupStart">GUARDAR</button>`);$('#setTimer').value=String(v2TimerSeconds);$('#saveSettings').onclick=()=>{v2TimerSeconds=Number($('#setTimer').value);v2Sound=$('#setSound').checked;document.documentElement.classList.toggle('reduceMotion',$('#setMotion').checked);document.documentElement.classList.toggle('largeText',$('#setText').checked);v2SaveSettings();closeModal(false);if(gameVisible()&&phase!=='over')startTimer();};
 }
 
 function v2StartStudy(){
