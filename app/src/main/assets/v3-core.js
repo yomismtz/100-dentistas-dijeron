@@ -254,21 +254,53 @@ function v3StartRehearsal(){
 
 function v3Packs(){try{return JSON.parse(localStorage.getItem(V3_PACKS_KEY)||'[]');}catch(_){return [];}}
 function v3SavePacks(x){localStorage.setItem(V3_PACKS_KEY,JSON.stringify(x));}
+function v3PackPool(pack){
+  if(!pack||typeof spBank!=='function')return [];
+  let pool=spBank(pack.specialty||'general').filter(q=>!q.disabled);
+  if(pack.difficulty&&pack.difficulty!=='mix'&&typeof spDifficultyOf==='function')pool=pool.filter(q=>spDifficultyOf(q)===pack.difficulty);
+  if(Array.isArray(pack.subtopics)&&pack.subtopics.length)pool=pool.filter(q=>pack.subtopics.includes(String(q.subtopic||'Sin subtema')));
+  return pool;
+}
+function v3ActivePack(){
+  return v3Packs().find(p=>p.name===v3Settings.activePack)||null;
+}
+function v3RenderPackSubtopics(){
+  const box=$('#v3PackTopics');if(!box)return;
+  const spec=$('#v3PackSpec')?.value||'general',diff=$('#v3PackDiff')?.value||'mix';
+  let pool=typeof spBank==='function'?spBank(spec).filter(q=>!q.disabled):[];
+  if(diff!=='mix'&&typeof spDifficultyOf==='function')pool=pool.filter(q=>spDifficultyOf(q)===diff);
+  const counts={};
+  pool.forEach(q=>{const s=String(q.subtopic||'Sin subtema');counts[s]=(counts[s]||0)+1;});
+  box.innerHTML=Object.entries(counts).sort((a,b)=>a[0].localeCompare(b[0])).map(([name,count])=>
+    '<label class="topicCheck"><input type="checkbox" value="'+v2Escape(name)+'" checked> <span>'+v2Escape(name)+'</span><b>'+count+'</b></label>'
+  ).join('')||'<p>Sin subtemas disponibles con este filtro.</p>';
+  const total=$('#v3PackAvailable');if(total)total.textContent=pool.length+' preguntas disponibles antes de filtrar subtemas';
+}
 function v3PackManager(){
   const packs=v3Packs();
   openModal('<h2>📦 PAQUETES DE CLASE</h2><div class="v3HistoryList">'+
-    (packs.map((p,i)=>'<button data-pack="'+i+'"><b>'+v2Escape(p.name)+'</b><span>'+v2Escape(p.specialty)+' · '+v2Escape(p.difficulty)+'</span></button>').join('')||'<p>No hay paquetes creados.</p>')+
+    (packs.map((p,i)=>'<button data-pack="'+i+'"><b>'+v2Escape(p.name)+'</b><span>'+v2Escape(p.specialty)+' · '+v2Escape(p.difficulty)+' · '+((p.subtopics||[]).length?((p.subtopics||[]).length+' subtemas'):'todos los subtemas')+'</span></button>').join('')||'<p>No hay paquetes creados.</p>')+
     '</div><button id="v3NewPack" class="setupStart">＋ CREAR PAQUETE</button>');
   document.querySelectorAll('[data-pack]').forEach(b=>b.onclick=()=>{
-    const p=packs[Number(b.dataset.pack)];v3Settings.activePack=p.name;v3SaveSettings();
+    const p=packs[Number(b.dataset.pack)];
+    const available=v3PackPool(p);
+    if(available.length<GAME_SIZE){alert('Este paquete solo tiene '+available.length+' preguntas disponibles. Se necesitan al menos '+GAME_SIZE+'.');return;}
+    v3Settings.activePack=p.name;v3SaveSettings();
     if(typeof specialtySelected!=='undefined')specialtySelected=p.specialty;
     if(typeof specialtyDifficulty!=='undefined')specialtyDifficulty=p.difficulty;
     closeModal(false);startNewGame();
   });
   $('#v3NewPack').onclick=()=>{
     const specs=(typeof SPECIALTY_DEFS!=='undefined'?SPECIALTY_DEFS:[]).filter(d=>d.id!=='general');
-    openModal('<h2>＋ NUEVO PAQUETE</h2><label class="settingRow">Nombre <input id="v3PackName" placeholder="Repaso Parcial 1"></label><label class="settingRow">Especialidad <select id="v3PackSpec">'+specs.map(d=>'<option value="'+d.id+'">'+d.name+'</option>').join('')+'</select></label><label class="settingRow">Dificultad <select id="v3PackDiff"><option value="mix">Mezcla</option><option value="basic">Básica</option><option value="intermediate">Media</option><option value="advanced">Extra difícil</option></select></label><button id="v3PackSave" class="setupStart">GUARDAR PAQUETE</button>');
-    $('#v3PackSave').onclick=()=>{const a=v3Packs();a.push({name:$('#v3PackName').value.trim()||'PAQUETE '+(a.length+1),specialty:$('#v3PackSpec').value,difficulty:$('#v3PackDiff').value});v3SavePacks(a);v3PackManager();};
+    openModal('<h2>＋ NUEVO PAQUETE</h2><label class="settingRow">Nombre <input id="v3PackName" placeholder="Repaso Parcial 1"></label><label class="settingRow">Especialidad <select id="v3PackSpec">'+specs.map(d=>'<option value="'+d.id+'">'+d.name+'</option>').join('')+'</select></label><label class="settingRow">Dificultad <select id="v3PackDiff"><option value="mix">Mezcla</option><option value="basic">Básica</option><option value="intermediate">Media</option><option value="advanced">Extra difícil</option></select></label><p id="v3PackAvailable" class="specialtyLead"></p><div id="v3PackTopics" class="topicGrid"></div><button id="v3PackSave" class="setupStart">GUARDAR PAQUETE</button>');
+    $('#v3PackSpec').onchange=v3RenderPackSubtopics;$('#v3PackDiff').onchange=v3RenderPackSubtopics;v3RenderPackSubtopics();
+    $('#v3PackSave').onclick=()=>{
+      const selected=[...document.querySelectorAll('#v3PackTopics input:checked')].map(x=>x.value);
+      const p={name:$('#v3PackName').value.trim()||'PAQUETE '+(v3Packs().length+1),specialty:$('#v3PackSpec').value,difficulty:$('#v3PackDiff').value,subtopics:selected};
+      const count=v3PackPool(p).length;
+      if(count<GAME_SIZE){alert('Con esos subtemas solo hay '+count+' preguntas. Selecciona más temas o cambia dificultad.');return;}
+      const a=v3Packs();a.push(p);v3SavePacks(a);v3PackManager();
+    };
   };
 }
 
@@ -282,11 +314,17 @@ function v3DifficultySchedule(){
 }
 function v3ApplyDifficultySchedule(){
   if(!Array.isArray(questions)||questions.length<2||typeof spBank!=='function'||typeof spDifficultyOf!=='function')return;
-  const pool=spBank(typeof specialtySelected==='string'?specialtySelected:'general').filter(q=>!q.disabled);
+  const pack=v3ActivePack();
+  const pool=(pack?v3PackPool(pack):spBank(typeof specialtySelected==='string'?specialtySelected:'general').filter(q=>!q.disabled));
+  if(pack&&pool.length<questions.length){
+    if(typeof v2Host==='function')v2Host('El paquete activo no tiene suficientes preguntas; se conserva la selección original.','bad');
+    return;
+  }
   const used=new Set();
   questions=questions.map((existing,i)=>{
     const target=v3Settings.roundDifficulties[i]||'mix';
-    const candidates=pool.filter(q=>!used.has(v3QuestionId(q))&&(target==='mix'||spDifficultyOf(q)===target));
+    let candidates=pool.filter(q=>!used.has(v3QuestionId(q))&&(target==='mix'||spDifficultyOf(q)===target));
+    if(!candidates.length)candidates=pool.filter(q=>!used.has(v3QuestionId(q)));
     const q=candidates.length?candidates[Math.floor(Math.random()*candidates.length)]:existing;
     used.add(v3QuestionId(q));return q;
   });
