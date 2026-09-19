@@ -45,6 +45,7 @@ characterStyle.textContent = `
   .winnerStage{text-align:center;padding:.5rem}
   .winnerCharacters{font-size:clamp(70px,13vw,150px);line-height:1.1;margin:.25rem 0;filter:drop-shadow(0 0 16px #d69b30)}
   .winnerCharacters .trophy{display:inline-block;transform:translateY(-.08em);margin-left:.12em}
+  .winnerCharArt{width:clamp(92px,15vw,180px);height:clamp(92px,15vw,180px);object-fit:contain;vertical-align:middle;filter:drop-shadow(0 0 18px #d69b3066)}
   .winnerName{font-size:clamp(26px,4vw,48px);font-weight:900;color:#ffe09a;margin:.4rem 0}
   .winnerScore{font-size:clamp(22px,3vw,38px);font-weight:900}
   @media(max-width:760px){.setupTeams{grid-template-columns:1fr}.characterGrid{grid-template-columns:repeat(4,1fr)}}
@@ -53,6 +54,10 @@ document.head.appendChild(characterStyle);
 
 function characterFor(teamIndex) {
   return CHARACTERS[teamCharacters[teamIndex]] || CHARACTERS[0];
+}
+function characterArtHtml(teamIndex,className='winnerCharArt'){
+  const c=characterFor(teamIndex);
+  return c&&c.art?`<img class="${className}" src="${c.art}" alt="${c.name}">`:`<span>${c?.icon||'🦷'}</span>`;
 }
 
 function saveCharacterSettings() {
