@@ -54,13 +54,18 @@ function v3AssessmentSetup(){
     const specialty=typeof spSpecialtyName==='function'?spSpecialtyName():'General';
     let pool=(typeof v3ActivePack==='function'&&v3ActivePack())?v3PackPool(v3ActivePack()):(typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool]);
     pool=pool.filter(q=>!q.disabled);
-    let selected;
+    let selected,pairedPre=null;
     if(type==='post'){
-      const pre=v3AssessmentHistory().find(x=>x.group===group&&x.specialty===specialty&&x.type==='pre');
-      selected=pre?v3MatchedPostQuestions(pool,pre,n):shuffle(pool).slice(0,n);
+      pairedPre=v3AssessmentHistory().find(x=>x.group===group&&x.specialty===specialty&&x.type==='pre')||null;
+      selected=pairedPre?v3MatchedPostQuestions(pool,pairedPre,n):shuffle(pool).slice(0,n);
     }else selected=shuffle(pool).slice(0,n);
     if(selected.length<n){alert('No hay suficientes preguntas disponibles.');return;}
-    v3Assessment={type,questions:selected,index:0,responses:[],started:new Date().toISOString(),blueprint:selected.map(v3AssessmentBlueprint)};
+    v3Assessment={
+      type,questions:selected,index:0,responses:[],started:new Date().toISOString(),
+      blueprint:selected.map(v3AssessmentBlueprint),
+      pairedPreDate:pairedPre?.date||'',
+      pairedPreCode:pairedPre?.researchCode||''
+    };
     v3AssessmentShow();
   };
 }
@@ -79,7 +84,14 @@ function v3AssessmentFinish(){
   window.v3RemoteQuestionOverride=null;
   const total=a.responses.reduce((s,r)=>s+r.total,0),correct=a.responses.reduce((s,r)=>s+r.correct,0);
   const group=typeof offlineSettings!=='undefined'?(offlineSettings.group||'Sin grupo'):'Sin grupo';
-  const record={date:new Date().toISOString(),type:a.type,group,specialty:typeof spSpecialtyName==='function'?spSpecialtyName():'General',researchCode:typeof v3Settings!=='undefined'?v3Settings.researchCode||'':'',questions:a.responses,blueprint:a.blueprint||[],total,correct,percent:total?Math.round(correct/total*100):0};
+  const record={
+    date:new Date().toISOString(),type:a.type,group,
+    specialty:typeof spSpecialtyName==='function'?spSpecialtyName():'General',
+    researchCode:typeof v3Settings!=='undefined'?v3Settings.researchCode||'':'',
+    pairedPreDate:a.pairedPreDate||'',pairedPreCode:a.pairedPreCode||'',
+    questions:a.responses,blueprint:a.blueprint||[],total,correct,
+    percent:total?Math.round(correct/total*100):0
+  };
   v3SaveAssessment(record);v3Assessment=null;
   openModal('<h2>📊 '+record.type.toUpperCase()+' TERMINADO</h2><p><b>'+record.correct+' / '+record.total+'</b> respuestas correctas · <b>'+record.percent+'%</b>.</p><button id="v3AssessCompare" class="setupStart">COMPARAR PRE / POST</button>');
   $('#v3AssessCompare').onclick=v3AssessmentCompare;
@@ -98,9 +110,20 @@ window.onRemoteExamAnswer=function(answer){
   if(typeof v3PrevRemoteExam==='function')v3PrevRemoteExam(answer);
 };
 function v3AssessmentCompare(){
-  const h=v3AssessmentHistory(),group=typeof offlineSettings!=='undefined'?(offlineSettings.group||'Sin grupo'):'Sin grupo';
-  const pre=h.find(x=>x.group===group&&x.type==='pre'),post=h.find(x=>x.group===group&&x.type==='post');
-  openModal('<h2>📈 PRETEST vs POSTEST</h2><p><b>Grupo:</b> '+v2Escape(group)+'</p><div class="academicCards"><div><b>'+(pre?pre.percent+'%':'—')+'</b><span>Pretest</span></div><div><b>'+(post?post.percent+'%':'—')+'</b><span>Postest</span></div><div><b>'+(pre&&post?((post.percent-pre.percent)>=0?'+':'')+(post.percent-pre.percent)+' pp':'—')+'</b><span>Cambio</span></div><div><b>'+(pre&&post?pre.total+' / '+post.total:'—')+'</b><span>Respuestas</span></div></div>');
+  const h=v3AssessmentHistory();
+  const group=typeof offlineSettings!=='undefined'?(offlineSettings.group||'Sin grupo'):'Sin grupo';
+  const specialty=typeof spSpecialtyName==='function'?spSpecialtyName():'General';
+  const post=h.find(x=>x.group===group&&x.specialty===specialty&&x.type==='post')||null;
+  let pre=null;
+  if(post?.pairedPreDate)pre=h.find(x=>x.type==='pre'&&x.date===post.pairedPreDate)||null;
+  if(!pre&&post?.pairedPreCode)pre=h.find(x=>x.type==='pre'&&x.researchCode===post.pairedPreCode&&x.group===group&&x.specialty===specialty)||null;
+  if(!pre)pre=h.find(x=>x.group===group&&x.specialty===specialty&&x.type==='pre')||null;
+  openModal('<h2>📈 PRETEST vs POSTEST</h2><p><b>Grupo:</b> '+v2Escape(group)+' · <b>'+v2Escape(specialty)+'</b></p>'+
+    '<div class="academicCards"><div><b>'+(pre?pre.percent+'%':'—')+'</b><span>Pretest</span></div>'+
+    '<div><b>'+(post?post.percent+'%':'—')+'</b><span>Postest</span></div>'+
+    '<div><b>'+(pre&&post?((post.percent-pre.percent)>=0?'+':'')+(post.percent-pre.percent)+' pp':'—')+'</b><span>Cambio</span></div>'+
+    '<div><b>'+(pre&&post?pre.total+' / '+post.total:'—')+'</b><span>Respuestas</span></div></div>'+
+    (post&&pre?'<p class="specialtyLead">Comparación enlazada a la pareja pre/post utilizada para este grupo.</p>':'<p class="warningBox">Falta una pareja completa de pretest y postest para esta especialidad.</p>'));
 }
 
 function v3Quality(q){
