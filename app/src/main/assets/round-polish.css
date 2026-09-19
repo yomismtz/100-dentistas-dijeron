@@ -1,0 +1,46 @@
+/* Tablero compacto y revisión de respuestas no encontradas */
+.board{height:73%;padding:1% 3.8%;overflow:hidden}
+.scorebar{height:18%;padding:.55% 1.6%}
+.answers{min-height:0;flex:1 1 auto;justify-content:stretch;gap:clamp(3px,.65vh,8px);overflow:hidden}
+.answer{flex:1 1 0;min-height:0;max-height:none;padding:clamp(.22rem,.7vh,.5rem) .8rem;font-size:clamp(15px,2.12vw,30px);line-height:1.05}
+.answers[data-count="4"] .answer{font-size:clamp(14px,2vw,29px)}
+.answers[data-count="5"] .answer{font-size:clamp(13px,1.82vw,26px);padding:.18rem .65rem}
+.answers[data-count="5"] .answer .num{width:2rem;height:2rem}
+.strikes{min-height:.8em;font-size:clamp(22px,3.1vw,46px)}
+.responseBar{flex:0 0 auto;margin:.12rem 0 .28rem}
+.hostBubble{flex:0 0 auto;margin:-.2rem 0 .22rem}
+.team{padding:.25rem}.team strong{font-size:clamp(28px,4.4vw,56px)}
+.teamName,.award,.centerControls button{padding:.48rem .62rem}
+
+.missedAnswer{border-color:#e1b860!important;background:linear-gradient(180deg,#31230d,#161006)!important;box-shadow:inset 0 0 18px #d8a43755}
+.roundReviewPrompt{position:fixed;z-index:19;left:50%;bottom:18.8%;transform:translateX(-50%);width:min(900px,94vw);display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem .9rem;border:2px solid #e2b55f;border-radius:16px;background:#160707f2;box-shadow:0 0 26px #000;color:#fff}
+.roundReviewPrompt>div{display:grid;gap:.15rem}.roundReviewPrompt b{color:#ffe09a;font-size:clamp(14px,1.6vw,21px)}.roundReviewPrompt span{font-size:clamp(11px,1.15vw,16px);opacity:.88}
+.roundReviewPrompt button{flex:0 0 auto;padding:.7rem 1rem;border:1px solid #f0c66c;border-radius:11px;background:#6d100b;color:#fff;font-weight:900}
+.roundReviewPrompt button:disabled{opacity:.45}
+
+@media(max-height:620px){
+  .topbar{height:9%}
+  .board{height:73%;padding:.65% 3.2%}
+  .scorebar{height:18%;padding:.3% 1.2%}
+  .questionRow{margin-bottom:.2%;gap:.65rem}
+  .questionRow h1{font-size:clamp(17px,2.25vw,29px)}
+  .timerBox,.bank{min-width:84px;padding:.2rem .45rem}
+  .timerBox strong,.bank strong{font-size:clamp(21px,3vw,38px)}
+  .responseBar button,.responseBar input{min-height:34px;padding:.28rem .5rem}
+  .hostBubble{min-height:26px;padding:.16rem .45rem}
+  .hostTooth{font-size:1.2rem}
+  .answer{font-size:clamp(13px,1.8vw,23px)}
+  .answers[data-count="5"] .answer{font-size:clamp(12px,1.55vw,21px)}
+  .roundReviewPrompt{bottom:18.5%;padding:.45rem .65rem}
+}
+@media(max-height:500px){
+  .topbar{height:9%}
+  .board{height:74%;padding:.45% 2.8%}
+  .scorebar{height:17%}
+  .questionRow h1{font-size:clamp(15px,2vw,25px)}
+  .responseBar button,.responseBar input{min-height:30px}
+  .answer{font-size:clamp(12px,1.6vw,20px);border-width:1px}
+  .answers[data-count="5"] .answer{font-size:clamp(11px,1.42vw,18px)}
+  .strikes{font-size:clamp(18px,2.6vw,34px)}
+  .roundReviewPrompt{bottom:17.5%}
+}
