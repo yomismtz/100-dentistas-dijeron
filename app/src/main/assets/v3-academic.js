@@ -1,6 +1,6 @@
 'use strict';
 
-const V3_ACADEMIC_VERSION='3.0-academic';
+const V3_ACADEMIC_VERSION='3.0.1-academic';
 const V3_ASSESS_KEY='dentistas-v3-assessments';
 const V3_CASES_KEY='dentistas-v3-case-series';
 const V3_MEDIA_SETTINGS='dentistas-v3-media-settings';
