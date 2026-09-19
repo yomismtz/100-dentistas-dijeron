@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · Bancos por especialidad
-const SPECIALTY_VERSION = '3.0.1-classroom-research-beta';
+const SPECIALTY_VERSION = '3.0.2-classroom-research-beta';
 const SPECIALTY_TARGET = 100;
 const SPECIALTY_HISTORY_KEY = 'dentistas-specialty-history-v1';
 const SPECIALTY_PREF_KEY = 'dentistas-specialty-preferences-v1';
