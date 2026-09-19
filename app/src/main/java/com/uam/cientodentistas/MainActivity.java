@@ -9,6 +9,7 @@ import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -29,22 +30,29 @@ import java.net.Socket;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+import android.util.Base64;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Locale;
 
 public class MainActivity extends Activity {
     private static final int SPEECH_REQUEST_CODE = 1001;
+    private static final int EXPORT_REQUEST_CODE = 1002;
     private static final int CLASSROOM_PORT = 8787;
+    private static final int CLASSROOM_WS_PORT = 8788;
     private WebView webView;
     private TextToSpeech textToSpeech;
     private volatile boolean ttsReady = false;
     private LocalClassroomServer classroomServer;
+    private ClassroomWebSocketServer classroomWebSocket;
+    private byte[] pendingExportBytes;
+    private String pendingExportMime = "text/plain";
 
     @Override
     @SuppressWarnings("deprecation")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_FULLSCREEN |
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
@@ -69,6 +77,34 @@ public class MainActivity extends Activity {
         initNarrator();
         classroomServer = new LocalClassroomServer(CLASSROOM_PORT);
         classroomServer.start();
+        classroomWebSocket = new ClassroomWebSocketServer(
+                CLASSROOM_WS_PORT,
+                classroomServer.getTeacherPin(),
+                new ClassroomWebSocketServer.Listener() {
+                    @Override
+                    public boolean onBuzz(int team) {
+                        return classroomServer != null && classroomServer.tryBuzz(team, true);
+                    }
+
+                    @Override
+                    public void onTeacherCommand(String name, String arg) {
+                        sendJs("if(window.onRemoteTeacherCommand){window.onRemoteTeacherCommand("
+                                + JSONObject.quote(name) + "," + JSONObject.quote(arg) + ");}");
+                    }
+
+                    @Override
+                    public void onExamAnswer(String answer) {
+                        sendJs("if(window.onRemoteExamAnswer){window.onRemoteExamAnswer("
+                                + JSONObject.quote(answer) + ");}");
+                    }
+
+                    @Override
+                    public void onLatency(int team, long milliseconds) {
+                        sendJs("if(window.onRemoteLatency){window.onRemoteLatency("
+                                + team + "," + milliseconds + ");}");
+                    }
+                });
+        classroomWebSocket.start();
 
         webView.addJavascriptInterface(new AndroidBridge(), "Android");
         webView.setWebViewClient(new WebViewClient());
@@ -184,6 +220,18 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public String getClassroomWebSocketUrl() {
+            String base = classroomServer == null ? "" : classroomServer.getBaseUrl();
+            if (base.isEmpty()) return "";
+            try {
+                Uri u = Uri.parse(base);
+                return "ws://" + u.getHost() + ":" + CLASSROOM_WS_PORT + "/ws";
+            } catch (Exception ignored) {
+                return "";
+            }
+        }
+
+        @JavascriptInterface
         public String getTeacherPin() {
             return classroomServer == null ? "" : classroomServer.getTeacherPin();
         }
@@ -191,26 +239,65 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void armRemoteBuzz() {
             if (classroomServer != null) classroomServer.armBuzz();
+            if (classroomWebSocket != null) classroomWebSocket.armBuzz();
         }
 
         @JavascriptInterface
         public void closeRemoteBuzz() {
             if (classroomServer != null) classroomServer.closeBuzz();
+            if (classroomWebSocket != null) classroomWebSocket.closeBuzz();
         }
 
         @JavascriptInterface
         public boolean tryLocalBuzz(int team) {
-            return classroomServer == null || classroomServer.tryBuzz(team, false);
+            boolean accepted = classroomServer == null || classroomServer.tryBuzz(team, false);
+            if (accepted && classroomWebSocket != null) classroomWebSocket.closeBuzzAndBroadcast(team);
+            return accepted;
         }
 
         @JavascriptInterface
         public void updateRemoteState(String json) {
             if (classroomServer != null) classroomServer.setState(json);
+            if (classroomWebSocket != null) classroomWebSocket.updateState(json);
+        }
+
+        @JavascriptInterface
+        public void exportTextFile(String fileName, String mimeType, String content) {
+            pendingExportBytes = (content == null ? "" : content).getBytes(StandardCharsets.UTF_8);
+            pendingExportMime = (mimeType == null || mimeType.trim().isEmpty()) ? "text/plain" : mimeType;
+            launchExport(fileName, pendingExportMime);
+        }
+
+        @JavascriptInterface
+        public void exportBase64File(String fileName, String mimeType, String base64Data) {
+            try {
+                String data = base64Data == null ? "" : base64Data;
+                int comma = data.indexOf(',');
+                if (comma >= 0) data = data.substring(comma + 1);
+                pendingExportBytes = Base64.decode(data, Base64.DEFAULT);
+                pendingExportMime = (mimeType == null || mimeType.trim().isEmpty()) ? "application/octet-stream" : mimeType;
+                launchExport(fileName, pendingExportMime);
+            } catch (Exception ignored) {
+            }
         }
 
         @JavascriptInterface
         public void setReferenceUnlocked(boolean unlocked) {
             if (classroomServer != null) classroomServer.setReferenceUnlocked(unlocked);
+        }
+
+        private void launchExport(String fileName, String mimeType) {
+            runOnUiThread(() -> {
+                Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                intent.setType(mimeType);
+                intent.putExtra(Intent.EXTRA_TITLE,
+                        (fileName == null || fileName.trim().isEmpty()) ? "100-dentistas-export" : fileName);
+                try {
+                    startActivityForResult(intent, EXPORT_REQUEST_CODE);
+                } catch (Exception ignored) {
+                }
+            });
         }
 
         @JavascriptInterface
@@ -396,6 +483,7 @@ public class MainActivity extends Activity {
                 } else if ("/api/buzz".equals(path)) {
                     int team = parseInt(queryValue(query, "team"), 0);
                     boolean accepted = (team == 1 || team == 2) && tryBuzz(team, true);
+                    if (accepted && classroomWebSocket != null) classroomWebSocket.closeBuzzAndBroadcast(team);
                     respond(output, 200, "application/json; charset=utf-8", "{\"accepted\":" + accepted + "}");
                 } else if ("/api/cmd".equals(path)) {
                     String pin = queryValue(query, "pin");
@@ -583,6 +671,23 @@ public class MainActivity extends Activity {
     @SuppressWarnings("deprecation")
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == EXPORT_REQUEST_CODE) {
+            if (resultCode == RESULT_OK && data != null && data.getData() != null && pendingExportBytes != null) {
+                try (OutputStream out = getContentResolver().openOutputStream(data.getData())) {
+                    if (out != null) {
+                        out.write(pendingExportBytes);
+                        out.flush();
+                        sendJs("if(window.onExportFinished){window.onExportFinished(true);}");
+                    }
+                } catch (Exception ignored) {
+                    sendJs("if(window.onExportFinished){window.onExportFinished(false);}");
+                }
+            }
+            pendingExportBytes = null;
+            return;
+        }
+
         if (requestCode != SPEECH_REQUEST_CODE) return;
 
         if (resultCode == RESULT_OK && data != null) {
@@ -605,6 +710,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         if (classroomServer != null) classroomServer.stopServer();
+        if (classroomWebSocket != null) classroomWebSocket.stopServer();
         if (textToSpeech != null) {
             textToSpeech.stop();
             textToSpeech.shutdown();
