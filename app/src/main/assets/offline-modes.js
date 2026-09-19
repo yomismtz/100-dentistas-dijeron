@@ -173,8 +173,25 @@ showRound=function(reset){
 function omAdaptNext(){
   if(!offlineSettings.adaptive||typeof spBank!=='function'||typeof spDifficultyOf!=='function'||roundIndex>=questions.length-1)return;
   if(typeof specialtyDifficulty!=='undefined'&&specialtyDifficulty!=='mix')return;
-  const r=omRec();if(!r)return;let target='intermediate';if(r.correct.length&&r.strikes===0)target='advanced';else if(!r.correct.length||r.strikes>=2)target='basic';
-  const pool=spBank(typeof specialtySelected==='string'?specialtySelected:'general').filter(function(q){return spDifficultyOf(q)===target&&!q.disabled&&!questions.some(function(x){return x.q===q.q;});});
+  const r=omRec();if(!r)return;
+  let target='intermediate';
+  if(r.correct.length&&r.strikes===0)target='advanced';
+  else if(!r.correct.length||r.strikes>=2)target='basic';
+
+  const scheduled=(typeof v3Settings!=='undefined'&&Array.isArray(v3Settings.roundDifficulties))
+    ?(v3Settings.roundDifficulties[roundIndex+1]||'mix'):'mix';
+  if(scheduled!=='mix')target=scheduled;
+
+  let basePool;
+  if(typeof v3ActivePack==='function'){
+    const pack=v3ActivePack();
+    basePool=pack?v3PackPool(pack):null;
+  }
+  if(!Array.isArray(basePool))basePool=spBank(typeof specialtySelected==='string'?specialtySelected:'general');
+
+  const pool=basePool.filter(function(q){
+    return spDifficultyOf(q)===target&&!q.disabled&&!questions.some(function(x){return x.q===q.q;});
+  });
   if(pool.length)questions[roundIndex+1]=pool[Math.floor(Math.random()*pool.length)];
 }
 const omNext=nextRound;
@@ -245,7 +262,7 @@ function omLightning(){
   $('#l60').onclick=function(){omLaunchLightning(60);};$('#l90').onclick=function(){omLaunchLightning(90);};
 }
 function omLaunchLightning(sec){
-  let pool=typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool];pool=shuffle(pool.filter(function(q){return !q.disabled;})).slice(0,40);
+  let pool=(typeof v3ActivePack==='function'&&v3ActivePack())?v3PackPool(v3ActivePack()):(typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool]);pool=shuffle(pool.filter(function(q){return !q.disabled;})).slice(0,40);
   offlineLightning={pool:pool,index:0,score:0,remaining:sec,handle:null};omShowLightning();
   offlineLightning.handle=setInterval(function(){if(!offlineLightning)return;offlineLightning.remaining--;const t=$('#lt');if(t)t.textContent=offlineLightning.remaining;if(offlineLightning.remaining<=3&&offlineLightning.remaining>0)omSpeakNumber(offlineLightning.remaining);if(offlineLightning.remaining<=0)omEndLightning();},1000);
 }
