@@ -115,7 +115,7 @@ function careoShowBuzzers(){
 
 function careoStartAnswerClock(team,isSecond){
   careoStopClock();
-  let remaining=10;
+  let remaining=v2TimerSeconds;
   const el=$('#careoSeconds');
   if(el)el.textContent=String(remaining);
   careoTimerHandle=setInterval(()=>{
@@ -138,7 +138,7 @@ function careoAsk(team,isSecond){
       <div class="careoKicker">${isSecond?'↪ SEGUNDA OPORTUNIDAD':'⚡ GANÓ EL PULSADOR'}</div>
       <h2>${careoTeamLabel(team)}</h2>
       <p class="careoQuestionSmall">${v2Escape(q.q)}</p>
-      <div class="careoClock"><span>TIEMPO</span><b id="careoSeconds">10</b><small>s</small></div>
+      <div class="careoClock"><span>TIEMPO</span><b id="careoSeconds">${v2TimerSeconds}</b><small>s</small></div>
       <div class="careoAnswerEntry">
         <input id="careoInput" autocomplete="off" placeholder="Respuesta del equipo">
         <button id="careoMic">🎙️</button>
