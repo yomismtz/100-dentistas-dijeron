@@ -536,6 +536,8 @@ public class MainActivity extends Activity {
                 obj.remove("explanation");
                 obj.remove("editorial");
                 obj.remove("reviewedAt");
+                obj.remove("reviewer");
+                obj.remove("questionVersion");
                 return obj.toString();
             } catch (Exception ignored) {
                 return "{}";
@@ -572,6 +574,8 @@ public class MainActivity extends Activity {
                 ref.put("explanation", src.optString("explanation", ""));
                 ref.put("editorial", src.optString("editorial", ""));
                 ref.put("reviewedAt", src.optString("reviewedAt", ""));
+                ref.put("reviewer", src.optString("reviewer", ""));
+                ref.put("questionVersion", src.optString("questionVersion", ""));
                 return ref.toString();
             } catch (Exception ignored) {
                 return "{}";
@@ -660,8 +664,8 @@ public class MainActivity extends Activity {
 
         private String referencePage() {
             return "<!doctype html><meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'><style>"
-                    + baseCss() + "</style><div class='card'><h1>📚 REFERENCIA DE LA PREGUNTA</h1><div id='q' class='status'>Esperando que el docente comparta la referencia…</div><p id='why'></p><p id='src'></p></div><script>"
-                    + "async function refresh(){try{let r=await fetch('/api/reference?x='+Date.now());if(!r.ok){document.getElementById('q').textContent='🔒 Referencia bloqueada hasta que el docente la comparta.';document.getElementById('why').textContent='';document.getElementById('src').textContent='';return}let j=await r.json();let s=j.state||{};document.getElementById('q').textContent=s.question||'';document.getElementById('why').textContent=s.explanation||'Explicación específica pendiente.';document.getElementById('src').textContent=s.source?'Fuente: '+s.source:'Fuente específica pendiente.'}catch(e){}}setInterval(refresh,1000);refresh();</script>";
+                    + baseCss() + "</style><div class='card'><h1>📚 REFERENCIA DE LA PREGUNTA</h1><div id='q' class='status'>Esperando que el docente comparta la referencia…</div><p id='why'></p><p id='src'></p><p id='meta'></p></div><script>"
+                    + "async function refresh(){try{let r=await fetch('/api/reference?x='+Date.now());if(!r.ok){document.getElementById('q').textContent='🔒 Referencia bloqueada hasta que el docente la comparta.';document.getElementById('why').textContent='';document.getElementById('src').textContent='';return}let j=await r.json();let s=j.state||{};document.getElementById('q').textContent=s.question||'';document.getElementById('why').textContent=s.explanation||'Explicación específica pendiente.';document.getElementById('src').textContent=s.source?'Fuente: '+s.source:'Fuente específica pendiente.';document.getElementById('meta').textContent='Revisor: '+(s.reviewer||'Pendiente')+' · Reactivo v'+(s.questionVersion||'—')+' · Revisión: '+(s.reviewedAt||'Pendiente')}catch(e){}}setInterval(refresh,1000);refresh();</script>";
         }
 
         private String landingPage() {
