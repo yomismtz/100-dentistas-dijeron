@@ -19,7 +19,7 @@ function orEditorial(q){
 function orSync(){
   try{
     if(!(window.Android&&Android.updateRemoteState))return;
-    const q=orQuestion();
+    const q=window.v3RemoteQuestionOverride||orQuestion();
     const payload={
       question:q&&q.q||'',
       case:q&&q.case||'',
@@ -32,7 +32,7 @@ function orSync(){
       scores:[...scores],
       bank:bank,
       strikes:strikes,
-      phase:phase,
+      phase:window.v3RemoteQuestionOverride?'assessment':phase,
       round:roundIndex+1,
       totalRounds:questions&&questions.length||GAME_SIZE,
       timer:timerRemaining,
