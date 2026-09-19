@@ -13,6 +13,7 @@ const V3_MEDIA_ASSETS=[
 let v3AcademicSettings={imageMode:'together'};
 try{v3AcademicSettings={...v3AcademicSettings,...JSON.parse(localStorage.getItem(V3_MEDIA_SETTINGS)||'{}')};}catch(_){}
 let v3Assessment=null;
+let v3PendingImageQuestion=null;
 window.v3RemoteQuestionOverride=null;
 
 function v3AssessmentHistory(){try{return JSON.parse(localStorage.getItem(V3_ASSESS_KEY)||'[]');}catch(_){return [];}}
@@ -213,6 +214,50 @@ function v3PlayCase(item){
   closeModal(false);$('#home').classList.add('hidden');$('#game').classList.remove('hidden');updateScoreUI();showRound(true);
 }
 
+
+function v3PersistQuestionImage(q,dataUrl){
+  if(!q||!dataUrl)return;
+  const key=q._overrideKey||q.q;q._overrideKey=key;
+  q.image=dataUrl;
+  q.imageSource='teacher-imported';
+  q.imageRights='user-authorized';
+  let all={};try{all=JSON.parse(localStorage.getItem('dentistas-question-overrides-v2')||'{}');}catch(_){}
+  all[key]={...(all[key]||{}),image:dataUrl,imageSource:'teacher-imported',imageRights:'user-authorized',reviewedAt:new Date().toISOString().slice(0,10)};
+  try{localStorage.setItem('dentistas-question-overrides-v2',JSON.stringify(all));}
+  catch(_){alert('La imagen es demasiado grande para el almacenamiento local. Prueba con una imagen más pequeña.');}
+}
+function v3ResizeImportedImage(dataUrl,q){
+  const img=new Image();
+  img.onload=()=>{
+    const max=1200,scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));
+    const w=Math.max(1,Math.round(img.naturalWidth*scale)),h=Math.max(1,Math.round(img.naturalHeight*scale));
+    const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
+    const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,w,h);
+    const out=canvas.toDataURL('image/jpeg',.82);
+    v3PersistQuestionImage(q,out);
+    alert('Imagen clínica guardada localmente para este reactivo.');
+    v3MediaLibrary();
+  };
+  img.onerror=()=>alert('No se pudo leer la imagen seleccionada.');
+  img.src=dataUrl;
+}
+function v3ImportClinicalImage(){
+  const q=typeof otQ==='function'?otQ():(questions&&questions[roundIndex]);
+  if(!q){alert('Abre primero un reactivo para adjuntar la imagen.');return;}
+  v3PendingImageQuestion=q;
+  try{
+    if(window.Android&&Android.pickImageFile){Android.pickImageFile();return;}
+  }catch(_){}
+  alert('El selector de imágenes requiere la app Android.');
+}
+window.onImageImported=function(dataUrl){
+  const q=v3PendingImageQuestion;v3PendingImageQuestion=null;
+  if(q)v3ResizeImportedImage(String(dataUrl||''),q);
+};
+window.onImageImportError=function(message){
+  v3PendingImageQuestion=null;alert(String(message||'No se pudo importar la imagen.'));
+};
+
 function v3AttachMedia(asset){
   const q=typeof otQ==='function'?otQ():(questions&&questions[roundIndex]);
   if(!q){alert('Abre una pregunta primero para adjuntar el recurso.');return;}
@@ -224,7 +269,8 @@ function v3AttachMedia(asset){
 }
 function v3MediaLibrary(){
   const items=(questionPool||[]).filter(q=>q.image||q.case);
-  openModal('<h2>🖼 BANCO MULTIMEDIA OFFLINE</h2><p>Estos recursos vienen dentro del APK y no requieren Internet. Los esquemas son educativos y no sustituyen imágenes diagnósticas reales.</p><div class="mediaAssetGrid">'+V3_MEDIA_ASSETS.map((a,i)=>'<button data-v3asset="'+i+'"><img src="'+a.src+'" alt=""><b>'+v2Escape(a.name)+'</b><span>'+v2Escape(a.note)+'</span></button>').join('')+'</div><h3>Preguntas que ya usan multimedia</h3><div class="mediaLibrary">'+(items.map((q,i)=>'<button data-media="'+i+'">'+(q.image?'🖼':'🩺')+' '+v2Escape(q.q)+'</button>').join('')||'<p>Todavía ninguna pregunta del banco principal usa imagen.</p>')+'</div><button id="v3ImageMode" class="secondaryWide">⚙ MODO DE REVELADO DE IMAGEN</button>');
+  openModal('<h2>🖼 BANCO MULTIMEDIA OFFLINE</h2><p>Estos recursos vienen dentro del APK y no requieren Internet. Los esquemas son educativos y no sustituyen imágenes diagnósticas reales.</p><div class="menuStack"><button id="v3ImportClinical">📷 IMPORTAR IMAGEN CLÍNICA AUTORIZADA</button></div><p class="specialtyLead">La imagen importada se procesa y guarda solo en este dispositivo. Usa únicamente material propio o con permiso de uso.</p><div class="mediaAssetGrid">'+V3_MEDIA_ASSETS.map((a,i)=>'<button data-v3asset="'+i+'"><img src="'+a.src+'" alt=""><b>'+v2Escape(a.name)+'</b><span>'+v2Escape(a.note)+'</span></button>').join('')+'</div><h3>Preguntas que ya usan multimedia</h3><div class="mediaLibrary">'+(items.map((q,i)=>'<button data-media="'+i+'">'+(q.image?'🖼':'🩺')+' '+v2Escape(q.q)+'</button>').join('')||'<p>Todavía ninguna pregunta del banco principal usa imagen.</p>')+'</div><button id="v3ImageMode" class="secondaryWide">⚙ MODO DE REVELADO DE IMAGEN</button>');
+  $('#v3ImportClinical').onclick=v3ImportClinicalImage;
   document.querySelectorAll('[data-v3asset]').forEach(b=>b.onclick=()=>{const a=V3_MEDIA_ASSETS[Number(b.dataset.v3asset)];openModal('<h2>'+v2Escape(a.name)+'</h2><div class="v3ImageZoom"><img src="'+a.src+'" alt="'+v2Escape(a.name)+'"></div><p>'+v2Escape(a.note)+'</p><button id="v3AttachAsset" class="setupStart">📎 ADJUNTAR A PREGUNTA ACTUAL</button><button id="v3MediaBack" class="secondaryWide">VOLVER</button>');$('#v3AttachAsset').onclick=()=>v3AttachMedia(a);$('#v3MediaBack').onclick=v3MediaLibrary;});
   document.querySelectorAll('[data-media]').forEach(b=>b.onclick=()=>v3PreviewQuestion(items[Number(b.dataset.media)]));
   $('#v3ImageMode').onclick=v3ImageSettings;
