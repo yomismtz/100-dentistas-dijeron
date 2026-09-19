@@ -17,7 +17,8 @@ let v3Settings={
 let v3Latency=[null,null];
 let v3Restoring=false;
 let v3SessionStartedAt=0;
-let v3SessionSaved=false;\nlet v3RehearsalLaunch=false;
+let v3SessionSaved=false;
+let v3RehearsalLaunch=false;
 
 try{v3Settings={...v3Settings,...JSON.parse(localStorage.getItem(V3_CORE_SETTINGS)||'{}')};}catch(_){}
 function v3SaveSettings(){try{localStorage.setItem(V3_CORE_SETTINGS,JSON.stringify(v3Settings));}catch(_){}}
