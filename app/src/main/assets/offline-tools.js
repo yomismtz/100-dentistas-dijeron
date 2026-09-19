@@ -41,6 +41,7 @@ function otEditQuestion(){
     '<input id="otq" class="wideInput" value="'+v2Escape(q.q)+'">'+
     '<label class="settingRow">Dificultad <select id="otd"><option value="basic">Básica</option><option value="intermediate">Media</option><option value="advanced">Extra difícil</option></select></label>'+
     '<input id="ots" class="wideInput" placeholder="Fuente" value="'+v2Escape(q.source||'')+'">'+
+    '<h3>Respuestas y puntos</h3><div id="otAnswers" class="answerEditor">'+(q.a||[]).map(function(a,i){return '<div class="answerEditRow"><input data-ot-label value="'+v2Escape(a[0])+'" placeholder="Respuesta '+(i+1)+'"><input data-ot-points type="number" min="0" max="100" value="'+(Number(a[1])||0)+'"><button type="button" class="otRemoveAnswer">×</button></div>';}).join('')+'</div><div class="answerEditorFooter"><button id="otAddAnswer" type="button">＋ RESPUESTA</button><span>Total: <b id="otPointsTotal">0</b> puntos</span></div>'+
     '<div class="editorMetaGrid"><input id="otr" class="wideInput" placeholder="Revisor/a" value="'+v2Escape(q.reviewer||'')+'"><input id="otv" class="wideInput" placeholder="Versión del reactivo, ej. 1.0" value="'+v2Escape(q.questionVersion||'1.0')+'"></div>'+
     '<textarea id="otw" class="wideArea" placeholder="Explicación breve">'+v2Escape(q.explanation||'')+'</textarea>'+
     '<textarea id="ota" class="wideArea compactArea" placeholder="Respuesta = sinónimo 1, sinónimo 2">'+v2Escape(otAliasesText(q))+'</textarea>'+
@@ -48,9 +49,33 @@ function otEditQuestion(){
     '<label class="settingRow"><input id="otx" type="checkbox" '+(q.disabled?'checked':'')+'> Desactivar pregunta</label>'+
     '<div class="menuStack"><button id="otSave">💾 GUARDAR LOCALMENTE</button><button id="otClone">⧉ DUPLICAR COMO PERSONAL</button></div>');
   $('#otd').value=q.difficulty||(typeof spDifficultyOf==='function'?spDifficultyOf(q):'intermediate');$('#ote').value=otEditorial(q);
+  const refreshAnswerEditor=()=>{
+    const rows=[...document.querySelectorAll('#otAnswers .answerEditRow')];
+    const total=rows.reduce((s,row)=>s+(Number(row.querySelector('[data-ot-points]').value)||0),0);
+    const t=$('#otPointsTotal');if(t)t.textContent=String(total);
+    rows.forEach(row=>{const rm=row.querySelector('.otRemoveAnswer');if(rm)rm.disabled=rows.length<=3;});
+  };
+  const bindAnswerEditor=()=>{
+    document.querySelectorAll('#otAnswers .answerEditRow').forEach(row=>{
+      const rm=row.querySelector('.otRemoveAnswer');
+      if(rm)rm.onclick=()=>{if(document.querySelectorAll('#otAnswers .answerEditRow').length<=3)return;row.remove();refreshAnswerEditor();};
+      row.querySelectorAll('input').forEach(i=>i.addEventListener('input',refreshAnswerEditor));
+    });
+    refreshAnswerEditor();
+  };
+  $('#otAddAnswer').onclick=()=>{
+    const box=$('#otAnswers');if(!box||box.children.length>=5){alert('El máximo es 5 respuestas.');return;}
+    const row=document.createElement('div');row.className='answerEditRow';
+    row.innerHTML='<input data-ot-label placeholder="Nueva respuesta"><input data-ot-points type="number" min="0" max="100" value="0"><button type="button" class="otRemoveAnswer">×</button>';
+    box.appendChild(row);bindAnswerEditor();
+  };
+  bindAnswerEditor();
   $('#otSave').onclick=function(){
     const original=q._overrideKey||q.q;q._overrideKey=original;
-    const patch={q:$('#otq').value.trim()||q.q,difficulty:$('#otd').value,source:$('#ots').value.trim(),reviewer:$('#otr').value.trim(),questionVersion:$('#otv').value.trim()||'1.0',explanation:$('#otw').value.trim(),aliases:otParseAliases($('#ota').value),editorialStatus:$('#ote').value,reviewedAt:new Date().toISOString().slice(0,10),disabled:$('#otx').checked};
+    const rows=[...document.querySelectorAll('#otAnswers .answerEditRow')];
+    const answers=rows.map(row=>[(row.querySelector('[data-ot-label]').value||'').trim(),Number(row.querySelector('[data-ot-points]').value)||0]).filter(a=>a[0]);
+    if(answers.length<3||answers.length>5){alert('El tablero requiere entre 3 y 5 respuestas.');return;}
+    const patch={q:$('#otq').value.trim()||q.q,a:answers,difficulty:$('#otd').value,source:$('#ots').value.trim(),reviewer:$('#otr').value.trim(),questionVersion:$('#otv').value.trim()||'1.0',explanation:$('#otw').value.trim(),aliases:otParseAliases($('#ota').value),editorialStatus:$('#ote').value,reviewedAt:new Date().toISOString().slice(0,10),disabled:$('#otx').checked};
     let all={};try{all=JSON.parse(localStorage.getItem(OT_OVERRIDES)||'{}');}catch(_){}
     all[original]=patch;localStorage.setItem(OT_OVERRIDES,JSON.stringify(all));Object.assign(q,patch);closeModal(false);if(typeof orSync==='function')orSync();
   };
