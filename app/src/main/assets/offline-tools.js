@@ -63,6 +63,14 @@ const otBaseTeacher=v2TeacherMode;
 v2TeacherMode=function(){
   otBaseTeacher();
   const grid=document.querySelector('.teacherGrid');if(!grid)return;
+  const locked=phase!=='over';
+  const reveal=$('#tReveal');
+  if(reveal){
+    reveal.disabled=locked;
+    reveal.textContent=locked?'🔒 RESPUESTAS AL CERRAR RONDA':'👁 REVELAR TODAS';
+  }
+  const info=$('#tInfo');
+  if(info)info.textContent=locked?'🔒 CONSULTAR AL CERRAR RONDA':'📚 EXPLICACIÓN/FUENTE';
   const e=document.createElement('button');e.textContent='✏️ EDITAR PREGUNTA';e.onclick=otEditQuestion;grid.appendChild(e);
   const r=document.createElement('button');r.textContent='📡 AULA OFFLINE / QR';r.onclick=offlineClassroomPanel;grid.appendChild(r);
 };
@@ -86,6 +94,10 @@ v2Match=function(text,q){
 };
 
 function otReferenceQr(){
+  if(phase!=='over'){
+    openModal('<h2>🔒 RESPUESTAS BLOQUEADAS</h2><p>La referencia y las respuestas completas se habilitan únicamente cuando la ronda ya terminó.</p>');
+    return;
+  }
   const base=typeof orBase==='function'?orBase():'';
   const url=base?base+'/r':'';
   try{if(window.Android&&Android.setReferenceUnlocked)Android.setReferenceUnlocked(true);}catch(_){}
@@ -94,6 +106,10 @@ function otReferenceQr(){
 }
 v2QuestionInfo=function(){
   const q=otQ();if(!q)return;
+  if(phase!=='over'){
+    openModal('<h2>🔒 RESPUESTAS BLOQUEADAS</h2><p>Para evitar pistas durante el juego, las respuestas correctas, explicación y referencia se pueden consultar únicamente después de que termine la ronda.</p>');
+    return;
+  }
   openModal('<h2>📚 ¿POR QUÉ? · REFERENCIA</h2>'+
     '<p><b>'+v2Escape(q.q)+'</b></p>'+
     '<div class="whyBox">'+v2Escape(otExplain(q))+'</div>'+
