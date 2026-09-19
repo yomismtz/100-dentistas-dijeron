@@ -41,6 +41,7 @@ function otEditQuestion(){
     '<input id="otq" class="wideInput" value="'+v2Escape(q.q)+'">'+
     '<label class="settingRow">Dificultad <select id="otd"><option value="basic">Básica</option><option value="intermediate">Media</option><option value="advanced">Extra difícil</option></select></label>'+
     '<input id="ots" class="wideInput" placeholder="Fuente" value="'+v2Escape(q.source||'')+'">'+
+    '<div class="editorMetaGrid"><input id="otr" class="wideInput" placeholder="Revisor/a" value="'+v2Escape(q.reviewer||'')+'"><input id="otv" class="wideInput" placeholder="Versión del reactivo, ej. 1.0" value="'+v2Escape(q.questionVersion||'1.0')+'"></div>'+
     '<textarea id="otw" class="wideArea" placeholder="Explicación breve">'+v2Escape(q.explanation||'')+'</textarea>'+
     '<textarea id="ota" class="wideArea compactArea" placeholder="Respuesta = sinónimo 1, sinónimo 2">'+v2Escape(otAliasesText(q))+'</textarea>'+
     '<label class="settingRow">Estado <select id="ote"><option>✅ Revisada</option><option>🟡 Pendiente</option><option>🔄 Actualizar</option></select></label>'+
@@ -49,7 +50,7 @@ function otEditQuestion(){
   $('#otd').value=q.difficulty||(typeof spDifficultyOf==='function'?spDifficultyOf(q):'intermediate');$('#ote').value=otEditorial(q);
   $('#otSave').onclick=function(){
     const original=q._overrideKey||q.q;q._overrideKey=original;
-    const patch={q:$('#otq').value.trim()||q.q,difficulty:$('#otd').value,source:$('#ots').value.trim(),explanation:$('#otw').value.trim(),aliases:otParseAliases($('#ota').value),editorialStatus:$('#ote').value,reviewedAt:new Date().toISOString().slice(0,10),disabled:$('#otx').checked};
+    const patch={q:$('#otq').value.trim()||q.q,difficulty:$('#otd').value,source:$('#ots').value.trim(),reviewer:$('#otr').value.trim(),questionVersion:$('#otv').value.trim()||'1.0',explanation:$('#otw').value.trim(),aliases:otParseAliases($('#ota').value),editorialStatus:$('#ote').value,reviewedAt:new Date().toISOString().slice(0,10),disabled:$('#otx').checked};
     let all={};try{all=JSON.parse(localStorage.getItem(OT_OVERRIDES)||'{}');}catch(_){}
     all[original]=patch;localStorage.setItem(OT_OVERRIDES,JSON.stringify(all));Object.assign(q,patch);closeModal(false);if(typeof orSync==='function')orSync();
   };
@@ -115,7 +116,8 @@ v2QuestionInfo=function(){
     '<div class="whyBox">'+v2Escape(otExplain(q))+'</div>'+
     '<p><b>Respuestas aceptadas:</b> '+q.a.map(function(a){return v2Escape(a[0]);}).join(', ')+'</p>'+
     '<p><b>Nivel:</b> '+(typeof omDiff==='function'?omDiff(q):(q.difficulty||'Mixta'))+' · <b>Estado:</b> '+v2Escape(otEditorial(q))+'</p>'+
-    '<p><b>Banco:</b> v1.2 · <b>Última revisión:</b> '+v2Escape(q.reviewedAt||'2026-09')+'</p>'+
+    '<p><b>Banco:</b> v1.2 · <b>Reactivo:</b> v'+v2Escape(q.questionVersion||'—')+' · <b>Última revisión:</b> '+v2Escape(q.reviewedAt||'Pendiente')+'</p>'+
+    '<p><b>Revisor/a:</b> '+v2Escape(q.reviewer||'Pendiente de asignar')+'</p>'+
     '<p><b>Fuente:</b> '+v2Escape(q.source||'Fuente específica pendiente.')+'</p>'+
     '<div class="menuStack"><button id="otRef">📱 QR LOCAL DE REFERENCIA</button>'+(q.source?'<button id="otOpen">🌐 ABRIR FUENTE</button>':'')+'</div>');
   $('#otRef').onclick=otReferenceQr;if($('#otOpen'))$('#otOpen').onclick=function(){v2OpenUrl(q.source);};
