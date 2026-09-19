@@ -1,6 +1,6 @@
 'use strict';
 
-const V3_SHOW_VERSION='3.0-show';
+const V3_SHOW_VERSION='3.0.1-show';
 const V3_AUDIO_KEY='dentistas-v3-audio-layers';
 let v3Audio={music:.85,effects:1,applause:.9,narrator:1};
 try{v3Audio={...v3Audio,...JSON.parse(localStorage.getItem(V3_AUDIO_KEY)||'{}')};}catch(_){}
