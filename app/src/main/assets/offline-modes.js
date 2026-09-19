@@ -120,7 +120,7 @@ startTimer=function(){offlineLastSpokenSecond=null;omBaseStart();};
 const omBaseTimer=updateTimerUI;
 updateTimerUI=function(){omBaseTimer();if(timerRemaining>=1&&timerRemaining<=3&&phase!=='over'&&offlineLastSpokenSecond!==timerRemaining){offlineLastSpokenSecond=timerRemaining;omSpeakNumber(timerRemaining);}};
 
-function omDuck(on){const a=$('#sndStart');if(a&&!a.paused)try{a.volume=on?.10:.72;}catch(_){}}
+function omDuck(on){const a=$('#sndStart');if(a&&!a.paused)try{a.volume=on?.08:.68;}catch(_){}}
 if(typeof narratorRead==='function'){
   const bRead=narratorRead,bStop=narratorStop;
   narratorRead=function(t,done){bRead(t,function(){omDuck(false);if(done)done();});omDuck(true);};
@@ -216,7 +216,7 @@ const omBaseCareoQuestion=careoQuestionScreen;
 careoQuestionScreen=function(){
   const q=omQ();if(!q)return;
   const sudden=!!(careoState&&careoState.sudden);
-  stopTimer();careoStopClock();careoLockBoard(true);careoStopIntro(true);phase='faceoff';
+  stopTimer();careoStopClock();careoLockBoard(true);phase='faceoff';
   tvShowCue(sudden?'⚡ MUERTE SÚBITA':'RONDA '+(roundIndex+1),'🎤 ESCUCHA LA PREGUNTA',sudden?'sudden':'round',950);
   openModal('<div class="careoQuestionScreen"><div class="careoKicker">'+(sudden?'⚡ MUERTE SÚBITA':'🎤 CAREO · RONDA '+(roundIndex+1))+'</div>'+omMedia(q)+'<h2>'+v2Escape(q.q)+'</h2><div class="careoListenState">🔊 El presentador está leyendo…</div><p>El tiempo todavía no corre.</p><button id="skipRead" class="secondaryWide">⏭ OMITIR LECTURA</button></div>');
   const close=$('#closeModal');if(close)close.classList.add('careoNoClose');let done=false;
