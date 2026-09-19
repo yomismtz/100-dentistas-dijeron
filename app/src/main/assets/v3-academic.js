@@ -18,14 +18,48 @@ window.v3RemoteQuestionOverride=null;
 function v3AssessmentHistory(){try{return JSON.parse(localStorage.getItem(V3_ASSESS_KEY)||'[]');}catch(_){return [];}}
 function v3SaveAssessment(x){const a=v3AssessmentHistory();a.unshift(x);localStorage.setItem(V3_ASSESS_KEY,JSON.stringify(a.slice(0,100)));}
 
+function v3AssessmentBlueprint(q){
+  return {
+    q:q.q,
+    specialty:q.specialty||q.cat||'',
+    subtopic:q.subtopic||'',
+    difficulty:q.difficulty||(typeof spDifficultyOf==='function'?spDifficultyOf(q):'')
+  };
+}
+function v3MatchedPostQuestions(pool,pre,n){
+  const used=new Set((pre.questions||[]).map(x=>x.q));
+  const selected=[];
+  for(const bp of (pre.blueprint||[])){
+    let candidates=pool.filter(q=>!used.has(q.q)&&!selected.includes(q)&&
+      (bp.subtopic?String(q.subtopic||'')===String(bp.subtopic):true)&&
+      (bp.difficulty?String(q.difficulty||(typeof spDifficultyOf==='function'?spDifficultyOf(q):''))===String(bp.difficulty):true));
+    if(!candidates.length)candidates=pool.filter(q=>!used.has(q.q)&&!selected.includes(q)&&
+      (bp.difficulty?String(q.difficulty||(typeof spDifficultyOf==='function'?spDifficultyOf(q):''))===String(bp.difficulty):true));
+    if(!candidates.length)candidates=pool.filter(q=>!used.has(q.q)&&!selected.includes(q));
+    if(candidates.length)selected.push(candidates[Math.floor(Math.random()*candidates.length)]);
+  }
+  while(selected.length<n){
+    const rest=pool.filter(q=>!used.has(q.q)&&!selected.includes(q));
+    if(!rest.length)break;
+    selected.push(rest[Math.floor(Math.random()*rest.length)]);
+  }
+  return selected.slice(0,n);
+}
 function v3AssessmentSetup(){
-  openModal('<h2>📝 PRETEST / POSTEST</h2><p>Los estudiantes pueden responder desde el mismo QR de “Respuesta individual”. No se guardan nombres.</p><label class="settingRow">Momento <select id="v3AssessType"><option value="pre">PRETEST</option><option value="post">POSTEST</option></select></label><label class="settingRow">Número de preguntas <select id="v3AssessN"><option>5</option><option>10</option></select></label><button id="v3AssessStart" class="setupStart">INICIAR</button>');
+  openModal('<h2>📝 PRETEST / POSTEST</h2><p>Los estudiantes pueden responder desde el mismo QR de “Respuesta individual”. No se guardan nombres. El postest intenta usar reactivos diferentes pero equivalentes por subtema y dificultad al pretest más reciente del grupo.</p><label class="settingRow">Momento <select id="v3AssessType"><option value="pre">PRETEST</option><option value="post">POSTEST</option></select></label><label class="settingRow">Número de preguntas <select id="v3AssessN"><option>5</option><option>10</option></select></label><button id="v3AssessStart" class="setupStart">INICIAR</button>');
   $('#v3AssessStart').onclick=()=>{
     const type=$('#v3AssessType').value,n=Number($('#v3AssessN').value);
+    const group=typeof offlineSettings!=='undefined'?(offlineSettings.group||'Sin grupo'):'Sin grupo';
+    const specialty=typeof spSpecialtyName==='function'?spSpecialtyName():'General';
     let pool=typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool];
-    pool=shuffle(pool.filter(q=>!q.disabled)).slice(0,n);
-    if(pool.length<n){alert('No hay suficientes preguntas disponibles.');return;}
-    v3Assessment={type,questions:pool,index:0,responses:[],started:new Date().toISOString()};
+    pool=pool.filter(q=>!q.disabled);
+    let selected;
+    if(type==='post'){
+      const pre=v3AssessmentHistory().find(x=>x.group===group&&x.specialty===specialty&&x.type==='pre');
+      selected=pre?v3MatchedPostQuestions(pool,pre,n):shuffle(pool).slice(0,n);
+    }else selected=shuffle(pool).slice(0,n);
+    if(selected.length<n){alert('No hay suficientes preguntas disponibles.');return;}
+    v3Assessment={type,questions:selected,index:0,responses:[],started:new Date().toISOString(),blueprint:selected.map(v3AssessmentBlueprint)};
     v3AssessmentShow();
   };
 }
@@ -44,7 +78,7 @@ function v3AssessmentFinish(){
   window.v3RemoteQuestionOverride=null;
   const total=a.responses.reduce((s,r)=>s+r.total,0),correct=a.responses.reduce((s,r)=>s+r.correct,0);
   const group=typeof offlineSettings!=='undefined'?(offlineSettings.group||'Sin grupo'):'Sin grupo';
-  const record={date:new Date().toISOString(),type:a.type,group,specialty:typeof spSpecialtyName==='function'?spSpecialtyName():'General',researchCode:typeof v3Settings!=='undefined'?v3Settings.researchCode||'':'',questions:a.responses,total,correct,percent:total?Math.round(correct/total*100):0};
+  const record={date:new Date().toISOString(),type:a.type,group,specialty:typeof spSpecialtyName==='function'?spSpecialtyName():'General',researchCode:typeof v3Settings!=='undefined'?v3Settings.researchCode||'':'',questions:a.responses,blueprint:a.blueprint||[],total,correct,percent:total?Math.round(correct/total*100):0};
   v3SaveAssessment(record);v3Assessment=null;
   openModal('<h2>📊 '+record.type.toUpperCase()+' TERMINADO</h2><p><b>'+record.correct+' / '+record.total+'</b> respuestas correctas · <b>'+record.percent+'%</b>.</p><button id="v3AssessCompare" class="setupStart">COMPARAR PRE / POST</button>');
   $('#v3AssessCompare').onclick=v3AssessmentCompare;
