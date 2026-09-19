@@ -52,7 +52,7 @@ function v3AssessmentSetup(){
     const type=$('#v3AssessType').value,n=Number($('#v3AssessN').value);
     const group=typeof offlineSettings!=='undefined'?(offlineSettings.group||'Sin grupo'):'Sin grupo';
     const specialty=typeof spSpecialtyName==='function'?spSpecialtyName():'General';
-    let pool=typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool];
+    let pool=(typeof v3ActivePack==='function'&&v3ActivePack())?v3PackPool(v3ActivePack()):(typeof spBank==='function'?spBank(typeof specialtySelected==='string'?specialtySelected:'general'):[...questionPool]);
     pool=pool.filter(q=>!q.disabled);
     let selected;
     if(type==='post'){
