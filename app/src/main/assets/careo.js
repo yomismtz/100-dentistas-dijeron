@@ -26,12 +26,12 @@ function careoPlayLongIntro(){
     clearTimeout(careoIntroStopHandle);
     s.pause();
     s.currentTime=0;
-    s.loop=true;
+    s.loop=false;
     s.volume=.72;
     const p=s.play();
     if(p&&p.catch)p.catch(()=>{});
-    // La música continúa durante selección de equipos/especialidad.
-    // Se desvanece al comenzar la primera pregunta, no por un temporizador fijo.
+    // Pista completa de una sola reproducción: no loop y sin corte por cambios de pantalla.
+    // El narrador solo reduce el volumen temporalmente; la música termina por sí sola.
   }catch(_){}
 }
 
@@ -174,7 +174,6 @@ function careoCheck(team,isSecond){
 
 function careoFail(team,isSecond,reason){
   careoStopClock();
-  if(isSecond)careoStopIntro(true);
   if(typeof tvSfx==='function')tvSfx('buzz');
   if(typeof tvVibrate==='function')tvVibrate([70,35,70]);
   if(typeof v2React==='function')v2React(team,'bad');
@@ -198,7 +197,6 @@ function careoFail(team,isSecond,reason){
 
 function careoCorrect(team,m){
   careoStopClock();
-  careoStopIntro(true);
   currentTeam=team;phase='play';strikes=0;updateStrikesUI();
   closeModal(false);careoLockBoard(false);updateTurnUI();
   const close=$('#closeModal'); if(close)close.classList.remove('careoNoClose');
