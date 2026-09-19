@@ -135,7 +135,7 @@ function v3SaveHistory(entry){
   v3UpdateChampionship(entry);
 }
 
-function v3SessionEntry(){
+function v3SessionEntry(winnerOverride=null,sudden=false){
   const live=(typeof offlineSession!=='undefined'&&offlineSession&&Array.isArray(offlineSession.questions))?offlineSession.questions:[];
   const liveByQ=new Map(live.map(x=>[x.q||x.question,x]));
   return {
@@ -148,7 +148,8 @@ function v3SessionEntry(){
     difficulty:typeof specialtyDifficulty==='string'?specialtyDifficulty:'mix',
     teams:[...teamNames],
     scores:[...scores],
-    winner:scores[0]===scores[1]?'EMPATE':teamNames[scores[1]>scores[0]?1:0],
+    winner:Number.isInteger(winnerOverride)?teamNames[winnerOverride]:(scores[0]===scores[1]?'EMPATE':teamNames[scores[1]>scores[0]?1:0]),
+    wonBySuddenDeath:!!sudden,
     questions:(questions||[]).map((q,i)=>{
       const r=liveByQ.get(q.q)||{};
       return {
@@ -180,11 +181,11 @@ function v3SessionEntry(){
   };
 }
 
-function v3CompleteSession(){
+function v3CompleteSession(winnerOverride=null,sudden=false){
   if(v3SessionSaved)return;
   if(v3Settings.rehearsal){v3SessionSaved=true;v3Settings.rehearsal=false;v3SaveSettings();v3ClearSnapshot();return;}
   v3SessionSaved=true;
-  const e=v3SessionEntry();v3SaveHistory(e);
+  const e=v3SessionEntry(winnerOverride,sudden);v3SaveHistory(e);
   v3ClearSnapshot();
 }
 
@@ -193,10 +194,10 @@ function v3CsvEscape(v){
   return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 }
 function v3HistoryRows(){
-  const rows=[['session_id','date','group','specialty','team_1','score_1','team_2','score_2','winner','research','app_version','bank_version','question','subtopic','difficulty','round','hits','strikes','top_answer','individual_total','individual_correct','time_seconds','source']];
+  const rows=[['session_id','date','group','specialty','team_1','score_1','team_2','score_2','winner','sudden_death','research','app_version','bank_version','question','subtopic','difficulty','round','hits','strikes','top_answer','individual_total','individual_correct','time_seconds','source']];
   v3History().forEach(s=>{
     (s.questions||[{}]).forEach(q=>rows.push([
-      s.id,s.date,s.group,s.specialty,s.teams?.[0],s.scores?.[0],s.teams?.[1],s.scores?.[1],s.winner,s.research?'1':'0',s.appVersion,s.bankVersion,q.q||'',q.subtopic||'',q.difficulty||'',q.round||'',q.hits||0,q.strikes||0,q.topAnswer?'1':'0',q.individualTotal||0,q.individualCorrect||0,q.timeSeconds||0,q.source||''
+      s.id,s.date,s.group,s.specialty,s.teams?.[0],s.scores?.[0],s.teams?.[1],s.scores?.[1],s.winner,s.wonBySuddenDeath?'1':'0',s.research?'1':'0',s.appVersion,s.bankVersion,q.q||'',q.subtopic||'',q.difficulty||'',q.round||'',q.hits||0,q.strikes||0,q.topAnswer?'1':'0',q.individualTotal||0,q.individualCorrect||0,q.timeSeconds||0,q.source||''
     ]));
   });
   return rows;
@@ -216,7 +217,7 @@ function v3ExportExcel(){
   '<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="Resultados"><Table>'+
   rows.map(r=>'<Row>'+r.map(v=>'<Cell><Data ss:Type="String">'+esc(v)+'</Data></Cell>').join('')+'</Row>').join('')+
   '</Table></Worksheet></Workbook>';
-  v3ExportText('100_Dentistas_Resultados.xml','application/vnd.ms-excel',xml);
+  v3ExportText('100_Dentistas_Resultados.xls','application/vnd.ms-excel',xml);
 }
 window.onExportFinished=ok=>{if(typeof v2Host==='function')v2Host(ok?'Archivo exportado correctamente.':'No se pudo exportar el archivo.',ok?'good':'bad');};
 
@@ -412,7 +413,7 @@ nextRound=function(){const r=v3BaseNext();setTimeout(()=>v3Snapshot('nextRound')
 
 if(typeof v2DeclareWinner==='function'){
   const v3BaseWinner=v2DeclareWinner;
-  v2DeclareWinner=function(winner,sudden=false){v3CompleteSession();return v3BaseWinner(winner,sudden);};
+  v2DeclareWinner=function(winner,sudden=false){v3CompleteSession(winner,sudden);return v3BaseWinner(winner,sudden);};
 }
 const v3BaseFinish=finishGame;
 finishGame=function(){
