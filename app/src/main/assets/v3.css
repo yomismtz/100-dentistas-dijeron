@@ -34,3 +34,5 @@
 .mediaAssetGrid span{font-size:.72rem;opacity:.75}
 @media(max-width:760px){.topicGrid{grid-template-columns:1fr}.mediaAssetGrid{grid-template-columns:1fr 1fr}.bracketRound{min-width:205px}}
 @media(max-height:520px){.mediaAssetGrid img{height:80px}.topicGrid{max-height:25vh}.bracketRound{min-width:190px}}
+
+.editorMetaGrid{display:grid;grid-template-columns:1fr 180px;gap:.5rem}.editorMetaGrid .wideInput{margin:0}@media(max-width:700px){.editorMetaGrid{grid-template-columns:1fr}}
