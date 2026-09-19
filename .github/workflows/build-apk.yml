@@ -24,6 +24,7 @@ jobs:
         run: |
           python3 scripts/validate_questions.py
           python3 scripts/validate_ui_offline.py
+          python3 scripts/validate_v3_features.py
 
       - name: Generar intro completa
         run: |
