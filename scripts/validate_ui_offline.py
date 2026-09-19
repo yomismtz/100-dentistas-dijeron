@@ -15,6 +15,9 @@ remote=read(Path('app/src/main/assets/offline-remote.js'))
 modes=read(Path('app/src/main/assets/offline-modes.js'))
 tools=read(Path('app/src/main/assets/offline-tools.js'))
 v2=read(Path('app/src/main/assets/v2.js'))
+app=read(Path('app/src/main/assets/app.js'))
+careo=read(Path('app/src/main/assets/careo.js'))
+roundpolish=read(Path('app/src/main/assets/round-polish.js'))
 
 for name,text in [('index.html',index),('AndroidManifest.xml',manifest)]:
     if r'\n' in text:
@@ -23,7 +26,7 @@ for name,text in [('index.html',index),('AndroidManifest.xml',manifest)]:
 required_scripts=[
     'questions-loader.js','app.js','characters.js','v2.js','v2-extras.js',
     'specialties.js','tvshow.js','careo.js','narrator.js',
-    'offline-remote.js','offline-modes.js','offline-tools.js'
+    'offline-remote.js','offline-modes.js','offline-tools.js','round-polish.js'
 ]
 positions=[]
 for s in required_scripts:
@@ -34,7 +37,7 @@ for s in required_scripts:
 if any(p<0 for p in positions) or positions!=sorted(positions):
     errors.append('index.html: el orden de scripts no es el esperado')
 
-for css in ['style.css','v2.css','tvshow.css','specialties.css','careo.css','narrator.css','offline-classroom.css']:
+for css in ['style.css','v2.css','tvshow.css','specialties.css','careo.css','narrator.css','offline-classroom.css','round-polish.css']:
     if index.count(f'href="{css}"')!=1:
         errors.append(f'index.html: falta o se duplica {css}')
 
@@ -73,6 +76,16 @@ teacher_start=main.find('private String teacherPage')
 team_block=main[team_start:teacher_start] if team_start>=0 and teacher_start>team_start else ''
 if 'setInterval(refresh,120)' not in team_block:
     errors.append('MainActivity.java: el pulsador remoto no usa polling rápido de 120 ms')
+if 'const TURN_SECONDS = 30;' not in app:
+    errors.append('app.js: el tiempo base debe ser 30 segundos')
+if 'let v2TimerSeconds = 30;' not in v2 or "timerVersion:'30s-v1'" not in v2:
+    errors.append('v2.js: falta migración del cronómetro a 30 segundos')
+if 'let remaining=v2TimerSeconds;' not in careo:
+    errors.append('careo.js: el careo debe usar el tiempo configurado')
+if 'rpRevealMissingBeforeAdvance' not in roundpolish or "classList.add('revealed','missedAnswer')" not in roundpolish:
+    errors.append('round-polish.js: falta revelar respuestas pendientes antes de avanzar')
+if 'bank +=' in roundpolish or 'scores[' in roundpolish:
+    errors.append('round-polish.js: revelar respuestas faltantes no debe sumar puntos')
 if 'answers:(q&&q.a||[])' not in remote:
     errors.append('offline-remote.js: el host debe seguir enviando respuestas al estado nativo privado')
 if "orQrCard('📚 REFERENCIA ACTUAL'" in remote or "'qrr'" in remote:
