@@ -44,6 +44,9 @@ function v3Snapshot(reason='auto'){
     phase,
     roundIndex:Number(roundIndex)||0,
     timerRemaining:Number(timerRemaining)||v2TimerSeconds||30,
+    paused:typeof v2Paused!=='undefined'?!!v2Paused:false,
+    careoState:typeof careoState!=='undefined'&&careoState?JSON.parse(JSON.stringify(careoState)):null,
+    careoRemaining:typeof omCareoRemaining!=='undefined'?Number(omCareoRemaining)||v2TimerSeconds||30:null,
     revealed:Array.isArray(revealed)?[...revealed]:[],
     currentTeam:Number(currentTeam)||0,
     questions:questions.map(q=>JSON.parse(JSON.stringify(q))),
@@ -80,6 +83,9 @@ function v3RestoreSnapshot(s){
     phase=s.phase||'play';
     roundIndex=Math.max(0,Math.min(Number(s.roundIndex)||0,questions.length-1));
     timerRemaining=Number(s.timerRemaining)||30;
+    if(typeof v2Paused!=='undefined')v2Paused=!!s.paused;
+    if(typeof careoState!=='undefined')careoState=s.careoState?JSON.parse(JSON.stringify(s.careoState)):null;
+    if(typeof omCareoRemaining!=='undefined'&&s.careoRemaining!=null)omCareoRemaining=Math.max(1,Number(s.careoRemaining)||v2TimerSeconds||30);
     revealed=Array.isArray(s.revealed)?s.revealed:Array(questions[roundIndex].a.length).fill(false);
     currentTeam=Number(s.currentTeam)||0;
     if(typeof specialtySelected!=='undefined')specialtySelected=s.specialty||specialtySelected;
@@ -100,13 +106,26 @@ function v3RestoreSnapshot(s){
     }
     updateBankUI();updateStrikesUI();updateTurnUI();
     stopTimer();
-    if(phase!=='over'&&!v2Paused){
+    const restoreFaceoff=(s.phase==='faceoff'||s.phase==='sudden'||(s.careoState&&s.careoState.sudden));
+    if(restoreFaceoff){
+      phase=s.careoState&&s.careoState.sudden?'sudden':'faceoff';
+      if(typeof careoState!=='undefined'){
+        careoState=s.careoState?JSON.parse(JSON.stringify(s.careoState)):{first:null,second:null,attempts:0,answerIdx:null,sudden:phase==='sudden'};
+        if(phase==='sudden')careoState.sudden=true;
+      }
+      setTimeout(()=>{
+        if(typeof v2Host==='function')v2Host('Partida recuperada. El careo de esta pregunta se reinicia para mantener la misma oportunidad para ambos equipos.','good');
+        if(typeof careoQuestionScreen==='function')careoQuestionScreen();
+      },180);
+    }else if(phase!=='over'&&!v2Paused){
       timerRemaining=Math.max(1,Number(s.timerRemaining)||30);
       updateTimerUI();
       timerHandle=setInterval(()=>{
         timerRemaining-=1;updateTimerUI();v3Snapshot('timer');
         if(timerRemaining<=0){stopTimer();addStrike('timeout');}
       },1000);
+    }else{
+      updateTimerUI();
     }
     v3SaveSettings();
     return true;
