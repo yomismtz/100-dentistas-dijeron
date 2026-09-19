@@ -181,7 +181,9 @@ function v3PreviewQuestion(q){
   openModal('<h2>👁 VISTA PREVIA</h2><p class="qualityBanner '+qual.level+'">'+qual.label+'</p><p><b>'+v2Escape(q.q)+'</b></p>'+
     (q.case?'<div class="clinicalCase"><b>CASO CLÍNICO</b><p>'+v2Escape(q.case)+'</p></div>':'')+
     (q.image?'<img class="clinicalQuestionImage v3Zoomable" src="'+v2Escape(q.image)+'" alt="Imagen de la pregunta">':'')+
-    '<div class="previewAnswers">'+(q.a||[]).map((a,i)=>'<div><b>'+(i+1)+'.</b><span>'+v2Escape(a[0])+'</span><b>'+a[1]+'</b></div>').join('')+'</div><p><b>Especialidad:</b> '+v2Escape(q.specialty||'')+' · <b>Subtema:</b> '+v2Escape(q.subtopic||'')+' · <b>Dificultad:</b> '+v2Escape(q.difficulty||'')+'</p><p><b>Fuente:</b> '+v2Escape(q.source||'Pendiente')+'</p><p><b>Estado:</b> '+qual.label+'</p><div class="menuStack"><button id="v3PreviewEdit">✏ EDITAR LOCALMENTE</button><button id="v3PreviewBack">🔎 VOLVER A BUSCAR</button></div>');
+    '<div class="previewAnswers">'+(q.a||[]).map((a,i)=>'<div><b>'+(i+1)+'.</b><span>'+v2Escape(a[0])+'</span><b>'+a[1]+'</b></div>').join('')+'</div>'+
+    (q.aliases&&Object.keys(q.aliases).length?'<h3>Sinónimos aceptados</h3><div class="aliasPreview">'+Object.entries(q.aliases).map(([k,v])=>'<p><b>'+v2Escape(k)+':</b> '+v2Escape((Array.isArray(v)?v:[v]).join(', '))+'</p>').join('')+'</div>':'<p><b>Sinónimos personalizados:</b> —</p>')+
+    '<p><b>Especialidad:</b> '+v2Escape(q.specialty||'')+' · <b>Subtema:</b> '+v2Escape(q.subtopic||'')+' · <b>Dificultad:</b> '+v2Escape(q.difficulty||'')+'</p><p><b>Fuente:</b> '+v2Escape(q.source||'Pendiente')+'</p><p><b>Estado:</b> '+qual.label+'</p><div class="menuStack"><button id="v3PreviewEdit">✏ EDITAR LOCALMENTE</button><button id="v3PreviewBack">🔎 VOLVER A BUSCAR</button></div>');
   $('#v3PreviewEdit').onclick=()=>{const old=questions,oldIndex=roundIndex;questions=[q];roundIndex=0;otEditQuestion();questions=old;roundIndex=oldIndex;};
   $('#v3PreviewBack').onclick=v3SearchQuestions;
 }
