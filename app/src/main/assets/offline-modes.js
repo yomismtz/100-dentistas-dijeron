@@ -139,8 +139,10 @@ const omReveal=revealAnswer;
 revealAnswer=function(idx,btn){
   const was=revealed&&revealed[idx],team=currentTeam;omReveal(idx,btn);if(was||!(revealed&&revealed[idx]))return;
   const r=omRec();if(r){if(r.correct.indexOf(idx)<0)r.correct.push(idx);if(idx===0)r.top=true;}
-  if(idx===0){tvShowCue('⭐ ¡RESPUESTA NÚMERO UNO! ⭐',teamNames[team],'winner',1050);tvConfetti(50);offlinePresenterCue('top',{team:teamNames[team]});}
-  else offlinePresenterCue('correct',{team:teamNames[team]});
+  if(idx===0){
+    if(typeof v3Celebrate!=='function'){tvShowCue('⭐ ¡RESPUESTA NÚMERO UNO! ⭐',teamNames[team],'winner',1050);tvConfetti(50);}
+    offlinePresenterCue('top',{team:teamNames[team]});
+  } else offlinePresenterCue('correct',{team:teamNames[team]});
   if(typeof orSync==='function')orSync();
 };
 const omStrike=addStrike;
