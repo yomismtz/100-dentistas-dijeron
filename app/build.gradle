@@ -8,7 +8,7 @@ android {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
         targetSdk 35
-        versionCode 13
-        versionName '2.7.2-offline-bugfix-beta'
+        versionCode 14
+        versionName '2.8.0-round-review-beta'
     }
 }
