@@ -56,7 +56,7 @@ function omBegin(){
 function omRec(){
   const q=omQ();if(!q)return null;if(!offlineSession)omBegin();
   let r=offlineSession.questions.find(function(x){return x.q===q.q;});
-  if(!r){r={q:q.q,difficulty:omDiff(q),correct:[],strikes:0,top:false,individualTotal:0,individualCorrect:0};offlineSession.questions.push(r);}
+  if(!r){r={q:q.q,specialty:q.specialty||q.cat||(typeof spSpecialtyName==='function'?spSpecialtyName():'General'),subtopic:q.subtopic||'Sin subtema',difficulty:omDiff(q),correct:[],strikes:0,top:false,individualTotal:0,individualCorrect:0};offlineSession.questions.push(r);}
   return r;
 }
 function offlineRecordIndividual(answer,correct){
