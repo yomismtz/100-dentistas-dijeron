@@ -128,7 +128,7 @@ function otTournamentSetup(){
   $('#otStart').onclick=function(){
     const n=Number($('#otn').value),names=$('#otNames').value.split('\n').map(function(x){return x.trim().toUpperCase();}).filter(Boolean);
     if(names.length!==n){alert('Escribe exactamente '+n+' equipos.');return;}
-    otTournament={active:true,round:1,current:0,winners:[],matches:[],champion:null,lastKey:''};
+    otTournament={active:true,round:1,current:0,winners:[],matches:[],champion:null,lastKey:'',history:[]};
     for(let i=0;i<n;i+=2)otTournament.matches.push([names[i],names[i+1]]);
     otSaveTournament();otTournamentPlay();
   };
@@ -140,13 +140,23 @@ function otTournamentPlay(){
 }
 function otTournamentRecord(name){
   if(!otTournament||!otTournament.active)return;
+  if(!Array.isArray(otTournament.history))otTournament.history=[];
   const key=otTournament.round+'-'+otTournament.current;if(otTournament.lastKey===key)return;otTournament.lastKey=key;
   otTournament.winners.push(name);
-  if(otTournament.current<otTournament.matches.length-1)otTournament.current++;
-  else if(otTournament.winners.length===1){otTournament.champion=otTournament.winners[0];otTournament.active=false;}
-  else{
-    const w=[...otTournament.winners];otTournament.round++;otTournament.current=0;otTournament.winners=[];otTournament.matches=[];otTournament.lastKey='';
-    for(let i=0;i<w.length;i+=2)otTournament.matches.push([w[i],w[i+1]]);
+  if(otTournament.current<otTournament.matches.length-1){
+    otTournament.current++;
+  }else{
+    otTournament.history.push({
+      round:otTournament.round,
+      matches:otTournament.matches.map(m=>[...m]),
+      winners:[...otTournament.winners]
+    });
+    if(otTournament.winners.length===1){
+      otTournament.champion=otTournament.winners[0];otTournament.active=false;
+    }else{
+      const w=[...otTournament.winners];otTournament.round++;otTournament.current=0;otTournament.winners=[];otTournament.matches=[];otTournament.lastKey='';
+      for(let i=0;i<w.length;i+=2)otTournament.matches.push([w[i],w[i+1]]);
+    }
   }
   otSaveTournament();
 }
