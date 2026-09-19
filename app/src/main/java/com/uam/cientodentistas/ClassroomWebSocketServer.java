@@ -319,7 +319,7 @@ public final class ClassroomWebSocketServer extends Thread {
             frame.write(0x80|(opcode&0x0f));
             if(len<126)frame.write(len);
             else if(len<=65535){frame.write(126);frame.write((len>>8)&0xff);frame.write(len&0xff);}
-            else{frame.write(127);for(int i=7;i>=0;i--)frame.write((len>>(8*i))&0xff);}
+            else{frame.write(127);for(int i=7;i>=0;i--)frame.write((int)((len>>(8*i))&0xff));}
             frame.write(payload);output.write(frame.toByteArray());output.flush();
         }
         void close(){try{socket.close();}catch(Exception ignored){}}
