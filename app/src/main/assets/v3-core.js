@@ -289,7 +289,10 @@ function v3PackManager(){
     v3Settings.activePack=p.name;v3SaveSettings();
     if(typeof specialtySelected!=='undefined')specialtySelected=p.specialty;
     if(typeof specialtyDifficulty!=='undefined')specialtyDifficulty=p.difficulty;
-    closeModal(false);startNewGame();
+    closeModal(false);
+    const onHome=$('#home')&&!$('#home').classList.contains('hidden');
+    if(onHome&&typeof showCharacterSetup==='function')showCharacterSetup();
+    else startNewGame();
   });
   $('#v3NewPack').onclick=()=>{
     const specs=(typeof SPECIALTY_DEFS!=='undefined'?SPECIALTY_DEFS:[]).filter(d=>d.id!=='general');
