@@ -404,7 +404,11 @@ if(typeof v2DeclareWinner==='function'){
   v2DeclareWinner=function(winner,sudden=false){v3CompleteSession();return v3BaseWinner(winner,sudden);};
 }
 const v3BaseFinish=finishGame;
-finishGame=function(){v3CompleteSession();return v3BaseFinish();};
+finishGame=function(){
+  const r=v3BaseFinish();
+  if(phase==='sudden'||phase==='faceoff')setTimeout(()=>v3Snapshot('suddenDeath'),60);
+  return r;
+};
 
 document.addEventListener('visibilitychange',()=>{if(document.hidden)v3Snapshot('background');});
 window.addEventListener('pagehide',()=>v3Snapshot('pagehide'));
