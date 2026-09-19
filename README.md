@@ -9,17 +9,17 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 - Seguridad de datos: https://yomismtz.github.io/100-dentistas-dijeron/data-safety.html
 - Términos de uso: https://yomismtz.github.io/100-dentistas-dijeron/terms.html
 
-## Classroom Research v3.0.1
+## Classroom Research v3.0.2
 
 - 476 preguntas cargadas localmente, organizadas por 12 especialidades, dificultad y subtema.
 - 8 rondas: 1–2 ×1, 3–4 ×2 y 5–8 ×3, con muerte súbita en caso de empate.
 - Cronómetro de 30 segundos; lectura de la pregunta antes de iniciar el tiempo.
 - Respuestas ocultas mientras la ronda está activa; las faltantes se revelan al cierre sin sumar puntos.
 - Pulsadores de dos celulares y control docente por WebSocket local, con HTTP como respaldo y PIN docente.
-- Autoguardado, recuperación de partidas e historial local.
+- Autoguardado, recuperación de partidas e historial local; recupera también el estado de pausa y reinicia un careo interrumpido de forma neutral para ambos equipos.
 - Exportación CSV, archivo compatible con Excel y tarjeta PNG del equipo campeón.
 - Modo investigación con código anónimo y registro de versión/configuración.
-- Pretest/postest con reactivos distintos emparejados por subtema y dificultad cuando es posible.
+- Pretest/postest con reactivos distintos emparejados por subtema y dificultad cuando es posible; cada postest queda enlazado al pretest que utilizó como plantilla.
 - Reportes por grupo, especialidad y subtema; detección automática de reactivos que requieren revisión.
 - Editor local de preguntas, respuestas, puntos, sinónimos, fuente, explicación, revisor, versión y estado editorial.
 - Paquetes de clase por especialidad, dificultad y subtemas concretos.
@@ -54,6 +54,6 @@ GitHub Actions valida el banco de preguntas y la sintaxis JavaScript antes de co
 
 ## Aula offline
 
-La edición 3.0.1 puede iniciar un servidor HTTP y WebSocket dentro de la red local para pulsadores de equipo, respuesta individual y control docente. Los teléfonos se conectan a la misma Wi‑Fi o hotspot del dispositivo anfitrión; no se requiere un servidor externo ni salida a Internet. El control docente está protegido por un PIN local y las respuestas correctas no se incluyen en el estado público de los equipos.
+La edición 3.0.2 puede iniciar un servidor HTTP y WebSocket dentro de la red local para pulsadores de equipo, respuesta individual y control docente. Los teléfonos se conectan a la misma Wi‑Fi o hotspot del dispositivo anfitrión; no se requiere un servidor externo ni salida a Internet. El control docente está protegido por un PIN local y las respuestas correctas no se incluyen en el estado público de los equipos.
 
 Android declara el permiso `INTERNET` porque este permiso también habilita sockets de red local. Esto no significa que las partidas se transmitan a Internet.
