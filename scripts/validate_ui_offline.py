@@ -98,6 +98,14 @@ if 'let remaining=v2TimerSeconds;' not in careo:
     errors.append('careo.js: el careo debe usar el tiempo configurado')
 if 'rpRevealMissingBeforeAdvance' not in roundpolish or "classList.add('revealed','missedAnswer')" not in roundpolish:
     errors.append('round-polish.js: falta revelar respuestas pendientes antes de avanzar')
+if "Las respuestas faltantes son:" not in roundpolish or "La respuesta faltante es:" not in roundpolish:
+    errors.append('round-polish.js: falta locución de respuestas faltantes')
+if "tvSfx('review')" not in roundpolish:
+    errors.append('round-polish.js: falta efecto de sonido antes de respuestas faltantes')
+if "narratorReadAnnouncement" not in roundpolish:
+    errors.append('round-polish.js: las respuestas faltantes no usan el narrador')
+if "roundReviewContinue\" disabled" not in roundpolish or "speechDone" not in roundpolish or "visualDone" not in roundpolish:
+    errors.append('round-polish.js: siguiente ronda debe esperar lectura y revelado')
 if 'bank +=' in roundpolish or 'scores[' in roundpolish:
     errors.append('round-polish.js: revelar respuestas faltantes no debe sumar puntos')
 if ".answer.covered{pointer-events:none}" not in roundcss:
