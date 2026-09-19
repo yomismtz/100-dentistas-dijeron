@@ -162,7 +162,8 @@ function v3SessionEntry(){
         strikes:Number(r.strikes)||0,
         topAnswer:!!r.top,
         individualTotal:Number(r.individualTotal)||0,
-        individualCorrect:Number(r.individualCorrect)||0
+        individualCorrect:Number(r.individualCorrect)||0,
+        timeSeconds:Number(r.timeSeconds)||Math.max(0,Math.round(((r.endedAt||Date.now())-(r.startedAt||Date.now()))/1000))
       };
     }),
     research:!!v3Settings.research,
@@ -192,10 +193,10 @@ function v3CsvEscape(v){
   return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 }
 function v3HistoryRows(){
-  const rows=[['session_id','date','group','specialty','team_1','score_1','team_2','score_2','winner','research','app_version','bank_version','question','subtopic','difficulty','round','hits','strikes','top_answer','individual_total','individual_correct','source']];
+  const rows=[['session_id','date','group','specialty','team_1','score_1','team_2','score_2','winner','research','app_version','bank_version','question','subtopic','difficulty','round','hits','strikes','top_answer','individual_total','individual_correct','time_seconds','source']];
   v3History().forEach(s=>{
     (s.questions||[{}]).forEach(q=>rows.push([
-      s.id,s.date,s.group,s.specialty,s.teams?.[0],s.scores?.[0],s.teams?.[1],s.scores?.[1],s.winner,s.research?'1':'0',s.appVersion,s.bankVersion,q.q||'',q.subtopic||'',q.difficulty||'',q.round||'',q.hits||0,q.strikes||0,q.topAnswer?'1':'0',q.individualTotal||0,q.individualCorrect||0,q.source||''
+      s.id,s.date,s.group,s.specialty,s.teams?.[0],s.scores?.[0],s.teams?.[1],s.scores?.[1],s.winner,s.research?'1':'0',s.appVersion,s.bankVersion,q.q||'',q.subtopic||'',q.difficulty||'',q.round||'',q.hits||0,q.strikes||0,q.topAnswer?'1':'0',q.individualTotal||0,q.individualCorrect||0,q.timeSeconds||0,q.source||''
     ]));
   });
   return rows;
