@@ -17,7 +17,7 @@ let v3Settings={
 let v3Latency=[null,null];
 let v3Restoring=false;
 let v3SessionStartedAt=0;
-let v3SessionSaved=false;
+let v3SessionSaved=false;\nlet v3RehearsalLaunch=false;
 
 try{v3Settings={...v3Settings,...JSON.parse(localStorage.getItem(V3_CORE_SETTINGS)||'{}')};}catch(_){}
 function v3SaveSettings(){try{localStorage.setItem(V3_CORE_SETTINGS,JSON.stringify(v3Settings));}catch(_){}}
@@ -169,7 +169,8 @@ function v3SessionEntry(){
 }
 
 function v3CompleteSession(){
-  if(v3SessionSaved||v3Settings.rehearsal)return;
+  if(v3SessionSaved)return;
+  if(v3Settings.rehearsal){v3SessionSaved=true;v3Settings.rehearsal=false;v3SaveSettings();v3ClearSnapshot();return;}
   v3SessionSaved=true;
   const e=v3SessionEntry();v3SaveHistory(e);
   v3ClearSnapshot();
@@ -236,10 +237,8 @@ function v3ResearchSettings(){
 }
 
 function v3StartRehearsal(){
-  v3Settings.rehearsal=true;v3SaveSettings();v3SessionStartedAt=Date.now();v3SessionSaved=false;
+  v3RehearsalLaunch=true;v3Settings.rehearsal=true;v3SaveSettings();v3SessionStartedAt=Date.now();v3SessionSaved=false;
   closeModal(false);startNewGame();
-  if(questions.length>3){questions=questions.slice(0,3);showRound(true);}
-  if(typeof v2Host==='function')v2Host('Modo ensayo: 3 preguntas. No se guardará en estadísticas.','good');
 }
 
 function v3Packs(){try{return JSON.parse(localStorage.getItem(V3_PACKS_KEY)||'[]');}catch(_){return [];}}
@@ -308,16 +307,19 @@ function v3Bracket(){
     (otTournament.champion?'<div class="bracketChampion">🏆 '+v2Escape(otTournament.champion)+'</div>':'')+'</div>');
 }
 
+window.v3AfterGameStarted=function(){
+  if(!Array.isArray(questions)||!questions.length)return;
+  v3ApplyDifficultySchedule();
+  if(v3Settings.rehearsal&&questions.length>3)questions=questions.slice(0,3);
+  showRound(true);v3Snapshot('start');
+  if(v3Settings.rehearsal&&typeof v2Host==='function')v2Host('Modo ensayo: 3 preguntas. No se guardará en estadísticas.','good');
+};
 const v3BaseStart=startNewGame;
 startNewGame=function(){
+  v3Settings.rehearsal=!!v3RehearsalLaunch;v3RehearsalLaunch=false;v3SaveSettings();
   v3SessionStartedAt=Date.now();v3SessionSaved=false;
   if(v3Settings.research&&!v3Settings.researchCode)v3Settings.researchCode=v3NowCode();
-  v3BaseStart();
-  if(Array.isArray(questions)&&questions.length){
-    v3ApplyDifficultySchedule();
-    if(v3Settings.rehearsal&&questions.length>3)questions=questions.slice(0,3);
-    showRound(true);v3Snapshot('start');
-  }
+  return v3BaseStart();
 };
 
 const v3BaseShow=showRound;
@@ -342,7 +344,9 @@ window.addEventListener('pagehide',()=>v3Snapshot('pagehide'));
 setInterval(()=>v3Snapshot('interval'),2500);
 
 function v3CoreMenu(){
-  openModal('<h2>🧭 CLASSROOM RESEARCH</h2><div class="menuStack"><button id="v3RecoverMenu">↻ RECUPERAR ÚLTIMA PARTIDA</button><button id="v3Rehearsal">🧪 MODO ENSAYO · 3 PREGUNTAS</button><button id="v3Latency">⚡ PRUEBA DE LATENCIA</button><button id="v3History">🗂 HISTORIAL / EXPORTAR</button><button id="v3Research">🔬 MODO INVESTIGACIÓN</button><button id="v3Packs">📦 PAQUETES DE CLASE</button><button id="v3Diff">🎚 DIFICULTAD POR RONDA</button><button id="v3Bracket">🏆 BRACKET DEL TORNEO</button><button id="v3Champ">🥇 GRAN CAMPEONATO</button></div>');
+  openModal('<h2>🧭 CLASSROOM RESEARCH</h2><div class="menuStack"><button id="v3AcademicMenu">🎓 HERRAMIENTAS ACADÉMICAS</button><button id="v3ShowMenuBtn">🎭 SHOW Y AUDIO</button><button id="v3RecoverMenu">↻ RECUPERAR ÚLTIMA PARTIDA</button><button id="v3Rehearsal">🧪 MODO ENSAYO · 3 PREGUNTAS</button><button id="v3Latency">⚡ PRUEBA DE LATENCIA</button><button id="v3History">🗂 HISTORIAL / EXPORTAR</button><button id="v3Research">🔬 MODO INVESTIGACIÓN</button><button id="v3Packs">📦 PAQUETES DE CLASE</button><button id="v3Diff">🎚 DIFICULTAD POR RONDA</button><button id="v3Bracket">🏆 BRACKET DEL TORNEO</button><button id="v3Champ">🥇 GRAN CAMPEONATO</button></div>');
+  $('#v3AcademicMenu').onclick=()=>typeof v3AcademicMenu==='function'&&v3AcademicMenu();
+  $('#v3ShowMenuBtn').onclick=()=>typeof v3ShowMenu==='function'&&v3ShowMenu();
   $('#v3RecoverMenu').onclick=()=>{const s=v3GetSnapshot();if(s){closeModal(false);v3RestoreSnapshot(s);}else alert('No hay una partida recuperable.');};
   $('#v3Rehearsal').onclick=v3StartRehearsal;$('#v3Latency').onclick=v3LatencyPanel;$('#v3History').onclick=v3ShowHistory;$('#v3Research').onclick=v3ResearchSettings;$('#v3Packs').onclick=v3PackManager;$('#v3Diff').onclick=v3DifficultySchedule;$('#v3Bracket').onclick=v3Bracket;$('#v3Champ').onclick=v3Championship;
 }
