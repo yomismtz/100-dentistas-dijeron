@@ -99,9 +99,9 @@ function omReports(){
 }
 
 const OM_PHRASES={
- formal:{control:' obtiene el control.',correct:'Respuesta correcta.',top:'Respuesta número uno.',x1:'Primer error.',x2:'Segundo error.',steal:'Oportunidad de robo.',double:'Ronda de puntos dobles.',triple:'Ronda de puntos triples.',final:'Última ronda.',winner:'Los ganadores son '},
- show:{control:' tiene el control.',correct:'¡Respuesta correcta!',top:'¡Respuesta número uno!',x1:'¡Primera equis!',x2:'¡Segunda equis!',steal:'¡Oportunidad de robo!',double:'¡Puntos dobles!',triple:'¡Puntos triples!',final:'¡Última ronda!',winner:'¡Los ganadores son '},
- fun:{control:' manda en el tablero.',correct:'¡Sí señor, está en el tablero!',top:'¡Bingo dental! ¡Respuesta número uno!',x1:'¡Uy! Primera equis.',x2:'¡Cuidado! Segunda equis.',steal:'¡Se abre la puerta del robo!',double:'¡Se duplican los puntos!',triple:'¡Puntos triples, esto se pone serio!',final:'¡Última ronda, a brillar!',winner:'¡Confeti para '}
+ formal:{control:' obtiene el control.',correct:'Respuesta correcta.',top:'Respuesta número uno.',x1:'Primer error.',x2:'Segundo error.',steal:'Oportunidad de robo.',double:'Ronda de puntos dobles.',triple:'Ronda de puntos triples.',final:'Última ronda.',review:'Estas eran las respuestas que faltaron.',winner:'Los ganadores son '},
+ show:{control:' tiene el control.',correct:'¡Respuesta correcta!',top:'¡Respuesta número uno!',x1:'¡Primera equis!',x2:'¡Segunda equis!',steal:'¡Oportunidad de robo!',double:'¡Puntos dobles!',triple:'¡Puntos triples!',final:'¡Última ronda!',review:'¡Estas eran las respuestas que faltaron!',winner:'¡Los ganadores son '},
+ fun:{control:' manda en el tablero.',correct:'¡Sí señor, está en el tablero!',top:'¡Bingo dental! ¡Respuesta número uno!',x1:'¡Uy! Primera equis.',x2:'¡Cuidado! Segunda equis.',steal:'¡Se abre la puerta del robo!',double:'¡Se duplican los puntos!',triple:'¡Puntos triples, esto se pone serio!',final:'¡Última ronda, a brillar!',review:'¡Veamos cuáles respuestas se nos escaparon!',winner:'¡Confeti para '}
 };
 function offlinePresenterCue(event,vars){
   if(!narratorEnabled)return;
