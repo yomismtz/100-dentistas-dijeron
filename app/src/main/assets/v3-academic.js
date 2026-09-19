@@ -206,7 +206,4 @@ function v3AcademicMenu(){
   $('#v3Assess').onclick=v3AssessmentSetup;$('#v3AssessCompare').onclick=v3AssessmentCompare;$('#v3Quality').onclick=v3QualityDashboard;$('#v3Analytics').onclick=v3Analytics;$('#v3Search').onclick=v3SearchQuestions;$('#v3Cases').onclick=v3CaseSeriesMenu;$('#v3Media').onclick=v3MediaLibrary;
 }
 
-(function(){
-  const home=$('.homeActions');
-  if(home&&!$('#v3AcademicBtn')){const b=document.createElement('button');b.id='v3AcademicBtn';b.textContent='🎓 ACADÉMICO';b.onclick=v3AcademicMenu;home.appendChild(b);}
-})();
+// Acceso integrado dentro de Classroom Research para mantener limpia la portada.
