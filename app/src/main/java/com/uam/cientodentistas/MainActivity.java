@@ -361,6 +361,7 @@ public class MainActivity extends Activity {
         private volatile boolean buzzArmed = false;
         private volatile boolean referenceUnlocked = false;
         private volatile int lastRound = -1;
+        private final java.util.Set<String> examSubmissions = java.util.concurrent.ConcurrentHashMap.newKeySet();
         private volatile String stateJson = "{}";
         private final String teacherPin;
         private ServerSocket serverSocket;
@@ -417,6 +418,7 @@ public class MainActivity extends Activity {
                 int round = obj.optInt("round", -1);
                 if (round != -1 && round != lastRound) {
                     referenceUnlocked = false;
+                    examSubmissions.clear();
                     lastRound = round;
                 }
             } catch (Exception ignored) {
@@ -529,8 +531,11 @@ public class MainActivity extends Activity {
                     }
                 } else if ("/api/exam".equals(path)) {
                     String answer = queryValue(query, "answer");
-                    sendJs("if(window.onRemoteExamAnswer){window.onRemoteExamAnswer(" + JSONObject.quote(answer) + ");}");
-                    respond(output, 200, "application/json; charset=utf-8", "{\"ok\":true}");
+                    String device = queryValue(query, "device");
+                    if (device.isEmpty()) device = String.valueOf(client.getInetAddress().getHostAddress());
+                    boolean accepted = examSubmissions.add(device);
+                    if (accepted) sendJs("if(window.onRemoteExamAnswer){window.onRemoteExamAnswer(" + JSONObject.quote(answer) + ");}");
+                    respond(output, 200, "application/json; charset=utf-8", "{\"ok\":" + accepted + ",\"duplicate\":" + (!accepted) + "}");
                 } else {
                     respond(output, 200, "text/html; charset=utf-8", landingPage());
                 }
@@ -671,11 +676,11 @@ public class MainActivity extends Activity {
         private String examPage() {
             return "<!doctype html><meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'><style>"
                     + baseCss() + ".net{font-size:13px;opacity:.8;margin-top:8px}</style><div class='card'><h1>📝 RESPUESTA INDIVIDUAL</h1><div id='q' class='status'>Esperando pregunta…</div><input id='a' placeholder='Escribe una respuesta'><button id='send'>ENVIAR RESPUESTA</button><div id='msg'></div><div id='net' class='net'></div></div><script>"
-                    + "let current='',sent=false,ws=null,wake=null;async function keepAwake(){try{if('wakeLock'in navigator){wake=await navigator.wakeLock.request('screen')}}catch(e){}}document.addEventListener('visibilitychange',()=>{if(!document.hidden)keepAwake()});keepAwake();"
+                    + "let current='',sent=false,ws=null,wake=null,device=localStorage.getItem('dentistasExamDevice')||('d'+Math.random().toString(36).slice(2)+Date.now().toString(36));localStorage.setItem('dentistasExamDevice',device);async function keepAwake(){try{if('wakeLock'in navigator){wake=await navigator.wakeLock.request('screen')}}catch(e){}}document.addEventListener('visibilitychange',()=>{if(!document.hidden)keepAwake()});keepAwake();"
                     + "function apply(j){let q=(j.state||{}).question||'Esperando pregunta…';if(q!==current){current=q;sent=false;document.getElementById('send').disabled=false;document.getElementById('a').disabled=false;document.getElementById('msg').textContent=''}document.getElementById('q').textContent=q}"
                     + "async function fallback(){if(ws&&ws.readyState===1)return;try{let r=await fetch('/api/state?x='+Date.now());apply(await r.json())}catch(e){}}"
-                    + "function connect(){try{ws=new WebSocket('ws://'+location.hostname+':8788/ws?role=exam');ws.onopen=()=>{document.getElementById('net').textContent='⚡ Tiempo real conectado';ws.send(JSON.stringify({type:'state'}))};ws.onmessage=e=>{try{let j=JSON.parse(e.data);if(j.type==='state')apply(j);if(j.type==='examAck'&&j.ok)document.getElementById('msg').textContent='✓ Respuesta registrada'}catch(_){}};ws.onclose=()=>{document.getElementById('net').textContent='↻ Respaldo HTTP';setTimeout(connect,1200)}}catch(e){setTimeout(connect,1200)}}"
-                    + "document.getElementById('send').onclick=async()=>{if(sent)return;let v=document.getElementById('a').value.trim();if(!v)return;sent=true;document.getElementById('send').disabled=true;document.getElementById('a').disabled=true;if(ws&&ws.readyState===1)ws.send(JSON.stringify({type:'exam',answer:v}));else await fetch('/api/exam?answer='+encodeURIComponent(v)+'&x='+Date.now());document.getElementById('msg').textContent='✓ Respuesta registrada para esta pregunta'};setInterval(fallback,1600);fallback();connect();</script>";
+                    + "function connect(){try{ws=new WebSocket('ws://'+location.hostname+':8788/ws?role=exam&device='+encodeURIComponent(device));ws.onopen=()=>{document.getElementById('net').textContent='⚡ Tiempo real conectado';ws.send(JSON.stringify({type:'state'}))};ws.onmessage=e=>{try{let j=JSON.parse(e.data);if(j.type==='state')apply(j);if(j.type==='examAck'&&j.ok)document.getElementById('msg').textContent='✓ Respuesta registrada'}catch(_){}};ws.onclose=()=>{document.getElementById('net').textContent='↻ Respaldo HTTP';setTimeout(connect,1200)}}catch(e){setTimeout(connect,1200)}}"
+                    + "document.getElementById('send').onclick=async()=>{if(sent)return;let v=document.getElementById('a').value.trim();if(!v)return;sent=true;document.getElementById('send').disabled=true;document.getElementById('a').disabled=true;if(ws&&ws.readyState===1)ws.send(JSON.stringify({type:'exam',answer:v,device:device}));else await fetch('/api/exam?answer='+encodeURIComponent(v)+'&device='+encodeURIComponent(device)+'&x='+Date.now());document.getElementById('msg').textContent='✓ Respuesta registrada para esta pregunta'};setInterval(fallback,1600);fallback();connect();</script>";
         }
 
         private String referencePage() {
