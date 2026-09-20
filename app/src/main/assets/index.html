@@ -79,6 +79,17 @@
   <audio id="sndGood" src="good.mp3" preload="auto"></audio>
   <audio id="sndBad" src="error.mp3" preload="auto"></audio>
   <script src="questions-loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      var b=document.getElementById('privacyBtn');
+      if(!b)return;
+      b.addEventListener('click',function(){
+        var url='https://yomismtz.github.io/100-dentistas-dijeron/privacy.html';
+        try{if(window.Android&&Android.openUrl){Android.openUrl(url);return;}}catch(_){}
+        window.open(url,'_blank');
+      });
+    });
+  </script>
   <script src="app.js"></script>
   <script src="characters.js"></script>
   <script src="v2.js"></script>
