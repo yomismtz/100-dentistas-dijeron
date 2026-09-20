@@ -4,83 +4,88 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#120406">
-  <meta name="description" content="100 Dentistas Dijeron: juego educativo de odontología para dos equipos, con preguntas aleatorias, rondas multiplicadas, cronómetro y banco de puntos.">
+  <meta name="description" content="100 Dentistas Dijeron: juego educativo Android de odontología para aula, con careo, pulsadores por celular, voz, reportes y 476 preguntas offline.">
   <title>100 Dentistas Dijeron · Juego educativo de odontología</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="https://raw.githubusercontent.com/yomismtz/100-dentistas-dijeron/main/app/src/main/assets/portada_tiny.jpg">
+  <link rel="icon" href="https://raw.githubusercontent.com/yomismtz/100-dentistas-dijeron/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="./">🦷 <span>100 Dentistas Dijeron</span></a>
-    <nav>
-      <a href="#juego">El juego</a>
-      <a href="#academico">Contenido</a>
-      <a href="privacy.html">Privacidad</a>
-      <a href="terms.html">Términos</a>
-      <a href="https://github.com/yomismtz/100-dentistas-dijeron">GitHub</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">JUEGO EDUCATIVO · ODONTOLOGÍA</p>
-        <h1>100 <span>Dentistas</span> Dijeron</h1>
-        <p class="lead">Un concurso para repasar odontología en equipo: preguntas aleatorias, respuestas ocultas, banco de puntos, tres errores, robo, cronómetro y rondas con valor creciente.</p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/yomismtz/100-dentistas-dijeron">Ver proyecto en GitHub</a>
-          <a class="button" href="privacy.html">Política de privacidad</a>
-        </div>
-        <p class="status">Versión en desarrollo · Android · funcionamiento local/offline en la versión actual</p>
+<header class="nav">
+  <a class="brand" href="./">🦷 <span>100 Dentistas Dijeron</span></a>
+  <nav>
+    <a href="#juego">El juego</a>
+    <a href="#aula">Aula offline</a>
+    <a href="#academico">Académico</a>
+    <a href="privacy.html">Privacidad</a>
+    <a href="data-safety.html">Seguridad de datos</a>
+    <a href="terms.html">Términos</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">CLASSROOM RESEARCH · ODONTOLOGÍA</p>
+      <h1>100 <span>Dentistas</span> Dijeron</h1>
+      <p class="lead">Concurso educativo Android para repasar odontología en equipo: careo, narrador, respuestas ocultas, 30 segundos por respuesta, pulsadores desde celulares, control docente, reportes y herramientas de investigación educativa.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/yomismtz/100-dentistas-dijeron">Ver proyecto en GitHub</a>
+        <a class="button" href="privacy.html">Política de privacidad</a>
+        <a class="button" href="data-safety.html">Seguridad de datos</a>
       </div>
-      <div class="hero-art" aria-label="Mascota del juego">
-        <div class="tooth-stage">
-          <div class="tooth">🦷</div>
-          <div class="mic">🎙️</div>
-          <div class="badge">100</div>
-        </div>
-      </div>
-    </section>
+      <p class="status">Versión 3.0.4 beta · Android · API 36 · funcionamiento principal local/offline</p>
+    </div>
+    <div class="hero-art" aria-label="Mascota del juego">
+      <div class="tooth-stage"><div class="tooth">🦷</div><div class="mic">🎙️</div><div class="badge">100</div></div>
+    </div>
+  </section>
 
-    <section id="juego" class="section">
-      <p class="eyebrow">MECÁNICA</p>
-      <h2>Una partida diferente cada vez</h2>
-      <div class="grid three">
-        <article class="card"><strong>6 rondas</strong><p>Se seleccionan seis preguntas al azar de una base amplia y no se repiten dentro de la partida.</p></article>
-        <article class="card"><strong>×1 · ×2 · ×3</strong><p>Rondas 1–2 valen normal; rondas 3–4, doble; rondas 5–6, triple.</p></article>
-        <article class="card"><strong>10 segundos</strong><p>Cada respuesta tiene cronómetro. Si el tiempo llega a cero, se registra un strike.</p></article>
-        <article class="card"><strong>Máximo 3 errores</strong><p>Al tercer error cambia el control de la ronda y el equipo rival puede intentar el robo.</p></article>
-        <article class="card"><strong>2 equipos</strong><p>Cada equipo puede tener nombre y personaje. El equipo ganador aparece al final con trofeo.</p></article>
-        <article class="card"><strong>Modo docente</strong><p>El proyecto está pensado para actividades de aula, repaso y aprendizaje interactivo de odontología.</p></article>
-      </div>
-    </section>
+  <section id="juego" class="section">
+    <p class="eyebrow">MECÁNICA</p>
+    <h2>Concurso completo para el salón</h2>
+    <div class="grid three">
+      <article class="card"><strong>8 rondas</strong><p>Rondas 1–2 ×1, 3–4 ×2 y 5–8 ×3, con muerte súbita si hay empate.</p></article>
+      <article class="card"><strong>30 segundos</strong><p>El narrador lee primero la pregunta y el cronómetro inicia después de terminar la lectura.</p></article>
+      <article class="card"><strong>Respuestas protegidas</strong><p>Las respuestas correctas permanecen ocultas durante la ronda; las faltantes se muestran al cierre sin sumar puntos.</p></article>
+      <article class="card"><strong>Careo</strong><p>Dos equipos compiten por responder primero. El sistema admite pulsadores en pantalla o desde celulares.</p></article>
+      <article class="card"><strong>Voz o texto</strong><p>La respuesta puede escribirse o dictarse mediante el servicio de reconocimiento de voz instalado en Android.</p></article>
+      <article class="card"><strong>Show configurable</strong><p>Presentador Formal, Concurso o Divertido, música completa sin bucle, efectos, aplausos y volumen por capas.</p></article>
+    </div>
+  </section>
 
-    <section id="academico" class="section alt">
-      <p class="eyebrow">CONTENIDO ACADÉMICO</p>
-      <h2>Preguntas de múltiples áreas odontológicas</h2>
-      <p class="wide">La base incluye anatomía y fisiología, prevención y cariología, periodoncia, endodoncia, odontología restauradora, prótesis, oclusión y ATM, cirugía, anestesia, radiología, patología y medicina oral, odontopediatría, ortodoncia, control de infecciones, materiales, estética e implantes.</p>
-      <div class="notice">
-        <strong>Importante:</strong> los valores de puntos son ponderaciones lúdicas del tablero. No representan porcentajes derivados de una encuesta real de dentistas. El contenido del juego es educativo y no sustituye guías clínicas, diagnóstico ni atención profesional.
-      </div>
-      <a class="text-link" href="https://github.com/yomismtz/100-dentistas-dijeron/blob/main/VALIDACION_PREGUNTAS.md">Consultar metodología y validación del banco →</a>
-    </section>
+  <section id="aula" class="section alt">
+    <p class="eyebrow">AULA OFFLINE</p>
+    <h2>Pulsadores y control docente sin servidor externo</h2>
+    <p class="wide">La app puede crear un servidor HTTP y un canal WebSocket en la red local del salón. Los equipos escanean QR para usar sus teléfonos como pulsadores y el docente dispone de un panel protegido por PIN. Los dispositivos deben estar conectados a la misma Wi‑Fi o hotspot; no es necesario que esa red tenga salida a Internet.</p>
+    <div class="grid three">
+      <article class="card"><strong>⚡ Tiempo real</strong><p>WebSocket para pulsadores y control docente, con HTTP como respaldo.</p></article>
+      <article class="card"><strong>🎓 Panel privado</strong><p>Pausa, errores, banco, avance de ronda y controles administrativos protegidos por PIN.</p></article>
+      <article class="card"><strong>↻ Recuperación</strong><p>Autoguardado y restauración de una partida interrumpida.</p></article>
+    </div>
+  </section>
 
-    <section class="section">
-      <p class="eyebrow">PRIVACIDAD</p>
-      <h2>Diseñado para recopilar lo mínimo</h2>
-      <div class="privacy-summary">
-        <div><span>✓</span><p>Sin creación de cuentas</p></div>
-        <div><span>✓</span><p>Sin publicidad integrada</p></div>
-        <div><span>✓</span><p>Sin analítica propia en la versión actual</p></div>
-        <div><span>✓</span><p>Preferencias del juego guardadas localmente</p></div>
-      </div>
-      <p><a class="button" href="privacy.html">Leer política completa</a></p>
-    </section>
-  </main>
+  <section id="academico" class="section">
+    <p class="eyebrow">CONTENIDO ACADÉMICO</p>
+    <h2>476 preguntas y herramientas de evaluación</h2>
+    <p class="wide">El banco incluye 12 áreas/especialidades odontológicas, niveles de dificultad, subtemas y fuentes asociadas. La versión actual incorpora pretest/postest, reportes por grupo y subtema, modo investigación con código anónimo, editor local, semáforo editorial, casos clínicos seriados, multimedia offline, paquetes de clase y exportación CSV/Excel.</p>
+    <div class="notice"><strong>Importante:</strong> los valores de puntos son ponderaciones lúdicas del tablero y no porcentajes obtenidos de una encuesta real de dentistas. El contenido es educativo y no sustituye diagnóstico, prescripción, juicio clínico ni guías actualizadas.</div>
+  </section>
 
-  <footer>
-    <p>© 2026 · 100 Dentistas Dijeron · Proyecto educativo de odontología.</p>
-    <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · <a href="https://github.com/yomismtz/100-dentistas-dijeron/issues">Contacto mediante GitHub Issues</a></p>
-  </footer>
+  <section class="section alt">
+    <p class="eyebrow">PRIVACIDAD</p>
+    <h2>Procesamiento principalmente local</h2>
+    <div class="privacy-summary">
+      <div><span>✓</span><p>Sin cuentas obligatorias</p></div>
+      <div><span>✓</span><p>Sin publicidad integrada</p></div>
+      <div><span>✓</span><p>Sin analítica propia</p></div>
+      <div><span>✓</span><p>Partidas y reportes guardados localmente</p></div>
+    </div>
+    <p>La función de voz es opcional y utiliza el reconocedor instalado en Android; ese proveedor puede procesar la voz localmente o en sus propios servidores según la configuración del dispositivo. La aplicación no almacena grabaciones de audio.</p>
+    <div class="actions"><a class="button" href="privacy.html">Política de privacidad</a><a class="button" href="data-safety.html">Seguridad de datos</a><a class="button" href="terms.html">Términos</a></div>
+  </section>
+</main>
+<footer>
+  <p>© 2026 · 100 Dentistas Dijeron · Proyecto educativo de odontología.</p>
+  <p><a href="privacy.html">Privacidad</a> · <a href="data-safety.html">Seguridad de datos</a> · <a href="terms.html">Términos</a> · <a href="https://github.com/yomismtz/100-dentistas-dijeron/issues">Contacto</a></p>
+</footer>
 </body>
 </html>
