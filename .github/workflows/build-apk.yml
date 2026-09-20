@@ -67,22 +67,33 @@ jobs:
         run: |
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
 
-      - name: Install Android SDK 35
+      - name: Install Android SDK 36
         run: |
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0" "platform-tools"
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.9'
+          gradle-version: '8.11.1'
 
       - name: Build debug APK
         run: |
           gradle --no-daemon assembleDebug
+
+      - name: Build release bundle
+        run: |
+          gradle --no-daemon bundleRelease
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: 100-dentistas-dijeron-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload release AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: 100-dentistas-dijeron-release-aab
+          path: app/build/outputs/bundle/release/app-release.aab
           if-no-files-found: error
