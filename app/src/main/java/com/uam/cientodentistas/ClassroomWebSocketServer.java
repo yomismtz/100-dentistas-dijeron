@@ -39,6 +39,8 @@ public final class ClassroomWebSocketServer extends Thread {
     private volatile boolean ready = false;
     private volatile boolean buzzArmed = false;
     private volatile String stateJson = "{}";
+    private final Set<String> examSubmissions = ConcurrentHashMap.newKeySet();
+    private volatile int lastRound = -1;
     private ServerSocket serverSocket;
 
     public ClassroomWebSocketServer(int port, String teacherPin, Listener listener) {
@@ -93,6 +95,13 @@ public final class ClassroomWebSocketServer extends Thread {
 
     public void updateState(String json) {
         stateJson = json == null || json.trim().isEmpty() ? "{}" : json;
+        try {
+            int round = new JSONObject(safeState()).optInt("round", -1);
+            if (round != -1 && round != lastRound) {
+                examSubmissions.clear();
+                lastRound = round;
+            }
+        } catch (Exception ignored) {}
         broadcastStates();
     }
 
@@ -134,6 +143,7 @@ public final class ClassroomWebSocketServer extends Thread {
             String role=queryValue(query,"role");
             int team=parseInt(queryValue(query,"team"),0);
             String pin=queryValue(query,"pin");
+            String device=queryValue(query,"device");
             boolean teacher="teacher".equals(role) && teacherPin.equals(pin);
             if("teacher".equals(role) && !teacher){
                 writeHttp(output,"HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n");
@@ -149,7 +159,7 @@ public final class ClassroomWebSocketServer extends Thread {
                     "Connection: Upgrade\r\n"+
                     "Sec-WebSocket-Accept: "+accept+"\r\n\r\n");
 
-            client=new Client(socket,output,role,team,teacher);
+            client=new Client(socket,output,role,team,teacher,device);
             clients.add(client);
             sendState(client);
             readFrames(client,input);
@@ -206,8 +216,11 @@ public final class ClassroomWebSocketServer extends Thread {
                 else if(listener!=null)listener.onTeacherCommand(name,arg);
                 client.send(out.toString());
             }else if("exam".equals(type) && "exam".equals(client.role)){
-                if(listener!=null)listener.onExamAnswer(msg.optString("answer",""));
-                JSONObject out=new JSONObject();out.put("type","examAck");out.put("ok",true);client.send(out.toString());
+                String device=client.device.isEmpty()?msg.optString("device",""):client.device;
+                if(device.isEmpty())device=client.socket.getInetAddress().getHostAddress();
+                boolean accepted=examSubmissions.add(device);
+                if(accepted && listener!=null)listener.onExamAnswer(msg.optString("answer",""));
+                JSONObject out=new JSONObject();out.put("type","examAck");out.put("ok",accepted);out.put("duplicate",!accepted);client.send(out.toString());
             }else if("latency".equals(type)){
                 long ms=Math.max(0,msg.optLong("ms",0));
                 if(client.team>0 && listener!=null)listener.onLatency(client.team,ms);
@@ -307,8 +320,9 @@ public final class ClassroomWebSocketServer extends Thread {
         final String role;
         final int team;
         final boolean teacher;
-        Client(Socket socket,OutputStream output,String role,int team,boolean teacher){
-            this.socket=socket;this.output=output;this.role=role;this.team=team;this.teacher=teacher;
+        final String device;
+        Client(Socket socket,OutputStream output,String role,int team,boolean teacher,String device){
+            this.socket=socket;this.output=output;this.role=role;this.team=team;this.teacher=teacher;this.device=device==null?"":device;
         }
         synchronized void send(String text){
             try{sendFrame(text.getBytes(StandardCharsets.UTF_8),0x1);}catch(Exception e){close();}
