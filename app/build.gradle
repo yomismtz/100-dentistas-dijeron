@@ -2,13 +2,13 @@ plugins { id 'com.android.application' }
 
 android {
     namespace 'com.uam.cientodentistas'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
-        targetSdk 35
-        versionCode 20
-        versionName '3.0.3-spoken-round-review-beta'
+        targetSdk 36
+        versionCode 21
+        versionName '3.0.4-play-store-beta'
     }
 }
