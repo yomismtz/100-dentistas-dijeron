@@ -3,8 +3,8 @@
   <application
       android:theme="@style/AppTheme"
       android:label="Así los Dentistas lo Dijeron"
-      android:icon="@drawable/ic_brand_launcher"
-      android:roundIcon="@drawable/ic_brand_launcher"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher"
       android:allowBackup="true"
       android:usesCleartextTraffic="true">
     <activity
