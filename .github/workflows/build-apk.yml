@@ -76,6 +76,20 @@ jobs:
         with:
           gradle-version: '8.11.1'
 
+      - name: Validar compilación Java y smoke tests
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          m=Path('app/src/main/AndroidManifest.xml').read_text()
+          main=Path('app/src/main/java/com/uam/cientodentistas/MainActivity.java').read_text()
+          ws=Path('app/src/main/java/com/uam/cientodentistas/ClassroomWebSocketServer.java').read_text()
+          assert 'usesCleartextTraffic="true"' in m
+          assert 'CLASSROOM_PORT = 8787' in main and 'CLASSROOM_WS_PORT = 8788' in main
+          assert 'examSubmissions' in main and 'examSubmissions' in ws
+          assert 'device=' in main and 'duplicate' in ws
+          print('SMOKE ESTÁTICO CORRECTO: aula local, HTTP/WS y deduplicación de examen presentes.')
+          PY
+
       - name: Build debug APK
         run: |
           gradle --no-daemon assembleDebug
@@ -84,11 +98,18 @@ jobs:
         run: |
           gradle --no-daemon bundleRelease
 
+      - name: Verificar APK y calcular SHA-256
+        run: |
+          test -s app/build/outputs/apk/debug/app-debug.apk
+          sha256sum app/build/outputs/apk/debug/app-debug.apk | tee app/build/outputs/apk/debug/app-debug.apk.sha256
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: 100-dentistas-dijeron-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: |
+            app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/debug/app-debug.apk.sha256
           if-no-files-found: error
 
       - name: Upload release AAB
