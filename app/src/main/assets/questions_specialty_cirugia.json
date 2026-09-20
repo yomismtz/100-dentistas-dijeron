@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "extraccion",
+    "q": "¿Qué instrumentos se usan habitualmente en una extracción dental simple?",
+    "a": [
+      [
+        "Elevadores",
+        40
+      ],
+      [
+        "Fórceps",
+        30
+      ],
+      [
+        "Periostótomo o instrumental para tejidos",
+        20
+      ],
+      [
+        "Aspiración e instrumental auxiliar",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "postoperatorio",
+    "q": "¿Qué instrucciones generales favorecen recuperación tras una extracción simple?",
+    "a": [
+      [
+        "Mantener presión con gasa inicialmente",
+        40
+      ],
+      [
+        "Evitar manipular el coágulo",
+        30
+      ],
+      [
+        "Mantener higiene cuidadosa",
+        20
+      ],
+      [
+        "Consultar ante sangrado o síntomas inusuales",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "hemostasia",
+    "q": "¿Qué medidas locales pueden ayudar a controlar sangrado posoperatorio?",
+    "a": [
+      [
+        "Compresión",
+        40
+      ],
+      [
+        "Sutura",
+        30
+      ],
+      [
+        "Agentes hemostáticos locales",
+        20
+      ],
+      [
+        "Revisión y eliminación de causa local",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "complicaciones",
+    "q": "¿Qué complicaciones pueden aparecer tras una extracción?",
+    "a": [
+      [
+        "Sangrado",
+        40
+      ],
+      [
+        "Alveolitis",
+        30
+      ],
+      [
+        "Infección",
+        20
+      ],
+      [
+        "Lesión de estructuras vecinas",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "biopsia",
+    "q": "¿Qué tipos generales de biopsia pueden utilizarse en lesiones orales?",
+    "a": [
+      [
+        "Incisional",
+        40
+      ],
+      [
+        "Excisional",
+        30
+      ],
+      [
+        "Punch en casos seleccionados",
+        20
+      ],
+      [
+        "Aspiración o punción para lesiones apropiadas",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/white-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "tercer molar",
+    "q": "¿Qué datos se valoran al estudiar un tercer molar impactado?",
+    "a": [
+      [
+        "Posición y angulación",
+        40
+      ],
+      [
+        "Relación con estructuras vecinas",
+        30
+      ],
+      [
+        "Patología asociada",
+        20
+      ],
+      [
+        "Síntomas e historia clínica",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/07/impacted_third_molars.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "infeccion",
+    "q": "¿Qué signos sugieren una infección odontogénica con mayor severidad?",
+    "a": [
+      [
+        "Fiebre",
+        40
+      ],
+      [
+        "Edema progresivo",
+        30
+      ],
+      [
+        "Trismus",
+        20
+      ],
+      [
+        "Compromiso sistémico o de vía aérea",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "imagen",
+    "q": "¿Qué estudios de imagen pueden ser útiles antes de cirugía oral según la indicación?",
+    "a": [
+      [
+        "Radiografía periapical",
+        40
+      ],
+      [
+        "Panorámica",
+        30
+      ],
+      [
+        "CBCT en casos seleccionados",
+        20
+      ],
+      [
+        "Imágenes médicas adicionales cuando la lesión lo requiere",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "evaluacion",
+    "q": "¿Qué datos deben revisarse antes de una cirugía oral?",
+    "a": [
+      [
+        "Historia médica",
+        40
+      ],
+      [
+        "Medicamentos",
+        30
+      ],
+      [
+        "Alergias",
+        20
+      ],
+      [
+        "Estudios clínicos y radiográficos pertinentes",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "basic",
+    "subtopic": "referencia",
+    "q": "¿Qué circunstancias pueden justificar referencia a cirugía oral y maxilofacial?",
+    "a": [
+      [
+        "Anatomía quirúrgica compleja",
+        40
+      ],
+      [
+        "Comorbilidad médica importante",
+        30
+      ],
+      [
+        "Patología extensa",
+        20
+      ],
+      [
+        "Riesgo elevado de complicaciones",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "third molar",
+    "q": "¿Qué problemas pueden asociarse a terceros molares impactados?",
+    "a": [
+      [
+        "Pericoronitis",
+        40
+      ],
+      [
+        "Caries o enfermedad periodontal distal del segundo molar",
+        30
+      ],
+      [
+        "Quistes o patología asociada",
+        20
+      ],
+      [
+        "Reabsorción o daño de dientes vecinos",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/07/impacted_third_molars.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "alveolitis",
+    "q": "¿Qué medidas forman parte del manejo de una alveolitis seca?",
+    "a": [
+      [
+        "Irrigación suave del alveolo",
+        40
+      ],
+      [
+        "Control del dolor",
+        30
+      ],
+      [
+        "Apósito local cuando está indicado",
+        20
+      ],
+      [
+        "Seguimiento clínico",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "infection source",
+    "q": "¿Qué principios son esenciales al tratar una infección odontogénica localizada?",
+    "a": [
+      [
+        "Eliminar la fuente",
+        40
+      ],
+      [
+        "Drenar cuando existe colección",
+        30
+      ],
+      [
+        "Valorar estado sistémico",
+        20
+      ],
+      [
+        "Usar antibióticos solo cuando están indicados",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "oroantral",
+    "q": "¿Qué factores se valoran ante una comunicación oroantral?",
+    "a": [
+      [
+        "Tamaño del defecto",
+        40
+      ],
+      [
+        "Presencia de sinusitis",
+        30
+      ],
+      [
+        "Tiempo de evolución",
+        20
+      ],
+      [
+        "Capacidad de cierre primario",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "nerve risk",
+    "q": "¿Qué datos ayudan a valorar riesgo de lesión del nervio alveolar inferior en cirugía de tercer molar?",
+    "a": [
+      [
+        "Relación radiográfica raíz-conducto",
+        40
+      ],
+      [
+        "Profundidad y posición del diente",
+        30
+      ],
+      [
+        "Anatomía radicular",
+        20
+      ],
+      [
+        "Necesidad de imagen tridimensional seleccionada",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/07/impacted_third_molars.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "biopsy handling",
+    "q": "¿Qué pasos mejoran el valor diagnóstico de una biopsia?",
+    "a": [
+      [
+        "Seleccionar zona representativa",
+        40
+      ],
+      [
+        "Evitar traumatizar la muestra",
+        30
+      ],
+      [
+        "Fijar y rotular correctamente",
+        20
+      ],
+      [
+        "Enviar historia clínica pertinente al patólogo",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/white-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "antithrombotics",
+    "q": "¿Qué factores deben valorarse en un paciente que usa antitrombóticos antes de cirugía oral?",
+    "a": [
+      [
+        "Motivo del medicamento",
+        40
+      ],
+      [
+        "Riesgo hemorrágico del procedimiento",
+        30
+      ],
+      [
+        "Riesgo trombótico de suspenderlo",
+        20
+      ],
+      [
+        "Coordinación médica cuando corresponde",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "flap",
+    "q": "¿Qué principios favorecen un colgajo quirúrgico bien diseñado?",
+    "a": [
+      [
+        "Base con irrigación adecuada",
+        40
+      ],
+      [
+        "Acceso suficiente",
+        30
+      ],
+      [
+        "Incisiones sobre tejido sano cuando es posible",
+        20
+      ],
+      [
+        "Cierre sin tensión excesiva",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "suture",
+    "q": "¿Qué objetivos cumple la sutura en cirugía oral?",
+    "a": [
+      [
+        "Aproximar tejidos",
+        40
+      ],
+      [
+        "Favorecer hemostasia",
+        30
+      ],
+      [
+        "Estabilizar colgajos",
+        20
+      ],
+      [
+        "Proteger el sitio quirúrgico",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "intermediate",
+    "subtopic": "pathology referral",
+    "q": "¿Qué características de una lesión oral aumentan necesidad de biopsia o referencia?",
+    "a": [
+      [
+        "Persistencia inexplicada",
+        40
+      ],
+      [
+        "Induración",
+        30
+      ],
+      [
+        "Ulceración que no cicatriza",
+        20
+      ],
+      [
+        "Crecimiento progresivo",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/white-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "mronj risk",
+    "q": "¿Qué exposiciones farmacológicas se relacionan con riesgo de osteonecrosis de los maxilares asociada a medicamentos?",
+    "a": [
+      [
+        "Bisfosfonatos",
+        40
+      ],
+      [
+        "Denosumab",
+        30
+      ],
+      [
+        "Algunos agentes antiangiogénicos",
+        20
+      ],
+      [
+        "Combinaciones oncológicas de alto riesgo",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/03/mronj_position_paper.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "mronj prevention",
+    "q": "¿Qué medidas forman parte de prevención de MRONJ en pacientes de riesgo?",
+    "a": [
+      [
+        "Optimizar salud oral",
+        40
+      ],
+      [
+        "Tratar focos infecciosos",
+        30
+      ],
+      [
+        "Coordinar con el equipo médico",
+        20
+      ],
+      [
+        "Informar riesgos y alternativas",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/03/mronj_position_paper.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "third molar decision",
+    "q": "¿Qué principios deben guiar la decisión sobre un tercer molar asintomático?",
+    "a": [
+      [
+        "Riesgo actual de enfermedad",
+        40
+      ],
+      [
+        "Riesgo futuro razonable",
+        30
+      ],
+      [
+        "Morbimortalidad de la intervención",
+        20
+      ],
+      [
+        "Preferencias informadas del paciente",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/07/impacted_third_molars.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "coronectomy",
+    "q": "¿Qué factores pueden hacer considerar una coronectomía de tercer molar inferior?",
+    "a": [
+      [
+        "Relación estrecha con nervio alveolar inferior",
+        40
+      ],
+      [
+        "Diente vital sin patología radicular incompatible",
+        30
+      ],
+      [
+        "Riesgo neurológico elevado con extracción completa",
+        20
+      ],
+      [
+        "Posibilidad de seguimiento",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/wp-content/uploads/2024/07/impacted_third_molars.pdf"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "deep infection",
+    "q": "¿Qué hallazgos de infección odontogénica profunda requieren escalamiento urgente?",
+    "a": [
+      [
+        "Dificultad respiratoria",
+        40
+      ],
+      [
+        "Disfagia marcada",
+        30
+      ],
+      [
+        "Edema cervical progresivo",
+        20
+      ],
+      [
+        "Toxicidad sistémica",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "orthognathic",
+    "q": "¿Qué dominios forman parte de la evaluación para cirugía ortognática?",
+    "a": [
+      [
+        "Deformidad dentoesquelética",
+        40
+      ],
+      [
+        "Función y oclusión",
+        30
+      ],
+      [
+        "Vía aérea y articulación cuando corresponda",
+        20
+      ],
+      [
+        "Expectativas y salud general del paciente",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "implant surgery",
+    "q": "¿Qué factores anatómicos deben evaluarse antes de cirugía de implantes?",
+    "a": [
+      [
+        "Volumen óseo",
+        40
+      ],
+      [
+        "Nervios y vasos",
+        30
+      ],
+      [
+        "Seno maxilar o cavidad nasal",
+        20
+      ],
+      [
+        "Espacio protésico y posición tridimensional",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "complication prevention",
+    "q": "¿Qué medidas disminuyen complicaciones en cirugía dentoalveolar compleja?",
+    "a": [
+      [
+        "Planificación con imagen apropiada",
+        40
+      ],
+      [
+        "Técnica atraumática",
+        30
+      ],
+      [
+        "Protección de estructuras anatómicas",
+        20
+      ],
+      [
+        "Instrucciones y seguimiento posoperatorio",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "path specimen",
+    "q": "¿Qué errores pueden comprometer la interpretación histopatológica de una muestra?",
+    "a": [
+      [
+        "Muestra no representativa",
+        40
+      ],
+      [
+        "Artefacto por aplastamiento",
+        30
+      ],
+      [
+        "Fijación inadecuada",
+        20
+      ],
+      [
+        "Información clínica insuficiente",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/white-papers/"
+  },
+  {
+    "specialty": "cirugia",
+    "difficulty": "advanced",
+    "subtopic": "risk benefit",
+    "q": "¿Qué elementos deben formar parte del consentimiento informado quirúrgico?",
+    "a": [
+      [
+        "Diagnóstico e indicación",
+        40
+      ],
+      [
+        "Beneficios esperados",
+        30
+      ],
+      [
+        "Riesgos y complicaciones relevantes",
+        20
+      ],
+      [
+        "Alternativas incluida la no intervención cuando es razonable",
+        10
+      ]
+    ],
+    "source": "https://aaoms.org/publications/position-papers/clinical-papers/"
+  }
+]

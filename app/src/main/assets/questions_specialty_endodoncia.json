@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "diagnosis",
+    "q": "¿Qué datos forman parte del diagnóstico endodóntico?",
+    "a": [
+      [
+        "Historia de dolor",
+        40
+      ],
+      [
+        "Pruebas pulpares",
+        30
+      ],
+      [
+        "Percusión y palpación",
+        20
+      ],
+      [
+        "Radiografías indicadas",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "isolation",
+    "q": "¿Qué ventajas ofrece el dique de hule en endodoncia?",
+    "a": [
+      [
+        "Control de contaminación",
+        40
+      ],
+      [
+        "Protección del paciente",
+        30
+      ],
+      [
+        "Mejor campo operatorio",
+        20
+      ],
+      [
+        "Ayuda a prevenir ingestión o aspiración de instrumentos",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/guidelines-position-statements/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "irrigants",
+    "q": "¿Qué soluciones pueden usarse durante irrigación endodóntica según el objetivo?",
+    "a": [
+      [
+        "Hipoclorito de sodio",
+        40
+      ],
+      [
+        "EDTA",
+        30
+      ],
+      [
+        "Solución salina como irrigante auxiliar",
+        20
+      ],
+      [
+        "Clorhexidina en indicaciones seleccionadas y sin mezclar incompatibles",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "steps",
+    "q": "¿Qué etapas forman parte de un tratamiento de conductos convencional?",
+    "a": [
+      [
+        "Acceso",
+        40
+      ],
+      [
+        "Preparación químico-mecánica",
+        30
+      ],
+      [
+        "Desinfección",
+        20
+      ],
+      [
+        "Obturación y sellado coronal",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "tests",
+    "q": "¿Qué pruebas pueden ayudar a evaluar respuesta pulpar?",
+    "a": [
+      [
+        "Frío",
+        40
+      ],
+      [
+        "Calor en casos seleccionados",
+        30
+      ],
+      [
+        "Prueba eléctrica",
+        20
+      ],
+      [
+        "Comparación con dientes control",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "periapical",
+    "q": "¿Qué pruebas clínicas ayudan a valorar tejidos apicales?",
+    "a": [
+      [
+        "Percusión",
+        40
+      ],
+      [
+        "Palpación",
+        30
+      ],
+      [
+        "Movilidad",
+        20
+      ],
+      [
+        "Examen de tejidos blandos",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "complications",
+    "q": "¿Qué complicaciones procedimentales pueden ocurrir en endodoncia?",
+    "a": [
+      [
+        "Escalón",
+        40
+      ],
+      [
+        "Perforación",
+        30
+      ],
+      [
+        "Separación de instrumento",
+        20
+      ],
+      [
+        "Transportación del conducto",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "obturation",
+    "q": "¿Qué objetivos tiene la obturación del sistema de conductos?",
+    "a": [
+      [
+        "Sellar el espacio preparado",
+        40
+      ],
+      [
+        "Limitar recolonización microbiana",
+        30
+      ],
+      [
+        "Completar el tratamiento tras desinfección",
+        20
+      ],
+      [
+        "Permitir restauración coronal adecuada",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "restoration",
+    "q": "¿Qué factores son importantes después de completar endodoncia?",
+    "a": [
+      [
+        "Sellado coronal",
+        40
+      ],
+      [
+        "Restaurabilidad",
+        30
+      ],
+      [
+        "Protección contra fractura cuando corresponde",
+        20
+      ],
+      [
+        "Seguimiento clínico y radiográfico",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "basic",
+    "subtopic": "referral",
+    "q": "¿Qué situaciones pueden justificar referencia a endodoncia?",
+    "a": [
+      [
+        "Anatomía compleja",
+        40
+      ],
+      [
+        "Retratamiento difícil",
+        30
+      ],
+      [
+        "Complicaciones procedimentales",
+        20
+      ],
+      [
+        "Diagnóstico incierto o caso de alta dificultad",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "working length",
+    "q": "¿Qué métodos ayudan a determinar longitud de trabajo?",
+    "a": [
+      [
+        "Localizador apical electrónico",
+        40
+      ],
+      [
+        "Radiografía",
+        30
+      ],
+      [
+        "Conocimiento anatómico",
+        20
+      ],
+      [
+        "Verificación clínica durante instrumentación",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "naocl",
+    "q": "¿Qué funciones clínicas aporta el hipoclorito de sodio?",
+    "a": [
+      [
+        "Acción antimicrobiana",
+        40
+      ],
+      [
+        "Disolución de tejido orgánico",
+        30
+      ],
+      [
+        "Ayuda a limpiar detritos",
+        20
+      ],
+      [
+        "Contribuye a desinfección del sistema de conductos",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "edta",
+    "q": "¿Qué objetivos puede tener EDTA durante preparación endodóntica?",
+    "a": [
+      [
+        "Quelación de componente inorgánico",
+        40
+      ],
+      [
+        "Remoción de smear layer inorgánica",
+        30
+      ],
+      [
+        "Facilitar manejo de dentina calcificada",
+        20
+      ],
+      [
+        "Complementar protocolo de irrigación",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "calcium hydroxide",
+    "q": "¿Qué usos puede tener hidróxido de calcio como medicación intracanal?",
+    "a": [
+      [
+        "Actividad antimicrobiana",
+        40
+      ],
+      [
+        "Control de exudado en casos seleccionados",
+        30
+      ],
+      [
+        "Manejo entre citas",
+        20
+      ],
+      [
+        "Apoyo en ciertos procedimientos de apexificación tradicionales",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "shaping",
+    "q": "¿Qué objetivos tiene la preparación mecánica del conducto?",
+    "a": [
+      [
+        "Crear forma para irrigación",
+        40
+      ],
+      [
+        "Eliminar tejido y dentina infectada seleccionada",
+        30
+      ],
+      [
+        "Mantener trayectoria anatómica",
+        20
+      ],
+      [
+        "Facilitar obturación",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "rotary niti",
+    "q": "¿Qué propiedades han favorecido el uso de NiTi en instrumentación?",
+    "a": [
+      [
+        "Flexibilidad",
+        40
+      ],
+      [
+        "Superelasticidad",
+        30
+      ],
+      [
+        "Adaptación a curvaturas",
+        20
+      ],
+      [
+        "Capacidad de mecanización rotatoria o reciprocante",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "cracked tooth",
+    "q": "¿Qué datos pueden aparecer en un diente fisurado?",
+    "a": [
+      [
+        "Dolor a la masticación",
+        40
+      ],
+      [
+        "Dolor al liberar presión",
+        30
+      ],
+      [
+        "Respuesta variable al frío",
+        20
+      ],
+      [
+        "Sondaje periodontal localizado en algunas fisuras profundas",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/guidelines-position-statements/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "flare-up",
+    "q": "¿Qué factores pueden contribuir a dolor o exacerbación entre citas?",
+    "a": [
+      [
+        "Irritación mecánica",
+        40
+      ],
+      [
+        "Extrusión de detritos",
+        30
+      ],
+      [
+        "Persistencia microbiana",
+        20
+      ],
+      [
+        "Respuesta inflamatoria periapical",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "retreatment",
+    "q": "¿Qué causas pueden justificar retratamiento endodóntico?",
+    "a": [
+      [
+        "Persistencia o aparición de enfermedad apical",
+        40
+      ],
+      [
+        "Conductos omitidos",
+        30
+      ],
+      [
+        "Obturación o sellado deficiente",
+        20
+      ],
+      [
+        "Contaminación coronal",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "intermediate",
+    "subtopic": "cbct",
+    "q": "¿Qué situaciones pueden justificar CBCT en endodoncia de forma selectiva?",
+    "a": [
+      [
+        "Anatomía compleja",
+        40
+      ],
+      [
+        "Reabsorción",
+        30
+      ],
+      [
+        "Trauma o fractura sospechada",
+        20
+      ],
+      [
+        "Planificación quirúrgica",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/guidelines-position-statements/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "vital pulp therapy",
+    "q": "¿Qué componentes son críticos para éxito de terapia pulpar vital?",
+    "a": [
+      [
+        "Diagnóstico pulpar adecuado",
+        40
+      ],
+      [
+        "Control de contaminación y hemostasia",
+        30
+      ],
+      [
+        "Biomaterial apropiado",
+        20
+      ],
+      [
+        "Sellado coronal definitivo",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/guidelines-position-statements/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "regenerative",
+    "q": "¿Qué objetivos tiene la endodoncia regenerativa en un diente inmaduro necrótico?",
+    "a": [
+      [
+        "Resolver infección",
+        40
+      ],
+      [
+        "Favorecer reparación apical",
+        30
+      ],
+      [
+        "Permitir aumento de grosor de paredes en algunos casos",
+        20
+      ],
+      [
+        "Promover continuación del desarrollo radicular cuando ocurre",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/guidelines-position-statements/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "resorption",
+    "q": "¿Qué tipos de reabsorción pueden requerir diagnóstico endodóntico detallado?",
+    "a": [
+      [
+        "Reabsorción interna",
+        40
+      ],
+      [
+        "Reabsorción cervical externa",
+        30
+      ],
+      [
+        "Reabsorción apical inflamatoria",
+        20
+      ],
+      [
+        "Reabsorción externa relacionada con trauma",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "separated instrument",
+    "q": "¿Qué factores influyen en manejar un instrumento separado?",
+    "a": [
+      [
+        "Localización del fragmento",
+        40
+      ],
+      [
+        "Anatomía y curvatura",
+        30
+      ],
+      [
+        "Estado de desinfección previo",
+        20
+      ],
+      [
+        "Riesgo de removerlo frente a dejarlo",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "perforation",
+    "q": "¿Qué factores afectan pronóstico de una perforación?",
+    "a": [
+      [
+        "Localización",
+        40
+      ],
+      [
+        "Tamaño",
+        30
+      ],
+      [
+        "Tiempo hasta el sellado",
+        20
+      ],
+      [
+        "Control de contaminación",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "apical surgery",
+    "q": "¿Qué pasos o elementos forman parte de cirugía apical moderna?",
+    "a": [
+      [
+        "Acceso al ápice",
+        40
+      ],
+      [
+        "Resección apical",
+        30
+      ],
+      [
+        "Preparación retrógrada",
+        20
+      ],
+      [
+        "Sellado retroapical",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "antibiotics",
+    "q": "¿Qué situaciones pueden justificar antibióticos sistémicos como complemento en infección endodóntica?",
+    "a": [
+      [
+        "Fiebre o compromiso sistémico",
+        40
+      ],
+      [
+        "Celulitis o diseminación",
+        30
+      ],
+      [
+        "Inmunocompromiso relevante según evaluación",
+        20
+      ],
+      [
+        "Infección progresiva con signos sistémicos",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/guidelines-position-statements/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "apical diagnosis",
+    "q": "¿Qué categorías de hallazgos se integran para diagnóstico apical?",
+    "a": [
+      [
+        "Síntomas",
+        40
+      ],
+      [
+        "Percusión y palpación",
+        30
+      ],
+      [
+        "Imagen periapical",
+        20
+      ],
+      [
+        "Presencia de edema o trayecto fistuloso",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "missed anatomy",
+    "q": "¿Qué señales pueden hacer sospechar anatomía no tratada en un fracaso endodóntico?",
+    "a": [
+      [
+        "Persistencia de lesión apical",
+        40
+      ],
+      [
+        "Síntomas continuos",
+        30
+      ],
+      [
+        "Anatomía radicular compleja",
+        20
+      ],
+      [
+        "Hallazgos en imagen tridimensional seleccionada",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  },
+  {
+    "specialty": "endodoncia",
+    "difficulty": "advanced",
+    "subtopic": "case difficulty",
+    "q": "¿Qué factores aumentan dificultad de un caso endodóntico?",
+    "a": [
+      [
+        "Curvaturas severas",
+        40
+      ],
+      [
+        "Calcificación",
+        30
+      ],
+      [
+        "Reabsorción o perforación",
+        20
+      ],
+      [
+        "Retratamiento con postes o materiales complejos",
+        10
+      ]
+    ],
+    "source": "https://www.aae.org/specialty/clinical-resources/"
+  }
+]

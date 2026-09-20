@@ -1,9 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.INTERNET"/>
   <application
       android:theme="@style/AppTheme"
-      android:label="100 Dentistas Dijeron"
+      android:label="Así los Dentistas lo Dijeron"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher"
       android:allowBackup="true"
-      android:usesCleartextTraffic="false">
+      android:usesCleartextTraffic="true">
     <activity
         android:name=".MainActivity"
         android:screenOrientation="sensorLandscape"

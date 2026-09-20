@@ -1,0 +1,29 @@
+/* Offline Classroom v2.7 */
+.qrGrid{display:grid;grid-template-columns:repeat(2,minmax(210px,1fr));gap:.8rem;margin-top:.8rem}
+.qrCard{display:flex;flex-direction:column;align-items:center;gap:.45rem;padding:.75rem;border:1px solid #805d32;border-radius:16px;background:#100606}
+.qrCard h3{margin:.1rem 0;color:#ffe0a0;text-align:center}
+.qrCard canvas{width:min(190px,70vw);height:auto;background:#fff;border:8px solid #fff;border-radius:8px}
+.qrCard input{width:100%;padding:.55rem;border:1px solid #6f5a3b;border-radius:8px;background:#050303;color:#ddd;font-size:.72rem}
+.warningBox{padding:.75rem;border:1px solid #d49b3a;border-radius:12px;background:#4b2c05;color:#ffe1a1}
+.academicCards{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin:.8rem 0}
+.academicCards>div{display:grid;gap:.2rem;padding:.7rem;border:1px solid #73552d;border-radius:12px;background:#100606;text-align:center}
+.academicCards b{font-size:1.65rem;color:#ffe097}.academicCards span{font-size:.75rem;opacity:.82}
+.reportHard{display:grid;gap:.35rem}.reportHard>div{display:grid;grid-template-columns:auto 1fr;gap:.65rem;padding:.5rem;border-bottom:1px solid #4d3721}.reportHard b{color:#ff7d6e}
+.examCount{display:flex;align-items:baseline;justify-content:center;gap:.5rem;margin:1rem}.examCount b{font-size:3rem;color:#ffe097}
+.rouletteName{min-height:120px;display:flex;align-items:center;justify-content:center;font-size:clamp(24px,4vw,48px);font-weight:1000;color:#ffe097;text-align:center}
+.currentMatch{padding:.6rem;border:2px solid #e2b55f;border-radius:12px;background:#341006}
+.whyBox{padding:.8rem;border-left:4px solid #e2b55f;background:#120707;color:#f4e3bd;line-height:1.45}
+.compactArea{min-height:110px!important}
+.clinicalCase{margin:.35rem 0 .55rem;padding:.55rem .75rem;border:1px solid #80633b;border-radius:12px;background:#140b08;color:#f0dfb8}
+.clinicalCase b{color:#ffd783}.clinicalCase p{margin:.25rem 0 0}
+.clinicalQuestionImage{display:block;max-width:min(460px,78vw);max-height:28vh;margin:.35rem auto .6rem;object-fit:contain;border:2px solid #caa45d;border-radius:12px;background:#000}
+.projectorMode #teacherBtn,.projectorMode #infoBtn,.projectorMode .award,.projectorMode .centerControls,.projectorMode #prev,.projectorMode #next{display:none!important}
+.projectorMode .scorebar{grid-template-columns:1fr 1fr}.projectorMode .team{grid-template-columns:auto 1fr}.projectorMode .teamName{max-width:none}
+.projectorMode .board{height:73%}.projectorMode .scorebar{height:18%}
+@media(max-width:760px){.qrGrid{grid-template-columns:1fr}.academicCards{grid-template-columns:repeat(2,1fr)}}
+@media(max-height:560px){.qrCard canvas{width:130px}.clinicalQuestionImage{max-height:22vh}.academicCards b{font-size:1.25rem}.homeActions button{font-size:clamp(13px,1.7vw,19px)!important;padding:.55rem .85rem!important;min-width:150px!important}}
+
+.teacherPinBox{display:grid;justify-items:center;gap:.25rem;margin:.8rem auto;padding:.8rem 1rem;max-width:300px;border:2px solid #e2b55f;border-radius:16px;background:#130707}
+.teacherPinBox span{font-size:.78rem;letter-spacing:.12em;color:#d9bd84;font-weight:900}
+.teacherPinBox b{font-size:clamp(32px,5vw,58px);letter-spacing:.2em;color:#ffe09a}
+.singleQr{grid-template-columns:minmax(220px,360px);justify-content:center}

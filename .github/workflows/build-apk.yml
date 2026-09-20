@@ -2,7 +2,9 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - 'chatgpt/**'
   workflow_dispatch:
 
 permissions:
@@ -21,6 +23,39 @@ jobs:
       - name: Validar banco de preguntas
         run: |
           python3 scripts/validate_questions.py
+          python3 scripts/validate_ui_offline.py
+          python3 scripts/validate_v3_features.py
+
+      - name: Generar intro completa
+        run: |
+          python3 scripts/generate_intro_audio.py
+
+      - name: Validar duración de intro
+        run: |
+          python3 - <<'PY'
+          import wave
+          p='app/src/main/assets/intro_full_original.wav'
+          with wave.open(p,'rb') as w:
+              duration=w.getnframes()/w.getframerate()
+          print(f'Intro generada: {duration:.2f} s')
+          assert duration >= 27.5, 'La intro quedó recortada'
+          PY
+
+      - name: Validar sintaxis JavaScript V2
+        run: |
+          node --check app/src/main/assets/v2.js
+          node --check app/src/main/assets/v2-extras.js
+          node --check app/src/main/assets/tvshow.js
+          node --check app/src/main/assets/specialties.js
+          node --check app/src/main/assets/careo.js
+          node --check app/src/main/assets/narrator.js
+          node --check app/src/main/assets/offline-tools.js
+          node --check app/src/main/assets/offline-modes.js
+          node --check app/src/main/assets/offline-remote.js
+          node --check app/src/main/assets/round-polish.js
+          node --check app/src/main/assets/v3-show.js
+          node --check app/src/main/assets/v3-academic.js
+          node --check app/src/main/assets/v3-core.js
 
       - name: Set up JDK 17
         uses: actions/setup-java@v5
@@ -32,22 +67,54 @@ jobs:
         run: |
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
 
-      - name: Install Android SDK 35
+      - name: Install Android SDK 36
         run: |
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0" "platform-tools"
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.9'
+          gradle-version: '8.11.1'
+
+      - name: Validar compilación Java y smoke tests
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          m=Path('app/src/main/AndroidManifest.xml').read_text()
+          main=Path('app/src/main/java/com/uam/cientodentistas/MainActivity.java').read_text()
+          ws=Path('app/src/main/java/com/uam/cientodentistas/ClassroomWebSocketServer.java').read_text()
+          assert 'usesCleartextTraffic="true"' in m
+          assert 'CLASSROOM_PORT = 8787' in main and 'CLASSROOM_WS_PORT = 8788' in main
+          assert 'examSubmissions' in main and 'examSubmissions' in ws
+          assert 'device=' in main and 'duplicate' in ws
+          print('SMOKE ESTÁTICO CORRECTO: aula local, HTTP/WS y deduplicación de examen presentes.')
+          PY
 
       - name: Build debug APK
         run: |
           gradle --no-daemon assembleDebug
 
+      - name: Build release bundle
+        run: |
+          gradle --no-daemon bundleRelease
+
+      - name: Verificar APK y calcular SHA-256
+        run: |
+          test -s app/build/outputs/apk/debug/app-debug.apk
+          sha256sum app/build/outputs/apk/debug/app-debug.apk | tee app/build/outputs/apk/debug/app-debug.apk.sha256
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: 100-dentistas-dijeron-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: |
+            app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/debug/app-debug.apk.sha256
+          if-no-files-found: error
+
+      - name: Upload release AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: 100-dentistas-dijeron-release-aab
+          path: app/build/outputs/bundle/release/app-release.aab
           if-no-files-found: error

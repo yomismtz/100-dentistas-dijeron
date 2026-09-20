@@ -1,0 +1,32 @@
+/* Careo de pulsadores v2.5 */
+#game.careoLocked .board,
+#game.careoLocked .scorebar{visibility:hidden;opacity:0;pointer-events:none}
+#game.careoLocked{background:radial-gradient(circle at center,#2c0806 0,#090303 65%,#020101 100%)}
+.careoNoClose{display:none!important}
+.careoKicker{text-align:center;font-weight:1000;letter-spacing:.16em;color:#f3c96f;margin-bottom:.55rem}
+.careoQuestionScreen,.careoBuzzScreen,.careoAnswerScreen,.careoFailScreen{text-align:center}
+.careoQuestionScreen h2,.careoBuzzScreen h2{font-size:clamp(28px,4.2vw,58px);line-height:1.08;margin:.7rem auto 1rem;max-width:1000px}
+.careoQuestionScreen p,.careoBuzzScreen p{color:#efdcae}
+.careoBuzzers{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.15rem 0 .2rem}
+.careoBuzzer{min-height:180px;border:4px solid #f3cd76;border-radius:28px;font-weight:1000;background:radial-gradient(circle at 50% 35%,#c92318,#6e0906 58%,#290302);box-shadow:inset 0 0 22px #ff6b4244,0 8px 0 #350100,0 0 28px #c62a1866;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;transition:transform .08s ease,filter .12s ease,box-shadow .12s ease}
+.careoBuzzer span{font-size:clamp(20px,2.8vw,38px)}
+.careoBuzzer b{font-size:clamp(24px,4vw,52px);color:#ffe4a1;text-shadow:0 2px 3px #300}
+.careoBuzzer:active{transform:translateY(7px);box-shadow:inset 0 0 22px #ff6b4244,0 1px 0 #350100}
+.careoBuzzer:disabled{opacity:.45;filter:grayscale(.4)}
+.careoBuzzer.buzzWinner{opacity:1!important;filter:none!important;transform:scale(1.035);box-shadow:0 0 0 4px #fff4c4,0 0 42px #ffd760}
+.careoAnswerScreen h2{font-size:clamp(30px,5vw,66px);color:#ffe19a;margin:.4rem 0}
+.careoQuestionSmall{font-size:clamp(18px,2.2vw,30px)!important;line-height:1.2!important}
+.careoClock{display:inline-flex;align-items:flex-end;gap:.2rem;padding:.5rem 1rem;margin:.5rem auto;border:2px solid #caa25c;border-radius:14px;background:#120504}
+.careoClock span{font-size:.8rem;color:#d9bd84;letter-spacing:.1em;margin-right:.45rem}
+.careoClock b{font-size:clamp(34px,5vw,62px);line-height:1;color:#fff0ae}
+.careoClock b.urgent{color:#ff3a31;animation:careoPulse .48s alternate infinite}
+.careoClock small{color:#d9bd84}
+.careoAnswerEntry{display:grid;grid-template-columns:1fr auto;gap:.55rem;max-width:780px;margin:.7rem auto}
+.careoAnswerEntry input,.careoAnswerEntry button{min-height:58px;border:1px solid #b99151;border-radius:12px;background:#100707;color:#fff;padding:.7rem 1rem;font:inherit}
+.careoAnswerEntry input{font-size:clamp(18px,2vw,28px)}
+.careoAnswerEntry button{font-size:1.6rem;background:#76150d}
+.careoBigX{font-size:clamp(70px,14vw,160px);font-weight:1000;color:#f22;text-shadow:0 0 28px #f00;line-height:1}
+@keyframes careoPulse{to{transform:scale(1.16)}}
+@media(max-height:560px){
+ .careoBuzzer{min-height:125px}.careoBuzzScreen h2,.careoQuestionScreen h2{font-size:clamp(22px,3.4vw,42px);margin:.35rem auto}.careoAnswerScreen h2{font-size:clamp(26px,4vw,48px)}
+}

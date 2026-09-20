@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "objetivos",
+    "q": "¿Qué objetivos puede tener la ortopedia dentofacial durante el crecimiento?",
+    "a": [
+      [
+        "Corregir discrepancias transversales seleccionadas",
+        40
+      ],
+      [
+        "Modificar relaciones esqueléticas en casos indicados",
+        30
+      ],
+      [
+        "Mejorar función oclusal durante el desarrollo",
+        20
+      ],
+      [
+        "Favorecer condiciones para una oclusión más estable",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "diagnostico",
+    "q": "¿Qué registros son útiles antes de indicar tratamiento ortopédico?",
+    "a": [
+      [
+        "Exploración clínica",
+        40
+      ],
+      [
+        "Fotografías",
+        30
+      ],
+      [
+        "Modelos o escaneos dentales",
+        20
+      ],
+      [
+        "Estudios radiográficos o cefalométricos cuando están indicados",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "crecimiento",
+    "q": "¿Qué aspectos del crecimiento deben valorarse antes de una intervención ortopédica?",
+    "a": [
+      [
+        "Edad biológica",
+        40
+      ],
+      [
+        "Maduración esquelética",
+        30
+      ],
+      [
+        "Patrón de crecimiento facial",
+        20
+      ],
+      [
+        "Etapa de dentición",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "transversal",
+    "q": "¿Qué hallazgos pueden sugerir deficiencia transversal maxilar?",
+    "a": [
+      [
+        "Mordida cruzada posterior",
+        40
+      ],
+      [
+        "Arco maxilar estrecho",
+        30
+      ],
+      [
+        "Desviación funcional mandibular",
+        20
+      ],
+      [
+        "Discrepancia transversal clínica",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "clase II",
+    "q": "¿Qué características pueden motivar valorar modificación de crecimiento en una Clase II seleccionada?",
+    "a": [
+      [
+        "Retrognatia mandibular",
+        40
+      ],
+      [
+        "Overjet aumentado",
+        30
+      ],
+      [
+        "Crecimiento residual disponible",
+        20
+      ],
+      [
+        "Relación sagital desfavorable",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40208272/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "clase III",
+    "q": "¿Qué hallazgos pueden justificar valoración temprana de una Clase III?",
+    "a": [
+      [
+        "Mordida cruzada anterior",
+        40
+      ],
+      [
+        "Deficiencia maxilar",
+        30
+      ],
+      [
+        "Prognatismo mandibular aparente o real",
+        20
+      ],
+      [
+        "Historia familiar relevante",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "funcion",
+    "q": "¿Qué funciones orofaciales conviene evaluar en pacientes en crecimiento?",
+    "a": [
+      [
+        "Respiración",
+        40
+      ],
+      [
+        "Masticación",
+        30
+      ],
+      [
+        "Deglución",
+        20
+      ],
+      [
+        "Postura lingual",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "aparatos",
+    "q": "¿Qué grupos de aparatos pueden emplearse en ortopedia dentofacial?",
+    "a": [
+      [
+        "Expansores maxilares",
+        40
+      ],
+      [
+        "Aparatos funcionales",
+        30
+      ],
+      [
+        "Máscara facial en casos seleccionados",
+        20
+      ],
+      [
+        "Aparatos de control vertical",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "asimetria",
+    "q": "¿Qué datos ayudan a valorar una asimetría facial en crecimiento?",
+    "a": [
+      [
+        "Inspección frontal",
+        40
+      ],
+      [
+        "Desviación mandibular funcional",
+        30
+      ],
+      [
+        "Relaciones de líneas medias",
+        20
+      ],
+      [
+        "Registros fotográficos y radiográficos seleccionados",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "basic",
+    "subtopic": "retencion",
+    "q": "¿Qué objetivos tiene la retención después de expansión o modificación ortopédica?",
+    "a": [
+      [
+        "Mantener la corrección lograda",
+        40
+      ],
+      [
+        "Permitir reorganización tisular",
+        30
+      ],
+      [
+        "Disminuir recaída temprana",
+        20
+      ],
+      [
+        "Consolidar la nueva relación transversal",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "expansion",
+    "q": "¿Qué efectos pueden acompañar una expansión maxilar ortopédica?",
+    "a": [
+      [
+        "Aumento del ancho transversal maxilar",
+        40
+      ],
+      [
+        "Cambios dentoalveolares",
+        30
+      ],
+      [
+        "Separación sutural en pacientes susceptibles",
+        20
+      ],
+      [
+        "Modificación de la mordida cruzada posterior",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "funcional",
+    "q": "¿Qué factores influyen en el resultado de aparatos funcionales para Clase II?",
+    "a": [
+      [
+        "Etapa de crecimiento",
+        40
+      ],
+      [
+        "Cooperación del paciente",
+        30
+      ],
+      [
+        "Severidad y componente esquelético",
+        20
+      ],
+      [
+        "Control dentoalveolar",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40208272/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "mascara facial",
+    "q": "¿Qué elementos se consideran al usar protracción maxilar temprana?",
+    "a": [
+      [
+        "Deficiencia maxilar",
+        40
+      ],
+      [
+        "Edad y crecimiento residual",
+        30
+      ],
+      [
+        "Control de anclaje intraoral",
+        20
+      ],
+      [
+        "Dirección y duración de las fuerzas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "desviacion funcional",
+    "q": "¿Qué hallazgos apoyan que una mordida cruzada posterior tenga componente funcional?",
+    "a": [
+      [
+        "Desplazamiento mandibular al cerrar",
+        40
+      ],
+      [
+        "Líneas medias diferentes entre relación guiada y habitual",
+        30
+      ],
+      [
+        "Contacto prematuro",
+        20
+      ],
+      [
+        "Asimetría que disminuye al reposicionar la mandíbula",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "maduracion",
+    "q": "¿Qué indicadores pueden complementar la edad cronológica para valorar maduración?",
+    "a": [
+      [
+        "Maduración vertebral cervical",
+        40
+      ],
+      [
+        "Desarrollo dental",
+        30
+      ],
+      [
+        "Cambios puberales somáticos",
+        20
+      ],
+      [
+        "Historia de crecimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "vertical",
+    "q": "¿Qué variables se valoran en pacientes con patrón vertical aumentado?",
+    "a": [
+      [
+        "Divergencia de bases óseas",
+        40
+      ],
+      [
+        "Rotación mandibular",
+        30
+      ],
+      [
+        "Alturas faciales",
+        20
+      ],
+      [
+        "Erupción posterior",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "via aerea",
+    "q": "¿Qué enfoque es apropiado cuando existen síntomas respiratorios en un paciente ortopédico?",
+    "a": [
+      [
+        "Evaluar historia y examen clínico",
+        40
+      ],
+      [
+        "Considerar interconsulta médica u ORL",
+        30
+      ],
+      [
+        "No atribuir la maloclusión a una sola causa",
+        20
+      ],
+      [
+        "Coordinar manejo interdisciplinario cuando procede",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "timing",
+    "q": "¿Qué factores ayudan a decidir el momento de una intervención ortopédica?",
+    "a": [
+      [
+        "Tipo de discrepancia",
+        40
+      ],
+      [
+        "Maduración esquelética",
+        30
+      ],
+      [
+        "Severidad clínica",
+        20
+      ],
+      [
+        "Objetivos y cooperación esperada",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "expansion lenta rapida",
+    "q": "¿Qué aspectos diferencian clínicamente protocolos de expansión lenta y rápida?",
+    "a": [
+      [
+        "Magnitud de fuerza",
+        40
+      ],
+      [
+        "Velocidad de activación",
+        30
+      ],
+      [
+        "Proporción de efectos dentales y esqueléticos",
+        20
+      ],
+      [
+        "Necesidad de retención",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "intermediate",
+    "subtopic": "seguimiento",
+    "q": "¿Qué elementos deben reevaluarse durante tratamiento ortopédico?",
+    "a": [
+      [
+        "Oclusión",
+        40
+      ],
+      [
+        "Cambios faciales",
+        30
+      ],
+      [
+        "Cooperación y uso del aparato",
+        20
+      ],
+      [
+        "Efectos dentales o periodontales no deseados",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "evidencia clase II",
+    "q": "¿Qué conclusiones prudentes reflejan la evidencia sobre tratamiento temprano de Clase II?",
+    "a": [
+      [
+        "Puede mejorar parámetros a corto plazo",
+        40
+      ],
+      [
+        "Los beneficios esqueléticos suelen ser modestos",
+        30
+      ],
+      [
+        "No siempre mejora resultados finales frente a tratamiento posterior",
+        20
+      ],
+      [
+        "Debe individualizarse según riesgo y objetivo",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41155841/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "efectos funcionales",
+    "q": "¿Qué cambios explican parte de la corrección con aparatos funcionales?",
+    "a": [
+      [
+        "Cambios dentoalveolares",
+        40
+      ],
+      [
+        "Adaptación de relaciones sagitales",
+        30
+      ],
+      [
+        "Modificación postural mandibular durante uso",
+        20
+      ],
+      [
+        "Cambios esqueléticos variables según crecimiento",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40208272/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "recaida transversal",
+    "q": "¿Qué factores pueden favorecer recaída después de expansión?",
+    "a": [
+      [
+        "Retención insuficiente",
+        40
+      ],
+      [
+        "Persistencia de factores etiológicos",
+        30
+      ],
+      [
+        "Componente dentoalveolar predominante",
+        20
+      ],
+      [
+        "Inestabilidad oclusal residual",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "respuesta biologica",
+    "q": "¿Qué factores modulan la respuesta esquelética a fuerzas ortopédicas?",
+    "a": [
+      [
+        "Edad y maduración sutural",
+        40
+      ],
+      [
+        "Magnitud y dirección de la fuerza",
+        30
+      ],
+      [
+        "Duración de aplicación",
+        20
+      ],
+      [
+        "Variabilidad individual del crecimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "clase III",
+    "q": "¿Qué componentes deben diferenciarse al analizar una Clase III en crecimiento?",
+    "a": [
+      [
+        "Deficiencia maxilar",
+        40
+      ],
+      [
+        "Exceso mandibular",
+        30
+      ],
+      [
+        "Componente dentoalveolar",
+        20
+      ],
+      [
+        "Desplazamiento funcional",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "rotacion mandibular",
+    "q": "¿Qué fenómenos pueden modificar la posición aparente de la mandíbula durante tratamiento?",
+    "a": [
+      [
+        "Rotación mandibular",
+        40
+      ],
+      [
+        "Cambios en altura dentoalveolar",
+        30
+      ],
+      [
+        "Cambios en inclinación incisiva",
+        20
+      ],
+      [
+        "Crecimiento diferencial vertical",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "cefalometria",
+    "q": "¿Qué comparaciones son útiles para valorar cambio ortopédico longitudinal?",
+    "a": [
+      [
+        "Relaciones sagitales",
+        40
+      ],
+      [
+        "Relaciones verticales",
+        30
+      ],
+      [
+        "Posición e inclinación dentaria",
+        20
+      ],
+      [
+        "Cambios de tejidos blandos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "expansion interpretacion",
+    "q": "¿Por qué una ganancia transversal no debe interpretarse siempre como efecto puramente esquelético?",
+    "a": [
+      [
+        "Puede existir inclinación dentaria",
+        40
+      ],
+      [
+        "Hay remodelado alveolar",
+        30
+      ],
+      [
+        "La respuesta sutural varía",
+        20
+      ],
+      [
+        "La medición clínica integra varios componentes",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "estabilidad",
+    "q": "¿Qué condiciones favorecen estabilidad tras corrección ortopédica?",
+    "a": [
+      [
+        "Eliminación o control de factores funcionales",
+        40
+      ],
+      [
+        "Intercuspidación adecuada",
+        30
+      ],
+      [
+        "Retención suficiente",
+        20
+      ],
+      [
+        "Seguimiento durante crecimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortopedia",
+    "difficulty": "advanced",
+    "subtopic": "seleccion paciente",
+    "q": "¿Qué principios reducen el sobretratamiento ortopédico?",
+    "a": [
+      [
+        "Indicación diagnóstica clara",
+        40
+      ],
+      [
+        "Objetivos mensurables",
+        30
+      ],
+      [
+        "Conocimiento de límites biológicos",
+        20
+      ],
+      [
+        "Reevaluación periódica de respuesta",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42330087/"
+  }
+]

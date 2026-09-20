@@ -1,0 +1,752 @@
+[
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "habitos",
+    "q": "¿Qué hábitos orales conviene identificar durante el desarrollo de la oclusión?",
+    "a": [
+      [
+        "Succión digital persistente",
+        40
+      ],
+      [
+        "Uso prolongado de chupón",
+        30
+      ],
+      [
+        "Interposición lingual",
+        20
+      ],
+      [
+        "Mordisqueo u otros hábitos repetitivos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "espacio",
+    "q": "¿Qué objetivo tiene un mantenedor de espacio tras pérdida prematura seleccionada de un temporal?",
+    "a": [
+      [
+        "Preservar longitud de arco",
+        40
+      ],
+      [
+        "Evitar migración dentaria indeseada",
+        30
+      ],
+      [
+        "Favorecer erupción del sucesor",
+        20
+      ],
+      [
+        "Reducir pérdida de espacio",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "caries",
+    "q": "¿Qué acciones preventivas ayudan indirectamente a conservar el desarrollo oclusal?",
+    "a": [
+      [
+        "Control de caries",
+        40
+      ],
+      [
+        "Restauración oportuna de dientes temporales",
+        30
+      ],
+      [
+        "Higiene oral adecuada",
+        20
+      ],
+      [
+        "Revisiones periódicas",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "erupcion",
+    "q": "¿Qué situaciones deben vigilarse durante la erupción dental?",
+    "a": [
+      [
+        "Ectopia eruptiva",
+        40
+      ],
+      [
+        "Retraso o asimetría de erupción",
+        30
+      ],
+      [
+        "Persistencia anormal de temporales",
+        20
+      ],
+      [
+        "Dientes supernumerarios",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "perdida prematura",
+    "q": "¿Qué consecuencias puede producir la pérdida prematura de un diente temporal?",
+    "a": [
+      [
+        "Migración de dientes vecinos",
+        40
+      ],
+      [
+        "Reducción de espacio para el sucesor",
+        30
+      ],
+      [
+        "Alteración de línea media en ciertos casos",
+        20
+      ],
+      [
+        "Cambios en secuencia eruptiva",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "higiene",
+    "q": "¿Qué medidas preventivas son importantes en niños con aparatos ortodóncicos o mantenedores?",
+    "a": [
+      [
+        "Cepillado cuidadoso",
+        40
+      ],
+      [
+        "Limpieza alrededor del aparato",
+        30
+      ],
+      [
+        "Control dietético de azúcares",
+        20
+      ],
+      [
+        "Revisiones profesionales",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "respiracion",
+    "q": "¿Qué debe hacerse ante sospecha de respiración oral persistente?",
+    "a": [
+      [
+        "Investigar síntomas y antecedentes",
+        40
+      ],
+      [
+        "Evaluar función orofacial",
+        30
+      ],
+      [
+        "Considerar interconsulta médica u ORL",
+        20
+      ],
+      [
+        "Evitar atribuir automáticamente una causa única",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "trauma",
+    "q": "¿Qué medidas pueden reducir riesgo de trauma dental en niños con actividades deportivas?",
+    "a": [
+      [
+        "Protector bucal apropiado",
+        40
+      ],
+      [
+        "Educación preventiva",
+        30
+      ],
+      [
+        "Corrección de factores de riesgo seleccionados",
+        20
+      ],
+      [
+        "Supervisión y equipo deportivo adecuado",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "control",
+    "q": "¿Qué componentes incluye una vigilancia preventiva de la oclusión?",
+    "a": [
+      [
+        "Relación molar y canina",
+        40
+      ],
+      [
+        "Overjet y overbite",
+        30
+      ],
+      [
+        "Relaciones transversales",
+        20
+      ],
+      [
+        "Secuencia y simetría eruptiva",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "basic",
+    "subtopic": "educacion",
+    "q": "¿Qué objetivos tiene orientar a familias sobre hábitos orales?",
+    "a": [
+      [
+        "Explicar posibles efectos oclusales",
+        40
+      ],
+      [
+        "Favorecer abandono progresivo del hábito",
+        30
+      ],
+      [
+        "Evitar castigos o intervenciones innecesarias",
+        20
+      ],
+      [
+        "Programar seguimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "mantenedor indicacion",
+    "q": "¿Qué factores deben valorarse antes de indicar un mantenedor de espacio?",
+    "a": [
+      [
+        "Diente perdido y tiempo desde la pérdida",
+        40
+      ],
+      [
+        "Desarrollo del sucesor permanente",
+        30
+      ],
+      [
+        "Espacio disponible",
+        20
+      ],
+      [
+        "Oclusión y cooperación del paciente",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "mantenedor contra",
+    "q": "¿Qué situaciones pueden hacer innecesario o poco apropiado un mantenedor?",
+    "a": [
+      [
+        "Sucesor próximo a erupcionar",
+        40
+      ],
+      [
+        "Espacio suficiente sin riesgo de pérdida",
+        30
+      ],
+      [
+        "Mala higiene no controlada",
+        20
+      ],
+      [
+        "Ausencia del sucesor que cambia el plan",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "tipos mantenedor",
+    "q": "¿Qué aparatos pueden utilizarse para mantenimiento de espacio según el caso?",
+    "a": [
+      [
+        "Banda y ansa",
+        40
+      ],
+      [
+        "Arco lingual",
+        30
+      ],
+      [
+        "Botón de Nance",
+        20
+      ],
+      [
+        "Arco transpalatino",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "anquilosis",
+    "q": "¿Qué signos pueden sugerir anquilosis de un molar temporal?",
+    "a": [
+      [
+        "Infraoclusión progresiva",
+        40
+      ],
+      [
+        "Falta de movilidad esperada",
+        30
+      ],
+      [
+        "Alteración del plano oclusal",
+        20
+      ],
+      [
+        "Cambios eruptivos en dientes vecinos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "ectopia",
+    "q": "¿Qué datos son útiles al evaluar erupción ectópica de un molar permanente?",
+    "a": [
+      [
+        "Grado de impactación",
+        40
+      ],
+      [
+        "Reabsorción del temporal adyacente",
+        30
+      ],
+      [
+        "Espacio disponible",
+        20
+      ],
+      [
+        "Evolución en controles sucesivos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "supernumerarios",
+    "q": "¿Qué efectos pueden asociarse a dientes supernumerarios anteriores?",
+    "a": [
+      [
+        "Retraso eruptivo",
+        40
+      ],
+      [
+        "Desviación del trayecto eruptivo",
+        30
+      ],
+      [
+        "Diastema persistente",
+        20
+      ],
+      [
+        "Desplazamiento de incisivos",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "agenesia",
+    "q": "¿Qué aspectos se consideran ante ausencia congénita de un diente?",
+    "a": [
+      [
+        "Espacio existente",
+        40
+      ],
+      [
+        "Edad y crecimiento",
+        30
+      ],
+      [
+        "Oclusión",
+        20
+      ],
+      [
+        "Opciones de cierre o mantenimiento del espacio",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "leeway",
+    "q": "¿Qué elementos contribuyen al espacio de deriva o leeway space en dentición mixta?",
+    "a": [
+      [
+        "Diferencia de tamaño entre molares temporales y premolares",
+        40
+      ],
+      [
+        "Diferencia entre canino temporal y permanente",
+        30
+      ],
+      [
+        "Relación de segmentos laterales",
+        20
+      ],
+      [
+        "Secuencia eruptiva",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "habito succion",
+    "q": "¿Qué factores ayudan a decidir si un hábito de succión requiere intervención?",
+    "a": [
+      [
+        "Edad y duración",
+        40
+      ],
+      [
+        "Frecuencia e intensidad",
+        30
+      ],
+      [
+        "Cambios dentoalveolares presentes",
+        20
+      ],
+      [
+        "Capacidad de abandono espontáneo o guiado",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "intermediate",
+    "subtopic": "prevencion apiñamiento",
+    "q": "¿Qué acciones ayudan a evitar pérdida iatrogénica o prevenible de espacio?",
+    "a": [
+      [
+        "Tratar caries proximales oportunamente",
+        40
+      ],
+      [
+        "Preservar dientes temporales restaurables",
+        30
+      ],
+      [
+        "Indicar mantenedores cuando corresponde",
+        20
+      ],
+      [
+        "Controlar erupción y migración dentaria",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "analisis espacio",
+    "q": "¿Qué componentes deben integrarse en un análisis preventivo de espacio en dentición mixta?",
+    "a": [
+      [
+        "Espacio disponible en arco",
+        40
+      ],
+      [
+        "Tamaño estimado de dientes no erupcionados",
+        30
+      ],
+      [
+        "Secuencia eruptiva",
+        20
+      ],
+      [
+        "Relaciones sagitales y transversales",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "riesgo individual",
+    "q": "¿Qué factores justifican seguimiento más estrecho del desarrollo oclusal?",
+    "a": [
+      [
+        "Pérdida prematura de temporales",
+        40
+      ],
+      [
+        "Ectopias eruptivas",
+        30
+      ],
+      [
+        "Antecedentes familiares de maloclusión severa",
+        20
+      ],
+      [
+        "Discrepancia de espacio evidente",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "habitos etiologia",
+    "q": "¿Por qué no debe atribuirse una mordida abierta únicamente a un hábito observado?",
+    "a": [
+      [
+        "Puede existir componente esquelético",
+        40
+      ],
+      [
+        "La duración e intensidad del hábito varían",
+        30
+      ],
+      [
+        "Puede coexistir alteración funcional",
+        20
+      ],
+      [
+        "El crecimiento facial modifica la expresión clínica",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/41399602/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "prevencion canino",
+    "q": "¿Qué datos ayudan a detectar riesgo de erupción ectópica de caninos maxilares?",
+    "a": [
+      [
+        "Palpación clínica ausente o asimétrica",
+        40
+      ],
+      [
+        "Trayectoria eruptiva anormal en imagen",
+        30
+      ],
+      [
+        "Persistencia del canino temporal",
+        20
+      ],
+      [
+        "Apiñamiento o falta de espacio",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "decision mantenedor",
+    "q": "¿Qué riesgos debe equilibrar el clínico al indicar mantenimiento de espacio?",
+    "a": [
+      [
+        "Pérdida de espacio si no se trata",
+        40
+      ],
+      [
+        "Caries o descalcificación alrededor del aparato",
+        30
+      ],
+      [
+        "Interferencia con erupción",
+        20
+      ],
+      [
+        "Necesidad de controles y cooperación",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35241896/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "prevencion transversal",
+    "q": "¿Qué hallazgos tempranos ameritan vigilancia por riesgo de mordida cruzada funcional?",
+    "a": [
+      [
+        "Arco maxilar estrecho",
+        40
+      ],
+      [
+        "Contactos prematuros",
+        30
+      ],
+      [
+        "Desviación mandibular al cierre",
+        20
+      ],
+      [
+        "Asimetría de líneas medias",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35156156/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "prevencion clase III",
+    "q": "¿Qué datos justifican seguimiento temprano de tendencia Clase III?",
+    "a": [
+      [
+        "Historia familiar",
+        40
+      ],
+      [
+        "Overjet negativo incipiente",
+        30
+      ],
+      [
+        "Deficiencia maxilar aparente",
+        20
+      ],
+      [
+        "Desplazamiento funcional anterior",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "evidencia espacio",
+    "q": "¿Qué limitaciones deben reconocerse al hablar de efectividad de mantenedores y recuperadores de espacio?",
+    "a": [
+      [
+        "Calidad de evidencia variable",
+        40
+      ],
+      [
+        "Heterogeneidad de aparatos",
+        30
+      ],
+      [
+        "Resultados dependientes de caso y cooperación",
+        20
+      ],
+      [
+        "Posibles efectos dentoalveolares no deseados",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35241896/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "vigilancia crecimiento",
+    "q": "¿Qué elementos distinguen vigilancia activa de una conducta de no hacer nada?",
+    "a": [
+      [
+        "Objetivos definidos de control",
+        40
+      ],
+      [
+        "Registros seriados",
+        30
+      ],
+      [
+        "Criterios de intervención",
+        20
+      ],
+      [
+        "Reevaluación de riesgo y crecimiento",
+        10
+      ]
+    ],
+    "source": "https://www.aapd.org/research/oral-health-policies--recommendations/management-of-the-developing-dentition-and-occlusion-in-pediatric-dentistry/"
+  },
+  {
+    "specialty": "ortho_preventiva",
+    "difficulty": "advanced",
+    "subtopic": "prevencion integral",
+    "q": "¿Qué principios forman una estrategia preventiva ortodóncica integral?",
+    "a": [
+      [
+        "Preservar salud y espacio dentario",
+        40
+      ],
+      [
+        "Controlar hábitos y función cuando corresponde",
+        30
+      ],
+      [
+        "Detectar alteraciones eruptivas temprano",
+        20
+      ],
+      [
+        "Evitar intervención innecesaria sin indicación",
+        10
+      ]
+    ],
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42330087/"
+  }
+]

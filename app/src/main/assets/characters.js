@@ -1,14 +1,14 @@
 'use strict';
 
 const CHARACTERS = [
-  { name: 'MOLARÍN', icon: '🦷', subtitle: 'El clásico' },
-  { name: 'CANINO', icon: '😁', subtitle: 'El competitivo' },
-  { name: 'INCISIVA', icon: '✨', subtitle: 'La brillante' },
-  { name: 'CEPILLÍN', icon: '🪥', subtitle: 'El preventivo' },
-  { name: 'BRACKETS', icon: '😬', subtitle: 'El ortodóncico' },
-  { name: 'FLUORITA', icon: '🧚', subtitle: 'La protectora' },
-  { name: 'DR. MUELA', icon: '🥼', subtitle: 'El clínico' },
-  { name: 'MUELA DEL JUICIO', icon: '😎', subtitle: 'El sabio' }
+  { name: 'MOLARÍN', icon: '🦷', art:'characters/molarin.svg', subtitle: 'El clásico' },
+  { name: 'CANINO', icon: '😁', art:'characters/canino.svg', subtitle: 'El competitivo' },
+  { name: 'INCISIVA', icon: '✨', art:'characters/incisiva.svg', subtitle: 'La brillante' },
+  { name: 'CEPILLÍN', icon: '🪥', art:'characters/cepillin.svg', subtitle: 'El preventivo' },
+  { name: 'BRACKETS', icon: '😬', art:'characters/brackets.svg', subtitle: 'El ortodóncico' },
+  { name: 'FLUORITA', icon: '🧚', art:'characters/fluorita.svg', subtitle: 'La protectora' },
+  { name: 'DR. MUELA', icon: '🥼', art:'characters/dr_muela.svg', subtitle: 'El clínico' },
+  { name: 'MUELA DEL JUICIO', icon: '😎', art:'characters/juicio.svg', subtitle: 'El sabio' }
 ];
 
 let teamCharacters = [0, 4];
@@ -34,6 +34,8 @@ characterStyle.textContent = `
   .characterGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem;margin-top:.75rem}
   .characterCard{min-height:82px;border:1px solid #704b28;border-radius:12px;background:#260808;padding:.45rem .25rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.18rem}
   .characterCard .charIcon{font-size:2rem;line-height:1}
+  .characterCard .charArt{width:54px;height:54px;object-fit:contain;border-radius:12px}
+  .teamName .avatarArt{width:30px;height:30px;object-fit:contain;vertical-align:middle;margin-right:.3rem}
   .characterCard .charName{font-size:.68rem;font-weight:900;text-align:center}
   .characterCard.selected{border:2px solid #ffd36e;background:#7b150b;box-shadow:0 0 14px #b76b16}
   .characterCard.unavailable{opacity:.35}
@@ -43,6 +45,7 @@ characterStyle.textContent = `
   .winnerStage{text-align:center;padding:.5rem}
   .winnerCharacters{font-size:clamp(70px,13vw,150px);line-height:1.1;margin:.25rem 0;filter:drop-shadow(0 0 16px #d69b30)}
   .winnerCharacters .trophy{display:inline-block;transform:translateY(-.08em);margin-left:.12em}
+  .winnerCharArt{width:clamp(92px,15vw,180px);height:clamp(92px,15vw,180px);object-fit:contain;vertical-align:middle;filter:drop-shadow(0 0 18px #d69b3066)}
   .winnerName{font-size:clamp(26px,4vw,48px);font-weight:900;color:#ffe09a;margin:.4rem 0}
   .winnerScore{font-size:clamp(22px,3vw,38px);font-weight:900}
   @media(max-width:760px){.setupTeams{grid-template-columns:1fr}.characterGrid{grid-template-columns:repeat(4,1fr)}}
@@ -51,6 +54,10 @@ document.head.appendChild(characterStyle);
 
 function characterFor(teamIndex) {
   return CHARACTERS[teamCharacters[teamIndex]] || CHARACTERS[0];
+}
+function characterArtHtml(teamIndex,className='winnerCharArt'){
+  const c=characterFor(teamIndex);
+  return c&&c.art?`<img class="${className}" src="${c.art}" alt="${c.name}">`:`<span>${c?.icon||'🦷'}</span>`;
 }
 
 function saveCharacterSettings() {
@@ -62,7 +69,7 @@ updateScoreUI = function updateScoreUIWithCharacters() {
   originalUpdateScoreUI();
   document.querySelectorAll('.teamName').forEach((button, idx) => {
     const character = characterFor(idx);
-    button.innerHTML = `<span class="avatar" aria-hidden="true">${character.icon}</span>${teamNames[idx]}`;
+    button.innerHTML = `<img class="avatarArt" src="${character.art}" alt="" aria-hidden="true"><span>${teamNames[idx]}</span>`;
     button.title = character.name;
   });
 };
@@ -81,7 +88,7 @@ updateTurnUI = function updateTurnUIWithCharacters() {
 function setupCharacterCards(teamIndex, container) {
   container.innerHTML = CHARACTERS.map((character, idx) => `
     <button type="button" class="characterCard ${teamCharacters[teamIndex] === idx ? 'selected' : ''}" data-character="${idx}">
-      <span class="charIcon">${character.icon}</span>
+      <img class="charArt" src="${character.art}" alt="${character.name}">
       <span class="charName">${character.name}</span>
     </button>
   `).join('');
@@ -130,7 +137,7 @@ function showCharacterSetup() {
         <div id="charactersTeam2" class="characterGrid"></div>
       </section>
     </div>
-    <button id="confirmTeams" class="setupStart">COMENZAR PARTIDA · 6 RONDAS</button>
+    <button id="confirmTeams" class="setupStart">COMENZAR PARTIDA · 8 RONDAS</button>
   `);
 
   setupCharacterCards(0, $('#charactersTeam1'));
@@ -180,8 +187,8 @@ finishGame = function finishGameWithCharacters() {
 
   openModal(`
     ${result}
-    <p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p>
-    <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
+    <p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p>
+    <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–8: <b>×3</b>.</p>
     <div class="menuStack">
       <button id="mAgain">OTRA PARTIDA · MISMOS EQUIPOS</button>
       <button id="mCharacters">CAMBIAR EQUIPOS / PERSONAJES</button>
