@@ -34,7 +34,7 @@
 
 <h2>5. Aula offline y red local</h2>
 <p>La aplicación puede crear un servidor HTTP y un canal WebSocket <strong>en la red local</strong> para pulsadores, respuestas individuales y control docente. Los dispositivos deben compartir la misma red Wi‑Fi o hotspot. La red puede funcionar sin salida a Internet.</p>
-<p>Android exige el permiso <strong>INTERNET</strong> también para sockets de red local. Este permiso no significa que el proyecto envíe partidas a Internet. El panel docente se protege mediante un PIN local y el estado público de los equipos no incluye respuestas correctas ni referencias privadas mientras la ronda está activa.</p>
+<p>Android exige el permiso <strong>INTERNET</strong> también para sockets de red local. Este permiso no significa que el proyecto envíe partidas a Internet. El panel docente se protege mediante un PIN local y el estado público de los equipos no incluye respuestas correctas ni referencias privadas mientras la ronda está activa.</p><p>La comunicación HTTP/WebSocket de este modo local <strong>no utiliza TLS</strong>. Debe usarse únicamente en una red Wi‑Fi/hotspot de confianza. Las respuestas individuales enviadas desde los teléfonos pueden llegar al dispositivo anfitrión y conservarse localmente en reportes o pretest/postest; no se envían al desarrollador.</p>
 
 <h2>6. Reconocimiento de voz y texto a voz</h2>
 <p>La respuesta por voz es opcional. Al activarla, la app abre el servicio de reconocimiento de voz instalado en Android mediante las interfaces del sistema. 100 Dentistas Dijeron no captura ni conserva directamente un archivo de audio.</p>
