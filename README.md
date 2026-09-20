@@ -1,4 +1,4 @@
-# 100 Dentistas Dijeron 🦷🎤
+# Así los Dentistas lo Dijeron 🦷🎤
 
 Juego educativo Android de odontología para dos equipos, inspirado en la dinámica de concursos de respuestas populares.
 
