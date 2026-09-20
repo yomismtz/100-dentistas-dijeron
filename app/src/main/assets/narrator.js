@@ -148,7 +148,7 @@ v2Settings=function(){
   $('#setTimer').value=String(v2TimerSeconds);
   $('#testNarrator').onclick=()=>{
     narratorEnabled=true;
-    narratorRead('Bienvenidos a 100 Dentistas Dijeron. La pregunta será leída antes de iniciar el tiempo de respuesta.',()=>{});
+    narratorRead('Bienvenidos a Así los Dentistas lo Dijeron. La pregunta será leída antes de iniciar el tiempo de respuesta.',()=>{});
   };
   $('#previewShow').onclick=()=>{
     tvSettings.applause=$('#setApplause').checked;
