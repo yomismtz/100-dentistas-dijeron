@@ -1,0 +1,86 @@
+/* Así los Dentistas lo Dijeron · identidad visual 3.0.6
+   Capa final: edtech dental, clínica, limpia y sin estética de concurso televisivo. */
+:root{
+ --brand-blue:#1E4ED8;--brand-blue-deep:#153A9E;--brand-turq:#19B7C6;--brand-mint:#86E3C3;
+ --brand-purple:#7B53E8;--brand-violet:#4D2D84;--brand-lilac:#CDB7FF;--brand-gold:#D8B45F;
+ --brand-gold-soft:#F4DEA2;--brand-bg:#F7FBFF;--brand-surface:#FFFFFF;--brand-soft:#E7EEF7;
+ --brand-ink:#1C2A44;--brand-muted:#63718A;--brand-danger:#E85D75;
+ --brand-shadow:0 14px 38px rgba(45,65,120,.14);--brand-radius:22px;
+}
+html,body{font-family:Inter,Poppins,"Segoe UI",Roboto,Arial,sans-serif;background:var(--brand-bg);color:var(--brand-ink)}
+button,input,select,textarea{font-family:inherit}
+.home{
+ background:
+ radial-gradient(circle at 15% 18%,rgba(134,227,195,.55),transparent 30%),
+ radial-gradient(circle at 85% 20%,rgba(205,183,255,.58),transparent 33%),
+ linear-gradient(135deg,#f9fdff 0%,#eafcff 42%,#f0eaff 100%);
+ color:var(--brand-ink)
+}
+.home:before,.home:after{content:"";position:fixed;border-radius:50%;pointer-events:none;filter:blur(1px);opacity:.55}
+.home:before{width:26vw;height:26vw;left:-8vw;bottom:-10vw;background:linear-gradient(135deg,var(--brand-mint),transparent)}
+.home:after{width:30vw;height:30vw;right:-10vw;top:-12vw;background:linear-gradient(135deg,var(--brand-lilac),transparent)}
+.homeHero{gap:.55rem;position:relative;z-index:1}
+.homeLogo{width:min(48vw,520px);max-height:56vh;filter:drop-shadow(0 18px 28px rgba(42,79,132,.17))}
+.homeTitle{font-size:clamp(24px,3.6vw,54px);font-weight:900;color:var(--brand-blue-deep);text-shadow:none;letter-spacing:-.035em}
+.homeTitle span{color:var(--brand-turq)}
+.homeSubtitle{color:var(--brand-violet);font-size:clamp(10px,1.15vw,16px);letter-spacing:.18em;font-weight:800}
+.homeActions{position:relative;z-index:1}
+.homeActions button{border:1px solid rgba(30,78,216,.14);background:#fff;color:var(--brand-blue-deep);box-shadow:var(--brand-shadow);border-radius:16px}
+.homeActions .primary{background:linear-gradient(135deg,var(--brand-purple),var(--brand-blue));color:#fff;border:0;box-shadow:0 12px 30px rgba(83,70,205,.28)}
+.homeActions button:active{transform:translateY(1px)}
+
+.topbar{background:rgba(255,255,255,.96);border-bottom:1px solid #dce8f6;color:var(--brand-ink);box-shadow:0 5px 24px rgba(46,73,123,.08)}
+.iconBtn{background:#f5f9ff;color:var(--brand-blue);border:1px solid #d7e4f5;border-radius:14px}
+.roundInfo #turn{background:#eefbf8;color:#157a7f;border:1px solid #a7e8db}
+.board{border:1px solid #dce9f5;background:linear-gradient(145deg,#fff 0%,#f4fbff 56%,#f4efff 100%);box-shadow:var(--brand-shadow);color:var(--brand-ink)}
+.questionRow h1{color:#173b79}
+.timerBox,.bank{background:#fff;border:1px solid #d5e4f3;box-shadow:0 7px 18px rgba(43,83,130,.09)}
+.timerBox span,.bank span,.timerBox small{color:var(--brand-muted)}
+.timerBox #timer,.bank strong{color:var(--brand-purple);text-shadow:none}
+.timerBox #timer.urgent{color:var(--brand-danger);text-shadow:none}
+.answer{border:1px solid #dbe7f3;background:#fff;color:var(--brand-ink);box-shadow:0 5px 16px rgba(41,74,115,.07)}
+.answer .num{background:#edf8ff;color:var(--brand-blue);border:1px solid #c5def8}
+.answer .pts{color:var(--brand-violet)}
+.answer.covered{background:linear-gradient(135deg,#edf8ff,#f1edff);border-color:#c9dff4;color:var(--brand-blue-deep)}
+.answer.covered .num{background:linear-gradient(135deg,var(--brand-blue),var(--brand-turq));color:#fff;border:0}
+.answer.revealed{border-color:#9edfd4;background:linear-gradient(135deg,#effdf9,#fff)}
+.strikes{color:var(--brand-danger);text-shadow:none}
+.scorebar{background:#fff;border-top:1px solid #dce8f6;color:var(--brand-ink)}
+.team{border-radius:18px}
+.team.active{border-color:#94ddd4;background:#edfbf7;box-shadow:0 7px 18px rgba(25,183,198,.12)}
+.team.steal{border-color:#c3aef5;background:#f4efff;box-shadow:0 7px 18px rgba(123,83,232,.14)}
+.teamName,.award,.centerControls button{background:#f4f8fe;color:var(--brand-blue-deep);border:1px solid #d6e4f4;border-radius:13px}
+.award{background:#edf9f3;color:#167661;border-color:#bce8d4}
+.centerControls .danger,.danger{background:#fff1f4!important;color:#c83f5a!important;border-color:#ffc5d0!important}
+.modal{background:rgba(28,42,68,.34);backdrop-filter:blur(7px)}
+.modalCard{background:#fff;color:var(--brand-ink);border:1px solid #d7e5f2;box-shadow:0 25px 75px rgba(31,52,91,.24);border-radius:var(--brand-radius)}
+.menuStack button,.teacherGrid button,.secondaryWide{background:#f6f9fe;color:var(--brand-blue-deep);border:1px solid #d9e5f4}
+.responseBar button,.responseBar input,.faceInput input,.wideInput,.wideArea,.setupOptions select{
+ background:#fff;color:var(--brand-ink);border:1px solid #cfdeee;border-radius:13px
+}
+.responseBar .voiceBtn,.faceInput button{background:linear-gradient(135deg,var(--brand-turq),var(--brand-blue))!important;color:#fff!important;border:0}
+.hostBubble{background:#f6fbff;border:1px solid #d8e7f4;color:var(--brand-ink)}
+.hostText{color:var(--brand-blue-deep)}
+.hostBubble[data-state="good"]{border-color:#a7e4d4;background:#effbf7}
+.hostBubble[data-state="bad"]{border-color:#ffc2ce;background:#fff2f5}
+.hostBubble[data-state="tense"]{border-color:#ead393;background:#fffaf0}
+.settingRow,.resultTable>div,.analyticsTable>div,.champTable>div{border-color:#dce7f2}
+.resultTotal,.latencyCards b,.bracketChampion,.bracketRound h3,.bracketMatch .winner,.topicCheck b{color:var(--brand-purple)}
+.v3HistoryList button,.searchResults button,.mediaLibrary button,.latencyCards>div,.bracketMatch,.previewAnswers>div,.mediaAssetGrid button,.topicCheck{
+ background:#fff;color:var(--brand-ink);border:1px solid #d9e6f2;box-shadow:0 4px 14px rgba(43,74,116,.05)
+}
+.bracketMatch.active{border-color:var(--brand-gold);box-shadow:0 8px 22px rgba(216,180,95,.2)}
+.assessmentQuestion{color:var(--brand-blue-deep)!important}
+.analyticsTable>div:first-child{background:#eef7ff}
+.qualityBanner.green{background:#eaf9f2;color:#15715d}.qualityBanner.yellow{background:#fff8e7;color:#8c6916}.qualityBanner.red{background:#fff0f3;color:#b73d54}
+.v3ImageZoom img{border-color:#b7deda;background:#f8fbff}
+.v3MediaReveal{background:linear-gradient(135deg,var(--brand-purple),var(--brand-blue));color:#fff;border:0}
+.v3MusicHud{background:rgba(255,255,255,.94);border:1px solid #d9e5f1;color:var(--brand-ink);box-shadow:0 8px 24px rgba(38,65,110,.12)}
+.v3MusicHud span{color:var(--brand-muted)}.v3MusicHud i{background:#dfe8f4}.v3MusicHud b{background:linear-gradient(90deg,var(--brand-turq),var(--brand-purple))}
+.answerEditRow input{background:#fff;color:var(--brand-ink);border-color:#d4e2ef}.answerEditRow button{background:#fff1f4;color:#bd3c55;border-color:#f5bdc8}
+.answerEditorFooter button{background:#f3efff;color:var(--brand-violet);border-color:#d4c6f6}
+.strikeFlash{background:rgba(28,42,68,.22);backdrop-filter:blur(4px)}.strikeFlash div{color:var(--brand-danger);text-shadow:0 0 22px rgba(232,93,117,.3)}
+/* Barras y componentes legados de especialidad/show: neutralización cromática */
+[class*="panel"],[class*="card"]{border-color:#dbe7f2}
+a{color:var(--brand-blue)}
+::selection{background:var(--brand-lilac);color:var(--brand-violet)}
