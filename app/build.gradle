@@ -8,7 +8,7 @@ android {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
         targetSdk 36
-        versionCode 23
-        versionName '3.0.6-brand-refresh'
+        versionCode 24
+        versionName '3.0.7-audio-brand'
     }
 }
