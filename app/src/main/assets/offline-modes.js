@@ -306,7 +306,7 @@ const omStart=startNewGame;
 startNewGame=function(){
   if(!offlineAudioChecked){
     openModal('<h2>🔊 PRUEBA DE AUDIO</h2><p>Comprueba que el salón escucha la voz y los efectos.</p><div class="menuStack"><button id="at">▶ PROBAR</button><button id="ao">✅ SE ESCUCHA · COMENZAR</button><button id="as">⚙️ AJUSTES</button></div>');
-    $('#at').onclick=function(){tvFanfare();narratorRead('Bienvenidos a 100 Dentistas Dijeron. Si puedes escucharme, el audio está listo.',function(){});};$('#ao').onclick=function(){offlineAudioChecked=true;closeModal(false);omBegin();omStart();if(window.v3AfterGameStarted)window.v3AfterGameStarted();};$('#as').onclick=omSettings;return;
+    $('#at').onclick=function(){tvFanfare();narratorRead('Bienvenidos a Así los Dentistas lo Dijeron. Si puedes escucharme, el audio está listo.',function(){});};$('#ao').onclick=function(){offlineAudioChecked=true;closeModal(false);omBegin();omStart();if(window.v3AfterGameStarted)window.v3AfterGameStarted();};$('#as').onclick=omSettings;return;
   }
   omBegin();omStart();if(window.v3AfterGameStarted)window.v3AfterGameStarted();
 };
