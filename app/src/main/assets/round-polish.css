@@ -46,3 +46,12 @@
 }
 
 .answer.covered{pointer-events:none}
+
+/* Revelado sincronizado con la locución de respuestas faltantes */
+.answer.spokenReveal{animation:spokenAnswerReveal .7s cubic-bezier(.18,.82,.2,1)}
+@keyframes spokenAnswerReveal{
+  0%{transform:scale(.94);opacity:.25;box-shadow:0 0 0 rgba(25,183,198,0)}
+  45%{transform:scale(1.025);opacity:1;box-shadow:0 0 0 4px rgba(25,183,198,.18),0 10px 26px rgba(123,83,232,.16)}
+  100%{transform:scale(1);opacity:1}
+}
+.reduceMotion .answer.spokenReveal{animation:none}
