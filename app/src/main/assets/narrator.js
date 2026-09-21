@@ -132,12 +132,12 @@ document.addEventListener('change',event=>{
 
 const narratorBaseSettings=v2Settings;
 v2Settings=function(){
-  openModal(`<h2>⚙️ ACCESIBILIDAD, VOZ Y SHOW</h2>
+  openModal(`<h2>⚙️ ACCESIBILIDAD, VOZ Y EXPERIENCIA</h2>
     <label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option><option>30</option></select></label>
     <label class="settingRow"><input id="setNarrator" type="checkbox" ${narratorEnabled?'checked':''}> 🎙️ Leer preguntas en voz alta antes del cronómetro</label>
     <label class="settingRow"><input id="setSound" type="checkbox" ${v2Sound?'checked':''}> 🔊 Sonidos básicos</label>
     <label class="settingRow"><input id="setMusic" type="checkbox" ${tvSettings.music?'checked':''}> 🎵 Música / fanfarrias</label>
-    <label class="settingRow"><input id="setEffects" type="checkbox" ${tvSettings.effects?'checked':''}> 🔔 Efectos de concurso</label>
+    <label class="settingRow"><input id="setEffects" type="checkbox" ${tvSettings.effects?'checked':''}> 🔔 Efectos de juego</label>
     <label class="settingRow"><input id="setApplause" type="checkbox" ${tvSettings.applause?'checked':''}> 👏 Aplausos / ovación</label>
     <label class="settingRow"><input id="setVibration" type="checkbox" ${tvSettings.vibration?'checked':''}> 📳 Vibración</label>
     <label class="settingRow"><input id="setMotion" type="checkbox" ${document.documentElement.classList.contains('reduceMotion')?'checked':''}> Reducir animaciones</label>
