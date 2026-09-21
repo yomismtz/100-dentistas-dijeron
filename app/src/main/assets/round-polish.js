@@ -43,7 +43,7 @@ function rpRevealMissingBeforeAdvance(){
   if(!missing.length)return false;
 
   const answers=rpCurrentAnswers();
-  const labels=missing.map(idx=>String(answers[idx]?.[0]||'').trim()).filter(Boolean);
+  const labels=missing.map(idx=>typeof v2ShortLabel==='function'?v2ShortLabel(answers[idx]?.[0]||''):String(answers[idx]?.[0]||'').trim()).filter(Boolean);
   // Se conserva esta formulación para accesibilidad y validación, pero cada
   // respuesta se locuta por separado para sincronizar voz + recuadro:
   // "La respuesta faltante es:" / "Las respuestas faltantes son:"
@@ -104,7 +104,7 @@ function rpRevealMissingBeforeAdvance(){
       btn.setAttribute('aria-label','Respuesta no encontrada: '+answers[idx][0]);
     }
     const status=$('#roundReviewStatus');
-    if(status)status.textContent='🔊 '+(pos+1)+' de '+missing.length+': '+String(answers[idx]?.[0]||'');
+    if(status)status.textContent='🔊 '+(pos+1)+' de '+missing.length+': '+(typeof v2ShortLabel==='function'?v2ShortLabel(answers[idx]?.[0]||''):String(answers[idx]?.[0]||''));
     if(typeof orSync==='function')orSync();
   };
 
@@ -117,7 +117,7 @@ function rpRevealMissingBeforeAdvance(){
     }
 
     const idx=missing[pos];
-    const label=String(answers[idx]?.[0]||'').trim();
+    const label=typeof v2ShortLabel==='function'?v2ShortLabel(answers[idx]?.[0]||''):String(answers[idx]?.[0]||'').trim();
     revealOne(idx,pos);
 
     // El recuadro aparece justo cuando empieza a decirse esa respuesta.
