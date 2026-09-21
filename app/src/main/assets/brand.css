@@ -196,3 +196,33 @@ a{color:var(--brand-blue)}
 .winnerCharacters{font-size:clamp(42px,8vw,90px)}
 .winnerName{font-size:clamp(26px,4.4vw,52px);font-weight:1000;color:var(--brand-blue-deep);text-align:center}
 .winnerScore{font-size:clamp(20px,3vw,36px);font-weight:900;color:var(--brand-purple);text-align:center}
+
+
+/* Audio dinámico 3.0.10 */
+.soundToggle{
+  position:relative;
+  transition:transform .16s ease,box-shadow .2s ease,background .2s ease;
+}
+.soundToggle.audioOn{
+  background:linear-gradient(135deg,var(--brand-turq),var(--brand-purple));
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 0 0 2px rgba(25,183,198,.12),0 7px 20px rgba(83,70,205,.20);
+}
+.soundToggle.audioOn:after{
+  content:"";
+  position:absolute;
+  width:7px;height:7px;
+  right:5px;top:5px;
+  border-radius:50%;
+  background:var(--brand-gold);
+  box-shadow:0 0 0 3px rgba(216,180,95,.18);
+  animation:audioBeat 1.04s ease-in-out infinite;
+}
+.soundToggle.audioMuted{
+  background:#f2f5f9;
+  color:var(--brand-muted);
+  box-shadow:none;
+}
+@keyframes audioBeat{50%{transform:scale(1.6);opacity:.55}}
+.reduceMotion .soundToggle.audioOn:after{animation:none}
