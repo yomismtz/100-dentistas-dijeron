@@ -318,7 +318,7 @@ function omModes(){
     '<button id="mru">🎡 ESPECIALIDAD SORPRESA</button>'+
     '<button id="mt">🎓 DOCENTE VS SALÓN</button>'+
     '<button id="mrep">📊 REPORTES POR GRUPO</button>'+
-    '<button id="ms">⚙️ VOZ, AULA Y SHOW</button></div>');
+    '<button id="ms">⚙️ VOZ, AULA Y EXPERIENCIA</button></div>');
   $('#mr').onclick=offlineClassroomPanel;$('#ml').onclick=omLightning;$('#mru').onclick=omRoulette;$('#mt').onclick=omTeacherVs;$('#mrep').onclick=omReports;$('#ms').onclick=omSettings;
 }
 
