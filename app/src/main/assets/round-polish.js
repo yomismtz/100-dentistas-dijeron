@@ -99,7 +99,8 @@ function rpRevealMissingBeforeAdvance(){
       // Reinicia la animación por si la clase ya estuvo presente en una restauración.
       btn.classList.remove('revealed','missedAnswer','spokenReveal');
       void btn.offsetWidth;
-      btn.classList.add('revealed','missedAnswer','spokenReveal');
+      btn.classList.add('revealed','missedAnswer');
+      btn.classList.add('spokenReveal');
       btn.setAttribute('aria-label','Respuesta no encontrada: '+answers[idx][0]);
     }
     const status=$('#roundReviewStatus');
