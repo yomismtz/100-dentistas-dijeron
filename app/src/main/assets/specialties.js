@@ -327,7 +327,10 @@ startNewGame=function(){
 };
 
 function spResetHistory(id=specialtySelected){
-  const h=spReadHistory(); h[id]=[]; spWriteHistory(h);
+  const h=spReadHistory();
+  const prefix=(id||'general')+'|';
+  Object.keys(h).forEach(k=>{if(k===id||k.startsWith(prefix))delete h[k];});
+  spWriteHistory(h);
 }
 
 function spBankStatusModal(){
@@ -347,11 +350,11 @@ showHelp=function(){
     <h2>¿CÓMO SE JUEGA?</h2>
     <ol>
       <li>Elige <b>dos equipos y personajes</b>.</li>
-      <li>Después selecciona una <b>especialidad</b> o <b>Todo al azar</b>.</li>
+      <li>Después selecciona una <b>especialidad</b> o <b>Todas las especialidades</b>.</li>
       <li>Cada partida tiene <b>8 rondas</b> y 8 preguntas diferentes.</li>
       <li>Rondas 1–2: <b>×1</b>; rondas 3–4: <b>×2</b>; rondas 5–8: <b>×3</b>.</li>
       <li>La ronda 8 es la <b>Gran Final</b>.</li>
-      <li>El modo Todo al azar intenta mezclar áreas diferentes para evitar partidas monótonas.</li>
+      <li>Cada especialidad mezcla preguntas y cambia su orden en cada partida. Todas las especialidades combina además áreas diferentes.</li>
       <li>Cada banco recuerda preguntas recientes para reducir repeticiones.</li>
       <li>Careo, cronómetro, 3 strikes y robo siguen funcionando igual.</li>
     </ol>
