@@ -1,0 +1,122 @@
+/* v3.0.16 · práctica contra computadora */
+.cpuPracticeBtn{
+  background:linear-gradient(135deg,#eef8ff,#f3efff)!important;
+  border-color:#cfc2f4!important;
+}
+.cpuFairNote{
+  padding:.65rem .75rem;
+  border:1px solid #d8e5f1;
+  background:#f7fbff;
+  border-radius:14px;
+  color:var(--brand-muted);
+}
+.cpuLevelGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.55rem;
+  margin:.55rem 0 .8rem;
+}
+.cpuLevelGrid button{
+  min-height:92px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-rows:auto auto;
+  align-items:center;
+  gap:.15rem .55rem;
+  padding:.7rem;
+  text-align:left;
+  border:1px solid #d9e5f1;
+  border-radius:15px;
+  background:#f8fbff;
+  color:var(--brand-ink);
+}
+.cpuLevelGrid button>span{
+  grid-row:1/3;
+  font-size:30px;
+}
+.cpuLevelGrid button>b{
+  color:var(--brand-blue-deep);
+  letter-spacing:.04em;
+}
+.cpuLevelGrid button>small{
+  color:var(--brand-muted);
+  line-height:1.25;
+}
+.cpuLevelGrid button.selected{
+  border:2px solid var(--brand-purple);
+  background:linear-gradient(135deg,#f5f1ff,#eefcff);
+  box-shadow:0 7px 20px rgba(123,83,232,.12);
+}
+.team.cpuTeam{
+  border-color:#cfc5f2;
+}
+.team.cpuTeam .teamName{
+  background:linear-gradient(135deg,#f6f2ff,#eef8ff);
+}
+.cpuBuzzRace{
+  display:grid;
+  grid-template-columns:1fr minmax(150px,.72fr);
+  gap:.8rem;
+  align-items:stretch;
+  margin-top:.8rem;
+}
+.cpuBrain{
+  min-height:120px;
+  display:grid;
+  place-items:center;
+  align-content:center;
+  gap:.25rem;
+  border:1px solid #d4c7f3;
+  border-radius:18px;
+  background:linear-gradient(145deg,#faf8ff,#eef9ff);
+}
+.cpuBrain>span{
+  font-size:48px;
+  animation:cpuThink 1s ease-in-out infinite alternate;
+}
+.cpuBrain>b{
+  color:var(--brand-purple);
+}
+.cpuBrain>small{
+  color:var(--brand-muted);
+}
+.cpuAnswering{
+  display:grid;
+  justify-items:center;
+  gap:.6rem;
+  text-align:center;
+}
+.cpuAnswering>span{
+  font-size:64px;
+}
+.cpuAnswering h2{
+  color:var(--brand-purple);
+}
+.cpuAnswering.wrong{
+  color:var(--brand-danger);
+}
+.cpuThinkingDots{
+  padding:.6rem .85rem;
+  border-radius:999px;
+  background:#f4f8fe;
+  color:var(--brand-blue-deep);
+  font-weight:800;
+}
+.cpuThinkingDots span{
+  display:inline-block;
+  animation:cpuDots .75s ease-in-out infinite alternate;
+}
+@keyframes cpuThink{
+  to{transform:translateY(-4px) rotate(3deg)}
+}
+@keyframes cpuDots{
+  to{transform:translateX(5px);opacity:.45}
+}
+@media(max-width:600px){
+  .cpuLevelGrid{grid-template-columns:1fr}
+  .cpuBuzzRace{grid-template-columns:1fr}
+}
+.reduceMotion .cpuBrain>span,
+.reduceMotion .cpuThinkingDots span{
+  animation:none!important;
+}
