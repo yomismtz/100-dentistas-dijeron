@@ -8,7 +8,7 @@ android {
         applicationId 'com.uam.cientodentistas'
         minSdk 23
         targetSdk 36
-        versionCode 32
-        versionName '3.0.15-didactic-engagement'
+        versionCode 33
+        versionName '3.0.16-cpu-practice'
     }
 }
