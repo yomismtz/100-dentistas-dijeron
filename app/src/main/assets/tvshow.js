@@ -55,7 +55,7 @@ function tvShowCue(title, sub='', kind='round', ms=1350){
   const now = Date.now();
   tvTransitionUntil = now + ms;
   stage.className = `tvStage ${kind}`;
-  $('#tvStageKicker').textContent = kind === 'winner' ? '100 DENTISTAS DIJERON' : kind === 'steal' ? 'OPORTUNIDAD' : kind === 'sudden' ? 'DESEMPATE' : 'NUEVA RONDA';
+  $('#tvStageKicker').textContent = kind === 'winner' ? 'ASÍ LOS DENTISTAS LO DIJERON' : kind === 'steal' ? 'OPORTUNIDAD' : kind === 'sudden' ? 'DESEMPATE' : 'NUEVA RONDA';
   $('#tvStageTitle').textContent = title;
   $('#tvStageSub').textContent = sub;
   requestAnimationFrame(()=>stage.classList.add('show'));
@@ -295,11 +295,11 @@ v2DeclareWinner = function(winner,sudden=false){
 };
 
 v2Settings = function(){
-  openModal(`<h2>⚙️ ACCESIBILIDAD Y SHOW</h2>
+  openModal(`<h2>⚙️ ACCESIBILIDAD Y EXPERIENCIA</h2>
     <label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option></select></label>
     <label class="settingRow"><input id="setSound" type="checkbox" ${v2Sound?'checked':''}> Sonidos básicos</label>
     <label class="settingRow"><input id="setMusic" type="checkbox" ${tvSettings.music?'checked':''}> 🎵 Música / fanfarrias</label>
-    <label class="settingRow"><input id="setEffects" type="checkbox" ${tvSettings.effects?'checked':''}> 🔔 Efectos de concurso</label>
+    <label class="settingRow"><input id="setEffects" type="checkbox" ${tvSettings.effects?'checked':''}> 🔔 Efectos de juego</label>
     <label class="settingRow"><input id="setApplause" type="checkbox" ${tvSettings.applause?'checked':''}> 👏 Aplausos / ovación</label>
     <label class="settingRow"><input id="setVibration" type="checkbox" ${tvSettings.vibration?'checked':''}> 📳 Vibración</label>
     <label class="settingRow"><input id="setMotion" type="checkbox" ${document.documentElement.classList.contains('reduceMotion')?'checked':''}> Reducir animaciones</label>
