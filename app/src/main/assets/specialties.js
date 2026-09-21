@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · Bancos por especialidad
-const SPECIALTY_VERSION = '3.0.13-randomized-specialty-order';
+const SPECIALTY_VERSION = '3.0.14-full-bank-random-sampling';
 const SPECIALTY_TARGET = 100;
 const SPECIALTY_HISTORY_KEY = 'dentistas-specialty-history-v1';
 const SPECIALTY_PREF_KEY = 'dentistas-specialty-preferences-v1';
@@ -121,35 +121,49 @@ function spHistoryScope(id){
 function spFreshPool(id,pool){
   const h=spReadHistory();
   const scope=spHistoryScope(id);
-  const used=Array.isArray(h[scope])?h[scope]:[];
+  // Todo el banco permanece elegible. El historial solo modifica probabilidades.
+  return {fresh:[...pool],history:h,scope};
+}
 
-  // No borra el historial cuando quedan pocas preguntas.
-  // Bloquea las más recientes y reutiliza primero las más antiguas solo cuando hace falta.
-  const maxBlocked=Math.max(0,pool.length-GAME_SIZE);
-  const blockCount=Math.min(GAME_SIZE*2,maxBlocked);
-  const blocked=new Set(used.slice(0,blockCount));
-  let fresh=pool.filter(q=>!blocked.has(q.q));
+function spWeightedRandomSample(pool,count,history,scope){
+  const used=Array.isArray(history[scope])?history[scope]:[];
+  const lastGame=new Set(used.slice(0,GAME_SIZE));
+  const recent=new Set(used.slice(0,GAME_SIZE*2));
+  const candidates=[...pool];
+  const chosen=[];
 
-  if(fresh.length<GAME_SIZE){
-    const rank=new Map();
-    used.forEach((name,idx)=>{if(!rank.has(name))rank.set(name,idx);});
-    const fallback=[...pool]
-      .filter(q=>!fresh.includes(q))
-      .sort((a,b)=>(rank.get(b.q)??9999)-(rank.get(a.q)??9999));
-    fresh=[...fresh,...fallback];
+  while(chosen.length<count && candidates.length){
+    const weighted=candidates.map(q=>{
+      let weight=1;
+      if(recent.has(q.q))weight=.42;
+      if(lastGame.has(q.q))weight=.18;
+      return {q,weight};
+    });
+    const total=weighted.reduce((s,x)=>s+x.weight,0);
+    let pick=Math.random()*total;
+    let idx=0;
+    for(;idx<weighted.length;idx++){
+      pick-=weighted[idx].weight;
+      if(pick<=0)break;
+    }
+    idx=Math.min(idx,weighted.length-1);
+    chosen.push(weighted[idx].q);
+    candidates.splice(candidates.indexOf(weighted[idx].q),1);
   }
-  return {fresh,history:h,scope};
+  return chosen;
 }
 
 function spOrderForNewGame(selected,history,scope){
   if(selected.length<2)return [...selected];
   const firstKey=scope+'::first';
-  const recentFirst=Array.isArray(history[firstKey])?history[firstKey].slice(0,5):[];
-  let eligible=selected.filter(q=>!recentFirst.includes(q.q));
-  if(!eligible.length)eligible=[...selected];
-  const first=shuffle(eligible)[0];
-  const rest=shuffle(selected.filter(q=>q!==first));
-  return [first,...rest];
+  const recentFirst=new Set(Array.isArray(history[firstKey])?history[firstKey].slice(0,5):[]);
+  const pool=[...selected];
+  const weighted=pool.map(q=>({q,weight:recentFirst.has(q.q)?.22:1}));
+  const total=weighted.reduce((s,x)=>s+x.weight,0);
+  let pick=Math.random()*total;
+  let first=weighted[weighted.length-1].q;
+  for(const x of weighted){pick-=x.weight;if(pick<=0){first=x.q;break;}}
+  return [first,...shuffle(selected.filter(q=>q!==first))];
 }
 
 function spRemember(id,selected,history,scope=spHistoryScope(id)){
@@ -203,11 +217,13 @@ chooseGameQuestions=function(){
     }
     if(chosen.length<GAME_SIZE) shuffle(fresh).forEach(q=>{if(chosen.length<GAME_SIZE&&!chosen.includes(q))chosen.push(q);});
   } else {
-    chosen=spDiverseSample(fresh,GAME_SIZE);
+    // 8 de TODO el banco de la especialidad. Ningún subtema queda reservado
+    // y ninguna pregunta queda excluida por haber aparecido recientemente.
+    chosen=spWeightedRandomSample(fresh,GAME_SIZE,history,scope);
   }
 
-  // La selección y el orden son dos aleatorizaciones distintas.
-  // Además, evita usar como pregunta 1 una que haya abierto partidas recientes.
+  // La selección y el orden son aleatorios. Las aperturas recientes solo
+  // reciben menor probabilidad; siguen siendo posibles.
   questions=spOrderForNewGame(chosen.slice(0,GAME_SIZE),history,scope);
   spRemember(id,questions,history,scope);
 };
