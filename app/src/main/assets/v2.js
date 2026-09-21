@@ -122,7 +122,110 @@ const V2_TERM_EQUIVS = [
   ['respiracion oral','respiracion bucal','respirar por la boca'],
   ['terapia miofuncional','terapia orofacial','ejercicios miofuncionales'],
   ['historia medica','historial medico','antecedentes medicos','anamnesis'],
-  ['medicamentos actuales','medicamentos','medicacion','farmacos actuales']
+  ['medicamentos actuales','medicamentos','medicacion','farmacos actuales','medicinas que toma','que medicamentos toma'],
+  ['encia','gingiva','tejido gingival'],
+  ['inflamacion gingival','gingivitis','encia inflamada'],
+  ['bolsa periodontal','bolsa','saco periodontal'],
+  ['sondaje periodontal','sondeo periodontal','medicion periodontal'],
+  ['supuracion','pus','secrecion purulenta'],
+  ['recesion gingival','recesion de encia','encia retraida'],
+  ['movilidad dental','diente flojo','movilidad del diente'],
+  ['furcacion','compromiso de furca','lesion de furcacion'],
+  ['higiene oral','higiene bucal','limpieza bucal'],
+  ['cepillado dental','cepillado','lavado de dientes','lavarse los dientes'],
+  ['hilo dental','seda dental','floss'],
+  ['barniz de fluoruro','barniz de fluor','fluor barniz'],
+  ['sellador de fosetas y fisuras','sellador de fisuras','sellador dental'],
+  ['caries dental','caries','lesion cariosa'],
+  ['lesion de caries','caries','lesion cariosa'],
+  ['diente temporal','diente de leche','diente deciduo','diente primario'],
+  ['dientes temporales','dientes de leche','dientes deciduos','dientes primarios'],
+  ['diente permanente','diente definitivo','diente adulto'],
+  ['mantenedor de espacio','aparato mantenedor','conservador de espacio'],
+  ['banda y asa','band and loop','banda asa'],
+  ['arco lingual','lingual arch'],
+  ['boton de nance','nance'],
+  ['arco transpalatino','tpa','transpalatino'],
+  ['pulpotomia','amputacion pulpar'],
+  ['pulpectomia','extirpacion pulpar'],
+  ['recubrimiento pulpar directo','proteccion pulpar directa','direct pulp cap'],
+  ['recubrimiento pulpar indirecto','proteccion pulpar indirecta','indirect pulp treatment'],
+  ['localizador apical','localizador de apice','apex locator'],
+  ['longitud de trabajo','longitud de conducto','working length'],
+  ['gutapercha','gutta percha'],
+  ['instrumentacion mecanica','preparacion mecanica','conformacion mecanica'],
+  ['irrigacion endodontica','irrigacion de conductos','lavado de conductos'],
+  ['retratamiento endodontico','reendodoncia','retratamiento de conductos'],
+  ['obturacion endodontica','relleno de conductos','obturacion de conductos'],
+  ['aislamiento absoluto','dique de hule','dique de goma'],
+  ['grabado acido','acondicionamiento acido','etching'],
+  ['sistema adhesivo','adhesivo dental','bonding'],
+  ['fotopolimerizacion','curado con luz','polimerizacion con luz'],
+  ['lampara de fotocurado','lampara de polimerizacion','luz de curado'],
+  ['matriz dental','banda matriz','matriz'],
+  ['cuña dental','cuna dental','wedge'],
+  ['punto de contacto','contacto proximal','contacto interproximal'],
+  ['abrasion','desgaste por friccion'],
+  ['erosion dental','desgaste quimico','erosion'],
+  ['abfraccion','lesion cervical por estres'],
+  ['hipersensibilidad dentinaria','sensibilidad dental','dientes sensibles'],
+  ['impresion dental','molde dental','impresion'],
+  ['escaneo intraoral','scanner intraoral','escaneo digital'],
+  ['registro de mordida','registro oclusal','bite registration'],
+  ['protesis fija','puente fijo','restauracion fija'],
+  ['puente dental','protesis fija parcial','fixed bridge'],
+  ['pontico','diente falso del puente','pieza pontica'],
+  ['implante dental','implante','tornillo dental'],
+  ['periimplantitis','enfermedad periimplantaria','infeccion del implante'],
+  ['mucositis periimplantaria','inflamacion periimplantaria','mucositis del implante'],
+  ['alineadores','alineadores transparentes','aligners'],
+  ['aparatos fijos','brackets','ortodoncia fija'],
+  ['aparatos removibles','aparato removible','ortodoncia removible'],
+  ['aparatos funcionales','aparato funcional','ortopedia funcional'],
+  ['mantenedor de espacio','mantenedor','space maintainer'],
+  ['mascara facial','facemask','mascara de protraccion'],
+  ['expansor palatino','disyuntor','expansor maxilar'],
+  ['quad helix','quadhelix','quad-helix'],
+  ['clase i','angle clase i','clase uno'],
+  ['clase ii','angle clase ii','clase dos'],
+  ['clase iii','angle clase iii','clase tres'],
+  ['linea media','midline','linea media dental'],
+  ['apiñamiento','falta de espacio','dientes amontonados'],
+  ['diastema','espacio entre dientes','separacion dental'],
+  ['erupcion ectopica','erupcion fuera de lugar','diente ectopico'],
+  ['interposicion lingual','empuje lingual','tongue thrust'],
+  ['deglucion atipica','deglucion infantil','patron deglutorio atipico'],
+  ['respiracion nasal','respirar por la nariz'],
+  ['respiracion oral','respiracion bucal','respirar por la boca'],
+  ['succion digital','chuparse el dedo','succion del pulgar','chuparse el pulgar'],
+  ['uso de chupon','uso de pacificador','pacifier','chupete'],
+  ['bruxismo','rechinar dientes','apretar dientes','apretamiento dental'],
+  ['articaina','articaina 4'],
+  ['lidocaina','lignocaina'],
+  ['mepivacaina','carbocaina'],
+  ['prilocaina','prilocaina'],
+  ['vasoconstrictor','epinefrina','adrenalina'],
+  ['epinefrina','adrenalina'],
+  ['inyeccion intraligamentaria','anestesia intraligamentaria','pdl injection'],
+  ['inyeccion intraosea','anestesia intraosea'],
+  ['inyeccion intrapulpar','anestesia intrapulpar'],
+  ['anestesia topica','topico anestesico','gel anestesico'],
+  ['hematoma','moreton','equimosis por inyeccion'],
+  ['parestesia','adormecimiento persistente','hormigueo persistente'],
+  ['sincope','desmayo','lipotimia'],
+  ['aspiracion','aspirar la jeringa','prueba de aspiracion'],
+  ['biopsia','toma de biopsia','muestra de tejido'],
+  ['alveolitis seca','alveolitis','osteitis alveolar'],
+  ['comunicacion oroantral','comunicacion bucosinusal','oroantral'],
+  ['hemostasia','control de sangrado','detener sangrado'],
+  ['sutura','puntos','puntos de sutura'],
+  ['anticoagulantes','medicamentos anticoagulantes','diluyentes de sangre'],
+  ['antiagregantes','antiplaquetarios','medicamentos antiagregantes'],
+  ['radiografia','rayos x','rx'],
+  ['cefalometria','analisis cefalometrico','cefalometrica'],
+  ['fotografias clinicas','fotos clinicas','fotografias'],
+  ['modelos de estudio','modelos dentales','modelos'],
+  ['escaneos digitales','escaneos intraorales','modelos digitales']
 ];
 
 (function loadV2Settings(){
@@ -170,7 +273,7 @@ function v2StemToken(token){
 function v2StemPhrase(s){
   return v2Norm(s).split(' ').filter(Boolean).map(v2StemToken).join(' ');
 }
-function v2Aliases(label){
+function v2Aliases(label,q=null){
   const n=v2Norm(label);
   const out=new Set([n,v2StemPhrase(n)]);
   Object.entries(V2_ALIASES).forEach(([k,vals])=>{
@@ -203,6 +306,99 @@ function v2Aliases(label){
     if(part.length>=4)out.add(part.trim());
   });
   if(n.includes('orl')){out.add('otorrino');out.add('otorrinolaringologo');}
+
+  // Equivalencias semánticas dependientes del contexto de la pregunta.
+  const qn=v2Norm(q?.q||'');
+  const add=(...vals)=>vals.forEach(v=>{const x=v2Norm(v);if(x)out.add(x);});
+  const has=(re)=>re.test(n);
+  const qhas=(re)=>re.test(qn);
+
+  if(has(/duracion|tiempo/)){
+    add('duracion','tiempo','cuanto tiempo','lapso','periodo de tiempo','desde hace cuanto','tiempo que lleva');
+    if(qhas(/habito|succion/))add('tiempo del habito','duracion del habito','cuanto tiempo lleva el habito','desde hace cuanto tiene el habito','tiempo con el habito');
+    if(qhas(/tratamiento|ortodon/))add('duracion del tratamiento','tiempo de tratamiento','cuanto dura el tratamiento');
+    if(qhas(/procedimiento/))add('duracion del procedimiento','tiempo del procedimiento','cuanto dura el procedimiento');
+    if(qhas(/anestes/))add('duracion de anestesia','tiempo de anestesia','cuanto dura la anestesia');
+  }
+  if(has(/frecuencia/)){
+    add('frecuencia','cada cuanto','que tan seguido','cuantas veces','numero de veces','repeticion');
+    if(qhas(/habito|succion/))add('frecuencia del habito','cada cuanto hace el habito','que tan seguido hace el habito','cuantas veces hace el habito');
+  }
+  if(has(/intensidad/)){
+    add('intensidad','fuerza','que tan fuerte','con que fuerza','grado de fuerza');
+    if(qhas(/habito|succion/))add('intensidad del habito','fuerza del habito','que tan fuerte hace el habito');
+  }
+  if(has(/edad/)){
+    add('edad','anos','que edad','edad del paciente');
+    if(qhas(/nino|pediatric/))add('edad del nino','anos del nino');
+    if(has(/biologica/))add('edad biologica','madurez biologica');
+  }
+  if(has(/tipo/)){
+    add('tipo','clase','que tipo','cual tipo');
+    if(qhas(/anestes/))add('tipo de anestesia','tipo de anestesico','anestesia usada','anestesia utilizada','anestesico usado','anestesico utilizado','anestesico empleado','que anestesia se uso','que anestesia usaron','cual anestesia','cual anestesico','medio anestesico');
+    if(qhas(/protesis/))add('tipo de protesis','que protesis','clase de protesis');
+    if(qhas(/aparato|ortodon|ortoped/))add('tipo de aparato','que aparato','clase de aparato');
+  }
+  if(has(/tecnica|metodo/)){
+    add('tecnica','metodo','forma de hacerlo','como se hizo','procedimiento');
+    if(qhas(/anestes|inyeccion/))add('tecnica de anestesia','metodo de anestesia','forma de anestesiar','como se aplico la anestesia','tecnica de inyeccion','tipo de inyeccion','como se inyecto');
+    if(qhas(/conduct|endodon/))add('tecnica endodontica','metodo endodontico','forma de instrumentacion');
+  }
+  if(has(/sitio|localizacion|ubicacion/)){
+    add('sitio','lugar','localizacion','ubicacion','donde','en que lugar');
+    if(qhas(/inyeccion|anestes/))add('sitio de inyeccion','lugar de inyeccion','donde se inyecto','donde pusieron la anestesia','lugar de la anestesia');
+    if(qhas(/lesion|defecto|fragmento/))add('donde esta','ubicacion de la lesion','localizacion de la lesion');
+  }
+  if(has(/dosis|cantidad/)){
+    add('dosis','cantidad','cuanto','cantidad usada','cantidad administrada','cuanto se uso','cuanto se administro');
+    if(qhas(/anestes/))add('dosis de anestesia','cantidad de anestesia','cuanta anestesia','dosis del anestesico');
+  }
+  if(has(/concentracion/)){
+    add('concentracion','porcentaje','que concentracion','concentracion del medicamento','concentracion de la solucion');
+    if(qhas(/anestes/))add('concentracion del anestesico','porcentaje de anestesia','concentracion de anestesia');
+  }
+  if(has(/peso/))add('peso','peso corporal','cuanto pesa','peso del paciente');
+  if(has(/severidad|grave|gravedad/))add('severidad','gravedad','grado','que tan grave','nivel de gravedad');
+  if(has(/tamano|dimension/))add('tamano','dimensiones','que tan grande','medida','tamano de la lesion','tamano del defecto');
+  if(has(/profundidad/))add('profundidad','que tan profundo','medida de profundidad','profundidad de bolsa');
+  if(has(/posicion/))add('posicion','ubicacion','donde esta','localizacion','colocacion');
+  if(has(/angulacion|inclinacion/))add('angulacion','angulo','inclinacion','como esta inclinado');
+  if(has(/direccion/))add('direccion','sentido','hacia donde','orientacion');
+  if(has(/magnitud/))add('magnitud','cantidad','intensidad','fuerza','que tanta fuerza');
+  if(has(/velocidad/))add('velocidad','rapidez','que tan rapido','ritmo');
+  if(has(/momento/))add('momento','cuando','en que momento','tiempo de hacerlo');
+  if(has(/historia|antecedente/)){
+    add('historia','historial','antecedentes','datos previos','historia clinica');
+    if(qhas(/medic|cirugia|anestes/))add('historia medica','antecedentes medicos','historial medico','enfermedades previas');
+    if(has(/familiar/))add('antecedentes familiares','historia familiar','familiares con el problema');
+  }
+  if(has(/medicamento|farmaco/))add('medicamentos','medicinas','farmacos','que toma','medicacion actual','medicamentos que usa');
+  if(has(/sintoma|dolor/))add('sintomas','molestias','lo que siente','dolor','que molestias tiene');
+  if(has(/causa|etiolog/))add('causa','etiologia','origen','por que ocurre','que lo causa','causa del problema');
+  if(has(/calidad/))add('calidad','que tan buena','calidad del material','calidad del registro');
+  if(has(/forma/))add('forma','morfologia','aspecto','forma anatomica');
+  if(has(/funcion/))add('funcion','uso','para que sirve','funcionamiento');
+  if(has(/patron/))add('patron','tipo de patron','tendencia','forma de crecimiento');
+  if(has(/relacion/))add('relacion','como se relaciona','relacion entre ellos');
+  if(has(/exposicion/))add('exposicion','contacto','estar expuesto','nivel de exposicion');
+
+  // Combinaciones conceptuales frecuentes del banco.
+  if(has(/edad/)&&has(/duracion/)&&qhas(/habito|succion/)){
+    add('edad y tiempo del habito','edad y duracion del habito','tiempo del habito','cuanto tiempo tiene el habito','edad del nino y tiempo del habito');
+  }
+  if(has(/frecuencia/)&&has(/intensidad/)&&qhas(/habito|succion/)){
+    add('frecuencia e intensidad del habito','cada cuanto y que tan fuerte','que tan seguido y que tan fuerte','frecuencia del habito','intensidad del habito','cada cuanto lo hace');
+  }
+  if(has(/tipo/)&&has(/tecnica/)&&qhas(/anestes|inyeccion/)){
+    add('tipo de anestesia y tecnica','anestesia usada y tecnica','que anestesia usaron y como la pusieron','anestesico y metodo de inyeccion','tipo y tecnica');
+  }
+  if(has(/dosis/)&&has(/tecnica/)&&qhas(/anestes/)){
+    add('dosis y tecnica','cantidad de anestesia y tecnica','cuanto anestesico y como se aplico');
+  }
+  if(has(/posicion/)&&has(/angulacion/))add('posicion y angulo','ubicacion e inclinacion','como esta colocado e inclinado');
+  if(has(/edad/)&&has(/crecimiento/))add('edad y crecimiento','edad y desarrollo','etapa de crecimiento');
+  if(has(/edad/)&&has(/maduracion/))add('edad y maduracion','edad y desarrollo esqueletico','madurez y edad');
+
   return [...new Set([...out].map(v2Norm).filter(Boolean))];
 }
 
@@ -286,7 +482,7 @@ function v2Match(text, q=questions[roundIndex]){
   const partialOwners=[];
   if(input.length>=5){
     q.a.forEach((ans,idx)=>{
-      const aliases=v2Aliases(ans[0]);
+      const aliases=v2Aliases(ans[0],q);
       const hit=aliases.some(alias=>{
         const a=' '+alias+' ',i=' '+input+' ';
         return a.includes(i) || (input.split(' ').length>=2 && alias.includes(input));
@@ -299,7 +495,7 @@ function v2Match(text, q=questions[roundIndex]){
   q.a.forEach((ans,idx)=>{
     if(isCurrent && revealed[idx] && phase!=='faceoff' && phase!=='sudden') return;
     let score=0;
-    v2Aliases(ans[0]).forEach(alias=>{
+    v2Aliases(ans[0],q).forEach(alias=>{
       let candidate=0;
       if(input===alias) candidate=1;
       else candidate=Math.max(v2ContainmentScore(input,alias),.58*v2Lev(input,alias)+.42*v2Jaccard(input,alias));
