@@ -1,7 +1,7 @@
 'use strict';
 
 // Ajustes de tablero y cierre de ronda.
-const ROUND_POLISH_VERSION='3.0.3-spoken-missing-answers';
+const ROUND_POLISH_VERSION='3.0.8-synced-spoken-missing-answers';
 
 let rpReviewing=false;
 let rpSkipReviewOnce=false;
@@ -44,9 +44,12 @@ function rpRevealMissingBeforeAdvance(){
 
   const answers=rpCurrentAnswers();
   const labels=missing.map(idx=>String(answers[idx]?.[0]||'').trim()).filter(Boolean);
-  const speech=labels.length===1
-    ? 'La respuesta faltante es: '+labels[0]+'.'
-    : 'Las respuestas faltantes son: '+labels.map((label,i)=>(i+1)+', '+label).join('. ')+'.';
+  // Se conserva esta formulación para accesibilidad y validación, pero cada
+  // respuesta se locuta por separado para sincronizar voz + recuadro:
+  // "La respuesta faltante es:" / "Las respuestas faltantes son:"
+  const speechLead=labels.length===1
+    ? 'La respuesta faltante es:'
+    : 'Las respuestas faltantes son:';
 
   rpReviewing=true;
   stopTimer();
@@ -88,43 +91,66 @@ function rpRevealMissingBeforeAdvance(){
     if(b)b.disabled=false;
   };
 
-  missing.forEach((idx,pos)=>{
+  const revealOne=(idx,pos)=>{
     const btn=box&&box.children[idx];
-    setTimeout(()=>{
-      revealed[idx]=true;
-      if(btn){
-        btn.classList.remove('covered');
-        btn.classList.add('revealed','missedAnswer');
-        btn.setAttribute('aria-label','Respuesta no encontrada: '+answers[idx][0]);
-      }
-      if(typeof orSync==='function')orSync();
-      if(pos===missing.length-1){
-        setTimeout(()=>{visualDone=true;maybeEnable();},160);
-      }
-    },240+pos*320);
-  });
+    revealed[idx]=true;
+    if(btn){
+      btn.classList.remove('covered');
+      // Reinicia la animación por si la clase ya estuvo presente en una restauración.
+      btn.classList.remove('revealed','missedAnswer','spokenReveal');
+      void btn.offsetWidth;
+      btn.classList.add('revealed','missedAnswer','spokenReveal');
+      btn.setAttribute('aria-label','Respuesta no encontrada: '+answers[idx][0]);
+    }
+    const status=$('#roundReviewStatus');
+    if(status)status.textContent='🔊 '+(pos+1)+' de '+missing.length+': '+String(answers[idx]?.[0]||'');
+    if(typeof orSync==='function')orSync();
+  };
 
-  const visualFallback=240+Math.max(0,missing.length-1)*320+420;
-  setTimeout(()=>{visualDone=true;maybeEnable();},visualFallback);
-
-  setTimeout(()=>{
-    if(typeof narratorReadAnnouncement==='function'){
-      narratorReadAnnouncement(
-        speech,
-        ()=>{speechDone=true;maybeEnable();},
-        '🔊 RESPUESTAS FALTANTES…'
-      );
-    }else if(typeof narratorRead==='function'){
-      narratorRead(
-        speech,
-        ()=>{speechDone=true;maybeEnable();},
-        '🔊 RESPUESTAS FALTANTES…'
-      );
-    }else{
+  const speakOne=(pos)=>{
+    if(pos>=missing.length){
+      visualDone=true;
       speechDone=true;
       maybeEnable();
+      return;
     }
-  },820);
+
+    const idx=missing[pos];
+    const label=String(answers[idx]?.[0]||'').trim();
+    revealOne(idx,pos);
+
+    // El recuadro aparece justo cuando empieza a decirse esa respuesta.
+    const spokenLine=(missing.length===1 ? speechLead+' ' : (pos+1)+'. ')+label+'.';
+    const next=()=>{
+      // Da un instante para que la respuesta recién revelada permanezca visible
+      // antes de comenzar la siguiente.
+      setTimeout(()=>speakOne(pos+1), narratorEnabled===false ? 520 : 220);
+    };
+
+    if(typeof narratorReadAnnouncement==='function'){
+      narratorReadAnnouncement(spokenLine,next,'🔊 RESPUESTAS FALTANTES…');
+    }else if(typeof narratorRead==='function'){
+      narratorRead(spokenLine,next,'🔊 RESPUESTAS FALTANTES…');
+    }else{
+      setTimeout(next,700);
+    }
+  };
+
+  // Primero anuncia que vienen las respuestas; después las revela y pronuncia una por una.
+  setTimeout(()=>{
+    const startSequence=()=>speakOne(0);
+    if(missing.length>1){
+      if(typeof narratorReadAnnouncement==='function'){
+        narratorReadAnnouncement(speechLead,startSequence,'🔊 RESPUESTAS FALTANTES…');
+      }else if(typeof narratorRead==='function'){
+        narratorRead(speechLead,startSequence,'🔊 RESPUESTAS FALTANTES…');
+      }else{
+        startSequence();
+      }
+    }else{
+      startSequence();
+    }
+  },620);
 
   $('#roundReviewContinue').onclick=()=>{
     const b=$('#roundReviewContinue');
