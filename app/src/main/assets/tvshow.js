@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · TV Show Edition layer
-const TV_SHOW_VERSION = '2.6-show-beta';
+const TV_SHOW_VERSION = '3.0.9';
 let tvTransitionUntil = 0;
 let tvWinnerPending = false;
 let tvAudioCtx = null;
