@@ -273,7 +273,7 @@ function spShowSpecialties(){
   const stats=spStats();
   openModal(`
     <h2>2 · ELIGE LA ESPECIALIDAD</h2>
-    <p class="specialtyLead">Cada partida juega <b>8 preguntas</b>. Meta editorial: <b>100 preguntas verificadas por banco</b>.</p>
+    <p class="specialtyLead">Cada partida toma <b>8 preguntas al azar de todo el banco</b> de la especialidad. Meta editorial: <b>100 preguntas verificadas por banco</b>.</p>
     <div class="specialtyGrid">
       ${SPECIALTY_DEFS.map(d=>{
         const s=stats[d.id];
