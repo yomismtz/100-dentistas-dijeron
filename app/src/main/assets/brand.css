@@ -124,3 +124,46 @@ a{color:var(--brand-blue)}
 .missedAnswer{border-color:#e7cf8a!important;background:linear-gradient(135deg,#fffaf0,#fff)!important;box-shadow:none!important}
 .roundReviewPrompt{border:1px solid #d7e5f2;background:rgba(255,255,255,.97);box-shadow:0 14px 38px rgba(37,64,106,.18);color:var(--brand-ink)}
 .roundReviewPrompt b{color:var(--brand-purple)}.roundReviewPrompt button{background:linear-gradient(135deg,var(--brand-purple),var(--brand-blue));border:0;color:#fff}
+
+
+/* Release-candidate polish: safe areas + compact landscape */
+.home{
+  padding-left:max(clamp(12px,2vw,28px),env(safe-area-inset-left,0px));
+  padding-right:max(clamp(12px,2vw,28px),env(safe-area-inset-right,0px));
+  padding-bottom:max(clamp(10px,2vh,22px),env(safe-area-inset-bottom,0px));
+}
+.topbar{
+  padding-left:max(2%,env(safe-area-inset-left,0px));
+  padding-right:max(2%,env(safe-area-inset-right,0px));
+}
+.scorebar{
+  padding-left:max(1.6%,env(safe-area-inset-left,0px));
+  padding-right:max(1.6%,env(safe-area-inset-right,0px));
+  padding-bottom:max(.55%,env(safe-area-inset-bottom,0px));
+}
+.modalCard{
+  max-width:calc(100vw - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px) - 24px);
+}
+.roundReviewPrompt{
+  max-width:calc(100vw - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px) - 20px);
+}
+@media(max-width:820px){
+  .topbar{gap:.35rem}
+  .iconBtn{min-width:44px}
+  .roundInfo{gap:.35rem}
+  .roundInfo #round{font-size:clamp(14px,2.8vw,21px)}
+  .roundInfo #progress{font-size:clamp(10px,1.8vw,14px)}
+  .roundInfo #turn{font-size:clamp(9px,1.7vw,13px);padding:.2rem .4rem}
+  .scorebar{gap:.5%}
+  .team{gap:.25rem}
+  .teamName{max-width:105px}
+  .teamName,.award,.centerControls button{font-size:clamp(10px,1.65vw,14px);padding:.38rem .42rem}
+  .centerControls{gap:.25rem}
+}
+@media(max-height:430px){
+  .modalCard{max-height:88vh;padding:1.15rem}
+  .modalCard h2{font-size:clamp(19px,3vw,28px)}
+  .modalCard li,.modalCard p{font-size:clamp(13px,1.7vw,17px);line-height:1.32}
+  .roundReviewPrompt{padding:.4rem .55rem;gap:.45rem}
+  .roundReviewPrompt button{padding:.5rem .65rem}
+}
