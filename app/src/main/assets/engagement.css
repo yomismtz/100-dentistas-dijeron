@@ -1,0 +1,45 @@
+/* v3.0.15 · Racha rápida, logros y microanimaciones */
+.quickStreak{
+  min-height:100vh;overflow:auto;color:var(--brand-ink);
+  background:radial-gradient(circle at 12% 16%,rgba(134,227,195,.42),transparent 28%),radial-gradient(circle at 88% 12%,rgba(205,183,255,.48),transparent 30%),linear-gradient(145deg,#f8fcff,#eefbff 46%,#f5efff);
+}
+.qsTopbar{position:sticky;top:0;z-index:6;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.7rem;padding:max(.7rem,env(safe-area-inset-top,0px)) max(1rem,env(safe-area-inset-right,0px)) .7rem max(1rem,env(safe-area-inset-left,0px));background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #dbe7f2}
+.qsTopbar>div{display:grid;text-align:center}.qsTopbar b{color:var(--brand-blue-deep);font-size:clamp(13px,2.2vw,20px)}.qsTopbar span{color:var(--brand-muted);font-size:12px}
+.qsBody{width:min(900px,calc(100% - 24px));margin:auto;padding:clamp(12px,2vw,24px) 0 max(24px,env(safe-area-inset-bottom,0px))}
+.qsStats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}.qsStats>div{background:#fff;border:1px solid #d9e6f2;border-radius:15px;padding:.55rem;text-align:center;box-shadow:0 5px 16px rgba(41,74,115,.06)}
+.qsStats small{display:block;color:var(--brand-muted);font-size:10px;font-weight:900;letter-spacing:.1em}.qsStats b{display:block;color:var(--brand-purple);font-size:clamp(18px,3.4vw,30px)}
+#qsTime.urgent{color:var(--brand-danger);animation:qsPulse .6s ease-in-out infinite alternate}
+.qsTrack{height:7px;background:#dfeaf4;border-radius:99px;overflow:hidden;margin:.65rem 0 1rem}.qsTrack i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand-turq),var(--brand-purple));transition:width .3s ease}
+.qsCard,.qsFinal{background:#fff;border:1px solid #d9e6f2;border-radius:24px;box-shadow:var(--brand-shadow);padding:clamp(18px,4vw,34px);text-align:center}
+.qsBolt{font-size:clamp(36px,7vw,68px);filter:drop-shadow(0 7px 12px rgba(216,180,95,.25))}.qsCard h1{color:var(--brand-blue-deep);font-size:clamp(20px,3vw,34px);line-height:1.2}
+.qsControls{display:grid;grid-template-columns:1fr auto auto;gap:.55rem;margin-top:1rem}.qsControls input{min-width:0;padding:.8rem;border:1px solid #cfdeee;border-radius:14px;font-size:16px}.qsControls button{border:0;border-radius:14px;padding:.8rem .9rem;font-weight:900}.qsControls #qsMic{background:linear-gradient(135deg,var(--brand-turq),var(--brand-blue));color:#fff}.qsControls #qsSubmit{background:linear-gradient(135deg,var(--brand-purple),var(--brand-blue));color:#fff}
+.qsFeedback{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.6rem;margin-top:1rem;padding:.8rem 1rem;border-radius:16px;text-align:left}.qsFeedback.good{background:#edfbf7;border:1px solid #a7e4d4}.qsFeedback.bad{background:#fff2f5;border:1px solid #ffc2ce}.qsFeedback strong{font-size:clamp(20px,3vw,30px);color:var(--brand-purple)}
+.qsAnswers{margin-top:.8rem;display:grid;gap:.35rem;text-align:left}.qsAnswers>b{text-align:center;color:var(--brand-violet);font-size:12px;letter-spacing:.08em}.qsAnswers>div{display:flex;justify-content:space-between;gap:1rem;padding:.5rem .65rem;border-radius:11px;background:#f7fbff;border:1px solid #e0eaf3}.qsAnswers .mine{background:#effbf7;border-color:#a7e4d4}.qsAnswers strong{color:var(--brand-purple)}
+.qsFinal>div:first-child{font-size:64px}.qsFinal>strong{display:block;font-size:clamp(58px,12vw,110px);color:var(--brand-purple);line-height:1}.qsFinal>section{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin:1rem}.qsFinal>section span{background:#f4f8fe;border:1px solid #dbe7f2;border-radius:14px;padding:.65rem .9rem}
+.qsMini{display:grid;gap:.3rem;text-align:left;margin:1rem 0}.qsMini>div{display:flex;justify-content:space-between;padding:.42rem .6rem;border-bottom:1px solid #e7eef7}
+.quickStreakBtn{background:linear-gradient(135deg,#fff8e6,#f3edff)!important;border-color:#ead49a!important}
+@keyframes qsPulse{to{transform:scale(1.12)}}
+
+.dentalMicro{position:absolute;z-index:20;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;justify-items:center;gap:.35rem;pointer-events:none;animation:dentalPop 1.12s ease both}
+.dentalMicro b{background:rgba(255,255,255,.96);border:1px solid #d7e5f2;border-radius:999px;padding:.38rem .7rem;color:var(--brand-violet);font-size:11px;letter-spacing:.06em;box-shadow:0 8px 20px rgba(42,67,110,.15)}
+.dentalMicroIcon{font-size:64px;filter:drop-shadow(0 10px 18px rgba(25,183,198,.22));animation:dentalGlow .65s ease-in-out alternate 2}
+.orthoTeeth{display:flex;align-items:center;gap:0;font-size:50px}.orthoTeeth i{font-style:normal;animation:toothAlign .72s ease both}.orthoTeeth i:first-child{transform:translateX(-22px) rotate(-10deg)}.orthoTeeth i:last-child{transform:translateX(22px) rotate(10deg)}.orthoTeeth em{font-style:normal;color:var(--brand-blue);font-size:34px;animation:bracketFlash .6s ease alternate 2}
+.endoTooth{position:relative;font-size:76px}.endoTooth i{position:absolute;left:50%;top:36%;width:5px;height:0;border-radius:99px;background:linear-gradient(var(--brand-gold),var(--brand-turq));transform:translateX(-50%);animation:rootLight .8s ease forwards;box-shadow:0 0 12px var(--brand-gold)}
+.implantAnim{display:grid;justify-items:center;font-size:48px}.implantAnim i{font-style:normal;animation:implantRise .8s ease both}.implantAnim span{margin-top:-15px;font-size:58px;animation:dentalGlow .6s alternate 2}
+.dentalMicro[data-type="preventive"] .dentalMicroIcon{animation:shieldPulse .55s ease alternate 2}
+.dentalMicro[data-type="anesthesia"] .dentalMicroIcon{animation:syringeTap .7s ease both}
+@keyframes dentalPop{0%{opacity:0;transform:translate(-50%,-44%) scale(.72)}18%,78%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-56%) scale(.94)}}
+@keyframes dentalGlow{to{transform:scale(1.12);filter:drop-shadow(0 0 18px rgba(216,180,95,.75))}}
+@keyframes toothAlign{to{transform:translateX(0) rotate(0)}}
+@keyframes bracketFlash{to{color:var(--brand-turq);text-shadow:0 0 12px var(--brand-turq)}}
+@keyframes rootLight{to{height:42%}}
+@keyframes implantRise{0%{transform:translateY(22px);opacity:.3}100%{transform:translateY(0);opacity:1}}
+@keyframes shieldPulse{to{transform:scale(1.15);filter:drop-shadow(0 0 18px rgba(25,183,198,.6))}}
+@keyframes syringeTap{45%{transform:translate(-10px,8px) rotate(-15deg)}100%{transform:translate(0) rotate(0)}}
+
+.finalChallengeQ{font-size:clamp(18px,2.6vw,29px);color:var(--brand-blue-deep);line-height:1.25}
+.achievementToast{position:fixed;z-index:120;left:50%;top:max(18px,env(safe-area-inset-top,0px));transform:translate(-50%,-130%);opacity:0;display:flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.97);border:1px solid #dbc9a0;border-radius:18px;padding:.7rem 1rem;box-shadow:0 18px 45px rgba(35,52,90,.25);transition:.32s ease}.achievementToast.show{transform:translate(-50%,0);opacity:1}.achievementToast>span{font-size:36px}.achievementToast div{display:grid}.achievementToast small{font-size:9px;font-weight:900;letter-spacing:.14em;color:#927221}.achievementToast b{color:var(--brand-violet)}
+.achievementGrid{display:grid;gap:.5rem}.achievementGrid>div{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.7rem;padding:.7rem;border-radius:15px;border:1px solid #dbe7f2;background:#f8fbff}.achievementGrid>div>span{font-size:34px}.achievementGrid section{display:grid}.achievementGrid small{color:var(--brand-muted)}.achievementGrid em{font-style:normal;font-weight:900}.achievementGrid .unlocked{background:linear-gradient(135deg,#fffaf0,#effbf7);border-color:#e8d29a}.achievementGrid .locked{opacity:.62}
+.achievementProgress{display:grid;gap:.35rem}.achievementProgress span{display:flex;justify-content:space-between;padding:.45rem .55rem;border-bottom:1px solid #e5edf5}.achievementProgress b{color:var(--brand-purple)}
+@media(max-width:600px){.qsControls{grid-template-columns:1fr auto}.qsControls #qsSubmit{grid-column:1/-1}.qsFeedback{grid-template-columns:1fr;text-align:center}.qsStats{gap:.35rem}.achievementToast{width:calc(100% - 24px)}}
+.reduceMotion .dentalMicro,.reduceMotion .dentalMicro *,.reduceMotion #qsTime.urgent{animation:none!important}
