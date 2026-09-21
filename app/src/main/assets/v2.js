@@ -225,7 +225,26 @@ const V2_TERM_EQUIVS = [
   ['cefalometria','analisis cefalometrico','cefalometrica'],
   ['fotografias clinicas','fotos clinicas','fotografias'],
   ['modelos de estudio','modelos dentales','modelos'],
-  ['escaneos digitales','escaneos intraorales','modelos digitales']
+  ['escaneos digitales','escaneos intraorales','modelos digitales'],
+  ['vascularidad','irrigacion sanguinea','flujo sanguineo','cantidad de vasos'],
+  ['angulacion','inclinacion','angulo'],
+  ['severidad','gravedad','grado de severidad'],
+  ['profundidad','que tan profundo','nivel de profundidad'],
+  ['duracion','tiempo','lapso'],
+  ['frecuencia','cada cuanto','periodicidad'],
+  ['intensidad','fuerza','que tan fuerte'],
+  ['localizacion','ubicacion','sitio','lugar'],
+  ['posicion','ubicacion','colocacion'],
+  ['historia familiar','antecedentes familiares','familiares con el problema'],
+  ['historia de dolor','antecedentes de dolor','dolor previo','historial de dolor'],
+  ['peso corporal','peso','cuanto pesa'],
+  ['concentracion','porcentaje'],
+  ['cantidad administrada','dosis administrada','cuanto se administro'],
+  ['tiempo de evolucion','cuanto tiempo lleva','desde hace cuanto','duracion del problema'],
+  ['tiempo desde la perdida','cuanto tiempo hace que se perdio','desde cuando falta'],
+  ['velocidad de activacion','rapidez de activacion','ritmo de activacion'],
+  ['magnitud de la fuerza','intensidad de la fuerza','cantidad de fuerza'],
+  ['direccion de la fuerza','sentido de la fuerza','hacia donde va la fuerza']
 ];
 
 (function loadV2Settings(){
@@ -275,7 +294,7 @@ function v2StemPhrase(s){
 }
 function v2Aliases(label,q=null){
   const n=v2Norm(label);
-  const out=new Set([n,v2StemPhrase(n)]);
+  const out=new Set([n,v2StemPhrase(n),v2Norm(v2ShortLabel(label))]);
   Object.entries(V2_ALIASES).forEach(([k,vals])=>{
     if(v2Norm(k)===n) vals.forEach(v=>out.add(v2Norm(v)));
   });
@@ -318,14 +337,15 @@ function v2Aliases(label,q=null){
     if(qhas(/habito|succion/))add('tiempo del habito','duracion del habito','cuanto tiempo lleva el habito','desde hace cuanto tiene el habito','tiempo con el habito');
     if(qhas(/tratamiento|ortodon/))add('duracion del tratamiento','tiempo de tratamiento','cuanto dura el tratamiento');
     if(qhas(/procedimiento/))add('duracion del procedimiento','tiempo del procedimiento','cuanto dura el procedimiento');
-    if(qhas(/anestes/))add('duracion de anestesia','tiempo de anestesia','cuanto dura la anestesia');
+    if(qhas(/anestes/))add('duracion de anestesia','tiempo de anestesia','cuanto dura la anestesia','cuanto tiempo dura el efecto','tiempo que dura el anestesico');
+    if(qhas(/fotopolimer|polimer|resina|luz/))add('tiempo de luz','tiempo de fotocurado','duracion del fotocurado','cuanto tiempo de luz','tiempo de exposicion a la luz');
   }
   if(has(/frecuencia/)){
-    add('frecuencia','cada cuanto','que tan seguido','cuantas veces','numero de veces','repeticion');
+    add('frecuencia','cada cuanto','cada cuanto tiempo','que tan seguido','cuantas veces','numero de veces','repeticion','periodicidad');
     if(qhas(/habito|succion/))add('frecuencia del habito','cada cuanto hace el habito','que tan seguido hace el habito','cuantas veces hace el habito');
   }
   if(has(/intensidad/)){
-    add('intensidad','fuerza','que tan fuerte','con que fuerza','grado de fuerza');
+    add('intensidad','fuerza','que tan fuerte','con que fuerza','grado de fuerza','potencia');
     if(qhas(/habito|succion/))add('intensidad del habito','fuerza del habito','que tan fuerte hace el habito');
   }
   if(has(/edad/)){
@@ -335,27 +355,27 @@ function v2Aliases(label,q=null){
   }
   if(has(/tipo/)){
     add('tipo','clase','que tipo','cual tipo');
-    if(qhas(/anestes/))add('tipo de anestesia','tipo de anestesico','anestesia usada','anestesia utilizada','anestesico usado','anestesico utilizado','anestesico empleado','que anestesia se uso','que anestesia usaron','cual anestesia','cual anestesico','medio anestesico');
+    if(qhas(/anestes/))add('tipo de anestesia','tipo de anestesico','anestesia usada','anestesia utilizada','anestesico usado','anestesico utilizado','anestesico empleado','que anestesia se uso','que anestesia usaron','que anestesia ocuparon','que tipo de anestesia se ocupo','que tipo de anestesia ocuparon','anestesia que ocuparon','cual anestesia','cual anestesico','que anestesico','medio anestesico');
     if(qhas(/protesis/))add('tipo de protesis','que protesis','clase de protesis');
     if(qhas(/aparato|ortodon|ortoped/))add('tipo de aparato','que aparato','clase de aparato');
   }
   if(has(/tecnica|metodo/)){
     add('tecnica','metodo','forma de hacerlo','como se hizo','procedimiento');
-    if(qhas(/anestes|inyeccion/))add('tecnica de anestesia','metodo de anestesia','forma de anestesiar','como se aplico la anestesia','tecnica de inyeccion','tipo de inyeccion','como se inyecto');
+    if(qhas(/anestes|inyeccion/))add('tecnica de anestesia','metodo de anestesia','forma de anestesiar','como se aplico la anestesia','como la aplicaron','como la pusieron','tecnica de inyeccion','tipo de inyeccion','forma de inyeccion','como se inyecto');
     if(qhas(/conduct|endodon/))add('tecnica endodontica','metodo endodontico','forma de instrumentacion');
   }
   if(has(/sitio|localizacion|ubicacion/)){
     add('sitio','lugar','localizacion','ubicacion','donde','en que lugar');
-    if(qhas(/inyeccion|anestes/))add('sitio de inyeccion','lugar de inyeccion','donde se inyecto','donde pusieron la anestesia','lugar de la anestesia');
+    if(qhas(/inyeccion|anestes/))add('sitio de inyeccion','lugar de inyeccion','donde se inyecto','donde la inyectaron','donde la pusieron','donde pusieron la anestesia','lugar donde pusieron la anestesia','lugar de la anestesia');
     if(qhas(/lesion|defecto|fragmento/))add('donde esta','ubicacion de la lesion','localizacion de la lesion');
   }
   if(has(/dosis|cantidad/)){
     add('dosis','cantidad','cuanto','cantidad usada','cantidad administrada','cuanto se uso','cuanto se administro');
-    if(qhas(/anestes/))add('dosis de anestesia','cantidad de anestesia','cuanta anestesia','dosis del anestesico');
+    if(qhas(/anestes/))add('dosis de anestesia','cantidad de anestesia','cuanta anestesia','cuanto anestesico','cuanto le pusieron','cuanta le pusieron','dosis del anestesico');
   }
   if(has(/concentracion/)){
     add('concentracion','porcentaje','que concentracion','concentracion del medicamento','concentracion de la solucion');
-    if(qhas(/anestes/))add('concentracion del anestesico','porcentaje de anestesia','concentracion de anestesia');
+    if(qhas(/anestes/))add('concentracion del anestesico','porcentaje de anestesia','porcentaje del anestesico','que porcentaje','concentracion de anestesia');
   }
   if(has(/peso/))add('peso','peso corporal','cuanto pesa','peso del paciente');
   if(has(/severidad|grave|gravedad/))add('severidad','gravedad','grado','que tan grave','nivel de gravedad');
@@ -366,7 +386,8 @@ function v2Aliases(label,q=null){
   if(has(/direccion/))add('direccion','sentido','hacia donde','orientacion');
   if(has(/magnitud/))add('magnitud','cantidad','intensidad','fuerza','que tanta fuerza');
   if(has(/velocidad/))add('velocidad','rapidez','que tan rapido','ritmo');
-  if(has(/momento/))add('momento','cuando','en que momento','tiempo de hacerlo');
+  if(has(/momento/))add('momento','cuando','en que momento','tiempo de hacerlo','momento ideal');
+  if(has(/momento/)&&qhas(/color|tono/))add('cuando tomar el color','momento de tomar el color','cuando seleccionar el color','momento de seleccionar el tono');
   if(has(/historia|antecedente/)){
     add('historia','historial','antecedentes','datos previos','historia clinica');
     if(qhas(/medic|cirugia|anestes/))add('historia medica','antecedentes medicos','historial medico','enfermedades previas');
@@ -389,13 +410,16 @@ function v2Aliases(label,q=null){
   if(has(/frecuencia/)&&has(/intensidad/)&&qhas(/habito|succion/)){
     add('frecuencia e intensidad del habito','cada cuanto y que tan fuerte','que tan seguido y que tan fuerte','frecuencia del habito','intensidad del habito','cada cuanto lo hace');
   }
+  if(has(/duracion|tiempo/)&&has(/intensidad/)&&qhas(/habito|succion/)){
+    add('duracion e intensidad del habito','tiempo e intensidad del habito','tiempo y fuerza del habito','cuanto tiempo y que tan fuerte','duracion y fuerza');
+  }
   if(has(/tipo/)&&has(/tecnica/)&&qhas(/anestes|inyeccion/)){
     add('tipo de anestesia y tecnica','anestesia usada y tecnica','que anestesia usaron y como la pusieron','anestesico y metodo de inyeccion','tipo y tecnica');
   }
   if(has(/dosis/)&&has(/tecnica/)&&qhas(/anestes/)){
     add('dosis y tecnica','cantidad de anestesia y tecnica','cuanto anestesico y como se aplico');
   }
-  if(has(/posicion/)&&has(/angulacion/))add('posicion y angulo','ubicacion e inclinacion','como esta colocado e inclinado');
+  if(has(/posicion/)&&has(/angulacion/))add('posicion y angulo','ubicacion e inclinacion','como esta colocado e inclinado','donde esta y que inclinacion tiene');
   if(has(/edad/)&&has(/crecimiento/))add('edad y crecimiento','edad y desarrollo','etapa de crecimiento');
   if(has(/edad/)&&has(/maduracion/))add('edad y maduracion','edad y desarrollo esqueletico','madurez y edad');
 
