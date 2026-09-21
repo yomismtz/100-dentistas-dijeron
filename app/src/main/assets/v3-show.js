@@ -111,7 +111,7 @@ function v3MusicHud(){
 
 function v3AudioSettings(){
   openModal('<h2>🎚 MEZCLADOR DE AUDIO</h2>'+
-    [['music','🎵 Música'],['narrator','🎙 Presentador'],['effects','🔔 Efectos'],['applause','👏 Aplausos']].map(([k,l])=>'<label class="audioSlider">'+l+'<input id="v3Vol_'+k+'" type="range" min="0" max="100" value="'+Math.round(v3Audio[k]*100)+'"><b id="v3Val_'+k+'">'+Math.round(v3Audio[k]*100)+'%</b></label>').join('')+
+    [['music','🎵 Música de fondo'],['narrator','🎙 Presentador'],['effects','🔔 Efectos'],['applause','👏 Aplausos']].map(([k,l])=>'<label class="audioSlider">'+l+'<input id="v3Vol_'+k+'" type="range" min="0" max="100" value="'+Math.round(v3Audio[k]*100)+'"><b id="v3Val_'+k+'">'+Math.round(v3Audio[k]*100)+'%</b></label>').join('')+
     '<div class="menuStack"><button id="v3AudioTest">▶ PROBAR MEZCLA</button><button id="v3AudioSave" class="setupStart">GUARDAR</button></div>');
   ['music','narrator','effects','applause'].forEach(k=>$('#v3Vol_'+k).oninput=e=>{$('#v3Val_'+k).textContent=e.target.value+'%';});
   $('#v3AudioTest').onclick=()=>{['music','narrator','effects','applause'].forEach(k=>v3Audio[k]=Number($('#v3Vol_'+k).value)/100);v3AudioSave();tvSfx('correct');tvApplause(.7);offlinePresenterCue('correct');};
