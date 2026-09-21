@@ -279,7 +279,7 @@ function v2QuestionInfo(){
   const sourceUrl=q.source||fallback[1];
   const sourceLabel=q.source?'Fuente clínica/indexada asociada a esta pregunta':fallback[0];
   const level=q.difficulty==='basic'?'Básica':q.difficulty==='intermediate'?'Media':q.difficulty==='advanced'?'Extra difícil':'No etiquetada';
-  openModal(`<h2>📚 EXPLICACIÓN Y FUENTE</h2><p><b>${v2Escape(q.q)}</b></p><p>En este tablero se aceptan como respuestas correctas: <b>${q.a.map(x=>v2Escape(x[0])).join(', ')}</b>.</p><p>Los puntos son una ponderación didáctica del juego; no representan una encuesta real a 100 dentistas.</p><p><b>Área:</b> ${v2Escape(cat)} · <b>Nivel:</b> ${v2Escape(level)}</p><p><b>Fuente de referencia:</b> ${v2Escape(sourceLabel)}</p><button id="openSource" class="setupStart">ABRIR FUENTE EN EL NAVEGADOR</button>`);
+  openModal(`<h2>📚 EXPLICACIÓN Y FUENTE</h2><p><b>${v2Escape(q.q)}</b></p><p>En este tablero se aceptan como respuestas correctas: <b>${q.a.map(x=>v2Escape(x[0])).join(', ')}</b>.</p><p>Los puntos son una ponderación didáctica del juego; no representan resultados de una encuesta real a dentistas.</p><p><b>Área:</b> ${v2Escape(cat)} · <b>Nivel:</b> ${v2Escape(level)}</p><p><b>Fuente de referencia:</b> ${v2Escape(sourceLabel)}</p><button id="openSource" class="setupStart">ABRIR FUENTE EN EL NAVEGADOR</button>`);
   $('#openSource').onclick=()=>v2OpenUrl(sourceUrl);
 }
 
