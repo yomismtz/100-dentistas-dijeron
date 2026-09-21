@@ -363,7 +363,7 @@ function v2SubmitMainResponse(){
   const input=$('#responseInput'); const text=input.value.trim(); if(!text)return;
   stopTimer(); const m=v2Match(text); input.value='';
   if(m&&m.score>=.84){
-    v2Host(`¡Tenemos respuesta! ${m.label}`,'good'); v2React(currentTeam,'good');
+    v2Host(`¡Tenemos respuesta! ${m.shortLabel||m.label}`,'good'); v2React(currentTeam,'good');
     const btn=$('#answers').children[m.idx]; revealAnswer(m.idx,btn);
   }else if(m&&m.score>=.64){
     openModal(`<h2>DECISIÓN DEL DOCENTE</h2><p>Se escuchó/escribió: <b>${v2Escape(text)}</b></p><p>¿Aceptar como <b>${v2Escape(m.label)}</b>?</p><div class="menuStack"><button id="acceptNear">✅ ACEPTAR</button><button id="rejectNear">❌ RECHAZAR / STRIKE</button><button id="cancelNear">VOLVER SIN PENALIZAR</button></div>`);
