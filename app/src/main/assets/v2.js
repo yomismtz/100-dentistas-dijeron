@@ -422,7 +422,36 @@ function v2ShortLabel(label){
     'Facilitar higiene y mantenimiento':'Facilitar higiene',
     'Tomografía computarizada de haz cónico (CBCT)':'CBCT',
     'Prótesis parcial removible':'PPR',
-    'Diamino fluoruro de plata':'SDF'
+    'Diamino fluoruro de plata':'SDF',
+    'Tipo de anestésico':'Tipo de anestesia',
+    'Tipo de anestésico y técnica utilizada':'Anestésico y técnica',
+    'Agente y concentración':'Anestésico y concentración',
+    'Cantidad o dosis administrada':'Dosis administrada',
+    'Sitio de inyección':'Sitio de inyección',
+    'Presencia y concentración de vasoconstrictor':'Vasoconstrictor',
+    'Vascularidad del sitio de depósito':'Vascularidad del sitio',
+    'Dosis acumuladas elevadas de agentes asociados':'Dosis acumulada',
+    'Peso del paciente cuando aplica':'Peso del paciente',
+    'Cantidad total ya administrada':'Cantidad administrada',
+    'Diente perdido y tiempo desde la pérdida':'Diente y tiempo de pérdida',
+    'Frecuencia e intensidad':'Frecuencia e intensidad',
+    'Edad y duración':'Edad y duración',
+    'Dirección y duración de las fuerzas':'Dirección y duración',
+    'Magnitud y dirección de la fuerza':'Magnitud y dirección',
+    'Duración prolongada de tratamiento':'Tratamiento prolongado',
+    'Historia o presencia de periodontitis':'Historia de periodontitis',
+    'Extensión y localización de la lesión':'Extensión y localización',
+    'Relación corona-raíz y anatomía':'Relación corona-raíz',
+    'Posición tridimensional protésicamente guiada':'Posición 3D protésica',
+    'Síntomas e historia clínica':'Síntomas e historia',
+    'Profundidad y posición del diente':'Profundidad y posición',
+    'Tamaño estimado de dientes no erupcionados':'Tamaño dental estimado',
+    'Antecedentes familiares de maloclusión severa':'Historia familiar',
+    'Calidad de evidencia variable':'Calidad de evidencia',
+    'Relación pérdida ósea/edad':'Pérdida ósea/edad',
+    'Aumento de profundidad comparado con referencia':'Mayor profundidad',
+    'Grado de compromiso horizontal':'Compromiso horizontal',
+    'Control de infección y estabilidad del sitio':'Control y estabilidad'
   };
   if(exact[s])return exact[s];
 
@@ -437,6 +466,11 @@ function v2ShortLabel(label){
     .replace(/radiografía panorámica/ig,'Panorámica')
     .replace(/bloqueo del nervio alveolar inferior/ig,'Bloqueo alveolar inferior')
     .replace(/ionómero de vidrio modificado con resina/ig,'Ionómero mod. con resina')
+    .replace(/cantidad total ya administrada/ig,'Cantidad administrada')
+    .replace(/presencia y concentración de vasoconstrictor/ig,'Vasoconstrictor')
+    .replace(/vascularidad del sitio de depósito/ig,'Vascularidad del sitio')
+    .replace(/duración prolongada de tratamiento/ig,'Tratamiento prolongado')
+    .replace(/historia o presencia de periodontitis/ig,'Historia de periodontitis')
     .trim();
 
   // Si sigue siendo una oración larga, conserva la primera idea clínica completa.
