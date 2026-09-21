@@ -138,20 +138,25 @@ revealAnswer=function(idx,btn){
 function v3WinnerCard(winner){
   const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=675;
   const x=canvas.getContext('2d');
-  const g=x.createLinearGradient(0,0,1200,675);g.addColorStop(0,'#220505');g.addColorStop(1,'#071b20');x.fillStyle=g;x.fillRect(0,0,1200,675);
-  x.textAlign='center';x.fillStyle='#ffe2a0';x.font='900 56px Arial';x.fillText('100 DENTISTAS DIJERON',600,90);
-  x.font='900 90px Arial';x.fillText('🏆',600,210);
-  x.fillStyle='#fff';x.font='900 72px Arial';x.fillText(teamNames[winner]||'EQUIPO GANADOR',600,315);
-  x.fillStyle='#ffd36e';x.font='900 54px Arial';x.fillText((scores[winner]||0)+' PUNTOS',600,390);
-  x.fillStyle='#ddd';x.font='32px Arial';x.fillText((typeof offlineSettings!=='undefined'&&offlineSettings.group?offlineSettings.group+' · ':'')+(typeof spSpecialtyName==='function'?spSpecialtyName():'Odontología'),600,455);
-  x.font='26px Arial';x.fillText(new Date().toLocaleDateString()+' · '+V3_SHOW_VERSION,600,510);
-  x.strokeStyle='#d7b36c';x.lineWidth=5;x.strokeRect(30,30,1140,615);
+  const g=x.createLinearGradient(0,0,1200,675);
+  g.addColorStop(0,'#F7FBFF');g.addColorStop(.48,'#E9FCF8');g.addColorStop(1,'#F0E9FF');
+  x.fillStyle=g;x.fillRect(0,0,1200,675);
+  x.fillStyle='rgba(134,227,195,.38)';x.beginPath();x.arc(120,100,210,0,Math.PI*2);x.fill();
+  x.fillStyle='rgba(205,183,255,.44)';x.beginPath();x.arc(1080,590,260,0,Math.PI*2);x.fill();
+  x.textAlign='center';x.fillStyle='#153A9E';x.font='900 48px Arial';x.fillText('ASÍ LOS DENTISTAS LO DIJERON',600,86);
+  x.fillStyle='#7B53E8';x.font='800 25px Arial';x.fillText('CONOCIMIENTO QUE SONRÍE',600,125);
+  x.font='900 88px Arial';x.fillText('🏆',600,225);
+  x.fillStyle='#1C2A44';x.font='900 68px Arial';x.fillText(teamNames[winner]||'EQUIPO GANADOR',600,330);
+  x.fillStyle='#19B7C6';x.font='900 52px Arial';x.fillText((scores[winner]||0)+' PUNTOS',600,405);
+  x.fillStyle='#4D2D84';x.font='31px Arial';x.fillText((typeof offlineSettings!=='undefined'&&offlineSettings.group?offlineSettings.group+' · ':'')+(typeof spSpecialtyName==='function'?spSpecialtyName():'Odontología'),600,470);
+  x.fillStyle='#63718A';x.font='25px Arial';x.fillText(new Date().toLocaleDateString()+' · '+V3_SHOW_VERSION,600,525);
+  x.strokeStyle='#D8B45F';x.lineWidth=5;x.strokeRect(30,30,1140,615);
   return canvas;
 }
 function v3ExportWinnerCard(winner){
   const c=v3WinnerCard(winner),data=c.toDataURL('image/png');
-  try{if(window.Android&&Android.exportBase64File){Android.exportBase64File('Campeones_100_Dentistas.png','image/png',data);return;}}catch(_){}
-  const a=document.createElement('a');a.href=data;a.download='Campeones_100_Dentistas.png';a.click();
+  try{if(window.Android&&Android.exportBase64File){Android.exportBase64File('Campeones_Asi_los_Dentistas.png','image/png',data);return;}}catch(_){}
+  const a=document.createElement('a');a.href=data;a.download='Campeones_Asi_los_Dentistas.png';a.click();
 }
 
 if(typeof v2DeclareWinner==='function'){
@@ -168,7 +173,7 @@ if(typeof v2DeclareWinner==='function'){
 }
 
 function v3ShowMenu(){
-  openModal('<h2>🎭 SHOW Y AUDIO</h2><div class="menuStack"><button id="v3Mixer">🎚 VOLUMEN POR CAPAS</button><button id="v3PresenterTest">🎙 PROBAR FRASES DEL PRESENTADOR</button><button id="v3Celebrations">✨ PROBAR CELEBRACIONES</button></div>');
+  openModal('<h2>🎓 EXPERIENCIA Y AUDIO</h2><div class="menuStack"><button id="v3Mixer">🎚 VOLUMEN POR CAPAS</button><button id="v3PresenterTest">🎙 PROBAR FRASES DEL PRESENTADOR</button><button id="v3Celebrations">✨ PROBAR CELEBRACIONES</button></div>');
   $('#v3Mixer').onclick=v3AudioSettings;$('#v3PresenterTest').onclick=()=>offlinePresenterCue('correct');$('#v3Celebrations').onclick=()=>{closeModal(false);v3Celebrate('top',currentTeam);};
 }
 
