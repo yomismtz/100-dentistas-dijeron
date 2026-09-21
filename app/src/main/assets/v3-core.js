@@ -455,6 +455,6 @@ function v3CoreMenu(){
 
 (function(){
   const home=$('.homeActions');
-  if(home&&!$('#v3ResearchBtn')){const b=document.createElement('button');b.id='v3ResearchBtn';b.textContent='🔬 CLASSROOM RESEARCH';b.onclick=v3CoreMenu;home.appendChild(b);}
+  if(home&&!$('#v3ResearchBtn')){const b=document.createElement('button');b.id='v3ResearchBtn';b.textContent='🎓 CENTRO ACADÉMICO';b.onclick=v3CoreMenu;home.appendChild(b);}
   v3OfferRecovery();
 })();
