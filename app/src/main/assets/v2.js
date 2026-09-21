@@ -50,8 +50,80 @@ const V2_ALIASES = {
   'articaína': ['articaina'],
   'lidocaína': ['lidocaina'],
   'prilocaína': ['prilocaina'],
-  'mepivacaína': ['mepivacaina']
+  'mepivacaína': ['mepivacaina'],
+  'tomografía computarizada de haz cónico': ['cbct','cone beam','tomografia cone beam','tomografia de haz conico'],
+  'articulación temporomandibular': ['atm','articulacion temporo mandibular'],
+  'trastorno temporomandibular': ['ttm','tmd','trastorno de la atm'],
+  'extracción dental': ['exodoncia','sacar el diente','extraccion'],
+  'tercer molar': ['muela del juicio','cordal'],
+  'alveolitis seca': ['osteitis alveolar','dry socket'],
+  'radiografía periapical': ['periapical','rx periapical'],
+  'radiografía bitewing': ['bitewing','aleta de mordida','interproximal'],
+  'biofilm dental': ['placa dental','placa bacteriana','biofilm','placa'],
+  'cálculo dental': ['sarro','tartaro','calculo'],
+  'clorhexidina': ['chx'],
+  'fluoruro de sodio': ['naf'],
+  'diamino fluoruro de plata': ['sdf','fluoruro diamino de plata','plata diamina fluoruro'],
+  'sellador de fosetas y fisuras': ['sellador de fisuras','sellador','sealant'],
+  'unión amelocementaria': ['uac','cej','union cemento esmalte'],
+  'ligamento periodontal': ['lpd','pdl'],
+  'profundidad al sondaje': ['profundidad de sondaje','profundidad de bolsa','ps','pd'],
+  'tratamiento de conductos': ['endodoncia','tratamiento endodontico','root canal'],
+  'conducto radicular': ['canal radicular','conducto','canal'],
+  'necrosis pulpar': ['pulpa necrotica','necrosis de la pulpa'],
+  'agregado de trióxido mineral': ['mta','mineral trioxide aggregate'],
+  'prótesis parcial removible': ['ppr','rpd','protesis removible'],
+  'prótesis total': ['dentadura completa','dentadura total','protesis completa'],
+  'corona de acero inoxidable': ['corona de acero','ssc','stainless steel crown'],
+  'sobremordida': ['overbite'],
+  'resalte': ['overjet'],
+  'mordida abierta': ['open bite'],
+  'mordida cruzada': ['crossbite'],
+  'expansión rápida maxilar': ['disyuncion maxilar','expansion palatina rapida','rme'],
+  'bruxismo': ['rechinar los dientes','apretar los dientes','rechinamiento dental']
 };
+
+const V2_TERM_EQUIVS = [
+  ['radiografia panoramica','panoramica','ortopantomografia','ortopantomograma','rx panoramica'],
+  ['radiografia cefalometrica','cefalometrica','telerradiografia','rx cefalometrica'],
+  ['tomografia computarizada de haz conico','cbct','cone beam','tomografia cone beam'],
+  ['articulacion temporomandibular','atm'],
+  ['trastorno temporomandibular','ttm','tmd','trastorno atm'],
+  ['bloqueo del nervio alveolar inferior','bloqueo alveolar inferior','bloqueo dentario inferior','dentario inferior'],
+  ['hipoclorito de sodio','hipoclorito','naocl'],
+  ['clorhexidina','chx'],
+  ['fluoruro de sodio','naf'],
+  ['diamino fluoruro de plata','sdf','fluoruro diamino de plata'],
+  ['agregado de trioxido mineral','mta'],
+  ['dique de hule','dique de goma','rubber dam','aislamiento absoluto'],
+  ['resina compuesta','resina','composite'],
+  ['ionomero de vidrio','cemento de ionomero de vidrio','civ','gic','glass ionomer'],
+  ['biofilm dental','placa dental','placa bacteriana','biofilm'],
+  ['calculo dental','sarro','tartaro'],
+  ['extraccion dental','exodoncia','extraccion'],
+  ['tercer molar','muela del juicio','cordal'],
+  ['radiografia periapical','periapical','rx periapical'],
+  ['radiografia bitewing','bitewing','aleta de mordida','interproximal'],
+  ['sangrado al sondaje','sangrado al sondeo','bop'],
+  ['perdida de insercion clinica','perdida de insercion','cal','nic'],
+  ['union amelocementaria','uac','cej'],
+  ['ligamento periodontal','lpd','pdl'],
+  ['tratamiento de conductos','endodoncia','tratamiento endodontico'],
+  ['conducto radicular','canal radicular','conducto'],
+  ['protesis parcial removible','ppr','rpd'],
+  ['protesis total','dentadura completa','dentadura total'],
+  ['corona de acero inoxidable','corona de acero','ssc'],
+  ['sobremordida','overbite'],
+  ['resalte','overjet'],
+  ['mordida abierta','open bite'],
+  ['mordida cruzada','crossbite'],
+  ['expansion rapida maxilar','disyuncion maxilar','rme'],
+  ['succion digital','chuparse el dedo','habito de dedo'],
+  ['respiracion oral','respiracion bucal','respirar por la boca'],
+  ['terapia miofuncional','terapia orofacial','ejercicios miofuncionales'],
+  ['historia medica','historial medico','antecedentes medicos','anamnesis'],
+  ['medicamentos actuales','medicamentos','medicacion','farmacos actuales']
+];
 
 (function loadV2Settings(){
   try {
@@ -86,15 +158,106 @@ function v2Lev(a,b){
   return 1-d[m][n]/Math.max(m,n);
 }
 function v2Jaccard(a,b){
-  const A=new Set(v2Norm(a).split(' ').filter(Boolean)),B=new Set(v2Norm(b).split(' ').filter(Boolean)); if(!A.size||!B.size)return 0;
+  const A=new Set(v2StemPhrase(a).split(' ').filter(Boolean)),B=new Set(v2StemPhrase(b).split(' ').filter(Boolean)); if(!A.size||!B.size)return 0;
   let inter=0; A.forEach(x=>{if(B.has(x))inter++;}); return inter/(A.size+B.size-inter);
 }
-function v2Aliases(label){
-  const n=v2Norm(label); const out=[label,n];
-  Object.entries(V2_ALIASES).forEach(([k,vals])=>{ if(v2Norm(k)===n) out.push(...vals); });
-  if(n.includes('orl')) out.push('otorrino','otorrinolaringologo');
-  return [...new Set(out.map(v2Norm).filter(Boolean))];
+function v2StemToken(token){
+  let t=String(token||'');
+  if(t.length>6&&t.endsWith('es'))t=t.slice(0,-2);
+  else if(t.length>5&&t.endsWith('s'))t=t.slice(0,-1);
+  return t;
 }
+function v2StemPhrase(s){
+  return v2Norm(s).split(' ').filter(Boolean).map(v2StemToken).join(' ');
+}
+function v2Aliases(label){
+  const n=v2Norm(label);
+  const out=new Set([n,v2StemPhrase(n)]);
+  Object.entries(V2_ALIASES).forEach(([k,vals])=>{
+    if(v2Norm(k)===n) vals.forEach(v=>out.add(v2Norm(v)));
+  });
+
+  // Variantes naturales que no cambian el significado clínico.
+  const clean=n
+    .replace(/\bcuando (esta|este|sea|sean) (indicad[oa]s?|necesari[oa]s?)\b/g,' ')
+    .replace(/\bcuando (se )?(requiera|requieren|corresponda)\b/g,' ')
+    .replace(/\bsegun el caso\b/g,' ')
+    .replace(/\bde acuerdo con el caso\b/g,' ')
+    .replace(/\s+/g,' ').trim();
+  if(clean)out.add(clean);
+
+  // Sustituye términos equivalentes dentro de frases completas.
+  V2_TERM_EQUIVS.forEach(group=>{
+    const normalized=group.map(v2Norm);
+    normalized.forEach(term=>{
+      if(!term||!n.includes(term))return;
+      normalized.forEach(alt=>{
+        if(alt)out.add(n.replace(term,alt));
+      });
+    });
+    if(normalized.includes(n)) normalized.forEach(x=>out.add(x));
+  });
+
+  // Acepta alternativas escritas explícitamente con "o" o "/".
+  n.split(/\s+(?:o|u)\s+|\s*\/\s*/).forEach(part=>{
+    if(part.length>=4)out.add(part.trim());
+  });
+  if(n.includes('orl')){out.add('otorrino');out.add('otorrinolaringologo');}
+  return [...new Set([...out].map(v2Norm).filter(Boolean))];
+}
+
+function v2ShortLabel(label){
+  let s=String(label||'').trim();
+  const exact={
+    'Tomografía computarizada de haz cónico':'CBCT',
+    'Radiografía panorámica':'Panorámica',
+    'Radiografía cefalométrica':'Cefalometría',
+    'Radiografía cefalométrica lateral':'Cefalometría lateral',
+    'Articulación temporomandibular':'ATM',
+    'Ionómero de vidrio modificado con resina':'Ionómero mod. con resina',
+    'Bloqueo del nervio alveolar inferior':'Bloqueo alveolar inferior',
+    'Pérdida de inserción clínica':'Pérdida de inserción',
+    'Cantidad o dosis administrada':'Dosis administrada',
+    'Técnica o tipo de inyección':'Técnica de inyección',
+    'Peso y edad cuando influyen en la dosificación':'Peso y edad',
+    'Retracción gingival cuando está indicada':'Retracción gingival',
+    'Controlar la enfermedad y detener su progresión':'Control de la enfermedad',
+    'Preservar la mayor cantidad posible de tejido sano':'Preservar tejido sano',
+    'Facilitar higiene y mantenimiento':'Facilitar higiene',
+    'Tomografía computarizada de haz cónico (CBCT)':'CBCT',
+    'Prótesis parcial removible':'PPR',
+    'Diamino fluoruro de plata':'SDF'
+  };
+  if(exact[s])return exact[s];
+
+  s=s
+    .replace(/\s+cuando (?:está|este|sea|sean) (?:indicad[oa]s?|necesari[oa]s?).*$/i,'')
+    .replace(/\s+cuando (?:se )?(?:requiera|requieren|corresponda).*$/i,'')
+    .replace(/\s+según el caso.*$/i,'')
+    .replace(/\s+de acuerdo con el caso.*$/i,'')
+    .replace(/la mayor cantidad posible de /i,'')
+    .replace(/tomografía computarizada de haz cónico/ig,'CBCT')
+    .replace(/articulación temporomandibular/ig,'ATM')
+    .replace(/radiografía panorámica/ig,'Panorámica')
+    .replace(/bloqueo del nervio alveolar inferior/ig,'Bloqueo alveolar inferior')
+    .replace(/ionómero de vidrio modificado con resina/ig,'Ionómero mod. con resina')
+    .trim();
+
+  // Si sigue siendo una oración larga, conserva la primera idea clínica completa.
+  if(s.length>42){
+    const cuts=[' y ',' para ',' mediante ',', ','; '];
+    for(const sep of cuts){
+      const i=s.toLowerCase().indexOf(sep);
+      if(i>=14&&i<=40){s=s.slice(0,i).trim();break;}
+    }
+  }
+  if(s.length>46){
+    const cut=s.slice(0,43).lastIndexOf(' ');
+    s=s.slice(0,cut>24?cut:43).trim()+'…';
+  }
+  return s;
+}
+window.v2ShortLabel=v2ShortLabel;
 function v2OppositeConflict(a,b){
   const A=new Set(v2Norm(a).split(' ').filter(Boolean));
   const B=new Set(v2Norm(b).split(' ').filter(Boolean));
