@@ -459,7 +459,7 @@ function showHelp() {
       <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 30 segundos</b>.</li>
       <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
       <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 30 segundos.</li>
-      <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
+      <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 a 8 valen ×3</b>.</li>
       <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
       <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
       <li>Al tercer error pierde el control y el turno pasa al rival.</li>
