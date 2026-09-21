@@ -282,6 +282,20 @@ function v2Match(text, q=questions[roundIndex]){
   const input=v2Norm(text); if(!input||!q) return null;
   let best=null;
   const isCurrent=(Array.isArray(questions)&&q===questions[roundIndex]);
+
+  const partialOwners=[];
+  if(input.length>=5){
+    q.a.forEach((ans,idx)=>{
+      const aliases=v2Aliases(ans[0]);
+      const hit=aliases.some(alias=>{
+        const a=' '+alias+' ',i=' '+input+' ';
+        return a.includes(i) || (input.split(' ').length>=2 && alias.includes(input));
+      });
+      if(hit)partialOwners.push(idx);
+    });
+  }
+  const uniquePartial=partialOwners.length===1?partialOwners[0]:-1;
+
   q.a.forEach((ans,idx)=>{
     if(isCurrent && revealed[idx] && phase!=='faceoff' && phase!=='sudden') return;
     let score=0;
@@ -289,10 +303,11 @@ function v2Match(text, q=questions[roundIndex]){
       let candidate=0;
       if(input===alias) candidate=1;
       else candidate=Math.max(v2ContainmentScore(input,alias),.58*v2Lev(input,alias)+.42*v2Jaccard(input,alias));
+      if(idx===uniquePartial && candidate<.88) candidate=.88;
       if(v2OppositeConflict(input,alias)) candidate=Math.min(candidate,.45);
       score=Math.max(score,candidate);
     });
-    if(!best||score>best.score) best={idx,score,label:ans[0],points:Number(ans[1])||0};
+    if(!best||score>best.score) best={idx,score,label:ans[0],shortLabel:v2ShortLabel(ans[0]),points:Number(ans[1])||0};
   });
   return best;
 }
@@ -488,7 +503,7 @@ function v2ResultsTable(){
 finishGame=function(){
   stopTimer();phase='over';updateTurnUI();v2RecordRound();
   if(scores[0]===scores[1]){
-    const used=new Set(questions.map(q=>q.q));const suddenBase=(typeof spFilteredBank==='function'?spFilteredBank(typeof specialtySelected==='string'?specialtySelected:'general'):questionPool);const q=shuffle(suddenBase.filter(x=>!used.has(x.q)))[0]||shuffle(suddenBase)[0]||shuffle(questionPool)[0];questions.push(q);roundIndex=questions.length-1;revealed=Array(q.a.length).fill(false);phase='sudden';$('#question').textContent=q.q;$('#round').textContent='⚡ MUERTE SÚBITA';$('#progress').textContent='DESEMPATE';const box=$('#answers');box.innerHTML='';q.a.forEach((answer,idx)=>{const b=document.createElement('button');b.className='answer covered';b.innerHTML=`<span class="num">${idx+1}</span><span class="txt">${answer[0]}</span><span class="pts">${answer[1]}</span>`;box.appendChild(b);});updateTurnUI();v2StartFaceoff(true);return;
+    const used=new Set(questions.map(q=>q.q));const suddenBase=(typeof spFilteredBank==='function'?spFilteredBank(typeof specialtySelected==='string'?specialtySelected:'general'):questionPool);const q=shuffle(suddenBase.filter(x=>!used.has(x.q)))[0]||shuffle(suddenBase)[0]||shuffle(questionPool)[0];questions.push(q);roundIndex=questions.length-1;revealed=Array(q.a.length).fill(false);phase='sudden';$('#question').textContent=q.q;$('#round').textContent='⚡ MUERTE SÚBITA';$('#progress').textContent='DESEMPATE';const box=$('#answers');box.innerHTML='';q.a.forEach((answer,idx)=>{const b=document.createElement('button');b.className='answer covered';const displayLabel=v2ShortLabel(answer[0]);b.innerHTML=`<span class="num">${idx+1}</span><span class="txt" title="${v2Escape(answer[0])}">${v2Escape(displayLabel)}</span><span class="pts">${answer[1]}</span>`;box.appendChild(b);});updateTurnUI();v2StartFaceoff(true);return;
   }
   v2DeclareWinner(scores[0]>scores[1]?0:1,false);
 };
