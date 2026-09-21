@@ -1,8 +1,8 @@
 'use strict';
 
-const ENGAGEMENT_VERSION='3.0.15';
+const ENGAGEMENT_VERSION='3.0.16';
 const ED_ACH_KEY='dentistas-achievements-v1';
-let edSession={rounds:0,totalStrikes:0,bankLosses:0,roundStats:{},recorded:new Set()};
+let edSession={rounds:0,totalStrikes:0,studentStrikes:0,bankLosses:0,studentBankLosses:0,roundStats:{},recorded:new Set()};
 let edFinalChallengeDone=false;
 let edChallenge=null;
 
@@ -50,11 +50,11 @@ revealAnswer=function(idx,btn){
 
 const edBaseStrike=addStrike;
 addStrike=function(reason='manual'){
-  const q=questions?.[roundIndex],oldPhase=phase,oldBank=bank;
+  const q=questions?.[roundIndex],oldPhase=phase,oldBank=bank,oldTeam=currentTeam;
   const r=edBaseStrike(reason);
   const st=edStat(q);
-  if((oldPhase==='play'&&strikes>0)||(oldPhase==='steal'&&phase==='over')){st.strikes++;edSession.totalStrikes++;}
-  if(oldPhase==='steal'&&oldBank>0&&bank===0)edSession.bankLosses++;
+  if((oldPhase==='play'&&strikes>0)||(oldPhase==='steal'&&phase==='over')){st.strikes++;edSession.totalStrikes++;if(oldTeam===0)edSession.studentStrikes++;}
+  if(oldPhase==='steal'&&oldBank>0&&bank===0){edSession.bankLosses++;if(oldTeam===0)edSession.studentBankLosses++;}
   return r;
 };
 
@@ -82,7 +82,7 @@ nextRound=function(){edRecordRound();edAdaptiveNext();return edBaseNext();};
 
 const edBaseStart=startNewGame;
 startNewGame=function(){
-  edSession={rounds:0,totalStrikes:0,bankLosses:0,roundStats:{},recorded:new Set()};edFinalChallengeDone=false;edChallenge=null;
+  edSession={rounds:0,totalStrikes:0,studentStrikes:0,bankLosses:0,studentBankLosses:0,roundStats:{},recorded:new Set()};edFinalChallengeDone=false;edChallenge=null;
   return edBaseStart();
 };
 
@@ -141,9 +141,9 @@ const ED_ACHIEVEMENTS=[
   {id:'anestesia25',icon:'💉',name:'Anestesiólogo',desc:'Completa 25 preguntas de Anestesia Dental.',test:s=>(s.counts.anestesia||0)>=25},
   {id:'endo25',icon:'🔬',name:'Endodoncista',desc:'Completa 25 preguntas de Endodoncia.',test:s=>(s.counts.endodoncia||0)>=25},
   {id:'perio25',icon:'🩸',name:'Maestro periodontal',desc:'Completa 25 preguntas de Periodoncia.',test:s=>(s.counts.periodoncia||0)>=25},
-  {id:'sinCaries',icon:'🦷',name:'Sin caries',desc:'Termina 8 rondas de Operatoria sin errores.',test:()=>specialtySelected==='operatoria'&&edSession.rounds>=8&&edSession.totalStrikes===0},
-  {id:'diagnostico',icon:'🎯',name:'Diagnóstico perfecto',desc:'Completa una partida de 8 rondas sin ningún strike.',test:()=>edSession.rounds>=8&&edSession.totalStrikes===0},
-  {id:'banco8',icon:'🏦',name:'8 rondas sin perder banco',desc:'Completa 8 rondas sin perder un banco en un robo fallido.',test:()=>edSession.rounds>=8&&edSession.bankLosses===0}
+  {id:'sinCaries',icon:'🦷',name:'Sin caries',desc:'Termina 8 rondas de Operatoria sin errores propios.',test:()=>specialtySelected==='operatoria'&&edSession.rounds>=8&&(window.cpuMode?edSession.studentStrikes:edSession.totalStrikes)===0},
+  {id:'diagnostico',icon:'🎯',name:'Diagnóstico perfecto',desc:'Completa una partida de 8 rondas sin ningún strike propio.',test:()=>edSession.rounds>=8&&(window.cpuMode?edSession.studentStrikes:edSession.totalStrikes)===0},
+  {id:'banco8',icon:'🏦',name:'8 rondas sin perder banco',desc:'Completa 8 rondas sin perder un banco en un robo fallido propio.',test:()=>edSession.rounds>=8&&(window.cpuMode?edSession.studentBankLosses:edSession.bankLosses)===0}
 ];
 function edUnlockToast(a){
   const t=document.createElement('div');t.className='achievementToast';t.innerHTML='<span>'+a.icon+'</span><div><small>LOGRO DESBLOQUEADO</small><b>'+a.name+'</b></div>';document.body.appendChild(t);
