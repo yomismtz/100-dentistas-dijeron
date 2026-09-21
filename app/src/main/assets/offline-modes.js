@@ -293,7 +293,7 @@ function omSettings(){
     '<label class="settingRow"><input id="spj" type="checkbox" '+(offlineSettings.projector?'checked':'')+'> 📺 Proyector</label>'+
     '<label class="settingRow"><input id="samb" type="checkbox" '+(offlineSettings.ambient?'checked':'')+'> 🎵 Ambiente discreto</label>'+
     '<label class="settingRow"><input id="ss" type="checkbox" '+(v2Sound?'checked':'')+'> 🔊 Sonidos</label>'+
-    '<label class="settingRow"><input id="sm" type="checkbox" '+(tvSettings.music?'checked':'')+'> 🎶 Música</label>'+
+    '<label class="settingRow"><input id="sm" type="checkbox" '+(tvSettings.music?'checked':'')+'> 🎶 Música ambiental</label>'+
     '<label class="settingRow"><input id="sfx" type="checkbox" '+(tvSettings.effects?'checked':'')+'> 🔔 Efectos</label>'+
     '<label class="settingRow"><input id="sap" type="checkbox" '+(tvSettings.applause?'checked':'')+'> 👏 Aplausos</label>'+
     '<div class="menuStack"><button id="ptest">🎙️ PROBAR PRESENTADOR</button><button id="saveOm" class="setupStart">GUARDAR</button></div>');
