@@ -1,13 +1,13 @@
 'use strict';
 
 // 100 Dentistas Dijeron · Bancos por especialidad
-const SPECIALTY_VERSION = '3.0.2-classroom-research-beta';
+const SPECIALTY_VERSION = '3.0.13-randomized-specialty-order';
 const SPECIALTY_TARGET = 100;
 const SPECIALTY_HISTORY_KEY = 'dentistas-specialty-history-v1';
 const SPECIALTY_PREF_KEY = 'dentistas-specialty-preferences-v1';
 
 const SPECIALTY_DEFS = [
-  {id:'general', name:'TODO AL AZAR', icon:'🎲', desc:'Mezcla de todas las áreas', always:true},
+  {id:'general', name:'TODAS LAS ESPECIALIDADES', icon:'🦷', desc:'Mezcla preguntas de todas las áreas', always:true},
   {id:'operatoria', name:'OPERATORIA DENTAL', icon:'🦷', desc:'Cariología, adhesión, restauraciones y materiales'},
   {id:'anestesia', name:'ANESTESIA DENTAL', icon:'💉', desc:'Anestésicos, técnicas, bloqueos y complicaciones'},
   {id:'ortopedia', name:'ORTOPEDIA DENTAL', icon:'🦴', desc:'Crecimiento, función y ortopedia dentofacial'},
@@ -114,21 +114,51 @@ function spReadHistory(){
 }
 function spWriteHistory(h){ try{localStorage.setItem(SPECIALTY_HISTORY_KEY,JSON.stringify(h));}catch(_){} }
 
-function spFreshPool(id,pool){
-  const h=spReadHistory();
-  const used=Array.isArray(h[id])?h[id]:[];
-  let fresh=pool.filter(q=>!used.includes(q.q));
-  if(fresh.length<GAME_SIZE){
-    h[id]=[];
-    spWriteHistory(h);
-    fresh=[...pool];
-  }
-  return {fresh,history:h};
+function spHistoryScope(id){
+  return (id||'general')+'|'+(specialtyDifficulty||'mix');
 }
 
-function spRemember(id,selected,history){
-  const prev=Array.isArray(history[id])?history[id]:[];
-  history[id]=[...selected.map(q=>q.q),...prev].filter((x,i,a)=>a.indexOf(x)===i).slice(0,Math.max(180,SPECIALTY_TARGET));
+function spFreshPool(id,pool){
+  const h=spReadHistory();
+  const scope=spHistoryScope(id);
+  const used=Array.isArray(h[scope])?h[scope]:[];
+
+  // No borra el historial cuando quedan pocas preguntas.
+  // Bloquea las más recientes y reutiliza primero las más antiguas solo cuando hace falta.
+  const maxBlocked=Math.max(0,pool.length-GAME_SIZE);
+  const blockCount=Math.min(GAME_SIZE*2,maxBlocked);
+  const blocked=new Set(used.slice(0,blockCount));
+  let fresh=pool.filter(q=>!blocked.has(q.q));
+
+  if(fresh.length<GAME_SIZE){
+    const rank=new Map();
+    used.forEach((name,idx)=>{if(!rank.has(name))rank.set(name,idx);});
+    const fallback=[...pool]
+      .filter(q=>!fresh.includes(q))
+      .sort((a,b)=>(rank.get(b.q)??9999)-(rank.get(a.q)??9999));
+    fresh=[...fresh,...fallback];
+  }
+  return {fresh,history:h,scope};
+}
+
+function spOrderForNewGame(selected,history,scope){
+  if(selected.length<2)return [...selected];
+  const firstKey=scope+'::first';
+  const recentFirst=Array.isArray(history[firstKey])?history[firstKey].slice(0,5):[];
+  let eligible=selected.filter(q=>!recentFirst.includes(q.q));
+  if(!eligible.length)eligible=[...selected];
+  const first=shuffle(eligible)[0];
+  const rest=shuffle(selected.filter(q=>q!==first));
+  return [first,...rest];
+}
+
+function spRemember(id,selected,history,scope=spHistoryScope(id)){
+  const prev=Array.isArray(history[scope])?history[scope]:[];
+  history[scope]=[...selected.map(q=>q.q),...prev].slice(0,Math.max(240,SPECIALTY_TARGET*2));
+
+  const firstKey=scope+'::first';
+  const prevFirst=Array.isArray(history[firstKey])?history[firstKey]:[];
+  if(selected[0])history[firstKey]=[selected[0].q,...prevFirst].slice(0,12);
   spWriteHistory(history);
 }
 
@@ -157,7 +187,8 @@ chooseGameQuestions=function(){
     questions=[];
     return;
   }
-  const {fresh,history}=spFreshPool(id,base);
+  const {fresh,history,scope}=spFreshPool(id,base);
+  let chosen=[];
   if(id==='general'){
     const specialtyPools={};
     SPECIALTY_DEFS.filter(d=>d.id!=='general').forEach(d=>{
@@ -165,18 +196,20 @@ chooseGameQuestions=function(){
       if(arr.length) specialtyPools[d.id]=arr;
     });
     const ids=shuffle(Object.keys(specialtyPools));
-    const chosen=[];
     while(chosen.length<GAME_SIZE&&ids.length){
       const sid=ids.shift();
       const candidates=shuffle(specialtyPools[sid]).filter(q=>!chosen.includes(q));
       if(candidates.length) chosen.push(candidates[0]);
     }
     if(chosen.length<GAME_SIZE) shuffle(fresh).forEach(q=>{if(chosen.length<GAME_SIZE&&!chosen.includes(q))chosen.push(q);});
-    questions=chosen.slice(0,GAME_SIZE);
   } else {
-    questions=spDiverseSample(fresh,GAME_SIZE);
+    chosen=spDiverseSample(fresh,GAME_SIZE);
   }
-  spRemember(id,questions,history);
+
+  // La selección y el orden son dos aleatorizaciones distintas.
+  // Además, evita usar como pregunta 1 una que haya abierto partidas recientes.
+  questions=spOrderForNewGame(chosen.slice(0,GAME_SIZE),history,scope);
+  spRemember(id,questions,history,scope);
 };
 
 function spBadgeText(stat,id){
@@ -268,7 +301,7 @@ function spShowSpecialties(){
 }
 
 function spSpecialtyName(){
-  return SPECIALTY_DEFS.find(x=>x.id===specialtySelected)?.name || 'TODO AL AZAR';
+  return SPECIALTY_DEFS.find(x=>x.id===specialtySelected)?.name || 'TODAS LAS ESPECIALIDADES';
 }
 
 const spOrigShowRound=showRound;
