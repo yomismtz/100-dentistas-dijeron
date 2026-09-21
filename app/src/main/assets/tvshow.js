@@ -113,7 +113,7 @@ function tvSfx(name){
   else if(name==='triple'){ [392,523,659,784].forEach((f,i)=>tvTone(f,i*.085,.15,.05,'triangle')); }
   else if(name==='steal'){ tvTone(294,0,.12,.04,'sawtooth');tvTone(370,.13,.12,.045,'sawtooth');tvTone(494,.27,.2,.05,'triangle'); }
   else if(name==='bank'){ tvTone(523,0,.08,.04,'triangle');tvTone(659,.08,.09,.045,'triangle');tvTone(784,.17,.13,.05,'triangle'); }
-  else if(name==='review'){ tvTone(330,0,.13,.04,'triangle');tvTone(392,.14,.13,.042,'triangle');tvTone(494,.29,.14,.045,'triangle');tvTone(659,.46,.30,.052,'triangle'); }
+  else if(name==='review'){ tvTone(330,0,.13,.04,'triangle');tvTone(392,.14,.13,.042,'triangle');tvTone(494,.29,.14,.045,'triangle');tvTone(659,.46,.30,.052,'triangle'); }\n  else if(name==='nav'){ tvTone(420,0,.045,.018,'sine');tvTone(630,.045,.055,.022,'triangle'); }\n  else if(name==='undo'){ tvTone(660,0,.06,.022,'triangle');tvTone(440,.07,.08,.02,'triangle'); }\n  else if(name==='reset'){ [392,494,587].forEach((f,i)=>tvTone(f,i*.055,.08,.018,'sine')); }\n  else if(name==='startGame'){ [392,523,659,784].forEach((f,i)=>tvTone(f,i*.07,.14,.03,'triangle')); }\n  else if(name==='muteOff'){ tvTone(523,0,.05,.022,'sine');tvTone(784,.07,.09,.025,'triangle'); }
   else if(name==='applause'){ tvApplause(1.4); }
   else if(name==='bigApplause'){ tvApplause(2.7); }
   else if(name==='drumroll'){ tvDrumroll(); }
@@ -298,7 +298,7 @@ v2Settings = function(){
   openModal(`<h2>⚙️ ACCESIBILIDAD Y EXPERIENCIA</h2>
     <label class="settingRow">Tiempo por respuesta <select id="setTimer"><option>10</option><option>15</option><option>20</option></select></label>
     <label class="settingRow"><input id="setSound" type="checkbox" ${v2Sound?'checked':''}> Sonidos básicos</label>
-    <label class="settingRow"><input id="setMusic" type="checkbox" ${tvSettings.music?'checked':''}> 🎵 Música / fanfarrias</label>
+    <label class="settingRow"><input id="setMusic" type="checkbox" ${tvSettings.music?'checked':''}> 🎵 Música ambiental / fanfarrias</label>
     <label class="settingRow"><input id="setEffects" type="checkbox" ${tvSettings.effects?'checked':''}> 🔔 Efectos de juego</label>
     <label class="settingRow"><input id="setApplause" type="checkbox" ${tvSettings.applause?'checked':''}> 👏 Aplausos / ovación</label>
     <label class="settingRow"><input id="setVibration" type="checkbox" ${tvSettings.vibration?'checked':''}> 📳 Vibración</label>
