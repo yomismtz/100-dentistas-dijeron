@@ -194,7 +194,8 @@ function showRound(reset = true) {
   q.a.forEach((answer, idx) => {
     const btn = document.createElement('button');
     btn.className = 'answer covered';
-    btn.innerHTML = `<span class="num">${idx + 1}</span><span class="txt">${answer[0]}</span><span class="pts">${answer[1]}</span>`;
+    const displayLabel=(typeof v2ShortLabel==='function')?v2ShortLabel(answer[0]):answer[0];
+    btn.innerHTML = `<span class="num">${idx + 1}</span><span class="txt" title="${String(answer[0]).replace(/"/g,'&quot;')}">${displayLabel}</span><span class="pts">${answer[1]}</span>`;
     btn.addEventListener('click', () => revealAnswer(idx, btn));
     box.appendChild(btn);
   });
