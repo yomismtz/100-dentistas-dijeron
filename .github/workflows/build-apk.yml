@@ -107,7 +107,7 @@ jobs:
           mkdir -p app/build/play-support/native-symbols
           cat > app/build/play-support/native-symbols/NO_NATIVE_CODE.txt <<'EOF'
           Así los Dentistas lo Dijeron v3.0.16
-          applicationId: com.uam.cientodentistas
+          applicationId: asi.losdentistaslodijeron
           versionCode: 33
           versionName: 3.0.16-cpu-practice
 
