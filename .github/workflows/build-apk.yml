@@ -56,6 +56,9 @@ jobs:
           node --check app/src/main/assets/v3-show.js
           node --check app/src/main/assets/v3-academic.js
           node --check app/src/main/assets/v3-core.js
+          node --check app/src/main/assets/quick-streak.js
+          node --check app/src/main/assets/engagement.js
+          node --check app/src/main/assets/cpu-opponent.js
 
       - name: Set up JDK 17
         uses: actions/setup-java@v5
@@ -98,6 +101,24 @@ jobs:
         run: |
           gradle --no-daemon bundleRelease
 
+      - name: Preparar archivos de Play Console
+        run: |
+          test -s app/build/outputs/mapping/release/mapping.txt
+          mkdir -p app/build/play-support/native-symbols
+          cat > app/build/play-support/native-symbols/NO_NATIVE_CODE.txt <<'EOF'
+          Así los Dentistas lo Dijeron v3.0.16
+          applicationId: com.uam.cientodentistas
+          versionCode: 33
+          versionName: 3.0.16-cpu-practice
+
+          Esta aplicación no empaqueta bibliotecas nativas .so.
+          Por lo tanto no existen símbolos de depuración nativos que correspondan a este AAB.
+          Google Play no debería requerir un archivo de símbolos nativos para esta versión.
+          EOF
+          (cd app/build/play-support/native-symbols && zip -q ../native-debug-symbols-NO-NATIVE-CODE.zip NO_NATIVE_CODE.txt)
+          sha256sum app/build/outputs/bundle/release/app-release.aab | tee app/build/play-support/app-release.aab.sha256
+          sha256sum app/build/outputs/mapping/release/mapping.txt | tee app/build/play-support/mapping.txt.sha256
+
       - name: Verificar APK y calcular SHA-256
         run: |
           test -s app/build/outputs/apk/debug/app-debug.apk
@@ -116,5 +137,23 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: 100-dentistas-dijeron-release-aab
-          path: app/build/outputs/bundle/release/app-release.aab
+          path: |
+            app/build/outputs/bundle/release/app-release.aab
+            app/build/play-support/app-release.aab.sha256
+          if-no-files-found: error
+
+      - name: Upload ReTrace mapping
+        uses: actions/upload-artifact@v4
+        with:
+          name: 100-dentistas-dijeron-retrace-mapping
+          path: |
+            app/build/outputs/mapping/release/mapping.txt
+            app/build/play-support/mapping.txt.sha256
+          if-no-files-found: error
+
+      - name: Upload native symbols status
+        uses: actions/upload-artifact@v4
+        with:
+          name: 100-dentistas-dijeron-native-symbols-status
+          path: app/build/play-support/native-debug-symbols-NO-NATIVE-CODE.zip
           if-no-files-found: error
