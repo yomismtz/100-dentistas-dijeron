@@ -11,4 +11,11 @@ android {
         versionCode 33
         versionName '3.0.16-cpu-practice'
     }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
 }
