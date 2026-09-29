@@ -34,7 +34,7 @@ const EXTRA_BANK_FILES = [
   ['laboratorio_ortodoncia_ortopedia_300.json','Laboratorio de ortodoncia y ortopedia']
 ];
 
-let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'CARLOS' };
+let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'NOVA', playerCharacter:'NOVA', difficulty:'mixed' };
 let cpuTimerHandle = null;
 let questionPoolPromise = null;
 
@@ -141,10 +141,47 @@ function dedupeQuestionPool(items) {
   });
 }
 
+function characterByName(name) {
+  return (Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : []).find(ch => ch.name === name) || null;
+}
+
+function specialtyMatchesArea(specialty, area) {
+  const norm = v => String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const s = norm(specialty), a = norm(area);
+  const aliases = {
+    'ortodoncia':['ortodoncia'],
+    'periodoncia':['periodoncia'],
+    'cirugia bucal':['cirugia bucal'],
+    'cirugia maxilofacial':['cirugia oral y maxilofacial','radiologia oral y maxilofacial'],
+    'operatoria dental':['operatoria dental','restauradora','materiales dentales'],
+    'patologia bucal':['patologia bucal','medicina bucal'],
+    'odontopediatria':['odontopediatria'],
+    'endodoncia':['endodoncia'],
+    'dentista general':[],
+    'asistente dental':['realizacion del expediente clinico'],
+    'higienista dental':['odontologia preventiva','salud publica','periodoncia']
+  };
+  return (aliases[s] || [s]).some(term => term && a.includes(term));
+}
+
+function questionDifficulty(q) {
+  const text = String(q?.q || '').toLowerCase();
+  const area = areaForQuestion(q);
+  const forcedCharacters = [gameConfig.playerCharacter, gameConfig.mode === 'cpu' ? gameConfig.cpuCharacter : null]
+    .filter(Boolean).map(characterByName).filter(Boolean);
+  if (forcedCharacters.some(ch => specialtyMatchesArea(ch.specialty, area))) return 'advanced';
+  if (/caso|diagn[oó]st|tratamiento|conducta|complicaci[oó]n|diferencial|indicaci[oó]n|contraindicaci[oó]n|mecanismo|pron[oó]stico/.test(text)) return 'advanced';
+  if (/define|identifica|nombre|funci[oó]n|qu[eé] es|cu[aá]l es/.test(text)) return 'basic';
+  return 'intermediate';
+}
+
 function filteredPool() {
   const selected = gameConfig.selectedAreas || [];
-  if (!selected.length) return [...questionPool];
-  return questionPool.filter(q => selected.includes(areaForQuestion(q)));
+  let pool = selected.length ? questionPool.filter(q => selected.includes(areaForQuestion(q))) : [...questionPool];
+  const difficulty = gameConfig.difficulty || 'mixed';
+  if (difficulty === 'mixed') return pool;
+  const exact = pool.filter(q => questionDifficulty(q) === difficulty);
+  return exact.length >= GAME_SIZE ? exact : pool;
 }
 
 let questionPool = [];
@@ -658,8 +695,7 @@ function wireAreaPicker() {
   });
   startBtn.onclick = () => {
     gameConfig.selectedAreas = [...chosen];
-    closeModal(false);
-    startNewGame();
+    showDifficultySelector();
   };
 }
 
@@ -668,6 +704,40 @@ function showAreaSelector(mode) {
   const label = mode === 'cpu' ? 'CONTRA LA COMPUTADORA' : mode === '1v1' ? '1 CONTRA 1' : 'EQUIPO CONTRA EQUIPO';
   openModal(areaSelectorHtml(label));
   wireAreaPicker();
+}
+
+function showDifficultySelector() {
+  openModal(`
+    <h2>🎓 DIFICULTAD</h2>
+    <p>Elige la dificultad general. La especialidad de tu personaje —y la del rival especialista— siempre se juega en nivel avanzado.</p>
+    <div class="menuStack">
+      <button data-difficulty="basic">🟢 BÁSICO</button>
+      <button data-difficulty="intermediate">🟡 INTERMEDIO</button>
+      <button data-difficulty="advanced">🔴 AVANZADO</button>
+      <button data-difficulty="mixed">🎲 MIXTO</button>
+    </div>`);
+  document.querySelectorAll('[data-difficulty]').forEach(btn => btn.onclick = () => {
+    gameConfig.difficulty = btn.dataset.difficulty;
+    closeModal(false);
+    startNewGame();
+  });
+}
+
+function showPlayerCharacterSelector(next) {
+  const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
+  openModal(`
+    <h2>🦷 ELIGE TU PERSONAJE</h2>
+    <p>NOVA está disponible desde el inicio. Los especialistas se desbloquean con tu progreso académico.</p>
+    <div class="cpuPicker">
+      ${chars.map(ch => {
+        const unlocked = typeof window.DentistasCharacterUnlocked === 'function' ? window.DentistasCharacterUnlocked(ch) : ch.name === 'NOVA';
+        return `<button type="button" data-player="${ch.name}" ${unlocked?'':'disabled'}>${unlocked?'':'🔒 '}${ch.name}<br><small>${ch.specialty}</small></button>`;
+      }).join('')}
+    </div>`);
+  document.querySelectorAll('[data-player]:not([disabled])').forEach(btn => btn.onclick = () => {
+    gameConfig.playerCharacter = btn.dataset.player;
+    if (typeof next === 'function') next();
+  });
 }
 
 function showTeamSetup() {
