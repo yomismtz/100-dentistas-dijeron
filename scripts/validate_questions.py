@@ -77,8 +77,13 @@ for filename in FILES:
             errors.append(f'{prefix}: los puntos deben sumar 100; suman {point_sum}')
 
         point_values = [answer[1] for answer in answers if isinstance(answer, list) and len(answer) == 2 and isinstance(answer[1], (int, float))]
-        if len(point_values) == len(answers) and any(point_values[i] < point_values[i + 1] for i in range(len(point_values) - 1)):
-            errors.append(f'{prefix}: las respuestas deben ordenarse de mayor a menor ponderación; puntos={point_values}')
+        expected_weights = {
+            3: [45, 35, 20],
+            4: [35, 30, 20, 15],
+            5: [30, 25, 20, 15, 10],
+        }.get(len(answers))
+        if len(point_values) == len(answers) and point_values != expected_weights:
+            errors.append(f'{prefix}: ponderación lúdica esperada {expected_weights}; encontrada {point_values}')
 
 if total != 116:
     errors.append(f'La base debe contener 116 preguntas; contiene {total}')
@@ -168,5 +173,5 @@ if errors:
     sys.exit(1)
 
 print(f'VALIDACIÓN CORRECTA: {total} preguntas VS + {parcial_total} reactivos de Juega y Aprueba.')
-print('VS: respuestas únicas, 3–5 por pregunta, 100 puntos, ponderación descendente y traducción inglesa completa.')
+print('VS: respuestas únicas, 3–5 por pregunta, 100 puntos, ponderación lúdica normalizada y traducción inglesa completa.')
 print('Juega y Aprueba: 200 IDs únicos, índices correctos válidos, 40 reactivos por examen y traducción inglesa completa.')
