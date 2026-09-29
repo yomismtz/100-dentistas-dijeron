@@ -212,3 +212,7 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 .landingOpen:hover{filter:brightness(1.1);transform:translateY(-2px)}
 @media(max-height:520px){.landingPanel{margin-bottom:12px;padding:10px 16px}.landingPanel h1{font-size:clamp(26px,4.2vw,46px)}.landingPanel p{margin:.25rem auto .55rem}.landingOpen{padding:.65rem 1.2rem}}
 @media(max-width:600px){.landingPanel{width:92vw;border-radius:18px}.landingArt{object-position:center 42%}.landingEyebrow{letter-spacing:.08em}}
+
+.landingLogo{display:block;width:min(620px,72vw);max-width:100%;max-height:29vh;object-fit:contain;margin:.05rem auto .25rem;filter:drop-shadow(0 7px 18px #000b) drop-shadow(0 0 12px #d6aa4a33)}
+.landingTitleText{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-height:520px){.landingLogo{max-height:25vh;width:min(500px,62vw)}}
