@@ -128,14 +128,14 @@ function stopTimer() {
   }
 }
 
-function startTimer() {
+function startTimer(initialSeconds = TURN_SECONDS) {
   stopTimer();
   if (phase === 'over' || !gameVisible()) {
     updateTimerUI();
     return;
   }
 
-  timerRemaining = TURN_SECONDS;
+  timerRemaining = Math.max(1, Number(initialSeconds) || TURN_SECONDS);
   updateTimerUI();
 
   timerHandle = setInterval(() => {
@@ -225,6 +225,7 @@ function showRoundTransition() {
 
 function showRound(reset = true) {
   if (!questions.length) return;
+  const preservedTime = timerRemaining;
   stopTimer();
   roundIndex = Math.max(0, Math.min(roundIndex, questions.length - 1));
 
@@ -250,7 +251,7 @@ function showRound(reset = true) {
   box.innerHTML = '';
   q.a.forEach((answer, idx) => {
     const btn = document.createElement('button');
-    btn.className = 'answer covered';
+    btn.className = revealed[idx] ? 'answer revealed' : 'answer covered';
     btn.innerHTML = `<span class="num">${idx + 1}</span><span class="txt">${aText(q, idx)}</span><span class="pts">${answer[1]}</span>`;
     btn.addEventListener('click', () => revealAnswer(idx, btn));
     box.appendChild(btn);
@@ -258,7 +259,7 @@ function showRound(reset = true) {
 
   updateTurnUI();
   if (reset) showRoundTransition();
-  startTimer();
+  startTimer(reset ? TURN_SECONDS : preservedTime);
 }
 
 function revealAnswer(idx, btn) {
