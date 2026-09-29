@@ -1,5 +1,8 @@
 'use strict';
 
+const charLang = () => window.DentistasI18n?.getLang?.() || 'es';
+const charText = (es,en) => charLang() === 'en' ? en : es;
+
 const CHARACTERS = [
   { name: 'MOLARÍN', icon: '🦷', subtitle: 'El clásico' },
   { name: 'CANINO', icon: '😁', subtitle: 'El competitivo' },
@@ -74,8 +77,8 @@ updateTurnUI = function updateTurnUIWithCharacters() {
   if (!turn || phase === 'over') return;
   const character = characterFor(currentTeam);
   turn.textContent = phase === 'steal'
-    ? `ROBO: ${character.icon} ${teamNames[currentTeam]}`
-    : `TURNO: ${character.icon} ${teamNames[currentTeam]}`;
+    ? `${charText('ROBO','STEAL')}: ${character.icon} ${teamNames[currentTeam]}`
+    : `${charText('TURNO','TURN')}: ${character.icon} ${teamNames[currentTeam]}`;
 };
 
 function setupCharacterCards(teamIndex, container) {
@@ -116,34 +119,34 @@ function setupCharacterCards(teamIndex, container) {
 function showCharacterSetup() {
   stopTimer();
   openModal(`
-    <h2>ELIGE TUS EQUIPOS Y PERSONAJES</h2>
-    <p class="characterHint">Cada personaje es visual: ninguno da ventajas o puntos extra.</p>
+    <h2>${charText('ELIGE TUS EQUIPOS Y PERSONAJES','CHOOSE YOUR TEAMS AND CHARACTERS')}</h2>
+    <p class="characterHint">${charText('Cada personaje es visual: ninguno da ventajas o puntos extra.','Characters are visual only: none provide advantages or extra points.')}</p>
     <div class="setupTeams">
       <section class="setupTeam">
-        <h3>EQUIPO 1</h3>
+        <h3>${charText('EQUIPO 1','TEAM 1')}</h3>
         <input id="setupName1" class="teamInput" maxlength="18" value="${teamNames[0].replace(/&/g, '&amp;').replace(/"/g, '&quot;')}" aria-label="Nombre del equipo 1">
         <div id="charactersTeam1" class="characterGrid"></div>
       </section>
       <section class="setupTeam">
-        <h3>EQUIPO 2</h3>
+        <h3>${charText('EQUIPO 2','TEAM 2')}</h3>
         <input id="setupName2" class="teamInput" maxlength="18" value="${teamNames[1].replace(/&/g, '&amp;').replace(/"/g, '&quot;')}" aria-label="Nombre del equipo 2">
         <div id="charactersTeam2" class="characterGrid"></div>
       </section>
     </div>
-    <button id="confirmTeams" class="setupStart">COMENZAR PARTIDA · 6 RONDAS</button>
+    <button id="confirmTeams" class="setupStart">${charText('COMENZAR PARTIDA · 6 RONDAS','START GAME · 6 ROUNDS')}</button>
   `);
 
   setupCharacterCards(0, $('#charactersTeam1'));
   setupCharacterCards(1, $('#charactersTeam2'));
 
   $('#confirmTeams').onclick = () => {
-    const name1 = ($('#setupName1').value || 'EQUIPO 1').trim().toUpperCase().slice(0, 18);
-    const name2 = ($('#setupName2').value || 'EQUIPO 2').trim().toUpperCase().slice(0, 18);
+    const name1 = ($('#setupName1').value || charText('EQUIPO 1','TEAM 1')).trim().toUpperCase().slice(0, 18);
+    const name2 = ($('#setupName2').value || charText('EQUIPO 2','TEAM 2')).trim().toUpperCase().slice(0, 18);
     if (teamCharacters[0] === teamCharacters[1]) {
-      alert('Cada equipo debe elegir un personaje diferente.');
+      alert(charText('Cada equipo debe elegir un personaje diferente.','Each team must choose a different character.'));
       return;
     }
-    teamNames = [name1 || 'EQUIPO 1', name2 || 'EQUIPO 2'];
+    teamNames = [name1 || charText('EQUIPO 1','TEAM 1'), name2 || charText('EQUIPO 2','TEAM 2')];
     saveState();
     saveCharacterSettings();
     closeModal(false);
@@ -162,8 +165,8 @@ finishGame = function finishGameWithCharacters() {
     result = `
       <div class="winnerStage">
         <div class="winnerCharacters">${characterFor(0).icon} 🤝 ${characterFor(1).icon}</div>
-        <div class="winnerName">EMPATE</div>
-        <div class="winnerScore">${scores[0]} PUNTOS CADA EQUIPO</div>
+        <div class="winnerName">${charText('EMPATE','TIE')}</div>
+        <div class="winnerScore">${scores[0]} ${charText('PUNTOS CADA EQUIPO','POINTS EACH')}</div>
       </div>`;
   } else {
     const winner = scores[0] > scores[1] ? 0 : 1;
@@ -172,20 +175,20 @@ finishGame = function finishGameWithCharacters() {
     result = `
       <div class="winnerStage">
         <div class="winnerCharacters"><span>${character.icon}</span><span class="trophy">🏆</span></div>
-        <div class="winnerName">¡${teamNames[winner]} GANA!</div>
-        <div class="winnerScore">${scores[winner]} PUNTOS</div>
-        <p>${teamNames[loser]} termina con <b>${scores[loser]}</b> puntos.</p>
+        <div class="winnerName">${charText(`¡${teamNames[winner]} GANA!`,`${teamNames[winner]} WINS!`)}</div>
+        <div class="winnerScore">${scores[winner]} ${charText('PUNTOS','POINTS')}</div>
+        <p>${charText(`${teamNames[loser]} termina con <b>${scores[loser]}</b> puntos.`,`${teamNames[loser]} finishes with <b>${scores[loser]}</b> points.`)}</p>
       </div>`;
   }
 
   openModal(`
     ${result}
-    <p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p>
-    <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
+    <p>${charText('Marcador final = suma de los bancos ganados durante las 6 rondas.','Final score = total bank points won over the 6 rounds.')}</p>
+    <p>${charText('Rondas','Rounds')} 1–2: <b>×1</b> · ${charText('Rondas','Rounds')} 3–4: <b>×2</b> · ${charText('Rondas','Rounds')} 5–6: <b>×3</b>.</p>
     <div class="menuStack">
-      <button id="mAgain">OTRA PARTIDA · MISMOS EQUIPOS</button>
-      <button id="mCharacters">CAMBIAR EQUIPOS / PERSONAJES</button>
-      <button id="mHomeFinal">VOLVER A PORTADA</button>
+      <button id="mAgain">${charText('OTRA PARTIDA · MISMOS EQUIPOS','PLAY AGAIN · SAME TEAMS')}</button>
+      <button id="mCharacters">${charText('CAMBIAR EQUIPOS / PERSONAJES','CHANGE TEAMS / CHARACTERS')}</button>
+      <button id="mHomeFinal">${charText('VOLVER A PORTADA','BACK TO HOME')}</button>
     </div>
   `);
 
@@ -208,3 +211,7 @@ finishGame = function finishGameWithCharacters() {
 
 $('#start').onclick = showCharacterSetup;
 updateScoreUI();
+
+window.addEventListener('dentistas-language-changed', () => {
+  try { updateScoreUI(); updateTurnUI(); } catch (_) {}
+});
