@@ -7,7 +7,7 @@
   <application
       android:theme="@style/AppTheme"
       android:label="100 Dentistas Dijeron"
-      android:allowBackup="true"
+      android:allowBackup="false"
       android:usesCleartextTraffic="false">
     <activity
         android:name=".MainActivity"
