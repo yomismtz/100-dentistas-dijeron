@@ -10,6 +10,10 @@
   const catLabel = (name) => I18N ? I18N.category(name) : name;
   const catDesc = (name) => I18N ? I18N.categoryDesc(name) : (CATEGORY_META[name]?.[1] || '');
   const narrateStudy = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
+  const studyQText = q => I18N?.getLang?.() === 'en' && q?.q_en ? q.q_en : q?.q || '';
+  const studyContextText = q => I18N?.getLang?.() === 'en' && q?.context_en ? q.context_en : q?.context || '';
+  const studyOptions = q => I18N?.getLang?.() === 'en' && Array.isArray(q?.options_en) && q.options_en.length === q.options.length ? q.options_en : q.options;
+  const studyVoiceLang = q => I18N?.getLang?.() === 'en' && q?.q_en ? 'en-US' : 'es-MX';
 
   const CATEGORY_ORDER = [
     'Desarrollo craneofacial',
