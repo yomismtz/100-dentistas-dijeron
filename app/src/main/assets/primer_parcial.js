@@ -154,6 +154,16 @@
     .studyResultBig{font-size:clamp(54px,10vw,110px);font-weight:900;color:#b8f3fb}
     .studyResult h1{font-size:clamp(28px,4vw,48px)}
     .studyResultActions{display:grid;gap:.8rem;margin-top:1.5rem}
+
+    .studyCategoryCard:nth-child(1)::before{background:linear-gradient(#60bfff,#3979d8)}
+    .studyCategoryCard:nth-child(2)::before{background:linear-gradient(#65e6f1,#16a8bd)}
+    .studyCategoryCard:nth-child(3)::before{background:linear-gradient(#65dda0,#2b9b68)}
+    .studyCategoryCard:nth-child(4)::before{background:linear-gradient(#d3b46d,#927334)}
+    .studyCategoryCard:nth-child(5)::before{background:linear-gradient(#b28cff,#7451cf)}
+    .studyCategoryCard:nth-child(6)::before{background:linear-gradient(#ff9c82,#d65c50)}
+    .studyCategoryCard:nth-child(7)::before{background:linear-gradient(#d48cff,#8b4ccc)}
+    .studyCategoryCard:nth-child(8)::before{background:linear-gradient(#ffd66c,#be8e2f)}
+    .studyCategoryCard:nth-child(9)::before{background:linear-gradient(#9db4bb,#607981)}
     @media(max-width:800px){.studyCategoryGrid{grid-template-columns:1fr 1fr}.studyTopbar{grid-template-columns:50px 1fr 50px;padding:.5rem}.studyQuestionCard{border-radius:14px}.studyQuiz{padding:12px}}
     @media(max-width:520px){.studyCategoryGrid{grid-template-columns:1fr}.homeActions{bottom:2%;gap:.5rem}.homeActions button{min-width:170px;padding:.65rem 1rem}.studyIntro h1{font-size:30px}.studyTopbar strong{font-size:14px}}
 
