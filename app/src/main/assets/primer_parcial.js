@@ -4,7 +4,11 @@
   const DATA_FILES = ['primer_parcial_01.json','primer_parcial_02.json','primer_parcial_03.json','primer_parcial_04.json','primer_parcial_05.json','primer_parcial_06.json','primer_parcial_07.json','primer_parcial_08.json','primer_parcial_09.json','primer_parcial_10.json'];
   const QUICK_LENGTH = 10;
   const MOCK_LENGTH = 40;
-  const PASS_TARGET = 80;\n  const I18N = window.DentistasI18n;\n  const tx = (key) => I18N ? I18N.t(key) : key;\n  const catLabel = (name) => I18N ? I18N.category(name) : name;\n  const catDesc = (name) => I18N ? I18N.categoryDesc(name) : (CATEGORY_META[name]?.[1] || '');
+  const PASS_TARGET = 80;
+  const I18N = window.DentistasI18n;
+  const tx = (key) => I18N ? I18N.t(key) : key;
+  const catLabel = (name) => I18N ? I18N.category(name) : name;
+  const catDesc = (name) => I18N ? I18N.categoryDesc(name) : (CATEGORY_META[name]?.[1] || '');
 
   const CATEGORY_ORDER = [
     'Desarrollo craneofacial',
@@ -325,13 +329,13 @@
       playStudySound(false);
     }
 
-    $s('#studyScore').textContent = `${sessionScore} correcta${sessionScore === 1 ? '' : 's'}`;
+    $s('#studyScore').textContent = `${sessionScore} ${tx('correctCount')}`;
     const correct = currentPrepared.choices.find(c => c.correct)?.text || '';
     const feedback = $s('#studyFeedback');
     feedback.className = `studyFeedback ${choice.correct ? 'good' : 'bad'}`;
     feedback.innerHTML = choice.correct
-      ? `<b>✓ Correcto.</b> ${currentPrepared.source}, reactivo ${currentPrepared.number}.`
-      : `<b>✖ Incorrecto.</b> Respuesta correcta: <b>${correct}</b><br><small>${currentPrepared.source}, reactivo ${currentPrepared.number}.</small>`;
+      ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.<br><small>${tx('originalLanguage')}</small>`
+      : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}. · ${tx('originalLanguage')}</small>`;
     $s('#studyNext').textContent = sessionIndex === session.length - 1 ? tx('result') : tx('next');
     $s('#studyNext').classList.remove('hidden');
   }
