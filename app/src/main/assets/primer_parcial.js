@@ -140,7 +140,7 @@
 
   const studyButton = document.createElement('button');
   studyButton.id = 'studyStart';
-  studyButton.className = 'studyHomeButton';
+  studyButton.className = 'studyHomeButton hidden';
   studyButton.textContent = tx('studyStart');
   const homeActions = document.querySelector('.homeActions');
   if (homeActions) homeActions.appendChild(studyButton);
@@ -388,6 +388,17 @@
     return a;
   }
 
+  function loadStudyJsonAsset(file) {
+    try {
+      const raw = window.AndroidAssets?.readText?.(file);
+      if (raw) return Promise.resolve(JSON.parse(raw));
+    } catch (_) {}
+    return fetch(file).then(r => {
+      if (!r.ok) throw new Error(file);
+      return r.json();
+    });
+  }
+
   function playStudySound(ok) {
     try {
       if (window.DentistasProgression?.feedbackEnabled && !window.DentistasProgression.feedbackEnabled('sound')) return;
@@ -402,47 +413,37 @@
   async function ensureBank() {
     if (bank.length) return true;
     try {
-      const responses = await Promise.all(DATA_FILES.map(file => fetch(file)));
-      const etymologyResponse = await fetch(ETYMOLOGY_FILE);
-      const clinicalRecordResponse = await fetch(CLINICAL_RECORD_FILE);
-      const orthoLabResponse = await fetch(ORTHO_LAB_FILE);
-      const bad = responses.find(r => !r.ok);
-      if (bad) throw new Error(`HTTP ${bad.status}`);
-      if (!etymologyResponse.ok) throw new Error(`HTTP ${etymologyResponse.status} · etimología`);
-      if (!clinicalRecordResponse.ok) throw new Error(`HTTP ${clinicalRecordResponse.status} · expediente clínico`);
-      if (!orthoLabResponse.ok) throw new Error(`HTTP ${orthoLabResponse.status} · laboratorio ortodoncia/ortopedia`);
-      const data = (await Promise.all(responses.map(r => r.json()))).flat();
-      if (!Array.isArray(data)) throw new Error('Formato inválido');
-      bank = data.filter(q =>
+      const data = (await Promise.all(DATA_FILES.map(loadStudyJsonAsset))).flat();
+      bank = Array.isArray(data) ? data.filter(q =>
         q && q.q && Array.isArray(q.options) &&
         Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
-      );
-      const etymologyData = await etymologyResponse.json();
+      ) : [];
+
+      const etymologyData = await loadStudyJsonAsset(ETYMOLOGY_FILE);
       etymologyBank = Array.isArray(etymologyData) ? etymologyData.filter(q =>
         q && q.q && Array.isArray(q.options) &&
         Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
       ) : [];
       const ec = $s('#studyEtymologyCount'); if (ec) ec.textContent = `${etymologyBank.length} ${tx('items')}`;
-      const clinicalRecordData = await clinicalRecordResponse.json();
+
+      const clinicalRecordData = await loadStudyJsonAsset(CLINICAL_RECORD_FILE);
       clinicalRecordBank = Array.isArray(clinicalRecordData) ? clinicalRecordData.filter(q =>
         q && q.q && Array.isArray(q.options) &&
         Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
       ) : [];
       const cc = $s('#studyClinicalCount'); if (cc) cc.textContent = `${clinicalRecordBank.length} ${tx('items')}`;
-      const orthoLabData = await orthoLabResponse.json();
+
+      const orthoLabData = await loadStudyJsonAsset(ORTHO_LAB_FILE);
       orthoLabBank = Array.isArray(orthoLabData) ? orthoLabData.filter(q =>
         q && q.q && Array.isArray(q.options) &&
         Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
       ) : [];
       const oc = $s('#studyOrthoLabCount'); if (oc) oc.textContent = `${orthoLabBank.length} ${tx('items')}`;
+
       renderCategories();
       return true;
     } catch (err) {
-      if (typeof openModal === 'function') {
-        openModal(`<h2>No se pudo abrir el primer parcial</h2><p>${String(err.message || err)}</p>`);
-      } else {
-        alert('No se pudo cargar el banco del primer parcial.');
-      }
+      console.warn('Banco académico no disponible', err);
       return false;
     }
   }
@@ -758,7 +759,6 @@
   $s('#studyOrthoLab40').onclick = () => startOrthoLab(40);
   $s('#studyOrthoLab300').onclick = () => startOrthoLab(300);
 
-  ensureBank();
 
   window.DentistasStudyBack = function () {
     try {
