@@ -34,6 +34,8 @@ let timerRemaining = TURN_SECONDS;
 let timerHandle = null;
 let audioCtx = null;
 let roundTransitionHandle = null;
+let lastBankValue = 0;
+let lastTurnSignature = '';
 
 const audio = {
   start: $('#sndStart'),
@@ -150,7 +152,16 @@ function updateScoreUI() {
 }
 
 function updateBankUI() {
-  $('#bank').textContent = bank;
+  const value = $('#bank');
+  const box = document.querySelector('.bank');
+  if (value) value.textContent = bank;
+  if (box && bank !== lastBankValue) {
+    box.classList.remove('bump');
+    void box.offsetWidth;
+    box.classList.add('bump');
+    setTimeout(() => box.classList.remove('bump'), 320);
+  }
+  lastBankValue = bank;
 }
 
 function updateStrikesUI() {
@@ -174,6 +185,15 @@ function updateTurnUI() {
   } else {
     turn.textContent = `${tx('turn')}: ${teamNames[currentTeam]}`;
     $('#buzz').textContent = '✖ ERROR';
+  }
+
+  const turnSignature = `${phase}:${currentTeam}`;
+  if (turn && turnSignature !== lastTurnSignature) {
+    turn.classList.remove('turnPulse');
+    void turn.offsetWidth;
+    turn.classList.add('turnPulse');
+    setTimeout(() => turn.classList.remove('turnPulse'), 380);
+    lastTurnSignature = turnSignature;
   }
 
   $('#buzz').disabled = phase === 'over';
