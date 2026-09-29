@@ -1,74 +1,46 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#120406">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06131a">
 <meta name="description" content="Política de privacidad de 100 Dentistas Dijeron."><title>Política de privacidad · 100 Dentistas Dijeron</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="nav"><a class="brand" href="./">🦷 <span>100 Dentistas Dijeron</span></a><nav><a href="./">Inicio</a><a href="privacy.html">Privacidad</a><a href="data-safety.html">Seguridad de datos</a><a href="terms.html">Términos</a></nav></header>
 <main class="policy">
-<p class="eyebrow">DOCUMENTO DE PRIVACIDAD</p><h1>Política de privacidad</h1><p class="meta">Última actualización: 19 de septiembre de 2026.</p>
-<div class="callout"><strong>Resumen:</strong> 100 Dentistas Dijeron funciona principalmente de forma local. No requiere una cuenta, no integra publicidad ni analítica propia y no transmite partidas a un servidor del proyecto. La voz es opcional y utiliza el servicio de reconocimiento instalado en Android; la aplicación no almacena grabaciones de audio.</div>
+<p class="eyebrow">DOCUMENTO DE PRIVACIDAD</p><h1>Política de privacidad</h1><p class="meta">Última actualización: 29 de septiembre de 2026.</p>
+<div class="callout"><strong>Resumen:</strong> 100 Dentistas Dijeron funciona de forma local en el dispositivo. No requiere cuenta, no integra publicidad ni analítica propia, no solicita permisos sensibles y no transmite partidas, respuestas ni progreso a servidores del proyecto.</div>
 
-<h2>1. Aplicación, responsable y contacto</h2>
-<p>Esta política corresponde a la aplicación educativa <strong>100 Dentistas Dijeron</strong> (paquete Android <code>com.uam.cientodentistas</code>) y a su sitio oficial alojado mediante GitHub Pages. El editor de la aplicación será el titular de la ficha de Google Play donde se publique 100 Dentistas Dijeron.</p>
-<p>Para consultas de privacidad puede utilizar el mecanismo público de contacto del proyecto en <a href="https://github.com/yomismtz/100-dentistas-dijeron/issues">GitHub Issues</a>. No publique datos personales, datos de pacientes ni información sensible en una incidencia pública; si la consulta requiere información privada, solicite primero un canal privado.</p>
+<h2>1. Aplicación y responsable</h2>
+<p>Esta política corresponde a la aplicación educativa <strong>100 Dentistas Dijeron</strong>, paquete Android <code>com.uam.cientodentistas</code>. Para incidencias del proyecto puede utilizarse el repositorio público de GitHub. No publique datos personales o clínicos sensibles en incidencias públicas.</p>
 
-<h2>2. Datos tratados por la aplicación</h2>
-<p>La aplicación no requiere registro ni cuenta. Puede guardar localmente nombres de equipos, personajes, ajustes, historial reciente de preguntas, preguntas personalizadas, autoguardados, historial de sesiones, reportes académicos, paquetes de clase, torneos/campeonatos, códigos anónimos del modo investigación, resultados agregados de pretest/postest y metadatos editoriales.</p>
-<p>El usuario decide qué nombres o códigos introduce. Para docencia o investigación se recomienda utilizar nombres de equipo y códigos que no identifiquen a estudiantes individuales.</p>
+<h2>2. Datos que puede guardar localmente</h2>
+<p>La aplicación puede guardar en el dispositivo preferencias como idioma y estado de la narradora, así como estadísticas educativas de práctica por tema. Estos datos se utilizan únicamente para conservar la experiencia del usuario y señalar temas que conviene repasar.</p>
+<p>La aplicación no requiere nombre legal, correo electrónico, teléfono, ubicación, contactos ni creación de cuenta.</p>
 
-<h2>3. Información que el proyecto no recopila en servidores propios</h2>
-<ul>
-<li>No requiere nombre legal, correo electrónico, teléfono ni dirección del estudiante.</li>
-<li>No recopila ubicación precisa o aproximada.</li>
-<li>No accede a contactos.</li>
-<li>No integra publicidad, identificadores publicitarios ni analítica propia.</li>
-<li>No transmite partidas, puntuaciones, reportes ni bancos de preguntas a un servidor operado por el proyecto.</li>
-<li>No almacena grabaciones de voz.</li>
-</ul>
+<h2>3. Transmisión de datos</h2>
+<p>La versión actual no incluye publicidad, analítica propia, sincronización en la nube ni servidores del proyecto para partidas o progreso. El contenido principal y los bancos de preguntas están incluidos dentro de la aplicación.</p>
 
-<h2>4. Almacenamiento local, autoguardado y eliminación</h2>
-<p>Los datos descritos anteriormente se conservan localmente mediante el almacenamiento de la aplicación y su componente web. Android puede incluir determinados datos en copias de seguridad del sistema según la configuración del dispositivo. El proyecto no recibe esas copias.</p>
-<p>Los datos locales pueden eliminarse borrando los datos de la aplicación desde Android o desinstalándola. Los historiales y configuraciones que cuenten con una opción de borrado dentro de la app también pueden eliminarse desde esa función.</p>
+<h2>4. Narradora y texto a voz</h2>
+<p>La narradora utiliza el motor de <strong>texto a voz (TTS)</strong> instalado en Android. La aplicación entrega al motor del sistema el texto que debe pronunciar en español o inglés. La app no graba audio, no solicita permiso de micrófono y no incorpora reconocimiento de voz.</p>
+<p>La disponibilidad, calidad y posible tratamiento técnico del texto por el proveedor del motor TTS dependen del servicio instalado y de la configuración del dispositivo.</p>
 
-<h2>5. Aula offline y red local</h2>
-<p>La aplicación puede crear un servidor HTTP y un canal WebSocket <strong>en la red local</strong> para pulsadores, respuestas individuales y control docente. Los dispositivos deben compartir la misma red Wi‑Fi o hotspot. La red puede funcionar sin salida a Internet.</p>
-<p>Android exige el permiso <strong>INTERNET</strong> también para sockets de red local. Este permiso no significa que el proyecto envíe partidas a Internet. El panel docente se protege mediante un PIN local y el estado público de los equipos no incluye respuestas correctas ni referencias privadas mientras la ronda está activa.</p><p>La comunicación HTTP/WebSocket de este modo local <strong>no utiliza TLS</strong>. Debe usarse únicamente en una red Wi‑Fi/hotspot de confianza. Las respuestas individuales enviadas desde los teléfonos pueden llegar al dispositivo anfitrión y conservarse localmente en reportes o pretest/postest; no se envían al desarrollador.</p>
+<h2>5. Permisos Android</h2>
+<p>La versión actual no solicita permisos de Internet, micrófono, cámara, ubicación, contactos ni acceso general al almacenamiento. El manifiesto únicamente declara la posibilidad de localizar un servicio TTS compatible mediante las interfaces estándar de Android.</p>
 
-<h2>6. Reconocimiento de voz y texto a voz</h2>
-<p>La respuesta por voz es opcional. Al activarla, la app abre el servicio de reconocimiento de voz instalado en Android mediante las interfaces del sistema. 100 Dentistas Dijeron no captura ni conserva directamente un archivo de audio.</p>
-<p>El proveedor del reconocedor puede procesar la voz en el dispositivo o transmitirla a sus propios servidores, según el servicio instalado, los paquetes de idioma y la configuración del usuario. Ese tratamiento pertenece al proveedor del servicio de reconocimiento. La app recibe el texto reconocido y lo compara localmente con las respuestas del tablero.</p>
-<p>La narración de preguntas utiliza el motor de texto a voz del sistema. La app envía al motor el texto que debe pronunciar; su funcionamiento depende del proveedor y la configuración de TTS instalada.</p>
+<h2>6. Almacenamiento y eliminación</h2>
+<p>Las preferencias y estadísticas educativas permanecen en el almacenamiento local de la aplicación. Pueden eliminarse borrando los datos de la app desde los ajustes de Android o desinstalándola. Android puede incluir datos de la aplicación en copias de seguridad del sistema según la configuración del dispositivo; el proyecto no recibe dichas copias.</p>
 
-<h2>7. Imágenes clínicas importadas</h2>
-<p>El docente puede seleccionar voluntariamente una imagen mediante el selector de documentos de Android para asociarla a un reactivo. La app recibe únicamente el archivo que el usuario selecciona, limita el tipo a imágenes, lo procesa/redimensiona localmente y lo guarda en el almacenamiento local del reactivo.</p>
-<p>El proyecto no recibe ni sube estas imágenes. El docente debe utilizar únicamente imágenes propias, anonimizadas o para las que tenga autorización. No deben importarse imágenes con nombres, números de expediente, rostros u otros identificadores de pacientes.</p>
+<h2>7. Uso educativo</h2>
+<p>La aplicación está destinada a aprendizaje, repaso y actividades educativas de odontología. No está diseñada para recopilar datos personales de menores ni información clínica de pacientes.</p>
 
-<h2>8. Modo investigación, pretest/postest y exportaciones</h2>
-<p>El modo investigación es opcional y utiliza un código de sesión anónimo. Puede registrar localmente grupo, nombres de equipos, puntuaciones, preguntas utilizadas, especialidad, dificultad, configuración y resultados agregados de pretest/postest.</p>
-<p>El docente puede exportar CSV, archivos compatibles con Excel y tarjetas PNG mediante el selector de documentos de Android. La app escribe únicamente en la ubicación elegida por el usuario. El proyecto no recibe una copia.</p>
+<h2>8. Sitio web</h2>
+<p>Las páginas informativas del proyecto pueden alojarse mediante GitHub Pages. La app Android no necesita acceder a ese sitio para funcionar. GitHub puede procesar información técnica de visitantes de sus páginas conforme a sus propias políticas.</p>
 
-<h2>9. Fuentes científicas y enlaces externos</h2>
-<p>Cuando el docente abre una fuente científica, el enlace se envía al navegador externo. A partir de ese momento se aplican las políticas del navegador y del sitio visitado. La aplicación no incorpora rastreadores propios para esos enlaces.</p>
+<h2>9. Cambios</h2>
+<p>Esta política se actualizará si una versión futura incorpora funciones que cambien materialmente las prácticas de datos, como cuentas, red, servicios en la nube, analítica, publicidad o permisos adicionales.</p>
 
-<h2>10. Sitio web y GitHub Pages</h2>
-<p>El sitio oficial está alojado mediante GitHub Pages. El proyecto no instala cookies propias de publicidad ni integra analítica. GitHub puede procesar información técnica, incluida la dirección IP, por razones operativas y de seguridad conforme a sus propias políticas.</p>
-
-<h2>11. Uso educativo y menores</h2>
-<p>La aplicación está destinada a docencia y repaso. No está diseñada para solicitar datos personales de menores. En entornos educativos deben utilizarse nombres de equipo, apodos no identificables o códigos en lugar de nombres completos de estudiantes.</p>
-
-<h2>12. Seguridad</h2>
-<p>El diseño minimiza servicios externos y mantiene el funcionamiento principal de forma local. El control docente utiliza PIN local y las respuestas correctas se bloquean durante la ronda. Ningún sistema puede garantizar seguridad absoluta.</p>
-
-<h2>13. Conservación</h2>
-<p>El proyecto no conserva en servidores propios las partidas, reportes, imágenes clínicas ni respuestas de voz. Los datos locales permanecen hasta que se sobrescriben, se borran desde la aplicación/sistema o se desinstala la app.</p>
-
-<h2>14. Cambios</h2>
-<p>Esta política se actualizará si cambian materialmente las funciones o prácticas de datos, por ejemplo si se incorporan cuentas, servicios en la nube, publicidad, analítica o nuevas integraciones externas.</p>
-
-<h2>15. Transparencia para Google Play</h2>
-<p>Esta página está destinada a utilizarse como URL pública de política de privacidad en Google Play. La sección “Seguridad de los datos” de Play Console debe mantenerse coherente con la versión distribuida y con las prácticas reales de los servicios de reconocimiento/TTS instalados en cada dispositivo.</p>
+<h2>10. Google Play</h2>
+<p>La declaración de Seguridad de los datos de Google Play debe corresponder a la versión realmente distribuida. Para esta versión, el funcionamiento principal es local y no existe recopilación de datos por servidores del proyecto.</p>
 
 <p><a class="button" href="./">← Volver al sitio</a></p>
 </main>
