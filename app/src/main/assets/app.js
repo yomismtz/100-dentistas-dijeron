@@ -70,23 +70,42 @@ function specialtyArea(q, file='') {
   const has = (...terms) => terms.some(t => raw.includes(t));
 
   if (file === 'questions_anatomia.json') return has('crecimiento','desarrollo','maxilar','mandíbula','mandibula','sutural','suturas') ? 'Desarrollo de los maxilares' : 'Anatomía';
+  if (file === 'questions_preventiva.json') {
+    if (has('fluor','sellador','cepill','higiene','placa','prevención','prevencion','índice de caries','indice de caries')) return 'Odontología preventiva';
+    return 'Salud pública y odontología comunitaria';
+  }
   if (file === 'questions_periodoncia.json') return 'Periodoncia';
-  if (file === 'questions_endo_restauradora.json') return has('conducto','pulpa','pulpar','endodon','ápice','apice','irrig') ? 'Endodoncia' : 'Operatoria dental';
+  if (file === 'questions_endo_restauradora.json') return has('conducto','pulpa','pulpar','endodon','ápice','apice','irrig') ? 'Endodoncia' : 'Operatoria dental y restauradora';
   if (file === 'questions_protesis_atm.json') {
     if (has('atm','temporomandibular','cóndilo','condilo','disco articular','trastorno temporomandibular')) return 'Articulación temporomandibular (ATM)';
     if (has('oclusión','oclusion','contacto oclusal','guía canina','guia canina')) return 'Oclusión';
-    return 'Prótesis';
+    return 'Prótesis dental';
   }
-  if (file === 'questions_cirugia_radiologia.json') return has('radiograf','imagen','cbct') ? 'Radiología' : 'Cirugía bucal';
-  if (file === 'questions_odonto_ortho.json') return has('niñ','temporal','pediatr','conducta','mantenedor','dentición mixta','denticón mixta') ? 'Odontopediatría' : 'Ortodoncia';
+  if (file === 'questions_cirugia_radiologia.json') {
+    if (has('radiograf','imagen','cbct','tomograf')) return 'Radiología oral y maxilofacial';
+    if (has('fractura','ortogn','maxilofacial','le fort','trauma facial','tercer molar incluido','tercer molar retenido')) return 'Cirugía oral y maxilofacial';
+    return 'Cirugía bucal';
+  }
+  if (file === 'questions_patologia.json') return 'Patología bucal';
+  if (file === 'questions_odonto_ortho.json') return has('niñ','temporal','pediatr','conducta','mantenedor','dentición mixta','denticion mixta') ? 'Odontopediatría' : 'Ortodoncia';
+  if (file === 'questions_infecciones_medicina.json') {
+    if (has('infección','infeccion','absceso','celulitis','antibió','antibio','microb','bacteria','virus','hongo')) return 'Infecciones odontogénicas y microbiología';
+    if (has('anestesia','anestés','anestes','analges','farmac','medicamento','dosis')) return 'Farmacología y anestesia';
+    return 'Medicina bucal';
+  }
+  if (file === 'questions_materiales_implantes.json') {
+    if (has('implant','oseointegr','periimplant')) return 'Implantología';
+    if (has('biomaterial','material','resina','amalgama','cerámica','ceramica','cemento','adhesiv','yeso','alginato','silicona')) return 'Materiales dentales';
+    return 'Rehabilitación oral';
+  }
   if (file === 'questions.json') {
     if (has('maxilar','mandíbula','mandibula','crecimiento','desarrollo craneofacial')) return 'Desarrollo de los maxilares';
-    if (has('ortopedia','aparato funcional','expansor','disyuntor')) return 'Ortopedia';
+    if (has('ortopedia','aparato funcional','expansor','disyuntor')) return 'Ortopedia dentofacial';
     if (has('oclusión','oclusion')) return 'Oclusión';
     if (has('odontopediatr')) return 'Odontopediatría';
     if (has('ortodon','cefalometr')) return 'Ortodoncia';
   }
-  return q?.area || q?.cat || q?.category || 'General';
+  return q?.area || q?.cat || q?.category || 'Odontología general';
 }
 
 function areaForQuestion(q) {
