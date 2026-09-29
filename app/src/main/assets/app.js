@@ -318,13 +318,10 @@ function updateTurnUI() {
   const teams = document.querySelectorAll('.team');
   teams.forEach((el, idx) => {
     el.classList.toggle('active', phase !== 'over' && idx === currentTeam);
-    el.classList.toggle('steal', phase === 'steal' && idx === currentTeam);
+    el.classList.remove('steal');
   });
 
-  if (phase === 'steal') {
-    turn.textContent = `${tx('steal')}: ${teamNames[currentTeam]}`;
-    $('#buzz').textContent = tx('failedSteal');
-  } else if (phase === 'over') {
+  if (phase === 'over') {
     turn.textContent = tx('roundOver');
     $('#buzz').textContent = tx('error');
   } else {
@@ -406,35 +403,35 @@ function revealAnswer(idx, btn) {
   if (phase === 'over' || revealed[idx]) return;
 
   stopTimer();
+  clearCpuTurn();
+  turnNarrationToken += 1;
+  window.DentistasNarrator?.stop?.();
+
   revealed[idx] = true;
   btn.classList.remove('covered');
   btn.classList.add('revealed');
+  btn.disabled = true;
 
-  const basePoints = Number(questions[roundIndex].a[idx][1]) || 0;
+  const q = questions[roundIndex];
+  const basePoints = Number(q.a[idx][1]) || 0;
   const gainedPoints = basePoints * roundMultiplier();
   bank += gainedPoints;
   updateBankUI();
   play(audio.good);
-  narrate(`${aText(questions[roundIndex], idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(questions[roundIndex]), rate:.93});
+  updateTurnUI();
 
-  if (phase === 'steal') {
-    const pointsWon = bank;
-    awardHistory.push({team: currentTeam, points: pointsWon});
-    scores[currentTeam] += pointsWon;
-    bank = 0;
-    phase = 'over';
-    updateScoreUI();
-    updateBankUI();
-    updateTurnUI();
-    gameSound('steal');
-
-    openModal(
-      isEn() ? `<h2>${tx('successfulSteal')}</h2><p><b>${teamNames[currentTeam]}</b> found a board answer and wins <b>${pointsWon} points</b>.</p><p>${roundIndex === questions.length - 1 ? 'Press ▶ to see the final result.' : 'Press ▶ to continue.'}</p>` : `<h2>${tx('successfulSteal')}</h2><p><b>${teamNames[currentTeam]}</b> encontró una respuesta del tablero y gana <b>${pointsWon} puntos</b>.</p><p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
-    );
-  } else {
-    updateTurnUI();
-    startTimer();
-  }
+  const answerAnnouncement = `${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`;
+  const nextTurn = () => {
+    if (phase === 'over' || !gameVisible()) return;
+    beginTurnAfterQuestion();
+  };
+  const spoken = narrate(answerAnnouncement, {
+    lang:qVoiceLang(q),
+    rate:.93,
+    onend:nextTurn,
+    onerror:nextTurn
+  });
+  if (spoken === false) nextTurn();
 }
 
 function flashThreeStrikes() {
