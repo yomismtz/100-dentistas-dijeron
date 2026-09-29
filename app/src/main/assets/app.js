@@ -7,6 +7,9 @@ const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
 const isEn = () => I18N?.getLang?.() === 'en';
+const qText = q => isEn() && q?.q_en ? q.q_en : q?.q || '';
+const aText = (q, idx) => isEn() && Array.isArray(q?.a_en) && q.a_en[idx] ? q.a_en[idx] : q?.a?.[idx]?.[0] || '';
+const qVoiceLang = q => isEn() && q?.q_en ? 'en-US' : 'es-MX';
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -237,8 +240,8 @@ function showRound(reset = true) {
   const mult = roundMultiplier();
   $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
-  $('#question').textContent = q.q;
-  setTimeout(() => narrate(q.q, {lang: I18N?.getLang?.() === 'en' ? 'en-US' : 'es-MX', rate:.9}), 900);
+  $('#question').textContent = qText(q);
+  setTimeout(() => narrate(qText(q), {lang:qVoiceLang(q), rate:.9}), 900);
 
   updateStrikesUI();
   updateBankUI();
@@ -248,7 +251,7 @@ function showRound(reset = true) {
   q.a.forEach((answer, idx) => {
     const btn = document.createElement('button');
     btn.className = 'answer covered';
-    btn.innerHTML = `<span class="num">${idx + 1}</span><span class="txt">${answer[0]}</span><span class="pts">${answer[1]}</span>`;
+    btn.innerHTML = `<span class="num">${idx + 1}</span><span class="txt">${aText(q, idx)}</span><span class="pts">${answer[1]}</span>`;
     btn.addEventListener('click', () => revealAnswer(idx, btn));
     box.appendChild(btn);
   });
@@ -271,7 +274,7 @@ function revealAnswer(idx, btn) {
   bank += gainedPoints;
   updateBankUI();
   play(audio.good);
-  narrate(`${questions[roundIndex].a[idx][0]}. ${gainedPoints} ${tx('points')}.`, {rate:.93});
+  narrate(`${aText(questions[roundIndex], idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(questions[roundIndex]), rate:.93});
 
   if (phase === 'steal') {
     const pointsWon = bank;
