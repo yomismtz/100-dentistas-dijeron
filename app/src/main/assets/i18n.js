@@ -130,6 +130,11 @@ window.DentistasI18n = (() => {
 
   function getLang(){ return lang; }
 
-  document.addEventListener('DOMContentLoaded',applyStatic);
+  document.addEventListener('DOMContentLoaded',() => {
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+    });
+    applyStatic();
+  });
   return {t,category,categoryDesc,setLang,getLang,applyStatic};
 })();
