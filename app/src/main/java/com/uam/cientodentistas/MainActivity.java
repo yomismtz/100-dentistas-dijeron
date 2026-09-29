@@ -112,10 +112,24 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if (webView != null && webView.canGoBack()) {
-            webView.goBack();
-        } else {
+        if (webView == null) {
             super.onBackPressed();
+            return;
         }
+
+        String script =
+                "(function(){" +
+                "try{" +
+                "if(window.DentistasStudyBack && window.DentistasStudyBack()) return 'handled';" +
+                "if(window.DentistasAppBack && window.DentistasAppBack()) return 'handled';" +
+                "}catch(e){}" +
+                "return 'exit';" +
+                "})()";
+
+        webView.evaluateJavascript(script, value -> {
+            if (value == null || value.contains("exit")) {
+                finish();
+            }
+        });
     }
 }
