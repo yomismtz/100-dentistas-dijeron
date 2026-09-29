@@ -22,6 +22,9 @@ window.DentistasI18n = (() => {
       clinicalModule:'MÓDULO INDEPENDIENTE', clinicalTitle:'Realización del expediente clínico',
       clinicalDesc:'300 preguntas prácticas sobre identificación, interrogatorio, antecedentes, ASA, signos vitales, exploración oral, odontograma, índices, auxiliares diagnósticos, consentimiento informado y notas de evolución.',
       clinical10:'⚡ RETO · 10', clinical40:'📝 SIMULACRO · 40', clinical300:'📋 BANCO COMPLETO · 300',
+      orthoLabModule:'MÓDULO INDEPENDIENTE', orthoLabTitle:'Laboratorio de ortodoncia y ortopedia',
+      orthoLabDesc:'300 preguntas sobre impresiones, modelos, análisis, mantenedores y recuperadores de espacio, expansores, aparatos removibles y fijos, ganchos, alambres, dobleces, arcos y selección de aparato según diagnóstico.',
+      orthoLab10:'⚡ RETO · 10', orthoLab40:'📝 SIMULACRO · 40', orthoLab300:'🧰 BANCO COMPLETO · 300',
       firstMidterm:'Primer parcial', items:'reactivos',
       intro:'Repasa por materia con preguntas tomadas de los cinco exámenes. Los reactivos de relación de columnas y nomenclatura se adaptaron a opción múltiple para poder jugar, conservando su respuesta correcta.',
       quick:'⚡ RETO RÁPIDO · 10 PREGUNTAS', mock:'📝 SIMULACRO · 40 PREGUNTAS',
@@ -42,7 +45,7 @@ window.DentistasI18n = (() => {
         'Desarrollo de la oclusión':'Desarrollo de la oclusión',
         'Fisiología':'Fisiología','Toma de impresión':'Toma de impresión',
         'Psicología infantil':'Psicología infantil','Hábitos y parafunciones':'Hábitos y parafunciones',
-        'Nomenclatura':'Nomenclatura','Nomenclatura y etimología médica':'Nomenclatura y etimología médica/odontológica','Realización del expediente clínico':'Realización del expediente clínico','Oclusión':'Oclusión','Otros del parcial':'Otros del parcial',
+        'Nomenclatura':'Nomenclatura','Nomenclatura y etimología médica':'Nomenclatura y etimología médica/odontológica','Realización del expediente clínico':'Realización del expediente clínico','Laboratorio de ortodoncia y ortopedia':'Laboratorio de ortodoncia y ortopedia','Oclusión':'Oclusión','Otros del parcial':'Otros del parcial',
         'Todos los temas':'Todos los temas'
       },
       categoryDescs:{
@@ -55,6 +58,7 @@ window.DentistasI18n = (() => {
         'Nomenclatura':'Prefijos, lexemas, sufijos y formación de términos odontológicos.',
         'Nomenclatura y etimología médica':'Prefijos, raíces, sufijos y formación de términos de odontología, células, microbiología, patología y medicina.',
         'Realización del expediente clínico':'Llenado, organización y documentación clínica del expediente odontológico.',
+        'Laboratorio de ortodoncia y ortopedia':'Impresiones, modelos, análisis, aparatología, componentes, alambres, dobleces y selección de aparatos.',
         'Oclusión':'Máxima intercuspidación, guías, función en grupo, interferencias y TTM.',
         'Otros del parcial':'Reactivos del expediente clínico que no encajan de forma limpia en otra materia.'
       }
@@ -76,6 +80,9 @@ window.DentistasI18n = (() => {
       clinicalModule:'INDEPENDENT MODULE', clinicalTitle:'Clinical record completion',
       clinicalDesc:'300 practical questions on identification, interview, medical history, ASA, vital signs, oral examination, odontogram, indices, diagnostic aids, informed consent, and progress notes.',
       clinical10:'⚡ CHALLENGE · 10', clinical40:'📝 MOCK · 40', clinical300:'📋 FULL BANK · 300',
+      orthoLabModule:'INDEPENDENT MODULE', orthoLabTitle:'Orthodontic & orthopedic laboratory',
+      orthoLabDesc:'300 questions on impressions, models, analyses, space maintainers and regainers, expanders, removable/fixed appliances, clasps, wires, bends, arches, and appliance selection by diagnosis.',
+      orthoLab10:'⚡ CHALLENGE · 10', orthoLab40:'📝 MOCK · 40', orthoLab300:'🧰 FULL BANK · 300',
       firstMidterm:'First midterm', items:'items',
       intro:'Review by subject using questions taken from the five exams. Matching-column and nomenclature items were adapted to multiple choice while preserving the correct answer.',
       quick:'⚡ QUICK CHALLENGE · 10 QUESTIONS', mock:'📝 MOCK EXAM · 40 QUESTIONS',
@@ -96,7 +103,7 @@ window.DentistasI18n = (() => {
         'Desarrollo de la oclusión':'Occlusal Development',
         'Fisiología':'Physiology','Toma de impresión':'Dental Impressions',
         'Psicología infantil':'Pediatric Psychology','Hábitos y parafunciones':'Habits and Parafunctions',
-        'Nomenclatura':'Dental Nomenclature','Nomenclatura y etimología médica':'Medical & Dental Nomenclature/Etymology','Realización del expediente clínico':'Clinical Record Completion','Oclusión':'Occlusion','Otros del parcial':'Other Midterm Topics',
+        'Nomenclatura':'Dental Nomenclature','Nomenclatura y etimología médica':'Medical & Dental Nomenclature/Etymology','Realización del expediente clínico':'Clinical Record Completion','Laboratorio de ortodoncia y ortopedia':'Orthodontic & Orthopedic Laboratory','Oclusión':'Occlusion','Otros del parcial':'Other Midterm Topics',
         'Todos los temas':'All Subjects'
       },
       categoryDescs:{
@@ -109,6 +116,7 @@ window.DentistasI18n = (() => {
         'Nomenclatura':'Prefixes, roots, suffixes, and formation of dental terms.',
         'Nomenclatura y etimología médica':'Prefixes, roots, suffixes, and word formation across dentistry, cells, microbiology, pathology, and medicine.',
         'Realización del expediente clínico':'Completion, organization, and clinical documentation of the dental record.',
+        'Laboratorio de ortodoncia y ortopedia':'Impressions, models, analyses, appliances, components, wires, bends, and appliance selection.',
         'Oclusión':'Maximum intercuspation, guidance, group function, interferences, and TMD.',
         'Otros del parcial':'Exam items that do not fit cleanly into another subject.'
       }
