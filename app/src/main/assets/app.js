@@ -318,10 +318,13 @@ function updateTurnUI() {
   const teams = document.querySelectorAll('.team');
   teams.forEach((el, idx) => {
     el.classList.toggle('active', phase !== 'over' && idx === currentTeam);
-    el.classList.remove('steal');
+    el.classList.toggle('steal', phase === 'steal' && idx === currentTeam);
   });
 
-  if (phase === 'over') {
+  if (phase === 'steal') {
+    turn.textContent = `${tx('steal')}: ${teamNames[currentTeam]}`;
+    $('#buzz').textContent = tx('failedSteal');
+  } else if (phase === 'over') {
     turn.textContent = tx('roundOver');
     $('#buzz').textContent = tx('error');
   } else {
@@ -399,38 +402,73 @@ function showRound(reset = true) {
   else startTimer(preservedTime);
 }
 
-function revealAnswer(idx, btn) {
-  if (phase === 'over' || revealed[idx]) return;
-
+function revealRemainingAndNarrate(onDone) {
   stopTimer();
   clearCpuTurn();
   turnNarrationToken += 1;
   window.DentistasNarrator?.stop?.();
+  const q = questions[roundIndex];
+  const buttons = document.querySelectorAll('#answers button');
+  const remaining = [];
+  revealed.forEach((isShown, idx) => {
+    if (isShown) return;
+    revealed[idx] = true;
+    const btn = buttons[idx];
+    if (btn) {
+      btn.classList.remove('covered');
+      btn.classList.add('revealed');
+      btn.disabled = true;
+    }
+    remaining.push(`${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`);
+  });
+  const finish = () => { if (typeof onDone === 'function') onDone(); };
+  if (!remaining.length) { finish(); return; }
+  const spoken = narrate(remaining.join(' '), {lang:qVoiceLang(q), rate:.9, onend:finish, onerror:finish});
+  if (spoken === false) finish();
+}
 
-  revealed[idx] = true;
-  btn.classList.remove('covered');
-  btn.classList.add('revealed');
-  btn.disabled = true;
+function endRoundAfterSteal(winnerTeam, successful) {
+  const pointsWon = bank;
+  if (winnerTeam !== null && pointsWon > 0) {
+    awardHistory.push({team:winnerTeam, points:pointsWon});
+    scores[winnerTeam] += pointsWon;
+  }
+  bank = 0;
+  phase = 'over';
+  updateScoreUI();
+  updateBankUI();
+  updateTurnUI();
+  revealRemainingAndNarrate(() => {
+    openModal(successful
+      ? (isEn() ? `<h2>STEAL SUCCESSFUL</h2><p><b>${teamNames[winnerTeam]}</b> wins <b>${pointsWon} points</b>.</p>` : `<h2>ROBO EXITOSO</h2><p><b>${teamNames[winnerTeam]}</b> gana <b>${pointsWon} puntos</b>.</p>`)
+      : (isEn() ? `<h2>STEAL FAILED</h2><p>The steal failed. The round ends.</p>` : `<h2>ROBO FALLIDO</h2><p>El robo falló. La ronda termina.</p>`));
+  });
+}
+
+function revealAnswer(idx, btn) {
+  if (phase === 'over' || revealed[idx]) return;
+  stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
   const q = questions[roundIndex];
-  const basePoints = Number(q.a[idx][1]) || 0;
-  const gainedPoints = basePoints * roundMultiplier();
+  revealed[idx] = true;
+  btn.classList.remove('covered'); btn.classList.add('revealed'); btn.disabled = true;
+
+  if (phase === 'steal') {
+    play(audio.good);
+    const answerAnnouncement = `${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`;
+    const finish = () => endRoundAfterSteal(currentTeam, true);
+    const spoken = narrate(answerAnnouncement, {lang:qVoiceLang(q), rate:.93, onend:finish, onerror:finish});
+    if (spoken === false) finish();
+    return;
+  }
+
+  const gainedPoints = (Number(q.a[idx][1]) || 0) * roundMultiplier();
   bank += gainedPoints;
   updateBankUI();
   play(audio.good);
   updateTurnUI();
-
-  const answerAnnouncement = `${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`;
-  const nextTurn = () => {
-    if (phase === 'over' || !gameVisible()) return;
-    beginTurnAfterQuestion();
-  };
-  const spoken = narrate(answerAnnouncement, {
-    lang:qVoiceLang(q),
-    rate:.93,
-    onend:nextTurn,
-    onerror:nextTurn
-  });
+  const nextTurn = () => { if (phase !== 'over' && gameVisible()) beginTurnAfterQuestion(); };
+  const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:nextTurn, onerror:nextTurn});
   if (spoken === false) nextTurn();
 }
 
@@ -442,10 +480,13 @@ function flashThreeStrikes() {
 
 function addStrike(reason = 'manual') {
   if (phase === 'over') return;
-  stopTimer();
-  clearCpuTurn();
-  turnNarrationToken += 1;
-  window.DentistasNarrator?.stop?.();
+  stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
+
+  if (phase === 'steal') {
+    play(audio.bad);
+    endRoundAfterSteal(null, false);
+    return;
+  }
 
   if (strikes >= 3) return;
   strikes += 1;
@@ -455,18 +496,16 @@ function addStrike(reason = 'manual') {
   if (strikes >= 3) {
     strikes = 3;
     flashThreeStrikes();
-    phase = 'over';
+    const previousTeam = currentTeam;
+    currentTeam = 1 - currentTeam;
+    phase = 'steal';
     updateTurnUI();
-    const lostTeam = teamNames[currentTeam];
-    const message = reason === 'timeout'
-      ? (isEn() ? `Time is up. Third mistake. ${lostTeam} loses the round.` : `Tiempo agotado. Tercer error. ${lostTeam} pierde la ronda.`)
-      : (isEn() ? `Third mistake. ${lostTeam} loses the round.` : `Tercer error. ${lostTeam} pierde la ronda.`);
-    narrate(message, {lang:isEn() ? 'en-US' : 'es-MX', rate:.92});
-    openModal(
-      isEn()
-        ? `<h2>✖ ✖ ✖ · ROUND LOST</h2><p><b>${lostTeam}</b> reached three mistakes. The round is over.</p><p>All remaining answers will be revealed in the next step.</p>`
-        : `<h2>✖ ✖ ✖ · RONDA PERDIDA</h2><p><b>${lostTeam}</b> llegó a tres errores. La ronda termina.</p><p>Las respuestas restantes se revelarán en el siguiente paso.</p>`
-    );
+    const intro = isEn()
+      ? `Third mistake. ${teamNames[previousTeam]} loses control. ${teamNames[currentTeam]} can steal the bank.`
+      : `Tercer error. ${teamNames[previousTeam]} pierde el control. ${teamNames[currentTeam]} puede robar el banco.`;
+    const startSteal = () => beginTurnAfterQuestion();
+    const spoken = narrate(intro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:startSteal, onerror:startSteal});
+    if (spoken === false) startSteal();
     return;
   }
 
@@ -719,14 +758,14 @@ function showHelp() {
         <li>The game is for <b>2 teams</b>.</li>
         <li>Each game uses <b>8 random questions</b> from the full bank.</li>
         <li>Questions do not repeat within the same game.</li>
-        <li>Each answer must be given before the <b>10-second timer</b> ends.</li>
+        <li>Each answer must be given before the <b>30-second timer</b> ends.</li>
         <li>If time reaches zero without a correct answer, <b>1 strike</b> is added automatically.</li>
-        <li>After a correct answer or a strike, the timer restarts at 10 seconds.</li>
+        <li>After a correct answer or a strike, the timer restarts after the question is narrated, with 30 seconds.</li>
         <li>Rounds <b>1–4 are ×1</b>, rounds <b>5–6 are ×2</b>, and rounds <b>7–8 are ×3</b>.</li>
         <li>A correct answer reveals the board item and adds its multiplied value to the <b>Bank</b>.</li>
         <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
         <li>On the third mistake, control passes to the opposing team.</li>
-        <li>If the bank has points, the opponent gets <b>10 seconds and one answer</b> to steal it.</li>
+        <li>If the bank has points, the opponent gets <b>30 seconds and one answer</b> to steal it.</li>
         <li>If the steal succeeds, the opponent wins the whole bank. If it fails or time expires, the bank is lost.</li>
         <li><b>AWARD BANK</b> remains available as a moderator control.</li>
         <li>After round 8, the final score and winner are shown.</li>
@@ -740,14 +779,14 @@ function showHelp() {
         <li>La partida es para <b>2 equipos</b>.</li>
         <li>Cada partida usa <b>8 preguntas aleatorias</b> elegidas de toda la base.</li>
         <li>Las preguntas no se repiten dentro de la misma partida.</li>
-        <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
+        <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 30 segundos</b>.</li>
         <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
-        <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 10 segundos.</li>
+        <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 30 segundos después de narrar la pregunta.</li>
         <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
         <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
         <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
         <li>Al tercer error pierde el control y el turno pasa al rival.</li>
-        <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
+        <li>Si había puntos en el banco, el rival dispone de <b>30 segundos y una sola respuesta</b> para robarlo.</li>
         <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
         <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
         <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
