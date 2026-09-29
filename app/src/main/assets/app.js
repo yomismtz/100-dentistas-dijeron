@@ -59,7 +59,7 @@ function normalizeStudyQuestion(q, forcedArea='') {
     q:q.q, q_en:q.q_en || '',
     cat:area, area,
     a:[[String(correct),100]],
-    a_en:correctEn ? [[String(correctEn),100]] : undefined,
+    a_en:correctEn ? [String(correctEn)] : undefined,
     source:q.source || 'Banco académico'
   };
 }
