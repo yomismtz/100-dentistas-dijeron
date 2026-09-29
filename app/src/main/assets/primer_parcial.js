@@ -575,6 +575,25 @@
   };
 
   ensureBank();
+
+  window.DentistasStudyBack = function () {
+    try {
+      if (studyScreen.classList.contains('hidden')) return false;
+      const quizVisible = !$s('#studyQuiz').classList.contains('hidden');
+      const resultVisible = !$s('#studyResult').classList.contains('hidden');
+      if (quizVisible || resultVisible) {
+        showStudyMenu();
+        window.DentistasNarrator?.stop?.();
+        return true;
+      }
+      exitStudy();
+      window.DentistasNarrator?.stop?.();
+      return true;
+    } catch (_) {
+      return false;
+    }
+  };
+
 window.addEventListener('dentistas-language-changed', () => {
   studyButton.textContent = tx('studyStart');
   const title = $s('#studyTitleText'); if (title) title.textContent = tx('studyTitle');
