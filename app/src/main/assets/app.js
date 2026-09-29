@@ -198,7 +198,7 @@ function updateTimerUI() {
   const timer = $('#timer');
   if (!timer) return;
   timer.textContent = phase === 'over' ? '—' : String(timerRemaining);
-  timer.classList.toggle('urgent', phase !== 'over' && timerRemaining <= 3);
+  timer.classList.toggle('urgent', phase !== 'over' && timerRemaining <= 10);
   timer.classList.toggle('paused', phase === 'over');
 }
 
@@ -241,7 +241,11 @@ function startTimer(initialSeconds = TURN_SECONDS) {
   timerHandle = setInterval(() => {
     timerRemaining -= 1;
     updateTimerUI();
-    if (timerRemaining > 0 && timerRemaining <= 3) gameSound('countdown');
+    if (timerRemaining > 0 && timerRemaining <= 10) {
+      const urgency = 11 - timerRemaining;
+      tone(650 + urgency * 45, timerRemaining <= 3 ? .16 : .09, 'square', timerRemaining <= 3 ? .075 : .035 + urgency * .003);
+      if (timerRemaining <= 3) setTimeout(() => tone(900 + urgency * 35, .08, 'square', .055), 170);
+    }
 
     if (timerRemaining <= 0) {
       stopTimer();
