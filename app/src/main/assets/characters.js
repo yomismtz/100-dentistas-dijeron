@@ -50,6 +50,7 @@ const CHARACTERS = [
 
 window.DentistasCharacters = CHARACTERS;
 
+
 const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v1';
 const CHARACTER_UNLOCK_RULES = {
   'NOVA': { always:true, label:'Disponible desde el inicio' },
@@ -92,6 +93,9 @@ function characterUnlocked(character) {
 function characterUnlockLabel(character) {
   return CHARACTER_UNLOCK_RULES[character?.name]?.label || 'Progreso de módulos';
 }
+window.DentistasCharacterUnlocked = characterUnlocked;
+window.DentistasCharacterUnlockLabel = characterUnlockLabel;
+
 
 const STUDENT_PROFILE_KEY = 'dentistas-student-profile-v1';
 const FEEDBACK_SETTINGS_KEY = 'dentistas-feedback-settings-v1';
