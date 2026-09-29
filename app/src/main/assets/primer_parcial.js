@@ -156,6 +156,57 @@
     .studyResultActions{display:grid;gap:.8rem;margin-top:1.5rem}
     @media(max-width:800px){.studyCategoryGrid{grid-template-columns:1fr 1fr}.studyTopbar{grid-template-columns:50px 1fr 50px;padding:.5rem}.studyQuestionCard{border-radius:14px}.studyQuiz{padding:12px}}
     @media(max-width:520px){.studyCategoryGrid{grid-template-columns:1fr}.homeActions{bottom:2%;gap:.5rem}.homeActions button{min-width:170px;padding:.65rem 1rem}.studyIntro h1{font-size:30px}.studyTopbar strong{font-size:14px}}
+
+    /* Visual refresh */
+    .studyScreen{background:radial-gradient(circle at 50% -10%,#173b46 0,#07171d 45%,#030a0d 100%)!important}
+    .studyTopbar{background:linear-gradient(180deg,#0d2a33,#07171d)!important;border-bottom:1px solid #3e7b85!important;box-shadow:0 9px 26px #0007!important}
+    .studyTopbar strong{color:#f0fdff!important;text-shadow:0 0 14px #6ee7f244}
+    .studyIconBtn{border:1px solid #4f8993!important;border-radius:14px!important;background:linear-gradient(180deg,#173c46,#0c252c)!important;box-shadow:inset 0 1px #ffffff12,0 5px 13px #0005}
+    .studyScroll{background:linear-gradient(180deg,#07181e55,#03101522)}
+    .studyIntro{padding:1.25rem 1rem 1.4rem;border:1px solid #376b75;border-radius:26px;background:linear-gradient(180deg,#0f2b34cc,#081b21dd);box-shadow:0 18px 42px #0006,inset 0 1px #ffffff10}
+    .studyEyebrow{border-color:#62cbd7!important;background:#0f3944!important;color:#c8faff!important;box-shadow:inset 0 1px #ffffff12}
+    .studyIntro h1{color:#f6fdff;text-shadow:0 0 18px #44c6d53d}
+    .studyIntro p{color:#c9dfe3!important}
+    .studyActions button,.studyNext,.studyResult button{border-radius:16px!important;box-shadow:inset 0 1px #ffffff14,0 8px 20px #0005!important;transition:transform .12s ease,filter .15s ease,box-shadow .18s ease!important}
+    .studyActions button:hover,.studyNext:hover,.studyResult button:hover{filter:brightness(1.1);transform:translateY(-1px)}
+    .studyPrimary{background:linear-gradient(180deg,#16a9bd,#087082)!important;border-color:#97e9f3!important}
+    #studyMockAll{background:linear-gradient(180deg,#423417,#241b08)!important;border-color:#c9a34f!important;color:#ffe5a2!important}
+    .studyCategoryGrid{gap:1.05rem!important}
+    .studyCategoryCard{position:relative;overflow:hidden;min-height:175px!important;padding:1.05rem!important;border:1px solid #315f69!important;border-radius:20px!important;background:linear-gradient(155deg,#112d35,#0a1d23 65%,#07171c)!important;box-shadow:0 13px 28px #0005,inset 0 1px #ffffff0d!important;transition:transform .15s ease,border-color .18s ease,box-shadow .18s ease!important}
+    .studyCategoryCard::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(#78e5f0,#1aa4ba);opacity:.85}
+    .studyCategoryCard:hover{transform:translateY(-4px)!important;border-color:#6bdbe7!important;box-shadow:0 18px 34px #0007,0 0 0 1px #6ee7f21f!important}
+    .studyCategoryCard:disabled{filter:saturate(.45);opacity:.5!important}
+    .studyCategoryIcon{font-size:2.35rem!important;filter:drop-shadow(0 5px 8px #0005)}
+    .studyCategoryName{font-size:1.12rem!important;color:#f1fcff!important}
+    .studyCategoryDesc{color:#b8d1d6!important}
+    .studyCategoryCount{display:inline-block;width:max-content;max-width:100%;padding:.28rem .55rem;border-radius:999px;background:#0f3944;color:#8fe9f2!important;border:1px solid #275b65}
+    .studyQuizStatus{margin-bottom:.95rem!important}
+    .studyQuizStatus span{background:linear-gradient(180deg,#12333c,#0a2229)!important;border-color:#356a74!important;color:#dff9fc!important;box-shadow:inset 0 1px #ffffff0d}
+    .studyStreak.hot{background:#3a2a0f!important;border-color:#d6a94a!important;color:#ffd86f!important}
+    .studyQuestionCard{border:1px solid #396d77!important;border-radius:24px!important;background:linear-gradient(180deg,#0f2830,#081a20)!important;box-shadow:0 20px 50px #0008,inset 0 1px #ffffff10!important}
+    .studySource{color:#8de9f3!important}
+    .studyContext{border-left-color:#66d5e0!important;background:#0d3039!important;border-radius:0 12px 12px 0;color:#d6e8eb!important}
+    .studyQuestionCard h2{color:#f7fdff;text-shadow:0 2px 12px #000}
+    .studyOptions{gap:.78rem!important}
+    .studyOption{position:relative;padding:1rem 1.05rem!important;border:1px solid #345f68!important;border-radius:15px!important;background:linear-gradient(180deg,#123039,#0b2229)!important;color:#edfafd;box-shadow:inset 0 1px #ffffff0d,0 7px 16px #0004!important;transition:transform .12s ease,border-color .16s ease,filter .16s ease!important}
+    .studyOption:hover:not(:disabled){transform:translateY(-2px);border-color:#6bdbe7!important;filter:brightness(1.08)}
+    .studyOption b{display:inline-flex;align-items:center;justify-content:center;min-width:2rem;height:2rem;margin-right:.45rem;border-radius:50%;background:#173f49;border:1px solid #4f8590;color:#c9f7fb}
+    .studyOption.correct{border-color:#61d886!important;background:linear-gradient(180deg,#174a2a,#0c2b18)!important;box-shadow:0 0 0 1px #5add8424,0 8px 20px #001!important}
+    .studyOption.wrong{border-color:#ff7779!important;background:linear-gradient(180deg,#5b2223,#321112)!important}
+    .studyFeedback{border-radius:15px!important;background:#0d2931!important;box-shadow:inset 0 1px #ffffff0d}
+    .studyFeedback.good{border-color:#57cb7a!important}
+    .studyFeedback.bad{border-color:#e87373!important}
+    .studyResultCard{border:1px solid #4b8994!important;border-radius:28px!important;background:linear-gradient(180deg,#102d35,#081b21)!important;box-shadow:0 22px 55px #0008,inset 0 1px #ffffff10!important}
+    .studyResultBig{color:#c9fbff!important;text-shadow:0 0 26px #61e4ef55}
+    .studyMedal{filter:drop-shadow(0 0 26px #ffc94d77)!important}
+    .studyMedalLabel{padding:.35rem .7rem;border-radius:999px;background:#35290f;border:1px solid #a98645;display:inline-block}
+    .studyResultActions button{background:linear-gradient(180deg,#173740,#0c242b)!important;border-color:#4e7e87!important}
+    .studyResultActions .studyPrimary{background:linear-gradient(180deg,#16a9bd,#087082)!important}
+    @media(max-width:800px){
+      .studyIntro{border-radius:20px;padding:1rem .8rem}
+      .studyCategoryCard{min-height:160px!important}
+      .studyQuestionCard{border-radius:18px!important}
+    }
   `;
   document.head.appendChild(studyStyle);
 
