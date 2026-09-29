@@ -3,6 +3,7 @@
 (() => {
   const DATA_FILES = ['primer_parcial_01.json','primer_parcial_02.json','primer_parcial_03.json','primer_parcial_04.json','primer_parcial_05.json','primer_parcial_06.json','primer_parcial_07.json','primer_parcial_08.json','primer_parcial_09.json','primer_parcial_10.json'];
   const ETYMOLOGY_FILE = 'nomenclatura_etimologia_300.json';
+  const CLINICAL_RECORD_FILE = 'expediente_clinico_300.json';
   const QUICK_LENGTH = 10;
   const MOCK_LENGTH = 40;
   const PASS_TARGET = 80;
@@ -42,6 +43,7 @@
 
   let bank = [];
   let etymologyBank = [];
+  let clinicalRecordBank = [];
   let currentCategory = 'Todos los temas';
   let session = [];
   let sessionIndex = 0;
@@ -120,7 +122,10 @@
         : `Los componentes direccionales o morfológicos indicados en el enunciado forman <b>${correctText}</b>; los distractores emplean otro prefijo, lexema o tipo de movimiento.`,
       'Nomenclatura y etimología médica': en
         ? `The prefix, root, suffix, or compound term in the stem corresponds to <b>${correctText}</b>. Its etymologic components help explain the medical or dental meaning.`
-        : `El prefijo, raíz, sufijo o término compuesto del enunciado corresponde a <b>${correctText}</b>. Sus componentes etimológicos ayudan a explicar el significado médico u odontológico.`
+        : `El prefijo, raíz, sufijo o término compuesto del enunciado corresponde a <b>${correctText}</b>. Sus componentes etimológicos ayudan a explicar el significado médico u odontológico.`,
+      'Realización del expediente clínico': en
+        ? `The clinical-record section, datum, or documentation rule described in the stem corresponds to <b>${correctText}</b>. The answer follows the uploaded clinical-record materials.`
+        : `El apartado, dato o regla de documentación descrita en el enunciado corresponde a <b>${correctText}</b>. La respuesta sigue los materiales de expediente clínico proporcionados.`
     };
     return intro + (templates[category] || (en
       ? `The information in the stem most directly supports <b>${correctText}</b>.`
@@ -174,6 +179,22 @@
         </div>
         <small id="studyEtymologyCount">300 ${tx('items')}</small>
       </section>
+      <section class="studyClinicalFeature" aria-label="Realización del expediente clínico">
+        <div class="studyClinicalHead">
+          <span class="studyClinicalIcon">📋</span>
+          <div>
+            <span class="studyClinicalEyebrow">${tx('clinicalModule')}</span>
+            <h2 id="studyClinicalTitle">${tx('clinicalTitle')}</h2>
+            <p id="studyClinicalDesc">${tx('clinicalDesc')}</p>
+          </div>
+        </div>
+        <div class="studyClinicalActions">
+          <button id="studyClinical10" class="studyPrimary">${tx('clinical10')}</button>
+          <button id="studyClinical40">${tx('clinical40')}</button>
+          <button id="studyClinical300">${tx('clinical300')}</button>
+        </div>
+        <small id="studyClinicalCount">300 ${tx('items')}</small>
+      </section>
       <div id="studyCategories" class="studyCategoryGrid"></div>
     </section>
 
@@ -219,6 +240,7 @@
     .studyNote{font-size:.9rem!important;opacity:.8}
     .studyEtymologyFeature{max-width:1120px;margin:0 auto 1.25rem;padding:1.15rem 1.2rem;border:1px solid #7c5db0;border-radius:22px;background:linear-gradient(145deg,#211a35,#111b2a 62%,#0b2026);box-shadow:0 16px 36px #0006,inset 0 1px #ffffff10}
     .studyEtymologyHead{display:flex;gap:1rem;align-items:flex-start}.studyEtymologyIcon{font-size:2.6rem}.studyEtymologyEyebrow{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:#d9b8ff}.studyEtymologyFeature h2{margin:.15rem 0 .35rem;font-size:clamp(20px,2.3vw,32px);color:#f6edff}.studyEtymologyFeature p{margin:0;color:#d4c9df;line-height:1.4}.studyEtymologyActions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}.studyEtymologyActions button{padding:.75rem 1rem;border:1px solid #8063ad;border-radius:13px;background:#2a2140;font-weight:900}.studyEtymologyActions button:last-child{background:linear-gradient(180deg,#6f3fa6,#43226b);border-color:#c89dff}.studyEtymologyFeature small{display:block;margin-top:.7rem;color:#cba8f4;font-weight:900}
+    .studyClinicalFeature{max-width:1120px;margin:0 auto 1.25rem;padding:1.15rem 1.2rem;border:1px solid #3d8f7d;border-radius:22px;background:linear-gradient(145deg,#12342f,#10242a 62%,#081d22);box-shadow:0 16px 36px #0006,inset 0 1px #ffffff10}.studyClinicalHead{display:flex;gap:1rem;align-items:flex-start}.studyClinicalIcon{font-size:2.6rem}.studyClinicalEyebrow{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:#8ce7ce}.studyClinicalFeature h2{margin:.15rem 0 .35rem;font-size:clamp(20px,2.3vw,32px);color:#e9fff8}.studyClinicalFeature p{margin:0;color:#c9e3dc;line-height:1.4}.studyClinicalActions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}.studyClinicalActions button{padding:.75rem 1rem;border:1px solid #407f71;border-radius:13px;background:#14372f;font-weight:900}.studyClinicalActions button:last-child{background:linear-gradient(180deg,#287a67,#185244);border-color:#79d8bd}.studyClinicalFeature small{display:block;margin-top:.7rem;color:#87d9c2;font-weight:900}
     .studyCategoryGrid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding-bottom:2rem}
     .studyCategoryCard{min-height:165px;text-align:left;padding:1rem;border:1px solid #477983;border-radius:18px;background:linear-gradient(145deg,#112a31,#0b1c22);box-shadow:0 10px 25px #0005;display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem}
     .studyCategoryCard:hover{border-color:#9ce7f0;transform:translateY(-2px)}
@@ -347,9 +369,11 @@
     try {
       const responses = await Promise.all(DATA_FILES.map(file => fetch(file)));
       const etymologyResponse = await fetch(ETYMOLOGY_FILE);
+      const clinicalRecordResponse = await fetch(CLINICAL_RECORD_FILE);
       const bad = responses.find(r => !r.ok);
       if (bad) throw new Error(`HTTP ${bad.status}`);
       if (!etymologyResponse.ok) throw new Error(`HTTP ${etymologyResponse.status} · etimología`);
+      if (!clinicalRecordResponse.ok) throw new Error(`HTTP ${clinicalRecordResponse.status} · expediente clínico`);
       const data = (await Promise.all(responses.map(r => r.json()))).flat();
       if (!Array.isArray(data)) throw new Error('Formato inválido');
       bank = data.filter(q =>
@@ -362,6 +386,12 @@
         Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
       ) : [];
       const ec = $s('#studyEtymologyCount'); if (ec) ec.textContent = `${etymologyBank.length} ${tx('items')}`;
+      const clinicalRecordData = await clinicalRecordResponse.json();
+      clinicalRecordBank = Array.isArray(clinicalRecordData) ? clinicalRecordData.filter(q =>
+        q && q.q && Array.isArray(q.options) &&
+        Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
+      ) : [];
+      const cc = $s('#studyClinicalCount'); if (cc) cc.textContent = `${clinicalRecordBank.length} ${tx('items')}`;
       renderCategories();
       return true;
     } catch (err) {
@@ -423,6 +453,7 @@
 
   function poolFor(category) {
     if (category === 'Nomenclatura y etimología médica') return [...etymologyBank];
+    if (category === 'Realización del expediente clínico') return [...clinicalRecordBank];
     return category === 'Todos los temas' ? [...bank] : bank.filter(q => q.category === category);
   }
 
@@ -612,6 +643,13 @@
   $s('#studyEtymology10').onclick = () => startEtymology(10);
   $s('#studyEtymology40').onclick = () => startEtymology(40);
   $s('#studyEtymology100').onclick = () => startEtymology(300);
+  const startClinicalRecord = length => {
+    if (clinicalRecordBank.length) startSession('Realización del expediente clínico', length);
+    else ensureBank().then(ok => ok && startSession('Realización del expediente clínico', length));
+  };
+  $s('#studyClinical10').onclick = () => startClinicalRecord(10);
+  $s('#studyClinical40').onclick = () => startClinicalRecord(40);
+  $s('#studyClinical300').onclick = () => startClinicalRecord(300);
 
   ensureBank();
 
@@ -647,6 +685,12 @@ window.addEventListener('dentistas-language-changed', () => {
   const ety40 = $s('#studyEtymology40'); if (ety40) ety40.textContent = tx('etymology40');
   const ety100 = $s('#studyEtymology100'); if (ety100) ety100.textContent = tx('etymology100');
   const etyCount = $s('#studyEtymologyCount'); if (etyCount) etyCount.textContent = `${etymologyBank.length || 300} ${tx('items')}`;
+  const clinicalTitle = $s('#studyClinicalTitle'); if (clinicalTitle) clinicalTitle.textContent = tx('clinicalTitle');
+  const clinicalDesc = $s('#studyClinicalDesc'); if (clinicalDesc) clinicalDesc.textContent = tx('clinicalDesc');
+  const clinical10 = $s('#studyClinical10'); if (clinical10) clinical10.textContent = tx('clinical10');
+  const clinical40 = $s('#studyClinical40'); if (clinical40) clinical40.textContent = tx('clinical40');
+  const clinical300 = $s('#studyClinical300'); if (clinical300) clinical300.textContent = tx('clinical300');
+  const clinicalCount = $s('#studyClinicalCount'); if (clinicalCount) clinicalCount.textContent = `${clinicalRecordBank.length || 300} ${tx('items')}`;
   const note = studyScreen.querySelector('.studyNote'); if (note && !$s('#studyResult')?.classList.contains('hidden')) {} else if (note) note.textContent = tx('target');
   renderCategories();
   if (!$s('#studyQuiz').classList.contains('hidden') && session.length) renderQuestion();
