@@ -39,6 +39,8 @@
   let session = [];
   let sessionIndex = 0;
   let sessionScore = 0;
+  let sessionStreak = 0;
+  let bestStreak = 0;
   let answered = false;
   let currentPrepared = null;
 
@@ -81,6 +83,7 @@
         <span id="studyCategoryLabel">Todos los temas</span>
         <span id="studyProgress">1 / 10</span>
         <span id="studyScore">0 correctas</span>
+        <span id="studyStreak" class="studyStreak">🔥 0</span>
       </div>
       <div class="studyQuestionCard">
         <div id="studySource" class="studySource"></div>
@@ -126,6 +129,12 @@
     .studyQuiz{height:90%;overflow:auto;padding:clamp(14px,2.2vw,28px)}
     .studyQuizStatus{max-width:1000px;margin:0 auto .8rem;display:flex;gap:.6rem;justify-content:space-between;flex-wrap:wrap}
     .studyQuizStatus span{padding:.45rem .75rem;border-radius:999px;background:#102b33;border:1px solid #396a74;font-size:.84rem;font-weight:800}
+    .studyStreak{transition:transform .18s ease,box-shadow .18s ease,color .18s ease}
+    .studyStreak.hot{color:#ffd66b;box-shadow:0 0 18px #ff9c0045;transform:scale(1.08)}
+    .studyMedal{font-size:clamp(58px,10vw,112px);line-height:1;filter:drop-shadow(0 0 18px #ffc94d66);animation:studyMedalPop .45s cubic-bezier(.2,.9,.25,1.25)}
+    .studyMedalLabel{font-weight:900;color:#ffe5a1;letter-spacing:.05em;margin:.35rem 0 .5rem}
+    .studyBestStreak{font-size:1.05rem!important;color:#ffd98a}
+    @keyframes studyMedalPop{from{transform:scale(.55) rotate(-8deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
     .studyQuestionCard{max-width:1000px;margin:auto;padding:clamp(18px,3vw,34px);border:1px solid #477983;border-radius:20px;background:#0b1a1f;box-shadow:0 16px 40px #0007}
     .studySource{font-size:.82rem;color:#8dd8e3;font-weight:900;letter-spacing:.03em}
     .studyContext{margin:.8rem 0;padding:.8rem 1rem;border-left:4px solid #558e99;background:#10252c;color:#d8e7e9;line-height:1.45;font-size:.92rem}
@@ -259,6 +268,8 @@
     session = shuffle(pool).slice(0, Math.min(requestedLength, pool.length));
     sessionIndex = 0;
     sessionScore = 0;
+    sessionStreak = 0;
+    bestStreak = 0;
     answered = false;
     currentPrepared = null;
 
@@ -283,6 +294,8 @@
     $s('#studyCategoryLabel').textContent = catLabel(currentCategory);
     $s('#studyProgress').textContent = `${sessionIndex + 1} / ${session.length}`;
     $s('#studyScore').textContent = `${sessionScore} ${tx('correctCount')}`;
+    const streakEl = $s('#studyStreak');
+    if (streakEl) streakEl.textContent = `🔥 ${sessionStreak}`;
     $s('#studySource').textContent = `${q.source} · ${tx('question')} ${q.number} · ${q.type}`;
 
     const context = $s('#studyContext');
@@ -323,13 +336,21 @@
 
     if (choice.correct) {
       sessionScore += 1;
+      sessionStreak += 1;
+      bestStreak = Math.max(bestStreak, sessionStreak);
       playStudySound(true);
     } else {
+      sessionStreak = 0;
       buttons[index].classList.add('wrong');
       playStudySound(false);
     }
 
     $s('#studyScore').textContent = `${sessionScore} ${tx('correctCount')}`;
+    const streakEl = $s('#studyStreak');
+    if (streakEl) {
+      streakEl.textContent = `🔥 ${sessionStreak}`;
+      streakEl.classList.toggle('hot', sessionStreak >= 3);
+    }
     const correct = currentPrepared.choices.find(c => c.correct)?.text || '';
     const feedback = $s('#studyFeedback');
     feedback.className = `studyFeedback ${choice.correct ? 'good' : 'bad'}`;
@@ -355,12 +376,22 @@
     $s('#studyResult').classList.remove('hidden');
     const percent = session.length ? Math.round((sessionScore / session.length) * 100) : 0;
     const passed = percent >= PASS_TARGET;
+    const lang = I18N?.getLang?.() || 'es';
+    let medal = '';
+    let medalLabel = '';
+    if (percent >= 90) { medal = '🏆'; medalLabel = lang === 'en' ? 'Mastery Trophy' : 'Trofeo de excelencia'; }
+    else if (percent >= 80) { medal = '🥇'; medalLabel = lang === 'en' ? 'Gold Medal' : 'Medalla de oro'; }
+    else if (percent >= 70) { medal = '🥈'; medalLabel = lang === 'en' ? 'Silver Medal' : 'Medalla de plata'; }
+    else if (percent >= 60) { medal = '🥉'; medalLabel = lang === 'en' ? 'Bronze Medal' : 'Medalla de bronce'; }
     $s('#studySubtitle').textContent = tx('resultTitle');
     $s('#studyResult').innerHTML = `
       <div class="studyResultCard">
+        <div class="studyMedal">${medal || '📘'}</div>
         <div class="studyResultBig">${percent}%</div>
+        ${medalLabel ? `<div class="studyMedalLabel">${medalLabel}</div>` : ''}
         <h1>${passed ? tx('passed') : tx('keepStudying')}</h1>
         <p>${tx('got')} <b>${sessionScore} ${tx('of')} ${session.length}</b> ${tx('correctResponses')} <b>${catLabel(currentCategory)}</b>.</p>
+        <p class="studyBestStreak">🔥 ${lang === 'en' ? 'Best streak' : 'Mejor racha'}: <b>${bestStreak}</b></p>
         <p>${passed ? tx('reached') : tx('notReached')}</p>
         <p class="studyNote">${tx('disclaimer')}</p>
         <div class="studyResultActions">
