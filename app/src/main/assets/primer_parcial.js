@@ -2,7 +2,7 @@
 
 (() => {
   const DATA_FILES = ['primer_parcial_01.json','primer_parcial_02.json','primer_parcial_03.json','primer_parcial_04.json','primer_parcial_05.json','primer_parcial_06.json','primer_parcial_07.json','primer_parcial_08.json','primer_parcial_09.json','primer_parcial_10.json'];
-  const ETYMOLOGY_FILE = 'nomenclatura_etimologia_100.json';
+  const ETYMOLOGY_FILE = 'nomenclatura_etimologia_300.json';
   const QUICK_LENGTH = 10;
   const MOCK_LENGTH = 40;
   const PASS_TARGET = 80;
@@ -172,7 +172,7 @@
           <button id="studyEtymology40">${tx('etymology40')}</button>
           <button id="studyEtymology100">${tx('etymology100')}</button>
         </div>
-        <small id="studyEtymologyCount">100 ${tx('items')}</small>
+        <small id="studyEtymologyCount">300 ${tx('items')}</small>
       </section>
       <div id="studyCategories" class="studyCategoryGrid"></div>
     </section>
@@ -611,7 +611,7 @@
   };
   $s('#studyEtymology10').onclick = () => startEtymology(10);
   $s('#studyEtymology40').onclick = () => startEtymology(40);
-  $s('#studyEtymology100').onclick = () => startEtymology(100);
+  $s('#studyEtymology100').onclick = () => startEtymology(300);
 
   ensureBank();
 
@@ -646,7 +646,7 @@ window.addEventListener('dentistas-language-changed', () => {
   const ety10 = $s('#studyEtymology10'); if (ety10) ety10.textContent = tx('etymology10');
   const ety40 = $s('#studyEtymology40'); if (ety40) ety40.textContent = tx('etymology40');
   const ety100 = $s('#studyEtymology100'); if (ety100) ety100.textContent = tx('etymology100');
-  const etyCount = $s('#studyEtymologyCount'); if (etyCount) etyCount.textContent = `${etymologyBank.length || 100} ${tx('items')}`;
+  const etyCount = $s('#studyEtymologyCount'); if (etyCount) etyCount.textContent = `${etymologyBank.length || 300} ${tx('items')}`;
   const note = studyScreen.querySelector('.studyNote'); if (note && !$s('#studyResult')?.classList.contains('hidden')) {} else if (note) note.textContent = tx('target');
   renderCategories();
   if (!$s('#studyQuiz').classList.contains('hidden') && session.length) renderQuestion();
