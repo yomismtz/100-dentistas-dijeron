@@ -4,7 +4,7 @@
   const DATA_FILES = ['primer_parcial_01.json','primer_parcial_02.json','primer_parcial_03.json','primer_parcial_04.json','primer_parcial_05.json','primer_parcial_06.json','primer_parcial_07.json','primer_parcial_08.json','primer_parcial_09.json','primer_parcial_10.json'];
   const QUICK_LENGTH = 10;
   const MOCK_LENGTH = 40;
-  const PASS_TARGET = 80;
+  const PASS_TARGET = 80;\n  const I18N = window.DentistasI18n;\n  const tx = (key) => I18N ? I18N.t(key) : key;\n  const catLabel = (name) => I18N ? I18N.category(name) : name;\n  const catDesc = (name) => I18N ? I18N.categoryDesc(name) : (CATEGORY_META[name]?.[1] || '');
 
   const CATEGORY_ORDER = [
     'Desarrollo craneofacial',
@@ -41,7 +41,7 @@
   const studyButton = document.createElement('button');
   studyButton.id = 'studyStart';
   studyButton.className = 'studyHomeButton';
-  studyButton.textContent = 'JUEGA Y APRUEBA EL 1ER PARCIAL';
+  studyButton.textContent = tx('studyStart');
   const homeActions = document.querySelector('.homeActions');
   if (homeActions) homeActions.appendChild(studyButton);
 
@@ -52,22 +52,22 @@
     <header class="studyTopbar">
       <button id="studyExit" class="studyIconBtn" aria-label="Volver a portada">⌂</button>
       <div>
-        <strong>JUEGA Y APRUEBA EL PRIMER PARCIAL</strong>
-        <span id="studySubtitle">Banco de los 5 exámenes</span>
+        <strong id="studyTitleText">${tx('studyTitle')}</strong>
+        <span id="studySubtitle">${tx('studySubtitle')}</span>
       </div>
       <button id="studyMenuBtn" class="studyIconBtn hidden" aria-label="Volver a materias">☰</button>
     </header>
 
     <section id="studyMenu" class="studyScroll">
       <div class="studyIntro">
-        <span class="studyEyebrow">MODO DE ESTUDIO</span>
-        <h1>Primer parcial · 200 reactivos</h1>
-        <p>Repasa por materia con preguntas tomadas de los cinco exámenes. Los reactivos de relación de columnas y nomenclatura se adaptaron a opción múltiple para poder jugar, conservando su respuesta correcta.</p>
+        <span id="studyModeText" class="studyEyebrow">${tx('studyMode')}</span>
+        <h1 id="studyIntroTitle">${tx('firstMidterm')} · 200 ${tx('items')}</h1>
+        <p id="studyIntroText">${tx('intro')}</p>
         <div class="studyActions">
-          <button id="studyQuickAll" class="studyPrimary">⚡ RETO RÁPIDO · 10 PREGUNTAS</button>
-          <button id="studyMockAll">📝 SIMULACRO · 40 PREGUNTAS</button>
+          <button id="studyQuickAll" class="studyPrimary">${tx('quick')}</button>
+          <button id="studyMockAll">${tx('mock')}</button>
         </div>
-        <p class="studyNote">Meta lúdica: 80% de aciertos. No sustituye la calificación oficial del curso.</p>
+        <p class="studyNote">${tx('target')}</p>
       </div>
       <div id="studyCategories" class="studyCategoryGrid"></div>
     </section>
@@ -205,9 +205,9 @@
       return `
         <button class="studyCategoryCard" data-category="${category.replace(/"/g, '&quot;')}" ${count ? '' : 'disabled'}>
           <span class="studyCategoryIcon">${meta[0]}</span>
-          <span class="studyCategoryName">${category}</span>
-          <span class="studyCategoryDesc">${meta[1]}</span>
-          <span class="studyCategoryCount">${count ? `${count} reactivo${count === 1 ? '' : 's'} · reto aleatorio` : '0 reactivos en los 5 exámenes'}</span>
+          <span class="studyCategoryName">${catLabel(category)}</span>
+          <span class="studyCategoryDesc">${catDesc(category)}</span>
+          <span class="studyCategoryCount">${count ? `${count} ${tx('items')} · ${I18N?.getLang() === 'en' ? 'random challenge' : 'reto aleatorio'}` : I18N?.getLang() === 'en' ? '0 items in the 5 exams' : '0 reactivos en los 5 exámenes'}</span>
         </button>
       `;
     }).join('');
@@ -226,9 +226,9 @@
     $s('#studyQuiz').classList.add('hidden');
     $s('#studyResult').classList.add('hidden');
     $s('#studyMenuBtn').classList.add('hidden');
-    $s('#studySubtitle').textContent = bank.length ? `${bank.length} reactivos de los 5 exámenes` : 'Cargando banco…';
+    $s('#studySubtitle').textContent = bank.length ? `${bank.length} ${tx('fromFive')}` : tx('loading');
     ensureBank().then(ok => {
-      if (ok) $s('#studySubtitle').textContent = `${bank.length} reactivos de los 5 exámenes`;
+      if (ok) $s('#studySubtitle').textContent = `${bank.length} ${tx('fromFive')}`;
     });
   }
 
@@ -275,11 +275,11 @@
     const q = session[sessionIndex];
     currentPrepared = preparedQuestion(q);
 
-    $s('#studySubtitle').textContent = currentCategory;
-    $s('#studyCategoryLabel').textContent = currentCategory;
+    $s('#studySubtitle').textContent = catLabel(currentCategory);
+    $s('#studyCategoryLabel').textContent = catLabel(currentCategory);
     $s('#studyProgress').textContent = `${sessionIndex + 1} / ${session.length}`;
-    $s('#studyScore').textContent = `${sessionScore} correcta${sessionScore === 1 ? '' : 's'}`;
-    $s('#studySource').textContent = `${q.source} · Reactivo ${q.number} · ${q.type}`;
+    $s('#studyScore').textContent = `${sessionScore} ${tx('correctCount')}`;
+    $s('#studySource').textContent = `${q.source} · ${tx('question')} ${q.number} · ${q.type}`;
 
     const context = $s('#studyContext');
     if (q.context) {
@@ -332,7 +332,7 @@
     feedback.innerHTML = choice.correct
       ? `<b>✓ Correcto.</b> ${currentPrepared.source}, reactivo ${currentPrepared.number}.`
       : `<b>✖ Incorrecto.</b> Respuesta correcta: <b>${correct}</b><br><small>${currentPrepared.source}, reactivo ${currentPrepared.number}.</small>`;
-    $s('#studyNext').textContent = sessionIndex === session.length - 1 ? 'VER RESULTADO ▶' : 'SIGUIENTE ▶';
+    $s('#studyNext').textContent = sessionIndex === session.length - 1 ? tx('result') : tx('next');
     $s('#studyNext').classList.remove('hidden');
   }
 
@@ -351,18 +351,18 @@
     $s('#studyResult').classList.remove('hidden');
     const percent = session.length ? Math.round((sessionScore / session.length) * 100) : 0;
     const passed = percent >= PASS_TARGET;
-    $s('#studySubtitle').textContent = 'Resultado del reto';
+    $s('#studySubtitle').textContent = tx('resultTitle');
     $s('#studyResult').innerHTML = `
       <div class="studyResultCard">
         <div class="studyResultBig">${percent}%</div>
-        <h1>${passed ? '✅ RETO SUPERADO' : '📚 SIGUE REPASANDO'}</h1>
-        <p>Obtuviste <b>${sessionScore} de ${session.length}</b> respuestas correctas en <b>${currentCategory}</b>.</p>
-        <p>${passed ? 'Alcanzaste la meta lúdica de 80%.' : 'La meta lúdica de este modo es 80%. Puedes repetir el mismo tema con preguntas aleatorias.'}</p>
-        <p class="studyNote">Este porcentaje es una herramienta de estudio y no equivale a una calificación oficial.</p>
+        <h1>${passed ? tx('passed') : tx('keepStudying')}</h1>
+        <p>${tx('got')} <b>${sessionScore} ${tx('of')} ${session.length}</b> ${tx('correctResponses')} <b>${catLabel(currentCategory)}</b>.</p>
+        <p>${passed ? tx('reached') : tx('notReached')}</p>
+        <p class="studyNote">${tx('disclaimer')}</p>
         <div class="studyResultActions">
-          <button id="studyRetry" class="studyPrimary">↻ REPETIR TEMA</button>
-          <button id="studyResultMenu">☰ ELEGIR OTRA MATERIA</button>
-          <button id="studyResultHome">⌂ VOLVER A PORTADA</button>
+          <button id="studyRetry" class="studyPrimary">${tx('retry')}</button>
+          <button id="studyResultMenu">${tx('choose')}</button>
+          <button id="studyResultHome">${tx('home')}</button>
         </div>
       </div>
     `;
@@ -386,3 +386,15 @@
 
   ensureBank();
 })();
+window.addEventListener('dentistas-language-changed', () => {
+  studyButton.textContent = tx('studyStart');
+  const title = $s('#studyTitleText'); if (title) title.textContent = tx('studyTitle');
+  const mode = $s('#studyModeText'); if (mode) mode.textContent = tx('studyMode');
+  const introTitle = $s('#studyIntroTitle'); if (introTitle) introTitle.textContent = `${tx('firstMidterm')} · ${bank.length || 200} ${tx('items')}`;
+  const introText = $s('#studyIntroText'); if (introText) introText.textContent = tx('intro');
+  const quick = $s('#studyQuickAll'); if (quick) quick.textContent = tx('quick');
+  const mock = $s('#studyMockAll'); if (mock) mock.textContent = tx('mock');
+  const note = studyScreen.querySelector('.studyNote'); if (note && !$s('#studyResult')?.classList.contains('hidden')) {} else if (note) note.textContent = tx('target');
+  renderCategories();
+  if (!$s('#studyQuiz').classList.contains('hidden') && session.length) renderQuestion();
+});
