@@ -455,7 +455,7 @@
     else if (percent >= 70) { medal = '🥈'; medalLabel = lang === 'en' ? 'Silver Medal' : 'Medalla de plata'; }
     else if (percent >= 60) { medal = '🥉'; medalLabel = lang === 'en' ? 'Bronze Medal' : 'Medalla de bronce'; }
     $s('#studySubtitle').textContent = tx('resultTitle');
-    narrateStudy(`${tx('resultTitle')}. ${percent} percent. ${passed ? tx('passed') : tx('keepStudying')}.`, {rate:.92});
+    narrateStudy(`${tx('resultTitle')}. ${percent} ${lang === 'en' ? 'percent' : 'por ciento'}. ${passed ? tx('passed') : tx('keepStudying')}.`, {lang: lang === 'en' ? 'en-US' : 'es-MX', rate:.92});
     $s('#studyResult').innerHTML = `
       <div class="studyResultCard">
         <div class="studyMedal">${medal || '📘'}</div>
