@@ -113,7 +113,32 @@ function areaForQuestion(q) {
 }
 
 function availableAreas() {
-  return [...new Set(questionPool.map(areaForQuestion).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+  const counts = new Map();
+  questionPool.forEach(q => {
+    const area = areaForQuestion(q);
+    if (area) counts.set(area, (counts.get(area) || 0) + 1);
+  });
+  return [...counts.entries()]
+    .filter(([, count]) => count >= GAME_SIZE)
+    .map(([area]) => area)
+    .sort((a,b)=>a.localeCompare(b,'es'));
+}
+
+function questionKey(q) {
+  const clean = value => String(value || '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  return clean(q?.q || q?.open_q);
+}
+
+function dedupeQuestionPool(items) {
+  const seen = new Set();
+  return items.filter(q => {
+    const key = questionKey(q);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function filteredPool() {
@@ -912,7 +937,7 @@ async function loadQuestionPool() {
       } catch (err) { console.warn('No se pudo cargar', file, err); }
     }
 
-    questionPool = combined;
+    questionPool = dedupeQuestionPool(combined);
     updateScoreUI();
     return questionPool;
   })();
