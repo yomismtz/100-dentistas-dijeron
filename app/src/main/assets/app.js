@@ -202,6 +202,13 @@ function updateTimerUI() {
   timer.classList.toggle('paused', phase === 'over');
 }
 
+function invalidateTurn() {
+  turnNarrationToken += 1;
+  stopTimer();
+  clearCpuTurn();
+  window.DentistasNarrator?.stop?.();
+}
+
 function stopTimer() {
   if (timerHandle) {
     clearInterval(timerHandle);
@@ -210,8 +217,7 @@ function stopTimer() {
 }
 
 function beginTurnAfterQuestion() {
-  stopTimer();
-  clearCpuTurn();
+  invalidateTurn();
   timerRemaining = TURN_SECONDS;
   updateTimerUI();
   const q = questions[roundIndex];
@@ -652,8 +658,7 @@ async function startNewGame() {
     return;
   }
 
-  clearCpuTurn();
-  stopTimer();
+  invalidateTurn();
   chooseGameQuestions();
   scores = [0, 0];
   roundIndex = 0;
@@ -672,9 +677,9 @@ async function startNewGame() {
 }
 
 function finishGame() {
-  stopTimer();
-  gameSound('victory');
+  invalidateTurn();
   phase = 'over';
+  gameSound('victory');
   updateTurnUI();
 
   let result;
@@ -734,11 +739,11 @@ function renameTeam(team) {
     updateTurnUI();
     saveState();
   }
-  if (gameVisible() && phase !== 'over') startTimer();
+  if (gameVisible() && phase !== 'over') beginTurnAfterQuestion();
 }
 
 function openModal(html) {
-  stopTimer();
+  invalidateTurn();
   $('#modalContent').innerHTML = html;
   $('#modal').classList.remove('hidden');
   const spoken = $('#modalContent').innerText || $('#modalContent').textContent || '';
@@ -746,8 +751,9 @@ function openModal(html) {
 }
 
 function closeModal(resumeTimer = true) {
+  invalidateTurn();
   $('#modal').classList.add('hidden');
-  if (resumeTimer && gameVisible() && phase !== 'over') startTimer();
+  if (resumeTimer && gameVisible() && phase !== 'over') beginTurnAfterQuestion();
 }
 
 function showHelp() {
@@ -892,7 +898,7 @@ const exitGame = $('#exitGame');
 if (exitGame) exitGame.onclick = () => {
   const msg = isEn() ? 'Exit this game and return to the main menu?' : '¿Salir de esta partida y volver al menú principal?';
   if (!confirm(msg)) return;
-  closeModal(false); stopTimer(); clearCpuTurn();
+  closeModal(false); invalidateTurn();
   $('#game').classList.add('hidden'); $('#home').classList.remove('hidden');
   window.DentistasNarrator?.stop?.();
 };
