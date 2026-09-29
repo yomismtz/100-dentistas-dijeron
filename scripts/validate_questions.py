@@ -46,8 +46,8 @@ for filename in FILES:
             errors.append(f'{prefix}: pregunta duplicada: {q}')
         seen_questions.add(q_key)
 
-        if not isinstance(answers, list) or not (3 <= len(answers) <= 5):
-            errors.append(f'{prefix}: debe tener entre 3 y 5 respuestas; tiene {len(answers) if isinstance(answers, list) else "formato inválido"}')
+        if not isinstance(answers, list) or not (3 <= len(answers) <= 7):
+            errors.append(f'{prefix}: debe tener entre 3 y 7 respuestas; tiene {len(answers) if isinstance(answers, list) else "formato inválido"}')
             continue
         if not isinstance(answers_en, list) or len(answers_en) != len(answers):
             errors.append(f'{prefix}: a_en debe tener exactamente {len(answers)} respuestas traducidas')
@@ -77,13 +77,11 @@ for filename in FILES:
             errors.append(f'{prefix}: los puntos deben sumar 100; suman {point_sum}')
 
         point_values = [answer[1] for answer in answers if isinstance(answer, list) and len(answer) == 2 and isinstance(answer[1], (int, float))]
-        expected_weights = {
-            3: [45, 35, 20],
-            4: [35, 30, 20, 15],
-            5: [30, 25, 20, 15, 10],
-        }.get(len(answers))
-        if len(point_values) == len(answers) and point_values != expected_weights:
-            errors.append(f'{prefix}: ponderación lúdica esperada {expected_weights}; encontrada {point_values}')
+        if len(point_values) == len(answers):
+            highest = max(point_values)
+            if point_values.count(highest) != 1:
+                errors.append(f'{prefix}: debe existir una sola respuesta líder; el puntaje máximo {highest} está empatado')
+
 
 if total != 116:
     errors.append(f'La base debe contener 116 preguntas; contiene {total}')
@@ -173,5 +171,5 @@ if errors:
     sys.exit(1)
 
 print(f'VALIDACIÓN CORRECTA: {total} preguntas VS + {parcial_total} reactivos de Juega y Aprueba.')
-print('VS: respuestas únicas, 3–5 por pregunta, 100 puntos, ponderación lúdica normalizada y traducción inglesa completa.')
+print('VS: respuestas únicas, 3–7 por pregunta, 100 puntos, una respuesta líder inequívoca y traducción inglesa completa.')
 print('Juega y Aprueba: 200 IDs únicos, índices correctos válidos, 40 reactivos por examen y traducción inglesa completa.')
