@@ -1023,9 +1023,9 @@ loadState();
 loadQuestionPool();
 updateTimerUI();
 
-$('#mode1v1').onclick = showOneVsOneSetup;
-$('#modeTeams').onclick = showTeamSetup;
-$('#modeCpu').onclick = showCpuSetup;
+$('#mode1v1').onclick = () => showPlayerCharacterSelector(showOneVsOneSetup);
+$('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
+$('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
 $('#help').onclick = showHelp;
 $('#prev').onclick = previousRound;
 $('#next').onclick = nextRound;
