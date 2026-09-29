@@ -16,6 +16,9 @@ window.DentistasI18n = (() => {
       errors:'Errores', backHome:'Volver a portada', narratorOn:'Narradora activada', narratorOff:'Narradora desactivada', points:'puntos', successfulSteal:'¡Robo exitoso!', failedStealTitle:'Robo fallido', timeUp:'Tiempo agotado', bankAwarded:'Banco asignado', wins:'gana', tie:'Empate', newGame:'Nueva partida aleatoria',
       studyTitle:'JUEGA Y APRUEBA',
       studySubtitle:'Banco de los 5 exámenes', studyMode:'MODO DE ESTUDIO',
+      etymologyModule:'MÓDULO INDEPENDIENTE', etymologyTitle:'Nomenclatura y etimología médica/odontológica',
+      etymologyDesc:'100 preguntas de prefijos, raíces, lexemas y sufijos aplicados a odontología, especialidades, células, histología, microbiología, patología y medicina.',
+      etymology10:'⚡ RETO · 10', etymology40:'📝 SIMULACRO · 40', etymology100:'🔤 BANCO COMPLETO · 100',
       firstMidterm:'Primer parcial', items:'reactivos',
       intro:'Repasa por materia con preguntas tomadas de los cinco exámenes. Los reactivos de relación de columnas y nomenclatura se adaptaron a opción múltiple para poder jugar, conservando su respuesta correcta.',
       quick:'⚡ RETO RÁPIDO · 10 PREGUNTAS', mock:'📝 SIMULACRO · 40 PREGUNTAS',
@@ -36,7 +39,7 @@ window.DentistasI18n = (() => {
         'Desarrollo de la oclusión':'Desarrollo de la oclusión',
         'Fisiología':'Fisiología','Toma de impresión':'Toma de impresión',
         'Psicología infantil':'Psicología infantil','Hábitos y parafunciones':'Hábitos y parafunciones',
-        'Nomenclatura':'Nomenclatura','Oclusión':'Oclusión','Otros del parcial':'Otros del parcial',
+        'Nomenclatura':'Nomenclatura','Nomenclatura y etimología médica':'Nomenclatura y etimología médica/odontológica','Oclusión':'Oclusión','Otros del parcial':'Otros del parcial',
         'Todos los temas':'Todos los temas'
       },
       categoryDescs:{
@@ -47,6 +50,7 @@ window.DentistasI18n = (() => {
         'Psicología infantil':'Edad mental/cognoscitiva, comunicación y conducta infantil.',
         'Hábitos y parafunciones':'Succión digital, respiración oral, bruxismo y alteraciones funcionales.',
         'Nomenclatura':'Prefijos, lexemas, sufijos y formación de términos odontológicos.',
+        'Nomenclatura y etimología médica':'Prefijos, raíces, sufijos y formación de términos de odontología, células, microbiología, patología y medicina.',
         'Oclusión':'Máxima intercuspidación, guías, función en grupo, interferencias y TTM.',
         'Otros del parcial':'Reactivos del expediente clínico que no encajan de forma limpia en otra materia.'
       }
@@ -62,6 +66,9 @@ window.DentistasI18n = (() => {
       errors:'Errors', backHome:'Back to home', narratorOn:'Narrator on', narratorOff:'Narrator off', points:'points', successfulSteal:'Successful steal!', failedStealTitle:'Failed steal', timeUp:'Time is up', bankAwarded:'Bank awarded', wins:'wins', tie:'Tie', newGame:'New random game',
       studyTitle:'PLAY & PASS',
       studySubtitle:'Question bank from the 5 exams', studyMode:'STUDY MODE',
+      etymologyModule:'INDEPENDENT MODULE', etymologyTitle:'Medical & dental nomenclature and etymology',
+      etymologyDesc:'100 questions on prefixes, roots, lexemes, and suffixes used in dentistry, specialties, cells, histology, microbiology, pathology, and medicine.',
+      etymology10:'⚡ CHALLENGE · 10', etymology40:'📝 MOCK · 40', etymology100:'🔤 FULL BANK · 100',
       firstMidterm:'First midterm', items:'items',
       intro:'Review by subject using questions taken from the five exams. Matching-column and nomenclature items were adapted to multiple choice while preserving the correct answer.',
       quick:'⚡ QUICK CHALLENGE · 10 QUESTIONS', mock:'📝 MOCK EXAM · 40 QUESTIONS',
@@ -82,7 +89,7 @@ window.DentistasI18n = (() => {
         'Desarrollo de la oclusión':'Occlusal Development',
         'Fisiología':'Physiology','Toma de impresión':'Dental Impressions',
         'Psicología infantil':'Pediatric Psychology','Hábitos y parafunciones':'Habits and Parafunctions',
-        'Nomenclatura':'Dental Nomenclature','Oclusión':'Occlusion','Otros del parcial':'Other Midterm Topics',
+        'Nomenclatura':'Dental Nomenclature','Nomenclatura y etimología médica':'Medical & Dental Nomenclature/Etymology','Oclusión':'Occlusion','Otros del parcial':'Other Midterm Topics',
         'Todos los temas':'All Subjects'
       },
       categoryDescs:{
@@ -93,6 +100,7 @@ window.DentistasI18n = (() => {
         'Psicología infantil':'Mental/cognitive age, communication, and child behavior.',
         'Hábitos y parafunciones':'Thumb sucking, mouth breathing, bruxism, and functional alterations.',
         'Nomenclatura':'Prefixes, roots, suffixes, and formation of dental terms.',
+        'Nomenclatura y etimología médica':'Prefixes, roots, suffixes, and word formation across dentistry, cells, microbiology, pathology, and medicine.',
         'Oclusión':'Maximum intercuspation, guidance, group function, interferences, and TMD.',
         'Otros del parcial':'Exam items that do not fit cleanly into another subject.'
       }
