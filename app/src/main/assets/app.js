@@ -65,6 +65,30 @@ function normalizeStudyQuestion(q, forcedArea='') {
   };
 }
 
+function specialtyArea(q, file='') {
+  const raw = [q?.q, q?.cat, q?.category, q?.subdomain, q?.source].filter(Boolean).join(' ').toLowerCase();
+  const has = (...terms) => terms.some(t => raw.includes(t));
+
+  if (file === 'questions_anatomia.json') return has('crecimiento','desarrollo','maxilar','mandíbula','mandibula','sutural','suturas') ? 'Desarrollo de los maxilares' : 'Anatomía';
+  if (file === 'questions_periodoncia.json') return 'Periodoncia';
+  if (file === 'questions_endo_restauradora.json') return has('conducto','pulpa','pulpar','endodon','ápice','apice','irrig') ? 'Endodoncia' : 'Operatoria dental';
+  if (file === 'questions_protesis_atm.json') {
+    if (has('atm','temporomandibular','cóndilo','condilo','disco articular','trastorno temporomandibular')) return 'Articulación temporomandibular (ATM)';
+    if (has('oclusión','oclusion','contacto oclusal','guía canina','guia canina')) return 'Oclusión';
+    return 'Prótesis';
+  }
+  if (file === 'questions_cirugia_radiologia.json') return has('radiograf','imagen','cbct') ? 'Radiología' : 'Cirugía bucal';
+  if (file === 'questions_odonto_ortho.json') return has('niñ','temporal','pediatr','conducta','mantenedor','dentición mixta','denticón mixta') ? 'Odontopediatría' : 'Ortodoncia';
+  if (file === 'questions.json') {
+    if (has('maxilar','mandíbula','mandibula','crecimiento','desarrollo craneofacial')) return 'Desarrollo de los maxilares';
+    if (has('ortopedia','aparato funcional','expansor','disyuntor')) return 'Ortopedia';
+    if (has('oclusión','oclusion')) return 'Oclusión';
+    if (has('odontopediatr')) return 'Odontopediatría';
+    if (has('ortodon','cefalometr')) return 'Ortodoncia';
+  }
+  return q?.area || q?.cat || q?.category || 'General';
+}
+
 function areaForQuestion(q) {
   return q?.area || q?.cat || 'General';
 }
@@ -774,7 +798,7 @@ async function loadQuestionPool() {
           data.forEach(q => {
             if (q && q.q && Array.isArray(q.a) && q.a.length >= 3 && q.a.length <= 7) {
               const total = q.a.reduce((sum,a)=>sum+(Number(a?.[1])||0),0);
-              if (total === 100) combined.push({...q, area:q.area || q.cat || 'General'});
+              if (total === 100) combined.push({...q, area:specialtyArea(q, file)});
             }
           });
         }
