@@ -160,7 +160,7 @@ function chooseGameQuestions() {
 }
 
 function roundMultiplier(index = roundIndex) {
-  if (index <= 2) return 1;
+  if (index <= 3) return 1;
   if (index <= 5) return 2;
   return 3;
 }
@@ -623,7 +623,7 @@ function finishGame() {
 
   openModal(
     `${result}
-${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–3: <b>×1</b> · Rounds 4–6: <b>×2</b> · Rounds 7–8: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–3: <b>×1</b> · Rondas 4–6: <b>×2</b> · Rondas 7–8: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
+${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–4: <b>×1</b> · Rounds 5–6: <b>×2</b> · Rounds 7–8: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–4: <b>×1</b> · Rondas 5–6: <b>×2</b> · Rondas 7–8: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
      <div class="menuStack">
        <button id="mAgain"> ${tx('newGame')} </button>
        <button id="mHomeFinal"> ${tx('backHome')} </button>
@@ -696,7 +696,7 @@ function showHelp() {
         <li>Each answer must be given before the <b>10-second timer</b> ends.</li>
         <li>If time reaches zero without a correct answer, <b>1 strike</b> is added automatically.</li>
         <li>After a correct answer or a strike, the timer restarts at 10 seconds.</li>
-        <li>Rounds <b>1–3 are ×1</b>, rounds <b>4–6 are ×2</b>, and rounds <b>7–8 are ×3</b>.</li>
+        <li>Rounds <b>1–4 are ×1</b>, rounds <b>5–6 are ×2</b>, and rounds <b>7–8 are ×3</b>.</li>
         <li>A correct answer reveals the board item and adds its multiplied value to the <b>Bank</b>.</li>
         <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
         <li>On the third mistake, control passes to the opposing team.</li>
