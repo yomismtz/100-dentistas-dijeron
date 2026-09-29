@@ -2,3 +2,13 @@
 .languageSwitch{position:fixed;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:50;display:flex;gap:4px;padding:4px;border:1px solid #7fb9c3;border-radius:999px;background:#071319e8;box-shadow:0 8px 24px #0008;backdrop-filter:blur(8px)}
 .languageSwitch button{min-width:44px;padding:.48rem .7rem;border:0;border-radius:999px;background:transparent;color:#c9e7eb;font-weight:900;letter-spacing:.04em}
 .languageSwitch button.active{background:#0c7589;color:#fff;box-shadow:0 0 0 1px #9de8f5 inset,0 4px 12px #001b}
+
+.roundTransition{position:fixed;inset:0;z-index:45;display:flex;align-items:center;justify-content:center;background:#000b;animation:roundFadeIn .18s ease-out}
+.roundTransition.hide{animation:roundFadeOut .32s ease-in forwards}
+.roundTransitionCard{min-width:min(420px,78vw);padding:2rem 2.4rem;border:2px solid #f2cf78;border-radius:28px;background:radial-gradient(circle at top,#5b1a08,#160606 62%,#070202);text-align:center;box-shadow:0 0 55px #b36a19aa,inset 0 0 26px #ffcc6640;transform:scale(.92);animation:roundCardPop .34s ease-out forwards}
+.roundTransitionCard span{display:block;font-weight:1000;font-size:clamp(30px,5vw,64px);letter-spacing:.08em;color:#fff1c2}
+.roundTransitionCard strong{display:block;margin:.2rem 0;font-size:clamp(62px,10vw,130px);line-height:.95;color:#ffd76b;text-shadow:0 0 24px #ff9d00}
+.roundTransitionCard small{font-size:clamp(16px,2vw,26px);font-weight:900;letter-spacing:.16em;color:#ffeab1}
+@keyframes roundFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes roundFadeOut{to{opacity:0}}
+@keyframes roundCardPop{from{transform:scale(.78);opacity:.2}to{transform:scale(1);opacity:1}}
