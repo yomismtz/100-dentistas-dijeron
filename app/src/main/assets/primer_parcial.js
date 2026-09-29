@@ -583,6 +583,7 @@
       buttons[index].classList.add('wrong');
       playStudySound(false);
     }
+    try { window.DentistasProgression?.recordStudyActivity?.(choice.correct, sessionStreak); } catch (_) {}
 
     $s('#studyScore').textContent = `${sessionScore} ${tx('correctCount')}`;
     const streakEl = $s('#studyStreak');
@@ -638,6 +639,13 @@
     const unlockHtml = newlyUnlocked.length
       ? `<div class="studyWeakTopic good"><b>${lang === 'en' ? 'New character unlocked:' : 'Nuevo personaje desbloqueado:'}</b> 🎉 ${newlyUnlocked.join(', ')}</div>`
       : '';
+    let nextUnlockHtml = '';
+    try {
+      const hint = window.DentistasProgression?.nextUnlockHint?.();
+      if (hint) {
+        nextUnlockHtml = `<div class="studyWeakTopic"><b>${lang === 'en' ? 'Next unlock:' : 'Siguiente desbloqueo:'}</b> ${hint.name}<br><small>${lang === 'en' ? `You need ${hint.remaining} more points in ${hint.moduleName} (best: ${hint.current}% / target: ${hint.target}%).` : `Te faltan ${hint.remaining} puntos en ${hint.moduleName} (mejor: ${hint.current}% / meta: ${hint.target}%).`}</small></div>`;
+      }
+    } catch (_) {}
     const weak = weakestTopic();
     const weakHtml = weak
       ? `<div class="studyWeakTopic"><b>${lang === 'en' ? 'Topic to review:' : 'Tema que más conviene repasar:'}</b> ${catLabel(weak.category)}<br><small>${lang === 'en' ? 'Errors' : 'Errores'}: ${weak.wrong} / ${weak.seen} ${weak.scope === 'history' ? (lang === 'en' ? 'in saved practice history' : 'en el historial guardado') : (lang === 'en' ? 'in this session' : 'en esta sesión')}</small></div>`
@@ -655,6 +663,7 @@
         <p class="studyBestStreak">🔥 ${lang === 'en' ? 'Best streak' : 'Mejor racha'}: <b>${bestStreak}</b></p>
         ${weakHtml}
         ${unlockHtml}
+        ${nextUnlockHtml}
         <p>${passed ? tx('reached') : tx('notReached')}</p>
         <p class="studyNote">${tx('disclaimer')}</p>
         <div class="studyResultActions">
