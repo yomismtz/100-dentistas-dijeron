@@ -347,7 +347,8 @@
   }
 
   function preparedQuestion(q) {
-    const choices = q.options.map((text, idx) => ({ text, correct: idx === q.correct }));
+    const localized = studyOptions(q);
+    const choices = localized.map((text, idx) => ({ text, correct: idx === q.correct }));
     return { ...q, choices: shuffle(choices) };
   }
 
@@ -365,15 +366,17 @@
     $s('#studySource').textContent = `${q.source} · ${tx('question')} ${q.number} · ${q.type}`;
 
     const context = $s('#studyContext');
-    if (q.context) {
-      context.textContent = q.context;
+    const localizedContext = studyContextText(q);
+    if (localizedContext) {
+      context.textContent = localizedContext;
       context.classList.remove('hidden');
     } else {
       context.textContent = '';
       context.classList.add('hidden');
     }
 
-    $s('#studyQuestion').textContent = q.q;
+    $s('#studyQuestion').textContent = studyQText(q);
+    setTimeout(() => narrateStudy(studyQText(q), {lang:studyVoiceLang(q), rate:.9}), 220);
     $s('#studyFeedback').className = 'studyFeedback hidden';
     $s('#studyFeedback').innerHTML = '';
     $s('#studyNext').classList.add('hidden');
@@ -418,13 +421,14 @@
       streakEl.classList.toggle('hot', sessionStreak >= 3);
     }
     const correct = currentPrepared.choices.find(c => c.correct)?.text || '';
+    const translated = I18N?.getLang?.() === 'en' && !!currentPrepared.q_en;
     const feedback = $s('#studyFeedback');
     feedback.className = `studyFeedback ${choice.correct ? 'good' : 'bad'}`;
     feedback.innerHTML = choice.correct
-      ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.<br><small>${tx('originalLanguage')}</small>`
-      : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}. · ${tx('originalLanguage')}</small>`;
+      ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : `<br><small>${tx('originalLanguage')}</small>`}`
+      : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : ` · ${tx('originalLanguage')}`}</small>`;
     $s('#studyNext').textContent = sessionIndex === session.length - 1 ? tx('result') : tx('next');
-    narrateStudy(choice.correct ? tx('correct') : `${tx('incorrect')} ${tx('correctAnswer')} ${correct}`, {rate:.92});
+    narrateStudy(choice.correct ? tx('correct') : `${tx('incorrect')} ${tx('correctAnswer')} ${correct}`, {lang: translated ? 'en-US' : (I18N?.getLang?.()==='en' ? 'en-US' : 'es-MX'), rate:.92});
     $s('#studyNext').classList.remove('hidden');
   }
 
