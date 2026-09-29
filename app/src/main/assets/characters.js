@@ -36,7 +36,13 @@ const CHARACTERS = [
     stats:[['Organización',5],['Velocidad',5],['Apoyo clínico',5],['Diagnóstico',2],['Prevención',3]] },
   { name:'EMMA', specialty:'HIGIENISTA DENTAL', role:'Escudo Preventivo', icon:'🛡️', image:'characters/emma_higienista.webp', tone:'mint',
     strengths:['Prevención','Control de biofilm','Educación'], weaknesses:['No sustituye tratamiento especializado','Requiere mantenimiento periódico'], power:'BARRERA ANTIBIOFILM', tool:'Ultrasonido periodontal',
-    stats:[['Prevención',5],['Educación',5],['Biofilm',5],['Cirugía',1],['Restauración',2]] }
+    stats:[['Prevención',5],['Educación',5],['Biofilm',5],['Cirugía',1],['Restauración',2]] },
+  { name:'AURORA', specialty:'HADA DE LOS DIENTES', role:'Guardiana del Brillo Dental', icon:'🧚', image:'characters/aurora_hada_dientes.webp', tone:'legendary-mint', rarity:'LEGENDARIO',
+    strengths:['Protección mágica','Curación','Inspiración infantil'], weaknesses:['Depende de energía mágica','Menor fuerza física'], power:'LLUVIA DE ESMALTE', tool:'Varita del brillo dental',
+    stats:[['Magia',5],['Protección',5],['Prevención',5],['Velocidad',5],['Curación',5]] },
+  { name:'DON PÉREZ', specialty:'RATÓN DE LOS DIENTES', role:'El Coleccionista Legendario', icon:'🐭', image:'characters/don_perez_raton_dientes.webp', tone:'legendary-gold', rarity:'LEGENDARIO',
+    strengths:['Velocidad nocturna','Recolección perfecta','Sigilo mágico'], weaknesses:['Tamaño pequeño','Depende del factor sorpresa'], power:'RECOLECCIÓN ESTELAR', tool:'Maletín recolector de dientes',
+    stats:[['Velocidad',5],['Sigilo',5],['Recolección',5],['Estrategia',5],['Magia',5]] }
 ];
 
 let teamCharacters = [0, 4];
@@ -92,6 +98,9 @@ characterStyle.textContent = `
   .characterCard .charName{margin-top:.35rem;color:#eefcff!important;font-size:.78rem!important;letter-spacing:.04em}
   .charSpecialty{font-size:.55rem;line-height:1.1;text-align:center;color:#89dbe5;font-weight:900;letter-spacing:.035em}
   .tone-violet{box-shadow:inset 0 0 20px #8d5cff33}.tone-emerald{box-shadow:inset 0 0 20px #1fd47e33}.tone-blue{box-shadow:inset 0 0 20px #3a8fff33}.tone-petrol{box-shadow:inset 0 0 20px #1aa6a633}.tone-gold{box-shadow:inset 0 0 20px #ffc54833}.tone-burgundy{box-shadow:inset 0 0 20px #d43b6b33}.tone-turquoise{box-shadow:inset 0 0 20px #20dbc633}.tone-red{box-shadow:inset 0 0 20px #ff484833}.tone-navy{box-shadow:inset 0 0 20px #3e72ff33}.tone-sky{box-shadow:inset 0 0 20px #66ccff33}.tone-mint{box-shadow:inset 0 0 20px #7ef0db33}
+  .tone-legendary-mint{box-shadow:inset 0 0 26px #6fffe866,0 0 24px #6fffe833;border-color:#bafff4!important}
+  .tone-legendary-gold{box-shadow:inset 0 0 26px #ffd66d66,0 0 24px #ffc24733;border-color:#ffe39a!important}
+  .charRarity{margin-top:.22rem;padding:.16rem .42rem;border-radius:999px;font-size:.48rem;font-weight:1000;letter-spacing:.09em;color:#1a1300;background:linear-gradient(180deg,#fff0a7,#e9b735);box-shadow:0 0 10px #ffc84d66}
   .characterCard.selected{border:2px solid #f0c967!important;background:linear-gradient(180deg,#453418,#251a08)!important;box-shadow:0 0 0 1px #ffeaa126,0 0 22px #e0a43142!important;transform:translateY(-2px)}
   .characterCard.unavailable{opacity:.28!important;filter:grayscale(.6)}
   .setupStart{border:1px solid #97eaf3!important;border-radius:16px!important;background:linear-gradient(180deg,#16a8bc,#087082)!important;box-shadow:inset 0 1px #ffffff26,0 10px 24px #003b45aa!important}
@@ -143,6 +152,7 @@ function setupCharacterCards(teamIndex, container) {
       </span>
       <span class="charName">${character.name}</span>
       <span class="charSpecialty">${character.specialty}</span>
+      ${character.rarity ? `<span class="charRarity">${character.rarity}</span>` : ''}
     </button>
   `).join('');
 
