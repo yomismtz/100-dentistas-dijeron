@@ -28,12 +28,25 @@ window.DentistasNarrator = (() => {
   }
 
   function speak(text, opts={}){
-    if (!enabled || !('speechSynthesis' in window) || !text) return;
-    const clean = String(text).replace(/<[^>]*>/g,' ').replace(/[×]/g,' por ').replace(/\s+/g,' ').trim();
+    if (!enabled || !text) return;
+    const clean = String(text).replace(/<[^>]*>/g,' ').replace(/[×]/g,' times ').replace(/\s+/g,' ').trim();
     if (!clean) return;
+    const lang = opts.lang || currentLang();
+
+    try {
+      if (window.AndroidNarrator && typeof window.AndroidNarrator.speak === 'function') {
+        let ready = true;
+        try { if (typeof window.AndroidNarrator.isReady === 'function') ready = !!window.AndroidNarrator.isReady(); } catch (_) {}
+        if (ready) {
+          window.AndroidNarrator.speak(clean, lang);
+          return;
+        }
+      }
+    } catch (_) {}
+
+    if (!('speechSynthesis' in window)) return;
     if (opts.interrupt !== false) window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(clean);
-    const lang = opts.lang || currentLang();
     u.lang = lang;
     const voice = chooseVoice(lang);
     if (voice) u.voice = voice;
@@ -43,7 +56,10 @@ window.DentistasNarrator = (() => {
     window.speechSynthesis.speak(u);
   }
 
-  function stop(){ if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+  function stop(){
+    try { if (window.AndroidNarrator && typeof window.AndroidNarrator.stop === 'function') window.AndroidNarrator.stop(); } catch (_) {}
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  }
 
   function updateButton(){
     const b=document.querySelector('#voiceToggle');
