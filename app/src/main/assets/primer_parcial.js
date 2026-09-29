@@ -385,7 +385,6 @@
   };
 
   ensureBank();
-})();
 window.addEventListener('dentistas-language-changed', () => {
   studyButton.textContent = tx('studyStart');
   const title = $s('#studyTitleText'); if (title) title.textContent = tx('studyTitle');
@@ -398,3 +397,5 @@ window.addEventListener('dentistas-language-changed', () => {
   renderCategories();
   if (!$s('#studyQuiz').classList.contains('hidden') && session.length) renderQuestion();
 });
+
+})();
