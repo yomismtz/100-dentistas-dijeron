@@ -3,6 +3,7 @@ package com.uam.cientodentistas;
 import android.app.Activity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
@@ -37,6 +38,11 @@ public class MainActivity extends Activity {
             if (ttsReady) {
                 textToSpeech.setSpeechRate(0.94f);
                 textToSpeech.setPitch(1.03f);
+                textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                    @Override public void onStart(String utteranceId) {}
+                    @Override public void onDone(String utteranceId) { notifyNarrationFinished(utteranceId, true); }
+                    @Override public void onError(String utteranceId) { notifyNarrationFinished(utteranceId, false); }
+                });
             }
         });
 
@@ -56,6 +62,13 @@ public class MainActivity extends Activity {
         webView.addJavascriptInterface(new AssetBridge(), "AndroidAssets");
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
+    }
+
+    private void notifyNarrationFinished(String utteranceId, boolean ok) {
+        if (webView == null || utteranceId == null || !utteranceId.startsWith("js-")) return;
+        final String safeId = utteranceId.replace("\\", "\\\\").replace("'", "\\'");
+        runOnUiThread(() -> webView.evaluateJavascript(
+                "window.DentistasNarrator&&window.DentistasNarrator.nativeFinished('" + safeId + "'," + ok + ");", null));
     }
 
     private class AssetBridge {
@@ -98,6 +111,19 @@ public class MainActivity extends Activity {
                         null,
                         "dentistas-" + UUID.randomUUID()
                 );
+            });
+        }
+
+        @JavascriptInterface
+        public void speakWithId(String text, String languageTag, String utteranceId) {
+            if (!ttsReady || textToSpeech == null || text == null || text.trim().isEmpty()) return;
+            runOnUiThread(() -> {
+                Locale requested = Locale.forLanguageTag(languageTag == null || languageTag.trim().isEmpty() ? "es-MX" : languageTag);
+                int result = textToSpeech.setLanguage(requested);
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    textToSpeech.setLanguage(languageTag != null && languageTag.toLowerCase(Locale.ROOT).startsWith("en") ? Locale.US : new Locale("es", "MX"));
+                }
+                textToSpeech.speak(text.trim(), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
             });
         }
 
