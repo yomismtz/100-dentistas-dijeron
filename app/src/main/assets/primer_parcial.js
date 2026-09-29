@@ -48,6 +48,79 @@
   let bestStreak = 0;
   let answered = false;
   let currentPrepared = null;
+  let sessionTopicStats = {};
+  const STUDY_STATS_KEY = 'dentistas-study-topic-stats-v1';
+
+  function loadTopicStats() {
+    try { return JSON.parse(localStorage.getItem(STUDY_STATS_KEY) || '{}') || {}; }
+    catch (_) { return {}; }
+  }
+
+  function saveTopicStats(stats) {
+    try { localStorage.setItem(STUDY_STATS_KEY, JSON.stringify(stats)); } catch (_) {}
+  }
+
+  function registerTopicAnswer(q, isCorrect) {
+    const cat = q?.category || 'Otros del parcial';
+    const sessionStat = sessionTopicStats[cat] || { seen: 0, wrong: 0 };
+    sessionStat.seen += 1;
+    if (!isCorrect) sessionStat.wrong += 1;
+    sessionTopicStats[cat] = sessionStat;
+
+    const total = loadTopicStats();
+    const stat = total[cat] || { seen: 0, wrong: 0 };
+    stat.seen += 1;
+    if (!isCorrect) stat.wrong += 1;
+    total[cat] = stat;
+    saveTopicStats(total);
+  }
+
+  function weakestTopic() {
+    const score = entries => entries
+      .filter(([,s]) => s.wrong > 0)
+      .sort((a,b) => (b[1].wrong - a[1].wrong) || ((b[1].wrong / b[1].seen) - (a[1].wrong / a[1].seen)))[0] || null;
+
+    const sessionWeak = score(Object.entries(sessionTopicStats));
+    if (sessionWeak && sessionWeak[1].wrong >= 2) return { category: sessionWeak[0], ...sessionWeak[1], scope: 'session' };
+
+    const totalWeak = score(Object.entries(loadTopicStats()).filter(([,s]) => s.wrong >= 2));
+    if (totalWeak) return { category: totalWeak[0], ...totalWeak[1], scope: 'history' };
+
+    if (sessionWeak) return { category: sessionWeak[0], ...sessionWeak[1], scope: 'session' };
+    return null;
+  }
+
+  function explanationFor(q, correctText) {
+    const en = I18N?.getLang?.() === 'en';
+    const category = q?.category || '';
+    const intro = en ? '<b>Why:</b> ' : '<b>¿Por qué?</b> ';
+    const templates = {
+      'Psicología infantil': en
+        ? `The clinical approach should match the child's actual developmental and communication level; <b>${correctText}</b> best fits the situation described.`
+        : `El manejo clínico debe adaptarse al nivel real de desarrollo y comprensión del niño; <b>${correctText}</b> es lo que mejor corresponde al caso descrito.`,
+      'Fisiología': en
+        ? `The mechanism, phase, or function described in the stem corresponds to <b>${correctText}</b>; the other options describe a different physiologic event or structure.`
+        : `El mecanismo, fase o función descrita en el enunciado corresponde a <b>${correctText}</b>; las otras opciones representan otro evento fisiológico o estructura.`,
+      'Oclusión': en
+        ? `The contact pattern or mandibular movement described is characteristic of <b>${correctText}</b>; that is the defining occlusal feature in this item.`
+        : `El patrón de contactos o movimiento mandibular descrito es característico de <b>${correctText}</b>; esa es la característica oclusal definitoria del reactivo.`,
+      'Desarrollo de la oclusión': en
+        ? `The eruption, spacing, arch, or primary-to-permanent dentition relationship described corresponds to <b>${correctText}</b>.`
+        : `La relación eruptiva, de espacios, de arcada o de transición entre dentición temporal y permanente descrita corresponde a <b>${correctText}</b>.`,
+      'Desarrollo craneofacial': en
+        ? `The growth pattern, cell, suture, or bone adaptation process described has the defining characteristics of <b>${correctText}</b>.`
+        : `El patrón de crecimiento, célula, sutura o proceso de adaptación ósea descrito presenta las características definitorias de <b>${correctText}</b>.`,
+      'Hábitos y parafunciones': en
+        ? `The functional finding and its clinical context are most consistent with <b>${correctText}</b>, without assuming a single causal relationship beyond what the stem states.`
+        : `El hallazgo funcional y su contexto clínico son más compatibles con <b>${correctText}</b>, sin asumir una causalidad única más allá de lo que indica el enunciado.`,
+      'Nomenclatura': en
+        ? `The directional or morphologic components given in the stem combine to form <b>${correctText}</b>; the distractors use a different prefix, root, or type of movement.`
+        : `Los componentes direccionales o morfológicos indicados en el enunciado forman <b>${correctText}</b>; los distractores emplean otro prefijo, lexema o tipo de movimiento.`
+    };
+    return intro + (templates[category] || (en
+      ? `The information in the stem most directly supports <b>${correctText}</b>.`
+      : `La información del enunciado sustenta de forma más directa <b>${correctText}</b>.`));
+  }
 
   const studyButton = document.createElement('button');
   studyButton.id = 'studyStart';
@@ -338,6 +411,7 @@
     bestStreak = 0;
     answered = false;
     currentPrepared = null;
+    sessionTopicStats = {};
 
     $s('#studyMenu').classList.add('hidden');
     $s('#studyResult').classList.add('hidden');
@@ -403,6 +477,8 @@
       if (currentPrepared.choices[idx].correct) button.classList.add('correct');
     });
 
+    registerTopicAnswer(currentPrepared, choice.correct);
+
     if (choice.correct) {
       sessionScore += 1;
       sessionStreak += 1;
@@ -424,9 +500,10 @@
     const translated = I18N?.getLang?.() === 'en' && !!currentPrepared.q_en;
     const feedback = $s('#studyFeedback');
     feedback.className = `studyFeedback ${choice.correct ? 'good' : 'bad'}`;
+    const explanation = explanationFor(currentPrepared, correct);
     feedback.innerHTML = choice.correct
-      ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : `<br><small>${tx('originalLanguage')}</small>`}`
-      : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : ` · ${tx('originalLanguage')}`}</small>`;
+      ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : `<br><small>${tx('originalLanguage')}</small>`}<div class="studyExplanation">${explanation}</div>`
+      : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : ` · ${tx('originalLanguage')}`}</small><div class="studyExplanation">${explanation}</div>`;
     $s('#studyNext').textContent = sessionIndex === session.length - 1 ? tx('result') : tx('next');
     narrateStudy(choice.correct ? tx('correct') : `${tx('incorrect')} ${tx('correctAnswer')} ${correct}`, {lang: translated ? 'en-US' : (I18N?.getLang?.()==='en' ? 'en-US' : 'es-MX'), rate:.92});
     $s('#studyNext').classList.remove('hidden');
@@ -454,6 +531,11 @@
     else if (percent >= 80) { medal = '🥇'; medalLabel = lang === 'en' ? 'Gold Medal' : 'Medalla de oro'; }
     else if (percent >= 70) { medal = '🥈'; medalLabel = lang === 'en' ? 'Silver Medal' : 'Medalla de plata'; }
     else if (percent >= 60) { medal = '🥉'; medalLabel = lang === 'en' ? 'Bronze Medal' : 'Medalla de bronce'; }
+    const weak = weakestTopic();
+    const weakHtml = weak
+      ? `<div class="studyWeakTopic"><b>${lang === 'en' ? 'Topic to review:' : 'Tema que más conviene repasar:'}</b> ${catLabel(weak.category)}<br><small>${lang === 'en' ? 'Errors' : 'Errores'}: ${weak.wrong} / ${weak.seen} ${weak.scope === 'history' ? (lang === 'en' ? 'in saved practice history' : 'en el historial guardado') : (lang === 'en' ? 'in this session' : 'en esta sesión')}</small></div>`
+      : `<div class="studyWeakTopic good"><b>${lang === 'en' ? 'No weak topic detected in this session.' : 'No se detectó un tema débil en esta sesión.'}</b></div>`;
+
     $s('#studySubtitle').textContent = tx('resultTitle');
     narrateStudy(`${tx('resultTitle')}. ${percent} ${lang === 'en' ? 'percent' : 'por ciento'}. ${passed ? tx('passed') : tx('keepStudying')}.`, {lang: lang === 'en' ? 'en-US' : 'es-MX', rate:.92});
     $s('#studyResult').innerHTML = `
@@ -464,6 +546,7 @@
         <h1>${passed ? tx('passed') : tx('keepStudying')}</h1>
         <p>${tx('got')} <b>${sessionScore} ${tx('of')} ${session.length}</b> ${tx('correctResponses')} <b>${catLabel(currentCategory)}</b>.</p>
         <p class="studyBestStreak">🔥 ${lang === 'en' ? 'Best streak' : 'Mejor racha'}: <b>${bestStreak}</b></p>
+        ${weakHtml}
         <p>${passed ? tx('reached') : tx('notReached')}</p>
         <p class="studyNote">${tx('disclaimer')}</p>
         <div class="studyResultActions">
