@@ -34,9 +34,13 @@ for filename in FILES:
 
         q = str(item.get('q', '')).strip()
         answers = item.get('a')
+        q_en = str(item.get('q_en', '')).strip()
+        answers_en = item.get('a_en')
         if not q:
             errors.append(f'{prefix}: falta el texto de la pregunta')
             continue
+        if not q_en:
+            errors.append(f'{prefix}: falta traducción inglesa q_en')
         q_key = ' '.join(q.casefold().split())
         if q_key in seen_questions:
             errors.append(f'{prefix}: pregunta duplicada: {q}')
@@ -45,6 +49,10 @@ for filename in FILES:
         if not isinstance(answers, list) or not (3 <= len(answers) <= 5):
             errors.append(f'{prefix}: debe tener entre 3 y 5 respuestas; tiene {len(answers) if isinstance(answers, list) else "formato inválido"}')
             continue
+        if not isinstance(answers_en, list) or len(answers_en) != len(answers):
+            errors.append(f'{prefix}: a_en debe tener exactamente {len(answers)} respuestas traducidas')
+        elif any(not str(text).strip() for text in answers_en):
+            errors.append(f'{prefix}: a_en contiene traducciones vacías')
 
         answer_keys = set()
         point_sum = 0
@@ -103,6 +111,10 @@ for filename in PARCIAL_FILES:
         options = item.get('options')
         correct = item.get('correct')
         source_file = str(item.get('file', '')).strip()
+        q_en = str(item.get('q_en', '')).strip()
+        options_en = item.get('options_en')
+        context = str(item.get('context', '')).strip()
+        context_en = str(item.get('context_en', '')).strip()
 
         if not qid:
             errors.append(f'{prefix}: falta id')
@@ -112,12 +124,24 @@ for filename in PARCIAL_FILES:
 
         if not qtext:
             errors.append(f'{prefix}: falta texto de pregunta')
+        if not q_en:
+            errors.append(f'{prefix}: falta traducción inglesa q_en')
 
         if not isinstance(options, list) or len(options) < 2:
             errors.append(f'{prefix}: options debe contener al menos 2 opciones')
             continue
 
         normalized = [' '.join(str(x).casefold().split()) for x in options]
+        if not isinstance(options_en, list) or len(options_en) != len(options):
+            errors.append(f'{prefix}: options_en debe tener exactamente {len(options)} opciones traducidas')
+        else:
+            normalized_en = [' '.join(str(x).casefold().split()) for x in options_en]
+            if any(not x for x in normalized_en):
+                errors.append(f'{prefix}: existe una opción inglesa vacía')
+            if len(normalized_en) != len(set(normalized_en)):
+                errors.append(f'{prefix}: existen opciones inglesas duplicadas')
+        if context and not context_en:
+            errors.append(f'{prefix}: el contexto español existe pero falta context_en')
         if any(not x for x in normalized):
             errors.append(f'{prefix}: existe una opción vacía')
         if len(normalized) != len(set(normalized)):
@@ -144,5 +168,5 @@ if errors:
     sys.exit(1)
 
 print(f'VALIDACIÓN CORRECTA: {total} preguntas VS + {parcial_total} reactivos de Juega y Aprueba.')
-print('VS: respuestas únicas, 3–5 por pregunta, 100 puntos y ponderación descendente.')
-print('Juega y Aprueba: 200 IDs únicos, índices correctos válidos y 40 reactivos por cada examen fuente.')
+print('VS: respuestas únicas, 3–5 por pregunta, 100 puntos, ponderación descendente y traducción inglesa completa.')
+print('Juega y Aprueba: 200 IDs únicos, índices correctos válidos, 40 reactivos por examen y traducción inglesa completa.')
