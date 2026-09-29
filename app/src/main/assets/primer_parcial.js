@@ -9,6 +9,7 @@
   const tx = (key) => I18N ? I18N.t(key) : key;
   const catLabel = (name) => I18N ? I18N.category(name) : name;
   const catDesc = (name) => I18N ? I18N.categoryDesc(name) : (CATEGORY_META[name]?.[1] || '');
+  const narrateStudy = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
 
   const CATEGORY_ORDER = [
     'Desarrollo craneofacial',
@@ -419,6 +420,7 @@
       ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.<br><small>${tx('originalLanguage')}</small>`
       : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}. · ${tx('originalLanguage')}</small>`;
     $s('#studyNext').textContent = sessionIndex === session.length - 1 ? tx('result') : tx('next');
+    narrateStudy(choice.correct ? tx('correct') : `${tx('incorrect')} ${tx('correctAnswer')} ${correct}`, {rate:.92});
     $s('#studyNext').classList.remove('hidden');
   }
 
@@ -445,6 +447,7 @@
     else if (percent >= 70) { medal = '🥈'; medalLabel = lang === 'en' ? 'Silver Medal' : 'Medalla de plata'; }
     else if (percent >= 60) { medal = '🥉'; medalLabel = lang === 'en' ? 'Bronze Medal' : 'Medalla de bronce'; }
     $s('#studySubtitle').textContent = tx('resultTitle');
+    narrateStudy(`${tx('resultTitle')}. ${percent} percent. ${passed ? tx('passed') : tx('keepStudying')}.`, {rate:.92});
     $s('#studyResult').innerHTML = `
       <div class="studyResultCard">
         <div class="studyMedal">${medal || '📘'}</div>
