@@ -216,3 +216,8 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 .landingLogo{display:block;width:min(620px,72vw);max-width:100%;max-height:29vh;object-fit:contain;margin:.05rem auto .25rem;filter:drop-shadow(0 7px 18px #000b) drop-shadow(0 0 12px #d6aa4a33)}
 .landingTitleText{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media(max-height:520px){.landingLogo{max-height:25vh;width:min(500px,62vw)}}
+
+
+/* Logo oficial del juego */
+.homeLogo{position:absolute;z-index:2;top:max(3.5%,18px);left:50%;transform:translateX(-50%);width:min(560px,58vw)!important;height:auto!important;max-height:26vh;object-fit:contain!important;filter:drop-shadow(0 7px 18px #000c) drop-shadow(0 0 12px #d6aa4a33)!important}
+@media(max-height:520px){.homeLogo{top:2%;width:min(430px,50vw)!important;max-height:22vh}}
