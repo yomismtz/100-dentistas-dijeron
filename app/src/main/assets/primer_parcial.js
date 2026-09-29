@@ -2,6 +2,7 @@
 
 (() => {
   const DATA_FILES = ['primer_parcial_01.json','primer_parcial_02.json','primer_parcial_03.json','primer_parcial_04.json','primer_parcial_05.json','primer_parcial_06.json','primer_parcial_07.json','primer_parcial_08.json','primer_parcial_09.json','primer_parcial_10.json'];
+  const ETYMOLOGY_FILE = 'nomenclatura_etimologia_100.json';
   const QUICK_LENGTH = 10;
   const MOCK_LENGTH = 40;
   const PASS_TARGET = 80;
@@ -40,6 +41,7 @@
   };
 
   let bank = [];
+  let etymologyBank = [];
   let currentCategory = 'Todos los temas';
   let session = [];
   let sessionIndex = 0;
@@ -115,7 +117,10 @@
         : `El hallazgo funcional y su contexto clínico son más compatibles con <b>${correctText}</b>, sin asumir una causalidad única más allá de lo que indica el enunciado.`,
       'Nomenclatura': en
         ? `The directional or morphologic components given in the stem combine to form <b>${correctText}</b>; the distractors use a different prefix, root, or type of movement.`
-        : `Los componentes direccionales o morfológicos indicados en el enunciado forman <b>${correctText}</b>; los distractores emplean otro prefijo, lexema o tipo de movimiento.`
+        : `Los componentes direccionales o morfológicos indicados en el enunciado forman <b>${correctText}</b>; los distractores emplean otro prefijo, lexema o tipo de movimiento.`,
+      'Nomenclatura y etimología médica': en
+        ? `The prefix, root, suffix, or compound term in the stem corresponds to <b>${correctText}</b>. Its etymologic components help explain the medical or dental meaning.`
+        : `El prefijo, raíz, sufijo o término compuesto del enunciado corresponde a <b>${correctText}</b>. Sus componentes etimológicos ayudan a explicar el significado médico u odontológico.`
     };
     return intro + (templates[category] || (en
       ? `The information in the stem most directly supports <b>${correctText}</b>.`
@@ -153,6 +158,22 @@
         </div>
         <p class="studyNote">${tx('target')}</p>
       </div>
+      <section class="studyEtymologyFeature" aria-label="Nomenclatura y etimología médica">
+        <div class="studyEtymologyHead">
+          <span class="studyEtymologyIcon">🔤</span>
+          <div>
+            <span class="studyEtymologyEyebrow">${tx('etymologyModule')}</span>
+            <h2 id="studyEtymologyTitle">${tx('etymologyTitle')}</h2>
+            <p id="studyEtymologyDesc">${tx('etymologyDesc')}</p>
+          </div>
+        </div>
+        <div class="studyEtymologyActions">
+          <button id="studyEtymology10" class="studyPrimary">${tx('etymology10')}</button>
+          <button id="studyEtymology40">${tx('etymology40')}</button>
+          <button id="studyEtymology100">${tx('etymology100')}</button>
+        </div>
+        <small id="studyEtymologyCount">100 ${tx('items')}</small>
+      </section>
       <div id="studyCategories" class="studyCategoryGrid"></div>
     </section>
 
@@ -196,6 +217,8 @@
     .studyActions button,.studyNext,.studyResult button{padding:.9rem 1.15rem;border:1px solid #7ecad4;border-radius:13px;background:#164653;font-weight:900}
     .studyPrimary{background:#0c7589!important;border-color:#a4eff9!important}
     .studyNote{font-size:.9rem!important;opacity:.8}
+    .studyEtymologyFeature{max-width:1120px;margin:0 auto 1.25rem;padding:1.15rem 1.2rem;border:1px solid #7c5db0;border-radius:22px;background:linear-gradient(145deg,#211a35,#111b2a 62%,#0b2026);box-shadow:0 16px 36px #0006,inset 0 1px #ffffff10}
+    .studyEtymologyHead{display:flex;gap:1rem;align-items:flex-start}.studyEtymologyIcon{font-size:2.6rem}.studyEtymologyEyebrow{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:#d9b8ff}.studyEtymologyFeature h2{margin:.15rem 0 .35rem;font-size:clamp(20px,2.3vw,32px);color:#f6edff}.studyEtymologyFeature p{margin:0;color:#d4c9df;line-height:1.4}.studyEtymologyActions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}.studyEtymologyActions button{padding:.75rem 1rem;border:1px solid #8063ad;border-radius:13px;background:#2a2140;font-weight:900}.studyEtymologyActions button:last-child{background:linear-gradient(180deg,#6f3fa6,#43226b);border-color:#c89dff}.studyEtymologyFeature small{display:block;margin-top:.7rem;color:#cba8f4;font-weight:900}
     .studyCategoryGrid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding-bottom:2rem}
     .studyCategoryCard{min-height:165px;text-align:left;padding:1rem;border:1px solid #477983;border-radius:18px;background:linear-gradient(145deg,#112a31,#0b1c22);box-shadow:0 10px 25px #0005;display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem}
     .studyCategoryCard:hover{border-color:#9ce7f0;transform:translateY(-2px)}
@@ -323,14 +346,22 @@
     if (bank.length) return true;
     try {
       const responses = await Promise.all(DATA_FILES.map(file => fetch(file)));
+      const etymologyResponse = await fetch(ETYMOLOGY_FILE);
       const bad = responses.find(r => !r.ok);
       if (bad) throw new Error(`HTTP ${bad.status}`);
+      if (!etymologyResponse.ok) throw new Error(`HTTP ${etymologyResponse.status} · etimología`);
       const data = (await Promise.all(responses.map(r => r.json()))).flat();
       if (!Array.isArray(data)) throw new Error('Formato inválido');
       bank = data.filter(q =>
         q && q.q && Array.isArray(q.options) &&
         Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
       );
+      const etymologyData = await etymologyResponse.json();
+      etymologyBank = Array.isArray(etymologyData) ? etymologyData.filter(q =>
+        q && q.q && Array.isArray(q.options) &&
+        Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length
+      ) : [];
+      const ec = $s('#studyEtymologyCount'); if (ec) ec.textContent = `${etymologyBank.length} ${tx('items')}`;
       renderCategories();
       return true;
     } catch (err) {
@@ -391,6 +422,7 @@
   }
 
   function poolFor(category) {
+    if (category === 'Nomenclatura y etimología médica') return [...etymologyBank];
     return category === 'Todos los temas' ? [...bank] : bank.filter(q => q.category === category);
   }
 
@@ -573,6 +605,13 @@
     if (bank.length) startSession('Todos los temas', MOCK_LENGTH);
     else ensureBank().then(ok => ok && startSession('Todos los temas', MOCK_LENGTH));
   };
+  const startEtymology = length => {
+    if (etymologyBank.length) startSession('Nomenclatura y etimología médica', length);
+    else ensureBank().then(ok => ok && startSession('Nomenclatura y etimología médica', length));
+  };
+  $s('#studyEtymology10').onclick = () => startEtymology(10);
+  $s('#studyEtymology40').onclick = () => startEtymology(40);
+  $s('#studyEtymology100').onclick = () => startEtymology(100);
 
   ensureBank();
 
@@ -602,6 +641,12 @@ window.addEventListener('dentistas-language-changed', () => {
   const introText = $s('#studyIntroText'); if (introText) introText.textContent = tx('intro');
   const quick = $s('#studyQuickAll'); if (quick) quick.textContent = tx('quick');
   const mock = $s('#studyMockAll'); if (mock) mock.textContent = tx('mock');
+  const etyTitle = $s('#studyEtymologyTitle'); if (etyTitle) etyTitle.textContent = tx('etymologyTitle');
+  const etyDesc = $s('#studyEtymologyDesc'); if (etyDesc) etyDesc.textContent = tx('etymologyDesc');
+  const ety10 = $s('#studyEtymology10'); if (ety10) ety10.textContent = tx('etymology10');
+  const ety40 = $s('#studyEtymology40'); if (ety40) ety40.textContent = tx('etymology40');
+  const ety100 = $s('#studyEtymology100'); if (ety100) ety100.textContent = tx('etymology100');
+  const etyCount = $s('#studyEtymologyCount'); if (etyCount) etyCount.textContent = `${etymologyBank.length || 100} ${tx('items')}`;
   const note = studyScreen.querySelector('.studyNote'); if (note && !$s('#studyResult')?.classList.contains('hidden')) {} else if (note) note.textContent = tx('target');
   renderCategories();
   if (!$s('#studyQuiz').classList.contains('hidden') && session.length) renderQuestion();
