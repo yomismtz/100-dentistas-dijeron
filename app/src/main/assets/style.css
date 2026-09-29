@@ -223,3 +223,16 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 @media(max-height:520px){.homeLogo{top:2%;width:min(430px,50vw)!important;max-height:22vh}}
 
 /* build trigger: 2026-09-29 final APK */
+
+/* ===== RESTAURACIÓN UI v1.3 ===== */
+.languageSwitch{top:12px!important;right:18px!important;z-index:12!important}
+.home{padding-top:0}
+.homeLogo{top:5%!important;right:auto!important;left:50%!important;transform:translateX(-50%)!important;width:min(24vw,330px)!important;max-height:24vh!important;object-fit:contain!important}
+.homeActions{bottom:5%!important;width:min(1120px,90vw)!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.homeActions #help{grid-column:auto!important}
+.homeActions .studyHomeButton{grid-column:auto!important}
+.topbar{grid-template-columns:auto 1fr auto auto auto!important;gap:.55rem}
+.exitGameBtn{border:1px solid #ff9b7f;border-radius:13px;background:linear-gradient(180deg,#b52b23,#71100e);color:#fff;padding:.62rem .9rem;font-weight:1000;letter-spacing:.04em;box-shadow:inset 0 1px #ffd1c055,0 5px 12px #0006}
+#game~.languageSwitch,.game .languageSwitch{pointer-events:auto}
+@media(max-width:900px){.homeActions{grid-template-columns:repeat(2,minmax(0,1fr))!important}.homeLogo{width:min(30vw,270px)!important}.languageSwitch{transform:scale(.88);transform-origin:top right}}
+@media(max-height:520px){.languageSwitch{top:6px!important;right:8px!important;transform:scale(.78)}.homeLogo{top:2%!important;width:min(22vw,220px)!important}.homeActions{bottom:2%!important;padding:9px!important;gap:8px!important}.homeActions button{min-height:48px!important}.exitGameBtn{padding:.45rem .65rem}}
