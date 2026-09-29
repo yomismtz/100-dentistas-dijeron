@@ -49,6 +49,28 @@ characterStyle.textContent = `
   .winnerName{font-size:clamp(26px,4vw,48px);font-weight:900;color:#ffe09a;margin:.4rem 0}
   .winnerScore{font-size:clamp(22px,3vw,38px);font-weight:900}
   @media(max-width:760px){.setupTeams{grid-template-columns:1fr}.characterGrid{grid-template-columns:repeat(4,1fr)}}
+
+  /* Visual refresh */
+  .setupTeams{gap:1.15rem!important}
+  .setupTeam{border:1px solid #3d717b!important;border-radius:22px!important;padding:1.05rem!important;background:linear-gradient(180deg,#102b33,#081b21)!important;box-shadow:0 14px 32px #0006,inset 0 1px #ffffff0d!important}
+  .setupTeam h3{color:#dffbff!important;text-shadow:0 0 12px #6ee7f23a!important}
+  .teamInput{border:1px solid #4f8590!important;border-radius:13px!important;background:#091d23!important;color:#f3fcff!important;box-shadow:inset 0 1px #ffffff0d!important}
+  .teamInput:focus{outline:2px solid #58ceda;outline-offset:2px}
+  .characterGrid{gap:.55rem!important}
+  .characterCard{min-height:92px!important;border:1px solid #315f68!important;border-radius:15px!important;background:linear-gradient(180deg,#15323a,#0b2228)!important;box-shadow:inset 0 1px #ffffff0c,0 6px 14px #0004!important;transition:transform .13s ease,border-color .17s ease,box-shadow .17s ease!important}
+  .characterCard:hover:not(.unavailable){transform:translateY(-3px);border-color:#6edbe7!important}
+  .characterCard .charIcon{font-size:2.35rem!important;filter:drop-shadow(0 5px 7px #0005)}
+  .characterCard .charName{color:#eefcff!important}
+  .characterCard.selected{border:2px solid #f0c967!important;background:linear-gradient(180deg,#453418,#251a08)!important;box-shadow:0 0 0 1px #ffeaa126,0 0 22px #e0a43142!important;transform:translateY(-2px)}
+  .characterCard.unavailable{opacity:.28!important;filter:grayscale(.6)}
+  .setupStart{border:1px solid #97eaf3!important;border-radius:16px!important;background:linear-gradient(180deg,#16a8bc,#087082)!important;box-shadow:inset 0 1px #ffffff26,0 10px 24px #003b45aa!important}
+  .characterHint{color:#b8d0d5!important}
+  .teamName .avatar{filter:drop-shadow(0 0 8px #6ee7f244)}
+  .winnerStage{padding:1rem .6rem!important}
+  .winnerCharacters{filter:drop-shadow(0 0 22px #f3c34d7a)!important;animation:winnerPop .45s cubic-bezier(.2,.9,.3,1.18)}
+  .winnerName{color:#fff0b7!important;text-shadow:0 0 18px #e3ae365c!important}
+  .winnerScore{color:#dffaff!important}
+  @keyframes winnerPop{from{transform:scale(.72);opacity:0}to{transform:scale(1);opacity:1}}
 `;
 document.head.appendChild(characterStyle);
 
