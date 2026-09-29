@@ -288,9 +288,7 @@ function revealAnswer(idx, btn) {
     gameSound('steal');
 
     openModal(
-      `<h2>${tx('successfulSteal')}</h2>
-       <p><b>${teamNames[currentTeam]}</b> encontró una respuesta del tablero y gana <b>${pointsWon} puntos</b>.</p>
-       <p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
+      isEn() ? `<h2>${tx('successfulSteal')}</h2><p><b>${teamNames[currentTeam]}</b> found a board answer and wins <b>${pointsWon} points</b>.</p><p>${roundIndex === questions.length - 1 ? 'Press ▶ to see the final result.' : 'Press ▶ to continue.'}</p>` : `<h2>${tx('successfulSteal')}</h2><p><b>${teamNames[currentTeam]}</b> encontró una respuesta del tablero y gana <b>${pointsWon} puntos</b>.</p><p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
     );
   } else {
     updateTurnUI();
@@ -339,10 +337,7 @@ function addStrike(reason = 'manual') {
       phase = 'steal';
       updateTurnUI();
       openModal(
-        `<h2>3 ERRORES · CAMBIO DE TURNO</h2>
-         <p><b>${teamNames[previousTeam]}</b> pierde el control de la ronda.</p>
-         <p><b>${teamNames[currentTeam]}</b> tiene <b>10 segundos y una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p>
-         <p>Si acierta una respuesta todavía oculta, gana todo el banco. Si falla o se termina el tiempo, esos puntos se pierden.</p>`
+        isEn() ? `<h2>3 MISTAKES · TURN CHANGE</h2><p><b>${teamNames[previousTeam]}</b> loses control of the round.</p><p><b>${teamNames[currentTeam]}</b> has <b>10 seconds and one answer</b> to steal the bank of <b>${bank} points</b>.</p><p>If a hidden answer is found, the team wins the whole bank. If it fails or time runs out, those points are lost.</p>` : `<h2>3 ERRORES · CAMBIO DE TURNO</h2><p><b>${teamNames[previousTeam]}</b> pierde el control de la ronda.</p><p><b>${teamNames[currentTeam]}</b> tiene <b>10 segundos y una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p><p>Si acierta una respuesta todavía oculta, gana todo el banco. Si falla o se termina el tiempo, esos puntos se pierden.</p>`
       );
     } else {
       strikes = 0;
@@ -350,9 +345,7 @@ function addStrike(reason = 'manual') {
       updateStrikesUI();
       updateTurnUI();
       openModal(
-        `<h2>3 ERRORES · CAMBIO DE TURNO</h2>
-         <p><b>${teamNames[previousTeam]}</b> pierde el turno.</p>
-         <p>Ahora juega <b>${teamNames[currentTeam]}</b> y tendrá 10 segundos para responder.</p>`
+        isEn() ? `<h2>3 MISTAKES · TURN CHANGE</h2><p><b>${teamNames[previousTeam]}</b> loses the turn.</p><p><b>${teamNames[currentTeam]}</b> now plays and has 10 seconds to answer.</p>` : `<h2>3 ERRORES · CAMBIO DE TURNO</h2><p><b>${teamNames[previousTeam]}</b> pierde el turno.</p><p>Ahora juega <b>${teamNames[currentTeam]}</b> y tendrá 10 segundos para responder.</p>`
       );
     }
   } else {
@@ -622,6 +615,9 @@ document.querySelectorAll('.award').forEach(b => b.onclick = () => awardBank(Num
 document.querySelectorAll('.teamName').forEach(b => b.onclick = () => renameTeam(Number(b.dataset.team)));
 
 window.addEventListener('dentistas-language-changed', () => {
+  if (teamNames[0] === 'EQUIPO 1' || teamNames[0] === 'TEAM 1') teamNames[0] = isEn() ? 'TEAM 1' : 'EQUIPO 1';
+  if (teamNames[1] === 'EQUIPO 2' || teamNames[1] === 'TEAM 2') teamNames[1] = isEn() ? 'TEAM 2' : 'EQUIPO 2';
+  updateScoreUI();
   if (typeof updateTurnUI === 'function') updateTurnUI();
   if (questions.length && typeof showRound === 'function' && gameVisible()) showRound(false);
   const start = $('#start'); if (start) start.textContent = tx('playVs');
