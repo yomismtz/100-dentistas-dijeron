@@ -277,3 +277,21 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
   .iconBtn{min-width:42px!important}
   .exitGameBtn{padding:.36rem .48rem!important;font-size:11px!important}
 }
+
+/* Fondo clínico cinematográfico del menú */
+#home:not(.hidden){
+  background-image:
+    linear-gradient(180deg,rgba(1,15,22,.10) 0%,rgba(1,15,22,.18) 48%,rgba(1,12,18,.72) 100%),
+    url('menu_clinica_fondo.webp')!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  background-color:#03141c!important;
+  min-height:100vh;
+}
+#home:not(.hidden)::before{
+  background:linear-gradient(90deg,rgba(0,12,18,.08),transparent 30%,transparent 70%,rgba(0,12,18,.08))!important;
+}
+@media(max-height:520px) and (orientation:landscape){
+  #home:not(.hidden){background-position:center 42%!important}
+}
