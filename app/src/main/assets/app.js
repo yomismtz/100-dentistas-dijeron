@@ -627,3 +627,22 @@ window.addEventListener('dentistas-language-changed', () => {
   document.querySelectorAll('.award').forEach(el => el.textContent = tx('giveBank'));
   const reset = $('#resetRound'); if (reset) reset.textContent = tx('resetRound');
 });
+
+window.DentistasAppBack = function () {
+  try {
+    const modal = document.querySelector('#modal');
+    if (modal && !modal.classList.contains('hidden')) {
+      closeModal(true);
+      return true;
+    }
+    const game = document.querySelector('#game');
+    if (game && !game.classList.contains('hidden')) {
+      stopTimer();
+      game.classList.add('hidden');
+      document.querySelector('#home')?.classList.remove('hidden');
+      window.DentistasNarrator?.stop?.();
+      return true;
+    }
+  } catch (_) {}
+  return false;
+};
