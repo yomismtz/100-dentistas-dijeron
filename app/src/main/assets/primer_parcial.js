@@ -55,6 +55,7 @@
   let answered = false;
   let currentPrepared = null;
   let sessionTopicStats = {};
+  let studyDifficulty = localStorage.getItem('dentistas-study-difficulty') || 'medium';
   const STUDY_STATS_KEY = 'dentistas-study-topic-stats-v1';
 
   function loadTopicStats() {
@@ -162,6 +163,15 @@
         <span id="studyModeText" class="studyEyebrow">${tx('studyMode')}</span>
         <h1 id="studyIntroTitle">${tx('firstMidterm')} · 200 ${tx('items')}</h1>
         <p id="studyIntroText">${tx('intro')}</p>
+        <div class="studyDifficultyPanel">
+          <span>${I18N?.getLang?.()==='en'?'Difficulty':'Dificultad'}</span>
+          <div>
+            <button type="button" data-difficulty="easy">🟢 ${I18N?.getLang?.()==='en'?'Easy':'Fácil'}</button>
+            <button type="button" data-difficulty="medium">🟡 ${I18N?.getLang?.()==='en'?'Medium':'Media'}</button>
+            <button type="button" data-difficulty="advanced">🔴 ${I18N?.getLang?.()==='en'?'Advanced':'Avanzada'}</button>
+          </div>
+          <small id="studyDifficultyDesc"></small>
+        </div>
         <div class="studyActions">
           <button id="studyQuickAll" class="studyPrimary">${tx('quick')}</button>
           <button id="studyMockAll">${tx('mock')}</button>
@@ -259,6 +269,7 @@
     .studyActions button,.studyNext,.studyResult button{padding:.9rem 1.15rem;border:1px solid #7ecad4;border-radius:13px;background:#164653;font-weight:900}
     .studyPrimary{background:#0c7589!important;border-color:#a4eff9!important}
     .studyNote{font-size:.9rem!important;opacity:.8}
+    .studyDifficultyPanel{max-width:760px;margin:.9rem auto;padding:.8rem 1rem;border:1px solid #426f79;border-radius:16px;background:#0b2228}.studyDifficultyPanel>span{display:block;font-weight:900;color:#dffaff;margin-bottom:.45rem}.studyDifficultyPanel>div{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}.studyDifficultyPanel button{padding:.55rem .8rem;border:1px solid #4d7580;border-radius:11px;background:#112d35;color:#eafcff;font-weight:900}.studyDifficultyPanel button.active{border-color:#f0cf6d;background:#493916;box-shadow:0 0 0 1px #f0cf6d33}.studyDifficultyPanel small{display:block;margin-top:.45rem;color:#a9c6cb}
     .studyEtymologyFeature{max-width:1120px;margin:0 auto 1.25rem;padding:1.15rem 1.2rem;border:1px solid #7c5db0;border-radius:22px;background:linear-gradient(145deg,#211a35,#111b2a 62%,#0b2026);box-shadow:0 16px 36px #0006,inset 0 1px #ffffff10}
     .studyEtymologyHead{display:flex;gap:1rem;align-items:flex-start}.studyEtymologyIcon{font-size:2.6rem}.studyEtymologyEyebrow{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:#d9b8ff}.studyEtymologyFeature h2{margin:.15rem 0 .35rem;font-size:clamp(20px,2.3vw,32px);color:#f6edff}.studyEtymologyFeature p{margin:0;color:#d4c9df;line-height:1.4}.studyEtymologyActions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}.studyEtymologyActions button{padding:.75rem 1rem;border:1px solid #8063ad;border-radius:13px;background:#2a2140;font-weight:900}.studyEtymologyActions button:last-child{background:linear-gradient(180deg,#6f3fa6,#43226b);border-color:#c89dff}.studyEtymologyFeature small{display:block;margin-top:.7rem;color:#cba8f4;font-weight:900}
     .studyClinicalFeature{max-width:1120px;margin:0 auto 1.25rem;padding:1.15rem 1.2rem;border:1px solid #3d8f7d;border-radius:22px;background:linear-gradient(145deg,#12342f,#10242a 62%,#081d22);box-shadow:0 16px 36px #0006,inset 0 1px #ffffff10}.studyClinicalHead{display:flex;gap:1rem;align-items:flex-start}.studyClinicalIcon{font-size:2.6rem}.studyClinicalEyebrow{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:#8ce7ce}.studyClinicalFeature h2{margin:.15rem 0 .35rem;font-size:clamp(20px,2.3vw,32px);color:#e9fff8}.studyClinicalFeature p{margin:0;color:#c9e3dc;line-height:1.4}.studyClinicalActions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}.studyClinicalActions button{padding:.75rem 1rem;border:1px solid #407f71;border-radius:13px;background:#14372f;font-weight:900}.studyClinicalActions button:last-child{background:linear-gradient(180deg,#287a67,#185244);border-color:#79d8bd}.studyClinicalFeature small{display:block;margin-top:.7rem;color:#87d9c2;font-weight:900}
@@ -351,6 +362,7 @@
     .studyFeedback{border-radius:15px!important;background:#0d2931!important;box-shadow:inset 0 1px #ffffff0d}
     .studyFeedback.good{border-color:#57cb7a!important}
     .studyFeedback.bad{border-color:#e87373!important}
+    .xpGain{display:inline-block;margin:0 .35rem;padding:.12rem .38rem;border-radius:999px;background:#3b3213;border:1px solid #a98b38;color:#ffe68d;font-size:.72rem;font-weight:1000}
     .studyResultCard{border:1px solid #4b8994!important;border-radius:28px!important;background:linear-gradient(180deg,#102d35,#081b21)!important;box-shadow:0 22px 55px #0008,inset 0 1px #ffffff10!important}
     .studyResultBig{color:#c9fbff!important;text-shadow:0 0 26px #61e4ef55}
     .studyMedal{filter:drop-shadow(0 0 26px #ffc94d77)!important}
@@ -378,6 +390,7 @@
 
   function playStudySound(ok) {
     try {
+      if (window.DentistasProgression?.feedbackEnabled && !window.DentistasProgression.feedbackEnabled('sound')) return;
       const sound = document.querySelector(ok ? '#sndGood' : '#sndBad');
       if (!sound) return;
       sound.currentTime = 0;
@@ -470,6 +483,7 @@
     $s('#studyResult').classList.add('hidden');
     $s('#studyMenuBtn').classList.add('hidden');
     $s('#studySubtitle').textContent = bank.length ? `${bank.length} ${tx('fromFive')}` : tx('loading');
+    updateDifficultyUi();
     ensureBank().then(ok => {
       if (ok) $s('#studySubtitle').textContent = `${bank.length} ${tx('fromFive')}`;
     });
@@ -516,8 +530,12 @@
 
   function preparedQuestion(q) {
     const localized = studyOptions(q);
-    const choices = localized.map((text, idx) => ({ text, correct: idx === q.correct }));
-    return { ...q, choices: shuffle(choices) };
+    let choices = localized.map((text, idx) => ({ text, correct: idx === q.correct }));
+    const correct = choices.find(x=>x.correct);
+    const wrong = shuffle(choices.filter(x=>!x.correct));
+    const maxChoices = studyDifficulty === 'easy' ? 2 : studyDifficulty === 'medium' ? 3 : choices.length;
+    choices = correct ? [correct, ...wrong.slice(0, Math.max(1,maxChoices-1))] : choices.slice(0,maxChoices);
+    return { ...q, choices: shuffle(choices), studyDifficulty };
   }
 
   function renderQuestion() {
@@ -583,7 +601,13 @@
       buttons[index].classList.add('wrong');
       playStudySound(false);
     }
-    try { window.DentistasProgression?.recordStudyActivity?.(choice.correct, sessionStreak); } catch (_) {}
+    let xpGain = 0;
+    try {
+      window.DentistasProgression?.recordStudyActivity?.(choice.correct, sessionStreak);
+      const xp = window.DentistasProgression?.addStudentXp?.(choice.correct, sessionStreak);
+      xpGain = Number(xp?.gained)||0;
+      window.DentistasProgression?.vibrateFeedback?.(choice.correct ? 45 : [70,45,70]);
+    } catch (_) {}
 
     $s('#studyScore').textContent = `${sessionScore} ${tx('correctCount')}`;
     const streakEl = $s('#studyStreak');
@@ -597,8 +621,8 @@
     feedback.className = `studyFeedback ${choice.correct ? 'good' : 'bad'}`;
     const explanation = explanationFor(currentPrepared, correct);
     feedback.innerHTML = choice.correct
-      ? `<b>${tx('correct')}</b> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : `<br><small>${tx('originalLanguage')}</small>`}<div class="studyExplanation">${explanation}</div>`
-      : `<b>${tx('incorrect')}</b> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : ` · ${tx('originalLanguage')}`}</small><div class="studyExplanation">${explanation}</div>`;
+      ? `<b>${tx('correct')}</b> <span class="xpGain">+${xpGain} XP</span> ${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : `<br><small>${tx('originalLanguage')}</small>`}<div class="studyExplanation">${explanation}</div>`
+      : `<b>${tx('incorrect')}</b> <span class="xpGain">+${xpGain} XP</span> ${tx('correctAnswer')} <b>${correct}</b><br><small>${currentPrepared.source}, ${tx('question').toLowerCase()} ${currentPrepared.number}.${translated ? '' : ` · ${tx('originalLanguage')}`}</small><div class="studyExplanation">${explanation}</div>`;
     $s('#studyNext').textContent = sessionIndex === session.length - 1 ? tx('result') : tx('next');
     narrateStudy(choice.correct ? tx('correct') : `${tx('incorrect')} ${tx('correctAnswer')} ${correct}`, {lang: translated ? 'en-US' : (I18N?.getLang?.()==='en' ? 'en-US' : 'es-MX'), rate:.92});
     $s('#studyNext').classList.remove('hidden');
@@ -676,7 +700,29 @@
     $s('#studyRetry').onclick = () => startSession(currentCategory, session.length);
     $s('#studyResultMenu').onclick = showStudyMenu;
     $s('#studyResultHome').onclick = exitStudy;
+    if (newlyUnlocked.length) {
+      setTimeout(() => {
+        try { window.DentistasProgression?.showUnlockAnimation?.(newlyUnlocked); } catch (_) {}
+      }, 650);
+    }
   }
+
+  function difficultyDescription() {
+    const en = I18N?.getLang?.()==='en';
+    if (studyDifficulty==='easy') return en ? '2 options per question. Best for learning and first contact.' : '2 opciones por pregunta. Ideal para aprender y tener un primer contacto.';
+    if (studyDifficulty==='advanced') return en ? 'All available options. Maximum challenge.' : 'Todas las opciones disponibles. Máximo reto.';
+    return en ? '3 options per question. Balanced practice.' : '3 opciones por pregunta. Práctica equilibrada.';
+  }
+  function updateDifficultyUi() {
+    $s('#studyMenu')?.querySelectorAll('[data-difficulty]').forEach(btn=>btn.classList.toggle('active',btn.dataset.difficulty===studyDifficulty));
+    const d=$s('#studyDifficultyDesc'); if(d) d.textContent=difficultyDescription();
+  }
+  $s('#studyMenu')?.querySelectorAll('[data-difficulty]').forEach(btn=>btn.onclick=()=>{
+    studyDifficulty=btn.dataset.difficulty;
+    try{localStorage.setItem('dentistas-study-difficulty',studyDifficulty);}catch(_){}
+    updateDifficultyUi();
+  });
+  updateDifficultyUi();
 
   studyButton.onclick = showStudyMenu;
   $s('#studyExit').onclick = exitStudy;
