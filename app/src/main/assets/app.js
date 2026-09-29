@@ -909,8 +909,12 @@ async function loadQuestionPool() {
         if (Array.isArray(data)) {
           data.forEach(q => {
             if (q && q.q && Array.isArray(q.a) && q.a.length >= 3 && q.a.length <= 7) {
-              const total = q.a.reduce((sum,a)=>sum+(Number(a?.[1])||0),0);
-              if (total === 100) combined.push({...q, area:specialtyArea(q, file)});
+              const points = q.a.map(a => Number(a?.[1]));
+              const validPoints = points.every(p => Number.isFinite(p) && p > 0);
+              const total = points.reduce((sum,p)=>sum+p,0);
+              const highest = validPoints ? Math.max(...points) : 0;
+              const uniqueLeader = validPoints && points.filter(p => p === highest).length === 1;
+              if (validPoints && total === 100 && uniqueLeader) combined.push({...q, area:specialtyArea(q, file)});
             }
           });
         }
