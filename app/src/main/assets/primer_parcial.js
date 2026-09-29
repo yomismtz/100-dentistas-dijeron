@@ -619,12 +619,25 @@
     const percent = session.length ? Math.round((sessionScore / session.length) * 100) : 0;
     const passed = percent >= PASS_TARGET;
     const lang = I18N?.getLang?.() || 'es';
+    let newlyUnlocked = [];
+    try {
+      const progression = window.DentistasProgression;
+      if (progression && typeof CHARACTERS !== 'undefined') {
+        const before = new Set(CHARACTERS.filter(ch => progression.isUnlocked(ch)).map(ch => ch.name));
+        progression.recordModuleResult(currentCategory, percent);
+        const after = CHARACTERS.filter(ch => progression.isUnlocked(ch)).map(ch => ch.name);
+        newlyUnlocked = after.filter(name => !before.has(name));
+      }
+    } catch (_) {}
     let medal = '';
     let medalLabel = '';
     if (percent >= 90) { medal = '🏆'; medalLabel = lang === 'en' ? 'Mastery Trophy' : 'Trofeo de excelencia'; }
     else if (percent >= 80) { medal = '🥇'; medalLabel = lang === 'en' ? 'Gold Medal' : 'Medalla de oro'; }
     else if (percent >= 70) { medal = '🥈'; medalLabel = lang === 'en' ? 'Silver Medal' : 'Medalla de plata'; }
     else if (percent >= 60) { medal = '🥉'; medalLabel = lang === 'en' ? 'Bronze Medal' : 'Medalla de bronce'; }
+    const unlockHtml = newlyUnlocked.length
+      ? `<div class="studyWeakTopic good"><b>${lang === 'en' ? 'New character unlocked:' : 'Nuevo personaje desbloqueado:'}</b> 🎉 ${newlyUnlocked.join(', ')}</div>`
+      : '';
     const weak = weakestTopic();
     const weakHtml = weak
       ? `<div class="studyWeakTopic"><b>${lang === 'en' ? 'Topic to review:' : 'Tema que más conviene repasar:'}</b> ${catLabel(weak.category)}<br><small>${lang === 'en' ? 'Errors' : 'Errores'}: ${weak.wrong} / ${weak.seen} ${weak.scope === 'history' ? (lang === 'en' ? 'in saved practice history' : 'en el historial guardado') : (lang === 'en' ? 'in this session' : 'en esta sesión')}</small></div>`
@@ -641,6 +654,7 @@
         <p>${tx('got')} <b>${sessionScore} ${tx('of')} ${session.length}</b> ${tx('correctResponses')} <b>${catLabel(currentCategory)}</b>.</p>
         <p class="studyBestStreak">🔥 ${lang === 'en' ? 'Best streak' : 'Mejor racha'}: <b>${bestStreak}</b></p>
         ${weakHtml}
+        ${unlockHtml}
         <p>${passed ? tx('reached') : tx('notReached')}</p>
         <p class="studyNote">${tx('disclaimer')}</p>
         <div class="studyResultActions">
