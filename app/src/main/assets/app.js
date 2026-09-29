@@ -3,6 +3,8 @@
 const $ = (s) => document.querySelector(s);
 const GAME_SIZE = 6;
 const TURN_SECONDS = 10;
+const I18N = window.DentistasI18n;
+const tx = (key) => I18N ? I18N.t(key) : key;
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -140,13 +142,13 @@ function updateTurnUI() {
   });
 
   if (phase === 'steal') {
-    turn.textContent = `ROBO: ${teamNames[currentTeam]}`;
-    $('#buzz').textContent = '✖ FALLÓ ROBO';
+    turn.textContent = `${tx('steal')}: ${teamNames[currentTeam]}`;
+    $('#buzz').textContent = tx('failedSteal');
   } else if (phase === 'over') {
-    turn.textContent = 'RONDA TERMINADA';
-    $('#buzz').textContent = '✖ ERROR';
+    turn.textContent = tx('roundOver');
+    $('#buzz').textContent = tx('error');
   } else {
-    turn.textContent = `TURNO: ${teamNames[currentTeam]}`;
+    turn.textContent = `${tx('turn')}: ${teamNames[currentTeam]}`;
     $('#buzz').textContent = '✖ ERROR';
   }
 
@@ -170,7 +172,7 @@ function showRound(reset = true) {
 
   const q = questions[roundIndex];
   const mult = roundMultiplier();
-  $('#round').textContent = `RONDA ${roundIndex + 1} · ×${mult}`;
+  $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
   $('#question').textContent = q.q;
 
@@ -520,3 +522,14 @@ $('#modal').addEventListener('click', (e) => {
 });
 document.querySelectorAll('.award').forEach(b => b.onclick = () => awardBank(Number(b.dataset.team)));
 document.querySelectorAll('.teamName').forEach(b => b.onclick = () => renameTeam(Number(b.dataset.team)));
+
+window.addEventListener('dentistas-language-changed', () => {
+  if (typeof updateTurnUI === 'function') updateTurnUI();
+  if (questions.length && typeof showRound === 'function' && gameVisible()) showRound(false);
+  const start = $('#start'); if (start) start.textContent = tx('playVs');
+  const help = $('#help'); if (help) help.textContent = tx('howTo');
+  const timerLabel = document.querySelector('.timerBox>span'); if (timerLabel) timerLabel.textContent = tx('time');
+  const bankLabel = document.querySelector('.bank>span'); if (bankLabel) bankLabel.textContent = tx('bank');
+  document.querySelectorAll('.award').forEach(el => el.textContent = tx('giveBank'));
+  const reset = $('#resetRound'); if (reset) reset.textContent = tx('resetRound');
+});
