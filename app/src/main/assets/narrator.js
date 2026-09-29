@@ -29,9 +29,10 @@ window.DentistasNarrator = (() => {
 
   function speak(text, opts={}){
     if (!enabled || !text) return;
-    const clean = String(text).replace(/<[^>]*>/g,' ').replace(/[×]/g,' times ').replace(/\s+/g,' ').trim();
-    if (!clean) return;
     const lang = opts.lang || currentLang();
+    const multiplierWord = String(lang).toLowerCase().startsWith('en') ? ' times ' : ' por ';
+    const clean = String(text).replace(/<[^>]*>/g,' ').replace(/[×]/g,multiplierWord).replace(/\s+/g,' ').trim();
+    if (!clean) return;
 
     try {
       if (window.AndroidNarrator && typeof window.AndroidNarrator.speak === 'function') {
