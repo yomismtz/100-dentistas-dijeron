@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="languageSwitch" aria-label="Language selector"><button data-lang="es">ES</button><button data-lang="en">EN</button></div>
+  <div class="languageSwitch" aria-label="Language selector">
+    <button data-lang="es">ES</button><button data-lang="en">EN</button>
+    <button id="voiceToggle" class="voiceToggle" aria-label="Narradora" title="Narradora">🔊</button>
+  </div>
   <main id="home" class="screen home">
     <img src="portada_tiny.jpg" alt="100 Dentistas Dijeron">
     <div class="homeGlow" aria-hidden="true"></div>
@@ -69,6 +72,7 @@
   <audio id="sndGood" src="good.mp3" preload="auto"></audio>
   <audio id="sndBad" src="error.mp3" preload="auto"></audio>
   <script src="i18n.js"></script>
+  <script src="narrator.js"></script>
   <script src="app.js"></script>
   <script src="characters.js"></script>
   <script src="primer_parcial.js"></script>
