@@ -2,7 +2,7 @@
 
 const $ = (s) => document.querySelector(s);
 const GAME_SIZE = 8;
-const TURN_SECONDS = 10;
+const TURN_SECONDS = 30;
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
@@ -120,6 +120,7 @@ let audioCtx = null;
 let roundTransitionHandle = null;
 let lastBankValue = 0;
 let lastTurnSignature = '';
+let turnNarrationToken = 0;
 
 const audio = {
   start: $('#sndStart'),
@@ -206,6 +207,25 @@ function stopTimer() {
     clearInterval(timerHandle);
     timerHandle = null;
   }
+}
+
+function beginTurnAfterQuestion() {
+  stopTimer();
+  clearCpuTurn();
+  timerRemaining = TURN_SECONDS;
+  updateTimerUI();
+  const q = questions[roundIndex];
+  if (!q || phase === 'over' || !gameVisible()) return;
+
+  const token = ++turnNarrationToken;
+  const start = () => {
+    if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
+    startTimer(TURN_SECONDS);
+    scheduleCpuTurn();
+  };
+
+  const spoken = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
+  if (spoken === false) start();
 }
 
 function startTimer(initialSeconds = TURN_SECONDS) {
@@ -320,7 +340,6 @@ function updateTurnUI() {
   $('#buzz').disabled = phase === 'over';
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || bank <= 0);
   updateTimerUI();
-  scheduleCpuTurn();
 }
 
 function showRoundTransition() {
@@ -359,7 +378,6 @@ function showRound(reset = true) {
   $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
   $('#question').textContent = qText(q);
-  setTimeout(() => narrate(qText(q), {lang:qVoiceLang(q), rate:.9}), 900);
 
   updateStrikesUI();
   updateBankUI();
@@ -376,7 +394,8 @@ function showRound(reset = true) {
 
   updateTurnUI();
   if (reset) showRoundTransition();
-  startTimer(reset ? TURN_SECONDS : preservedTime);
+  if (reset) beginTurnAfterQuestion();
+  else startTimer(preservedTime);
 }
 
 function revealAnswer(idx, btn) {
