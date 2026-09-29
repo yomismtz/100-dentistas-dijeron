@@ -6,7 +6,7 @@
   </queries>
   <application
       android:theme="@style/AppTheme"
-      android:label="100 Dentistas Dijeron"
+      android:label="Así los dentistas lo dijeron"
       android:allowBackup="false"
       android:usesCleartextTraffic="false">
     <activity
