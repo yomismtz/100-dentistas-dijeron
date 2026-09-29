@@ -32,12 +32,35 @@ let currentTeam = 0;
 let phase = 'play'; // play | steal | over
 let timerRemaining = TURN_SECONDS;
 let timerHandle = null;
+let audioCtx = null;
+let roundTransitionHandle = null;
 
 const audio = {
   start: $('#sndStart'),
   good: $('#sndGood'),
   bad: $('#sndBad')
 };
+
+function tone(freq=440, duration=0.12, type='sine', volume=0.05) {
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = type; osc.frequency.value = freq; gain.gain.value = volume;
+    osc.connect(gain); gain.connect(audioCtx.destination);
+    const now = audioCtx.currentTime;
+    gain.gain.setValueAtTime(volume, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+    osc.start(now); osc.stop(now + duration);
+  } catch (_) {}
+}
+
+function gameSound(kind) {
+  if (kind === 'countdown') return tone(760, .08, 'square', .035);
+  if (kind === 'steal') { tone(520,.08,'triangle',.05); setTimeout(()=>tone(780,.14,'triangle',.05),90); return; }
+  if (kind === 'victory') { [523,659,784,1047].forEach((f,i)=>setTimeout(()=>tone(f,.18,'triangle',.045),i*110)); return; }
+  if (kind === 'transition') { tone(420,.07,'sine',.025); setTimeout(()=>tone(620,.1,'sine',.03),70); }
+}
 
 function play(sound) {
   try {
@@ -111,6 +134,7 @@ function startTimer() {
   timerHandle = setInterval(() => {
     timerRemaining -= 1;
     updateTimerUI();
+    if (timerRemaining > 0 && timerRemaining <= 3) gameSound('countdown');
 
     if (timerRemaining <= 0) {
       stopTimer();
@@ -157,6 +181,22 @@ function updateTurnUI() {
   updateTimerUI();
 }
 
+function showRoundTransition() {
+  const old = document.querySelector('#roundTransition');
+  if (old) old.remove();
+  const overlay = document.createElement('div');
+  overlay.id = 'roundTransition';
+  overlay.className = 'roundTransition';
+  const mult = roundMultiplier();
+  const lang = I18N?.getLang?.() || 'es';
+  overlay.innerHTML = `<div class="roundTransitionCard"><span>${lang === 'en' ? 'ROUND' : 'RONDA'} ${roundIndex + 1}</span><strong>×${mult}</strong><small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small></div>`;
+  document.body.appendChild(overlay);
+  gameSound('transition');
+  clearTimeout(roundTransitionHandle);
+  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 700);
+  setTimeout(() => overlay.remove(), 1050);
+}
+
 function showRound(reset = true) {
   if (!questions.length) return;
   stopTimer();
@@ -190,6 +230,7 @@ function showRound(reset = true) {
   });
 
   updateTurnUI();
+  if (reset) showRoundTransition();
   startTimer();
 }
 
@@ -216,6 +257,7 @@ function revealAnswer(idx, btn) {
     updateScoreUI();
     updateBankUI();
     updateTurnUI();
+    gameSound('steal');
 
     openModal(
       `<h2>¡ROBO EXITOSO!</h2>
@@ -363,6 +405,7 @@ function startNewGame() {
 
 function finishGame() {
   stopTimer();
+  gameSound('victory');
   phase = 'over';
   updateTurnUI();
 
