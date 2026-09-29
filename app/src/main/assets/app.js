@@ -121,6 +121,7 @@ let roundTransitionHandle = null;
 let lastBankValue = 0;
 let lastTurnSignature = '';
 let turnNarrationToken = 0;
+let soundGeneration = 0;
 
 const audio = {
   start: $('#sndStart'),
@@ -142,11 +143,30 @@ function tone(freq=440, duration=0.12, type='sine', volume=0.05) {
   } catch (_) {}
 }
 
+function delayedTone(freq, duration, type, volume, delay) {
+  const generation = soundGeneration;
+  setTimeout(() => {
+    if (generation !== soundGeneration || !gameVisible()) return;
+    tone(freq, duration, type, volume);
+  }, delay);
+}
+
 function gameSound(kind) {
   if (kind === 'countdown') return tone(760, .08, 'square', .035);
-  if (kind === 'steal') { tone(520,.08,'triangle',.05); setTimeout(()=>tone(780,.14,'triangle',.05),90); return; }
-  if (kind === 'victory') { [523,659,784,1047].forEach((f,i)=>setTimeout(()=>tone(f,.18,'triangle',.045),i*110)); return; }
-  if (kind === 'transition') { tone(420,.07,'sine',.025); setTimeout(()=>tone(620,.1,'sine',.03),70); }
+  if (kind === 'steal') { tone(520,.08,'triangle',.05); delayedTone(780,.14,'triangle',.05,90); return; }
+  if (kind === 'victory') { [523,659,784,1047].forEach((f,i)=>delayedTone(f,.18,'triangle',.045,i*110)); return; }
+  if (kind === 'transition') { tone(420,.07,'sine',.025); delayedTone(620,.1,'sine',.03,70); }
+}
+
+function stopGameAudio() {
+  soundGeneration += 1;
+  Object.values(audio).forEach(sound => {
+    try { sound.pause(); sound.currentTime = 0; } catch (_) {}
+  });
+  try {
+    if (audioCtx && audioCtx.state !== 'closed') audioCtx.close();
+  } catch (_) {}
+  audioCtx = null;
 }
 
 function play(sound) {
@@ -828,7 +848,8 @@ function showMenu() {
   };
   $('#mHome').onclick = () => {
     closeModal(false);
-    stopTimer();
+    invalidateTurn();
+    stopGameAudio();
     $('#game').classList.add('hidden');
     $('#home').classList.remove('hidden');
   };
@@ -898,9 +919,12 @@ const exitGame = $('#exitGame');
 if (exitGame) exitGame.onclick = () => {
   const msg = isEn() ? 'Exit this game and return to the main menu?' : '¿Salir de esta partida y volver al menú principal?';
   if (!confirm(msg)) return;
-  closeModal(false); invalidateTurn();
-  $('#game').classList.add('hidden'); $('#home').classList.remove('hidden');
-  window.DentistasNarrator?.stop?.();
+  closeModal(false);
+  invalidateTurn();
+  stopGameAudio();
+  phase = 'over';
+  $('#game').classList.add('hidden');
+  $('#home').classList.remove('hidden');
 };
 $('#closeModal').onclick = () => closeModal(true);
 $('#modal').addEventListener('click', (e) => {
