@@ -48,6 +48,8 @@ const CHARACTERS = [
     stats:[['Conocimiento',3],['Diagnóstico',3],['Prevención',3],['Precisión',3],['Velocidad',3]] }
 ];
 
+window.DentistasCharacters = CHARACTERS;
+
 const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v1';
 const CHARACTER_UNLOCK_RULES = {
   'NOVA': { always:true, label:'Disponible desde el inicio' },
