@@ -236,3 +236,44 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 #game~.languageSwitch,.game .languageSwitch{pointer-events:auto}
 @media(max-width:900px){.homeActions{grid-template-columns:repeat(2,minmax(0,1fr))!important}.homeLogo{width:min(30vw,270px)!important}.languageSwitch{transform:scale(.88);transform-origin:top right}}
 @media(max-height:520px){.languageSwitch{top:6px!important;right:8px!important;transform:scale(.78)}.homeLogo{top:2%!important;width:min(22vw,220px)!important}.homeActions{bottom:2%!important;padding:9px!important;gap:8px!important}.homeActions button{min-height:48px!important}.exitGameBtn{padding:.45rem .65rem}}
+
+
+/* ===== Paso 8 · ES/EN y responsive seguro ===== */
+.languageSwitch{
+  z-index:60!important;
+  top:max(10px,env(safe-area-inset-top))!important;
+  right:max(10px,env(safe-area-inset-right))!important;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+}
+#game:not(.hidden){padding-top:0}
+#game:not(.hidden) .topbar{padding-right:clamp(190px,21vw,235px)!important}
+.topbar>*{min-width:0}
+.roundInfo{min-width:0;overflow:hidden}
+.roundInfo #turn{max-width:32vw;overflow:hidden;text-overflow:ellipsis}
+.exitGameBtn{white-space:nowrap;min-width:0}
+
+@media(max-width:900px){
+  #game:not(.hidden) .topbar{padding-right:176px!important;gap:.35rem!important}
+  .iconBtn{min-width:48px!important}
+  .roundInfo{gap:.35rem!important}
+  .roundInfo #progress{display:none}
+  .roundInfo #turn{max-width:24vw}
+  .exitGameBtn{padding:.48rem .58rem!important;font-size:clamp(11px,1.7vw,15px)}
+}
+@media(max-width:700px){
+  #game:not(.hidden) .topbar{padding-right:150px!important}
+  .languageSwitch{transform:scale(.78)!important;transform-origin:top right}
+  .languageSwitch button{min-width:38px!important;padding:.42rem .5rem!important}
+  .roundInfo #turn{max-width:20vw}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .languageSwitch{top:max(4px,env(safe-area-inset-top))!important;right:max(6px,env(safe-area-inset-right))!important;transform:scale(.72)!important}
+  #game:not(.hidden) .topbar{padding-right:140px!important;height:11%!important}
+  .board{height:66%!important}
+  .scorebar{height:23%!important}
+  .roundInfo #round{font-size:clamp(15px,2.2vw,24px)!important}
+  .roundInfo #turn{font-size:clamp(9px,1.25vw,14px)!important;max-width:22vw}
+  .iconBtn{min-width:42px!important}
+  .exitGameBtn{padding:.36rem .48rem!important;font-size:11px!important}
+}
