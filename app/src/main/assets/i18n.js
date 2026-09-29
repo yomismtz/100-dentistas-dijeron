@@ -7,6 +7,7 @@ window.DentistasI18n = (() => {
   const strings = {
     es: {
       language:'Idioma', spanish:'ES', english:'EN',
+      openGame:'ABRIR JUEGO', landingTagline:'Aprende, compite y desbloquea especialistas mientras dominas cada módulo.',
       playVs:'JUGAR VS · 2 EQUIPOS', howTo:'¿CÓMO SE JUEGA?',
       studyStart:'JUEGA Y APRUEBA',
       round:'RONDA', turn:'TURNO', steal:'ROBO', roundOver:'RONDA TERMINADA',
@@ -65,6 +66,7 @@ window.DentistasI18n = (() => {
     },
     en: {
       language:'Language', spanish:'ES', english:'EN',
+      openGame:'OPEN GAME', landingTagline:'Learn, compete, and unlock specialists as you master each module.',
       playVs:'PLAY VS · 2 TEAMS', howTo:'HOW TO PLAY',
       studyStart:'PLAY & PASS',
       round:'ROUND', turn:'TURN', steal:'STEAL', roundOver:'ROUND OVER',

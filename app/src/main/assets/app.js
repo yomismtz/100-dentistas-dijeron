@@ -647,3 +647,27 @@ window.DentistasAppBack = function () {
   } catch (_) {}
   return false;
 };
+
+(function initLandingScreen(){
+  const landing=document.querySelector('#landing');
+  const home=document.querySelector('#home');
+  const open=document.querySelector('#openGame');
+  if(!landing||!home||!open) return;
+  const updateLandingLanguage=()=>{
+    const en=window.DentistasI18n?.getLang?.()==='en';
+    open.textContent=en?'OPEN GAME':'ABRIR JUEGO';
+    const tag=document.querySelector('#landingTagline');
+    if(tag) tag.textContent=en
+      ? 'Learn, compete, and unlock specialists as you master each module.'
+      : 'Aprende, compite y desbloquea especialistas mientras dominas cada módulo.';
+    const eyebrow=document.querySelector('.landingEyebrow');
+    if(eyebrow) eyebrow.textContent=en?'DENTAL EDUCATION GAME':'JUEGO EDUCATIVO DE ODONTOLOGÍA';
+  };
+  open.addEventListener('click',()=>{
+    landing.classList.add('hidden');
+    home.classList.remove('hidden');
+    try{window.DentistasNarrator?.stop?.();}catch(_){}
+  });
+  window.addEventListener('dentistas-language-changed',updateLandingLanguage);
+  updateLandingLanguage();
+})();

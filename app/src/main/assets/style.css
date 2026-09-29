@@ -199,3 +199,16 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+/* ===== Landing oficial · Así los dentistas lo dijeron ===== */
+.landing{position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:#07151a;isolation:isolate}
+.landingArt{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;transform:scale(1.01)}
+.landingShade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#00101812 0%,#03151b12 40%,#020a0dcc 78%,#010607f4 100%);pointer-events:none}
+.landingPanel{position:relative;z-index:2;width:min(820px,90vw);margin:0 0 max(4vh,24px);padding:clamp(14px,2vw,24px);text-align:center;border:1px solid #78dce766;border-radius:24px;background:linear-gradient(180deg,#071b23c9,#061319ed);box-shadow:0 20px 55px #000b,inset 0 1px #ffffff18;backdrop-filter:blur(12px)}
+.landingEyebrow{display:inline-block;margin-bottom:.35rem;font-size:clamp(10px,1.05vw,14px);font-weight:1000;letter-spacing:.12em;color:#9beaf3}
+.landingPanel h1{margin:.1rem 0 .35rem;font-size:clamp(30px,4.8vw,64px);line-height:.98;color:#fff7da;text-shadow:0 3px 18px #000,0 0 22px #d6aa4a44}
+.landingPanel p{margin:.45rem auto 1rem;max-width:700px;font-size:clamp(13px,1.45vw,19px);line-height:1.35;color:#d7e8eb}
+.landingOpen{min-width:min(360px,82vw);padding:.9rem 1.5rem;border:1px solid #f4d77b;border-radius:999px;background:linear-gradient(180deg,#d12b22,#82120e);color:#fff;font-weight:1000;font-size:clamp(17px,2vw,24px);letter-spacing:.035em;box-shadow:inset 0 1px #ffd8c477,0 12px 30px #4b0808aa,0 0 26px #e2b24733}
+.landingOpen:hover{filter:brightness(1.1);transform:translateY(-2px)}
+@media(max-height:520px){.landingPanel{margin-bottom:12px;padding:10px 16px}.landingPanel h1{font-size:clamp(26px,4.2vw,46px)}.landingPanel p{margin:.25rem auto .55rem}.landingOpen{padding:.65rem 1.2rem}}
+@media(max-width:600px){.landingPanel{width:92vw;border-radius:18px}.landingArt{object-position:center 42%}.landingEyebrow{letter-spacing:.08em}}
