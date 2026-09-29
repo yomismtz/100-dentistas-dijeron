@@ -446,53 +446,35 @@ function flashThreeStrikes() {
 function addStrike(reason = 'manual') {
   if (phase === 'over') return;
   stopTimer();
-
-  if (phase === 'steal') {
-    play(audio.bad);
-    flashThreeStrikes();
-    const lostPoints = bank;
-    bank = 0;
-    phase = 'over';
-    updateBankUI();
-    updateTurnUI();
-
-    openModal(
-      isEn() ? `<h2>${reason === 'timeout' ? 'TIME UP · FAILED STEAL' : 'FAILED STEAL'}</h2><p><b>${teamNames[currentTeam]}</b> did not find a board answer.</p><p>The <b>${lostPoints} points</b> in the bank are lost and the round ends.</p><p>${roundIndex === questions.length - 1 ? 'Press ▶ to see the final result.' : 'Press ▶ to continue.'}</p>` : `<h2>${reason === 'timeout' ? 'TIEMPO AGOTADO · ROBO FALLIDO' : 'ROBO FALLIDO'}</h2><p><b>${teamNames[currentTeam]}</b> no encontró una respuesta del tablero.</p><p>Los <b>${lostPoints} puntos</b> del banco se pierden y la ronda termina.</p><p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
-    );
-    return;
-  }
+  clearCpuTurn();
+  turnNarrationToken += 1;
+  window.DentistasNarrator?.stop?.();
 
   if (strikes >= 3) return;
-
   strikes += 1;
   updateStrikesUI();
   play(audio.bad);
 
-  if (strikes === 3) {
+  if (strikes >= 3) {
+    strikes = 3;
     flashThreeStrikes();
-
-    const previousTeam = currentTeam;
-    currentTeam = 1 - currentTeam;
-
-    if (bank > 0) {
-      phase = 'steal';
-      updateTurnUI();
-      openModal(
-        isEn() ? `<h2>3 MISTAKES · TURN CHANGE</h2><p><b>${teamNames[previousTeam]}</b> loses control of the round.</p><p><b>${teamNames[currentTeam]}</b> has <b>10 seconds and one answer</b> to steal the bank of <b>${bank} points</b>.</p><p>If a hidden answer is found, the team wins the whole bank. If it fails or time runs out, those points are lost.</p>` : `<h2>3 ERRORES · CAMBIO DE TURNO</h2><p><b>${teamNames[previousTeam]}</b> pierde el control de la ronda.</p><p><b>${teamNames[currentTeam]}</b> tiene <b>10 segundos y una sola respuesta</b> para robar el banco de <b>${bank} puntos</b>.</p><p>Si acierta una respuesta todavía oculta, gana todo el banco. Si falla o se termina el tiempo, esos puntos se pierden.</p>`
-      );
-    } else {
-      strikes = 0;
-      phase = 'play';
-      updateStrikesUI();
-      updateTurnUI();
-      openModal(
-        isEn() ? `<h2>3 MISTAKES · TURN CHANGE</h2><p><b>${teamNames[previousTeam]}</b> loses the turn.</p><p><b>${teamNames[currentTeam]}</b> now plays and has 10 seconds to answer.</p>` : `<h2>3 ERRORES · CAMBIO DE TURNO</h2><p><b>${teamNames[previousTeam]}</b> pierde el turno.</p><p>Ahora juega <b>${teamNames[currentTeam]}</b> y tendrá 10 segundos para responder.</p>`
-      );
-    }
-  } else {
+    phase = 'over';
     updateTurnUI();
-    startTimer();
+    const lostTeam = teamNames[currentTeam];
+    const message = reason === 'timeout'
+      ? (isEn() ? `Time is up. Third mistake. ${lostTeam} loses the round.` : `Tiempo agotado. Tercer error. ${lostTeam} pierde la ronda.`)
+      : (isEn() ? `Third mistake. ${lostTeam} loses the round.` : `Tercer error. ${lostTeam} pierde la ronda.`);
+    narrate(message, {lang:isEn() ? 'en-US' : 'es-MX', rate:.92});
+    openModal(
+      isEn()
+        ? `<h2>✖ ✖ ✖ · ROUND LOST</h2><p><b>${lostTeam}</b> reached three mistakes. The round is over.</p><p>All remaining answers will be revealed in the next step.</p>`
+        : `<h2>✖ ✖ ✖ · RONDA PERDIDA</h2><p><b>${lostTeam}</b> llegó a tres errores. La ronda termina.</p><p>Las respuestas restantes se revelarán en el siguiente paso.</p>`
+    );
+    return;
   }
+
+  updateTurnUI();
+  beginTurnAfterQuestion();
 }
 
 function awardBank(team) {
