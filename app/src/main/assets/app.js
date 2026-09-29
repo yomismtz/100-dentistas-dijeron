@@ -5,6 +5,7 @@ const GAME_SIZE = 6;
 const TURN_SECONDS = 10;
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
+const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -184,7 +185,7 @@ function updateTurnUI() {
     $('#buzz').textContent = tx('error');
   } else {
     turn.textContent = `${tx('turn')}: ${teamNames[currentTeam]}`;
-    $('#buzz').textContent = '✖ ERROR';
+    $('#buzz').textContent = tx('error');
   }
 
   const turnSignature = `${phase}:${currentTeam}`;
@@ -212,6 +213,7 @@ function showRoundTransition() {
   overlay.innerHTML = `<div class="roundTransitionCard"><span>${lang === 'en' ? 'ROUND' : 'RONDA'} ${roundIndex + 1}</span><strong>×${mult}</strong><small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small></div>`;
   document.body.appendChild(overlay);
   gameSound('transition');
+  narrate(`${tx('round')} ${roundIndex + 1}. ${mult} ${tx('points')}.`, {rate:.92});
   clearTimeout(roundTransitionHandle);
   roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 700);
   setTimeout(() => overlay.remove(), 1050);
@@ -235,6 +237,7 @@ function showRound(reset = true) {
   $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
   $('#question').textContent = q.q;
+  setTimeout(() => narrate(q.q, {lang: I18N?.getLang?.() === 'en' ? 'en-US' : 'es-MX', rate:.9}), 900);
 
   updateStrikesUI();
   updateBankUI();
@@ -267,6 +270,7 @@ function revealAnswer(idx, btn) {
   bank += gainedPoints;
   updateBankUI();
   play(audio.good);
+  narrate(`${questions[roundIndex].a[idx][0]}. ${gainedPoints} ${tx('points')}.`, {rate:.93});
 
   if (phase === 'steal') {
     const pointsWon = bank;
@@ -280,7 +284,7 @@ function revealAnswer(idx, btn) {
     gameSound('steal');
 
     openModal(
-      `<h2>¡ROBO EXITOSO!</h2>
+      `<h2>${tx('successfulSteal')}</h2>
        <p><b>${teamNames[currentTeam]}</b> encontró una respuesta del tablero y gana <b>${pointsWon} puntos</b>.</p>
        <p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
     );
@@ -431,11 +435,11 @@ function finishGame() {
 
   let result;
   if (scores[0] > scores[1]) {
-    result = `<h2>🏆 ${teamNames[0]} GANA</h2><p><b>${scores[0]}</b> a <b>${scores[1]}</b> puntos.</p>`;
+    result = `<h2>🏆 ${teamNames[0]} ${tx('wins')}</h2><p><b>${scores[0]}</b> - <b>${scores[1]}</b> ${tx('points')}.</p>`;
   } else if (scores[1] > scores[0]) {
-    result = `<h2>🏆 ${teamNames[1]} GANA</h2><p><b>${scores[1]}</b> a <b>${scores[0]}</b> puntos.</p>`;
+    result = `<h2>🏆 ${teamNames[1]} ${tx('wins')}</h2><p><b>${scores[1]}</b> - <b>${scores[0]}</b> ${tx('points')}.</p>`;
   } else {
-    result = `<h2>EMPATE</h2><p>Ambos equipos terminaron con <b>${scores[0]} puntos</b>.</p>`;
+    result = `<h2>${tx('tie')}</h2><p><b>${scores[0]} ${tx('points')}</b>.</p>`;
   }
 
   openModal(
@@ -444,8 +448,8 @@ function finishGame() {
      <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
      <p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>
      <div class="menuStack">
-       <button id="mAgain">NUEVA PARTIDA ALEATORIA</button>
-       <button id="mHomeFinal">VOLVER A PORTADA</button>
+       <button id="mAgain"> ${tx('newGame')} </button>
+       <button id="mHomeFinal"> ${tx('backHome')} </button>
      </div>`
   );
 
@@ -495,6 +499,8 @@ function openModal(html) {
   stopTimer();
   $('#modalContent').innerHTML = html;
   $('#modal').classList.remove('hidden');
+  const spoken = $('#modalContent').innerText || $('#modalContent').textContent || '';
+  if (spoken) setTimeout(() => narrate(spoken, {rate:.92}), 120);
 }
 
 function closeModal(resumeTimer = true) {
