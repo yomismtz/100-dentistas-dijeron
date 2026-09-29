@@ -42,8 +42,61 @@ const CHARACTERS = [
     stats:[['Magia',5],['Protección',5],['Prevención',5],['Velocidad',5],['Curación',5]] },
   { name:'DON PÉREZ', specialty:'RATÓN DE LOS DIENTES', role:'El Coleccionista Legendario', icon:'🐭', image:'characters/don_perez_raton_dientes.webp', tone:'legendary-gold', rarity:'LEGENDARIO',
     strengths:['Velocidad nocturna','Recolección perfecta','Sigilo mágico'], weaknesses:['Tamaño pequeño','Depende del factor sorpresa'], power:'RECOLECCIÓN ESTELAR', tool:'Maletín recolector de dientes',
-    stats:[['Velocidad',5],['Sigilo',5],['Recolección',5],['Estrategia',5],['Magia',5]] }
+    stats:[['Velocidad',5],['Sigilo',5],['Recolección',5],['Estrategia',5],['Magia',5]] },
+  { name:'NOVA', specialty:'ESTUDIANTE DE ODONTOLOGÍA', role:'La Futura Especialista', icon:'🎓', image:'characters/nova_estudiante.webp', tone:'student', rarity:'INICIAL',
+    strengths:['Aprendizaje','Versatilidad','Curiosidad clínica'], weaknesses:['Experiencia limitada','Aún sin especialidad'], power:'APRENDIZAJE RÁPIDO', tool:'Kit clínico universitario',
+    stats:[['Conocimiento',3],['Diagnóstico',3],['Prevención',3],['Precisión',3],['Velocidad',3]] }
 ];
+
+const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v1';
+const CHARACTER_UNLOCK_RULES = {
+  'NOVA': { always:true, label:'Disponible desde el inicio' },
+  'CARLOS': { requirements:[['Todos los temas',70]], label:'Aprueba el simulacro general con 70% o más' },
+  'SOFÍA': { requirements:[['Laboratorio de ortodoncia y ortopedia',70]], label:'Laboratorio de ortodoncia y ortopedia · 70%' },
+  'MÍA': { requirements:[['Realización del expediente clínico',70]], label:'Expediente clínico · 70%' },
+  'DIEGO': { requirements:[['Psicología infantil',70],['Desarrollo de la oclusión',70]], label:'Psicología infantil + Desarrollo de la oclusión · 70%' },
+  'EMMA': { requirements:[['Hábitos y parafunciones',70],['Fisiología',70]], label:'Hábitos/parafunciones + Fisiología · 70%' },
+  'VALERIA': { requirements:[['Fisiología',75],['Oclusión',70]], label:'Fisiología 75% + Oclusión 70%' },
+  'SANTIAGO': { requirements:[['Desarrollo craneofacial',75],['Oclusión',75]], label:'Desarrollo craneofacial + Oclusión · 75%' },
+  'ALEX': { requirements:[['Desarrollo craneofacial',85],['Laboratorio de ortodoncia y ortopedia',75]], label:'Desarrollo craneofacial 85% + Laboratorio 75%' },
+  'MATEO': { requirements:[['Nomenclatura y etimología médica',70]], label:'Nomenclatura y etimología · 70%' },
+  'LUCÍA': { requirements:[['Nomenclatura y etimología médica',80],['Realización del expediente clínico',70]], label:'Nomenclatura 80% + Expediente 70%' },
+  'RENATA': { requirements:[['Nomenclatura y etimología médica',85],['Fisiología',75]], label:'Nomenclatura 85% + Fisiología 75%' },
+  'AURORA': { requirements:[['Todos los temas',85],['Nomenclatura y etimología médica',85],['Realización del expediente clínico',85],['Laboratorio de ortodoncia y ortopedia',85]], label:'Completa los 4 módulos principales con 85% o más' },
+  'DON PÉREZ': { requirements:[['Todos los temas',90],['Nomenclatura y etimología médica',90],['Realización del expediente clínico',90],['Laboratorio de ortodoncia y ortopedia',90]], label:'Completa los 4 módulos principales con 90% o más' }
+};
+
+function loadCharacterProgress() {
+  try { return JSON.parse(localStorage.getItem(CHARACTER_PROGRESS_KEY) || '{}') || {}; }
+  catch (_) { return {}; }
+}
+function saveCharacterProgress(progress) {
+  try { localStorage.setItem(CHARACTER_PROGRESS_KEY, JSON.stringify(progress)); } catch (_) {}
+}
+function recordCharacterModuleResult(moduleName, percent) {
+  const p = loadCharacterProgress();
+  const score = Math.max(0, Math.min(100, Math.round(Number(percent)||0)));
+  p[moduleName] = Math.max(Number(p[moduleName]) || 0, score);
+  saveCharacterProgress(p);
+  window.dispatchEvent(new CustomEvent('dentistas-character-progress', {detail:{moduleName,percent:score}}));
+  return p;
+}
+function characterUnlocked(character) {
+  const rule = CHARACTER_UNLOCK_RULES[character?.name];
+  if (!rule || rule.always) return true;
+  const p = loadCharacterProgress();
+  return (rule.requirements || []).every(([moduleName,min]) => (Number(p[moduleName]) || 0) >= min);
+}
+function characterUnlockLabel(character) {
+  return CHARACTER_UNLOCK_RULES[character?.name]?.label || 'Progreso de módulos';
+}
+window.DentistasProgression = {
+  recordModuleResult: recordCharacterModuleResult,
+  isUnlocked: characterUnlocked,
+  unlockLabel: characterUnlockLabel,
+  getProgress: loadCharacterProgress,
+  rules: CHARACTER_UNLOCK_RULES
+};
 
 let teamCharacters = [0, 4];
 
@@ -100,6 +153,8 @@ characterStyle.textContent = `
   .tone-violet{box-shadow:inset 0 0 20px #8d5cff33}.tone-emerald{box-shadow:inset 0 0 20px #1fd47e33}.tone-blue{box-shadow:inset 0 0 20px #3a8fff33}.tone-petrol{box-shadow:inset 0 0 20px #1aa6a633}.tone-gold{box-shadow:inset 0 0 20px #ffc54833}.tone-burgundy{box-shadow:inset 0 0 20px #d43b6b33}.tone-turquoise{box-shadow:inset 0 0 20px #20dbc633}.tone-red{box-shadow:inset 0 0 20px #ff484833}.tone-navy{box-shadow:inset 0 0 20px #3e72ff33}.tone-sky{box-shadow:inset 0 0 20px #66ccff33}.tone-mint{box-shadow:inset 0 0 20px #7ef0db33}
   .tone-legendary-mint{box-shadow:inset 0 0 26px #6fffe866,0 0 24px #6fffe833;border-color:#bafff4!important}
   .tone-legendary-gold{box-shadow:inset 0 0 26px #ffd66d66,0 0 24px #ffc24733;border-color:#ffe39a!important}
+  .tone-student{box-shadow:inset 0 0 24px #4fc7d455,0 0 18px #4fc7d422;border-color:#8cebf3!important}
+  .charProgressBadge{margin-top:.22rem;padding:.16rem .42rem;border-radius:999px;font-size:.48rem;font-weight:1000;letter-spacing:.05em;background:#0b1d23;border:1px solid #487985;color:#c7f7ff}.charProgressBadge.locked{background:#251b12;border-color:#8e6a39;color:#f7d48f}
   .charRarity{margin-top:.22rem;padding:.16rem .42rem;border-radius:999px;font-size:.48rem;font-weight:1000;letter-spacing:.09em;color:#1a1300;background:linear-gradient(180deg,#fff0a7,#e9b735);box-shadow:0 0 10px #ffc84d66}
   .characterCard.selected{border:2px solid #f0c967!important;background:linear-gradient(180deg,#453418,#251a08)!important;box-shadow:0 0 0 1px #ffeaa126,0 0 22px #e0a43142!important;transform:translateY(-2px)}
   .characterCard.unavailable{opacity:.28!important;filter:grayscale(.6)}
@@ -153,6 +208,7 @@ function setupCharacterCards(teamIndex, container) {
       <span class="charName">${character.name}</span>
       <span class="charSpecialty">${character.specialty}</span>
       ${character.rarity ? `<span class="charRarity">${character.rarity}</span>` : ''}
+      <span class="charProgressBadge ${characterUnlocked(character) ? '' : 'locked'}" title="${characterUnlockLabel(character)}">${characterUnlocked(character) ? charText('✓ DESBLOQUEADO','✓ UNLOCKED') : charText('🔒 CPU','🔒 CPU')}</span>
     </button>
   `).join('');
 
@@ -187,7 +243,7 @@ function showCharacterSetup() {
   stopTimer();
   openModal(`
     <h2>${charText('ELIGE TUS EQUIPOS Y PERSONAJES','CHOOSE YOUR TEAMS AND CHARACTERS')}</h2>
-    <p class="characterHint">${charText('Cada personaje es visual: ninguno da ventajas o puntos extra.','Characters are visual only: none provide advantages or extra points.')}</p>
+    <p class="characterHint">${charText('En VS de 2 equipos puedes probar todos. En el futuro VS computadora, Nova inicia desbloqueada y los especialistas se obtienen con tu progreso académico.','In 2-team VS you can try everyone. In future VS-computer mode, Nova starts unlocked and specialists are earned through academic progress.')}</p>
     <div class="setupTeams">
       <section class="setupTeam">
         <h3>${charText('EQUIPO 1','TEAM 1')}</h3>
