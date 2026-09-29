@@ -90,11 +90,134 @@ function characterUnlocked(character) {
 function characterUnlockLabel(character) {
   return CHARACTER_UNLOCK_RULES[character?.name]?.label || 'Progreso de módulos';
 }
+
+const STUDY_ACTIVITY_KEY = 'dentistas-study-activity-v1';
+function activityDayKey() {
+  const d = new Date();
+  return [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-');
+}
+function loadStudyActivity() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STUDY_ACTIVITY_KEY) || '{}') || {};
+    if (saved.date !== activityDayKey()) return {date:activityDayKey(),answered:0,correct:0,bestStreak:0};
+    return {date:saved.date,answered:Number(saved.answered)||0,correct:Number(saved.correct)||0,bestStreak:Number(saved.bestStreak)||0};
+  } catch (_) {
+    return {date:activityDayKey(),answered:0,correct:0,bestStreak:0};
+  }
+}
+function recordStudyActivity(isCorrect, streak=0) {
+  const a = loadStudyActivity();
+  a.answered += 1;
+  if (isCorrect) a.correct += 1;
+  a.bestStreak = Math.max(a.bestStreak, Number(streak)||0);
+  try { localStorage.setItem(STUDY_ACTIVITY_KEY, JSON.stringify(a)); } catch (_) {}
+  return a;
+}
+function unlockRequirementProgress(character) {
+  const rule = CHARACTER_UNLOCK_RULES[character?.name];
+  if (!rule || rule.always) return {done:true,ratio:1,missing:[]};
+  const p = loadCharacterProgress();
+  const reqs = rule.requirements || [];
+  const missing = reqs.map(([moduleName,min]) => {
+    const current = Number(p[moduleName]) || 0;
+    return {moduleName,min,current,remaining:Math.max(0,min-current)};
+  }).filter(x => x.remaining > 0);
+  const ratio = reqs.length ? reqs.reduce((sum,[moduleName,min]) => sum + Math.min(1,(Number(p[moduleName])||0)/min),0)/reqs.length : 1;
+  return {done:missing.length===0,ratio,missing};
+}
+function nextUnlockHint() {
+  const locked = CHARACTERS
+    .filter(ch => !characterUnlocked(ch))
+    .map(ch => ({character:ch, progress:unlockRequirementProgress(ch)}))
+    .sort((a,b) => b.progress.ratio - a.progress.ratio);
+  const next = locked[0];
+  if (!next) return null;
+  const m = next.progress.missing.sort((a,b)=>a.remaining-b.remaining)[0];
+  if (!m) return null;
+  return {
+    name:next.character.name,
+    moduleName:m.moduleName,
+    current:m.current,
+    target:m.min,
+    remaining:m.remaining
+  };
+}
+function progressDashboardHtml() {
+  const progress = loadCharacterProgress();
+  const unlocked = CHARACTERS.filter(characterUnlocked);
+  const total = CHARACTERS.length;
+  const pct = Math.round((unlocked.length / total) * 100);
+  const activity = loadStudyActivity();
+  const missions = [
+    {icon:'📚',label:charText('Responde 10 preguntas hoy','Answer 10 questions today'),value:activity.answered,target:10},
+    {icon:'✅',label:charText('Consigue 7 respuestas correctas hoy','Get 7 correct answers today'),value:activity.correct,target:7},
+    {icon:'🔥',label:charText('Logra una racha de 5','Reach a streak of 5'),value:activity.bestStreak,target:5}
+  ];
+  const moduleRows = [
+    ['Todos los temas',charText('Primer parcial','First midterm')],
+    ['Nomenclatura y etimología médica',charText('Nomenclatura y etimología','Nomenclature & etymology')],
+    ['Realización del expediente clínico',charText('Expediente clínico','Clinical record')],
+    ['Laboratorio de ortodoncia y ortopedia',charText('Laboratorio de ortodoncia y ortopedia','Orthodontic & orthopedic lab')]
+  ].map(([key,label]) => {
+    const score = Number(progress[key]) || 0;
+    return `<div class="progressModuleRow"><span>${label}</span><b>${score}%</b><div><i style="width:${score}%"></i></div></div>`;
+  }).join('');
+
+  const collection = CHARACTERS.map(ch => {
+    const unlockedNow = characterUnlocked(ch);
+    const req = unlockRequirementProgress(ch);
+    const nearest = req.missing.sort((a,b)=>a.remaining-b.remaining)[0];
+    const status = unlockedNow
+      ? charText('DESBLOQUEADO','UNLOCKED')
+      : nearest
+        ? charText(`Faltan ${nearest.remaining} pts en ${nearest.moduleName}`,`${nearest.remaining} pts needed in ${nearest.moduleName}`)
+        : characterUnlockLabel(ch);
+    return `
+      <article class="progressCharCard ${unlockedNow ? 'open' : 'locked'}">
+        <div class="progressCharPortrait">
+          <img src="${ch.image}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span style="display:none">${ch.icon}</span>
+          ${unlockedNow ? '' : '<em>🔒</em>'}
+        </div>
+        <strong>${ch.name}</strong>
+        <small>${ch.specialty}</small>
+        <p>${status}</p>
+      </article>`;
+  }).join('');
+
+  const missionHtml = missions.map(m => {
+    const done = m.value >= m.target;
+    const shown = Math.min(m.value,m.target);
+    return `<div class="progressMission ${done?'done':''}"><span>${m.icon}</span><div><b>${m.label}</b><small>${shown} / ${m.target}</small></div><strong>${done?'✓':'+'}</strong></div>`;
+  }).join('');
+
+  return `
+    <div class="progressDashboard">
+      <div class="progressHero">
+        <div><span class="progressEyebrow">${charText('TU CAMINO EN ODONTOLOGÍA','YOUR DENTAL JOURNEY')}</span><h2>🎓 ${charText('Progreso y colección','Progress & collection')}</h2><p>${charText('Empieza con Nova y demuestra dominio para sumar especialistas a tu equipo.','Start with Nova and demonstrate mastery to add specialists to your team.')}</p></div>
+        <div class="progressRing"><b>${pct}%</b><small>${unlocked.length}/${total}</small></div>
+      </div>
+      <h3>${charText('Progreso de módulos principales','Main module progress')}</h3>
+      <div class="progressModules">${moduleRows}</div>
+      <h3>${charText('Metas de hoy','Today’s goals')}</h3>
+      <div class="progressMissions">${missionHtml}</div>
+      <h3>${charText('Colección de personajes','Character collection')}</h3>
+      <div class="progressCollection">${collection}</div>
+    </div>`;
+}
+function showProgressDashboard() {
+  try { stopTimer(); } catch (_) {}
+  openModal(progressDashboardHtml());
+}
 window.DentistasProgression = {
   recordModuleResult: recordCharacterModuleResult,
+  recordStudyActivity,
   isUnlocked: characterUnlocked,
   unlockLabel: characterUnlockLabel,
   getProgress: loadCharacterProgress,
+  getActivity: loadStudyActivity,
+  nextUnlockHint,
+  showDashboard: showProgressDashboard,
   rules: CHARACTER_UNLOCK_RULES
 };
 
@@ -165,6 +288,8 @@ characterStyle.textContent = `
   .winnerCharacters{filter:drop-shadow(0 0 22px #f3c34d7a)!important;animation:winnerPop .45s cubic-bezier(.2,.9,.3,1.18)}
   .winnerName{color:#fff0b7!important;text-shadow:0 0 18px #e3ae365c!important}
   .winnerScore{color:#dffaff!important}
+  .progressHomeButton{border:1px solid #e7c36a!important;background:linear-gradient(180deg,#594419,#30230d)!important;color:#fff1bd!important}
+  .progressDashboard{max-height:76vh;overflow:auto;padding:.15rem}.progressHero{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;border:1px solid #557984;border-radius:18px;background:linear-gradient(135deg,#12323a,#0b2026)}.progressEyebrow{font-size:.7rem;letter-spacing:.1em;color:#92e6ef;font-weight:900}.progressHero h2{margin:.2rem 0}.progressHero p{margin:.2rem 0;color:#bfd8dc}.progressRing{min-width:92px;aspect-ratio:1;border-radius:50%;border:7px solid #e7c36a;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#111e21}.progressRing b{font-size:1.35rem}.progressRing small{color:#b9ced2}.progressDashboard h3{margin:1.1rem 0 .55rem;color:#fff0bd}.progressModules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.progressModuleRow{padding:.65rem;border:1px solid #315861;border-radius:12px;background:#0b2228}.progressModuleRow span{font-size:.78rem;font-weight:800}.progressModuleRow>b{float:right}.progressModuleRow>div{clear:both;height:7px;margin-top:.45rem;border-radius:99px;background:#08161a;overflow:hidden}.progressModuleRow i{display:block;height:100%;background:linear-gradient(90deg,#35b8c8,#e1c15f);border-radius:99px}.progressMissions{display:grid;gap:.45rem}.progressMission{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:center;padding:.65rem;border:1px solid #3b6068;border-radius:12px;background:#0c2228}.progressMission.done{border-color:#508d69;background:#102a20}.progressMission>span{font-size:1.45rem}.progressMission small{display:block;color:#a9c5ca}.progressMission>strong{font-size:1.2rem;color:#ffd36f}.progressCollection{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.55rem}.progressCharCard{padding:.45rem;border:1px solid #365e67;border-radius:13px;background:#0b2228;text-align:center}.progressCharCard.locked{filter:saturate(.45);opacity:.8}.progressCharPortrait{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:#102d34}.progressCharPortrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}.progressCharPortrait>span{width:100%;height:100%;align-items:center;justify-content:center;font-size:2.5rem}.progressCharPortrait em{position:absolute;inset:auto .35rem .35rem auto;font-style:normal;font-size:1.25rem;filter:drop-shadow(0 2px 4px #000)}.progressCharCard strong{display:block;margin-top:.35rem;font-size:.75rem}.progressCharCard small{display:block;color:#81c8d2;font-size:.55rem}.progressCharCard p{font-size:.52rem;line-height:1.2;color:#c8d9dc;min-height:2.5em}.progressCharCard.open p{color:#98e2b2}@media(max-width:760px){.progressModules{grid-template-columns:1fr}.progressCollection{grid-template-columns:repeat(3,minmax(0,1fr))}}
   @keyframes winnerPop{from{transform:scale(.72);opacity:0}to{transform:scale(1);opacity:1}}
 `;
 document.head.appendChild(characterStyle);
@@ -332,11 +457,22 @@ finishGame = function finishGameWithCharacters() {
   };
 };
 
+const progressHomeButton = document.createElement('button');
+progressHomeButton.id = 'progressCollection';
+progressHomeButton.className = 'progressHomeButton';
+progressHomeButton.textContent = charText('🏆 PROGRESO / COLECCIÓN','🏆 PROGRESS / COLLECTION');
+document.querySelector('.homeActions')?.appendChild(progressHomeButton);
+progressHomeButton.onclick = showProgressDashboard;
+
 $('#start').onclick = showCharacterSetup;
 updateScoreUI();
 
 window.addEventListener('dentistas-language-changed', () => {
-  try { updateScoreUI(); updateTurnUI(); } catch (_) {}
+  try {
+    updateScoreUI(); updateTurnUI();
+    const b = document.querySelector('#progressCollection');
+    if (b) b.textContent = charText('🏆 PROGRESO / COLECCIÓN','🏆 PROGRESS / COLLECTION');
+  } catch (_) {}
 });
 
 
