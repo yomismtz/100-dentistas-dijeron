@@ -28,24 +28,29 @@ window.DentistasNarrator = (() => {
   }
 
   function speak(text, opts={}){
-    if (!enabled || !text) return;
+    if (!enabled || !text) return false;
     const lang = opts.lang || currentLang();
     const multiplierWord = String(lang).toLowerCase().startsWith('en') ? ' times ' : ' por ';
     const clean = String(text).replace(/<[^>]*>/g,' ').replace(/[×]/g,multiplierWord).replace(/\s+/g,' ').trim();
-    if (!clean) return;
+    if (!clean) return false;
 
     try {
       if (window.AndroidNarrator && typeof window.AndroidNarrator.speak === 'function') {
         let ready = true;
         try { if (typeof window.AndroidNarrator.isReady === 'function') ready = !!window.AndroidNarrator.isReady(); } catch (_) {}
         if (ready) {
-          window.AndroidNarrator.speak(clean, lang);
-          return;
+          const id = `js-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+          if (opts.onend || opts.onerror) {
+            window.DentistasNarratorCallbacks = window.DentistasNarratorCallbacks || {};
+            window.DentistasNarratorCallbacks[id] = {onend:opts.onend, onerror:opts.onerror};
+          }
+          window.AndroidNarrator.speakWithId(clean, lang, id);
+          return true;
         }
       }
     } catch (_) {}
 
-    if (!('speechSynthesis' in window)) return;
+    if (!('speechSynthesis' in window)) return false;
     if (opts.interrupt !== false) window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(clean);
     u.lang = lang;
@@ -54,7 +59,10 @@ window.DentistasNarrator = (() => {
     u.rate = opts.rate || 0.94;
     u.pitch = opts.pitch || 1.03;
     u.volume = opts.volume || 1;
+    if (opts.onend) u.onend = opts.onend;
+    if (opts.onerror) u.onerror = opts.onerror;
     window.speechSynthesis.speak(u);
+    return true;
   }
 
   function stop(){
@@ -93,5 +101,12 @@ window.DentistasNarrator = (() => {
     if(enabled) speak(window.DentistasI18n?.getLang?.()==='en'?'English selected':'Español seleccionado');
   });
 
-  return {speak,stop,toggle,setEnabled,isEnabled,refreshVoices,currentLang};
+  function nativeFinished(id, ok=true){
+    const cb=window.DentistasNarratorCallbacks?.[id];
+    if(!cb) return;
+    delete window.DentistasNarratorCallbacks[id];
+    try { (ok ? cb.onend : cb.onerror)?.(); } catch (_) {}
+  }
+
+  return {speak,stop,toggle,setEnabled,isEnabled,refreshVoices,currentLang,nativeFinished};
 })();
