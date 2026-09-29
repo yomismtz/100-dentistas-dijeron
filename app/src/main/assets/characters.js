@@ -91,6 +91,106 @@ function characterUnlockLabel(character) {
   return CHARACTER_UNLOCK_RULES[character?.name]?.label || 'Progreso de módulos';
 }
 
+const STUDENT_PROFILE_KEY = 'dentistas-student-profile-v1';
+const FEEDBACK_SETTINGS_KEY = 'dentistas-feedback-settings-v1';
+
+function loadStudentProfile() {
+  try {
+    const p = JSON.parse(localStorage.getItem(STUDENT_PROFILE_KEY) || '{}') || {};
+    return {
+      xp:Number(p.xp)||0,
+      answered:Number(p.answered)||0,
+      correct:Number(p.correct)||0,
+      bestStreak:Number(p.bestStreak)||0
+    };
+  } catch (_) { return {xp:0,answered:0,correct:0,bestStreak:0}; }
+}
+function saveStudentProfile(p) {
+  try { localStorage.setItem(STUDENT_PROFILE_KEY, JSON.stringify(p)); } catch (_) {}
+}
+function studentLevelFromXp(xp) { return Math.floor((Number(xp)||0) / 250) + 1; }
+function addStudentXp(isCorrect, streak=0) {
+  const p = loadStudentProfile();
+  p.answered += 1;
+  if (isCorrect) p.correct += 1;
+  p.bestStreak = Math.max(p.bestStreak, Number(streak)||0);
+  const streakBonus = isCorrect ? Math.min(10, Math.max(0, Number(streak)||0) * 2) : 0;
+  const gained = 2 + (isCorrect ? 8 : 0) + streakBonus;
+  p.xp += gained;
+  saveStudentProfile(p);
+  return {gained,profile:p,level:studentLevelFromXp(p.xp)};
+}
+function loadFeedbackSettings() {
+  try {
+    const s = JSON.parse(localStorage.getItem(FEEDBACK_SETTINGS_KEY) || '{}') || {};
+    return {sound:s.sound !== false,vibration:s.vibration !== false};
+  } catch (_) { return {sound:true,vibration:true}; }
+}
+function saveFeedbackSettings(s) {
+  try { localStorage.setItem(FEEDBACK_SETTINGS_KEY, JSON.stringify(s)); } catch (_) {}
+}
+function feedbackEnabled(kind) { return !!loadFeedbackSettings()[kind]; }
+function vibrateFeedback(pattern) {
+  if (!feedbackEnabled('vibration')) return;
+  try { if (navigator.vibrate) navigator.vibrate(pattern); } catch (_) {}
+}
+function topicStatsSummary() {
+  let stats={};
+  try { stats=JSON.parse(localStorage.getItem('dentistas-study-topic-stats-v1') || '{}') || {}; } catch (_) {}
+  return Object.entries(stats).map(([category,s]) => {
+    const seen=Number(s.seen)||0, wrong=Number(s.wrong)||0;
+    const percent=seen ? Math.round(((seen-wrong)/seen)*100) : 0;
+    const mastery = percent >= 85 ? charText('Dominado','Mastered') : percent >= 70 ? charText('Competente','Competent') : charText('En aprendizaje','Learning');
+    return {category,seen,wrong,percent,mastery};
+  }).sort((a,b)=>b.seen-a.seen);
+}
+function achievementList() {
+  const p=loadStudentProfile();
+  const progress=loadCharacterProgress();
+  const unlocked=CHARACTERS.filter(characterUnlocked);
+  const main=['Todos los temas','Nomenclatura y etimología médica','Realización del expediente clínico','Laboratorio de ortodoncia y ortopedia'];
+  return [
+    {icon:'💯',title:charText('100 respuestas correctas','100 correct answers'),done:p.correct>=100,detail:`${Math.min(p.correct,100)} / 100`},
+    {icon:'🔥',title:charText('Racha de 10','10-answer streak'),done:p.bestStreak>=10,detail:`${Math.min(p.bestStreak,10)} / 10`},
+    {icon:'🦷',title:charText('Primer especialista desbloqueado','First specialist unlocked'),done:unlocked.some(ch=>ch.name!=='NOVA'),detail:`${Math.max(0,unlocked.length-1)}`},
+    {icon:'🏆',title:charText('Todos los módulos aprobados','All modules passed'),done:main.every(k=>(Number(progress[k])||0)>=70),detail:`${main.filter(k=>(Number(progress[k])||0)>=70).length} / 4`}
+  ];
+}
+function characterProfileHtml(ch) {
+  const unlocked=characterUnlocked(ch);
+  const stats=(ch.stats||[]).map(([name,value])=>`<div class="charProfileStat"><span>${name}</span><b>${'★'.repeat(value)}${'☆'.repeat(Math.max(0,5-value))}</b></div>`).join('');
+  return `<div class="charProfileModal">
+    <img src="${ch.image}" alt="">
+    <div class="charProfileBody">
+      <span class="progressEyebrow">${ch.specialty}</span>
+      <h2>${ch.icon} ${ch.name}</h2>
+      <h4>${ch.role}</h4>
+      <p><b>${charText('Habilidad','Ability')}:</b> ${ch.power}</p>
+      <p><b>${charText('Herramienta','Tool')}:</b> ${ch.tool}</p>
+      <p><b>${charText('Fortalezas','Strengths')}:</b> ${(ch.strengths||[]).join(' · ')}</p>
+      <div class="charProfileStats">${stats}</div>
+      <p class="${unlocked?'profileUnlocked':'profileLocked'}"><b>${unlocked?charText('✓ Desbloqueado','✓ Unlocked'):charText('🔒 Requisito','🔒 Requirement')}:</b> ${unlocked?charText('Disponible para tu colección.','Available in your collection.'):characterUnlockLabel(ch)}</p>
+    </div>
+  </div>`;
+}
+function showCharacterProfile(name) {
+  const ch=CHARACTERS.find(x=>x.name===name);
+  if (ch) openModal(characterProfileHtml(ch));
+}
+function showUnlockAnimation(names=[]) {
+  if (!names.length) return;
+  const chars=names.map(name=>CHARACTERS.find(ch=>ch.name===name)).filter(Boolean);
+  if (!chars.length) return;
+  vibrateFeedback([80,70,160]);
+  openModal(`<div class="unlockCelebration">
+    <div class="unlockBurst">✦</div>
+    <div class="unlockTitle">${charText('NUEVO PERSONAJE DESBLOQUEADO','NEW CHARACTER UNLOCKED')}</div>
+    <div class="unlockCards">${chars.map(ch=>`<button class="unlockCard" data-name="${ch.name}"><img src="${ch.image}" alt=""><b>${ch.name}</b><small>${ch.specialty}</small></button>`).join('')}</div>
+    <p>${charText('Tu progreso académico acaba de ampliar tu colección.','Your academic progress just expanded your collection.')}</p>
+  </div>`);
+  document.querySelectorAll('.unlockCard').forEach(btn=>btn.onclick=()=>showCharacterProfile(btn.dataset.name));
+}
+
 const STUDY_ACTIVITY_KEY = 'dentistas-study-activity-v1';
 function activityDayKey() {
   const d = new Date();
@@ -148,6 +248,14 @@ function progressDashboardHtml() {
   const total = CHARACTERS.length;
   const pct = Math.round((unlocked.length / total) * 100);
   const activity = loadStudyActivity();
+  const student = loadStudentProfile();
+  const level = studentLevelFromXp(student.xp);
+  const nextLevelXp = level * 250;
+  const levelBaseXp = (level - 1) * 250;
+  const levelPct = Math.max(0,Math.min(100,Math.round(((student.xp-levelBaseXp)/(nextLevelXp-levelBaseXp))*100)));
+  const topicRows = topicStatsSummary().map(t => `<div class="topicStatRow"><span>${t.category}</span><b>${t.percent}%</b><small class="mastery-${t.percent>=85?'high':t.percent>=70?'mid':'low'}">${t.mastery}</small></div>`).join('') || `<p class="progressEmpty">${charText('Aún no hay estadísticas por tema. Responde algunas preguntas para comenzar.','No topic statistics yet. Answer a few questions to begin.')}</p>`;
+  const achievements = achievementList().map(a => `<div class="achievement ${a.done?'done':''}"><span>${a.icon}</span><div><b>${a.title}</b><small>${a.detail}</small></div><strong>${a.done?'✓':'🔒'}</strong></div>`).join('');
+  const feedback = loadFeedbackSettings();
   const missions = [
     {icon:'📚',label:charText('Responde 10 preguntas hoy','Answer 10 questions today'),value:activity.answered,target:10},
     {icon:'✅',label:charText('Consigue 7 respuestas correctas hoy','Get 7 correct answers today'),value:activity.correct,target:7},
@@ -173,7 +281,7 @@ function progressDashboardHtml() {
         ? charText(`Faltan ${nearest.remaining} pts en ${nearest.moduleName}`,`${nearest.remaining} pts needed in ${nearest.moduleName}`)
         : characterUnlockLabel(ch);
     return `
-      <article class="progressCharCard ${unlockedNow ? 'open' : 'locked'}">
+      <article class="progressCharCard ${unlockedNow ? 'open' : 'locked'}" data-character-name="${ch.name}" role="button" tabindex="0">
         <div class="progressCharPortrait">
           <img src="${ch.image}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <span style="display:none">${ch.icon}</span>
@@ -197,10 +305,20 @@ function progressDashboardHtml() {
         <div><span class="progressEyebrow">${charText('TU CAMINO EN ODONTOLOGÍA','YOUR DENTAL JOURNEY')}</span><h2>🎓 ${charText('Progreso y colección','Progress & collection')}</h2><p>${charText('Empieza con Nova y demuestra dominio para sumar especialistas a tu equipo.','Start with Nova and demonstrate mastery to add specialists to your team.')}</p></div>
         <div class="progressRing"><b>${pct}%</b><small>${unlocked.length}/${total}</small></div>
       </div>
+      <div class="studentLevelCard"><div><span>${charText('NIVEL DEL ESTUDIANTE','STUDENT LEVEL')}</span><b>${level}</b></div><div class="studentXp"><strong>${student.xp} XP</strong><small>${charText('Siguiente nivel','Next level')}: ${nextLevelXp} XP</small><i><em style="width:${levelPct}%"></em></i></div></div>
       <h3>${charText('Progreso de módulos principales','Main module progress')}</h3>
       <div class="progressModules">${moduleRows}</div>
       <h3>${charText('Metas de hoy','Today’s goals')}</h3>
       <div class="progressMissions">${missionHtml}</div>
+      <h3>${charText('Estadísticas y dominio por tema','Topic statistics & mastery')}</h3>
+      <div class="topicStats">${topicRows}</div>
+      <h3>${charText('Logros','Achievements')}</h3>
+      <div class="achievementsGrid">${achievements}</div>
+      <h3>${charText('Sonido y vibración','Sound & vibration')}</h3>
+      <div class="feedbackSettings">
+        <button id="toggleProgressSound">${feedback.sound?'🔊':'🔇'} ${charText('Sonido','Sound')}: ${feedback.sound?'ON':'OFF'}</button>
+        <button id="toggleProgressVibration">${feedback.vibration?'📳':'📴'} ${charText('Vibración','Vibration')}: ${feedback.vibration?'ON':'OFF'}</button>
+      </div>
       <h3>${charText('Colección de personajes','Character collection')}</h3>
       <div class="progressCollection">${collection}</div>
     </div>`;
@@ -208,10 +326,25 @@ function progressDashboardHtml() {
 function showProgressDashboard() {
   try { stopTimer(); } catch (_) {}
   openModal(progressDashboardHtml());
+  document.querySelectorAll('.progressCharCard[data-character-name]').forEach(card => {
+    card.onclick=()=>showCharacterProfile(card.dataset.characterName);
+    card.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();showCharacterProfile(card.dataset.characterName);} };
+  });
+  const sound=document.querySelector('#toggleProgressSound');
+  if(sound) sound.onclick=()=>{const s=loadFeedbackSettings();s.sound=!s.sound;saveFeedbackSettings(s);showProgressDashboard();};
+  const vib=document.querySelector('#toggleProgressVibration');
+  if(vib) vib.onclick=()=>{const s=loadFeedbackSettings();s.vibration=!s.vibration;saveFeedbackSettings(s);if(s.vibration)vibrateFeedback(70);showProgressDashboard();};
 }
 window.DentistasProgression = {
   recordModuleResult: recordCharacterModuleResult,
   recordStudyActivity,
+  addStudentXp,
+  getStudentProfile: loadStudentProfile,
+  studentLevelFromXp,
+  feedbackEnabled,
+  vibrateFeedback,
+  showUnlockAnimation,
+  showCharacterProfile,
   isUnlocked: characterUnlocked,
   unlockLabel: characterUnlockLabel,
   getProgress: loadCharacterProgress,
@@ -289,6 +422,7 @@ characterStyle.textContent = `
   .winnerName{color:#fff0b7!important;text-shadow:0 0 18px #e3ae365c!important}
   .winnerScore{color:#dffaff!important}
   .progressHomeButton{border:1px solid #e7c36a!important;background:linear-gradient(180deg,#594419,#30230d)!important;color:#fff1bd!important}
+  .studentLevelCard{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center;padding:.8rem 1rem;margin:1rem 0;border:1px solid #805fc4;border-radius:15px;background:linear-gradient(135deg,#251b43,#10242c)}.studentLevelCard>div:first-child{display:flex;gap:.45rem;align-items:center}.studentLevelCard span{font-size:.65rem;font-weight:900;color:#cbb7ff;letter-spacing:.08em}.studentLevelCard>div:first-child b{font-size:2rem;color:#fff}.studentXp{display:grid;gap:.2rem}.studentXp strong{color:#ffe18a}.studentXp small{color:#b9cdd1}.studentXp i{display:block;height:8px;background:#09161a;border-radius:99px;overflow:hidden}.studentXp em{display:block;height:100%;background:linear-gradient(90deg,#8f6fe7,#e4c15d);border-radius:99px}.topicStats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}.topicStatRow{display:grid;grid-template-columns:1fr auto;gap:.2rem .5rem;padding:.65rem;border:1px solid #355e67;border-radius:12px;background:#0b2228}.topicStatRow span{font-size:.75rem;font-weight:800}.topicStatRow small{grid-column:1/-1;width:max-content;padding:.15rem .45rem;border-radius:99px;font-size:.6rem;font-weight:900}.mastery-low{background:#402426;color:#ffacac}.mastery-mid{background:#403718;color:#ffe28e}.mastery-high{background:#163b28;color:#9af0b7}.achievementsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}.achievement{display:grid;grid-template-columns:auto 1fr auto;gap:.55rem;align-items:center;padding:.65rem;border:1px solid #3a5660;border-radius:12px;background:#101e23;opacity:.72}.achievement.done{opacity:1;border-color:#8b7537;background:#2d2713}.achievement>span{font-size:1.5rem}.achievement small{display:block;color:#a9bdc1}.feedbackSettings{display:flex;gap:.55rem;flex-wrap:wrap}.feedbackSettings button{padding:.65rem .85rem;border:1px solid #46747e;border-radius:12px;background:#102a31;color:#e7f9fc;font-weight:800}.progressEmpty{color:#9fb9bd}.charProfileModal{display:grid;grid-template-columns:minmax(180px,34%) 1fr;gap:1.1rem;align-items:start}.charProfileModal>img{width:100%;max-height:58vh;object-fit:cover;object-position:50% 20%;border-radius:18px;border:1px solid #4c7a84}.charProfileBody h2{margin:.25rem 0}.charProfileBody h4{color:#b8d5da;margin:.25rem 0 1rem}.charProfileStats{display:grid;gap:.3rem;margin:.8rem 0}.charProfileStat{display:flex;justify-content:space-between;gap:1rem;padding:.3rem .5rem;border-radius:8px;background:#0c2329}.charProfileStat b{color:#ffd96a}.profileUnlocked{color:#9be8b4}.profileLocked{color:#ffd28c}.unlockCelebration{text-align:center;padding:.6rem}.unlockBurst{font-size:4rem;color:#ffe06e;animation:unlockPulse .75s ease-in-out infinite alternate}.unlockTitle{font-weight:1000;letter-spacing:.08em;color:#fff1b2;margin-bottom:.8rem}.unlockCards{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap}.unlockCard{width:min(180px,42vw);padding:.5rem;border:1px solid #e0b850;border-radius:16px;background:linear-gradient(180deg,#3c3116,#161b1c);color:#fff}.unlockCard img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:11px}.unlockCard b,.unlockCard small{display:block}.unlockCard small{color:#bfe4e8}@keyframes unlockPulse{from{transform:scale(.85) rotate(-8deg);opacity:.65}to{transform:scale(1.12) rotate(8deg);opacity:1}}@media(max-width:760px){.topicStats,.achievementsGrid{grid-template-columns:1fr}.charProfileModal{grid-template-columns:1fr}.charProfileModal>img{max-height:38vh}}
   .progressDashboard{max-height:76vh;overflow:auto;padding:.15rem}.progressHero{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;border:1px solid #557984;border-radius:18px;background:linear-gradient(135deg,#12323a,#0b2026)}.progressEyebrow{font-size:.7rem;letter-spacing:.1em;color:#92e6ef;font-weight:900}.progressHero h2{margin:.2rem 0}.progressHero p{margin:.2rem 0;color:#bfd8dc}.progressRing{min-width:92px;aspect-ratio:1;border-radius:50%;border:7px solid #e7c36a;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#111e21}.progressRing b{font-size:1.35rem}.progressRing small{color:#b9ced2}.progressDashboard h3{margin:1.1rem 0 .55rem;color:#fff0bd}.progressModules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.progressModuleRow{padding:.65rem;border:1px solid #315861;border-radius:12px;background:#0b2228}.progressModuleRow span{font-size:.78rem;font-weight:800}.progressModuleRow>b{float:right}.progressModuleRow>div{clear:both;height:7px;margin-top:.45rem;border-radius:99px;background:#08161a;overflow:hidden}.progressModuleRow i{display:block;height:100%;background:linear-gradient(90deg,#35b8c8,#e1c15f);border-radius:99px}.progressMissions{display:grid;gap:.45rem}.progressMission{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:center;padding:.65rem;border:1px solid #3b6068;border-radius:12px;background:#0c2228}.progressMission.done{border-color:#508d69;background:#102a20}.progressMission>span{font-size:1.45rem}.progressMission small{display:block;color:#a9c5ca}.progressMission>strong{font-size:1.2rem;color:#ffd36f}.progressCollection{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.55rem}.progressCharCard{padding:.45rem;border:1px solid #365e67;border-radius:13px;background:#0b2228;text-align:center}.progressCharCard.locked{filter:saturate(.45);opacity:.8}.progressCharPortrait{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:#102d34}.progressCharPortrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}.progressCharPortrait>span{width:100%;height:100%;align-items:center;justify-content:center;font-size:2.5rem}.progressCharPortrait em{position:absolute;inset:auto .35rem .35rem auto;font-style:normal;font-size:1.25rem;filter:drop-shadow(0 2px 4px #000)}.progressCharCard strong{display:block;margin-top:.35rem;font-size:.75rem}.progressCharCard small{display:block;color:#81c8d2;font-size:.55rem}.progressCharCard p{font-size:.52rem;line-height:1.2;color:#c8d9dc;min-height:2.5em}.progressCharCard.open p{color:#98e2b2}@media(max-width:760px){.progressModules{grid-template-columns:1fr}.progressCollection{grid-template-columns:repeat(3,minmax(0,1fr))}}
   @keyframes winnerPop{from{transform:scale(.72);opacity:0}to{transform:scale(1);opacity:1}}
 `;
