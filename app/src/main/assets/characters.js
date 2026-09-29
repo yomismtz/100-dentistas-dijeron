@@ -282,3 +282,123 @@ updateScoreUI();
 window.addEventListener('dentistas-language-changed', () => {
   try { updateScoreUI(); updateTurnUI(); } catch (_) {}
 });
+
+
+/* Perfiles de dificultad por especialidad para VS computadora.
+   No alteran el modo 2 equipos; quedan disponibles para el motor CPU. */
+const CHARACTER_CPU_PROFILES = {
+  SOFÍA: {
+    tier:'specialist', focus:['Odontopediatría y ortodoncia'],
+    keywords:['ortodon','oclusión','oclusion','angle','mordida','alineador','bracket','cefalometr','aparato','apiñamiento','erupción ectópica'],
+    accuracy:{focus:.90,neutral:.64,weak:.48}, delay:[900,1800]
+  },
+  VALERIA: {
+    tier:'specialist', focus:['Periodoncia'],
+    keywords:['periodon','gingiv','sondaje','inserción','insercion','bolsa','furcación','furcacion','recesión','recesion','cálculo','calculo','biofilm'],
+    accuracy:{focus:.91,neutral:.63,weak:.47}, delay:[900,1750]
+  },
+  SANTIAGO: {
+    tier:'specialist', focus:['Cirugía, anestesia y radiología'],
+    keywords:['extracción','extraccion','fórceps','forceps','elevador','anestesia','quirúrg','quirurg','sutura','tercer molar'],
+    accuracy:{focus:.90,neutral:.62,weak:.46}, delay:[850,1700]
+  },
+  ALEX: {
+    tier:'expert', focus:['Cirugía, anestesia y radiología','Anatomía'],
+    keywords:['maxilar','mandíbula','mandibula','cráneo','craneo','trauma','fractura','reconstrucción','reconstruccion','cbct','osteosíntesis','osteosintesis'],
+    accuracy:{focus:.93,neutral:.67,weak:.50}, delay:[800,1600]
+  },
+  MATEO: {
+    tier:'specialist', focus:['Endodoncia y restauradora','Materiales e implantes'],
+    keywords:['restaur','resina','adhes','aislamiento','fotocurado','esmalte','dentina','material'],
+    accuracy:{focus:.90,neutral:.64,weak:.48}, delay:[900,1800]
+  },
+  LUCÍA: {
+    tier:'specialist', focus:['Patología y medicina oral'],
+    keywords:['lesión','lesion','mucosa','biopsia','úlcera','ulcera','candid','leucoplas','eritroplas','cáncer oral','cancer oral','salival'],
+    accuracy:{focus:.92,neutral:.64,weak:.47}, delay:[950,1850]
+  },
+  DIEGO: {
+    tier:'specialist', focus:['Odontopediatría y ortodoncia','Preventiva y cariología'],
+    keywords:['niñ','temporal','pulpotom','pulpectom','mantenedor','conducta','sellador','flúor','fluor','caries en niños','caries en ninos'],
+    accuracy:{focus:.89,neutral:.65,weak:.49}, delay:[950,1850]
+  },
+  RENATA: {
+    tier:'expert', focus:['Endodoncia y restauradora'],
+    keywords:['endodon','pulpar','periapical','conducto','ápice','apice','irrig','hipoclorito','edta','gutapercha','longitud de trabajo','percusión','percusion'],
+    accuracy:{focus:.94,neutral:.66,weak:.48}, delay:[800,1550]
+  },
+  CARLOS: {
+    tier:'balanced', focus:[],
+    keywords:[],
+    accuracy:{focus:.78,neutral:.78,weak:.72}, delay:[1050,1950]
+  },
+  MÍA: {
+    tier:'support', focus:['Preventiva y cariología','Endodoncia y restauradora'],
+    keywords:['aislamiento','succión','succion','instrument','campo operatorio','biofilm','higiene','prevención','prevencion'],
+    accuracy:{focus:.82,neutral:.60,weak:.42}, delay:[800,1650]
+  },
+  EMMA: {
+    tier:'specialist', focus:['Preventiva y cariología','Periodoncia'],
+    keywords:['biofilm','cálculo','calculo','profilaxis','higiene','flúor','fluor','cepill','hilo dental','prevención','prevencion','gingiv'],
+    accuracy:{focus:.91,neutral:.61,weak:.43}, delay:[850,1700]
+  },
+  AURORA: {
+    tier:'legendary', focus:[],
+    keywords:[],
+    accuracy:{focus:.96,neutral:.93,weak:.88}, delay:[650,1250]
+  },
+  'DON PÉREZ': {
+    tier:'legendary', focus:[],
+    keywords:[],
+    accuracy:{focus:.95,neutral:.92,weak:.87}, delay:[600,1200]
+  }
+};
+
+function normalizeCpuText(value='') {
+  return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+}
+
+function cpuProfileFor(character) {
+  return CHARACTER_CPU_PROFILES[character?.name] || CHARACTER_CPU_PROFILES.CARLOS;
+}
+
+function cpuAffinity(character, question) {
+  const profile = cpuProfileFor(character);
+  if (profile.tier === 'legendary') return 'focus';
+  const cat = normalizeCpuText(question?.cat || '');
+  const q = normalizeCpuText(question?.q || '');
+  const focusHit = profile.focus.some(x => cat.includes(normalizeCpuText(x)));
+  const keywordHit = profile.keywords.some(x => q.includes(normalizeCpuText(x)));
+  if (focusHit || keywordHit) return 'focus';
+
+  // Áreas quirúrgicas/endodónticas avanzadas penalizan más a perfiles de apoyo.
+  if (profile.tier === 'support' && /(cirugia|endodoncia|maxilofacial|conducto|anestesia)/.test(cat + ' ' + q)) return 'weak';
+  return 'neutral';
+}
+
+function cpuAccuracyFor(character, question) {
+  const profile = cpuProfileFor(character);
+  return profile.accuracy[cpuAffinity(character, question)] ?? profile.accuracy.neutral;
+}
+
+function cpuDelayFor(character) {
+  const [min,max] = cpuProfileFor(character).delay;
+  return Math.round(min + Math.random() * Math.max(0, max - min));
+}
+
+function cpuQuestionWeight(character, question) {
+  const affinity = cpuAffinity(character, question);
+  const tier = cpuProfileFor(character).tier;
+  if (tier === 'legendary') return 2.2;
+  if (affinity === 'focus') return tier === 'expert' ? 4.0 : 3.4;
+  if (affinity === 'weak') return .55;
+  return 1;
+}
+
+window.DentistasCharacterCPU = {
+  profileFor: cpuProfileFor,
+  affinity: cpuAffinity,
+  accuracyFor: cpuAccuracyFor,
+  delayFor: cpuDelayFor,
+  questionWeight: cpuQuestionWeight
+};
