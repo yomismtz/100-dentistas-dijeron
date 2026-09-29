@@ -24,6 +24,60 @@ const BANK_FILES = [
   'questions_materiales_implantes.json'
 ];
 
+const STUDY_BANK_FILES = [
+  'primer_parcial_01.json','primer_parcial_02.json','primer_parcial_03.json','primer_parcial_04.json','primer_parcial_05.json',
+  'primer_parcial_06.json','primer_parcial_07.json','primer_parcial_08.json','primer_parcial_09.json','primer_parcial_10.json'
+];
+const EXTRA_BANK_FILES = [
+  ['nomenclatura_etimologia_300.json','Nomenclatura y etimología médica'],
+  ['expediente_clinico_300.json','Realización del expediente clínico'],
+  ['laboratorio_ortodoncia_ortopedia_300.json','Laboratorio de ortodoncia y ortopedia']
+];
+
+let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'CARLOS' };
+let cpuTimerHandle = null;
+let questionPoolPromise = null;
+
+function loadJsonAsset(file) {
+  try {
+    const raw = window.AndroidAssets?.readText?.(file);
+    if (raw) return Promise.resolve(JSON.parse(raw));
+  } catch (_) {}
+  return fetch(file).then(r => {
+    if (!r.ok) throw new Error(file);
+    return r.json();
+  });
+}
+
+function normalizeStudyQuestion(q, forcedArea='') {
+  if (!q || !q.q || !Array.isArray(q.options) || !Number.isInteger(q.correct)) return null;
+  const correct = q.options[q.correct];
+  if (!correct) return null;
+  const correctEn = Array.isArray(q.options_en) ? q.options_en[q.correct] : null;
+  const area = forcedArea || q.category || 'Primer parcial';
+  return {
+    q:q.q, q_en:q.q_en || '',
+    cat:area, area,
+    a:[[String(correct),100]],
+    a_en:correctEn ? [[String(correctEn),100]] : undefined,
+    source:q.source || 'Banco académico'
+  };
+}
+
+function areaForQuestion(q) {
+  return q?.area || q?.cat || 'General';
+}
+
+function availableAreas() {
+  return [...new Set(questionPool.map(areaForQuestion).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+}
+
+function filteredPool() {
+  const selected = gameConfig.selectedAreas || [];
+  if (!selected.length) return [...questionPool];
+  return questionPool.filter(q => selected.includes(areaForQuestion(q)));
+}
+
 let questionPool = [];
 let questions = [];
 let roundIndex = 0;
@@ -100,7 +154,8 @@ function shuffle(items) {
 }
 
 function chooseGameQuestions() {
-  questions = shuffle(questionPool).slice(0, Math.min(GAME_SIZE, questionPool.length));
+  const pool = filteredPool();
+  questions = shuffle(pool).slice(0, Math.min(GAME_SIZE, pool.length));
 }
 
 function roundMultiplier(index = roundIndex) {
@@ -173,6 +228,42 @@ function updateStrikesUI() {
   $('#strikes').textContent = '✖ '.repeat(strikes).trim();
 }
 
+
+function cpuCharacterObject() {
+  const list = window.DentistasCharacters || window.CHARACTERS || [];
+  if (Array.isArray(list)) return list.find(c => c.name === gameConfig.cpuCharacter) || {name:gameConfig.cpuCharacter};
+  return {name:gameConfig.cpuCharacter};
+}
+
+function clearCpuTurn() {
+  if (cpuTimerHandle) {
+    clearTimeout(cpuTimerHandle);
+    cpuTimerHandle = null;
+  }
+}
+
+function scheduleCpuTurn() {
+  clearCpuTurn();
+  if (gameConfig.mode !== 'cpu' || currentTeam !== 1 || phase === 'over' || !gameVisible()) return;
+  const q = questions[roundIndex];
+  if (!q) return;
+  const character = cpuCharacterObject();
+  const delay = window.DentistasCharacterCPU?.delayFor?.(character) || 1200;
+  cpuTimerHandle = setTimeout(() => {
+    cpuTimerHandle = null;
+    if (gameConfig.mode !== 'cpu' || currentTeam !== 1 || phase === 'over' || !gameVisible()) return;
+    const hidden = revealed.map((v,i)=>v ? -1 : i).filter(i=>i>=0);
+    const accuracy = window.DentistasCharacterCPU?.accuracyFor?.(character,q) ?? .72;
+    if (hidden.length && Math.random() <= accuracy) {
+      const idx = hidden[Math.floor(Math.random()*hidden.length)];
+      const btn = document.querySelectorAll('#answers button')[idx];
+      if (btn) revealAnswer(idx, btn);
+    } else {
+      addStrike('cpu');
+    }
+  }, Math.min(3500, Math.max(650, delay)));
+}
+
 function updateTurnUI() {
   const turn = $('#turn');
   const teams = document.querySelectorAll('.team');
@@ -204,6 +295,7 @@ function updateTurnUI() {
   $('#buzz').disabled = phase === 'over';
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || bank <= 0);
   updateTimerUI();
+  scheduleCpuTurn();
 }
 
 function showRoundTransition() {
@@ -396,12 +488,105 @@ function resetRound() {
   showRound(true);
 }
 
-function startNewGame() {
+
+function areaSelectorHtml(title) {
+  const areas = availableAreas();
+  return `
+    <h2>${title}</h2>
+    <p>Selecciona entre <b>1 y 5</b> especialidades o apartados. Si eliges varias, se mezclarán durante la partida.</p>
+    <div id="areaPicker" class="areaPicker">
+      ${areas.map(a=>`<button type="button" class="areaPick" data-area="${a.replace(/"/g,'&quot;')}">${a}</button>`).join('')}
+    </div>
+    <p id="areaCount"><b>0 / 5</b> seleccionadas</p>
+    <div class="menuStack"><button id="startConfigured" class="primary" disabled>INICIAR PARTIDA</button></div>`;
+}
+
+function wireAreaPicker() {
+  const chosen = new Set();
+  const count = $('#areaCount');
+  const startBtn = $('#startConfigured');
+  document.querySelectorAll('.areaPick').forEach(btn => {
+    btn.onclick = () => {
+      const area = btn.dataset.area;
+      if (chosen.has(area)) {
+        chosen.delete(area);
+        btn.classList.remove('selected');
+      } else {
+        if (chosen.size >= 5) return;
+        chosen.add(area);
+        btn.classList.add('selected');
+      }
+      if (count) count.innerHTML = `<b>${chosen.size} / 5</b> seleccionadas`;
+      if (startBtn) startBtn.disabled = chosen.size < 1;
+    };
+  });
+  startBtn.onclick = () => {
+    gameConfig.selectedAreas = [...chosen];
+    closeModal(false);
+    startNewGame();
+  };
+}
+
+function showAreaSelector(mode) {
+  gameConfig.mode = mode;
+  const label = mode === 'cpu' ? 'CONTRA LA COMPUTADORA' : mode === '1v1' ? '1 CONTRA 1' : 'EQUIPO CONTRA EQUIPO';
+  openModal(areaSelectorHtml(label));
+  wireAreaPicker();
+}
+
+function showTeamSetup() {
+  openModal(`
+    <h2>👥 EQUIPO CONTRA EQUIPO</h2>
+    <p>Elige cuántas personas habrá en cada equipo.</p>
+    <div class="menuStack setupGrid">
+      <button data-team-size="1">1 vs 1</button>
+      <button data-team-size="2">2 vs 2</button>
+      <button data-team-size="3">3 vs 3</button>
+      <button data-team-size="4">4 vs 4</button>
+    </div>`);
+  document.querySelectorAll('[data-team-size]').forEach(btn => btn.onclick = () => {
+    gameConfig.teamSize = Number(btn.dataset.teamSize) || 1;
+    teamNames = ['EQUIPO 1','EQUIPO 2'];
+    showAreaSelector('teams');
+  });
+}
+
+function showCpuSetup() {
+  const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
+  const fallback = ['SOFÍA','VALERIA','SANTIAGO','ALEX','MATEO','LUCÍA','DIEGO','RENATA','CARLOS','MÍA','EMMA','AURORA','DON PÉREZ','NOVA'];
+  const names = chars.length ? chars.map(c=>c.name) : fallback;
+  openModal(`
+    <h2>🤖 CONTRA LA COMPUTADORA</h2>
+    <p>Elige al especialista que será tu rival.</p>
+    <div class="cpuPicker">
+      ${names.map(n=>`<button type="button" data-cpu="${n}">${n}</button>`).join('')}
+    </div>`);
+  document.querySelectorAll('[data-cpu]').forEach(btn => btn.onclick = () => {
+    gameConfig.cpuCharacter = btn.dataset.cpu;
+    teamNames = ['JUGADOR', gameConfig.cpuCharacter];
+    showAreaSelector('cpu');
+  });
+}
+
+function showOneVsOneSetup() {
+  teamNames = ['JUGADOR 1','JUGADOR 2'];
+  gameConfig.teamSize = 1;
+  showAreaSelector('1v1');
+}
+
+async function startNewGame() {
   if (!questionPool.length) {
-    openModal(isEn() ? '<h2>Bank unavailable</h2><p>The questions have not loaded yet.</p>' : '<h2>Base no disponible</h2><p>Las preguntas todavía no se han cargado.</p>');
+    try { await (questionPoolPromise || loadQuestionPool()); } catch (_) {}
+  }
+  const pool = filteredPool();
+  if (!pool.length) {
+    openModal(isEn()
+      ? '<h2>No questions in this selection</h2><p>Choose another specialty or section.</p>'
+      : '<h2>No hay preguntas en esta selección</h2><p>Elige otra especialidad o apartado.</p>');
     return;
   }
 
+  clearCpuTurn();
   stopTimer();
   chooseGameQuestions();
   scores = [0, 0];
@@ -578,29 +763,55 @@ function showMenu() {
 }
 
 async function loadQuestionPool() {
-  try {
-    const banks = await Promise.all(
-      BANK_FILES.map(file =>
-        fetch(file).then(r => {
-          if (!r.ok) throw new Error(file);
-          return r.json();
-        })
-      )
-    );
-    questionPool = banks.flat().filter(q => q && q.q && Array.isArray(q.a) && q.a.length);
+  const task = (async () => {
+    const combined = [];
+
+    for (const file of BANK_FILES) {
+      try {
+        const data = await loadJsonAsset(file);
+        if (Array.isArray(data)) {
+          data.forEach(q => {
+            if (q && q.q && Array.isArray(q.a) && q.a.length) combined.push({...q, area:q.area || q.cat || 'General'});
+          });
+        }
+      } catch (err) { console.warn('No se pudo cargar', file, err); }
+    }
+
+    for (const file of STUDY_BANK_FILES) {
+      try {
+        const data = await loadJsonAsset(file);
+        if (Array.isArray(data)) data.forEach(q => {
+          const normalized = normalizeStudyQuestion(q, q.category || 'Primer parcial');
+          if (normalized) combined.push(normalized);
+        });
+      } catch (err) { console.warn('No se pudo cargar', file, err); }
+    }
+
+    for (const [file, area] of EXTRA_BANK_FILES) {
+      try {
+        const data = await loadJsonAsset(file);
+        if (Array.isArray(data)) data.forEach(q => {
+          const normalized = normalizeStudyQuestion(q, area);
+          if (normalized) combined.push(normalized);
+        });
+      } catch (err) { console.warn('No se pudo cargar', file, err); }
+    }
+
+    questionPool = combined;
     updateScoreUI();
-  } catch (err) {
-    openModal(isEn()
-      ? `<h2>Error</h2><p>The complete question bank could not be loaded.</p><p>${String(err.message || err)}</p>`
-      : `<h2>Error</h2><p>No se pudo cargar la base completa de preguntas.</p><p>${String(err.message || err)}</p>`);
-  }
+    return questionPool;
+  })();
+  questionPoolPromise = task;
+  return task;
 }
 
 loadState();
 loadQuestionPool();
 updateTimerUI();
 
-$('#start').onclick = startNewGame;
+$('#mode1v1').onclick = showOneVsOneSetup;
+$('#modeTeams').onclick = showTeamSetup;
+$('#modeCpu').onclick = showCpuSetup;
 $('#help').onclick = showHelp;
 $('#prev').onclick = previousRound;
 $('#next').onclick = nextRound;
@@ -621,7 +832,9 @@ window.addEventListener('dentistas-language-changed', () => {
   updateScoreUI();
   if (typeof updateTurnUI === 'function') updateTurnUI();
   if (questions.length && typeof showRound === 'function' && gameVisible()) showRound(false);
-  const start = $('#start'); if (start) start.textContent = tx('playVs');
+  const one = $('#mode1v1'); if (one) one.textContent = isEn() ? '👤 1 VS 1' : '👤 1 CONTRA 1';
+  const teamsBtn = $('#modeTeams'); if (teamsBtn) teamsBtn.textContent = isEn() ? '👥 TEAM VS TEAM' : '👥 EQUIPO CONTRA EQUIPO';
+  const cpuBtn = $('#modeCpu'); if (cpuBtn) cpuBtn.textContent = isEn() ? '🤖 VS COMPUTER' : '🤖 CONTRA LA COMPUTADORA';
   const help = $('#help'); if (help) help.textContent = tx('howTo');
   const timerLabel = document.querySelector('.timerBox>span'); if (timerLabel) timerLabel.textContent = tx('time');
   const bankLabel = document.querySelector('.bank>span'); if (bankLabel) bankLabel.textContent = tx('bank');
@@ -670,4 +883,17 @@ window.DentistasAppBack = function () {
   });
   window.addEventListener('dentistas-language-changed',updateLandingLanguage);
   updateLandingLanguage();
+})();
+
+(function addGameSetupStyles(){
+  const st=document.createElement('style');
+  st.textContent=`
+    .areaPicker{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.65rem;max-height:48vh;overflow:auto;margin:1rem 0;padding:.35rem}
+    .areaPick,.cpuPicker button,.setupGrid button{min-height:58px;border:1px solid #3e7b86;border-radius:14px;background:#0d2830;color:#eefcff;font-weight:900}
+    .areaPick.selected{background:linear-gradient(180deg,#18aabc,#0a6775);border-color:#bff8ff;box-shadow:0 0 18px #42dceb55}
+    .cpuPicker{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.55rem;max-height:52vh;overflow:auto}
+    .setupGrid{grid-template-columns:repeat(2,minmax(140px,1fr))}
+    #startConfigured:disabled{opacity:.45;filter:grayscale(.5)}
+  `;
+  document.head.appendChild(st);
 })();
