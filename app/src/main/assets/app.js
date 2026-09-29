@@ -1,7 +1,7 @@
 'use strict';
 
 const $ = (s) => document.querySelector(s);
-const GAME_SIZE = 6;
+const GAME_SIZE = 8;
 const TURN_SECONDS = 10;
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
@@ -50,17 +50,18 @@ function loadJsonAsset(file) {
 }
 
 function normalizeStudyQuestion(q, forcedArea='') {
-  if (!q || !q.q || !Array.isArray(q.options) || !Number.isInteger(q.correct)) return null;
-  const correct = q.options[q.correct];
-  if (!correct) return null;
-  const correctEn = Array.isArray(q.options_en) ? q.options_en[q.correct] : null;
+  if (!q || !q.q) return null;
   const area = forcedArea || q.category || 'Primer parcial';
+  const accepted = Array.isArray(q.accepted_answers) ? q.accepted_answers.map(String).filter(Boolean) : [];
+  const weights = Array.isArray(q.game_weights) ? q.game_weights.map(Number) : [];
+  if (accepted.length < 3 || accepted.length > 7 || weights.length !== accepted.length) return null;
+  if (weights.some(v => !Number.isFinite(v) || v <= 0) || weights.reduce((a,b)=>a+b,0) !== 100) return null;
   return {
-    q:q.q, q_en:q.q_en || '',
+    q:q.open_q || q.q, q_en:q.open_q_en || q.q_en || '',
     cat:area, area,
-    a:[[String(correct),100]],
-    a_en:correctEn ? [String(correctEn)] : undefined,
-    source:q.source || 'Banco académico'
+    a:accepted.map((answer,i)=>[answer,weights[i]]),
+    source:q.source || 'Banco académico',
+    weighting_note:q.weighting_note || ''
   };
 }
 
@@ -159,8 +160,8 @@ function chooseGameQuestions() {
 }
 
 function roundMultiplier(index = roundIndex) {
-  if (index <= 1) return 1;
-  if (index <= 3) return 2;
+  if (index <= 2) return 1;
+  if (index <= 5) return 2;
   return 3;
 }
 
@@ -622,7 +623,7 @@ function finishGame() {
 
   openModal(
     `${result}
-${isEn() ? `<p>Final score = total bank points won over 6 rounds.</p><p>Rounds 1–2: <b>×1</b> · Rounds 3–4: <b>×2</b> · Rounds 5–6: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p><p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
+${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–3: <b>×1</b> · Rounds 4–6: <b>×2</b> · Rounds 7–8: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–3: <b>×1</b> · Rondas 4–6: <b>×2</b> · Rondas 7–8: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
      <div class="menuStack">
        <button id="mAgain"> ${tx('newGame')} </button>
        <button id="mHomeFinal"> ${tx('backHome')} </button>
@@ -690,19 +691,19 @@ function showHelp() {
       <h2>How to play VS</h2>
       <ol>
         <li>The game is for <b>2 teams</b>.</li>
-        <li>Each game uses <b>6 random questions</b> from the full bank.</li>
+        <li>Each game uses <b>8 random questions</b> from the full bank.</li>
         <li>Questions do not repeat within the same game.</li>
         <li>Each answer must be given before the <b>10-second timer</b> ends.</li>
         <li>If time reaches zero without a correct answer, <b>1 strike</b> is added automatically.</li>
         <li>After a correct answer or a strike, the timer restarts at 10 seconds.</li>
-        <li>Rounds <b>1–2 are ×1</b>, rounds <b>3–4 are ×2</b>, and rounds <b>5–6 are ×3</b>.</li>
+        <li>Rounds <b>1–3 are ×1</b>, rounds <b>4–6 are ×2</b>, and rounds <b>7–8 are ×3</b>.</li>
         <li>A correct answer reveals the board item and adds its multiplied value to the <b>Bank</b>.</li>
         <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
         <li>On the third mistake, control passes to the opposing team.</li>
         <li>If the bank has points, the opponent gets <b>10 seconds and one answer</b> to steal it.</li>
         <li>If the steal succeeds, the opponent wins the whole bank. If it fails or time expires, the bank is lost.</li>
         <li><b>AWARD BANK</b> remains available as a moderator control.</li>
-        <li>After round 6, the final score and winner are shown.</li>
+        <li>After round 8, the final score and winner are shown.</li>
       </ol>
       <p>Current bank: <b>${questionPool.length || 116} questions</b>.</p>
     `);
@@ -711,7 +712,7 @@ function showHelp() {
       <h2>¿Cómo se juega VS?</h2>
       <ol>
         <li>La partida es para <b>2 equipos</b>.</li>
-        <li>Cada partida usa <b>6 preguntas aleatorias</b> elegidas de toda la base.</li>
+        <li>Cada partida usa <b>8 preguntas aleatorias</b> elegidas de toda la base.</li>
         <li>Las preguntas no se repiten dentro de la misma partida.</li>
         <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
         <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
@@ -723,7 +724,7 @@ function showHelp() {
         <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
         <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
         <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
-        <li>Después de la ronda 6 se muestra el marcador final y el ganador.</li>
+        <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
       </ol>
       <p>Base actual: <b>${questionPool.length || 116} preguntas</b>.</p>
     `);
@@ -748,7 +749,7 @@ function showMenu() {
 
   $('#mHelp').onclick = showHelp;
   $('#mNew').onclick = () => {
-    const msg = isEn() ? 'End this game and draw 6 new questions?' : '¿Terminar esta partida y sortear 6 preguntas nuevas?';
+    const msg = isEn() ? 'End this game and draw 8 new questions?' : '¿Terminar esta partida y sortear 8 preguntas nuevas?';
     if (confirm(msg)) {
       closeModal(false);
       startNewGame();
