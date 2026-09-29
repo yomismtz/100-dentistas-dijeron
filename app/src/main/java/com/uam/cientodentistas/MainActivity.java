@@ -11,6 +11,8 @@ import android.webkit.WebViewClient;
 
 import java.util.Locale;
 import java.util.UUID;
+import java.io.InputStream;
+import java.io.ByteArrayOutputStream;
 
 public class MainActivity extends Activity {
     private WebView webView;
@@ -51,8 +53,25 @@ public class MainActivity extends Activity {
         settings.setAllowContentAccess(false);
 
         webView.addJavascriptInterface(new NarratorBridge(), "AndroidNarrator");
+        webView.addJavascriptInterface(new AssetBridge(), "AndroidAssets");
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
+    }
+
+    private class AssetBridge {
+        @JavascriptInterface
+        public String readText(String name) {
+            if (name == null || name.trim().isEmpty() || name.contains("..") || name.startsWith("/")) return "";
+            try (InputStream in = getAssets().open(name);
+                 ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+                byte[] buffer = new byte[8192];
+                int n;
+                while ((n = in.read(buffer)) > 0) out.write(buffer, 0, n);
+                return out.toString("UTF-8");
+            } catch (Exception e) {
+                return "";
+            }
+        }
     }
 
     private class NarratorBridge {
@@ -104,6 +123,7 @@ public class MainActivity extends Activity {
         }
         if (webView != null) {
             webView.removeJavascriptInterface("AndroidNarrator");
+            webView.removeJavascriptInterface("AndroidAssets");
             webView.destroy();
             webView = null;
         }
