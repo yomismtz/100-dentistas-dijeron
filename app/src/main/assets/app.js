@@ -772,7 +772,10 @@ async function loadQuestionPool() {
         const data = await loadJsonAsset(file);
         if (Array.isArray(data)) {
           data.forEach(q => {
-            if (q && q.q && Array.isArray(q.a) && q.a.length) combined.push({...q, area:q.area || q.cat || 'General'});
+            if (q && q.q && Array.isArray(q.a) && q.a.length >= 3 && q.a.length <= 7) {
+              const total = q.a.reduce((sum,a)=>sum+(Number(a?.[1])||0),0);
+              if (total === 100) combined.push({...q, area:q.area || q.cat || 'General'});
+            }
           });
         }
       } catch (err) { console.warn('No se pudo cargar', file, err); }
