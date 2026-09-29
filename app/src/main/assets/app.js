@@ -6,6 +6,7 @@ const TURN_SECONDS = 10;
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
+const isEn = () => I18N?.getLang?.() === 'en';
 const BANK_FILES = [
   'questions.json',
   'questions_anatomia.json',
@@ -314,10 +315,7 @@ function addStrike(reason = 'manual') {
     updateTurnUI();
 
     openModal(
-      `<h2>${reason === 'timeout' ? 'TIEMPO AGOTADO · ROBO FALLIDO' : 'ROBO FALLIDO'}</h2>
-       <p><b>${teamNames[currentTeam]}</b> no encontró una respuesta del tablero.</p>
-       <p>Los <b>${lostPoints} puntos</b> del banco se pierden y la ronda termina.</p>
-       <p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
+      isEn() ? `<h2>${reason === 'timeout' ? 'TIME UP · FAILED STEAL' : 'FAILED STEAL'}</h2><p><b>${teamNames[currentTeam]}</b> did not find a board answer.</p><p>The <b>${lostPoints} points</b> in the bank are lost and the round ends.</p><p>${roundIndex === questions.length - 1 ? 'Press ▶ to see the final result.' : 'Press ▶ to continue.'}</p>` : `<h2>${reason === 'timeout' ? 'TIEMPO AGOTADO · ROBO FALLIDO' : 'ROBO FALLIDO'}</h2><p><b>${teamNames[currentTeam]}</b> no encontró una respuesta del tablero.</p><p>Los <b>${lostPoints} puntos</b> del banco se pierden y la ronda termina.</p><p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
     );
     return;
   }
@@ -376,9 +374,7 @@ function awardBank(team) {
   updateTurnUI();
 
   openModal(
-    `<h2>BANCO ASIGNADO</h2>
-     <p><b>${teamNames[idx]}</b> recibe <b>${pointsWon} puntos</b>.</p>
-     <p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
+    isEn() ? `<h2>BANK AWARDED</h2><p><b>${teamNames[idx]}</b> receives <b>${pointsWon} points</b>.</p><p>${roundIndex === questions.length - 1 ? 'Press ▶ to see the final result.' : 'Press ▶ to continue.'}</p>` : `<h2>BANCO ASIGNADO</h2><p><b>${teamNames[idx]}</b> recibe <b>${pointsWon} puntos</b>.</p><p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
   );
 }
 
@@ -405,7 +401,7 @@ function resetRound() {
 
 function startNewGame() {
   if (!questionPool.length) {
-    openModal('<h2>Base no disponible</h2><p>Las preguntas todavía no se han cargado.</p>');
+    openModal(isEn() ? '<h2>Bank unavailable</h2><p>The questions have not loaded yet.</p>' : '<h2>Base no disponible</h2><p>Las preguntas todavía no se han cargado.</p>');
     return;
   }
 
@@ -444,9 +440,7 @@ function finishGame() {
 
   openModal(
     `${result}
-     <p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p>
-     <p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p>
-     <p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>
+${isEn() ? `<p>Final score = total bank points won over 6 rounds.</p><p>Rounds 1–2: <b>×1</b> · Rounds 3–4: <b>×2</b> · Rounds 5–6: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 6 rondas.</p><p>Rondas 1–2: <b>×1</b> · Rondas 3–4: <b>×2</b> · Rondas 5–6: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
      <div class="menuStack">
        <button id="mAgain"> ${tx('newGame')} </button>
        <button id="mHomeFinal"> ${tx('backHome')} </button>
@@ -485,7 +479,7 @@ function previousRound() {
 function renameTeam(team) {
   const idx = team - 1;
   stopTimer();
-  const name = prompt(`Nombre del equipo ${team}:`, teamNames[idx]);
+  const name = prompt(isEn() ? `Team ${team} name:` : `Nombre del equipo ${team}:`, teamNames[idx]);
   if (name && name.trim()) {
     teamNames[idx] = name.trim().toUpperCase().slice(0, 18);
     updateScoreUI();
@@ -509,41 +503,71 @@ function closeModal(resumeTimer = true) {
 }
 
 function showHelp() {
-  openModal(`
-    <h2>¿Cómo se juega VS?</h2>
-    <ol>
-      <li>La partida es para <b>2 equipos</b>.</li>
-      <li>Cada partida usa <b>6 preguntas aleatorias</b> elegidas de toda la base.</li>
-      <li>Las preguntas no se repiten dentro de la misma partida.</li>
-      <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
-      <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
-      <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 10 segundos.</li>
-      <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
-      <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
-      <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
-      <li>Al tercer error pierde el control y el turno pasa al rival.</li>
-      <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
-      <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
-      <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
-      <li>Después de la ronda 6 se muestra el marcador final y el ganador.</li>
-    </ol>
-    <p>Base actual: <b>${questionPool.length || 116} preguntas</b>.</p>
-  `);
+  if (isEn()) {
+    openModal(`
+      <h2>How to play VS</h2>
+      <ol>
+        <li>The game is for <b>2 teams</b>.</li>
+        <li>Each game uses <b>6 random questions</b> from the full bank.</li>
+        <li>Questions do not repeat within the same game.</li>
+        <li>Each answer must be given before the <b>10-second timer</b> ends.</li>
+        <li>If time reaches zero without a correct answer, <b>1 strike</b> is added automatically.</li>
+        <li>After a correct answer or a strike, the timer restarts at 10 seconds.</li>
+        <li>Rounds <b>1–2 are ×1</b>, rounds <b>3–4 are ×2</b>, and rounds <b>5–6 are ×3</b>.</li>
+        <li>A correct answer reveals the board item and adds its multiplied value to the <b>Bank</b>.</li>
+        <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
+        <li>On the third mistake, control passes to the opposing team.</li>
+        <li>If the bank has points, the opponent gets <b>10 seconds and one answer</b> to steal it.</li>
+        <li>If the steal succeeds, the opponent wins the whole bank. If it fails or time expires, the bank is lost.</li>
+        <li><b>AWARD BANK</b> remains available as a moderator control.</li>
+        <li>After round 6, the final score and winner are shown.</li>
+      </ol>
+      <p>Current bank: <b>${questionPool.length || 116} questions</b>.</p>
+    `);
+  } else {
+    openModal(`
+      <h2>¿Cómo se juega VS?</h2>
+      <ol>
+        <li>La partida es para <b>2 equipos</b>.</li>
+        <li>Cada partida usa <b>6 preguntas aleatorias</b> elegidas de toda la base.</li>
+        <li>Las preguntas no se repiten dentro de la misma partida.</li>
+        <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 10 segundos</b>.</li>
+        <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
+        <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 10 segundos.</li>
+        <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
+        <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
+        <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
+        <li>Al tercer error pierde el control y el turno pasa al rival.</li>
+        <li>Si había puntos en el banco, el rival dispone de <b>10 segundos y una sola respuesta</b> para robarlo.</li>
+        <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
+        <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
+        <li>Después de la ronda 6 se muestra el marcador final y el ganador.</li>
+      </ol>
+      <p>Base actual: <b>${questionPool.length || 116} preguntas</b>.</p>
+    `);
+  }
 }
 
 function showMenu() {
-  openModal(`
+  openModal(isEn() ? `
+    <h2>Menu</h2>
+    <div class="menuStack">
+      <button id="mHelp">Instructions</button>
+      <button id="mNew">New random game</button>
+      <button id="mHome">Home</button>
+    </div>`
+  : `
     <h2>Menú</h2>
     <div class="menuStack">
       <button id="mHelp">Instrucciones</button>
       <button id="mNew">Nueva partida aleatoria</button>
       <button id="mHome">Portada</button>
-    </div>
-  `);
+    </div>`);
 
   $('#mHelp').onclick = showHelp;
   $('#mNew').onclick = () => {
-    if (confirm('¿Terminar esta partida y sortear 6 preguntas nuevas?')) {
+    const msg = isEn() ? 'End this game and draw 6 new questions?' : '¿Terminar esta partida y sortear 6 preguntas nuevas?';
+    if (confirm(msg)) {
       closeModal(false);
       startNewGame();
     }
@@ -569,7 +593,9 @@ async function loadQuestionPool() {
     questionPool = banks.flat().filter(q => q && q.q && Array.isArray(q.a) && q.a.length);
     updateScoreUI();
   } catch (err) {
-    openModal(`<h2>Error</h2><p>No se pudo cargar la base completa de preguntas.</p><p>${String(err.message || err)}</p>`);
+    openModal(isEn()
+      ? `<h2>Error</h2><p>The complete question bank could not be loaded.</p><p>${String(err.message || err)}</p>`
+      : `<h2>Error</h2><p>No se pudo cargar la base completa de preguntas.</p><p>${String(err.message || err)}</p>`);
   }
 }
 
