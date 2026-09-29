@@ -124,3 +124,21 @@ box-shadow:inset 0 0 0 1px #fff2bb10,inset 0 0 42px #00748a18,0 18px 45px #0008}
   .board{height:67%;margin:.4% 1% 0}
   .scorebar{height:23%}
 }
+
+/* Micro-interactions */
+html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.homeActions #start{grid-column:1}
+.homeActions #studyStart{grid-column:2;grid-row:1}
+.homeActions #help{grid-column:3;grid-row:1}
+.bank.bump{animation:bankBump .28s cubic-bezier(.2,.8,.25,1.2)}
+.bank.bump strong{color:#fff0a8;text-shadow:0 0 22px #ffba2b}
+@keyframes bankBump{0%{transform:scale(1)}45%{transform:scale(1.08)}100%{transform:scale(1)}}
+.team.active .teamName{border-color:#dfbd64;box-shadow:0 0 18px #e1a83233}
+.team.steal .teamName{border-color:#72e5f0;box-shadow:0 0 20px #14bfd444}
+#turn.turnPulse{animation:turnPulse .34s ease-out}
+@keyframes turnPulse{0%{transform:scale(.94);filter:brightness(1.5)}100%{transform:scale(1);filter:brightness(1)}}
+@media(max-width:760px){
+  .homeActions #start{grid-column:1}
+  .homeActions #studyStart{grid-column:2}
+  .homeActions #help{grid-column:1/-1;grid-row:2}
+}
