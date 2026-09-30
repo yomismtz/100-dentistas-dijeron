@@ -468,13 +468,25 @@ function submitTypedAnswer(){
   setAnswerFeedback('✖ Esa respuesta no está entre las opciones ocultas.','wrong');
   addStrike('answer');
 }
+window.DentistasVoice=window.DentistasVoice||{
+  nativeResult(text,ok){
+    const b=$('#answerMic');if(b)b.textContent='🎤 VOZ';
+    if(!ok){setAnswerFeedback('No se entendió la respuesta. Intenta otra vez o escríbela.','hint');return;}
+    const input=$('#answerText');if(input)input.value=String(text||'');
+    submitTypedAnswer();
+  }
+};
 function startVoiceAnswer(){
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){openModal('<h2>🎤 VOZ</h2><p>El reconocimiento de voz no está disponible en este dispositivo. Puedes escribir la respuesta.</p>');return;}
-  const rec=new SR();rec.lang=isEn()?'en-US':'es-MX';rec.interimResults=false;rec.maxAlternatives=1;
   const b=$('#answerMic');if(b)b.textContent='🎙️ ESCUCHANDO';
+  const lang=isEn()?'en-US':'es-MX';
+  if(window.AndroidVoice?.isAvailable?.()){window.AndroidVoice.start(lang);return;}
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){if(b)b.textContent='🎤 VOZ';setAnswerFeedback('El reconocimiento de voz no está disponible. Puedes escribir la respuesta.','hint');return;}
+  const rec=new SR();rec.lang=lang;rec.interimResults=false;rec.maxAlternatives=1;
   rec.onresult=e=>{const t=e.results?.[0]?.[0]?.transcript||'';if($('#answerText'))$('#answerText').value=t;submitTypedAnswer();};
-  rec.onerror=()=>{if(b)b.textContent='🎤 VOZ';};rec.onend=()=>{if(b)b.textContent='🎤 VOZ';};rec.start();
+  rec.onerror=()=>{if(b)b.textContent='🎤 VOZ';setAnswerFeedback('No se entendió la respuesta.','hint');};
+  rec.onend=()=>{if(b)b.textContent='🎤 VOZ';};
+  try{rec.start();}catch(_){if(b)b.textContent='🎤 VOZ';}
 }
 function finishFaceoff(winner){
   if(!faceoffActive)return;faceoffActive=false;clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
@@ -522,7 +534,11 @@ function startTimer(initialSeconds = TURN_SECONDS) {
     updateTimerUI();
     if (timerRemaining > 0 && timerRemaining <= 10) {
       const urgency = 11 - timerRemaining;
-      tone(650 + urgency * 45, timerRemaining <= 3 ? .16 : .09, 'square', timerRemaining <= 3 ? .075 : .035 + urgency * .003);
+      gameSound('countdown');
+      const timerEl=$('#timer');
+      timerEl?.classList.remove('countdownPulse');
+      void timerEl?.offsetWidth;
+      timerEl?.classList.add('countdownPulse');
       if (timerRemaining <= 3) setTimeout(() => tone(900 + urgency * 35, .08, 'square', .055), 170);
     }
 
