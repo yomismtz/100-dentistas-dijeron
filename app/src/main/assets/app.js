@@ -864,6 +864,33 @@ function showOneVsOneSetup() {
   showAreaSelector('1v1');
 }
 
+function startFinalChallenge(){
+  invalidateTurn();
+  const pool=shuffle(filteredPool()).slice(0,10);
+  if(pool.length<10){openModal('<h2>RONDA FINAL</h2><p>No hay suficientes preguntas en esta selección.</p>');return;}
+  let n=0,total=0;
+  const ask=()=>{
+    if(n>=pool.length){
+      const won=total>=300;
+      openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p><div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
+      $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};$('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};return;
+    }
+    const q=pool[n];let seconds=20;
+    openModal(`<h2>⚡ RONDA FINAL · ${n+1}/10</h2><p class="finalQuestion">${qText(q)}</p><p>Tiempo: <b id="finalSeconds">${seconds}</b>s · Puntos: <b>${total}</b>/300</p><div class="answerEntry finalEntry"><input id="finalAnswer" type="text" autocomplete="off" placeholder="Escribe tu respuesta…"><button id="finalSend">RESPONDER</button></div>`);
+    const input=$('#finalAnswer');input?.focus();
+    const finish=(timeout=false)=>{
+      clearInterval(tick);const txt=timeout?'':input?.value||'';let idx=-1;
+      const oldQ=questions[roundIndex];const oldRev=revealed;questions[roundIndex]=q;revealed=Array(q.a.length).fill(false);idx=matchTypedAnswer(txt);questions[roundIndex]=oldQ;revealed=oldRev;
+      const pts=idx>=0?(Number(q.a[idx][1])||0):0;total+=pts;n++;
+      const said=idx>=0?aText(q,idx):'Sin respuesta válida';
+      narrate(`${said}. ${pts} puntos.`,{lang:qVoiceLang(q),rate:.93,onend:ask,onerror:ask});
+    };
+    const tick=setInterval(()=>{seconds--;const el=$('#finalSeconds');if(el)el.textContent=seconds;if(seconds<=0)finish(true);},1000);
+    $('#finalSend').onclick=()=>finish(false);input.onkeydown=e=>{if(e.key==='Enter')finish(false);};
+    narrate(qText(q),{lang:qVoiceLang(q),rate:.9});
+  };ask();
+}
+
 async function startNewGame() {
   if (!questionPool.length) {
     try { await (questionPoolPromise || loadQuestionPool()); } catch (_) {}
@@ -913,10 +940,13 @@ function finishGame() {
     `${result}
 ${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–4: <b>×1</b> · Rounds 5–6: <b>×2</b> · Rounds 7–8: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–4: <b>×1</b> · Rondas 5–6: <b>×2</b> · Rondas 7–8: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
      <div class="menuStack">
+       <button id="mFinal">⚡ RONDA FINAL · META 300</button>
        <button id="mAgain"> ${tx('newGame')} </button>
        <button id="mHomeFinal"> ${tx('backHome')} </button>
      </div>`
   );
+
+  $('#mFinal').onclick = () => { closeModal(false); startFinalChallenge(); };
 
   $('#mAgain').onclick = () => {
     closeModal(false);
