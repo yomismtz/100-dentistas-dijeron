@@ -84,7 +84,10 @@ function recordCharacterModuleResult(moduleName, percent) {
   window.dispatchEvent(new CustomEvent('dentistas-character-progress', {detail:{moduleName,percent:score}}));
   return p;
 }
+function finalUnlockedNames(){try{return JSON.parse(localStorage.getItem('dentistas-final-unlocks-v1')||'[]')||[];}catch(_){return [];}}
+function unlockCharacterFromFinal(name){const a=finalUnlockedNames();if(name&&!a.includes(name)){a.push(name);localStorage.setItem('dentistas-final-unlocks-v1',JSON.stringify(a));}return a;}
 function characterUnlocked(character) {
+  if(finalUnlockedNames().includes(character?.name)) return true;
   const rule = CHARACTER_UNLOCK_RULES[character?.name];
   if (!rule || rule.always) return true;
   const p = loadCharacterProgress();
@@ -734,3 +737,5 @@ window.DentistasCharacterCPU = {
   delayFor: cpuDelayFor,
   questionWeight: cpuQuestionWeight
 };
+
+window.DentistasUnlockCharacterFromFinal = unlockCharacterFromFinal;
