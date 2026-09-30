@@ -190,9 +190,23 @@ for filename in BANK44_FILES:
         if not isinstance(answers,list) or not 3 <= len(answers) <= 7:
             errors.append(f'{filename} pregunta {idx}: respuestas fuera de 3-7')
             continue
-        pts=[a[1] for a in answers if isinstance(a,list) and len(a)==2 and isinstance(a[1],(int,float))]
+        pts=[a[1] for a in answers if isinstance(a,list) and len(a)>=2 and isinstance(a[1],(int,float))]
         if len(pts)!=len(answers) or sum(pts)!=100 or pts.count(max(pts))!=1 or any(x<=0 for x in pts):
             errors.append(f'{filename} pregunta {idx}: puntuación inválida')
+
+        priority_cats = {
+            'Psicología infantil','Fisiología','Oclusión','Desarrollo de la oclusión',
+            'Nomenclatura y etimología médica','Laboratorio de ortodoncia y ortopedia'
+        }
+        if cat in priority_cats:
+            bad_stems = ('principios de fundamentos','elementos de fundamentos','datos útiles de fundamentos',
+                         'aspectos documentables de fundamentos','fundamentos: evaluación','fundamentos: correlación')
+            if any(s in q.casefold() for s in bad_stems):
+                errors.append(f'{filename} pregunta {idx}: redacción genérica no permitida en categoría prioritaria')
+            for a_idx, answer in enumerate(answers, start=1):
+                text = str(answer[0]).strip() if isinstance(answer,list) and answer else ''
+                if len(text.split()) > 3:
+                    errors.append(f'{filename} pregunta {idx}, respuesta {a_idx}: respuesta mayor a 3 palabras en categoría prioritaria: {text}')
 if bank44_total != 4400:
     errors.append(f'Banco 44 debe contener 4400 preguntas; contiene {bank44_total}')
 if len(bank44_categories) != 44:
