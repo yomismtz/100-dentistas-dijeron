@@ -360,10 +360,23 @@ function stopTimer() {
   }
 }
 
+const ANSWER_STOP=new Set(['el','la','los','las','un','una','unos','unas','de','del','al','y','e','o','u','en','con','por','para','que','se','su','sus','es','son','peso','del']);
+const ANSWER_SYNONYMS=[['nino','infante','pediatrico','paciente'],['diente','pieza','organo dental'],['caries','lesion cariosa'],['encias','gingiva'],['radiografia','rx'],['presion','tension'],['medicamento','farmaco'],['dolor','algia'],['hinchazon','inflamacion','edema']];
 function normAnswer(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9ñ ]/g,' ').replace(/\s+/g,' ').trim();}
+function canonWord(w){for(const g of ANSWER_SYNONYMS)if(g.includes(w))return g[0];return w;}
+function answerTokens(v){return normAnswer(v).split(' ').filter(w=>w.length>1&&!ANSWER_STOP.has(w)).map(canonWord);}
+function editDistance(a,b){const m=Array.from({length:a.length+1},(_,i)=>[i]);for(let j=1;j<=b.length;j++)m[0][j]=j;for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)m[i][j]=Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return m[a.length][b.length];}
+function wordClose(a,b){if(a===b)return true;if(Math.min(a.length,b.length)<4)return false;return editDistance(a,b)<=Math.max(1,Math.floor(Math.max(a.length,b.length)*.22));}
 function matchTypedAnswer(text){
-  const q=questions[roundIndex]; if(!q) return -1; const n=normAnswer(text); if(!n) return -1;
-  return q.a.findIndex((a,i)=>!revealed[i] && (normAnswer(aText(q,i))===n || normAnswer(aText(q,i)).includes(n) || n.includes(normAnswer(aText(q,i)))));
+ const q=questions[roundIndex];if(!q)return -1;const input=answerTokens(text);if(!input.length)return -1;
+ let best=-1,bestScore=0;
+ q.a.forEach((a,i)=>{if(revealed[i])return;const target=answerTokens(aText(q,i));if(!target.length)return;
+   let hits=0;for(const w of input)if(target.some(t=>wordClose(w,t)))hits++;
+   const coverage=hits/Math.min(input.length,target.length);
+   const exact=normAnswer(text)===normAnswer(aText(q,i));
+   const score=exact?1:coverage;
+   if(score>bestScore&&(exact||hits>=1&&(input.length===1||coverage>=.6))){best=i;bestScore=score;}
+ });return best;
 }
 function submitTypedAnswer(){
   const input=$('#answerText'); const idx=matchTypedAnswer(input?.value); if(input) input.value='';
@@ -706,9 +719,9 @@ function awardBank(team) {
   updateBankUI();
   updateTurnUI();
 
-  openModal(
+  revealRemainingAndNarrate(() => openModal(
     isEn() ? `<h2>BANK AWARDED</h2><p><b>${teamNames[idx]}</b> receives <b>${pointsWon} points</b>.</p><p>${roundIndex === questions.length - 1 ? 'Press ▶ to see the final result.' : 'Press ▶ to continue.'}</p>` : `<h2>BANCO ASIGNADO</h2><p><b>${teamNames[idx]}</b> recibe <b>${pointsWon} puntos</b>.</p><p>${roundIndex === questions.length - 1 ? 'Pulsa ▶ para ver el resultado final.' : 'Pulsa ▶ para continuar.'}</p>`
-  );
+  ));
 }
 
 function undoAward() {
