@@ -362,22 +362,76 @@ function stopTimer() {
 }
 
 const ANSWER_STOP=new Set(['el','la','los','las','un','una','unos','unas','de','del','al','y','e','o','u','en','con','por','para','que','se','su','sus','es','son']);
-const ANSWER_SYNONYMS=[['nino','infante','pediatrico','paciente'],['diente','pieza','organo dental'],['caries','lesion cariosa'],['encias','gingiva'],['radiografia','rx'],['presion','tension'],['medicamento','farmaco'],['dolor','algia'],['hinchazon','inflamacion','edema']];
-function normAnswer(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9ñ ]/g,' ').replace(/\s+/g,' ').trim();}
-function canonWord(w){for(const g of ANSWER_SYNONYMS)if(g.includes(w))return g[0];return w;}
-function answerTokens(v){return normAnswer(v).split(' ').filter(w=>w.length>1&&!ANSWER_STOP.has(w)).map(canonWord);}
+const ANSWER_WORD_ALIASES={
+  infante:'nino',infantil:'nino',pediatrico:'nino',
+  pieza:'diente',
+  gingiva:'encias',gingival:'encias',
+  rx:'radiografia',radiografica:'radiografia',radiografico:'radiografia',
+  tension:'presion',
+  farmaco:'medicamento',farmacos:'medicamento',medicamentos:'medicamento',
+  analgesia:'analgesico',analgesicos:'analgesico',
+  anestesico:'anestesia',anestesicos:'anestesia',
+  bacterias:'bacteria',virus:'viral'
+};
+const ANSWER_PHRASE_ALIASES=[
+  ['rayos x','radiografia'],
+  ['organo dental','diente'],
+  ['pieza dental','diente'],
+  ['presion sanguinea','presion arterial']
+];
+function normAnswer(v){
+  let s=String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9ñ ]/g,' ').replace(/\s+/g,' ').trim();
+  for(const [from,to] of ANSWER_PHRASE_ALIASES)s=s.replace(new RegExp('\\b'+from.replace(/ /g,'\\s+')+'\\b','g'),to);
+  return s;
+}
+function stemWord(w){
+  let x=ANSWER_WORD_ALIASES[w]||w;
+  if(x.length>5&&x.endsWith('es'))x=x.slice(0,-2);
+  else if(x.length>4&&x.endsWith('s'))x=x.slice(0,-1);
+  return ANSWER_WORD_ALIASES[x]||x;
+}
+function answerTokens(v){return normAnswer(v).split(' ').filter(w=>w.length>1&&!ANSWER_STOP.has(w)).map(stemWord);}
 function editDistance(a,b){const m=Array.from({length:a.length+1},(_,i)=>[i]);for(let j=1;j<=b.length;j++)m[0][j]=j;for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)m[i][j]=Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return m[a.length][b.length];}
-function wordClose(a,b){if(a===b)return true;if(Math.min(a.length,b.length)<4)return false;return editDistance(a,b)<=Math.max(1,Math.floor(Math.max(a.length,b.length)*.22));}
+function wordClose(a,b){if(a===b)return true;if(Math.min(a.length,b.length)<4)return false;return editDistance(a,b)<=Math.max(1,Math.floor(Math.max(a.length,b.length)*.20));}
+function answerVariants(q,i){
+  const a=q?.a?.[i];
+  const out=[aText(q,i)];
+  if(Array.isArray(a)&&Array.isArray(a[2]))out.push(...a[2]);
+  if(q?.aliases&&Array.isArray(q.aliases[i]))out.push(...q.aliases[i]);
+  return [...new Set(out.filter(Boolean))];
+}
+function scoreAnswerVariant(inputText,targetText){
+  const rawIn=normAnswer(inputText),rawTarget=normAnswer(targetText);
+  if(!rawIn||!rawTarget)return 0;
+  if(rawIn===rawTarget)return 1;
+  const input=answerTokens(rawIn),target=answerTokens(rawTarget);
+  if(!input.length||!target.length)return 0;
+  let hits=0;
+  const used=new Set();
+  for(const w of input){
+    const j=target.findIndex((t,idx)=>!used.has(idx)&&wordClose(w,t));
+    if(j>=0){hits++;used.add(j);}
+  }
+  if(!hits)return 0;
+  const inputCoverage=hits/input.length;
+  const targetCoverage=hits/target.length;
+  if(input.length===1&&hits===1)return targetCoverage>=.34?.86:0;
+  return (.62*inputCoverage)+(.38*targetCoverage);
+}
 function matchTypedAnswer(text){
- const q=questions[roundIndex];if(!q)return -1;const input=answerTokens(text);if(!input.length)return -1;
- let best=-1,bestScore=0;
- q.a.forEach((a,i)=>{if(revealed[i])return;const target=answerTokens(aText(q,i));if(!target.length)return;
-   let hits=0;for(const w of input)if(target.some(t=>wordClose(w,t)))hits++;
-   const coverage=hits/Math.min(input.length,target.length);
-   const exact=normAnswer(text)===normAnswer(aText(q,i));
-   const score=exact?1:coverage;
-   if(score>bestScore&&(exact||hits>=1&&(input.length===1||coverage>=.6))){best=i;bestScore=score;}
- });return best;
+  const q=questions[roundIndex];if(!q)return -1;
+  const input=answerTokens(text);if(!input.length)return -1;
+  const ranked=[];
+  q.a.forEach((a,i)=>{
+    if(revealed[i])return;
+    let score=0;
+    for(const variant of answerVariants(q,i))score=Math.max(score,scoreAnswerVariant(text,variant));
+    if(score>0)ranked.push({i,score});
+  });
+  ranked.sort((a,b)=>b.score-a.score);
+  if(!ranked.length||ranked[0].score<.78)return -1;
+  if(ranked.length>1&&ranked[1].score>=ranked[0].score-.06)return -1;
+  return ranked[0].i;
 }
 function submitTypedAnswer(){
   const input=$('#answerText'); const idx=matchTypedAnswer(input?.value); if(input) input.value='';
