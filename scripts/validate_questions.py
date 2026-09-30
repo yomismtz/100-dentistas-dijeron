@@ -164,12 +164,49 @@ for expected_source in ('1.docx', '2.docx', '3.docx', '4.docx', '5.docx'):
     if source_counts.get(expected_source) != 40:
         errors.append(f'{expected_source}: se esperaban 40 reactivos y hay {source_counts.get(expected_source, 0)}')
 
+# Banco académico consolidado 44 x 100
+BANK44_FILES = sorted(glob.glob('app/src/main/assets/bank44_*.json'))
+bank44_total = 0
+bank44_categories = {}
+bank44_seen = set()
+for filename in BANK44_FILES:
+    data = json.loads(Path(filename).read_text(encoding='utf-8'))
+    for idx, item in enumerate(data, start=1):
+        bank44_total += 1
+        cat = str(item.get('cat','')).strip()
+        difficulty = str(item.get('difficulty','')).strip()
+        q = str(item.get('q','')).strip()
+        answers = item.get('a')
+        bank44_categories.setdefault(cat, {'total':0,'facil':0,'medio':0,'dificil':0,'extremo':0})
+        bank44_categories[cat]['total'] += 1
+        if difficulty in bank44_categories[cat]:
+            bank44_categories[cat][difficulty] += 1
+        else:
+            errors.append(f'{filename} pregunta {idx}: dificultad inválida: {difficulty}')
+        key = ' '.join(q.casefold().split())
+        if not q or key in bank44_seen:
+            errors.append(f'{filename} pregunta {idx}: pregunta vacía o duplicada')
+        bank44_seen.add(key)
+        if not isinstance(answers,list) or not 3 <= len(answers) <= 7:
+            errors.append(f'{filename} pregunta {idx}: respuestas fuera de 3-7')
+            continue
+        pts=[a[1] for a in answers if isinstance(a,list) and len(a)==2 and isinstance(a[1],(int,float))]
+        if len(pts)!=len(answers) or sum(pts)!=100 or pts.count(max(pts))!=1 or any(x<=0 for x in pts):
+            errors.append(f'{filename} pregunta {idx}: puntuación inválida')
+if bank44_total != 4400:
+    errors.append(f'Banco 44 debe contener 4400 preguntas; contiene {bank44_total}')
+if len(bank44_categories) != 44:
+    errors.append(f'Banco 44 debe contener 44 categorías; contiene {len(bank44_categories)}')
+for cat, stats in bank44_categories.items():
+    if stats != {'total':100,'facil':30,'medio':20,'dificil':20,'extremo':30}:
+        errors.append(f'{cat}: distribución inválida {stats}')
+
 if errors:
     print('VALIDACIÓN FALLIDA')
     for error in errors:
         print(f'- {error}')
     sys.exit(1)
 
-print(f'VALIDACIÓN CORRECTA: {total} preguntas VS + {parcial_total} reactivos de Juega y Aprueba.')
+print(f'VALIDACIÓN CORRECTA: banco 44 = {bank44_total} preguntas en {len(bank44_categories)} categorías; legado VS = {total}; Juega y Aprueba = {parcial_total}.')
 print('VS: respuestas únicas, 3–7 por pregunta, 100 puntos, una respuesta líder inequívoca y traducción inglesa completa.')
 print('Juega y Aprueba: 200 IDs únicos, índices correctos válidos, 40 reactivos por examen y traducción inglesa completa.')
