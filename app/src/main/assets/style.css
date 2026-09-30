@@ -295,3 +295,27 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 @media(max-height:520px) and (orientation:landscape){
   #home:not(.hidden){background-position:center 42%!important}
 }
+
+
+/* ===== BLUE & GOLD HOME / 44 AREAS ===== */
+.home{background:radial-gradient(circle at 50% 35%,#0753a8 0,#073476 38%,#031b4b 72%,#020e2b 100%)!important}
+.home>img:first-child{display:none!important}
+.home::before{background:linear-gradient(145deg,#006fe522 0%,transparent 35%,#00143a55 70%),linear-gradient(180deg,transparent 0%,#00103355 100%)!important}
+.home::after{content:"";position:absolute;inset:0;z-index:1;border:clamp(5px,1vw,14px) solid #d99b21;box-shadow:inset 0 0 0 3px #ffe58a,inset 0 0 42px #00113b;pointer-events:none}
+.homeLogo{position:absolute!important;z-index:3!important;top:5%!important;left:50%!important;transform:translateX(-50%)!important;width:min(480px,40vw)!important;height:auto!important;object-fit:contain!important;filter:drop-shadow(0 12px 16px #00102aaa)!important}
+.homeActions{bottom:5%!important;width:min(1120px,88vw)!important;grid-template-columns:1fr 1fr!important;gap:14px!important;padding:18px!important;border:2px solid #e9b845!important;border-radius:30px!important;background:linear-gradient(180deg,#063777ee,#021b4af5)!important;box-shadow:0 22px 55px #0009,inset 0 0 0 1px #ffe69a55!important}
+.homeActions button{min-height:66px!important;border:2px solid #e6b13b!important;border-radius:999px!important;background:linear-gradient(180deg,#0870cc,#03478f)!important;color:#fff!important;font-size:clamp(18px,2vw,28px)!important;text-shadow:0 2px 4px #00173f!important;box-shadow:inset 0 2px #8ed4ff55,0 8px 20px #00143f99!important}
+.homeActions .primary{background:linear-gradient(180deg,#d32b22,#94130f)!important;border-color:#ffd267!important}
+.homeActions #help{grid-column:1!important;grid-row:1!important}
+.homeActions #mode1v1{grid-column:2!important;grid-row:1!important}
+.homeActions #modeTeams{grid-column:1!important;grid-row:2!important}
+.homeActions #modeCpu{grid-column:2!important;grid-row:2!important}
+.modalCard{width:min(1160px,90vw)!important;max-height:90vh!important;border:2px solid #e8b94f!important;background:linear-gradient(180deg,#073b77,#031c49 72%,#021335)!important;box-shadow:0 26px 80px #000d,inset 0 0 0 1px #ffe59a44!important}
+.modalCard h2{text-align:center!important;font-size:clamp(32px,4vw,52px)!important;margin:.2rem 3rem 1rem!important;color:#fff!important;text-shadow:0 3px 0 #17305c,0 0 20px #3fa9ff77!important}
+.modalCard>p{text-align:center!important}
+.areaPicker{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;max-height:52vh!important;overflow-y:auto!important;padding:6px 8px 12px!important;scrollbar-color:#e5b44a #032154}
+.areaPick{min-height:58px!important;padding:.65rem .8rem!important;border:1.5px solid #d8a93e!important;border-radius:16px!important;background:linear-gradient(180deg,#07529c,#032e6b)!important;color:#fff!important;font-size:clamp(14px,1.35vw,20px)!important;font-weight:850!important;box-shadow:inset 0 1px #8fd7ff44,0 5px 12px #00123588!important}
+.areaPick.selected{background:linear-gradient(180deg,#e0a52d,#9b6510)!important;border-color:#fff0a4!important;color:#fff!important;box-shadow:0 0 18px #ffc53d77,inset 0 1px #fff3b888!important}
+#areaCount{text-align:center!important;color:#ffe39a!important;font-size:1.05rem!important}
+#startConfigured{background:linear-gradient(180deg,#d6a12c,#8e5c0d)!important;border-color:#ffe28b!important}
+@media(max-width:900px){.areaPicker{grid-template-columns:repeat(2,minmax(0,1fr))!important}.homeLogo{width:min(430px,46vw)!important}.homeActions{width:90vw!important}}
