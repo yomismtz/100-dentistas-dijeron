@@ -165,6 +165,9 @@ function specialtyMatchesArea(specialty, area) {
 }
 
 function questionDifficulty(q) {
+  const explicit = String(q?.difficulty || q?.dificultad || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const explicitMap = {facil:'basic',medio:'intermediate',dificil:'advanced',extremo:'extreme',basic:'basic',intermediate:'intermediate',advanced:'advanced',extreme:'extreme'};
+  if (explicitMap[explicit]) return explicitMap[explicit];
   const text = String(q?.q || '').toLowerCase();
   const area = areaForQuestion(q);
   const forcedCharacters = [gameConfig.playerCharacter, gameConfig.mode === 'cpu' ? gameConfig.cpuCharacter : null]
