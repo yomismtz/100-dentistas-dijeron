@@ -3,101 +3,169 @@
 const charLang = () => window.DentistasI18n?.getLang?.() || 'es';
 const charText = (es,en) => charLang() === 'en' ? en : es;
 
+const SPECIALIST_SPECS = [
+  ['PAULA','Psicología infantil','🧠'],
+  ['IVÁN','Fisiología','⚙️'],
+  ['OLIVIA','Oclusión','⚖️'],
+  ['BRUNO','Desarrollo de la oclusión','📈'],
+  ['ALEX','Desarrollo craneofacial','💀','characters/alex_maxilofacial.webp'],
+  ['ELÍAS','Nomenclatura y etimología médica','📚'],
+  ['MARA','Hábitos y parafunciones','🫦'],
+  ['TOMÁS','Laboratorio de ortodoncia y ortopedia','🧰'],
+  ['MÍA','Realización del expediente clínico','📋','characters/mia_asistente.webp'],
+  ['SOFÍA','Ortodoncia','🦷','characters/sofia_ortodoncia.webp'],
+  ['ALMA','Ortopedia maxilar','🦴'],
+  ['RENATA','Endodoncia','❤️','characters/renata_endodoncia.webp'],
+  ['SANTIAGO','Cirugía bucal','⚕️','characters/santiago_cirugia_bucal.webp'],
+  ['VALERIA','Periodoncia','🌿','characters/valeria_periodoncia.webp'],
+  ['HUGO','Implantología','🔩'],
+  ['ELENA','Embriología dental','🧬'],
+  ['MATEO','Operatoria dental','✨','characters/mateo_operatoria.webp'],
+  ['DANIEL','Anestesia dental','💉'],
+  ['JULIA','Anatomía dental','🦷'],
+  ['CAMILA','Cariología','🛡️'],
+  ['DIEGO','Odontopediatría','⭐','characters/diego_odontopediatria.webp'],
+  ['MARCOS','Prótesis dental','🧩'],
+  ['VERA','Radiología oral y maxilofacial','☢️'],
+  ['LUCÍA','Patología bucal','🔬','characters/lucia_patologia.webp'],
+  ['GABRIEL','Medicina bucal','🩺'],
+  ['NATALIA','Farmacología odontológica','💊'],
+  ['LEONOR','Materiales dentales','🧪'],
+  ['RAÚL','Prótesis fija','👑'],
+  ['TERESA','Prótesis removible','🔗'],
+  ['FELIPE','Prótesis total','😁'],
+  ['ISABEL','Rehabilitación oral','🔧'],
+  ['ADRIÁN','Articulación temporomandibular y trastornos temporomandibulares','🦴'],
+  ['EMMA','Odontología preventiva','🛡️','characters/emma_higienista.webp'],
+  ['CARLOS','Salud pública y odontología comunitaria','🌎','characters/carlos_general.webp'],
+  ['INÉS','Microbiología oral','🦠'],
+  ['SAMUEL','Infecciones odontogénicas','🧫'],
+  ['EVA','Urgencias médicas en odontología','🚑'],
+  ['NOEL','Traumatología dental','🩹'],
+  ['ROBERTO','Odontología geriátrica','👴'],
+  ['LARA','Odontología para pacientes con necesidades especiales','♿'],
+  ['VÍCTOR','Odontología forense','🔎'],
+  ['CECILIA','Bioética y legislación odontológica','⚖️'],
+  ['NOA','Fotografía y documentación clínica odontológica','📷'],
+  ['MARTÍN','Oclusión funcional y ajuste oclusal avanzado','🎯']
+];
+
+function specialistCharacter([name,specialty,icon,image]){
+  return {
+    name, specialty:specialty.toUpperCase(), category:specialty, icon,
+    image:image||'characters/nova_estudiante.webp',
+    role:'Especialista en '+specialty,
+    tone:'specialist',
+    rarity:'ESPECIALISTA',
+    strengths:['Diagnóstico','Conocimiento','Precisión'],
+    weaknesses:['Casos interdisciplinarios'],
+    power:'DOMINIO DE '+specialty.toUpperCase(),
+    tool:'Instrumental clínico',
+    stats:[['Conocimiento',5],['Diagnóstico',4],['Precisión',4],['Velocidad',3],['Complejidad',4]]
+  };
+}
+
 const CHARACTERS = [
-  { name:'SOFÍA', specialty:'ORTODONCIA', role:'La Arquitecta de Sonrisas', icon:'🦷', image:'characters/sofia_ortodoncia.webp', tone:'violet',
-    strengths:['Alineación','Planificación','Precisión'], weaknesses:['Tratamientos prolongados','Dependencia de cooperación'], power:'ARCO MAESTRO', tool:'Alicate ortodóncico',
-    stats:[['Precisión',5],['Velocidad',3],['Diagnóstico',4],['Prevención',3],['Complejidad',5]] },
-  { name:'VALERIA', specialty:'PERIODONCIA', role:'Guardiana del Periodonto', icon:'🌿', image:'characters/valeria_periodoncia.webp', tone:'emerald',
-    strengths:['Diagnóstico periodontal','Control de inflamación','Mantenimiento'], weaknesses:['Progresión silenciosa','Requiere seguimiento'], power:'ESCUDO PERIODONTAL', tool:'Sonda periodontal',
-    stats:[['Diagnóstico',5],['Prevención',5],['Cirugía',4],['Velocidad',3],['Regeneración',5]] },
-  { name:'SANTIAGO', specialty:'CIRUGÍA BUCAL', role:'El Cirujano de Precisión', icon:'⚕️', image:'characters/santiago_cirugia_bucal.webp', tone:'blue',
-    strengths:['Extracciones','Control quirúrgico','Precisión'], weaknesses:['Recuperación postoperatoria','Riesgo anatómico'], power:'EXTRACCIÓN PERFECTA', tool:'Elevador quirúrgico',
-    stats:[['Cirugía',5],['Diagnóstico',4],['Velocidad',4],['Precisión',5],['Prevención',2]] },
-  { name:'ALEX', specialty:'CIRUGÍA MAXILOFACIAL', role:'Dominio Craneofacial', icon:'💀', image:'characters/alex_maxilofacial.webp', tone:'petrol',
-    strengths:['Trauma facial','Reconstrucción','Anatomía compleja'], weaknesses:['Alta complejidad','Tratamientos invasivos'], power:'RECONSTRUCCIÓN 3D', tool:'Planificación craneofacial holográfica',
-    stats:[['Cirugía',5],['Anatomía',5],['Diagnóstico',5],['Velocidad',2],['Complejidad',5]] },
-  { name:'MATEO', specialty:'OPERATORIA DENTAL', role:'Maestro de la Restauración', icon:'✨', image:'characters/mateo_operatoria.webp', tone:'gold',
-    strengths:['Estética','Restauración','Precisión'], weaknesses:['Humedad','Aislamiento deficiente'], power:'RESTAURACIÓN PERFECTA', tool:'Lámpara de fotocurado',
-    stats:[['Estética',5],['Precisión',5],['Velocidad',4],['Diagnóstico',4],['Cirugía',2]] },
-  { name:'LUCÍA', specialty:'PATOLOGÍA BUCAL', role:'Detective de Lesiones', icon:'🔬', image:'characters/lucia_patologia.webp', tone:'burgundy',
-    strengths:['Diagnóstico diferencial','Observación','Detección temprana'], weaknesses:['Muchos diagnósticos similares','Puede requerir biopsia'], power:'VISIÓN DIAGNÓSTICA', tool:'Lupa / microscopio digital',
-    stats:[['Diagnóstico',5],['Observación',5],['Velocidad',3],['Cirugía',2],['Complejidad',5]] },
-  { name:'DIEGO', specialty:'ODONTOPEDIATRÍA', role:'Héroe de los Pequeños', icon:'⭐', image:'characters/diego_odontopediatria.webp', tone:'turquoise',
-    strengths:['Manejo infantil','Prevención','Comunicación'], weaknesses:['Ansiedad infantil','Cooperación variable'], power:'MODO VALIENTE', tool:'Espejo pediátrico',
-    stats:[['Comunicación',5],['Prevención',5],['Diagnóstico',4],['Cirugía',3],['Paciencia',5]] },
-  { name:'RENATA', specialty:'ENDODONCIA', role:'Guardiana de la Pulpa', icon:'❤️', image:'characters/renata_endodoncia.webp', tone:'red',
-    strengths:['Dolor dental','Conductos','Conservación del diente'], weaknesses:['Anatomía compleja','Conductos calcificados'], power:'PULSO APICAL', tool:'Localizador apical',
-    stats:[['Precisión',5],['Diagnóstico',5],['Complejidad',5],['Velocidad',3],['Estética',2]] },
-  { name:'CARLOS', specialty:'DENTISTA GENERAL', role:'El Todoterreno', icon:'🪞', image:'characters/carlos_general.webp', tone:'navy',
-    strengths:['Versatilidad','Diagnóstico inicial','Atención integral'], weaknesses:['Menor especialización extrema','Casos complejos requieren referencia'], power:'VISIÓN INTEGRAL', tool:'Espejo clínico',
-    stats:[['Diagnóstico',4],['Versatilidad',5],['Prevención',4],['Cirugía',3],['Especialización',3]] },
-  { name:'MÍA', specialty:'ASISTENTE DENTAL', role:'Control Total', icon:'🧤', image:'characters/mia_asistente.webp', tone:'sky',
-    strengths:['Organización','Trabajo en equipo','Control del campo'], weaknesses:['No realiza diagnóstico independiente','Depende del procedimiento clínico'], power:'CUATRO MANOS', tool:'Eyector de alta potencia',
-    stats:[['Organización',5],['Velocidad',5],['Apoyo clínico',5],['Diagnóstico',2],['Prevención',3]] },
-  { name:'EMMA', specialty:'HIGIENISTA DENTAL', role:'Escudo Preventivo', icon:'🛡️', image:'characters/emma_higienista.webp', tone:'mint',
-    strengths:['Prevención','Control de biofilm','Educación'], weaknesses:['No sustituye tratamiento especializado','Requiere mantenimiento periódico'], power:'BARRERA ANTIBIOFILM', tool:'Ultrasonido periodontal',
-    stats:[['Prevención',5],['Educación',5],['Biofilm',5],['Cirugía',1],['Restauración',2]] },
-  { name:'AURORA', specialty:'HADA DE LOS DIENTES', role:'Guardiana del Brillo Dental', icon:'🧚', image:'characters/aurora_hada_dientes.webp', tone:'legendary-mint', rarity:'LEGENDARIO',
-    strengths:['Protección mágica','Curación','Inspiración infantil'], weaknesses:['Depende de energía mágica','Menor fuerza física'], power:'LLUVIA DE ESMALTE', tool:'Varita del brillo dental',
+  ...SPECIALIST_SPECS.map(specialistCharacter),
+  { name:'NOVA', specialty:'ESTUDIANTE DE ODONTOLOGÍA', category:null, role:'La Futura Especialista', icon:'🎓', image:'characters/nova_estudiante.webp', tone:'student', rarity:'INICIAL',
+    strengths:['Aprendizaje','Versatilidad','Curiosidad clínica'], weaknesses:['Experiencia limitada'], power:'APRENDIZAJE RÁPIDO', tool:'Kit clínico universitario',
+    stats:[['Conocimiento',3],['Diagnóstico',3],['Prevención',3],['Precisión',3],['Velocidad',3]] },
+  { name:'DON PÉREZ', specialty:'RATÓN DE LOS DIENTES', category:null, role:'El Coleccionista Legendario', icon:'🐭', image:'characters/don_perez_raton_dientes.webp', tone:'legendary-gold', rarity:'LEGENDARIO',
+    strengths:['Velocidad','Curiosidad dental','Estrategia'], weaknesses:['Desbloqueo avanzado'], power:'RECOLECCIÓN ESTELAR', tool:'Maletín recolector',
+    stats:[['Velocidad',5],['Sigilo',5],['Conocimiento',5],['Estrategia',5],['Magia',5]] },
+  { name:'AURORA', specialty:'HADA DE LOS DIENTES', category:null, role:'Guardiana del Brillo Dental', icon:'🧚', image:'characters/aurora_hada_dientes.webp', tone:'legendary-mint', rarity:'LEGENDARIO',
+    strengths:['Protección','Prevención','Dominio difícil'], weaknesses:['Desbloqueo avanzado'], power:'LLUVIA DE ESMALTE', tool:'Varita dental',
     stats:[['Magia',5],['Protección',5],['Prevención',5],['Velocidad',5],['Curación',5]] },
-  { name:'DON PÉREZ', specialty:'RATÓN DE LOS DIENTES', role:'El Coleccionista Legendario', icon:'🐭', image:'characters/don_perez_raton_dientes.webp', tone:'legendary-gold', rarity:'LEGENDARIO',
-    strengths:['Velocidad nocturna','Recolección perfecta','Sigilo mágico'], weaknesses:['Tamaño pequeño','Depende del factor sorpresa'], power:'RECOLECCIÓN ESTELAR', tool:'Maletín recolector de dientes',
-    stats:[['Velocidad',5],['Sigilo',5],['Recolección',5],['Estrategia',5],['Magia',5]] },
-  { name:'NOVA', specialty:'ESTUDIANTE DE ODONTOLOGÍA', role:'La Futura Especialista', icon:'🎓', image:'characters/nova_estudiante.webp', tone:'student', rarity:'INICIAL',
-    strengths:['Aprendizaje','Versatilidad','Curiosidad clínica'], weaknesses:['Experiencia limitada','Aún sin especialidad'], power:'APRENDIZAJE RÁPIDO', tool:'Kit clínico universitario',
-    stats:[['Conocimiento',3],['Diagnóstico',3],['Prevención',3],['Precisión',3],['Velocidad',3]] }
+  { name:'EL DIOS DE LA ODONTOLOGÍA', specialty:'DOMINIO TOTAL DE LA ODONTOLOGÍA', category:null, role:'La Leyenda Final', icon:'👑', image:'characters/nova_estudiante.webp', tone:'legendary-gold', rarity:'MÍTICO',
+    strengths:['Todas las áreas','Rondas extremas','Dominio total'], weaknesses:['Solo para quien complete el juego'], power:'DOMINIO ABSOLUTO', tool:'Molar de oro',
+    stats:[['Conocimiento',5],['Diagnóstico',5],['Precisión',5],['Velocidad',5],['Complejidad',5]] }
 ];
 
 window.DentistasCharacters = CHARACTERS;
 
 
-const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v1';
-const CHARACTER_UNLOCK_RULES = {
-  'NOVA': { always:true, label:'Disponible desde el inicio' },
-  'CARLOS': { requirements:[['Todos los temas',70]], label:'Aprueba el simulacro general con 70% o más' },
-  'SOFÍA': { requirements:[['Laboratorio de ortodoncia y ortopedia',70]], label:'Laboratorio de ortodoncia y ortopedia · 70%' },
-  'MÍA': { requirements:[['Realización del expediente clínico',70]], label:'Expediente clínico · 70%' },
-  'DIEGO': { requirements:[['Psicología infantil',70],['Desarrollo de la oclusión',70]], label:'Psicología infantil + Desarrollo de la oclusión · 70%' },
-  'EMMA': { requirements:[['Hábitos y parafunciones',70],['Fisiología',70]], label:'Hábitos/parafunciones + Fisiología · 70%' },
-  'VALERIA': { requirements:[['Fisiología',75],['Oclusión',70]], label:'Fisiología 75% + Oclusión 70%' },
-  'SANTIAGO': { requirements:[['Desarrollo craneofacial',75],['Oclusión',75]], label:'Desarrollo craneofacial + Oclusión · 75%' },
-  'ALEX': { requirements:[['Desarrollo craneofacial',85],['Laboratorio de ortodoncia y ortopedia',75]], label:'Desarrollo craneofacial 85% + Laboratorio 75%' },
-  'MATEO': { requirements:[['Nomenclatura y etimología médica',70]], label:'Nomenclatura y etimología · 70%' },
-  'LUCÍA': { requirements:[['Nomenclatura y etimología médica',80],['Realización del expediente clínico',70]], label:'Nomenclatura 80% + Expediente 70%' },
-  'RENATA': { requirements:[['Nomenclatura y etimología médica',85],['Fisiología',75]], label:'Nomenclatura 85% + Fisiología 75%' },
-  'AURORA': { requirements:[['Todos los temas',85],['Nomenclatura y etimología médica',85],['Realización del expediente clínico',85],['Laboratorio de ortodoncia y ortopedia',85]], label:'Completa los 4 módulos principales con 85% o más' },
-  'DON PÉREZ': { requirements:[['Todos los temas',90],['Nomenclatura y etimología médica',90],['Realización del expediente clínico',90],['Laboratorio de ortodoncia y ortopedia',90]], label:'Completa los 4 módulos principales con 90% o más' }
-};
+const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v2';
+const FINAL_PROGRESS_KEY = 'dentistas-final-progress-v2';
+const FINAL_UNLOCK_KEY = 'dentistas-final-unlocks-v2';
+const HADA_DIFFICULT_FINAL_WINS = 5;
+const DON_PEREZ_SPECIALISTS = 30;
 
-function loadCharacterProgress() {
-  try { return JSON.parse(localStorage.getItem(CHARACTER_PROGRESS_KEY) || '{}') || {}; }
-  catch (_) { return {}; }
+function loadCharacterProgress(){try{return JSON.parse(localStorage.getItem(CHARACTER_PROGRESS_KEY)||'{}')||{};}catch(_){return {};}}
+function saveCharacterProgress(p){try{localStorage.setItem(CHARACTER_PROGRESS_KEY,JSON.stringify(p));}catch(_){}}
+function loadFinalProgress(){
+  try{return Object.assign({wins:0,difficultWins:0,extremeWins:0,curiositiesExtremeWins:0,legendaryWins:0,bestScore:0},JSON.parse(localStorage.getItem(FINAL_PROGRESS_KEY)||'{}')||{});}
+  catch(_){return {wins:0,difficultWins:0,extremeWins:0,curiositiesExtremeWins:0,legendaryWins:0,bestScore:0};}
 }
-function saveCharacterProgress(progress) {
-  try { localStorage.setItem(CHARACTER_PROGRESS_KEY, JSON.stringify(progress)); } catch (_) {}
+function saveFinalProgress(p){try{localStorage.setItem(FINAL_PROGRESS_KEY,JSON.stringify(p));}catch(_){}}
+function finalUnlockedNames(){try{return JSON.parse(localStorage.getItem(FINAL_UNLOCK_KEY)||'[]')||[];}catch(_){return [];}}
+function saveFinalUnlockedNames(a){try{localStorage.setItem(FINAL_UNLOCK_KEY,JSON.stringify([...new Set(a)]));}catch(_){}}
+function unlockCharacterFromFinal(name){const a=finalUnlockedNames();if(name&&!a.includes(name)){a.push(name);saveFinalUnlockedNames(a);}return a;}
+function specialistCharacters(){return CHARACTERS.filter(ch=>ch.rarity==='ESPECIALISTA');}
+function unlockedSpecialistCount(){return specialistCharacters().filter(ch=>finalUnlockedNames().includes(ch.name)).length;}
+function specialistForArea(area){
+  const n=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  return specialistCharacters().find(ch=>n(ch.category)===n(area));
 }
-function recordCharacterModuleResult(moduleName, percent) {
-  const p = loadCharacterProgress();
-  const score = Math.max(0, Math.min(100, Math.round(Number(percent)||0)));
-  p[moduleName] = Math.max(Number(p[moduleName]) || 0, score);
-  saveCharacterProgress(p);
-  window.dispatchEvent(new CustomEvent('dentistas-character-progress', {detail:{moduleName,percent:score}}));
-  return p;
+function recordFinalResult({score=0,difficulty='',area='',legendary=false}={}){
+  const p=loadFinalProgress();
+  const s=Math.max(0,Number(score)||0);
+  const d=String(difficulty||'').toLowerCase();
+  const a=String(area||'');
+  p.bestScore=Math.max(p.bestScore,s);
+  if(s>=300){
+    p.wins+=1;
+    if(d==='advanced'||d==='dificil'||d==='difícil') p.difficultWins+=1;
+    if(d==='extreme'||d==='extremo') p.extremeWins+=1;
+    if((d==='extreme'||d==='extremo')&&/curiosidades/i.test(a)) p.curiositiesExtremeWins+=1;
+    if(legendary) p.legendaryWins+=1;
+  }
+  let unlocked=[];
+  if(s>400 && a){
+    const ch=specialistForArea(a);
+    if(ch && !finalUnlockedNames().includes(ch.name)){unlockCharacterFromFinal(ch.name);unlocked.push(ch.name);}
+  }
+  saveFinalProgress(p);
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='DON PÉREZ')) && !finalUnlockedNames().includes('DON PÉREZ')){unlockCharacterFromFinal('DON PÉREZ');unlocked.push('DON PÉREZ');}
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='AURORA')) && !finalUnlockedNames().includes('AURORA')){unlockCharacterFromFinal('AURORA');unlocked.push('AURORA');}
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL DIOS DE LA ODONTOLOGÍA')) && !finalUnlockedNames().includes('EL DIOS DE LA ODONTOLOGÍA')){unlockCharacterFromFinal('EL DIOS DE LA ODONTOLOGÍA');unlocked.push('EL DIOS DE LA ODONTOLOGÍA');}
+  return {progress:p,unlocked:[...new Set(unlocked)]};
 }
-function finalUnlockedNames(){try{return JSON.parse(localStorage.getItem('dentistas-final-unlocks-v1')||'[]')||[];}catch(_){return [];}}
-function unlockCharacterFromFinal(name){const a=finalUnlockedNames();if(name&&!a.includes(name)){a.push(name);localStorage.setItem('dentistas-final-unlocks-v1',JSON.stringify(a));}return a;}
-function characterUnlocked(character) {
-  if(finalUnlockedNames().includes(character?.name)) return true;
-  const rule = CHARACTER_UNLOCK_RULES[character?.name];
-  if (!rule || rule.always) return true;
-  const p = loadCharacterProgress();
-  return (rule.requirements || []).every(([moduleName,min]) => (Number(p[moduleName]) || 0) >= min);
+function recordCharacterModuleResult(moduleName,percent){
+  const p=loadCharacterProgress();const score=Math.max(0,Math.min(100,Math.round(Number(percent)||0)));
+  p[moduleName]=Math.max(Number(p[moduleName])||0,score);saveCharacterProgress(p);
+  window.dispatchEvent(new CustomEvent('dentistas-character-progress',{detail:{moduleName,percent:score}}));return p;
 }
-function characterUnlockLabel(character) {
-  return CHARACTER_UNLOCK_RULES[character?.name]?.label || 'Progreso de módulos';
+function characterUnlocked(character){
+  if(!character) return false;
+  if(character.name==='NOVA') return true;
+  const unlocked=finalUnlockedNames();
+  if(unlocked.includes(character.name)) return true;
+  if(character.rarity==='ESPECIALISTA') return false;
+  const fp=loadFinalProgress();
+  if(character.name==='DON PÉREZ') return unlockedSpecialistCount()>=DON_PEREZ_SPECIALISTS || fp.curiositiesExtremeWins>=1;
+  if(character.name==='AURORA') return fp.difficultWins>=HADA_DIFFICULT_FINAL_WINS;
+  if(character.name==='EL DIOS DE LA ODONTOLOGÍA'){
+    return unlockedSpecialistCount()>=44 &&
+      characterUnlocked(CHARACTERS.find(ch=>ch.name==='DON PÉREZ')) &&
+      characterUnlocked(CHARACTERS.find(ch=>ch.name==='AURORA')) &&
+      fp.legendaryWins>=1;
+  }
+  return false;
 }
-window.DentistasCharacterUnlocked = characterUnlocked;
-window.DentistasCharacterUnlockLabel = characterUnlockLabel;
+function characterUnlockLabel(character){
+  if(!character) return '';
+  if(character.name==='NOVA') return 'Disponible desde el inicio';
+  if(character.rarity==='ESPECIALISTA') return 'Supera 400 puntos en la ronda final de '+character.category;
+  if(character.name==='DON PÉREZ') return 'Desbloquea 30 especialistas o gana Curiosidades en Extremo';
+  if(character.name==='AURORA') return 'Gana '+HADA_DIFFICULT_FINAL_WINS+' rondas finales en Difícil';
+  if(character.name==='EL DIOS DE LA ODONTOLOGÍA') return 'Completa los 44 especialistas, Don Pérez, Aurora y la Final Legendaria';
+  return 'Progreso del juego';
+}
+window.DentistasCharacterUnlocked=characterUnlocked;
+window.DentistasCharacterUnlockLabel=characterUnlockLabel;
+window.DentistasUnlockCharacterFromFinal=unlockCharacterFromFinal;
+window.DentistasRecordFinalResult=recordFinalResult;
+window.DentistasFinalProgress=loadFinalProgress;
 
 
 const STUDENT_PROFILE_KEY = 'dentistas-student-profile-v1';
@@ -223,16 +291,8 @@ function recordStudyActivity(isCorrect, streak=0) {
   return a;
 }
 function unlockRequirementProgress(character) {
-  const rule = CHARACTER_UNLOCK_RULES[character?.name];
-  if (!rule || rule.always) return {done:true,ratio:1,missing:[]};
-  const p = loadCharacterProgress();
-  const reqs = rule.requirements || [];
-  const missing = reqs.map(([moduleName,min]) => {
-    const current = Number(p[moduleName]) || 0;
-    return {moduleName,min,current,remaining:Math.max(0,min-current)};
-  }).filter(x => x.remaining > 0);
-  const ratio = reqs.length ? reqs.reduce((sum,[moduleName,min]) => sum + Math.min(1,(Number(p[moduleName])||0)/min),0)/reqs.length : 1;
-  return {done:missing.length===0,ratio,missing};
+  const done=characterUnlocked(character);
+  return {done,ratio:done?1:0,missing:done?[]:[{moduleName:characterUnlockLabel(character),min:1,current:0,remaining:1}]};
 }
 function nextUnlockHint() {
   const locked = CHARACTERS
