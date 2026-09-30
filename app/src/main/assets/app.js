@@ -81,6 +81,7 @@ const EXTRA_BANK_FILES = [
 let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'NOVA', playerCharacter:'NOVA', difficulty:'mixed' };
 let cpuTimerHandle = null;
 let faceoffActive = false;
+let faceoffDoneThisRound = false;
 let faceoffCpuHandle = null;
 let questionPoolPromise = null;
 
@@ -360,7 +361,7 @@ function stopTimer() {
   }
 }
 
-const ANSWER_STOP=new Set(['el','la','los','las','un','una','unos','unas','de','del','al','y','e','o','u','en','con','por','para','que','se','su','sus','es','son','peso','del']);
+const ANSWER_STOP=new Set(['el','la','los','las','un','una','unos','unas','de','del','al','y','e','o','u','en','con','por','para','que','se','su','sus','es','son']);
 const ANSWER_SYNONYMS=[['nino','infante','pediatrico','paciente'],['diente','pieza','organo dental'],['caries','lesion cariosa'],['encias','gingiva'],['radiografia','rx'],['presion','tension'],['medicamento','farmaco'],['dolor','algia'],['hinchazon','inflamacion','edema']];
 function normAnswer(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9ñ ]/g,' ').replace(/\s+/g,' ').trim();}
 function canonWord(w){for(const g of ANSWER_SYNONYMS)if(g.includes(w))return g[0];return w;}
@@ -397,6 +398,8 @@ function finishFaceoff(winner){
   if(winner==='cpu') scheduleCpuTurn();
 }
 function startFaceoff(){
+  if(faceoffDoneThisRound){ $('#answerEntry')?.classList.remove('hidden'); startTimer(TURN_SECONDS); if(gameConfig.mode==='cpu'&&currentTeam===1) scheduleCpuTurn(); return; }
+  faceoffDoneThisRound=true;
   if(gameConfig.mode!=='cpu'){ $('#answerEntry')?.classList.remove('hidden'); startTimer(TURN_SECONDS); return; }
   faceoffActive=true;$('#faceoff')?.classList.remove('hidden');$('#answerEntry')?.classList.add('hidden');
   const ch=cpuCharacterObject();const base=window.DentistasCharacterCPU?.delayFor?.(ch)||1200;
@@ -566,6 +569,7 @@ function showRound(reset = true) {
     bank = 0;
     phase = 'play';
     currentTeam = roundIndex % 2;
+    faceoffDoneThisRound = false;
   }
 
   const q = questions[roundIndex];
@@ -798,6 +802,7 @@ function showDifficultySelector() {
       <button data-difficulty="basic">🟢 BÁSICO</button>
       <button data-difficulty="intermediate">🟡 INTERMEDIO</button>
       <button data-difficulty="advanced">🔴 AVANZADO</button>
+      <button data-difficulty="extreme">⚫ EXTREMO</button>
       <button data-difficulty="mixed">🎲 MIXTO</button>
     </div>`);
   document.querySelectorAll('[data-difficulty]').forEach(btn => btn.onclick = () => {
