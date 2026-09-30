@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.speech.RecognizerIntent;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.Manifest;
+import org.json.JSONObject;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
@@ -19,6 +24,9 @@ public class MainActivity extends Activity {
     private WebView webView;
     private TextToSpeech textToSpeech;
     private volatile boolean ttsReady = false;
+    private static final int VOICE_REQUEST = 4107;
+    private static final int AUDIO_PERMISSION_REQUEST = 4108;
+    private String pendingVoiceLanguage = "es-MX";
 
     @Override
     @SuppressWarnings("deprecation")
@@ -59,6 +67,7 @@ public class MainActivity extends Activity {
         settings.setAllowContentAccess(false);
 
         webView.addJavascriptInterface(new NarratorBridge(), "AndroidNarrator");
+        webView.addJavascriptInterface(new VoiceBridge(), "AndroidVoice");
         webView.addJavascriptInterface(new AssetBridge(), "AndroidAssets");
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
@@ -69,6 +78,61 @@ public class MainActivity extends Activity {
         final String safeId = utteranceId.replace("\\", "\\\\").replace("'", "\\'");
         runOnUiThread(() -> webView.evaluateJavascript(
                 "window.DentistasNarrator&&window.DentistasNarrator.nativeFinished('" + safeId + "'," + ok + ");", null));
+    }
+
+    private class VoiceBridge {
+        @JavascriptInterface public boolean isAvailable() {
+            return getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
+        }
+        @JavascriptInterface public void start(String languageTag) {
+            pendingVoiceLanguage = (languageTag == null || languageTag.trim().isEmpty()) ? "es-MX" : languageTag;
+            if (android.os.Build.VERSION.SDK_INT >= 23 && checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, AUDIO_PERMISSION_REQUEST);
+                return;
+            }
+            launchVoiceRecognizer();
+        }
+    }
+
+    private void launchVoiceRecognizer() {
+        try {
+            Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, pendingVoiceLanguage);
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, pendingVoiceLanguage);
+            intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
+            intent.putExtra(RecognizerIntent.EXTRA_PROMPT, pendingVoiceLanguage.toLowerCase(Locale.ROOT).startsWith("en") ? "Say your answer" : "Di tu respuesta");
+            startActivityForResult(intent, VOICE_REQUEST);
+        } catch (Exception e) {
+            notifyVoice("", false);
+        }
+    }
+
+    @Override public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == AUDIO_PERMISSION_REQUEST) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) launchVoiceRecognizer();
+            else notifyVoice("", false);
+        }
+    }
+
+    @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != VOICE_REQUEST) return;
+        String heard = "";
+        boolean ok = false;
+        if (resultCode == RESULT_OK && data != null) {
+            java.util.ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            if (results != null && !results.isEmpty()) { heard = results.get(0); ok = heard != null && !heard.trim().isEmpty(); }
+        }
+        notifyVoice(heard, ok);
+    }
+
+    private void notifyVoice(String text, boolean ok) {
+        if (webView == null) return;
+        final String safe = JSONObject.quote(text == null ? "" : text);
+        final String script = "window.DentistasVoice&&window.DentistasVoice.nativeResult(" + safe + "," + ok + ");";
+        runOnUiThread(() -> webView.evaluateJavascript(script, null));
     }
 
     private class AssetBridge {
@@ -150,6 +214,7 @@ public class MainActivity extends Activity {
         if (webView != null) {
             webView.removeJavascriptInterface("AndroidNarrator");
             webView.removeJavascriptInterface("AndroidAssets");
+            webView.removeJavascriptInterface("AndroidVoice");
             webView.destroy();
             webView = null;
         }
