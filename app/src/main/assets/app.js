@@ -43,7 +43,29 @@ const BANK_FILES = [
   'bank44_odontologia_forense.json',
   'bank44_bioetica_legislacion.json',
   'bank44_fotografia_documentacion.json',
-  'bank44_oclusion_funcional_avanzada.json'
+  'bank44_oclusion_funcional_avanzada.json',
+  'bank44_original_01.json',
+  'bank44_original_02.json',
+  'bank44_original_03.json',
+  'bank44_original_04.json',
+  'bank44_original_05.json',
+  'bank44_original_06.json',
+  'bank44_original_07.json',
+  'bank44_original_08.json',
+  'bank44_original_09.json',
+  'bank44_original_10.json',
+  'bank44_original_11.json',
+  'bank44_original_12.json',
+  'bank44_original_13.json',
+  'bank44_original_14.json',
+  'bank44_original_15.json',
+  'bank44_original_16.json',
+  'bank44_original_17.json',
+  'bank44_original_18.json',
+  'bank44_original_19.json',
+  'bank44_original_20.json',
+  'bank44_original_21.json',
+  'bank44_original_22.json'
 ];
 
 const STUDY_BANK_FILES = [
