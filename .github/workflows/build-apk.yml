@@ -26,6 +26,12 @@ jobs:
         run: |
           python3 scripts/audit_4700.py
 
+      - name: Validar JavaScript del juego
+        run: |
+          node --check app/src/main/assets/app.js
+          node --check app/src/main/assets/characters.js
+          node --check app/src/main/assets/narrator.js
+
       - name: Publicar reporte de auditoría
         uses: actions/upload-artifact@v4
         with:
