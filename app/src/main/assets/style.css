@@ -319,3 +319,8 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 #areaCount{text-align:center!important;color:#ffe39a!important;font-size:1.05rem!important}
 #startConfigured{background:linear-gradient(180deg,#d6a12c,#8e5c0d)!important;border-color:#ffe28b!important}
 @media(max-width:900px){.areaPicker{grid-template-columns:repeat(2,minmax(0,1fr))!important}.homeLogo{width:min(430px,46vw)!important}.homeActions{width:90vw!important}}
+
+
+.faceoff{margin:12px auto;padding:18px;max-width:900px;text-align:center;border:2px solid #f2bd42;border-radius:24px;background:linear-gradient(180deg,#073b77,#021a48);box-shadow:0 0 30px #e9ad3255}
+.faceoffTitle{font-size:clamp(28px,4vw,50px);font-weight:1000;color:#ffd65c}.faceoff p{font-size:1.15rem}.faceoffButtons{display:grid;grid-template-columns:1fr 1fr;gap:18px}.faceoffButtons button{min-height:76px;border:2px solid #ffd86c;border-radius:18px;font-size:clamp(18px,2vw,28px);font-weight:900;background:#0755a3;color:white}.faceoffButtons button:first-child{background:linear-gradient(180deg,#d5a027,#86550b)}
+.answerEntry{display:grid;grid-template-columns:1fr auto auto;gap:10px;margin:10px auto 16px;max-width:1000px}.answerEntry input{min-height:58px;border:2px solid #dcae43;border-radius:16px;background:#fff;color:#10244b;padding:0 18px;font-size:1.2rem;font-weight:700}.answerEntry button{border:2px solid #e7b843;border-radius:16px;background:#07509a;color:#fff;font-weight:900;padding:0 18px}
