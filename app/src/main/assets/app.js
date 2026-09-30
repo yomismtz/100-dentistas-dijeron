@@ -157,15 +157,9 @@ function areaForQuestion(q) {
 }
 
 function availableAreas() {
-  const counts = new Map();
-  questionPool.forEach(q => {
-    const area = areaForQuestion(q);
-    if (area) counts.set(area, (counts.get(area) || 0) + 1);
-  });
-  return [...counts.entries()]
-    .filter(([, count]) => count >= GAME_SIZE)
-    .map(([area]) => area)
-    .sort((a,b)=>a.localeCompare(b,'es'));
+  const canonicalAreas = ["Psicología infantil","Fisiología","Oclusión","Desarrollo de la oclusión","Desarrollo craneofacial","Nomenclatura y etimología médica","Hábitos y parafunciones","Laboratorio de ortodoncia y ortopedia","Realización del expediente clínico","Ortodoncia","Ortopedia maxilar","Endodoncia","Cirugía bucal","Periodoncia","Implantología","Embriología dental","Operatoria dental","Anestesia dental","Anatomía dental","Cariología","Odontopediatría","Prótesis dental","Radiología oral y maxilofacial","Patología bucal","Medicina bucal","Farmacología odontológica","Materiales dentales","Prótesis fija","Prótesis removible","Prótesis total","Rehabilitación oral","Articulación temporomandibular y trastornos temporomandibulares","Odontología preventiva","Salud pública y odontología comunitaria","Microbiología oral","Infecciones odontogénicas","Urgencias médicas en odontología","Traumatología dental","Odontología geriátrica","Odontología para pacientes con necesidades especiales","Odontología forense","Bioética y legislación odontológica","Fotografía y documentación clínica odontológica","Oclusión funcional y ajuste oclusal avanzado"];
+  const loaded = new Set(questionPool.map(q => areaForQuestion(q)).filter(Boolean));
+  return canonicalAreas.filter(area => loaded.has(area));
 }
 
 function questionKey(q) {
