@@ -877,15 +877,14 @@ function startFinalChallenge(){
   const ask=()=>{
     if(n>=pool.length){
       const won=total>=300;
-      let unlockMsg='';
-      if(total>400){
-        const selected=(gameConfig.selectedAreas||[])[0]||'';
-        const chars=Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[];
-        const norm=v=>String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();
-        const eligible=chars.filter(ch=>ch.name!=='NOVA'&&!window.DentistasCharacterUnlocked?.(ch)&&(norm(selected).includes(norm(ch.specialty))||norm(ch.specialty).includes(norm(selected))));
-        const chosen=eligible[0]||chars.find(ch=>ch.name!=='NOVA'&&!window.DentistasCharacterUnlocked?.(ch));
-        if(chosen){window.DentistasUnlockCharacterFromFinal?.(chosen.name);unlockMsg=`<p>🔓 <b>PERSONAJE DESBLOQUEADO:</b> ${chosen.specialty}</p>`;}
-      }
+      const selectedAreas=gameConfig.selectedAreas||[];
+      const unlockArea=selectedAreas.length===1?selectedAreas[0]:'';
+      const result=window.DentistasRecordFinalResult?.({score:total,difficulty:gameConfig.difficulty,area:unlockArea})||{unlocked:[]};
+      const chars=Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[];
+      const unlocked=(result.unlocked||[]).map(name=>chars.find(ch=>ch.name===name)).filter(Boolean);
+      const unlockMsg=unlocked.length
+        ? `<p>🔓 <b>DESBLOQUEADO:</b> ${unlocked.map(ch=>ch.specialty).join(' · ')}</p>`
+        : (total>400&&selectedAreas.length!==1?'<p>Para desbloquear un especialista con más de 400 puntos, juega la final con un solo apartado seleccionado.</p>':'');
       openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
       $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};$('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};return;
     }
