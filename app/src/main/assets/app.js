@@ -872,7 +872,16 @@ function startFinalChallenge(){
   const ask=()=>{
     if(n>=pool.length){
       const won=total>=300;
-      openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p><div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
+      let unlockMsg='';
+      if(total>400){
+        const selected=(gameConfig.selectedAreas||[])[0]||'';
+        const chars=Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[];
+        const norm=v=>String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();
+        const eligible=chars.filter(ch=>ch.name!=='NOVA'&&!window.DentistasCharacterUnlocked?.(ch)&&(norm(selected).includes(norm(ch.specialty))||norm(ch.specialty).includes(norm(selected))));
+        const chosen=eligible[0]||chars.find(ch=>ch.name!=='NOVA'&&!window.DentistasCharacterUnlocked?.(ch));
+        if(chosen){window.DentistasUnlockCharacterFromFinal?.(chosen.name);unlockMsg=`<p>🔓 <b>PERSONAJE DESBLOQUEADO:</b> ${chosen.specialty}</p>`;}
+      }
+      openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
       $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};$('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};return;
     }
     const q=pool[n];let seconds=20;
