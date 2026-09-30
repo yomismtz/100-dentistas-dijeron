@@ -21,7 +21,29 @@ const BANK_FILES = [
   'questions_patologia.json',
   'questions_odonto_ortho.json',
   'questions_infecciones_medicina.json',
-  'questions_materiales_implantes.json'
+  'questions_materiales_implantes.json',
+  'bank44_radiologia.json',
+  'bank44_patologia.json',
+  'bank44_medicina_bucal.json',
+  'bank44_farmacologia.json',
+  'bank44_materiales_dentales.json',
+  'bank44_protesis_fija.json',
+  'bank44_protesis_removible.json',
+  'bank44_protesis_total.json',
+  'bank44_rehabilitacion_oral.json',
+  'bank44_atm_ttm.json',
+  'bank44_odontologia_preventiva.json',
+  'bank44_salud_publica_comunitaria.json',
+  'bank44_microbiologia_oral.json',
+  'bank44_infecciones_odontogenicas.json',
+  'bank44_urgencias_medicas.json',
+  'bank44_traumatologia_dental.json',
+  'bank44_odontologia_geriatrica.json',
+  'bank44_pacientes_necesidades_especiales.json',
+  'bank44_odontologia_forense.json',
+  'bank44_bioetica_legislacion.json',
+  'bank44_fotografia_documentacion.json',
+  'bank44_oclusion_funcional_avanzada.json'
 ];
 
 const STUDY_BANK_FILES = [
