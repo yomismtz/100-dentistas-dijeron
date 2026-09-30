@@ -49,9 +49,10 @@
         <div class="faceoffButtons"><button id="faceoffPlayer">🦷 JUGADOR</button><button id="faceoffCpu">🤖 COMPUTADORA</button></div>
       </div>
       <div id="answerEntry" class="answerEntry hidden">
-        <input id="answerText" type="text" autocomplete="off" placeholder="Escribe tu respuesta…" />
+        <input id="answerText" type="text" autocomplete="off" enterkeyhint="send" placeholder="Escribe tu respuesta…" />
         <button id="answerMic" type="button" title="Responder por voz">🎤 VOZ</button>
         <button id="answerSend" type="button">RESPONDER</button>
+        <div id="answerFeedback" class="answerFeedback" aria-live="assertive"></div>
       </div>
       <div id="answers" class="answers"></div>
       <div id="strikes" class="strikes" aria-label="Errores"></div>
