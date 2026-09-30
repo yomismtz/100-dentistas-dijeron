@@ -334,3 +334,5 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 .answerFeedback.wrong{color:#ff8585}
 .answerFeedback.ambiguous{color:#ffd86c}
 .answerFeedback.hint{color:#b9ddff}
+
+.timer.countdownPulse{transform:scale(1.12);filter:drop-shadow(0 0 10px rgba(255,215,80,.9));transition:transform .12s ease,filter .12s ease}.timer.urgent{font-weight:1000}
