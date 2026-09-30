@@ -80,6 +80,8 @@ const EXTRA_BANK_FILES = [
 
 let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'NOVA', playerCharacter:'NOVA', difficulty:'mixed' };
 let cpuTimerHandle = null;
+let faceoffActive = false;
+let faceoffCpuHandle = null;
 let questionPoolPromise = null;
 
 function loadJsonAsset(file) {
@@ -358,6 +360,35 @@ function stopTimer() {
   }
 }
 
+function normAnswer(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9ñ ]/g,' ').replace(/\s+/g,' ').trim();}
+function matchTypedAnswer(text){
+  const q=questions[roundIndex]; if(!q) return -1; const n=normAnswer(text); if(!n) return -1;
+  return q.a.findIndex((a,i)=>!revealed[i] && (normAnswer(aText(q,i))===n || normAnswer(aText(q,i)).includes(n) || n.includes(normAnswer(aText(q,i)))));
+}
+function submitTypedAnswer(){
+  const input=$('#answerText'); const idx=matchTypedAnswer(input?.value); if(input) input.value='';
+  if(idx>=0){const btn=document.querySelectorAll('#answers button')[idx]; if(btn) revealAnswer(idx,btn);} else addStrike('answer');
+}
+function startVoiceAnswer(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){openModal('<h2>🎤 VOZ</h2><p>El reconocimiento de voz no está disponible en este dispositivo. Puedes escribir la respuesta.</p>');return;}
+  const rec=new SR();rec.lang=isEn()?'en-US':'es-MX';rec.interimResults=false;rec.maxAlternatives=1;
+  const b=$('#answerMic');if(b)b.textContent='🎙️ ESCUCHANDO';
+  rec.onresult=e=>{const t=e.results?.[0]?.[0]?.transcript||'';if($('#answerText'))$('#answerText').value=t;submitTypedAnswer();};
+  rec.onerror=()=>{if(b)b.textContent='🎤 VOZ';};rec.onend=()=>{if(b)b.textContent='🎤 VOZ';};rec.start();
+}
+function finishFaceoff(winner){
+  if(!faceoffActive)return;faceoffActive=false;clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
+  $('#faceoff')?.classList.add('hidden');$('#answerEntry')?.classList.remove('hidden');
+  currentTeam=winner==='cpu'?1:0;updateTurnUI();startTimer(TURN_SECONDS);
+  if(winner==='cpu') scheduleCpuTurn();
+}
+function startFaceoff(){
+  if(gameConfig.mode!=='cpu'){ $('#answerEntry')?.classList.remove('hidden'); startTimer(TURN_SECONDS); return; }
+  faceoffActive=true;$('#faceoff')?.classList.remove('hidden');$('#answerEntry')?.classList.add('hidden');
+  const ch=cpuCharacterObject();const base=window.DentistasCharacterCPU?.delayFor?.(ch)||1200;
+  faceoffCpuHandle=setTimeout(()=>finishFaceoff('cpu'),Math.max(700,Math.min(3000,base+Math.random()*900)));
+}
 function beginTurnAfterQuestion() {
   invalidateTurn();
   timerRemaining = TURN_SECONDS;
@@ -368,8 +399,7 @@ function beginTurnAfterQuestion() {
   const token = ++turnNarrationToken;
   const start = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-    startTimer(TURN_SECONDS);
-    scheduleCpuTurn();
+    startFaceoff();
   };
 
   const spoken = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
@@ -772,7 +802,7 @@ function showPlayerCharacterSelector(next) {
     <div class="cpuPicker">
       ${chars.map(ch => {
         const unlocked = typeof window.DentistasCharacterUnlocked === 'function' ? window.DentistasCharacterUnlocked(ch) : ch.name === 'NOVA';
-        return `<button type="button" data-player="${ch.name}" ${unlocked?'':'disabled'}>${unlocked?'':'🔒 '}${ch.name}<br><small>${ch.specialty}</small></button>`;
+        return `<button type="button" data-player="${ch.name}" ${unlocked?'':'disabled'}>${unlocked?'':'🔒 '}${ch.specialty}</button>`;
       }).join('')}
     </div>`);
   document.querySelectorAll('[data-player]:not([disabled])').forEach(btn => btn.onclick = () => {
@@ -806,7 +836,7 @@ function showCpuSetup() {
     <h2>🤖 CONTRA LA COMPUTADORA</h2>
     <p>Elige al especialista que será tu rival.</p>
     <div class="cpuPicker">
-      ${names.map(n=>`<button type="button" data-cpu="${n}">${n}</button>`).join('')}
+      ${names.map(n=>{const ch=chars.find(c=>c.name===n);return `<button type="button" data-cpu="${n}">${ch?.specialty||n}</button>`}).join('')}
     </div>`);
   document.querySelectorAll('[data-cpu]').forEach(btn => btn.onclick = () => {
     gameConfig.cpuCharacter = btn.dataset.cpu;
@@ -921,8 +951,7 @@ function openModal(html) {
   invalidateTurn();
   $('#modalContent').innerHTML = html;
   $('#modal').classList.remove('hidden');
-  const spoken = $('#modalContent').innerText || $('#modalContent').textContent || '';
-  if (spoken) setTimeout(() => narrate(spoken, {rate:.92}), 120);
+
 }
 
 function closeModal(resumeTimer = true) {
@@ -1139,3 +1168,7 @@ window.DentistasAppBack = function () {
   `;
   document.head.appendChild(st);
 })();
+$('#faceoffPlayer')?.addEventListener('click',()=>finishFaceoff('player'));
+$('#answerSend')?.addEventListener('click',submitTypedAnswer);
+$('#answerText')?.addEventListener('keydown',e=>{if(e.key==='Enter')submitTypedAnswer();});
+$('#answerMic')?.addEventListener('click',startVoiceAnswer);
