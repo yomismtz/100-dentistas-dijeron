@@ -22,6 +22,17 @@ jobs:
         run: |
           python3 scripts/validate_questions.py
 
+      - name: Auditar banco 4700
+        run: |
+          python3 scripts/audit_4700.py
+
+      - name: Publicar reporte de auditoría
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-preguntas-4700
+          path: build/question_audit_4700.json
+          if-no-files-found: error
+
       - name: Set up JDK 17
         uses: actions/setup-java@v5
         with:
