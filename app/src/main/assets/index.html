@@ -43,6 +43,16 @@
         </div>
         <div class="bank" title="Puntos revelados en esta ronda"><span>BANCO</span><strong id="bank">0</strong></div>
       </div>
+      <div id="faceoff" class="faceoff hidden">
+        <div class="faceoffTitle">⚡ CAREO ⚡</div>
+        <p>Presiona primero para ganar el derecho a responder.</p>
+        <div class="faceoffButtons"><button id="faceoffPlayer">🦷 JUGADOR</button><button id="faceoffCpu">🤖 COMPUTADORA</button></div>
+      </div>
+      <div id="answerEntry" class="answerEntry hidden">
+        <input id="answerText" type="text" autocomplete="off" placeholder="Escribe tu respuesta…" />
+        <button id="answerMic" type="button" title="Responder por voz">🎤 VOZ</button>
+        <button id="answerSend" type="button">RESPONDER</button>
+      </div>
       <div id="answers" class="answers"></div>
       <div id="strikes" class="strikes" aria-label="Errores"></div>
     </section>
