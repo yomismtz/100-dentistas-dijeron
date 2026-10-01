@@ -163,7 +163,7 @@ function characterUnlocked(character){
 function characterUnlockLabel(character){
   if(!character) return '';
   if(character.name==='NOVA') return 'Disponible desde el inicio';
-  if(character.rarity==='ESPECIALISTA') return 'Supera 400 puntos en la ronda final de '+character.category;
+  if(character.rarity==='ESPECIALISTA') return 'Supera 300 puntos en la ronda final de '+character.category+' en SÚPER DIFÍCIL';
   if(character.name==='EL RATÓN DE LOS DIENTES') return 'Desbloquea 30 especialistas o gana Curiosidades en Extremo';
   if(character.name==='LA MUELA DEL JUICIO') return 'Gana '+MUELA_DIFFICULT_FINAL_WINS+' rondas finales en Difícil';
   if(character.name==='SANTA APOLONIA') return 'Gana '+SANTA_EXTREME_FINAL_WINS+' rondas finales en Extremo';
