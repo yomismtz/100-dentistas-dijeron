@@ -3,6 +3,10 @@
 const $ = (s) => document.querySelector(s);
 const GAME_SIZE = 8;
 const TURN_SECONDS = 30;
+const CURIOSITY_BANK_FILES = [
+  'curiosidades_odontologia_extremo_01.json','curiosidades_odontologia_extremo_02.json','curiosidades_odontologia_extremo_03.json',
+  'curiosidades_odontologia_extremo_04.json','curiosidades_odontologia_extremo_05.json','curiosidades_odontologia_extremo_06.json'
+];
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
@@ -78,7 +82,7 @@ const EXTRA_BANK_FILES = [
   ['laboratorio_ortodoncia_ortopedia_300.json','Laboratorio de ortodoncia y ortopedia']
 ];
 
-let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'NOVA', playerCharacter:'NOVA', difficulty:'mixed' };
+let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'NOVA', playerCharacter:'NOVA', difficulty:'mixed', curiosityMode:false };
 let cpuTimerHandle = null;
 let faceoffActive = false;
 let faceoffDoneThisRound = false;
@@ -220,6 +224,7 @@ function questionDifficulty(q) {
 }
 
 function filteredPool() {
+  if (gameConfig.curiosityMode) return [...curiosityPool];
   const selected = gameConfig.selectedAreas || [];
   let pool = selected.length ? questionPool.filter(q => selected.includes(areaForQuestion(q))) : [...questionPool];
   const difficulty = gameConfig.difficulty || 'mixed';
@@ -229,6 +234,7 @@ function filteredPool() {
 }
 
 let questionPool = [];
+let curiosityPool = [];
 let questions = [];
 let roundIndex = 0;
 let revealed = [];
@@ -676,7 +682,7 @@ function showRound(reset = true) {
 
   const q = questions[roundIndex];
   const mult = roundMultiplier();
-  $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
+  $('#round').textContent = gameConfig.curiosityMode ? `🦷 CURIOSIDADES · EXTREMO · ${roundIndex + 1}` : `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
   $('#question').textContent = qText(q);
 
@@ -1007,6 +1013,7 @@ function startFinalChallenge(){
 }
 
 async function startNewGame() {
+  if (gameConfig.curiosityMode && !curiosityPool.length) { try { await loadCuriosityPool(); } catch (_) {} }
   if (!questionPool.length) {
     try { await (questionPoolPromise || loadQuestionPool()); } catch (_) {}
   }
@@ -1197,6 +1204,18 @@ function showMenu() {
   };
 }
 
+function normalizeCuriosityQuestion(q) {
+  if (!q || !q.q || !Array.isArray(q.a) || q.a.length !== 5) return null;
+  const weights=[40,25,15,12,8];
+  return {q:q.q,cat:'Curiosidades de la odontología — EXTREMO',area:'Curiosidades de la odontología — EXTREMO',difficulty:'extremo',evidence_type:q.e||'historical',source:Array.isArray(q.s)?q.s.join(', '):String(q.s||''),a:q.a.map((answer,i)=>[String(answer),weights[i]])};
+}
+async function loadCuriosityPool(){
+  const combined=[];
+  for(const file of CURIOSITY_BANK_FILES){try{const data=await loadJsonAsset(file);if(Array.isArray(data))data.forEach(q=>{const n=normalizeCuriosityQuestion(q);if(n)combined.push(n);});}catch(err){console.warn('No se pudo cargar curiosidades',file,err);}}
+  curiosityPool=dedupeQuestionPool(combined); return curiosityPool;
+}
+function startCuriosityGame(){gameConfig={...gameConfig,mode:'1v1',selectedAreas:[],teamSize:1,difficulty:'extreme',curiosityMode:true};teamNames=['JUGADOR 1','JUGADOR 2'];startNewGame();}
+
 async function loadQuestionPool() {
   const task = (async () => {
     const combined = [];
@@ -1240,6 +1259,7 @@ async function loadQuestionPool() {
     }
 
     questionPool = dedupeQuestionPool(combined);
+    if (!curiosityPool.length) { try { await loadCuriosityPool(); } catch (_) {} }
     updateScoreUI();
     return questionPool;
   })();
@@ -1254,6 +1274,7 @@ updateTimerUI();
 $('#mode1v1').onclick = () => showPlayerCharacterSelector(showOneVsOneSetup);
 $('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
 $('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
+$('#modeCuriosidades')?.addEventListener('click', startCuriosityGame);
 $('#help').onclick = showHelp;
 $('#prev').onclick = previousRound;
 $('#next').onclick = nextRound;
@@ -1288,6 +1309,7 @@ window.addEventListener('dentistas-language-changed', () => {
   const one = $('#mode1v1'); if (one) one.textContent = isEn() ? '👤 1 VS 1' : '👤 1 CONTRA 1';
   const teamsBtn = $('#modeTeams'); if (teamsBtn) teamsBtn.textContent = isEn() ? '👥 TEAM VS TEAM' : '👥 EQUIPO CONTRA EQUIPO';
   const cpuBtn = $('#modeCpu'); if (cpuBtn) cpuBtn.textContent = isEn() ? '🤖 VS COMPUTER' : '🤖 CONTRA LA COMPUTADORA';
+  const curiosityBtn=$('#modeCuriosidades'); if(curiosityBtn) curiosityBtn.textContent=isEn()?'🦷 DENTISTRY CURIOSITIES — EXTREME':'🦷 CURIOSIDADES DE LA ODONTOLOGÍA — EXTREMO';
   const help = $('#help'); if (help) help.textContent = tx('howTo');
   const timerLabel = document.querySelector('.timerBox>span'); if (timerLabel) timerLabel.textContent = tx('time');
   const bankLabel = document.querySelector('.bank>span'); if (bankLabel) bankLabel.textContent = tx('bank');
@@ -1305,7 +1327,8 @@ window.DentistasAppBack = function () {
     const game = document.querySelector('#game');
     if (game && !game.classList.contains('hidden')) {
       stopTimer();
-      game.classList.add('hidden');
+      gameConfig.curiosityMode=false;
+    game.classList.add('hidden');
       document.querySelector('#home')?.classList.remove('hidden');
       window.DentistasNarrator?.stop?.();
       return true;
