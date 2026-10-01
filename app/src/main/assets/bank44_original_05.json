@@ -3,10 +3,10 @@
     "id": "ORG5-001",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué poblaciones celulares participan en el desarrollo temprano del complejo craneofacial?",
+    "q": "¿Qué poblaciones celulares contribuyen de forma importante al desarrollo craneofacial?",
     "a": [
       [
-        "Cresta neural",
+        "Cresta neural craneal",
         45
       ],
       [
@@ -18,139 +18,412 @@
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-002",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué fuentes embrionarias contribuyen a la formación de tejidos craneofaciales?",
+    "q": "¿Qué característica distingue al ectomesénquima craneofacial?",
     "a": [
       [
-        "Cresta neural",
+        "Deriva en gran medida de células de la cresta neural",
         45
       ],
       [
-        "Mesodermo paraxial",
+        "Contribuye a tejidos craneofaciales",
         35
       ],
       [
-        "Ectomesénquima",
+        "Participa en la formación de estructuras mesenquimales faciales",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-003",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué poblaciones deben considerarse al estudiar el origen embrionario de la cara?",
+    "q": "¿Qué estructura embrionaria origina gran parte del esqueleto facial?",
     "a": [
       [
-        "Cresta neural",
+        "Cresta neural craneal",
         45
       ],
       [
-        "Mesodermo paraxial",
+        "Primer arco faríngeo",
         35
       ],
       [
-        "Ectomesénquima",
+        "Prominencias faciales",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-004",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué componentes celulares intervienen en la morfogénesis craneofacial?",
+    "q": "¿Qué arco faríngeo es fundamental para el desarrollo inicial de maxila y mandíbula?",
     "a": [
       [
-        "Cresta neural",
+        "Primer arco faríngeo",
         45
       ],
       [
-        "Mesodermo paraxial",
+        "Arco mandibular",
         35
       ],
       [
-        "Ectomesénquima",
+        "Derivados asociados a la cresta neural craneal",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-005",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué estructuras óseas forman parte importante del esqueleto facial?",
+    "q": "¿Qué prominencias participan en la formación inicial de la cara?",
     "a": [
       [
-        "Maxilar",
-        45
+        "Frontonasal",
+        40
       ],
       [
-        "Mandíbula",
+        "Maxilares",
         35
       ],
       [
-        "Huesos cigomáticos",
-        20
+        "Mandibulares",
+        25
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-006",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué huesos participan directamente en la arquitectura facial?",
+    "q": "¿Qué estructuras contribuyen a la formación del labio superior?",
     "a": [
       [
-        "Maxilar",
-        45
+        "Prominencias nasales mediales",
+        40
       ],
       [
-        "Mandíbula",
+        "Prominencias maxilares",
         35
       ],
       [
-        "Huesos cigomáticos",
-        20
+        "Segmento intermaxilar",
+        25
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-007",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué elementos óseos deben reconocerse al estudiar el crecimiento facial?",
+    "q": "¿Qué estructura embrionaria se relaciona con el paladar primario?",
     "a": [
       [
-        "Maxilar",
+        "Segmento intermaxilar",
         45
       ],
       [
-        "Mandíbula",
+        "Prominencias nasales mediales",
         35
       ],
       [
-        "Huesos cigomáticos",
+        "Paladar primario",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-008",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué huesos del viscerocráneo son relevantes para la oclusión y la forma facial?",
+    "q": "¿Qué estructuras forman el paladar secundario?",
+    "a": [
+      [
+        "Procesos palatinos laterales",
+        45
+      ],
+      [
+        "Procesos maxilares",
+        35
+      ],
+      [
+        "Tabique nasal como estructura relacionada con la separación de las cavidades",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
+  },
+  {
+    "id": "ORG5-009",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué procesos deben coordinarse para una morfogénesis facial normal?",
+    "a": [
+      [
+        "Migración celular",
+        40
+      ],
+      [
+        "Proliferación celular",
+        35
+      ],
+      [
+        "Diferenciación celular",
+        25
+      ]
+    ],
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
+  },
+  {
+    "id": "ORG5-010",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué vías de señalización participan en el desarrollo craneofacial?",
+    "a": [
+      [
+        "SHH",
+        45
+      ],
+      [
+        "FGF",
+        35
+      ],
+      [
+        "BMP",
+        20
+      ]
+    ],
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
+  },
+  {
+    "id": "ORG5-011",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué mecanismos de formación ósea participan en el cráneo y la cara?",
+    "a": [
+      [
+        "Osificación intramembranosa",
+        45
+      ],
+      [
+        "Osificación endocondral",
+        35
+      ],
+      [
+        "Remodelado óseo",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
+  },
+  {
+    "id": "ORG5-012",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué tipo de osificación predomina en gran parte de los huesos de la bóveda craneal?",
+    "a": [
+      [
+        "Intramembranosa",
+        45
+      ],
+      [
+        "Formación directa a partir de mesénquima",
+        35
+      ],
+      [
+        "Diferenciación osteoblástica sin molde cartilaginoso",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
+  },
+  {
+    "id": "ORG5-013",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué mecanismo es fundamental en muchas estructuras cartilaginosas de la base craneal?",
+    "a": [
+      [
+        "Osificación endocondral",
+        45
+      ],
+      [
+        "Crecimiento mediante cartílago",
+        35
+      ],
+      [
+        "Reemplazo progresivo del cartílago por hueso",
+        20
+      ]
+    ],
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
+  },
+  {
+    "id": "ORG5-014",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué estructuras permiten crecimiento de la bóveda craneal durante la infancia?",
+    "a": [
+      [
+        "Suturas craneales",
+        45
+      ],
+      [
+        "Frentes de crecimiento sutural",
+        35
+      ],
+      [
+        "Remodelado de los huesos de la calvaria",
+        20
+      ]
+    ],
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
+  },
+  {
+    "id": "ORG5-015",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué estructura es una sincondrosis importante de la base craneal?",
+    "a": [
+      [
+        "Sincondrosis esfenooccipital",
+        45
+      ],
+      [
+        "Cartílago de crecimiento de la base craneal",
+        35
+      ],
+      [
+        "Unión cartilaginosa entre esfenoides y occipital",
+        20
+      ]
+    ],
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
+  },
+  {
+    "id": "ORG5-016",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué células forman matriz ósea nueva?",
+    "a": [
+      [
+        "Osteoblastos",
+        45
+      ],
+      [
+        "Células osteoformadoras",
+        35
+      ],
+      [
+        "Osteocitos durante la mineralización y mantenimiento",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
+  },
+  {
+    "id": "ORG5-017",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué células participan principalmente en la resorción ósea?",
+    "a": [
+      [
+        "Osteoclastos",
+        45
+      ],
+      [
+        "Células multinucleadas derivadas de la línea hematopoyética",
+        35
+      ],
+      [
+        "Células especializadas en resorción",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
+  },
+  {
+    "id": "ORG5-018",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué células mantienen y regulan el tejido óseo maduro?",
+    "a": [
+      [
+        "Osteocitos",
+        45
+      ],
+      [
+        "Células embebidas en la matriz ósea",
+        35
+      ],
+      [
+        "Células mecanosensoriales del hueso",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
+  },
+  {
+    "id": "ORG5-019",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué procesos modifican continuamente la forma del hueso craneofacial?",
+    "a": [
+      [
+        "Aposición",
+        45
+      ],
+      [
+        "Resorción",
+        35
+      ],
+      [
+        "Remodelado",
+        20
+      ]
+    ],
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
+  },
+  {
+    "id": "ORG5-020",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué es el desplazamiento en el contexto del crecimiento craneofacial?",
+    "a": [
+      [
+        "Cambio de posición de una estructura",
+        45
+      ],
+      [
+        "Desplazamiento primario o secundario según el mecanismo",
+        35
+      ],
+      [
+        "Cambio espacial que puede acompañar al crecimiento",
+        20
+      ]
+    ],
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
+  },
+  {
+    "id": "ORG5-021",
+    "cat": "Desarrollo craneofacial",
+    "difficulty": "facil",
+    "q": "¿Qué huesos forman parte esencial del viscerocráneo?",
     "a": [
       [
         "Maxilar",
@@ -161,1942 +434,1669 @@
         35
       ],
       [
-        "Huesos cigomáticos",
+        "Cigomáticos",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-009",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué estructuras o procesos participan en el crecimiento del cráneo?",
-    "a": [
-      [
-        "Suturas craneales",
-        45
-      ],
-      [
-        "Sincondrosis de la base craneal",
-        35
-      ],
-      [
-        "Crecimiento de la base craneal",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-010",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué mecanismos anatómicos permiten el crecimiento de la bóveda y base craneales?",
-    "a": [
-      [
-        "Suturas craneales",
-        45
-      ],
-      [
-        "Sincondrosis de la base craneal",
-        35
-      ],
-      [
-        "Crecimiento de la base craneal",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-011",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué elementos deben considerarse al estudiar el crecimiento craneal?",
-    "a": [
-      [
-        "Suturas craneales",
-        45
-      ],
-      [
-        "Sincondrosis de la base craneal",
-        35
-      ],
-      [
-        "Crecimiento de la base craneal",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-012",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué componentes se relacionan con la expansión y remodelación del cráneo en crecimiento?",
-    "a": [
-      [
-        "Suturas craneales",
-        45
-      ],
-      [
-        "Sincondrosis de la base craneal",
-        35
-      ],
-      [
-        "Crecimiento de la base craneal",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-013",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué mecanismos de formación o cambio óseo intervienen en el desarrollo craneofacial?",
-    "a": [
-      [
-        "Osificación intramembranosa",
-        45
-      ],
-      [
-        "Osificación endocondral",
-        35
-      ],
-      [
-        "Remodelado óseo",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-014",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué procesos explican la formación y adaptación de los huesos craneofaciales?",
-    "a": [
-      [
-        "Osificación intramembranosa",
-        45
-      ],
-      [
-        "Osificación endocondral",
-        35
-      ],
-      [
-        "Remodelado óseo",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-015",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué mecanismos biológicos deben distinguirse al estudiar el crecimiento craneofacial?",
-    "a": [
-      [
-        "Osificación intramembranosa",
-        45
-      ],
-      [
-        "Osificación endocondral",
-        35
-      ],
-      [
-        "Remodelado óseo",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-016",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué procesos contribuyen a la adquisición y modificación de la forma ósea facial?",
-    "a": [
-      [
-        "Osificación intramembranosa",
-        45
-      ],
-      [
-        "Osificación endocondral",
-        35
-      ],
-      [
-        "Remodelado óseo",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-017",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué tipos celulares son fundamentales para el metabolismo y remodelado óseo?",
-    "a": [
-      [
-        "Osteoblastos",
-        45
-      ],
-      [
-        "Osteoclastos",
-        35
-      ],
-      [
-        "Osteocitos",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-018",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué células deben considerarse al estudiar la adaptación del hueso craneofacial?",
-    "a": [
-      [
-        "Osteoblastos",
-        45
-      ],
-      [
-        "Osteoclastos",
-        35
-      ],
-      [
-        "Osteocitos",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-019",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué poblaciones celulares participan en la formación, resorción y regulación del tejido óseo?",
-    "a": [
-      [
-        "Osteoblastos",
-        45
-      ],
-      [
-        "Osteoclastos",
-        35
-      ],
-      [
-        "Osteocitos",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-020",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué células intervienen en la dinámica del tejido óseo maduro?",
-    "a": [
-      [
-        "Osteoblastos",
-        45
-      ],
-      [
-        "Osteoclastos",
-        35
-      ],
-      [
-        "Osteocitos",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
-  },
-  {
-    "id": "ORG5-021",
-    "cat": "Desarrollo craneofacial",
-    "difficulty": "facil",
-    "q": "¿Qué procesos modifican la forma y dimensiones de los huesos craneofaciales?",
-    "a": [
-      [
-        "Aposición",
-        45
-      ],
-      [
-        "Reabsorción",
-        35
-      ],
-      [
-        "Remodelado",
-        20
-      ]
-    ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-022",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué mecanismos participan en la adaptación de una superficie ósea durante el crecimiento?",
+    "q": "¿Qué estructura participa directamente en el crecimiento de la mandíbula?",
     "a": [
       [
-        "Aposición",
+        "Cartílago condilar",
         45
       ],
       [
-        "Reabsorción",
+        "Rama mandibular",
         35
       ],
       [
-        "Remodelado",
+        "Remodelado de superficies mandibulares",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-023",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué procesos explican los cambios de forma ósea a lo largo del desarrollo?",
+    "q": "¿Qué estructura contiene el germen del diente en desarrollo?",
     "a": [
       [
-        "Aposición",
+        "Folículo dental",
         45
       ],
       [
-        "Reabsorción",
+        "Saco dental",
         35
       ],
       [
-        "Remodelado",
+        "Estructuras ectomesenquimales periféricas al germen",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-024",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué fenómenos permiten que el hueso cambie de tamaño y configuración?",
+    "q": "¿Qué tejidos participan en la formación del diente durante el desarrollo craneofacial?",
     "a": [
       [
-        "Aposición",
+        "Epitelio oral",
         45
       ],
       [
-        "Reabsorción",
+        "Ectomesénquima",
         35
       ],
       [
-        "Remodelado",
+        "Papila dental",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-025",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué suturas forman parte de la bóveda craneal?",
+    "q": "¿Qué estructuras participan en la formación del maxilar?",
     "a": [
       [
-        "Sutura frontoparietal",
+        "Prominencias maxilares",
         45
       ],
       [
-        "Sutura sagital",
+        "Procesos faciales asociados al primer arco",
         35
       ],
       [
-        "Sutura lambdoidea",
+        "Cresta neural craneal",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-026",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué suturas fibrosas deben reconocerse en la calvaria?",
+    "q": "¿Qué estructura embrionaria se asocia con la formación mandibular?",
     "a": [
       [
-        "Sutura frontoparietal",
+        "Prominencias mandibulares",
         45
       ],
       [
-        "Sutura sagital",
+        "Primer arco faríngeo",
         35
       ],
       [
-        "Sutura lambdoidea",
+        "Cartílago de Meckel como estructura relacionada",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-027",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué articulaciones fibrosas participan en la organización de la bóveda craneal?",
+    "q": "¿Qué componentes participan en la formación de las suturas craneales?",
     "a": [
       [
-        "Sutura frontoparietal",
+        "Mesénquima sutural",
         45
       ],
       [
-        "Sutura sagital",
+        "Células de la cresta neural en regiones craneales",
         35
       ],
       [
-        "Sutura lambdoidea",
+        "Señalización molecular local",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-028",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué suturas pueden identificarse al estudiar el crecimiento de la calvaria?",
+    "q": "¿Qué función general tienen las suturas craneales durante el crecimiento?",
     "a": [
       [
-        "Sutura frontoparietal",
+        "Permitir expansión coordinada de la calvaria",
         45
       ],
       [
-        "Sutura sagital",
+        "Mantener interfaces de crecimiento",
         35
       ],
       [
-        "Sutura lambdoidea",
+        "Participar en la adaptación de los huesos craneales",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-029",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué estructuras son relevantes para el crecimiento de la base craneal?",
+    "q": "¿Qué relación existe entre crecimiento cerebral y crecimiento de la bóveda craneal?",
     "a": [
       [
-        "Sincondrosis esfenooccipital",
+        "El crecimiento cerebral influye en la expansión de la calvaria",
         45
       ],
       [
-        "Sincondrosis interesfenoidal",
+        "Las suturas permiten adaptación al crecimiento",
         35
       ],
       [
-        "Base craneal",
+        "La relación es especialmente importante durante la infancia",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-030",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué elementos cartilaginosos se relacionan con la elongación de la base craneal?",
+    "q": "¿Qué factores pueden modificar el crecimiento craneofacial individual?",
     "a": [
       [
-        "Sincondrosis esfenooccipital",
-        45
+        "Genética",
+        40
       ],
       [
-        "Sincondrosis interesfenoidal",
+        "Maduración biológica",
         35
       ],
       [
-        "Base craneal",
-        20
+        "Factores ambientales y funcionales",
+        25
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-031",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué componentes deben considerarse al estudiar el crecimiento endocondral de la base craneal?",
+    "q": "¿Qué diferencia existe entre crecimiento y desarrollo craneofacial?",
     "a": [
       [
-        "Sincondrosis esfenooccipital",
+        "El crecimiento se refiere principalmente a cambios cuantitativos",
         45
       ],
       [
-        "Sincondrosis interesfenoidal",
+        "El desarrollo incluye cambios cualitativos y de organización",
         35
       ],
       [
-        "Base craneal",
+        "Ambos procesos ocurren de manera relacionada",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-032",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué estructuras participan en el desarrollo anteroposterior de la base del cráneo?",
+    "q": "¿Qué factores influyen en el momento y magnitud del crecimiento facial?",
     "a": [
       [
-        "Sincondrosis esfenooccipital",
+        "Genética",
         45
       ],
       [
-        "Sincondrosis interesfenoidal",
+        "Maduración",
         35
       ],
       [
-        "Base craneal",
+        "Entorno y función",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-033",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué estructuras participan en el crecimiento y desplazamiento del complejo maxilar?",
+    "q": "¿Qué indicadores pueden ayudar a valorar la maduración de un paciente?",
     "a": [
       [
-        "Maxila",
+        "Edad cronológica",
         45
       ],
       [
-        "Sutura maxilomalar",
+        "Edad dental",
         35
       ],
       [
-        "Sutura palatina media",
+        "Maduración esquelética",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-034",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué componentes anatómicos son relevantes al estudiar el crecimiento transversal y espacial del maxilar?",
+    "q": "¿Por qué la edad cronológica no basta para determinar la maduración?",
     "a": [
       [
-        "Maxila",
+        "Existe variabilidad individual",
         45
       ],
       [
-        "Sutura maxilomalar",
+        "La maduración biológica no ocurre al mismo ritmo en todos",
         35
       ],
       [
-        "Sutura palatina media",
+        "Puede diferir de la edad dental y esquelética",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-035",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué estructuras deben considerarse en el desarrollo del complejo maxilofacial superior?",
+    "q": "¿Qué estructuras determinan en parte la relación anteroposterior entre base craneal y cara?",
     "a": [
       [
-        "Maxila",
+        "Base craneal anterior",
         45
       ],
       [
-        "Sutura maxilomalar",
+        "Base craneal media",
         35
       ],
       [
-        "Sutura palatina media",
+        "Complejo maxilomandibular",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-036",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué elementos se relacionan con el crecimiento del maxilar y sus articulaciones?",
+    "q": "¿Qué efecto puede tener el crecimiento de la base craneal sobre la posición facial?",
     "a": [
       [
-        "Maxila",
+        "Modificar relaciones espaciales del maxilar y la mandíbula",
         45
       ],
       [
-        "Sutura maxilomalar",
+        "Cambiar la orientación relativa de estructuras faciales",
         35
       ],
       [
-        "Sutura palatina media",
+        "Influir en patrones cefalométricos",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-037",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué regiones de la mandíbula cambian durante el crecimiento?",
+    "q": "¿Qué suturas participan en el crecimiento del complejo maxilar?",
     "a": [
       [
-        "Cóndilo mandibular",
+        "Sutura frontomaxilar",
         45
       ],
       [
-        "Rama mandibular",
+        "Sutura cigomaticomaxilar",
         35
       ],
       [
-        "Cuerpo mandibular",
+        "Suturas circummaxilares",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-038",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué partes mandibulares deben analizarse al estudiar el desarrollo de la mandíbula?",
+    "q": "¿Qué función cumple la sutura palatina media durante el crecimiento?",
     "a": [
       [
-        "Cóndilo mandibular",
+        "Contribuir al crecimiento transversal maxilar",
         45
       ],
       [
-        "Rama mandibular",
+        "Permitir adaptación entre los hemimaxilares",
         35
       ],
       [
-        "Cuerpo mandibular",
+        "Participar en la expansión transversal antes de su maduración",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-039",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué regiones contribuyen a los cambios de forma y posición mandibular?",
+    "q": "¿Qué mecanismo explica gran parte del aumento de longitud mandibular?",
     "a": [
       [
-        "Cóndilo mandibular",
+        "Crecimiento condilar",
         45
       ],
       [
-        "Rama mandibular",
+        "Remodelado de la rama y cuerpo",
         35
       ],
       [
-        "Cuerpo mandibular",
+        "Desplazamiento mandibular asociado al crecimiento",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-040",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué componentes anatómicos son esenciales para describir el crecimiento mandibular?",
+    "q": "¿Qué cambios ocurren en la rama mandibular durante el crecimiento?",
     "a": [
       [
-        "Cóndilo mandibular",
+        "Remodelado de superficies",
         45
       ],
       [
-        "Rama mandibular",
+        "Reabsorción en algunas superficies",
         35
       ],
       [
-        "Cuerpo mandibular",
+        "Aposición en otras superficies",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-041",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué estructuras forman la unidad de soporte del diente y responden al desarrollo dentoalveolar?",
+    "q": "¿Qué relación tiene el periostio con el crecimiento óseo craneofacial?",
     "a": [
       [
-        "Proceso alveolar",
+        "Participa en aposición y remodelado",
         45
       ],
       [
-        "Cemento radicular",
+        "Puede contribuir al cambio de grosor óseo",
         35
       ],
       [
-        "Ligamento periodontal",
+        "Actúa como superficie osteogénica",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-042",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué tejidos deben considerarse al estudiar la relación entre dientes y hueso alveolar?",
+    "q": "¿Qué es la remodelación ósea?",
     "a": [
       [
-        "Proceso alveolar",
+        "Reabsorción y formación coordinadas",
         45
       ],
       [
-        "Cemento radicular",
+        "Cambio continuo de la estructura ósea",
         35
       ],
       [
-        "Ligamento periodontal",
+        "Proceso que puede modificar forma y arquitectura",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-043",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué componentes participan en la adaptación del aparato de inserción durante el crecimiento?",
+    "q": "¿Qué es la aposición ósea?",
     "a": [
       [
-        "Proceso alveolar",
+        "Depósito de tejido óseo nuevo",
         45
       ],
       [
-        "Cemento radicular",
+        "Incremento de tejido en una superficie",
         35
       ],
       [
-        "Ligamento periodontal",
+        "Actividad osteoblástica superficial",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-044",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué tejidos integran el entorno dentoalveolar que acompaña la posición dental?",
+    "q": "¿Qué es la resorción ósea?",
     "a": [
       [
-        "Proceso alveolar",
+        "Eliminación de tejido óseo",
         45
       ],
       [
-        "Cemento radicular",
+        "Actividad osteoclástica predominante",
         35
       ],
       [
-        "Ligamento periodontal",
+        "Proceso que puede modificar la forma de una superficie",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-045",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué componentes forman parte de la organización interna y externa del hueso?",
+    "q": "¿Qué relación existe entre aposición y resorción durante el crecimiento?",
     "a": [
       [
-        "Periostio",
+        "Ambas pueden ocurrir simultáneamente en distintas superficies",
         45
       ],
       [
-        "Endostio",
+        "Su distribución modifica la forma ósea",
         35
       ],
       [
-        "Médula ósea",
+        "Contribuyen al remodelado",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-046",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué tejidos deben considerarse al estudiar la biología de un hueso craneofacial?",
+    "q": "¿Qué papel tiene la mecanotransducción en el hueso?",
     "a": [
       [
-        "Periostio",
+        "Convierte estímulos mecánicos en señales celulares",
         45
       ],
       [
-        "Endostio",
+        "Participa en la adaptación del tejido óseo",
         35
       ],
       [
-        "Médula ósea",
+        "Involucra a células como los osteocitos",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-047",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué estructuras participan en la homeostasis y remodelación del tejido óseo?",
+    "q": "¿Qué estructuras pueden actuar como centros o sitios de crecimiento?",
     "a": [
       [
-        "Periostio",
+        "Cartílagos de crecimiento",
         45
       ],
       [
-        "Endostio",
+        "Suturas",
         35
       ],
       [
-        "Médula ósea",
+        "Regiones condilares según el hueso y etapa",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-048",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué componentes anatómicos rodean o contienen el tejido óseo?",
+    "q": "¿Qué afirmación describe mejor el crecimiento sutural?",
     "a": [
       [
-        "Periostio",
+        "Es un proceso regulado biológicamente",
         45
       ],
       [
-        "Endostio",
+        "Permite crecimiento de los huesos a ambos lados de una sutura",
         35
       ],
       [
-        "Médula ósea",
+        "Está influido por señales locales y fuerzas mecánicas",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-049",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué medidas cefalométricas se utilizan para valorar relaciones sagitales maxilomandibulares?",
+    "q": "¿Qué puede ocurrir si una sutura craneal se fusiona prematuramente?",
     "a": [
       [
-        "SNA",
+        "Restricción del crecimiento perpendicular a la sutura",
         45
       ],
       [
-        "SNB",
+        "Deformidad compensatoria en otras regiones",
         35
       ],
       [
-        "ANB",
+        "Alteración de la morfología craneal",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-050",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué ángulos ayudan a analizar la posición anteroposterior del maxilar y la mandíbula?",
+    "q": "¿Qué caracteriza a la craneosinostosis?",
     "a": [
       [
-        "SNA",
+        "Fusión prematura de una o más suturas",
         45
       ],
       [
-        "SNB",
+        "Alteración del crecimiento craneal",
         35
       ],
       [
-        "ANB",
+        "Patrón de deformidad dependiente de la sutura afectada",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-051",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué parámetros cefalométricos son clásicos en el análisis sagital?",
+    "q": "¿Qué papel tiene SHH en el desarrollo craneofacial?",
     "a": [
       [
-        "SNA",
+        "Regula patrones de desarrollo embrionario",
         45
       ],
       [
-        "SNB",
+        "Participa en la formación y separación de estructuras faciales",
         35
       ],
       [
-        "ANB",
+        "Interactúa con otras vías de señalización",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-052",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué medidas pueden integrarse para estudiar la relación entre maxilar, mandíbula y base craneal?",
+    "q": "¿Qué papel tienen las señales FGF en el desarrollo craneofacial?",
     "a": [
       [
-        "SNA",
+        "Regulan proliferación y diferenciación",
         45
       ],
       [
-        "SNB",
+        "Participan en desarrollo de suturas y hueso",
         35
       ],
       [
-        "ANB",
+        "Interaccionan con otras vías moleculares",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-053",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué medidas cefalométricas permiten valorar componentes del patrón facial?",
+    "q": "¿Qué papel tienen las proteínas BMP en el desarrollo craneofacial?",
     "a": [
       [
-        "SNA",
+        "Regulan diferenciación osteogénica",
         45
       ],
       [
-        "SNB",
+        "Participan en formación ósea y sutural",
         35
       ],
       [
-        "SN-GoGn",
+        "Modulan interacciones epitelio-mesénquima",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-054",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué ángulos pueden integrarse para describir relaciones sagitales y verticales?",
+    "q": "¿Qué papel tiene la vía Wnt en el desarrollo craneofacial?",
     "a": [
       [
-        "SNA",
+        "Participa en diferenciación y proliferación celular",
         45
       ],
       [
-        "SNB",
+        "Interviene en biología de las suturas",
         35
       ],
       [
-        "SN-GoGn",
+        "Contribuye a la formación y mantenimiento óseo",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-055",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué parámetros se utilizan habitualmente para caracterizar la morfología facial en cefalometría?",
+    "q": "¿Qué interacción celular es fundamental para la morfogénesis facial?",
     "a": [
       [
-        "SNA",
+        "Interacción epitelio-mesénquima",
         45
       ],
       [
-        "SNB",
+        "Señalización entre tejidos embrionarios",
         35
       ],
       [
-        "SN-GoGn",
+        "Respuesta celular a gradientes moleculares",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-056",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué medidas pueden complementar la valoración cefalométrica del crecimiento facial?",
+    "q": "¿Por qué la cresta neural craneal es especialmente importante en odontología?",
     "a": [
       [
-        "SNA",
+        "Contribuye al ectomesénquima facial",
         45
       ],
       [
-        "SNB",
+        "Participa en el desarrollo de huesos y cartílagos craneofaciales",
         35
       ],
       [
-        "SN-GoGn",
+        "Interviene en el desarrollo de tejidos dentales",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-057",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué herramientas ayudan a valorar la discrepancia sagital entre maxilar y mandíbula?",
+    "q": "¿Qué derivados están relacionados con la cresta neural craneal?",
     "a": [
       [
-        "ANB",
+        "Ectomesénquima facial",
         45
       ],
       [
-        "Wits appraisal",
+        "Parte del esqueleto craneofacial",
         35
       ],
       [
-        "Relación maxilomandibular",
+        "Componentes de tejidos dentales",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-058",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué métodos pueden complementar la evaluación de una discrepancia anteroposterior?",
+    "q": "¿Qué papel tiene el mesodermo paraxial en el cráneo?",
     "a": [
       [
-        "ANB",
+        "Contribuye a regiones craneales específicas",
         45
       ],
       [
-        "Wits appraisal",
+        "Participa en componentes musculoesqueléticos y del neurocráneo",
         35
       ],
       [
-        "Relación maxilomandibular",
+        "Interactúa con células de cresta neural",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-059",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué referencias permiten analizar la relación sagital maxilomandibular?",
+    "q": "¿Qué principio explica la influencia recíproca entre epitelio y mesénquima?",
     "a": [
       [
-        "ANB",
+        "Interacción epitelio-mesénquima",
         45
       ],
       [
-        "Wits appraisal",
+        "Señalización paracrina",
         35
       ],
       [
-        "Relación maxilomandibular",
+        "Regulación recíproca del desarrollo",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-060",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué recursos cefalométricos pueden utilizarse para estudiar una discrepancia sagital?",
+    "q": "¿Qué procesos pueden producir una alteración del desarrollo facial embrionario?",
     "a": [
       [
-        "ANB",
+        "Migración celular anómala",
         45
       ],
       [
-        "Wits appraisal",
+        "Alteraciones de proliferación o diferenciación",
         35
       ],
       [
-        "Relación maxilomandibular",
+        "Defectos de señalización",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-061",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué parámetros ayudan a valorar el componente vertical del patrón facial?",
+    "q": "¿Qué consecuencia puede tener una alteración temprana de la migración de la cresta neural?",
     "a": [
       [
-        "SN-GoGn",
+        "Malformaciones craneofaciales",
         45
       ],
       [
-        "FMA",
+        "Alteraciones de tejidos derivados de cresta neural",
         35
       ],
       [
-        "Altura facial inferior",
+        "Cambios en el desarrollo de la cara y estructuras asociadas",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-062",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué medidas pueden utilizarse para estudiar la dimensión vertical facial?",
+    "q": "¿Qué relación existe entre crecimiento sutural y señalización molecular?",
     "a": [
       [
-        "SN-GoGn",
+        "Las suturas contienen nichos celulares regulados por señales",
         45
       ],
       [
-        "FMA",
+        "FGF, BMP y Wnt participan en su biología",
         35
       ],
       [
-        "Altura facial inferior",
+        "La regulación mantiene equilibrio entre proliferación y diferenciación",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-063",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué variables cefalométricas se relacionan con el patrón vertical?",
+    "q": "¿Qué mecanismo puede explicar la respuesta de una sutura a estímulos mecánicos?",
     "a": [
       [
-        "SN-GoGn",
+        "Mecanotransducción celular",
         45
       ],
       [
-        "FMA",
+        "Modulación de actividad osteogénica",
         35
       ],
       [
-        "Altura facial inferior",
+        "Cambios en señalización y remodelado",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-064",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué indicadores ayudan a describir la tendencia vertical de crecimiento?",
+    "q": "¿Qué relación existe entre crecimiento facial y remodelado?",
     "a": [
       [
-        "SN-GoGn",
+        "El remodelado modifica la forma superficial",
         45
       ],
       [
-        "FMA",
+        "El desplazamiento cambia la posición espacial",
         35
       ],
       [
-        "Altura facial inferior",
+        "Ambos contribuyen al crecimiento global",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; literatura indexada de cefalometría y crecimiento craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-065",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué variables ayudan a contextualizar el momento de crecimiento de un paciente?",
+    "q": "¿Qué diferencia hay entre desplazamiento primario y secundario?",
     "a": [
       [
-        "Edad cronológica",
+        "El primario deriva del crecimiento de la propia estructura",
         45
       ],
       [
-        "Edad dental",
+        "El secundario resulta del crecimiento de estructuras relacionadas",
         35
       ],
       [
-        "Maduración esquelética",
+        "Ambos pueden modificar la posición espacial",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-066",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué datos deben considerarse para valorar el estado madurativo individual?",
+    "q": "¿Qué efecto tiene el crecimiento de la fosa craneal media sobre la región facial?",
     "a": [
       [
-        "Edad cronológica",
+        "Puede modificar la posición espacial del complejo maxilar",
         45
       ],
       [
-        "Edad dental",
+        "Influye en relaciones anteroposteriores",
         35
       ],
       [
-        "Maduración esquelética",
+        "Interactúa con el crecimiento de la base craneal",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-067",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué indicadores pueden complementar la valoración del crecimiento craneofacial?",
+    "q": "¿Qué factores deben considerarse al interpretar una cefalometría de un paciente en crecimiento?",
     "a": [
       [
-        "Edad cronológica",
+        "Edad y maduración",
         45
       ],
       [
-        "Edad dental",
+        "Patrón de crecimiento",
         35
       ],
       [
-        "Maduración esquelética",
+        "Relaciones esqueléticas y dentales",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-068",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué referencias permiten interpretar el desarrollo de un paciente en crecimiento?",
+    "q": "¿Por qué las medidas cefalométricas cambian durante el crecimiento?",
     "a": [
       [
-        "Edad cronológica",
+        "Cambian las posiciones relativas de las estructuras",
         45
       ],
       [
-        "Edad dental",
+        "Existe remodelado óseo continuo",
         35
       ],
       [
-        "Maduración esquelética",
+        "Las dimensiones faciales aumentan y cambian sus relaciones",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-069",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué mecanismos explican cambios de posición y forma durante el crecimiento craneofacial?",
+    "q": "¿Qué relación existe entre crecimiento maxilar y suturas circummaxilares?",
     "a": [
       [
-        "Crecimiento sutural",
+        "Las suturas permiten adaptación y desplazamiento del complejo maxilar",
         45
       ],
       [
-        "Remodelado superficial",
+        "Participan en crecimiento hacia diferentes direcciones",
         35
       ],
       [
-        "Desplazamiento",
+        "Su actividad cambia con la maduración",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-070",
     "cat": "Desarrollo craneofacial",
     "difficulty": "dificil",
-    "q": "¿Qué procesos contribuyen al desplazamiento y remodelación de los huesos faciales?",
+    "q": "¿Qué mecanismos explican el crecimiento transversal maxilar?",
     "a": [
       [
         "Crecimiento sutural",
         45
       ],
       [
-        "Remodelado superficial",
+        "Remodelado óseo",
         35
       ],
       [
-        "Desplazamiento",
+        "Cambios dentoalveolares asociados",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-071",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué mecanismos deben considerarse al explicar el crecimiento facial?",
+    "q": "¿Qué afirmaciones describen correctamente la formación de la mandíbula?",
     "a": [
       [
-        "Crecimiento sutural",
+        "Deriva principalmente del primer arco faríngeo",
         45
       ],
       [
-        "Remodelado superficial",
+        "La osificación es predominantemente intramembranosa",
         35
       ],
       [
-        "Desplazamiento",
+        "El cartílago de Meckel actúa como estructura de referencia embrionaria",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-072",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué procesos pueden producir cambios espaciales de las estructuras craneofaciales?",
+    "q": "¿Qué afirmaciones describen el desarrollo del maxilar?",
     "a": [
       [
-        "Crecimiento sutural",
+        "Deriva del primer arco faríngeo",
         45
       ],
       [
-        "Remodelado superficial",
+        "Su esqueleto se forma principalmente por osificación intramembranosa",
         35
       ],
       [
-        "Desplazamiento",
+        "Su crecimiento se relaciona con suturas circummaxilares",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-073",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué procesos de crecimiento están coordinados durante el desarrollo craneofacial?",
+    "q": "¿Qué procesos participan en la formación del paladar secundario?",
     "a": [
       [
-        "Crecimiento del cerebro",
+        "Crecimiento de los procesos palatinos",
         45
       ],
       [
-        "Crecimiento de la base craneal",
+        "Elevación y aproximación de los procesos",
         35
       ],
       [
-        "Crecimiento facial",
+        "Fusión entre los procesos palatinos y estructuras vecinas",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-074",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué componentes del desarrollo influyen en la configuración global de la cabeza y la cara?",
+    "q": "¿Qué factores pueden alterar la fusión palatina?",
     "a": [
       [
-        "Crecimiento del cerebro",
+        "Defectos de crecimiento de los procesos",
         45
       ],
       [
-        "Crecimiento de la base craneal",
+        "Alteraciones de señalización",
         35
       ],
       [
-        "Crecimiento facial",
+        "Problemas en elevación, aproximación o fusión",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-075",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué fenómenos deben integrarse al estudiar el crecimiento craneofacial?",
+    "q": "¿Qué regiones forman el segmento intermaxilar?",
     "a": [
       [
-        "Crecimiento del cerebro",
+        "Paladar primario",
         45
       ],
       [
-        "Crecimiento de la base craneal",
+        "Porción premaxilar",
         35
       ],
       [
-        "Crecimiento facial",
+        "Región asociada a las prominencias nasales mediales",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-076",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué procesos biológicos se relacionan entre sí durante el crecimiento de la región craneofacial?",
+    "q": "¿Qué relación existe entre prominencias faciales y hendiduras orofaciales?",
     "a": [
       [
-        "Crecimiento del cerebro",
+        "La falta de fusión adecuada puede producir hendiduras",
         45
       ],
       [
-        "Crecimiento de la base craneal",
+        "La migración y proliferación celular son necesarias para la unión",
         35
       ],
       [
-        "Crecimiento facial",
+        "La región afectada depende del proceso embrionario alterado",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: desarrollo embrionario facial y palatino; PMID 10925768; PMID 32151371."
   },
   {
     "id": "ORG5-077",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué tejidos musculoesqueléticos participan en la construcción del complejo craneofacial?",
+    "q": "¿Qué mecanismos explican la expansión de la bóveda craneal?",
     "a": [
       [
-        "Cartílago",
+        "Crecimiento encefálico",
         45
       ],
       [
-        "Hueso",
+        "Actividad sutural",
         35
       ],
       [
-        "Tejido conjuntivo",
+        "Remodelado de las superficies óseas",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-078",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué tipos de tejido son relevantes para el desarrollo de las estructuras craneofaciales?",
+    "q": "¿Qué mecanismos explican el crecimiento de la base craneal?",
     "a": [
       [
-        "Cartílago",
+        "Crecimiento de sincondrosis",
         45
       ],
       [
-        "Hueso",
+        "Osificación endocondral",
         35
       ],
       [
-        "Tejido conjuntivo",
+        "Remodelado posterior",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-079",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué tejidos deben considerarse al estudiar la morfogénesis craneofacial?",
+    "q": "¿Qué característica distingue a las sincondrosis de la base craneal?",
     "a": [
       [
-        "Cartílago",
+        "Son uniones cartilaginosas",
         45
       ],
       [
-        "Hueso",
+        "Permiten crecimiento mediante cartílago",
         35
       ],
       [
-        "Tejido conjuntivo",
+        "Participan en el crecimiento anteroposterior de la base",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-080",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué componentes tisulares intervienen en la arquitectura craneofacial?",
+    "q": "¿Qué relación existe entre base craneal y patrón facial?",
     "a": [
       [
-        "Cartílago",
+        "La longitud y angulación de la base influyen en relaciones faciales",
         45
       ],
       [
-        "Hueso",
+        "Puede modificar la posición relativa de maxila y mandíbula",
         35
       ],
       [
-        "Tejido conjuntivo",
+        "Debe interpretarse junto con crecimiento facial",
         20
       ]
     ],
-    "source": "PubMed PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493; literatura indexada de desarrollo craneofacial."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-081",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué estructuras participan en la formación embrionaria de la cara media?",
+    "q": "¿Qué mecanismos pueden modificar la posición de la mandíbula durante el crecimiento?",
     "a": [
       [
-        "Paladar primario",
+        "Crecimiento condilar",
         45
       ],
       [
-        "Paladar secundario",
+        "Remodelado mandibular",
         35
       ],
       [
-        "Proceso frontonasal",
+        "Desplazamiento espacial de la mandíbula",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-082",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué componentes deben reconocerse al estudiar la formación del paladar y tercio medio facial?",
+    "q": "¿Qué cambios ocurren en el complejo maxilomandibular durante la adolescencia?",
     "a": [
       [
-        "Paladar primario",
+        "Aumento de dimensiones esqueléticas",
         45
       ],
       [
-        "Paladar secundario",
+        "Remodelado continuo",
         35
       ],
       [
-        "Proceso frontonasal",
+        "Cambios en relaciones sagitales, verticales y transversales",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-083",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué regiones embrionarias contribuyen a la organización de la cara media?",
+    "q": "¿Qué factores explican que dos pacientes de la misma edad tengan diferente patrón facial?",
     "a": [
       [
-        "Paladar primario",
+        "Genética",
         45
       ],
       [
-        "Paladar secundario",
+        "Maduración biológica",
         35
       ],
       [
-        "Proceso frontonasal",
+        "Ambiente y función",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-084",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué estructuras participan en la morfogénesis del tercio medio y paladar?",
+    "q": "¿Qué diferencia existe entre crecimiento facial horizontal y vertical?",
     "a": [
       [
-        "Paladar primario",
+        "Se refiere a la dirección predominante del cambio dimensional",
         45
       ],
       [
-        "Paladar secundario",
+        "Puede modificar la relación maxilomandibular",
         35
       ],
       [
-        "Proceso frontonasal",
+        "Se interpreta mediante múltiples medidas clínicas y cefalométricas",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-085",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué estructuras embrionarias son fundamentales para la formación de la cara y las mandíbulas?",
+    "q": "¿Qué variables pueden influir en la dirección del crecimiento mandibular?",
     "a": [
       [
-        "Primer arco faríngeo",
+        "Patrón de crecimiento",
         45
       ],
       [
-        "Cresta neural craneal",
+        "Rotación mandibular",
         35
       ],
       [
-        "Prominencias faciales",
+        "Remodelado de las superficies",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-086",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué componentes participan en la morfogénesis inicial del esqueleto facial?",
+    "q": "¿Qué papel tiene la función muscular en el desarrollo craneofacial?",
     "a": [
       [
-        "Primer arco faríngeo",
+        "Genera cargas mecánicas sobre estructuras",
         45
       ],
       [
-        "Cresta neural craneal",
+        "Interactúa con crecimiento y remodelado",
         35
       ],
       [
-        "Prominencias faciales",
+        "Contribuye a la adaptación funcional del sistema",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-087",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué elementos del desarrollo embrionario intervienen en la formación de la región maxilomandibular?",
+    "q": "¿Qué principio biológico relaciona carga mecánica y adaptación ósea?",
     "a": [
       [
-        "Primer arco faríngeo",
+        "Mecanotransducción",
         45
       ],
       [
-        "Cresta neural craneal",
+        "Remodelado dependiente de carga",
         35
       ],
       [
-        "Prominencias faciales",
+        "Respuesta de células óseas a estímulos mecánicos",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-088",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué estructuras deben estudiarse para comprender el origen embrionario de la cara?",
+    "q": "¿Qué papel desempeñan los osteocitos en la adaptación mecánica?",
     "a": [
       [
-        "Primer arco faríngeo",
+        "Detectan estímulos mecánicos",
         45
       ],
       [
-        "Cresta neural craneal",
+        "Regulan señales que afectan a osteoblastos y osteoclastos",
         35
       ],
       [
-        "Prominencias faciales",
+        "Participan en la homeostasis ósea",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-089",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué vías de señalización participan en el desarrollo craneofacial?",
+    "q": "¿Qué afirmación es correcta sobre el crecimiento craneofacial y la ortodoncia?",
     "a": [
       [
-        "FGF",
+        "El crecimiento modifica las relaciones dentoesqueléticas",
         45
       ],
       [
-        "BMP",
+        "El momento de tratamiento puede depender de la maduración",
         35
       ],
       [
-        "Wnt",
+        "No todo crecimiento puede ser modificado ortopédicamente",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-090",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué familias de señales regulan procesos del desarrollo óseo y craneofacial?",
+    "q": "¿Qué factores deben evaluarse antes de atribuir una alteración facial a una causa funcional?",
     "a": [
       [
-        "FGF",
+        "Patrón esquelético",
         45
       ],
       [
-        "BMP",
+        "Crecimiento y maduración",
         35
       ],
       [
-        "Wnt",
+        "Historia clínica y función",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-091",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué sistemas de señalización se relacionan con la morfogénesis craneofacial?",
+    "q": "¿Qué mecanismos pueden producir asimetría craneofacial?",
     "a": [
       [
-        "FGF",
+        "Crecimiento diferencial",
         45
       ],
       [
-        "BMP",
+        "Alteraciones funcionales o articulares",
         35
       ],
       [
-        "Wnt",
+        "Diferencias de desarrollo entre lados",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-092",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué vías moleculares son relevantes para el desarrollo de huesos y suturas craneales?",
+    "q": "¿Qué relación puede existir entre función mandibular y crecimiento condilar?",
     "a": [
       [
-        "FGF",
+        "La carga funcional participa en la biología condilar",
         45
       ],
       [
-        "BMP",
+        "El cóndilo responde a señales mecánicas y biológicas",
         35
       ],
       [
-        "Wnt",
+        "La relación no debe interpretarse como causalidad simple",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-093",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué señales moleculares participan en la organización de la cara embrionaria?",
+    "q": "¿Qué papel tienen FGF y BMP en las suturas?",
     "a": [
       [
-        "SHH",
+        "Regulan proliferación y diferenciación",
         45
       ],
       [
-        "FGF",
+        "Participan en homeostasis y osteogénesis sutural",
         35
       ],
       [
-        "BMP",
+        "Su equilibrio contribuye a mantener la sutura funcional",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-094",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué factores de señalización son relevantes para el patrón craneofacial?",
+    "q": "¿Qué ocurre cuando se altera la señalización que mantiene una sutura?",
     "a": [
       [
-        "SHH",
+        "Puede cambiar la proliferación celular",
         45
       ],
       [
-        "FGF",
+        "Puede alterarse la diferenciación osteogénica",
         35
       ],
       [
-        "BMP",
+        "Puede favorecer cierre prematuro en determinados contextos",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: señalización molecular y morfogénesis craneofacial; PMID 10925768; PMID 35887171."
   },
   {
     "id": "ORG5-095",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué vías reguladoras intervienen en la formación de maxila y mandíbula?",
+    "q": "¿Qué principio debe evitarse al interpretar una anomalía craneofacial?",
     "a": [
       [
-        "SHH",
+        "Atribuirla a una sola causa sin evidencia",
         45
       ],
       [
-        "FGF",
+        "Confundir asociación con causalidad",
         35
       ],
       [
-        "BMP",
+        "Ignorar factores genéticos y del desarrollo",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   },
   {
     "id": "ORG5-096",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué señales participan en la proliferación y diferenciación durante el desarrollo facial?",
+    "q": "¿Qué herramientas pueden utilizarse para valorar crecimiento craneofacial?",
     "a": [
       [
-        "SHH",
+        "Exploración clínica",
         45
       ],
       [
-        "FGF",
+        "Cefalometría",
         35
       ],
       [
-        "BMP",
+        "Evaluación de maduración esquelética",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-097",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué procesos celulares son esenciales para el desarrollo craneofacial embrionario?",
+    "q": "¿Qué limitación tiene usar únicamente la edad cronológica para planificar tratamiento?",
     "a": [
       [
-        "Migración celular",
+        "No refleja exactamente la maduración individual",
         45
       ],
       [
-        "Proliferación celular",
+        "No determina por sí sola el potencial de crecimiento",
         35
       ],
       [
-        "Diferenciación celular",
+        "Puede diferir de la edad dental y esquelética",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-098",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué fenómenos celulares permiten que las estructuras faciales se formen correctamente?",
+    "q": "¿Qué relación existe entre desarrollo dental y crecimiento craneofacial?",
     "a": [
       [
-        "Migración celular",
+        "Ambos procesos tienen cronologías parcialmente relacionadas",
         45
       ],
       [
-        "Proliferación celular",
+        "La edad dental aporta información sobre maduración",
         35
       ],
       [
-        "Diferenciación celular",
+        "No son equivalentes ni intercambiables",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-099",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué procesos deben coordinarse durante la morfogénesis craneofacial?",
+    "q": "¿Qué debe integrar una evaluación avanzada del desarrollo craneofacial?",
     "a": [
       [
-        "Migración celular",
+        "Anatomía y crecimiento",
         45
       ],
       [
-        "Proliferación celular",
+        "Maduración y función",
         35
       ],
       [
-        "Diferenciación celular",
+        "Genética, clínica e imagen cuando estén indicadas",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: crecimiento craneofacial, suturas, base craneal y crecimiento maxilomandibular; PMID 32151371; PMID 33723764."
   },
   {
     "id": "ORG5-100",
     "cat": "Desarrollo craneofacial",
     "difficulty": "extremo",
-    "q": "¿Qué eventos celulares participan en la formación de los tejidos craneofaciales?",
+    "q": "¿Qué principio resume mejor el desarrollo craneofacial?",
     "a": [
       [
-        "Migración celular",
+        "Es un proceso dinámico y multifactorial",
         45
       ],
       [
-        "Proliferación celular",
+        "Integra genética, señalización, crecimiento, remodelado y función",
         35
       ],
       [
-        "Diferenciación celular",
+        "La expresión final depende de la interacción entre múltiples procesos",
         20
       ]
     ],
-    "source": "PubMed PMID 10925768; PMID 32151371; PMID 42487338; literatura indexada de crecimiento y cefalometría."
+    "source": "PubMed: desarrollo craneofacial y cresta neural; PMID 32151371; PMID 33723764; PMID 35887171; PMID 18391493."
   }
 ]
