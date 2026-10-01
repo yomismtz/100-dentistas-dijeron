@@ -7,18 +7,26 @@
     "a": [
       [
         "historia clínica actualizada",
-        45
+        40
       ],
       [
         "exploración clínica",
-        35
+        25
       ],
       [
         "estudios complementarios indicados",
-        20
+        15
+      ],
+      [
+        "evaluación del riesgo",
+        12
+      ],
+      [
+        "plan quirúrgico individualizado",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-2",
@@ -28,18 +36,26 @@
     "a": [
       [
         "enfermedades sistémicas",
-        45
+        40
       ],
       [
         "medicación actual",
-        35
+        25
       ],
       [
         "antecedentes relevantes",
-        20
+        15
+      ],
+      [
+        "evaluación del riesgo",
+        12
+      ],
+      [
+        "plan quirúrgico individualizado",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-3",
@@ -49,18 +65,26 @@
     "a": [
       [
         "identidad del paciente",
-        45
+        40
       ],
       [
         "procedimiento y sitio",
-        35
+        25
       ],
       [
         "consentimiento",
-        20
+        15
+      ],
+      [
+        "evaluación del riesgo",
+        12
+      ],
+      [
+        "plan quirúrgico individualizado",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-4",
@@ -70,18 +94,26 @@
     "a": [
       [
         "hallazgos anatómicos",
-        45
+        40
       ],
       [
         "condiciones sistémicas",
-        35
+        25
       ],
       [
         "diagnóstico definitivo",
-        20
+        15
+      ],
+      [
+        "evaluación del riesgo",
+        12
+      ],
+      [
+        "plan quirúrgico individualizado",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-5",
@@ -91,18 +123,26 @@
     "a": [
       [
         "enfermedades sistémicas",
-        45
+        40
       ],
       [
         "medicamentos",
-        35
+        25
       ],
       [
         "antecedentes hemorrágicos",
-        20
+        15
+      ],
+      [
+        "alergias",
+        12
+      ],
+      [
+        "hábitos relevantes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-6",
@@ -112,18 +152,26 @@
     "a": [
       [
         "nombre",
-        45
+        40
       ],
       [
         "dosis",
-        35
+        25
       ],
       [
         "frecuencia",
-        20
+        15
+      ],
+      [
+        "alergias",
+        12
+      ],
+      [
+        "hábitos relevantes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-7",
@@ -133,18 +181,26 @@
     "a": [
       [
         "trastornos de coagulación",
-        45
+        40
       ],
       [
         "anticoagulantes",
-        35
+        25
       ],
       [
         "antiagregantes",
-        20
+        15
+      ],
+      [
+        "alergias",
+        12
+      ],
+      [
+        "hábitos relevantes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-8",
@@ -154,18 +210,26 @@
     "a": [
       [
         "reacciones adversas",
-        45
+        40
       ],
       [
         "complicaciones",
-        35
+        25
       ],
       [
         "anestésico implicado",
-        20
+        15
+      ],
+      [
+        "alergias",
+        12
+      ],
+      [
+        "hábitos relevantes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-9",
@@ -175,18 +239,26 @@
     "a": [
       [
         "procedimiento propuesto",
-        45
+        40
       ],
       [
         "riesgos y beneficios",
-        35
+        25
       ],
       [
         "alternativas",
-        20
+        15
+      ],
+      [
+        "procedimiento autorizado",
+        12
+      ],
+      [
+        "posibles complicaciones",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-10",
@@ -196,18 +268,26 @@
     "a": [
       [
         "opciones disponibles",
-        45
+        40
       ],
       [
         "beneficios esperados",
-        35
+        25
       ],
       [
         "riesgos relevantes",
-        20
+        15
+      ],
+      [
+        "procedimiento autorizado",
+        12
+      ],
+      [
+        "posibles complicaciones",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-11",
@@ -217,18 +297,26 @@
     "a": [
       [
         "identidad",
-        45
+        40
       ],
       [
         "procedimiento",
-        35
+        25
       ],
       [
         "consentimiento",
-        20
+        15
+      ],
+      [
+        "procedimiento autorizado",
+        12
+      ],
+      [
+        "posibles complicaciones",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-12",
@@ -238,18 +326,26 @@
     "a": [
       [
         "información proporcionada",
-        45
+        40
       ],
       [
         "aceptación",
-        35
+        25
       ],
       [
         "procedimiento autorizado",
-        20
+        15
+      ],
+      [
+        "procedimiento autorizado",
+        12
+      ],
+      [
+        "posibles complicaciones",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-13",
@@ -259,18 +355,26 @@
     "a": [
       [
         "higiene de manos",
-        45
+        40
       ],
       [
         "equipo de protección",
-        35
+        25
       ],
       [
         "instrumental esterilizado",
-        20
+        15
+      ],
+      [
+        "desinfección de superficies",
+        12
+      ],
+      [
+        "manejo de residuos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-14",
@@ -280,18 +384,26 @@
     "a": [
       [
         "limpieza",
-        45
+        40
       ],
       [
         "empaque",
-        35
+        25
       ],
       [
         "esterilización",
-        20
+        15
+      ],
+      [
+        "desinfección de superficies",
+        12
+      ],
+      [
+        "manejo de residuos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-15",
@@ -301,18 +413,26 @@
     "a": [
       [
         "evitar contaminación cruzada",
-        45
+        40
       ],
       [
         "mantener el campo limpio",
-        35
+        25
       ],
       [
         "manipular correctamente el instrumental",
-        20
+        15
+      ],
+      [
+        "desinfección de superficies",
+        12
+      ],
+      [
+        "manejo de residuos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-16",
@@ -322,18 +442,26 @@
     "a": [
       [
         "higiene de manos",
-        45
+        40
       ],
       [
         "barreras de protección",
-        35
+        25
       ],
       [
         "esterilización",
-        20
+        15
+      ],
+      [
+        "desinfección de superficies",
+        12
+      ],
+      [
+        "manejo de residuos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-17",
@@ -343,18 +471,26 @@
     "a": [
       [
         "procedimiento",
-        45
+        40
       ],
       [
         "duración",
-        35
+        25
       ],
       [
         "condiciones del paciente",
-        20
+        15
+      ],
+      [
+        "vasoconstrictor cuando esté indicado",
+        12
+      ],
+      [
+        "peso del paciente",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-18",
@@ -364,18 +500,26 @@
     "a": [
       [
         "alergias",
-        45
+        40
       ],
       [
         "antecedentes médicos",
-        35
+        25
       ],
       [
         "dosis calculada",
-        20
+        15
+      ],
+      [
+        "vasoconstrictor cuando esté indicado",
+        12
+      ],
+      [
+        "peso del paciente",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-19",
@@ -385,18 +529,26 @@
     "a": [
       [
         "síntomas neurológicos",
-        45
+        40
       ],
       [
         "alteraciones cardiovasculares",
-        35
+        25
       ],
       [
         "progresión clínica",
-        20
+        15
+      ],
+      [
+        "vasoconstrictor cuando esté indicado",
+        12
+      ],
+      [
+        "peso del paciente",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-20",
@@ -406,18 +558,26 @@
     "a": [
       [
         "dosis apropiada",
-        45
+        40
       ],
       [
         "aspiración cuando está indicada",
-        35
+        25
       ],
       [
         "inyección lenta",
-        20
+        15
+      ],
+      [
+        "vasoconstrictor cuando esté indicado",
+        12
+      ],
+      [
+        "peso del paciente",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-21",
@@ -427,18 +587,26 @@
     "a": [
       [
         "luxación controlada",
-        45
+        40
       ],
       [
         "fuerza adecuada",
-        35
+        25
       ],
       [
         "protección de tejidos",
-        20
+        15
+      ],
+      [
+        "movilidad dental",
+        12
+      ],
+      [
+        "estado de tejidos blandos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-22",
@@ -448,18 +616,26 @@
     "a": [
       [
         "elevadores",
-        45
+        40
       ],
       [
         "fórceps",
-        35
+        25
       ],
       [
         "curetas cuando están indicadas",
-        20
+        15
+      ],
+      [
+        "movilidad dental",
+        12
+      ],
+      [
+        "estado de tejidos blandos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-23",
@@ -469,18 +645,26 @@
     "a": [
       [
         "morfología radicular",
-        45
+        40
       ],
       [
         "soporte óseo",
-        35
+        25
       ],
       [
         "relaciones anatómicas",
-        20
+        15
+      ],
+      [
+        "movilidad dental",
+        12
+      ],
+      [
+        "estado de tejidos blandos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-24",
@@ -490,18 +674,26 @@
     "a": [
       [
         "expandir progresivamente el alveolo",
-        45
+        40
       ],
       [
         "seccionar fibras periodontales",
-        35
+        25
       ],
       [
         "movilizar el diente",
-        20
+        15
+      ],
+      [
+        "movilidad dental",
+        12
+      ],
+      [
+        "estado de tejidos blandos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-25",
@@ -511,18 +703,26 @@
     "a": [
       [
         "acceso insuficiente",
-        45
+        40
       ],
       [
         "raíces complejas",
-        35
+        25
       ],
       [
         "diente parcialmente incluido",
-        20
+        15
+      ],
+      [
+        "separación radicular",
+        12
+      ],
+      [
+        "irrigación del campo",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-26",
@@ -532,18 +732,26 @@
     "a": [
       [
         "colgajo",
-        45
+        40
       ],
       [
         "osteotomía indicada",
-        35
+        25
       ],
       [
         "odontosección indicada",
-        20
+        15
+      ],
+      [
+        "separación radicular",
+        12
+      ],
+      [
+        "irrigación del campo",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-27",
@@ -553,18 +761,26 @@
     "a": [
       [
         "morfología radicular",
-        45
+        40
       ],
       [
         "acceso",
-        35
+        25
       ],
       [
         "estructuras vecinas",
-        20
+        15
+      ],
+      [
+        "separación radicular",
+        12
+      ],
+      [
+        "irrigación del campo",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-28",
@@ -574,18 +790,26 @@
     "a": [
       [
         "facilitar acceso",
-        45
+        40
       ],
       [
         "reducir fuerzas",
-        35
+        25
       ],
       [
         "preservar hueso",
-        20
+        15
+      ],
+      [
+        "separación radicular",
+        12
+      ],
+      [
+        "irrigación del campo",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-29",
@@ -595,18 +819,26 @@
     "a": [
       [
         "posición",
-        45
+        40
       ],
       [
         "relaciones anatómicas",
-        35
+        25
       ],
       [
         "patología asociada",
-        20
+        15
+      ],
+      [
+        "estado periodontal",
+        12
+      ],
+      [
+        "síntomas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-30",
@@ -616,18 +848,26 @@
     "a": [
       [
         "pericoronitis recurrente",
-        45
+        40
       ],
       [
         "caries no restaurable",
-        35
+        25
       ],
       [
         "patología asociada",
-        20
+        15
+      ],
+      [
+        "estado periodontal",
+        12
+      ],
+      [
+        "síntomas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-31",
@@ -637,18 +877,26 @@
     "a": [
       [
         "conducto mandibular",
-        45
+        40
       ],
       [
         "segundo molar",
-        35
+        25
       ],
       [
         "cortical lingual",
-        20
+        15
+      ],
+      [
+        "estado periodontal",
+        12
+      ],
+      [
+        "síntomas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-32",
@@ -658,18 +906,26 @@
     "a": [
       [
         "panorámica",
-        45
+        40
       ],
       [
         "radiografía intraoral cuando procede",
-        35
+        25
       ],
       [
         "CBCT indicada clínicamente",
-        20
+        15
+      ],
+      [
+        "estado periodontal",
+        12
+      ],
+      [
+        "síntomas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-33",
@@ -679,18 +935,26 @@
     "a": [
       [
         "posición",
-        45
+        40
       ],
       [
         "profundidad",
-        35
+        25
       ],
       [
         "relación anatómica",
-        20
+        15
+      ],
+      [
+        "angulación",
+        12
+      ],
+      [
+        "espacio disponible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-34",
@@ -700,18 +964,26 @@
     "a": [
       [
         "reabsorción radicular",
-        45
+        40
       ],
       [
         "quistes",
-        35
+        25
       ],
       [
         "infección",
-        20
+        15
+      ],
+      [
+        "angulación",
+        12
+      ],
+      [
+        "espacio disponible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-35",
@@ -721,18 +993,26 @@
     "a": [
       [
         "eliminar patología",
-        45
+        40
       ],
       [
         "facilitar erupción cuando es viable",
-        35
+        25
       ],
       [
         "preservar estructuras",
-        20
+        15
+      ],
+      [
+        "angulación",
+        12
+      ],
+      [
+        "espacio disponible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-36",
@@ -742,18 +1022,26 @@
     "a": [
       [
         "localización",
-        45
+        40
       ],
       [
         "relación con raíces",
-        35
+        25
       ],
       [
         "relación con estructuras vecinas",
-        20
+        15
+      ],
+      [
+        "angulación",
+        12
+      ],
+      [
+        "espacio disponible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-37",
@@ -763,18 +1051,26 @@
     "a": [
       [
         "base vascularizada",
-        45
+        40
       ],
       [
         "acceso suficiente",
-        35
+        25
       ],
       [
         "cierre sin tensión",
-        20
+        15
+      ],
+      [
+        "edad dental",
+        12
+      ],
+      [
+        "desarrollo radicular",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-38",
@@ -784,18 +1080,26 @@
     "a": [
       [
         "base demasiado estrecha",
-        45
+        40
       ],
       [
         "tensión excesiva",
-        35
+        25
       ],
       [
         "lesión innecesaria",
-        20
+        15
+      ],
+      [
+        "edad dental",
+        12
+      ],
+      [
+        "desarrollo radicular",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-39",
@@ -805,18 +1109,26 @@
     "a": [
       [
         "aporte sanguíneo",
-        45
+        40
       ],
       [
         "manejo cuidadoso",
-        35
+        25
       ],
       [
         "cierre estable",
-        20
+        15
+      ],
+      [
+        "edad dental",
+        12
+      ],
+      [
+        "desarrollo radicular",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-40",
@@ -826,18 +1138,26 @@
     "a": [
       [
         "acceso",
-        45
+        40
       ],
       [
         "anatomía",
-        35
+        25
       ],
       [
         "procedimiento",
-        20
+        15
+      ],
+      [
+        "edad dental",
+        12
+      ],
+      [
+        "desarrollo radicular",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-41",
@@ -847,18 +1167,26 @@
     "a": [
       [
         "aproximar tejidos",
-        45
+        40
       ],
       [
         "estabilizar la herida",
-        35
+        25
       ],
       [
         "favorecer cicatrización",
-        20
+        15
+      ],
+      [
+        "material absorbible",
+        12
+      ],
+      [
+        "material no absorbible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-42",
@@ -868,18 +1196,26 @@
     "a": [
       [
         "resistencia suficiente",
-        45
+        40
       ],
       [
         "manejo adecuado",
-        35
+        25
       ],
       [
         "baja reacción tisular",
-        20
+        15
+      ],
+      [
+        "material absorbible",
+        12
+      ],
+      [
+        "material no absorbible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-43",
@@ -889,18 +1225,26 @@
     "a": [
       [
         "procedimiento",
-        45
+        40
       ],
       [
         "tejido",
-        35
+        25
       ],
       [
         "necesidad de retiro",
-        20
+        15
+      ],
+      [
+        "material absorbible",
+        12
+      ],
+      [
+        "material no absorbible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-44",
@@ -910,18 +1254,26 @@
     "a": [
       [
         "isquemia",
-        45
+        40
       ],
       [
         "dehiscencia",
-        35
+        25
       ],
       [
         "alteración de cicatrización",
-        20
+        15
+      ],
+      [
+        "material absorbible",
+        12
+      ],
+      [
+        "material no absorbible",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-45",
@@ -931,18 +1283,26 @@
     "a": [
       [
         "presión directa",
-        45
+        40
       ],
       [
         "agentes hemostáticos indicados",
-        35
+        25
       ],
       [
         "sutura",
-        20
+        15
+      ],
+      [
+        "coágulo estable",
+        12
+      ],
+      [
+        "revisión de factores sistémicos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-46",
@@ -952,18 +1312,26 @@
     "a": [
       [
         "sitio de sangrado",
-        45
+        40
       ],
       [
         "estado sistémico",
-        35
+        25
       ],
       [
         "medicación",
-        20
+        15
+      ],
+      [
+        "coágulo estable",
+        12
+      ],
+      [
+        "revisión de factores sistémicos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-47",
@@ -973,18 +1341,26 @@
     "a": [
       [
         "presión con gasa",
-        45
+        40
       ],
       [
         "estabilización del coágulo",
-        35
+        25
       ],
       [
         "reevaluación",
-        20
+        15
+      ],
+      [
+        "coágulo estable",
+        12
+      ],
+      [
+        "revisión de factores sistémicos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-48",
@@ -994,18 +1370,26 @@
     "a": [
       [
         "trastornos de coagulación",
-        45
+        40
       ],
       [
         "medicación antitrombótica",
-        35
+        25
       ],
       [
         "traumatismo local",
-        20
+        15
+      ],
+      [
+        "coágulo estable",
+        12
+      ],
+      [
+        "revisión de factores sistémicos",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-49",
@@ -1015,18 +1399,26 @@
     "a": [
       [
         "hemostasia",
-        45
+        40
       ],
       [
         "inflamación",
-        35
+        25
       ],
       [
         "proliferación y remodelación",
-        20
+        15
+      ],
+      [
+        "formación de coágulo",
+        12
+      ],
+      [
+        "formación de tejido de granulación",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-50",
@@ -1036,18 +1428,26 @@
     "a": [
       [
         "neutrófilos",
-        45
+        40
       ],
       [
         "macrófagos",
-        35
+        25
       ],
       [
         "células inflamatorias",
-        20
+        15
+      ],
+      [
+        "formación de coágulo",
+        12
+      ],
+      [
+        "formación de tejido de granulación",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-51",
@@ -1057,18 +1457,26 @@
     "a": [
       [
         "tejido de granulación",
-        45
+        40
       ],
       [
         "angiogénesis",
-        35
+        25
       ],
       [
         "deposición de matriz",
-        20
+        15
+      ],
+      [
+        "formación de coágulo",
+        12
+      ],
+      [
+        "formación de tejido de granulación",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-52",
@@ -1078,18 +1486,26 @@
     "a": [
       [
         "reorganización del colágeno",
-        45
+        40
       ],
       [
         "maduración tisular",
-        35
+        25
       ],
       [
         "aumento de resistencia",
-        20
+        15
+      ],
+      [
+        "formación de coágulo",
+        12
+      ],
+      [
+        "formación de tejido de granulación",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-53",
@@ -1099,18 +1515,26 @@
     "a": [
       [
         "dolor postextracción intenso",
-        45
+        40
       ],
       [
         "pérdida del coágulo",
-        35
+        25
       ],
       [
         "inicio diferido",
-        20
+        15
+      ],
+      [
+        "dolor",
+        12
+      ],
+      [
+        "mal olor o sabor",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-54",
@@ -1120,18 +1544,26 @@
     "a": [
       [
         "tabaquismo",
-        45
+        40
       ],
       [
         "extracción difícil",
-        35
+        25
       ],
       [
         "antecedente de alveolitis",
-        20
+        15
+      ],
+      [
+        "dolor",
+        12
+      ],
+      [
+        "mal olor o sabor",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-55",
@@ -1141,18 +1573,26 @@
     "a": [
       [
         "irrigación cuidadosa indicada",
-        45
+        40
       ],
       [
         "analgesia",
-        35
+        25
       ],
       [
         "curación local",
-        20
+        15
+      ],
+      [
+        "dolor",
+        12
+      ],
+      [
+        "mal olor o sabor",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-56",
@@ -1162,18 +1602,26 @@
     "a": [
       [
         "dolor intenso",
-        45
+        40
       ],
       [
         "alveolo sin coágulo adecuado",
-        35
+        25
       ],
       [
         "ausencia de una colección purulenta como hallazgo principal",
-        20
+        15
+      ],
+      [
+        "dolor",
+        12
+      ],
+      [
+        "mal olor o sabor",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-57",
@@ -1183,18 +1631,26 @@
     "a": [
       [
         "aumento de volumen progresivo",
-        45
+        40
       ],
       [
         "fiebre o compromiso sistémico",
-        35
+        25
       ],
       [
         "disfagia o dificultad respiratoria",
-        20
+        15
+      ],
+      [
+        "cultivo cuando esté indicado",
+        12
+      ],
+      [
+        "drenaje",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-58",
@@ -1204,18 +1660,26 @@
     "a": [
       [
         "control del foco",
-        45
+        40
       ],
       [
         "drenaje indicado",
-        35
+        25
       ],
       [
         "tratamiento del diente causal",
-        20
+        15
+      ],
+      [
+        "cultivo cuando esté indicado",
+        12
+      ],
+      [
+        "drenaje",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-59",
@@ -1225,18 +1689,26 @@
     "a": [
       [
         "compromiso de vía aérea",
-        45
+        40
       ],
       [
         "diseminación rápida",
-        35
+        25
       ],
       [
         "signos sistémicos importantes",
-        20
+        15
+      ],
+      [
+        "cultivo cuando esté indicado",
+        12
+      ],
+      [
+        "drenaje",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-60",
@@ -1246,18 +1718,26 @@
     "a": [
       [
         "son complemento cuando están indicados",
-        45
+        40
       ],
       [
         "no sustituyen el control del foco",
-        35
+        25
       ],
       [
         "deben seleccionarse según el cuadro",
-        20
+        15
+      ],
+      [
+        "cultivo cuando esté indicado",
+        12
+      ],
+      [
+        "drenaje",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-61",
@@ -1267,18 +1747,26 @@
     "a": [
       [
         "seno maxilar",
-        45
+        40
       ],
       [
         "membrana sinusal",
-        35
+        25
       ],
       [
         "tejidos alveolares",
-        20
+        15
+      ],
+      [
+        "protección sinusal",
+        12
+      ],
+      [
+        "instrucciones postoperatorias",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-62",
@@ -1288,18 +1776,26 @@
     "a": [
       [
         "paso de aire o líquidos",
-        45
+        40
       ],
       [
         "comunicación visible",
-        35
+        25
       ],
       [
         "síntomas sinusales",
-        20
+        15
+      ],
+      [
+        "protección sinusal",
+        12
+      ],
+      [
+        "instrucciones postoperatorias",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-63",
@@ -1309,18 +1805,26 @@
     "a": [
       [
         "raíces próximas al seno",
-        45
+        40
       ],
       [
         "anatomía sinusal",
-        35
+        25
       ],
       [
         "extracción traumática",
-        20
+        15
+      ],
+      [
+        "protección sinusal",
+        12
+      ],
+      [
+        "instrucciones postoperatorias",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-64",
@@ -1330,18 +1834,26 @@
     "a": [
       [
         "valorar tamaño y localización",
-        45
+        40
       ],
       [
         "proteger tejidos",
-        35
+        25
       ],
       [
         "planificar cierre o referencia",
-        20
+        15
+      ],
+      [
+        "protección sinusal",
+        12
+      ],
+      [
+        "instrucciones postoperatorias",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-65",
@@ -1351,18 +1863,26 @@
     "a": [
       [
         "nervio alveolar inferior",
-        45
+        40
       ],
       [
         "conducto mandibular",
-        35
+        25
       ],
       [
         "cortical mandibular",
-        20
+        15
+      ],
+      [
+        "distancia al conducto",
+        12
+      ],
+      [
+        "signos neurosensoriales",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-66",
@@ -1372,18 +1892,26 @@
     "a": [
       [
         "parestesia",
-        45
+        40
       ],
       [
         "hipoestesia",
-        35
+        25
       ],
       [
         "disestesia",
-        20
+        15
+      ],
+      [
+        "distancia al conducto",
+        12
+      ],
+      [
+        "signos neurosensoriales",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-67",
@@ -1393,18 +1921,26 @@
     "a": [
       [
         "CBCT",
-        45
+        40
       ],
       [
         "panorámica inicial",
-        35
+        25
       ],
       [
         "otras proyecciones según el caso",
-        20
+        15
+      ],
+      [
+        "distancia al conducto",
+        12
+      ],
+      [
+        "signos neurosensoriales",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-68",
@@ -1414,18 +1950,26 @@
     "a": [
       [
         "evaluación radiográfica",
-        45
+        40
       ],
       [
         "planificación",
-        35
+        25
       ],
       [
         "técnica atraumática",
-        20
+        15
+      ],
+      [
+        "distancia al conducto",
+        12
+      ],
+      [
+        "signos neurosensoriales",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-69",
@@ -1435,18 +1979,26 @@
     "a": [
       [
         "mucosa lingual anterior",
-        45
+        40
       ],
       [
         "encía lingual mandibular",
-        35
+        25
       ],
       [
         "dos tercios anteriores de la lengua",
-        20
+        15
+      ],
+      [
+        "gusto de los dos tercios anteriores",
+        12
+      ],
+      [
+        "sensibilidad de mucosa",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-70",
@@ -1456,18 +2008,26 @@
     "a": [
       [
         "parestesia",
-        45
+        40
       ],
       [
         "hipoestesia",
-        35
+        25
       ],
       [
         "disestesia",
-        20
+        15
+      ],
+      [
+        "gusto de los dos tercios anteriores",
+        12
+      ],
+      [
+        "sensibilidad de mucosa",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-71",
@@ -1477,18 +2037,26 @@
     "a": [
       [
         "cirugía de terceros molares inferiores",
-        45
+        40
       ],
       [
         "incisiones linguales profundas",
-        35
+        25
       ],
       [
         "procedimientos próximos a su trayecto",
-        20
+        15
+      ],
+      [
+        "gusto de los dos tercios anteriores",
+        12
+      ],
+      [
+        "sensibilidad de mucosa",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-72",
@@ -1498,18 +2066,26 @@
     "a": [
       [
         "distribución",
-        45
+        40
       ],
       [
         "inicio y evolución",
-        35
+        25
       ],
       [
         "exploración neurosensorial",
-        20
+        15
+      ],
+      [
+        "gusto de los dos tercios anteriores",
+        12
+      ],
+      [
+        "sensibilidad de mucosa",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-73",
@@ -1519,18 +2095,26 @@
     "a": [
       [
         "lesión persistente sin diagnóstico",
-        45
+        40
       ],
       [
         "lesión sospechosa",
-        35
+        25
       ],
       [
         "lesión que requiere histopatología",
-        20
+        15
+      ],
+      [
+        "fijación de la muestra",
+        12
+      ],
+      [
+        "orientación cuando sea necesaria",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-74",
@@ -1540,18 +2124,26 @@
     "a": [
       [
         "identificación del paciente",
-        45
+        40
       ],
       [
         "sitio de la lesión",
-        35
+        25
       ],
       [
         "datos clínicos",
-        20
+        15
+      ],
+      [
+        "fijación de la muestra",
+        12
+      ],
+      [
+        "orientación cuando sea necesaria",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-75",
@@ -1561,18 +2153,26 @@
     "a": [
       [
         "traumatizar la muestra",
-        45
+        40
       ],
       [
         "medio de conservación incorrecto",
-        35
+        25
       ],
       [
         "omitir datos clínicos",
-        20
+        15
+      ],
+      [
+        "fijación de la muestra",
+        12
+      ],
+      [
+        "orientación cuando sea necesaria",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-76",
@@ -1582,18 +2182,26 @@
     "a": [
       [
         "incisional",
-        45
+        40
       ],
       [
         "excisional",
-        35
+        25
       ],
       [
         "técnicas específicas según la lesión",
-        20
+        15
+      ],
+      [
+        "fijación de la muestra",
+        12
+      ],
+      [
+        "orientación cuando sea necesaria",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-77",
@@ -1603,18 +2211,26 @@
     "a": [
       [
         "localización",
-        45
+        40
       ],
       [
         "tamaño",
-        35
+        25
       ],
       [
         "color y superficie",
-        20
+        15
+      ],
+      [
+        "consistencia",
+        12
+      ],
+      [
+        "bordes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-78",
@@ -1624,18 +2240,26 @@
     "a": [
       [
         "induración",
-        45
+        40
       ],
       [
         "ulceración persistente",
-        35
+        25
       ],
       [
         "crecimiento progresivo",
-        20
+        15
+      ],
+      [
+        "consistencia",
+        12
+      ],
+      [
+        "bordes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-79",
@@ -1645,18 +2269,26 @@
     "a": [
       [
         "reevaluación",
-        45
+        40
       ],
       [
         "eliminar irritantes cuando procede",
-        35
+        25
       ],
       [
         "biopsia o referencia indicada",
-        20
+        15
+      ],
+      [
+        "consistencia",
+        12
+      ],
+      [
+        "bordes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-80",
@@ -1666,18 +2298,26 @@
     "a": [
       [
         "dimensiones",
-        45
+        40
       ],
       [
         "localización",
-        35
+        25
       ],
       [
         "evolución",
-        20
+        15
+      ],
+      [
+        "consistencia",
+        12
+      ],
+      [
+        "bordes",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-81",
@@ -1687,18 +2327,26 @@
     "a": [
       [
         "exploración",
-        45
+        40
       ],
       [
         "imagen",
-        35
+        25
       ],
       [
         "histopatología indicada",
-        20
+        15
+      ],
+      [
+        "contenido de la lesión",
+        12
+      ],
+      [
+        "efecto sobre estructuras vecinas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-82",
@@ -1708,18 +2356,26 @@
     "a": [
       [
         "radiolucidez delimitada",
-        45
+        40
       ],
       [
         "relación con un diente",
-        35
+        25
       ],
       [
         "expansión",
-        20
+        15
+      ],
+      [
+        "contenido de la lesión",
+        12
+      ],
+      [
+        "efecto sobre estructuras vecinas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-83",
@@ -1729,18 +2385,26 @@
     "a": [
       [
         "tipo de lesión",
-        45
+        40
       ],
       [
         "tamaño y localización",
-        35
+        25
       ],
       [
         "relación anatómica",
-        20
+        15
+      ],
+      [
+        "contenido de la lesión",
+        12
+      ],
+      [
+        "efecto sobre estructuras vecinas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-84",
@@ -1750,18 +2414,26 @@
     "a": [
       [
         "confirmar diagnóstico",
-        45
+        40
       ],
       [
         "diferenciar entidades",
-        35
+        25
       ],
       [
         "caracterizar la lesión",
-        20
+        15
+      ],
+      [
+        "contenido de la lesión",
+        12
+      ],
+      [
+        "efecto sobre estructuras vecinas",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-85",
@@ -1771,18 +2443,26 @@
     "a": [
       [
         "diente y periodonto",
-        45
+        40
       ],
       [
         "tejidos blandos",
-        35
+        25
       ],
       [
         "hueso alveolar",
-        20
+        15
+      ],
+      [
+        "lesión periodontal",
+        12
+      ],
+      [
+        "oclusión",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-86",
@@ -1792,18 +2472,26 @@
     "a": [
       [
         "movilidad alterada",
-        45
+        40
       ],
       [
         "cambio de posición",
-        35
+        25
       ],
       [
         "dolor a la percusión",
-        20
+        15
+      ],
+      [
+        "lesión periodontal",
+        12
+      ],
+      [
+        "oclusión",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-87",
@@ -1813,18 +2501,26 @@
     "a": [
       [
         "radiografías",
-        45
+        40
       ],
       [
         "exploración clínica",
-        35
+        25
       ],
       [
         "CBCT indicada",
-        20
+        15
+      ],
+      [
+        "lesión periodontal",
+        12
+      ],
+      [
+        "oclusión",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-88",
@@ -1834,18 +2530,26 @@
     "a": [
       [
         "reposición indicada",
-        45
+        40
       ],
       [
         "estabilización",
-        35
+        25
       ],
       [
         "seguimiento",
-        20
+        15
+      ],
+      [
+        "lesión periodontal",
+        12
+      ],
+      [
+        "oclusión",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-89",
@@ -1855,18 +2559,26 @@
     "a": [
       [
         "dolor",
-        45
+        40
       ],
       [
         "edema",
-        35
+        25
       ],
       [
         "sangrado",
-        20
+        15
+      ],
+      [
+        "vitalidad pulpar",
+        12
+      ],
+      [
+        "ferulización cuando esté indicada",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-90",
@@ -1876,18 +2588,26 @@
     "a": [
       [
         "dificultad respiratoria",
-        45
+        40
       ],
       [
         "sangrado no controlado",
-        35
+        25
       ],
       [
         "deterioro sistémico",
-        20
+        15
+      ],
+      [
+        "vitalidad pulpar",
+        12
+      ],
+      [
+        "ferulización cuando esté indicada",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-91",
@@ -1897,18 +2617,26 @@
     "a": [
       [
         "técnica traumática",
-        45
+        40
       ],
       [
         "higiene deficiente",
-        35
+        25
       ],
       [
         "factores sistémicos",
-        20
+        15
+      ],
+      [
+        "vitalidad pulpar",
+        12
+      ],
+      [
+        "ferulización cuando esté indicada",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-92",
@@ -1918,18 +2646,26 @@
     "a": [
       [
         "historia del procedimiento",
-        45
+        40
       ],
       [
         "exploración",
-        35
+        25
       ],
       [
         "estudios indicados",
-        20
+        15
+      ],
+      [
+        "vitalidad pulpar",
+        12
+      ],
+      [
+        "ferulización cuando esté indicada",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-93",
@@ -1939,18 +2675,26 @@
     "a": [
       [
         "diagnóstico",
-        45
+        40
       ],
       [
         "beneficio esperado",
-        35
+        25
       ],
       [
         "riesgos y alternativas",
-        20
+        15
+      ],
+      [
+        "infección",
+        12
+      ],
+      [
+        "dehiscencia",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-94",
@@ -1960,18 +2704,26 @@
     "a": [
       [
         "condición sistémica no controlada",
-        45
+        40
       ],
       [
         "enfermedad aguda relevante",
-        35
+        25
       ],
       [
         "condiciones inseguras",
-        20
+        15
+      ],
+      [
+        "infección",
+        12
+      ],
+      [
+        "dehiscencia",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-95",
@@ -1981,18 +2733,26 @@
     "a": [
       [
         "valoración individual del riesgo",
-        45
+        40
       ],
       [
         "modificación del plan",
-        35
+        25
       ],
       [
         "consulta médica indicada",
-        20
+        15
+      ],
+      [
+        "infección",
+        12
+      ],
+      [
+        "dehiscencia",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-96",
@@ -2002,18 +2762,26 @@
     "a": [
       [
         "dolor no controlado",
-        45
+        40
       ],
       [
         "infección progresiva",
-        35
+        25
       ],
       [
         "compromiso funcional",
-        20
+        15
+      ],
+      [
+        "infección",
+        12
+      ],
+      [
+        "dehiscencia",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-97",
@@ -2023,18 +2791,26 @@
     "a": [
       [
         "diagnóstico",
-        45
+        40
       ],
       [
         "objetivos",
-        35
+        25
       ],
       [
         "manejo de complicaciones previsibles",
-        20
+        15
+      ],
+      [
+        "estado médico",
+        12
+      ],
+      [
+        "necesidad de tratamiento",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-98",
@@ -2044,18 +2820,26 @@
     "a": [
       [
         "nervios",
-        45
+        40
       ],
       [
         "cavidades anatómicas",
-        35
+        25
       ],
       [
         "relaciones radiculares",
-        20
+        15
+      ],
+      [
+        "estado médico",
+        12
+      ],
+      [
+        "necesidad de tratamiento",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-99",
@@ -2065,18 +2849,26 @@
     "a": [
       [
         "acceso",
-        45
+        40
       ],
       [
         "instrumental",
-        35
+        25
       ],
       [
         "odontosección u osteotomía indicadas",
-        20
+        15
+      ],
+      [
+        "estado médico",
+        12
+      ],
+      [
+        "necesidad de tratamiento",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   },
   {
     "id": "ORG13-100",
@@ -2086,17 +2878,25 @@
     "a": [
       [
         "reducir riesgos",
-        45
+        40
       ],
       [
         "seleccionar técnica",
-        35
+        25
       ],
       [
         "preparar contingencias",
-        20
+        15
+      ],
+      [
+        "estado médico",
+        12
+      ],
+      [
+        "necesidad de tratamiento",
+        8
       ]
     ],
-    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
   }
 ]
