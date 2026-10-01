@@ -18,13 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validar banco de preguntas
+      - name: Validar las 45 categorias
         run: |
-          python3 scripts/validate_questions.py
+          python3 scripts/validate_45_categories.py
 
-      - name: Auditar banco 4700
-        run: |
-          python3 scripts/audit_4700.py
 
       - name: Validar JavaScript del juego
         run: |
