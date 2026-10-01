@@ -1,0 +1,2705 @@
+{
+  "category": "Oclusión funcional y ajuste oclusal avanzado",
+  "questions": [
+    {
+      "id": "ORG45-001",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan relación céntrica?",
+      "answers": [
+        {
+          "text": "posición articular reproducible",
+          "points": 45
+        },
+        {
+          "text": "referencia mandibular clínica",
+          "points": 30
+        },
+        {
+          "text": "independencia de un contacto dental específico",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-002",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar relación céntrica?",
+      "answers": [
+        {
+          "text": "posición articular reproducible",
+          "points": 35
+        },
+        {
+          "text": "referencia mandibular clínica",
+          "points": 30
+        },
+        {
+          "text": "independencia de un contacto dental específico",
+          "points": 20
+        },
+        {
+          "text": "relación condilar evaluable",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-003",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de relación céntrica, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "posición articular reproducible",
+          "points": 30
+        },
+        {
+          "text": "referencia mandibular clínica",
+          "points": 25
+        },
+        {
+          "text": "independencia de un contacto dental específico",
+          "points": 20
+        },
+        {
+          "text": "relación condilar evaluable",
+          "points": 15
+        },
+        {
+          "text": "utilidad en registros prostodónticos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-004",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con relación céntrica?",
+      "answers": [
+        {
+          "text": "posición articular reproducible",
+          "points": 25
+        },
+        {
+          "text": "referencia mandibular clínica",
+          "points": 20
+        },
+        {
+          "text": "independencia de un contacto dental específico",
+          "points": 18
+        },
+        {
+          "text": "relación condilar evaluable",
+          "points": 15
+        },
+        {
+          "text": "utilidad en registros prostodónticos",
+          "points": 12
+        },
+        {
+          "text": "comparación con máxima intercuspidación",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-005",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan máxima intercuspidación?",
+      "answers": [
+        {
+          "text": "máximo engranamiento dental",
+          "points": 45
+        },
+        {
+          "text": "posición determinada por la dentición",
+          "points": 30
+        },
+        {
+          "text": "contactos superiores e inferiores",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-006",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar máxima intercuspidación?",
+      "answers": [
+        {
+          "text": "máximo engranamiento dental",
+          "points": 35
+        },
+        {
+          "text": "posición determinada por la dentición",
+          "points": 30
+        },
+        {
+          "text": "contactos superiores e inferiores",
+          "points": 20
+        },
+        {
+          "text": "referencia de oclusión habitual",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-007",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de máxima intercuspidación, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "máximo engranamiento dental",
+          "points": 30
+        },
+        {
+          "text": "posición determinada por la dentición",
+          "points": 25
+        },
+        {
+          "text": "contactos superiores e inferiores",
+          "points": 20
+        },
+        {
+          "text": "referencia de oclusión habitual",
+          "points": 15
+        },
+        {
+          "text": "posible diferencia respecto de relación céntrica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-008",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con máxima intercuspidación?",
+      "answers": [
+        {
+          "text": "máximo engranamiento dental",
+          "points": 25
+        },
+        {
+          "text": "posición determinada por la dentición",
+          "points": 20
+        },
+        {
+          "text": "contactos superiores e inferiores",
+          "points": 18
+        },
+        {
+          "text": "referencia de oclusión habitual",
+          "points": 15
+        },
+        {
+          "text": "posible diferencia respecto de relación céntrica",
+          "points": 12
+        },
+        {
+          "text": "evaluación clínica de contactos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-009",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan deslizamiento céntrico?",
+      "answers": [
+        {
+          "text": "cambio entre contactos mandibulares",
+          "points": 45
+        },
+        {
+          "text": "diferencia entre posiciones oclusales",
+          "points": 30
+        },
+        {
+          "text": "desplazamiento condicionado por contactos",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-010",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar deslizamiento céntrico?",
+      "answers": [
+        {
+          "text": "cambio entre contactos mandibulares",
+          "points": 35
+        },
+        {
+          "text": "diferencia entre posiciones oclusales",
+          "points": 30
+        },
+        {
+          "text": "desplazamiento condicionado por contactos",
+          "points": 20
+        },
+        {
+          "text": "evaluación en cierre mandibular",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-011",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de deslizamiento céntrico, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "cambio entre contactos mandibulares",
+          "points": 30
+        },
+        {
+          "text": "diferencia entre posiciones oclusales",
+          "points": 25
+        },
+        {
+          "text": "desplazamiento condicionado por contactos",
+          "points": 20
+        },
+        {
+          "text": "evaluación en cierre mandibular",
+          "points": 15
+        },
+        {
+          "text": "componente anteroposterior o transversal",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-012",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con deslizamiento céntrico?",
+      "answers": [
+        {
+          "text": "cambio entre contactos mandibulares",
+          "points": 25
+        },
+        {
+          "text": "diferencia entre posiciones oclusales",
+          "points": 20
+        },
+        {
+          "text": "desplazamiento condicionado por contactos",
+          "points": 18
+        },
+        {
+          "text": "evaluación en cierre mandibular",
+          "points": 15
+        },
+        {
+          "text": "componente anteroposterior o transversal",
+          "points": 12
+        },
+        {
+          "text": "necesidad de confirmar clínicamente",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-013",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan guía anterior?",
+      "answers": [
+        {
+          "text": "dirige excursiones mandibulares",
+          "points": 45
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 30
+        },
+        {
+          "text": "depende de dientes anteriores",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-014",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar guía anterior?",
+      "answers": [
+        {
+          "text": "dirige excursiones mandibulares",
+          "points": 35
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 30
+        },
+        {
+          "text": "depende de dientes anteriores",
+          "points": 20
+        },
+        {
+          "text": "participa en función mandibular",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-015",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de guía anterior, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "dirige excursiones mandibulares",
+          "points": 30
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 25
+        },
+        {
+          "text": "depende de dientes anteriores",
+          "points": 20
+        },
+        {
+          "text": "participa en función mandibular",
+          "points": 15
+        },
+        {
+          "text": "se evalúa en protrusión",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-016",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con guía anterior?",
+      "answers": [
+        {
+          "text": "dirige excursiones mandibulares",
+          "points": 25
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 20
+        },
+        {
+          "text": "depende de dientes anteriores",
+          "points": 18
+        },
+        {
+          "text": "participa en función mandibular",
+          "points": 15
+        },
+        {
+          "text": "se evalúa en protrusión",
+          "points": 12
+        },
+        {
+          "text": "se relaciona con morfología anterior",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-017",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan guía canina?",
+      "answers": [
+        {
+          "text": "contacto predominante del canino",
+          "points": 45
+        },
+        {
+          "text": "participación en lateralidad",
+          "points": 30
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-018",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar guía canina?",
+      "answers": [
+        {
+          "text": "contacto predominante del canino",
+          "points": 35
+        },
+        {
+          "text": "participación en lateralidad",
+          "points": 30
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 20
+        },
+        {
+          "text": "depende de anatomía y posición dental",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-019",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de guía canina, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "contacto predominante del canino",
+          "points": 30
+        },
+        {
+          "text": "participación en lateralidad",
+          "points": 25
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 20
+        },
+        {
+          "text": "depende de anatomía y posición dental",
+          "points": 15
+        },
+        {
+          "text": "debe evaluarse durante excursión",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-020",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con guía canina?",
+      "answers": [
+        {
+          "text": "contacto predominante del canino",
+          "points": 25
+        },
+        {
+          "text": "participación en lateralidad",
+          "points": 20
+        },
+        {
+          "text": "puede favorecer desoclusión posterior",
+          "points": 18
+        },
+        {
+          "text": "depende de anatomía y posición dental",
+          "points": 15
+        },
+        {
+          "text": "debe evaluarse durante excursión",
+          "points": 12
+        },
+        {
+          "text": "no es obligatoria en toda dentición",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-021",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan función de grupo?",
+      "answers": [
+        {
+          "text": "contactos múltiples del lado de trabajo",
+          "points": 45
+        },
+        {
+          "text": "participación de varios dientes",
+          "points": 30
+        },
+        {
+          "text": "distribución de carga",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-022",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar función de grupo?",
+      "answers": [
+        {
+          "text": "contactos múltiples del lado de trabajo",
+          "points": 35
+        },
+        {
+          "text": "participación de varios dientes",
+          "points": 30
+        },
+        {
+          "text": "distribución de carga",
+          "points": 20
+        },
+        {
+          "text": "evaluación durante lateralidad",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-023",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de función de grupo, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "contactos múltiples del lado de trabajo",
+          "points": 30
+        },
+        {
+          "text": "participación de varios dientes",
+          "points": 25
+        },
+        {
+          "text": "distribución de carga",
+          "points": 20
+        },
+        {
+          "text": "evaluación durante lateralidad",
+          "points": 15
+        },
+        {
+          "text": "puede ser funcionalmente estable",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-024",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con función de grupo?",
+      "answers": [
+        {
+          "text": "contactos múltiples del lado de trabajo",
+          "points": 25
+        },
+        {
+          "text": "participación de varios dientes",
+          "points": 20
+        },
+        {
+          "text": "distribución de carga",
+          "points": 18
+        },
+        {
+          "text": "evaluación durante lateralidad",
+          "points": 15
+        },
+        {
+          "text": "puede ser funcionalmente estable",
+          "points": 12
+        },
+        {
+          "text": "debe interpretarse según el caso",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-025",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan interferencias oclusales?",
+      "answers": [
+        {
+          "text": "confirmar el contacto",
+          "points": 45
+        },
+        {
+          "text": "identificar movimiento afectado",
+          "points": 30
+        },
+        {
+          "text": "evaluar relevancia clínica",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-026",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar interferencias oclusales?",
+      "answers": [
+        {
+          "text": "confirmar el contacto",
+          "points": 35
+        },
+        {
+          "text": "identificar movimiento afectado",
+          "points": 30
+        },
+        {
+          "text": "evaluar relevancia clínica",
+          "points": 20
+        },
+        {
+          "text": "considerar síntomas",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-027",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "En el análisis clínico de interferencias oclusales, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "confirmar el contacto",
+          "points": 30
+        },
+        {
+          "text": "identificar movimiento afectado",
+          "points": 25
+        },
+        {
+          "text": "evaluar relevancia clínica",
+          "points": 20
+        },
+        {
+          "text": "considerar síntomas",
+          "points": 15
+        },
+        {
+          "text": "evitar desgaste sin diagnóstico",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-028",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de conceptos se relaciona con interferencias oclusales?",
+      "answers": [
+        {
+          "text": "confirmar el contacto",
+          "points": 25
+        },
+        {
+          "text": "identificar movimiento afectado",
+          "points": 20
+        },
+        {
+          "text": "evaluar relevancia clínica",
+          "points": 18
+        },
+        {
+          "text": "considerar síntomas",
+          "points": 15
+        },
+        {
+          "text": "evitar desgaste sin diagnóstico",
+          "points": 12
+        },
+        {
+          "text": "comparar contactos estáticos y dinámicos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-029",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué elementos caracterizan curva de Spee?",
+      "answers": [
+        {
+          "text": "curvatura anteroposterior",
+          "points": 45
+        },
+        {
+          "text": "relación de cúspides posteriores",
+          "points": 30
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-030",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "facil",
+      "question": "¿Qué debe considerarse al evaluar curva de Spee?",
+      "answers": [
+        {
+          "text": "curvatura anteroposterior",
+          "points": 35
+        },
+        {
+          "text": "relación de cúspides posteriores",
+          "points": 30
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 20
+        },
+        {
+          "text": "observable en la arcada",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-031",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "En el análisis clínico de curva de Spee, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "curvatura anteroposterior",
+          "points": 30
+        },
+        {
+          "text": "relación de cúspides posteriores",
+          "points": 25
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 20
+        },
+        {
+          "text": "observable en la arcada",
+          "points": 15
+        },
+        {
+          "text": "referencia para análisis",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-032",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de conceptos se relaciona con curva de Spee?",
+      "answers": [
+        {
+          "text": "curvatura anteroposterior",
+          "points": 25
+        },
+        {
+          "text": "relación de cúspides posteriores",
+          "points": 20
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 18
+        },
+        {
+          "text": "observable en la arcada",
+          "points": 15
+        },
+        {
+          "text": "referencia para análisis",
+          "points": 12
+        },
+        {
+          "text": "relación con disposición dentaria",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-033",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué elementos caracterizan curva de Wilson?",
+      "answers": [
+        {
+          "text": "curvatura mediolateral",
+          "points": 45
+        },
+        {
+          "text": "relación transversal de cúspides",
+          "points": 30
+        },
+        {
+          "text": "inclinación posterior",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-034",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué debe considerarse al evaluar curva de Wilson?",
+      "answers": [
+        {
+          "text": "curvatura mediolateral",
+          "points": 35
+        },
+        {
+          "text": "relación transversal de cúspides",
+          "points": 30
+        },
+        {
+          "text": "inclinación posterior",
+          "points": 20
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-035",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "En el análisis clínico de curva de Wilson, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "curvatura mediolateral",
+          "points": 30
+        },
+        {
+          "text": "relación transversal de cúspides",
+          "points": 25
+        },
+        {
+          "text": "inclinación posterior",
+          "points": 20
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 15
+        },
+        {
+          "text": "referencia para análisis",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-036",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de conceptos se relaciona con curva de Wilson?",
+      "answers": [
+        {
+          "text": "curvatura mediolateral",
+          "points": 25
+        },
+        {
+          "text": "relación transversal de cúspides",
+          "points": 20
+        },
+        {
+          "text": "inclinación posterior",
+          "points": 18
+        },
+        {
+          "text": "característica del plano oclusal",
+          "points": 15
+        },
+        {
+          "text": "referencia para análisis",
+          "points": 12
+        },
+        {
+          "text": "relación con disposición dental",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-037",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué elementos caracterizan plano oclusal?",
+      "answers": [
+        {
+          "text": "orientación",
+          "points": 45
+        },
+        {
+          "text": "curvatura",
+          "points": 30
+        },
+        {
+          "text": "relación con estructuras faciales",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-038",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué debe considerarse al evaluar plano oclusal?",
+      "answers": [
+        {
+          "text": "orientación",
+          "points": 35
+        },
+        {
+          "text": "curvatura",
+          "points": 30
+        },
+        {
+          "text": "relación con estructuras faciales",
+          "points": 20
+        },
+        {
+          "text": "simetría",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-039",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "En el análisis clínico de plano oclusal, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "orientación",
+          "points": 30
+        },
+        {
+          "text": "curvatura",
+          "points": 25
+        },
+        {
+          "text": "relación con estructuras faciales",
+          "points": 20
+        },
+        {
+          "text": "simetría",
+          "points": 15
+        },
+        {
+          "text": "relación con función",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-040",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de conceptos se relaciona con plano oclusal?",
+      "answers": [
+        {
+          "text": "orientación",
+          "points": 25
+        },
+        {
+          "text": "curvatura",
+          "points": 20
+        },
+        {
+          "text": "relación con estructuras faciales",
+          "points": 18
+        },
+        {
+          "text": "simetría",
+          "points": 15
+        },
+        {
+          "text": "relación con función",
+          "points": 12
+        },
+        {
+          "text": "relevancia restauradora",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-041",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué elementos caracterizan dimensión vertical?",
+      "answers": [
+        {
+          "text": "relación maxilomandibular",
+          "points": 45
+        },
+        {
+          "text": "espacio interoclusal",
+          "points": 30
+        },
+        {
+          "text": "estética facial",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-042",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué debe considerarse al evaluar dimensión vertical?",
+      "answers": [
+        {
+          "text": "relación maxilomandibular",
+          "points": 35
+        },
+        {
+          "text": "espacio interoclusal",
+          "points": 30
+        },
+        {
+          "text": "estética facial",
+          "points": 20
+        },
+        {
+          "text": "fonación",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-043",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "En el análisis clínico de dimensión vertical, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "relación maxilomandibular",
+          "points": 30
+        },
+        {
+          "text": "espacio interoclusal",
+          "points": 25
+        },
+        {
+          "text": "estética facial",
+          "points": 20
+        },
+        {
+          "text": "fonación",
+          "points": 15
+        },
+        {
+          "text": "función",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-044",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de conceptos se relaciona con dimensión vertical?",
+      "answers": [
+        {
+          "text": "relación maxilomandibular",
+          "points": 25
+        },
+        {
+          "text": "espacio interoclusal",
+          "points": 20
+        },
+        {
+          "text": "estética facial",
+          "points": 18
+        },
+        {
+          "text": "fonación",
+          "points": 15
+        },
+        {
+          "text": "función",
+          "points": 12
+        },
+        {
+          "text": "historia clínica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-045",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué elementos caracterizan espacio interoclusal?",
+      "answers": [
+        {
+          "text": "diferencia entre reposo y oclusión",
+          "points": 45
+        },
+        {
+          "text": "variable individual",
+          "points": 30
+        },
+        {
+          "text": "referencia clínica complementaria",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-046",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué debe considerarse al evaluar espacio interoclusal?",
+      "answers": [
+        {
+          "text": "diferencia entre reposo y oclusión",
+          "points": 35
+        },
+        {
+          "text": "variable individual",
+          "points": 30
+        },
+        {
+          "text": "referencia clínica complementaria",
+          "points": 20
+        },
+        {
+          "text": "relación con dimensión vertical",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-047",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "En el análisis clínico de espacio interoclusal, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "diferencia entre reposo y oclusión",
+          "points": 30
+        },
+        {
+          "text": "variable individual",
+          "points": 25
+        },
+        {
+          "text": "referencia clínica complementaria",
+          "points": 20
+        },
+        {
+          "text": "relación con dimensión vertical",
+          "points": 15
+        },
+        {
+          "text": "no debe interpretarse aisladamente",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-048",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de conceptos se relaciona con espacio interoclusal?",
+      "answers": [
+        {
+          "text": "diferencia entre reposo y oclusión",
+          "points": 25
+        },
+        {
+          "text": "variable individual",
+          "points": 20
+        },
+        {
+          "text": "referencia clínica complementaria",
+          "points": 18
+        },
+        {
+          "text": "relación con dimensión vertical",
+          "points": 15
+        },
+        {
+          "text": "no debe interpretarse aisladamente",
+          "points": 12
+        },
+        {
+          "text": "evaluación funcional",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-049",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué elementos caracterizan articulador?",
+      "answers": [
+        {
+          "text": "simulación de movimientos mandibulares",
+          "points": 45
+        },
+        {
+          "text": "montaje de modelos",
+          "points": 30
+        },
+        {
+          "text": "análisis de contactos",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-050",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "medio",
+      "question": "¿Qué debe considerarse al evaluar articulador?",
+      "answers": [
+        {
+          "text": "simulación de movimientos mandibulares",
+          "points": 35
+        },
+        {
+          "text": "montaje de modelos",
+          "points": 30
+        },
+        {
+          "text": "análisis de contactos",
+          "points": 20
+        },
+        {
+          "text": "planificación prostodóntica",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-051",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "En el análisis clínico de articulador, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "simulación de movimientos mandibulares",
+          "points": 30
+        },
+        {
+          "text": "montaje de modelos",
+          "points": 25
+        },
+        {
+          "text": "análisis de contactos",
+          "points": 20
+        },
+        {
+          "text": "planificación prostodóntica",
+          "points": 15
+        },
+        {
+          "text": "comunicación con laboratorio",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-052",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de conceptos se relaciona con articulador?",
+      "answers": [
+        {
+          "text": "simulación de movimientos mandibulares",
+          "points": 25
+        },
+        {
+          "text": "montaje de modelos",
+          "points": 20
+        },
+        {
+          "text": "análisis de contactos",
+          "points": 18
+        },
+        {
+          "text": "planificación prostodóntica",
+          "points": 15
+        },
+        {
+          "text": "comunicación con laboratorio",
+          "points": 12
+        },
+        {
+          "text": "evaluación de relaciones intermaxilares",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-053",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos caracterizan arco facial?",
+      "answers": [
+        {
+          "text": "transferencia espacial del maxilar",
+          "points": 45
+        },
+        {
+          "text": "orientación del modelo superior",
+          "points": 30
+        },
+        {
+          "text": "relación con referencias del articulador",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-054",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué debe considerarse al evaluar arco facial?",
+      "answers": [
+        {
+          "text": "transferencia espacial del maxilar",
+          "points": 35
+        },
+        {
+          "text": "orientación del modelo superior",
+          "points": 30
+        },
+        {
+          "text": "relación con referencias del articulador",
+          "points": 20
+        },
+        {
+          "text": "apoyo al montaje",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-055",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "En el análisis clínico de arco facial, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "transferencia espacial del maxilar",
+          "points": 30
+        },
+        {
+          "text": "orientación del modelo superior",
+          "points": 25
+        },
+        {
+          "text": "relación con referencias del articulador",
+          "points": 20
+        },
+        {
+          "text": "apoyo al montaje",
+          "points": 15
+        },
+        {
+          "text": "utilidad prostodóntica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-056",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de conceptos se relaciona con arco facial?",
+      "answers": [
+        {
+          "text": "transferencia espacial del maxilar",
+          "points": 25
+        },
+        {
+          "text": "orientación del modelo superior",
+          "points": 20
+        },
+        {
+          "text": "relación con referencias del articulador",
+          "points": 18
+        },
+        {
+          "text": "apoyo al montaje",
+          "points": 15
+        },
+        {
+          "text": "utilidad prostodóntica",
+          "points": 12
+        },
+        {
+          "text": "no reemplaza el diagnóstico clínico",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-057",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos caracterizan registro interoclusal?",
+      "answers": [
+        {
+          "text": "estabilidad",
+          "points": 45
+        },
+        {
+          "text": "espesor controlado",
+          "points": 30
+        },
+        {
+          "text": "reproducción de la posición buscada",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-058",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué debe considerarse al evaluar registro interoclusal?",
+      "answers": [
+        {
+          "text": "estabilidad",
+          "points": 35
+        },
+        {
+          "text": "espesor controlado",
+          "points": 30
+        },
+        {
+          "text": "reproducción de la posición buscada",
+          "points": 20
+        },
+        {
+          "text": "resistencia a deformación",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-059",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "En el análisis clínico de registro interoclusal, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "estabilidad",
+          "points": 30
+        },
+        {
+          "text": "espesor controlado",
+          "points": 25
+        },
+        {
+          "text": "reproducción de la posición buscada",
+          "points": 20
+        },
+        {
+          "text": "resistencia a deformación",
+          "points": 15
+        },
+        {
+          "text": "adaptación a superficies",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-060",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de conceptos se relaciona con registro interoclusal?",
+      "answers": [
+        {
+          "text": "estabilidad",
+          "points": 25
+        },
+        {
+          "text": "espesor controlado",
+          "points": 20
+        },
+        {
+          "text": "reproducción de la posición buscada",
+          "points": 18
+        },
+        {
+          "text": "resistencia a deformación",
+          "points": 15
+        },
+        {
+          "text": "adaptación a superficies",
+          "points": 12
+        },
+        {
+          "text": "verificación clínica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-061",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos caracterizan papel articular?",
+      "answers": [
+        {
+          "text": "marca contactos",
+          "points": 45
+        },
+        {
+          "text": "localiza zonas de contacto",
+          "points": 30
+        },
+        {
+          "text": "permite comparación",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-062",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué debe considerarse al evaluar papel articular?",
+      "answers": [
+        {
+          "text": "marca contactos",
+          "points": 35
+        },
+        {
+          "text": "localiza zonas de contacto",
+          "points": 30
+        },
+        {
+          "text": "permite comparación",
+          "points": 20
+        },
+        {
+          "text": "complementa examen clínico",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-063",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "En el análisis clínico de papel articular, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "marca contactos",
+          "points": 30
+        },
+        {
+          "text": "localiza zonas de contacto",
+          "points": 25
+        },
+        {
+          "text": "permite comparación",
+          "points": 20
+        },
+        {
+          "text": "complementa examen clínico",
+          "points": 15
+        },
+        {
+          "text": "facilita análisis excursivo",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-064",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de conceptos se relaciona con papel articular?",
+      "answers": [
+        {
+          "text": "marca contactos",
+          "points": 25
+        },
+        {
+          "text": "localiza zonas de contacto",
+          "points": 20
+        },
+        {
+          "text": "permite comparación",
+          "points": 18
+        },
+        {
+          "text": "complementa examen clínico",
+          "points": 15
+        },
+        {
+          "text": "facilita análisis excursivo",
+          "points": 12
+        },
+        {
+          "text": "requiere interpretación clínica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-065",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos caracterizan shimstock?",
+      "answers": [
+        {
+          "text": "detecta contacto dental",
+          "points": 45
+        },
+        {
+          "text": "evalúa retención entre superficies",
+          "points": 30
+        },
+        {
+          "text": "permite comparación relativa",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-066",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué debe considerarse al evaluar shimstock?",
+      "answers": [
+        {
+          "text": "detecta contacto dental",
+          "points": 35
+        },
+        {
+          "text": "evalúa retención entre superficies",
+          "points": 30
+        },
+        {
+          "text": "permite comparación relativa",
+          "points": 20
+        },
+        {
+          "text": "verifica contactos seleccionados",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-067",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "En el análisis clínico de shimstock, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "detecta contacto dental",
+          "points": 30
+        },
+        {
+          "text": "evalúa retención entre superficies",
+          "points": 25
+        },
+        {
+          "text": "permite comparación relativa",
+          "points": 20
+        },
+        {
+          "text": "verifica contactos seleccionados",
+          "points": 15
+        },
+        {
+          "text": "ayuda después de restauraciones",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-068",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de conceptos se relaciona con shimstock?",
+      "answers": [
+        {
+          "text": "detecta contacto dental",
+          "points": 25
+        },
+        {
+          "text": "evalúa retención entre superficies",
+          "points": 20
+        },
+        {
+          "text": "permite comparación relativa",
+          "points": 18
+        },
+        {
+          "text": "verifica contactos seleccionados",
+          "points": 15
+        },
+        {
+          "text": "ayuda después de restauraciones",
+          "points": 12
+        },
+        {
+          "text": "no cuantifica por sí solo la fuerza",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-069",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos caracterizan análisis estático?",
+      "answers": [
+        {
+          "text": "evaluación sin excursión",
+          "points": 45
+        },
+        {
+          "text": "contactos en máxima intercuspidación",
+          "points": 30
+        },
+        {
+          "text": "distribución de contactos",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-070",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "dificil",
+      "question": "¿Qué debe considerarse al evaluar análisis estático?",
+      "answers": [
+        {
+          "text": "evaluación sin excursión",
+          "points": 35
+        },
+        {
+          "text": "contactos en máxima intercuspidación",
+          "points": 30
+        },
+        {
+          "text": "distribución de contactos",
+          "points": 20
+        },
+        {
+          "text": "observación de estabilidad",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-071",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de análisis estático, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "evaluación sin excursión",
+          "points": 30
+        },
+        {
+          "text": "contactos en máxima intercuspidación",
+          "points": 25
+        },
+        {
+          "text": "distribución de contactos",
+          "points": 20
+        },
+        {
+          "text": "observación de estabilidad",
+          "points": 15
+        },
+        {
+          "text": "comparación bilateral",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-072",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con análisis estático?",
+      "answers": [
+        {
+          "text": "evaluación sin excursión",
+          "points": 25
+        },
+        {
+          "text": "contactos en máxima intercuspidación",
+          "points": 20
+        },
+        {
+          "text": "distribución de contactos",
+          "points": 18
+        },
+        {
+          "text": "observación de estabilidad",
+          "points": 15
+        },
+        {
+          "text": "comparación bilateral",
+          "points": 12
+        },
+        {
+          "text": "complemento del análisis dinámico",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-073",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan análisis dinámico?",
+      "answers": [
+        {
+          "text": "protrusión",
+          "points": 45
+        },
+        {
+          "text": "lateralidad derecha",
+          "points": 30
+        },
+        {
+          "text": "lateralidad izquierda",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-074",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar análisis dinámico?",
+      "answers": [
+        {
+          "text": "protrusión",
+          "points": 35
+        },
+        {
+          "text": "lateralidad derecha",
+          "points": 30
+        },
+        {
+          "text": "lateralidad izquierda",
+          "points": 20
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-075",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de análisis dinámico, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "protrusión",
+          "points": 30
+        },
+        {
+          "text": "lateralidad derecha",
+          "points": 25
+        },
+        {
+          "text": "lateralidad izquierda",
+          "points": 20
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 15
+        },
+        {
+          "text": "contactos excursivos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-076",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con análisis dinámico?",
+      "answers": [
+        {
+          "text": "protrusión",
+          "points": 25
+        },
+        {
+          "text": "lateralidad derecha",
+          "points": 20
+        },
+        {
+          "text": "lateralidad izquierda",
+          "points": 18
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 15
+        },
+        {
+          "text": "contactos excursivos",
+          "points": 12
+        },
+        {
+          "text": "retorno mandibular",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-077",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan protrusión?",
+      "answers": [
+        {
+          "text": "contactos anteriores",
+          "points": 45
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 30
+        },
+        {
+          "text": "desoclusión posterior cuando corresponda",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-078",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar protrusión?",
+      "answers": [
+        {
+          "text": "contactos anteriores",
+          "points": 35
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 30
+        },
+        {
+          "text": "desoclusión posterior cuando corresponda",
+          "points": 20
+        },
+        {
+          "text": "simetría del movimiento",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-079",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de protrusión, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "contactos anteriores",
+          "points": 30
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 25
+        },
+        {
+          "text": "desoclusión posterior cuando corresponda",
+          "points": 20
+        },
+        {
+          "text": "simetría del movimiento",
+          "points": 15
+        },
+        {
+          "text": "interferencias",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-080",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con protrusión?",
+      "answers": [
+        {
+          "text": "contactos anteriores",
+          "points": 25
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 20
+        },
+        {
+          "text": "desoclusión posterior cuando corresponda",
+          "points": 18
+        },
+        {
+          "text": "simetría del movimiento",
+          "points": 15
+        },
+        {
+          "text": "interferencias",
+          "points": 12
+        },
+        {
+          "text": "guía anterior",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-081",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan lateralidad?",
+      "answers": [
+        {
+          "text": "lado de trabajo",
+          "points": 45
+        },
+        {
+          "text": "lado de no trabajo",
+          "points": 30
+        },
+        {
+          "text": "guía canina",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-082",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar lateralidad?",
+      "answers": [
+        {
+          "text": "lado de trabajo",
+          "points": 35
+        },
+        {
+          "text": "lado de no trabajo",
+          "points": 30
+        },
+        {
+          "text": "guía canina",
+          "points": 20
+        },
+        {
+          "text": "función de grupo",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-083",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de lateralidad, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "lado de trabajo",
+          "points": 30
+        },
+        {
+          "text": "lado de no trabajo",
+          "points": 25
+        },
+        {
+          "text": "guía canina",
+          "points": 20
+        },
+        {
+          "text": "función de grupo",
+          "points": 15
+        },
+        {
+          "text": "contactos interferentes",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-084",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con lateralidad?",
+      "answers": [
+        {
+          "text": "lado de trabajo",
+          "points": 25
+        },
+        {
+          "text": "lado de no trabajo",
+          "points": 20
+        },
+        {
+          "text": "guía canina",
+          "points": 18
+        },
+        {
+          "text": "función de grupo",
+          "points": 15
+        },
+        {
+          "text": "contactos interferentes",
+          "points": 12
+        },
+        {
+          "text": "trayectoria mandibular",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-085",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan bruxismo y sobrecarga?",
+      "answers": [
+        {
+          "text": "desgaste dental",
+          "points": 45
+        },
+        {
+          "text": "fracturas",
+          "points": 30
+        },
+        {
+          "text": "hipertrofia muscular",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-086",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar bruxismo y sobrecarga?",
+      "answers": [
+        {
+          "text": "desgaste dental",
+          "points": 35
+        },
+        {
+          "text": "fracturas",
+          "points": 30
+        },
+        {
+          "text": "hipertrofia muscular",
+          "points": 20
+        },
+        {
+          "text": "dolor muscular",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-087",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de bruxismo y sobrecarga, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "desgaste dental",
+          "points": 30
+        },
+        {
+          "text": "fracturas",
+          "points": 25
+        },
+        {
+          "text": "hipertrofia muscular",
+          "points": 20
+        },
+        {
+          "text": "dolor muscular",
+          "points": 15
+        },
+        {
+          "text": "sobrecarga restauradora",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-088",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con bruxismo y sobrecarga?",
+      "answers": [
+        {
+          "text": "desgaste dental",
+          "points": 25
+        },
+        {
+          "text": "fracturas",
+          "points": 20
+        },
+        {
+          "text": "hipertrofia muscular",
+          "points": 18
+        },
+        {
+          "text": "dolor muscular",
+          "points": 15
+        },
+        {
+          "text": "sobrecarga restauradora",
+          "points": 12
+        },
+        {
+          "text": "historia de parafunción",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-089",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan desgaste dental?",
+      "answers": [
+        {
+          "text": "localización",
+          "points": 45
+        },
+        {
+          "text": "patrón",
+          "points": 30
+        },
+        {
+          "text": "severidad",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-090",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar desgaste dental?",
+      "answers": [
+        {
+          "text": "localización",
+          "points": 35
+        },
+        {
+          "text": "patrón",
+          "points": 30
+        },
+        {
+          "text": "severidad",
+          "points": 20
+        },
+        {
+          "text": "historia funcional",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-091",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de desgaste dental, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "localización",
+          "points": 30
+        },
+        {
+          "text": "patrón",
+          "points": 25
+        },
+        {
+          "text": "severidad",
+          "points": 20
+        },
+        {
+          "text": "historia funcional",
+          "points": 15
+        },
+        {
+          "text": "factores químicos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-092",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con desgaste dental?",
+      "answers": [
+        {
+          "text": "localización",
+          "points": 25
+        },
+        {
+          "text": "patrón",
+          "points": 20
+        },
+        {
+          "text": "severidad",
+          "points": 18
+        },
+        {
+          "text": "historia funcional",
+          "points": 15
+        },
+        {
+          "text": "factores químicos",
+          "points": 12
+        },
+        {
+          "text": "factores mecánicos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-093",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan ajuste oclusal selectivo?",
+      "answers": [
+        {
+          "text": "diagnóstico previo",
+          "points": 45
+        },
+        {
+          "text": "objetivo definido",
+          "points": 30
+        },
+        {
+          "text": "remoción mínima",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-094",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar ajuste oclusal selectivo?",
+      "answers": [
+        {
+          "text": "diagnóstico previo",
+          "points": 35
+        },
+        {
+          "text": "objetivo definido",
+          "points": 30
+        },
+        {
+          "text": "remoción mínima",
+          "points": 20
+        },
+        {
+          "text": "preservación de estructura",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-095",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de ajuste oclusal selectivo, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "diagnóstico previo",
+          "points": 30
+        },
+        {
+          "text": "objetivo definido",
+          "points": 25
+        },
+        {
+          "text": "remoción mínima",
+          "points": 20
+        },
+        {
+          "text": "preservación de estructura",
+          "points": 15
+        },
+        {
+          "text": "verificación de contactos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-096",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con ajuste oclusal selectivo?",
+      "answers": [
+        {
+          "text": "diagnóstico previo",
+          "points": 25
+        },
+        {
+          "text": "objetivo definido",
+          "points": 20
+        },
+        {
+          "text": "remoción mínima",
+          "points": 18
+        },
+        {
+          "text": "preservación de estructura",
+          "points": 15
+        },
+        {
+          "text": "verificación de contactos",
+          "points": 12
+        },
+        {
+          "text": "consentimiento informado",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-097",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos caracterizan rehabilitación y mantenimiento?",
+      "answers": [
+        {
+          "text": "diagnóstico integral",
+          "points": 45
+        },
+        {
+          "text": "planificación interdisciplinaria",
+          "points": 30
+        },
+        {
+          "text": "provisionales cuando procedan",
+          "points": 25
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-098",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué debe considerarse al evaluar rehabilitación y mantenimiento?",
+      "answers": [
+        {
+          "text": "diagnóstico integral",
+          "points": 35
+        },
+        {
+          "text": "planificación interdisciplinaria",
+          "points": 30
+        },
+        {
+          "text": "provisionales cuando procedan",
+          "points": 20
+        },
+        {
+          "text": "control periodontal",
+          "points": 15
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-099",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "En el análisis clínico de rehabilitación y mantenimiento, ¿qué corresponde valorar?",
+      "answers": [
+        {
+          "text": "diagnóstico integral",
+          "points": 30
+        },
+        {
+          "text": "planificación interdisciplinaria",
+          "points": 25
+        },
+        {
+          "text": "provisionales cuando procedan",
+          "points": 20
+        },
+        {
+          "text": "control periodontal",
+          "points": 15
+        },
+        {
+          "text": "control de parafunción",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    },
+    {
+      "id": "ORG45-100",
+      "category": "Oclusión funcional y ajuste oclusal avanzado",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de conceptos se relaciona con rehabilitación y mantenimiento?",
+      "answers": [
+        {
+          "text": "diagnóstico integral",
+          "points": 25
+        },
+        {
+          "text": "planificación interdisciplinaria",
+          "points": 20
+        },
+        {
+          "text": "provisionales cuando procedan",
+          "points": 18
+        },
+        {
+          "text": "control periodontal",
+          "points": 15
+        },
+        {
+          "text": "control de parafunción",
+          "points": 12
+        },
+        {
+          "text": "seguimiento clínico",
+          "points": 10
+        }
+      ],
+      "source": "Literatura contemporánea de oclusión y prostodoncia; evidencia sobre relación céntrica, máxima intercuspidación y ajuste oclusal (PMID 42688654, 10887909, 15089931, 38101929, 40866158)."
+    }
+  ]
+}
