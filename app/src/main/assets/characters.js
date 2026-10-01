@@ -4,50 +4,51 @@ const charLang = () => window.DentistasI18n?.getLang?.() || 'es';
 const charText = (es,en) => charLang() === 'en' ? en : es;
 
 const SPECIALIST_SPECS = [
-  ['PAULA','Psicología infantil','🧠'],
-  ['IVÁN','Fisiología','⚙️'],
-  ['OLIVIA','Oclusión','⚖️'],
-  ['BRUNO','Desarrollo de la oclusión','📈'],
-  ['ALEX','Desarrollo craneofacial','💀','characters/alex_maxilofacial.webp'],
-  ['ELÍAS','Nomenclatura y etimología médica','📚'],
-  ['MARA','Hábitos y parafunciones','🫦'],
-  ['TOMÁS','Laboratorio de ortodoncia y ortopedia','🧰'],
-  ['MÍA','Realización del expediente clínico','📋','characters/mia_asistente.webp'],
-  ['SOFÍA','Ortodoncia','🦷','characters/sofia_ortodoncia.webp'],
-  ['ALMA','Ortopedia maxilar','🦴'],
-  ['RENATA','Endodoncia','❤️','characters/renata_endodoncia.webp'],
-  ['SANTIAGO','Cirugía bucal','⚕️','characters/santiago_cirugia_bucal.webp'],
-  ['VALERIA','Periodoncia','🌿','characters/valeria_periodoncia.webp'],
-  ['HUGO','Implantología','🔩'],
-  ['ELENA','Embriología dental','🧬'],
-  ['MATEO','Operatoria dental','✨','characters/mateo_operatoria.webp'],
-  ['DANIEL','Anestesia dental','💉'],
-  ['JULIA','Anatomía dental','🦷'],
-  ['CAMILA','Cariología','🛡️'],
-  ['DIEGO','Odontopediatría','⭐','characters/diego_odontopediatria.webp'],
-  ['MARCOS','Prótesis dental','🧩'],
-  ['VERA','Radiología oral y maxilofacial','☢️'],
-  ['LUCÍA','Patología bucal','🔬','characters/lucia_patologia.webp'],
-  ['GABRIEL','Medicina bucal','🩺'],
-  ['NATALIA','Farmacología odontológica','💊'],
-  ['LEONOR','Materiales dentales','🧪'],
-  ['RAÚL','Prótesis fija','👑'],
-  ['TERESA','Prótesis removible','🔗'],
-  ['FELIPE','Prótesis total','😁'],
-  ['ISABEL','Rehabilitación oral','🔧'],
-  ['ADRIÁN','Articulación temporomandibular y trastornos temporomandibulares','🦴'],
-  ['EMMA','Odontología preventiva','🛡️','characters/emma_higienista.webp'],
-  ['CARLOS','Salud pública y odontología comunitaria','🌎','characters/carlos_general.webp'],
-  ['INÉS','Microbiología oral','🦠'],
-  ['SAMUEL','Infecciones odontogénicas','🧫'],
-  ['EVA','Urgencias médicas en odontología','🚑'],
-  ['NOEL','Traumatología dental','🩹'],
-  ['ROBERTO','Odontología geriátrica','👴'],
-  ['LARA','Odontología para pacientes con necesidades especiales','♿'],
-  ['VÍCTOR','Odontología forense','🔎'],
-  ['CECILIA','Bioética y legislación odontológica','⚖️'],
-  ['NOA','Fotografía y documentación clínica odontológica','📷'],
-  ['MARTÍN','Oclusión funcional y ajuste oclusal avanzado','🎯']
+  ['PAULA','Psicología infantil','🧠','characters/01_psicologia_infantil.png'],
+  ['IVÁN','Fisiología','⚙️','characters/02_fisiologia.png'],
+  ['OLIVIA','Oclusión','⚖️','characters/03_oclusion.png'],
+  ['BRUNO','Desarrollo de la oclusión','📈','characters/04_desarrollo_oclusion.png'],
+  ['ALEX','Desarrollo craneofacial','💀','characters/05_desarrollo_craneofacial.png'],
+  ['ELÍAS','Nomenclatura y etimología médica','📚','characters/06_nomenclatura_etimologia_medica.png'],
+  ['MARA','Hábitos y parafunciones','🫦','characters/07_habitos_parafunciones.png'],
+  ['TOMÁS','Laboratorio de ortodoncia y ortopedia','🧰','characters/08_laboratorio_ortodoncia_ortopedia.png'],
+  ['MÍA','Realización del expediente clínico','📋','characters/09_expediente_clinico.png'],
+  ['SOFÍA','Ortodoncia','🦷','characters/10_ortodoncia.png'],
+  ['ALMA','Ortopedia maxilar','🦴','characters/11_ortopedia_maxilar.png'],
+  ['RENATA','Endodoncia','❤️','characters/12_endodoncia.png'],
+  ['SANTIAGO','Cirugía bucal','⚕️','characters/13_cirugia_bucal.png'],
+  ['VALERIA','Periodoncia','🌿','characters/14_periodoncia.png'],
+  ['HUGO','Implantología','🔩','characters/15_implantologia.png'],
+  ['ELENA','Embriología dental','🧬','characters/16_embriologia_dental.png'],
+  ['MATEO','Operatoria dental','✨','characters/17_operatoria_dental.png'],
+  ['DANIEL','Anestesia dental','💉','characters/18_anestesia_dental.png'],
+  ['JULIA','Anatomía dental','🦷','characters/19_anatomia_dental.png'],
+  ['CAMILA','Cariología','🛡️','characters/20_cariologia.png'],
+  ['DIEGO','Odontopediatría','⭐','characters/21_odontopediatria.png'],
+  ['MARCOS','Prótesis dental','🧩','characters/22_protesis_dental.png'],
+  ['CLARA','Odontología preventiva','🛡️','characters/23_odontologia_preventiva.png'],
+  ['VERA','Radiología oral y maxilofacial','☢️','characters/24_radiologia_oral_maxilofacial.png'],
+  ['LUCÍA','Patología bucal','🔬','characters/25_patologia_bucal.png'],
+  ['GABRIEL','Medicina bucal','🩺','characters/26_medicina_bucal.png'],
+  ['NATALIA','Farmacología odontológica','💊','characters/27_farmacologia_odontologica.png'],
+  ['LEONOR','Materiales dentales','🧪','characters/28_materiales_dentales.png'],
+  ['RAÚL','Prótesis fija','👑','characters/29_protesis_fija.png'],
+  ['TERESA','Prótesis removible','🔗','characters/30_protesis_removible.png'],
+  ['FELIPE','Prótesis total','😁','characters/31_protesis_total.png'],
+  ['ISABEL','Rehabilitación oral','🔧','characters/32_rehabilitacion_oral.png'],
+  ['ADRIÁN','Articulación temporomandibular y trastornos temporomandibulares','🦴','characters/33_atm_trastornos_temporomandibulares.png'],
+  ['MÓNICA','Odontología estética','✨','characters/34_odontologia_estetica.png'],
+  ['EMMA','Salud pública y odontología comunitaria','🌎','characters/35_salud_publica_odontologia_comunitaria.png'],
+  ['INÉS','Microbiología oral','🦠','characters/36_microbiologia_oral.png'],
+  ['SAMUEL','Infecciones odontogénicas','🧫','characters/37_infecciones_odontogenicas.png'],
+  ['EVA','Urgencias médicas en odontología','🚑','characters/38_urgencias_medicas_odontologia.png'],
+  ['NOEL','Traumatología dental','🩹','characters/39_traumatologia_dental.png'],
+  ['ROBERTO','Odontología geriátrica','👴','characters/40_odontologia_geriatrica.png'],
+  ['LARA','Odontología para pacientes con necesidades especiales','♿','characters/41_pacientes_necesidades_especiales.png'],
+  ['VÍCTOR','Odontología forense','🔎','characters/42_odontologia_forense.png'],
+  ['CECILIA','Bioética y legislación odontológica','⚖️','characters/43_bioetica_legislacion_odontologica.png'],
+  ['NOA','Fotografía y documentación clínica odontológica','📷','characters/44_fotografia_documentacion_clinica.png'],
+  ['MARTÍN','Oclusión funcional y ajuste oclusal avanzado','🎯','characters/45_oclusion_funcional_ajuste_oclusal_avanzado.png']
 ];
 
 function specialistCharacter([name,specialty,icon,image]){
@@ -67,19 +68,22 @@ function specialistCharacter([name,specialty,icon,image]){
 
 const CHARACTERS = [
   ...SPECIALIST_SPECS.map(specialistCharacter),
-  { name:'NOVA', specialty:'ESTUDIANTE DE ODONTOLOGÍA', category:null, role:'La Futura Especialista', icon:'🎓', image:'characters/nova_estudiante.webp', tone:'student', rarity:'INICIAL',
+  { name:'NOVA', specialty:'ESTUDIANTE DE ODONTOLOGÍA', category:null, role:'La Futura Especialista', icon:'🎓', image:'characters/46_nova.png', tone:'student', rarity:'INICIAL',
     strengths:['Aprendizaje','Versatilidad','Curiosidad clínica'], weaknesses:['Experiencia limitada'], power:'APRENDIZAJE RÁPIDO', tool:'Kit clínico universitario',
     stats:[['Conocimiento',3],['Diagnóstico',3],['Prevención',3],['Precisión',3],['Velocidad',3]] },
-  { name:'DON PÉREZ', specialty:'RATÓN DE LOS DIENTES', category:null, role:'El Coleccionista Legendario', icon:'🐭', image:'characters/don_perez_raton_dientes.webp', tone:'legendary-gold', rarity:'LEGENDARIO',
+  { name:'EL RATÓN DE LOS DIENTES', specialty:'RATÓN DE LOS DIENTES', category:null, role:'El Coleccionista Legendario', icon:'🐭', image:'characters/47_raton_de_los_dientes.png', tone:'legendary-gold', rarity:'LEGENDARIO',
     strengths:['Velocidad','Curiosidad dental','Estrategia'], weaknesses:['Desbloqueo avanzado'], power:'RECOLECCIÓN ESTELAR', tool:'Maletín recolector',
     stats:[['Velocidad',5],['Sigilo',5],['Conocimiento',5],['Estrategia',5],['Magia',5]] },
-  { name:'AURORA', specialty:'HADA DE LOS DIENTES', category:null, role:'Guardiana del Brillo Dental', icon:'🧚', image:'characters/aurora_hada_dientes.webp', tone:'legendary-mint', rarity:'LEGENDARIO',
-    strengths:['Protección','Prevención','Dominio difícil'], weaknesses:['Desbloqueo avanzado'], power:'LLUVIA DE ESMALTE', tool:'Varita dental',
-    stats:[['Magia',5],['Protección',5],['Prevención',5],['Velocidad',5],['Curación',5]] },
-  { name:'EL DIOS DE LA ODONTOLOGÍA', specialty:'DOMINIO TOTAL DE LA ODONTOLOGÍA', category:null, role:'La Leyenda Final', icon:'👑', image:'characters/nova_estudiante.webp', tone:'legendary-gold', rarity:'MÍTICO',
+  { name:'LA MUELA DEL JUICIO', specialty:'LA MUELA DEL JUICIO', category:null, role:'La Guardiana del Juicio Dental', icon:'🦷', image:'characters/48_la_muella_del_juicio.png', tone:'legendary-mint', rarity:'LEGENDARIO',
+    strengths:['Experiencia','Precisión','Dominio clínico'], weaknesses:['Desbloqueo avanzado'], power:'JUICIO CLÍNICO', tool:'Corona del juicio',
+    stats:[['Conocimiento',5],['Diagnóstico',5],['Precisión',5],['Estrategia',5],['Complejidad',5]] },
+  { name:'SANTA APOLONIA', specialty:'SANTA APOLONIA', category:null, role:'Patrona de la Odontología', icon:'🕊️', image:'characters/49_santa_apolonia.png', tone:'legendary-gold', rarity:'LEGENDARIO',
+    strengths:['Historia dental','Protección','Sabiduría'], weaknesses:['Desbloqueo avanzado'], power:'LEGADO DE APOLONIA', tool:'Palma de mártir',
+    stats:[['Sabiduría',5],['Historia',5],['Protección',5],['Conocimiento',5],['Prestigio',5]] },
+  { name:'EL DIOS DE LOS DIENTES', specialty:'DOMINIO TOTAL DE LA ODONTOLOGÍA', category:null, role:'La Leyenda Final', icon:'👑', image:'characters/50_dios_de_los_dientes.png', tone:'legendary-gold', rarity:'MÍTICO',
     strengths:['Todas las áreas','Rondas extremas','Dominio total'], weaknesses:['Solo para quien complete el juego'], power:'DOMINIO ABSOLUTO', tool:'Molar de oro',
     stats:[['Conocimiento',5],['Diagnóstico',5],['Precisión',5],['Velocidad',5],['Complejidad',5]] }
-];
+]
 
 window.DentistasCharacters = CHARACTERS;
 
@@ -87,8 +91,9 @@ window.DentistasCharacters = CHARACTERS;
 const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v2';
 const FINAL_PROGRESS_KEY = 'dentistas-final-progress-v2';
 const FINAL_UNLOCK_KEY = 'dentistas-final-unlocks-v2';
-const HADA_DIFFICULT_FINAL_WINS = 5;
-const DON_PEREZ_SPECIALISTS = 30;
+const MUELA_DIFFICULT_FINAL_WINS = 5;
+const SANTA_EXTREME_FINAL_WINS = 5;
+const RATON_SPECIALISTS = 30;
 
 function loadCharacterProgress(){try{return JSON.parse(localStorage.getItem(CHARACTER_PROGRESS_KEY)||'{}')||{};}catch(_){return {};}}
 function saveCharacterProgress(p){try{localStorage.setItem(CHARACTER_PROGRESS_KEY,JSON.stringify(p));}catch(_){}}
@@ -120,14 +125,15 @@ function recordFinalResult({score=0,difficulty='',area='',legendary=false}={}){
     if(legendary) p.legendaryWins+=1;
   }
   let unlocked=[];
-  if(s>400 && a){
+  if(s>=300 && (d==='super'||d==='super_dificil'||d==='superdifícil'||d==='super dificil') && a){
     const ch=specialistForArea(a);
     if(ch && !finalUnlockedNames().includes(ch.name)){unlockCharacterFromFinal(ch.name);unlocked.push(ch.name);}
   }
   saveFinalProgress(p);
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='DON PÉREZ')) && !finalUnlockedNames().includes('DON PÉREZ')){unlockCharacterFromFinal('DON PÉREZ');unlocked.push('DON PÉREZ');}
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='AURORA')) && !finalUnlockedNames().includes('AURORA')){unlockCharacterFromFinal('AURORA');unlocked.push('AURORA');}
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL DIOS DE LA ODONTOLOGÍA')) && !finalUnlockedNames().includes('EL DIOS DE LA ODONTOLOGÍA')){unlockCharacterFromFinal('EL DIOS DE LA ODONTOLOGÍA');unlocked.push('EL DIOS DE LA ODONTOLOGÍA');}
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL RATÓN DE LOS DIENTES')) && !finalUnlockedNames().includes('EL RATÓN DE LOS DIENTES')){unlockCharacterFromFinal('EL RATÓN DE LOS DIENTES');unlocked.push('EL RATÓN DE LOS DIENTES');}
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='LA MUELA DEL JUICIO')) && !finalUnlockedNames().includes('LA MUELA DEL JUICIO')){unlockCharacterFromFinal('LA MUELA DEL JUICIO');unlocked.push('LA MUELA DEL JUICIO');}
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='SANTA APOLONIA')) && !finalUnlockedNames().includes('SANTA APOLONIA')){unlockCharacterFromFinal('SANTA APOLONIA');unlocked.push('SANTA APOLONIA');}
+  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL DIOS DE LOS DIENTES')) && !finalUnlockedNames().includes('EL DIOS DE LOS DIENTES')){unlockCharacterFromFinal('EL DIOS DE LOS DIENTES');unlocked.push('EL DIOS DE LOS DIENTES');}
   return {progress:p,unlocked:[...new Set(unlocked)]};
 }
 function recordCharacterModuleResult(moduleName,percent){
@@ -142,12 +148,14 @@ function characterUnlocked(character){
   if(unlocked.includes(character.name)) return true;
   if(character.rarity==='ESPECIALISTA') return false;
   const fp=loadFinalProgress();
-  if(character.name==='DON PÉREZ') return unlockedSpecialistCount()>=DON_PEREZ_SPECIALISTS || fp.curiositiesExtremeWins>=1;
-  if(character.name==='AURORA') return fp.difficultWins>=HADA_DIFFICULT_FINAL_WINS;
-  if(character.name==='EL DIOS DE LA ODONTOLOGÍA'){
-    return unlockedSpecialistCount()>=44 &&
-      characterUnlocked(CHARACTERS.find(ch=>ch.name==='DON PÉREZ')) &&
-      characterUnlocked(CHARACTERS.find(ch=>ch.name==='AURORA')) &&
+  if(character.name==='EL RATÓN DE LOS DIENTES') return unlockedSpecialistCount()>=RATON_SPECIALISTS || fp.curiositiesExtremeWins>=1;
+  if(character.name==='LA MUELA DEL JUICIO') return fp.difficultWins>=MUELA_DIFFICULT_FINAL_WINS;
+  if(character.name==='SANTA APOLONIA') return fp.extremeWins>=SANTA_EXTREME_FINAL_WINS;
+  if(character.name==='EL DIOS DE LOS DIENTES'){
+    return unlockedSpecialistCount()>=45 &&
+      characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL RATÓN DE LOS DIENTES')) &&
+      characterUnlocked(CHARACTERS.find(ch=>ch.name==='LA MUELA DEL JUICIO')) &&
+      characterUnlocked(CHARACTERS.find(ch=>ch.name==='SANTA APOLONIA')) &&
       fp.legendaryWins>=1;
   }
   return false;
@@ -156,9 +164,10 @@ function characterUnlockLabel(character){
   if(!character) return '';
   if(character.name==='NOVA') return 'Disponible desde el inicio';
   if(character.rarity==='ESPECIALISTA') return 'Supera 400 puntos en la ronda final de '+character.category;
-  if(character.name==='DON PÉREZ') return 'Desbloquea 30 especialistas o gana Curiosidades en Extremo';
-  if(character.name==='AURORA') return 'Gana '+HADA_DIFFICULT_FINAL_WINS+' rondas finales en Difícil';
-  if(character.name==='EL DIOS DE LA ODONTOLOGÍA') return 'Completa los 44 especialistas, Don Pérez, Aurora y la Final Legendaria';
+  if(character.name==='EL RATÓN DE LOS DIENTES') return 'Desbloquea 30 especialistas o gana Curiosidades en Extremo';
+  if(character.name==='LA MUELA DEL JUICIO') return 'Gana '+MUELA_DIFFICULT_FINAL_WINS+' rondas finales en Difícil';
+  if(character.name==='SANTA APOLONIA') return 'Gana '+SANTA_EXTREME_FINAL_WINS+' rondas finales en Extremo';
+  if(character.name==='EL DIOS DE LOS DIENTES') return 'Completa los 45 especialistas, las tres leyendas y la Final Legendaria';
   return 'Progreso del juego';
 }
 window.DentistasCharacterUnlocked=characterUnlocked;
@@ -737,12 +746,12 @@ const CHARACTER_CPU_PROFILES = {
     keywords:['biofilm','cálculo','calculo','profilaxis','higiene','flúor','fluor','cepill','hilo dental','prevención','prevencion','gingiv'],
     accuracy:{focus:.91,neutral:.61,weak:.43}, delay:[850,1700]
   },
-  AURORA: {
+  LA MUELA DEL JUICIO: {
     tier:'legendary', focus:[],
     keywords:[],
     accuracy:{focus:.96,neutral:.93,weak:.88}, delay:[650,1250]
   },
-  'DON PÉREZ': {
+  'EL RATÓN DE LOS DIENTES': {
     tier:'legendary', focus:[],
     keywords:[],
     accuracy:{focus:.95,neutral:.92,weak:.87}, delay:[600,1200]
