@@ -6,19 +6,19 @@
     "q": "¿Qué hallazgos son compatibles con una Clase I de Angle?",
     "a": [
       [
-        "mantener la posición obtenida",
+        "relación molar Clase I",
         45
       ],
       [
-        "retenedores fijos",
+        "relación canina Clase I",
         30
       ],
       [
-        "retenedores removibles",
+        "puede coexistir con apiñamiento",
         15
       ],
       [
-        "riesgo de cambios posratamiento sin retención",
+        "no implica oclusión ideal",
         10
       ]
     ],
@@ -31,19 +31,19 @@
     "q": "¿Qué características pueden coexistir con una relación molar Clase I?",
     "a": [
       [
-        "mantener la posición obtenida",
+        "relación molar Clase I",
         45
       ],
       [
-        "retenedores fijos",
+        "relación canina Clase I",
         30
       ],
       [
-        "retenedores removibles",
+        "puede coexistir con apiñamiento",
         15
       ],
       [
-        "riesgo de cambios posratamiento sin retención",
+        "no implica oclusión ideal",
         10
       ]
     ],
@@ -56,19 +56,19 @@
     "q": "¿Qué elementos se revisan al describir una Clase I?",
     "a": [
       [
-        "mantener la posición obtenida",
+        "relación molar Clase I",
         45
       ],
       [
-        "retenedores fijos",
+        "relación canina Clase I",
         30
       ],
       [
-        "retenedores removibles",
+        "puede coexistir con apiñamiento",
         15
       ],
       [
-        "riesgo de cambios posratamiento sin retención",
+        "no implica oclusión ideal",
         10
       ]
     ],
@@ -81,19 +81,19 @@
     "q": "¿Qué afirmaciones describen una Clase I en clínica?",
     "a": [
       [
-        "mantener la posición obtenida",
+        "relación molar Clase I",
         45
       ],
       [
-        "retenedores fijos",
+        "relación canina Clase I",
         30
       ],
       [
-        "retenedores removibles",
+        "puede coexistir con apiñamiento",
         15
       ],
       [
-        "riesgo de cambios posratamiento sin retención",
+        "no implica oclusión ideal",
         10
       ]
     ],
@@ -1520,10 +1520,6 @@
       [
         "valoración del patrón vertical",
         10
-      ],
-      [
-        "interpretación junto con otras medidas",
-        null
       ]
     ],
     "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; AAPD. Management of the Developing Dentition and Occlusion in Pediatric Dentistry, revisión 2024; literatura ortodóncica indexada en PubMed."
@@ -1549,10 +1545,6 @@
       [
         "valoración del patrón vertical",
         10
-      ],
-      [
-        "interpretación junto con otras medidas",
-        null
       ]
     ],
     "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; AAPD. Management of the Developing Dentition and Occlusion in Pediatric Dentistry, revisión 2024; literatura ortodóncica indexada en PubMed."
@@ -1578,10 +1570,6 @@
       [
         "valoración del patrón vertical",
         10
-      ],
-      [
-        "interpretación junto con otras medidas",
-        null
       ]
     ],
     "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; AAPD. Management of the Developing Dentition and Occlusion in Pediatric Dentistry, revisión 2024; literatura ortodóncica indexada en PubMed."
@@ -1607,10 +1595,6 @@
       [
         "valoración del patrón vertical",
         10
-      ],
-      [
-        "interpretación junto con otras medidas",
-        null
       ]
     ],
     "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; AAPD. Management of the Developing Dentition and Occlusion in Pediatric Dentistry, revisión 2024; literatura ortodóncica indexada en PubMed."
