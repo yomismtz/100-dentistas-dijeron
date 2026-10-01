@@ -1,1 +1,2502 @@
-[{"id":"ORG10-1","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-2","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-3","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-4","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-5","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-6","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-7","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-8","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-9","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-10","cat":"Ortodoncia","difficulty":"facil","q":"Fundamentos: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-11","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-12","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-13","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-14","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-15","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-16","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-17","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-18","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-19","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-20","cat":"Ortodoncia","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-21","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-22","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-23","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-24","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-25","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-26","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-27","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-28","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-29","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-30","cat":"Ortodoncia","difficulty":"facil","q":"Evaluación: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-31","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-32","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-33","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-34","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-35","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-36","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-37","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-38","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-39","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-40","cat":"Ortodoncia","difficulty":"medio","q":"Prevención: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-41","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-42","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-43","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-44","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-45","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-46","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-47","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-48","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-49","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-50","cat":"Ortodoncia","difficulty":"medio","q":"Tratamiento: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-51","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-52","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-53","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-54","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-55","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-56","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-57","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-58","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-59","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-60","cat":"Ortodoncia","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-61","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-62","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-63","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-64","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-65","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-66","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-67","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-68","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-69","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-70","cat":"Ortodoncia","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-71","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-72","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-73","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-74","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-75","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-76","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-77","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-78","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-79","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-80","cat":"Ortodoncia","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-81","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-82","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-83","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-84","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-85","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-86","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-87","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-88","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-89","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-90","cat":"Ortodoncia","difficulty":"extremo","q":"Documentación: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-91","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de fundamentos en Ortodoncia.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-92","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de diagnóstico en Ortodoncia.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-93","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de evaluación en Ortodoncia.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-94","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de prevención en Ortodoncia.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-95","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de tratamiento en Ortodoncia.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-96","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de seguimiento en Ortodoncia.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-97","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de complicaciones en Ortodoncia.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-98","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de pronóstico en Ortodoncia.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-99","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de documentación en Ortodoncia.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG10-100","cat":"Ortodoncia","difficulty":"extremo","q":"Seguridad: menciona tres elementos de seguridad en Ortodoncia.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"}]
+[
+  {
+    "id": "ORG10-001",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a Clase I de Angle?",
+    "a": [
+      [
+        "relación molar normal",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "diastemas",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-002",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en Clase I de Angle?",
+    "a": [
+      [
+        "relación molar normal",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "diastemas",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-003",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de Clase I de Angle?",
+    "a": [
+      [
+        "relación molar normal",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "diastemas",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-004",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a Clase I de Angle?",
+    "a": [
+      [
+        "relación molar normal",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "diastemas",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-005",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a Clase II de Angle?",
+    "a": [
+      [
+        "relación molar distal",
+        45
+      ],
+      [
+        "retrognatia",
+        30
+      ],
+      [
+        "overjet aumentado",
+        15
+      ],
+      [
+        "perfil convexo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-006",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en Clase II de Angle?",
+    "a": [
+      [
+        "relación molar distal",
+        45
+      ],
+      [
+        "retrognatia",
+        30
+      ],
+      [
+        "overjet aumentado",
+        15
+      ],
+      [
+        "perfil convexo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-007",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de Clase II de Angle?",
+    "a": [
+      [
+        "relación molar distal",
+        45
+      ],
+      [
+        "retrognatia",
+        30
+      ],
+      [
+        "overjet aumentado",
+        15
+      ],
+      [
+        "perfil convexo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-008",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a Clase II de Angle?",
+    "a": [
+      [
+        "relación molar distal",
+        45
+      ],
+      [
+        "retrognatia",
+        30
+      ],
+      [
+        "overjet aumentado",
+        15
+      ],
+      [
+        "perfil convexo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-009",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a Clase III de Angle?",
+    "a": [
+      [
+        "relación molar mesial",
+        45
+      ],
+      [
+        "prognatismo",
+        30
+      ],
+      [
+        "mordida cruzada anterior",
+        15
+      ],
+      [
+        "perfil cóncavo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-010",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en Clase III de Angle?",
+    "a": [
+      [
+        "relación molar mesial",
+        45
+      ],
+      [
+        "prognatismo",
+        30
+      ],
+      [
+        "mordida cruzada anterior",
+        15
+      ],
+      [
+        "perfil cóncavo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-011",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de Clase III de Angle?",
+    "a": [
+      [
+        "relación molar mesial",
+        45
+      ],
+      [
+        "prognatismo",
+        30
+      ],
+      [
+        "mordida cruzada anterior",
+        15
+      ],
+      [
+        "perfil cóncavo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-012",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a Clase III de Angle?",
+    "a": [
+      [
+        "relación molar mesial",
+        45
+      ],
+      [
+        "prognatismo",
+        30
+      ],
+      [
+        "mordida cruzada anterior",
+        15
+      ],
+      [
+        "perfil cóncavo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-013",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a overjet?",
+    "a": [
+      [
+        "resalte horizontal",
+        45
+      ],
+      [
+        "positivo",
+        30
+      ],
+      [
+        "aumentado",
+        15
+      ],
+      [
+        "negativo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-014",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en overjet?",
+    "a": [
+      [
+        "resalte horizontal",
+        45
+      ],
+      [
+        "positivo",
+        30
+      ],
+      [
+        "aumentado",
+        15
+      ],
+      [
+        "negativo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-015",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de overjet?",
+    "a": [
+      [
+        "resalte horizontal",
+        45
+      ],
+      [
+        "positivo",
+        30
+      ],
+      [
+        "aumentado",
+        15
+      ],
+      [
+        "negativo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-016",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a overjet?",
+    "a": [
+      [
+        "resalte horizontal",
+        45
+      ],
+      [
+        "positivo",
+        30
+      ],
+      [
+        "aumentado",
+        15
+      ],
+      [
+        "negativo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-017",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a overbite?",
+    "a": [
+      [
+        "sobremordida vertical",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "abierta",
+        15
+      ],
+      [
+        "normal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-018",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en overbite?",
+    "a": [
+      [
+        "sobremordida vertical",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "abierta",
+        15
+      ],
+      [
+        "normal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-019",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de overbite?",
+    "a": [
+      [
+        "sobremordida vertical",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "abierta",
+        15
+      ],
+      [
+        "normal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-020",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a overbite?",
+    "a": [
+      [
+        "sobremordida vertical",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "abierta",
+        15
+      ],
+      [
+        "normal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-021",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a mordida abierta?",
+    "a": [
+      [
+        "falta de contacto",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "hábito",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-022",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en mordida abierta?",
+    "a": [
+      [
+        "falta de contacto",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "hábito",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-023",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de mordida abierta?",
+    "a": [
+      [
+        "falta de contacto",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "hábito",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-024",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a mordida abierta?",
+    "a": [
+      [
+        "falta de contacto",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "hábito",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-025",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a mordida cruzada?",
+    "a": [
+      [
+        "relación transversal invertida",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "unilateral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-026",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en mordida cruzada?",
+    "a": [
+      [
+        "relación transversal invertida",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "unilateral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-027",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de mordida cruzada?",
+    "a": [
+      [
+        "relación transversal invertida",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "unilateral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-028",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a mordida cruzada?",
+    "a": [
+      [
+        "relación transversal invertida",
+        45
+      ],
+      [
+        "anterior",
+        30
+      ],
+      [
+        "posterior",
+        15
+      ],
+      [
+        "unilateral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-029",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a apiñamiento?",
+    "a": [
+      [
+        "falta de espacio",
+        45
+      ],
+      [
+        "leve",
+        30
+      ],
+      [
+        "moderado",
+        15
+      ],
+      [
+        "severo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-030",
+    "cat": "Ortodoncia",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en apiñamiento?",
+    "a": [
+      [
+        "falta de espacio",
+        45
+      ],
+      [
+        "leve",
+        30
+      ],
+      [
+        "moderado",
+        15
+      ],
+      [
+        "severo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-031",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de apiñamiento?",
+    "a": [
+      [
+        "falta de espacio",
+        45
+      ],
+      [
+        "leve",
+        30
+      ],
+      [
+        "moderado",
+        15
+      ],
+      [
+        "severo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-032",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a apiñamiento?",
+    "a": [
+      [
+        "falta de espacio",
+        45
+      ],
+      [
+        "leve",
+        30
+      ],
+      [
+        "moderado",
+        15
+      ],
+      [
+        "severo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-033",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a diastema?",
+    "a": [
+      [
+        "espacio interdental",
+        45
+      ],
+      [
+        "medial",
+        30
+      ],
+      [
+        "generalizado",
+        15
+      ],
+      [
+        "localizado",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-034",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en diastema?",
+    "a": [
+      [
+        "espacio interdental",
+        45
+      ],
+      [
+        "medial",
+        30
+      ],
+      [
+        "generalizado",
+        15
+      ],
+      [
+        "localizado",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-035",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de diastema?",
+    "a": [
+      [
+        "espacio interdental",
+        45
+      ],
+      [
+        "medial",
+        30
+      ],
+      [
+        "generalizado",
+        15
+      ],
+      [
+        "localizado",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-036",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a diastema?",
+    "a": [
+      [
+        "espacio interdental",
+        45
+      ],
+      [
+        "medial",
+        30
+      ],
+      [
+        "generalizado",
+        15
+      ],
+      [
+        "localizado",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-037",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a curva de Spee?",
+    "a": [
+      [
+        "curvatura sagital",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "plana",
+        15
+      ],
+      [
+        "invertida",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-038",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en curva de Spee?",
+    "a": [
+      [
+        "curvatura sagital",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "plana",
+        15
+      ],
+      [
+        "invertida",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-039",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de curva de Spee?",
+    "a": [
+      [
+        "curvatura sagital",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "plana",
+        15
+      ],
+      [
+        "invertida",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-040",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a curva de Spee?",
+    "a": [
+      [
+        "curvatura sagital",
+        45
+      ],
+      [
+        "profunda",
+        30
+      ],
+      [
+        "plana",
+        15
+      ],
+      [
+        "invertida",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-041",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a curva de Wilson?",
+    "a": [
+      [
+        "curvatura transversal",
+        45
+      ],
+      [
+        "posterior",
+        30
+      ],
+      [
+        "bilateral",
+        15
+      ],
+      [
+        "compensatoria",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-042",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en curva de Wilson?",
+    "a": [
+      [
+        "curvatura transversal",
+        45
+      ],
+      [
+        "posterior",
+        30
+      ],
+      [
+        "bilateral",
+        15
+      ],
+      [
+        "compensatoria",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-043",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de curva de Wilson?",
+    "a": [
+      [
+        "curvatura transversal",
+        45
+      ],
+      [
+        "posterior",
+        30
+      ],
+      [
+        "bilateral",
+        15
+      ],
+      [
+        "compensatoria",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-044",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a curva de Wilson?",
+    "a": [
+      [
+        "curvatura transversal",
+        45
+      ],
+      [
+        "posterior",
+        30
+      ],
+      [
+        "bilateral",
+        15
+      ],
+      [
+        "compensatoria",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-045",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a línea media?",
+    "a": [
+      [
+        "coincidencia",
+        45
+      ],
+      [
+        "desviación",
+        30
+      ],
+      [
+        "facial",
+        15
+      ],
+      [
+        "interincisal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-046",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en línea media?",
+    "a": [
+      [
+        "coincidencia",
+        45
+      ],
+      [
+        "desviación",
+        30
+      ],
+      [
+        "facial",
+        15
+      ],
+      [
+        "interincisal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-047",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de línea media?",
+    "a": [
+      [
+        "coincidencia",
+        45
+      ],
+      [
+        "desviación",
+        30
+      ],
+      [
+        "facial",
+        15
+      ],
+      [
+        "interincisal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-048",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a línea media?",
+    "a": [
+      [
+        "coincidencia",
+        45
+      ],
+      [
+        "desviación",
+        30
+      ],
+      [
+        "facial",
+        15
+      ],
+      [
+        "interincisal",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-049",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a SNA?",
+    "a": [
+      [
+        "posición maxilar",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "maxilar",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-050",
+    "cat": "Ortodoncia",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en SNA?",
+    "a": [
+      [
+        "posición maxilar",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "maxilar",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-051",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de SNA?",
+    "a": [
+      [
+        "posición maxilar",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "maxilar",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-052",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a SNA?",
+    "a": [
+      [
+        "posición maxilar",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "maxilar",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-053",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a SNB?",
+    "a": [
+      [
+        "posición mandibular",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-054",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en SNB?",
+    "a": [
+      [
+        "posición mandibular",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-055",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de SNB?",
+    "a": [
+      [
+        "posición mandibular",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-056",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a SNB?",
+    "a": [
+      [
+        "posición mandibular",
+        45
+      ],
+      [
+        "base craneal",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "anteroposterior",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-057",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a ANB?",
+    "a": [
+      [
+        "relación sagital",
+        45
+      ],
+      [
+        "maxilar",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "Clase II/III",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-058",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en ANB?",
+    "a": [
+      [
+        "relación sagital",
+        45
+      ],
+      [
+        "maxilar",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "Clase II/III",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-059",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de ANB?",
+    "a": [
+      [
+        "relación sagital",
+        45
+      ],
+      [
+        "maxilar",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "Clase II/III",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-060",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a ANB?",
+    "a": [
+      [
+        "relación sagital",
+        45
+      ],
+      [
+        "maxilar",
+        30
+      ],
+      [
+        "mandíbula",
+        15
+      ],
+      [
+        "Clase II/III",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-061",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a SN-GoGn?",
+    "a": [
+      [
+        "patrón vertical",
+        45
+      ],
+      [
+        "divergencia",
+        30
+      ],
+      [
+        "altura facial",
+        15
+      ],
+      [
+        "mandíbula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-062",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en SN-GoGn?",
+    "a": [
+      [
+        "patrón vertical",
+        45
+      ],
+      [
+        "divergencia",
+        30
+      ],
+      [
+        "altura facial",
+        15
+      ],
+      [
+        "mandíbula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-063",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de SN-GoGn?",
+    "a": [
+      [
+        "patrón vertical",
+        45
+      ],
+      [
+        "divergencia",
+        30
+      ],
+      [
+        "altura facial",
+        15
+      ],
+      [
+        "mandíbula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-064",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a SN-GoGn?",
+    "a": [
+      [
+        "patrón vertical",
+        45
+      ],
+      [
+        "divergencia",
+        30
+      ],
+      [
+        "altura facial",
+        15
+      ],
+      [
+        "mandíbula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-065",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a cefalometría?",
+    "a": [
+      [
+        "ángulos",
+        45
+      ],
+      [
+        "distancias",
+        30
+      ],
+      [
+        "relaciones",
+        15
+      ],
+      [
+        "mediciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-066",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en cefalometría?",
+    "a": [
+      [
+        "ángulos",
+        45
+      ],
+      [
+        "distancias",
+        30
+      ],
+      [
+        "relaciones",
+        15
+      ],
+      [
+        "mediciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-067",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de cefalometría?",
+    "a": [
+      [
+        "ángulos",
+        45
+      ],
+      [
+        "distancias",
+        30
+      ],
+      [
+        "relaciones",
+        15
+      ],
+      [
+        "mediciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-068",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a cefalometría?",
+    "a": [
+      [
+        "ángulos",
+        45
+      ],
+      [
+        "distancias",
+        30
+      ],
+      [
+        "relaciones",
+        15
+      ],
+      [
+        "mediciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-069",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a crecimiento mandibular?",
+    "a": [
+      [
+        "remodelación",
+        45
+      ],
+      [
+        "crecimiento condilar",
+        30
+      ],
+      [
+        "rotación",
+        15
+      ],
+      [
+        "desplazamiento",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-070",
+    "cat": "Ortodoncia",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en crecimiento mandibular?",
+    "a": [
+      [
+        "remodelación",
+        45
+      ],
+      [
+        "crecimiento condilar",
+        30
+      ],
+      [
+        "rotación",
+        15
+      ],
+      [
+        "desplazamiento",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-071",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de crecimiento mandibular?",
+    "a": [
+      [
+        "remodelación",
+        45
+      ],
+      [
+        "crecimiento condilar",
+        30
+      ],
+      [
+        "rotación",
+        15
+      ],
+      [
+        "desplazamiento",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-072",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a crecimiento mandibular?",
+    "a": [
+      [
+        "remodelación",
+        45
+      ],
+      [
+        "crecimiento condilar",
+        30
+      ],
+      [
+        "rotación",
+        15
+      ],
+      [
+        "desplazamiento",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-073",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a expansión maxilar?",
+    "a": [
+      [
+        "aumento transversal",
+        45
+      ],
+      [
+        "disyuntor",
+        30
+      ],
+      [
+        "suturas",
+        15
+      ],
+      [
+        "arco",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-074",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en expansión maxilar?",
+    "a": [
+      [
+        "aumento transversal",
+        45
+      ],
+      [
+        "disyuntor",
+        30
+      ],
+      [
+        "suturas",
+        15
+      ],
+      [
+        "arco",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-075",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de expansión maxilar?",
+    "a": [
+      [
+        "aumento transversal",
+        45
+      ],
+      [
+        "disyuntor",
+        30
+      ],
+      [
+        "suturas",
+        15
+      ],
+      [
+        "arco",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-076",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a expansión maxilar?",
+    "a": [
+      [
+        "aumento transversal",
+        45
+      ],
+      [
+        "disyuntor",
+        30
+      ],
+      [
+        "suturas",
+        15
+      ],
+      [
+        "arco",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-077",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a brackets?",
+    "a": [
+      [
+        "aparatología fija",
+        45
+      ],
+      [
+        "arco",
+        30
+      ],
+      [
+        "ligadura",
+        15
+      ],
+      [
+        "tubo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-078",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en brackets?",
+    "a": [
+      [
+        "aparatología fija",
+        45
+      ],
+      [
+        "arco",
+        30
+      ],
+      [
+        "ligadura",
+        15
+      ],
+      [
+        "tubo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-079",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de brackets?",
+    "a": [
+      [
+        "aparatología fija",
+        45
+      ],
+      [
+        "arco",
+        30
+      ],
+      [
+        "ligadura",
+        15
+      ],
+      [
+        "tubo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-080",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a brackets?",
+    "a": [
+      [
+        "aparatología fija",
+        45
+      ],
+      [
+        "arco",
+        30
+      ],
+      [
+        "ligadura",
+        15
+      ],
+      [
+        "tubo",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-081",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a alineación?",
+    "a": [
+      [
+        "nivelación",
+        45
+      ],
+      [
+        "arcos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-082",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en alineación?",
+    "a": [
+      [
+        "nivelación",
+        45
+      ],
+      [
+        "arcos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-083",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de alineación?",
+    "a": [
+      [
+        "nivelación",
+        45
+      ],
+      [
+        "arcos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-084",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a alineación?",
+    "a": [
+      [
+        "nivelación",
+        45
+      ],
+      [
+        "arcos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "rotaciones",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-085",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a anclaje?",
+    "a": [
+      [
+        "resistencia al movimiento",
+        45
+      ],
+      [
+        "minitornillo",
+        30
+      ],
+      [
+        "molar",
+        15
+      ],
+      [
+        "extraoral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-086",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en anclaje?",
+    "a": [
+      [
+        "resistencia al movimiento",
+        45
+      ],
+      [
+        "minitornillo",
+        30
+      ],
+      [
+        "molar",
+        15
+      ],
+      [
+        "extraoral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-087",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de anclaje?",
+    "a": [
+      [
+        "resistencia al movimiento",
+        45
+      ],
+      [
+        "minitornillo",
+        30
+      ],
+      [
+        "molar",
+        15
+      ],
+      [
+        "extraoral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-088",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a anclaje?",
+    "a": [
+      [
+        "resistencia al movimiento",
+        45
+      ],
+      [
+        "minitornillo",
+        30
+      ],
+      [
+        "molar",
+        15
+      ],
+      [
+        "extraoral",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-089",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a retención?",
+    "a": [
+      [
+        "mantener resultado",
+        45
+      ],
+      [
+        "retenedor fijo",
+        30
+      ],
+      [
+        "retenedor removible",
+        15
+      ],
+      [
+        "férula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-090",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en retención?",
+    "a": [
+      [
+        "mantener resultado",
+        45
+      ],
+      [
+        "retenedor fijo",
+        30
+      ],
+      [
+        "retenedor removible",
+        15
+      ],
+      [
+        "férula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-091",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de retención?",
+    "a": [
+      [
+        "mantener resultado",
+        45
+      ],
+      [
+        "retenedor fijo",
+        30
+      ],
+      [
+        "retenedor removible",
+        15
+      ],
+      [
+        "férula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-092",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a retención?",
+    "a": [
+      [
+        "mantener resultado",
+        45
+      ],
+      [
+        "retenedor fijo",
+        30
+      ],
+      [
+        "retenedor removible",
+        15
+      ],
+      [
+        "férula",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-093",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a ortodoncia interceptiva?",
+    "a": [
+      [
+        "intervención temprana",
+        45
+      ],
+      [
+        "espacio",
+        30
+      ],
+      [
+        "crecimiento",
+        15
+      ],
+      [
+        "hábitos",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-094",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en ortodoncia interceptiva?",
+    "a": [
+      [
+        "intervención temprana",
+        45
+      ],
+      [
+        "espacio",
+        30
+      ],
+      [
+        "crecimiento",
+        15
+      ],
+      [
+        "hábitos",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-095",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de ortodoncia interceptiva?",
+    "a": [
+      [
+        "intervención temprana",
+        45
+      ],
+      [
+        "espacio",
+        30
+      ],
+      [
+        "crecimiento",
+        15
+      ],
+      [
+        "hábitos",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-096",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a ortodoncia interceptiva?",
+    "a": [
+      [
+        "intervención temprana",
+        45
+      ],
+      [
+        "espacio",
+        30
+      ],
+      [
+        "crecimiento",
+        15
+      ],
+      [
+        "hábitos",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-097",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a extracción ortodóncica?",
+    "a": [
+      [
+        "crear espacio",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "premolares",
+        15
+      ],
+      [
+        "anclaje",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-098",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en extracción ortodóncica?",
+    "a": [
+      [
+        "crear espacio",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "premolares",
+        15
+      ],
+      [
+        "anclaje",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-099",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de extracción ortodóncica?",
+    "a": [
+      [
+        "crear espacio",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "premolares",
+        15
+      ],
+      [
+        "anclaje",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  },
+  {
+    "id": "ORG10-100",
+    "cat": "Ortodoncia",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a extracción ortodóncica?",
+    "a": [
+      [
+        "crear espacio",
+        45
+      ],
+      [
+        "apiñamiento",
+        30
+      ],
+      [
+        "premolares",
+        15
+      ],
+      [
+        "anclaje",
+        10
+      ]
+    ],
+    "source": "Proffit WR et al. Contemporary Orthodontics, 6th ed.; Graber LW et al. Orthodontics, 7th ed.; Angle EH."
+  }
+]
