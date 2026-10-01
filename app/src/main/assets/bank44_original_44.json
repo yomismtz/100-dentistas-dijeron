@@ -1,0 +1,2705 @@
+{
+  "category": "Fotografía y documentación clínica odontológica",
+  "questions": [
+    {
+      "id": "ORG44-001",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Objetivo clínico?",
+      "answers": [
+        {
+          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
+          "points": 45
+        },
+        {
+          "text": "documentar hallazgos",
+          "points": 30
+        },
+        {
+          "text": "comparar cambios",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-002",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Objetivo clínico?",
+      "answers": [
+        {
+          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
+          "points": 35
+        },
+        {
+          "text": "documentar hallazgos",
+          "points": 30
+        },
+        {
+          "text": "comparar cambios",
+          "points": 20
+        },
+        {
+          "text": "apoyar comunicación",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-003",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Objetivo clínico?",
+      "answers": [
+        {
+          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
+          "points": 30
+        },
+        {
+          "text": "documentar hallazgos",
+          "points": 25
+        },
+        {
+          "text": "comparar cambios",
+          "points": 20
+        },
+        {
+          "text": "apoyar comunicación",
+          "points": 15
+        },
+        {
+          "text": "apoyar planificación",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-004",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Objetivo clínico?",
+      "answers": [
+        {
+          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
+          "points": 25
+        },
+        {
+          "text": "documentar hallazgos",
+          "points": 20
+        },
+        {
+          "text": "comparar cambios",
+          "points": 18
+        },
+        {
+          "text": "apoyar comunicación",
+          "points": 15
+        },
+        {
+          "text": "apoyar planificación",
+          "points": 12
+        },
+        {
+          "text": "registrar evolución",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-005",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Estandarización?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
+          "points": 45
+        },
+        {
+          "text": "reproducibilidad",
+          "points": 30
+        },
+        {
+          "text": "comparabilidad",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-006",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Estandarización?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
+          "points": 35
+        },
+        {
+          "text": "reproducibilidad",
+          "points": 30
+        },
+        {
+          "text": "comparabilidad",
+          "points": 20
+        },
+        {
+          "text": "seguimiento",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-007",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Estandarización?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
+          "points": 30
+        },
+        {
+          "text": "reproducibilidad",
+          "points": 25
+        },
+        {
+          "text": "comparabilidad",
+          "points": 20
+        },
+        {
+          "text": "seguimiento",
+          "points": 15
+        },
+        {
+          "text": "reducción de variabilidad",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-008",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Estandarización?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
+          "points": 25
+        },
+        {
+          "text": "reproducibilidad",
+          "points": 20
+        },
+        {
+          "text": "comparabilidad",
+          "points": 18
+        },
+        {
+          "text": "seguimiento",
+          "points": 15
+        },
+        {
+          "text": "reducción de variabilidad",
+          "points": 12
+        },
+        {
+          "text": "documentación consistente",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-009",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Serie extraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
+          "points": 45
+        },
+        {
+          "text": "frontal",
+          "points": 30
+        },
+        {
+          "text": "perfil derecho o izquierdo según protocolo",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-010",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Serie extraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
+          "points": 35
+        },
+        {
+          "text": "frontal",
+          "points": 30
+        },
+        {
+          "text": "perfil derecho o izquierdo según protocolo",
+          "points": 20
+        },
+        {
+          "text": "frontal con sonrisa cuando esté indicado",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-011",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Serie extraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
+          "points": 30
+        },
+        {
+          "text": "frontal",
+          "points": 25
+        },
+        {
+          "text": "perfil derecho o izquierdo según protocolo",
+          "points": 20
+        },
+        {
+          "text": "frontal con sonrisa cuando esté indicado",
+          "points": 15
+        },
+        {
+          "text": "tres cuartos cuando esté indicado",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-012",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Serie extraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
+          "points": 25
+        },
+        {
+          "text": "frontal",
+          "points": 20
+        },
+        {
+          "text": "perfil derecho o izquierdo según protocolo",
+          "points": 18
+        },
+        {
+          "text": "frontal con sonrisa cuando esté indicado",
+          "points": 15
+        },
+        {
+          "text": "tres cuartos cuando esté indicado",
+          "points": 12
+        },
+        {
+          "text": "reposo facial",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-013",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Serie intraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
+          "points": 45
+        },
+        {
+          "text": "frontal",
+          "points": 30
+        },
+        {
+          "text": "lateral derecha",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-014",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Serie intraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
+          "points": 35
+        },
+        {
+          "text": "frontal",
+          "points": 30
+        },
+        {
+          "text": "lateral derecha",
+          "points": 20
+        },
+        {
+          "text": "lateral izquierda",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-015",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Serie intraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
+          "points": 30
+        },
+        {
+          "text": "frontal",
+          "points": 25
+        },
+        {
+          "text": "lateral derecha",
+          "points": 20
+        },
+        {
+          "text": "lateral izquierda",
+          "points": 15
+        },
+        {
+          "text": "oclusal superior",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-016",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Serie intraoral?",
+      "answers": [
+        {
+          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
+          "points": 25
+        },
+        {
+          "text": "frontal",
+          "points": 20
+        },
+        {
+          "text": "lateral derecha",
+          "points": 18
+        },
+        {
+          "text": "lateral izquierda",
+          "points": 15
+        },
+        {
+          "text": "oclusal superior",
+          "points": 12
+        },
+        {
+          "text": "oclusal inferior",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-017",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Retractores?",
+      "answers": [
+        {
+          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
+          "points": 45
+        },
+        {
+          "text": "separar labios y mejillas",
+          "points": 30
+        },
+        {
+          "text": "exponer superficies dentales",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-018",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Retractores?",
+      "answers": [
+        {
+          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
+          "points": 35
+        },
+        {
+          "text": "separar labios y mejillas",
+          "points": 30
+        },
+        {
+          "text": "exponer superficies dentales",
+          "points": 20
+        },
+        {
+          "text": "mejorar acceso visual",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-019",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Retractores?",
+      "answers": [
+        {
+          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
+          "points": 30
+        },
+        {
+          "text": "separar labios y mejillas",
+          "points": 25
+        },
+        {
+          "text": "exponer superficies dentales",
+          "points": 20
+        },
+        {
+          "text": "mejorar acceso visual",
+          "points": 15
+        },
+        {
+          "text": "reducir interferencias de tejidos blandos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-020",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Retractores?",
+      "answers": [
+        {
+          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
+          "points": 25
+        },
+        {
+          "text": "separar labios y mejillas",
+          "points": 20
+        },
+        {
+          "text": "exponer superficies dentales",
+          "points": 18
+        },
+        {
+          "text": "mejorar acceso visual",
+          "points": 15
+        },
+        {
+          "text": "reducir interferencias de tejidos blandos",
+          "points": 12
+        },
+        {
+          "text": "facilitar vistas laterales",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-021",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Espejos intraorales?",
+      "answers": [
+        {
+          "text": "¿Para qué se utilizan los espejos intraorales?",
+          "points": 45
+        },
+        {
+          "text": "capturar superficies indirectas",
+          "points": 30
+        },
+        {
+          "text": "obtener vistas oclusales",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-022",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Espejos intraorales?",
+      "answers": [
+        {
+          "text": "¿Para qué se utilizan los espejos intraorales?",
+          "points": 35
+        },
+        {
+          "text": "capturar superficies indirectas",
+          "points": 30
+        },
+        {
+          "text": "obtener vistas oclusales",
+          "points": 20
+        },
+        {
+          "text": "facilitar acceso visual",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-023",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Espejos intraorales?",
+      "answers": [
+        {
+          "text": "¿Para qué se utilizan los espejos intraorales?",
+          "points": 30
+        },
+        {
+          "text": "capturar superficies indirectas",
+          "points": 25
+        },
+        {
+          "text": "obtener vistas oclusales",
+          "points": 20
+        },
+        {
+          "text": "facilitar acceso visual",
+          "points": 15
+        },
+        {
+          "text": "ampliar el campo de visión",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-024",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Espejos intraorales?",
+      "answers": [
+        {
+          "text": "¿Para qué se utilizan los espejos intraorales?",
+          "points": 25
+        },
+        {
+          "text": "capturar superficies indirectas",
+          "points": 20
+        },
+        {
+          "text": "obtener vistas oclusales",
+          "points": 18
+        },
+        {
+          "text": "facilitar acceso visual",
+          "points": 15
+        },
+        {
+          "text": "ampliar el campo de visión",
+          "points": 12
+        },
+        {
+          "text": "documentar zonas posteriores",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-025",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Iluminación?",
+      "answers": [
+        {
+          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
+          "points": 45
+        },
+        {
+          "text": "dirección de la luz",
+          "points": 30
+        },
+        {
+          "text": "intensidad",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-026",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Iluminación?",
+      "answers": [
+        {
+          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
+          "points": 35
+        },
+        {
+          "text": "dirección de la luz",
+          "points": 30
+        },
+        {
+          "text": "intensidad",
+          "points": 20
+        },
+        {
+          "text": "uniformidad",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-027",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué factores deben considerarse al evaluar Iluminación?",
+      "answers": [
+        {
+          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
+          "points": 30
+        },
+        {
+          "text": "dirección de la luz",
+          "points": 25
+        },
+        {
+          "text": "intensidad",
+          "points": 20
+        },
+        {
+          "text": "uniformidad",
+          "points": 15
+        },
+        {
+          "text": "reflejos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-028",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de elementos corresponde a Iluminación?",
+      "answers": [
+        {
+          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
+          "points": 25
+        },
+        {
+          "text": "dirección de la luz",
+          "points": 20
+        },
+        {
+          "text": "intensidad",
+          "points": 18
+        },
+        {
+          "text": "uniformidad",
+          "points": 15
+        },
+        {
+          "text": "reflejos",
+          "points": 12
+        },
+        {
+          "text": "sombras",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-029",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Qué elementos son relevantes en Exposición?",
+      "answers": [
+        {
+          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
+          "points": 45
+        },
+        {
+          "text": "apertura",
+          "points": 30
+        },
+        {
+          "text": "velocidad de obturación",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-030",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son aspectos fundamentales de Exposición?",
+      "answers": [
+        {
+          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
+          "points": 35
+        },
+        {
+          "text": "apertura",
+          "points": 30
+        },
+        {
+          "text": "velocidad de obturación",
+          "points": 20
+        },
+        {
+          "text": "ISO",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-031",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué factores deben considerarse al evaluar Exposición?",
+      "answers": [
+        {
+          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
+          "points": 30
+        },
+        {
+          "text": "apertura",
+          "points": 25
+        },
+        {
+          "text": "velocidad de obturación",
+          "points": 20
+        },
+        {
+          "text": "ISO",
+          "points": 15
+        },
+        {
+          "text": "potencia del flash",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-032",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de elementos corresponde a Exposición?",
+      "answers": [
+        {
+          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
+          "points": 25
+        },
+        {
+          "text": "apertura",
+          "points": 20
+        },
+        {
+          "text": "velocidad de obturación",
+          "points": 18
+        },
+        {
+          "text": "ISO",
+          "points": 15
+        },
+        {
+          "text": "potencia del flash",
+          "points": 12
+        },
+        {
+          "text": "condiciones de iluminación",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-033",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué elementos son relevantes en Profundidad de campo?",
+      "answers": [
+        {
+          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
+          "points": 45
+        },
+        {
+          "text": "apertura del diafragma",
+          "points": 30
+        },
+        {
+          "text": "distancia de enfoque",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-034",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son aspectos fundamentales de Profundidad de campo?",
+      "answers": [
+        {
+          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
+          "points": 35
+        },
+        {
+          "text": "apertura del diafragma",
+          "points": 30
+        },
+        {
+          "text": "distancia de enfoque",
+          "points": 20
+        },
+        {
+          "text": "longitud focal",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-035",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué factores deben considerarse al evaluar Profundidad de campo?",
+      "answers": [
+        {
+          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
+          "points": 30
+        },
+        {
+          "text": "apertura del diafragma",
+          "points": 25
+        },
+        {
+          "text": "distancia de enfoque",
+          "points": 20
+        },
+        {
+          "text": "longitud focal",
+          "points": 15
+        },
+        {
+          "text": "tamaño del sensor",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-036",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de elementos corresponde a Profundidad de campo?",
+      "answers": [
+        {
+          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
+          "points": 25
+        },
+        {
+          "text": "apertura del diafragma",
+          "points": 20
+        },
+        {
+          "text": "distancia de enfoque",
+          "points": 18
+        },
+        {
+          "text": "longitud focal",
+          "points": 15
+        },
+        {
+          "text": "tamaño del sensor",
+          "points": 12
+        },
+        {
+          "text": "distancia al objeto",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-037",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué elementos son relevantes en Balance de blancos?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
+          "points": 45
+        },
+        {
+          "text": "reproducir colores con mayor fidelidad",
+          "points": 30
+        },
+        {
+          "text": "mantener consistencia entre fotografías",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-038",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son aspectos fundamentales de Balance de blancos?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
+          "points": 35
+        },
+        {
+          "text": "reproducir colores con mayor fidelidad",
+          "points": 30
+        },
+        {
+          "text": "mantener consistencia entre fotografías",
+          "points": 20
+        },
+        {
+          "text": "reducir dominantes de color",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-039",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué factores deben considerarse al evaluar Balance de blancos?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
+          "points": 30
+        },
+        {
+          "text": "reproducir colores con mayor fidelidad",
+          "points": 25
+        },
+        {
+          "text": "mantener consistencia entre fotografías",
+          "points": 20
+        },
+        {
+          "text": "reducir dominantes de color",
+          "points": 15
+        },
+        {
+          "text": "apoyar documentación cromática",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-040",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de elementos corresponde a Balance de blancos?",
+      "answers": [
+        {
+          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
+          "points": 25
+        },
+        {
+          "text": "reproducir colores con mayor fidelidad",
+          "points": 20
+        },
+        {
+          "text": "mantener consistencia entre fotografías",
+          "points": 18
+        },
+        {
+          "text": "reducir dominantes de color",
+          "points": 15
+        },
+        {
+          "text": "apoyar documentación cromática",
+          "points": 12
+        },
+        {
+          "text": "facilitar comparación",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-041",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué elementos son relevantes en Color dental?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a documentar el color dental?",
+          "points": 45
+        },
+        {
+          "text": "iluminación controlada",
+          "points": 30
+        },
+        {
+          "text": "balance de blancos adecuado",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-042",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son aspectos fundamentales de Color dental?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a documentar el color dental?",
+          "points": 35
+        },
+        {
+          "text": "iluminación controlada",
+          "points": 30
+        },
+        {
+          "text": "balance de blancos adecuado",
+          "points": 20
+        },
+        {
+          "text": "superficie limpia",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-043",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué factores deben considerarse al evaluar Color dental?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a documentar el color dental?",
+          "points": 30
+        },
+        {
+          "text": "iluminación controlada",
+          "points": 25
+        },
+        {
+          "text": "balance de blancos adecuado",
+          "points": 20
+        },
+        {
+          "text": "superficie limpia",
+          "points": 15
+        },
+        {
+          "text": "fotografías estandarizadas",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-044",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de elementos corresponde a Color dental?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a documentar el color dental?",
+          "points": 25
+        },
+        {
+          "text": "iluminación controlada",
+          "points": 20
+        },
+        {
+          "text": "balance de blancos adecuado",
+          "points": 18
+        },
+        {
+          "text": "superficie limpia",
+          "points": 15
+        },
+        {
+          "text": "fotografías estandarizadas",
+          "points": 12
+        },
+        {
+          "text": "evitar contaminación cromática",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-045",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué elementos son relevantes en Enfoque?",
+      "answers": [
+        {
+          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
+          "points": 45
+        },
+        {
+          "text": "detalle suficiente",
+          "points": 30
+        },
+        {
+          "text": "zona anatómica relevante nítida",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-046",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son aspectos fundamentales de Enfoque?",
+      "answers": [
+        {
+          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
+          "points": 35
+        },
+        {
+          "text": "detalle suficiente",
+          "points": 30
+        },
+        {
+          "text": "zona anatómica relevante nítida",
+          "points": 20
+        },
+        {
+          "text": "profundidad de campo adecuada",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-047",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué factores deben considerarse al evaluar Enfoque?",
+      "answers": [
+        {
+          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
+          "points": 30
+        },
+        {
+          "text": "detalle suficiente",
+          "points": 25
+        },
+        {
+          "text": "zona anatómica relevante nítida",
+          "points": 20
+        },
+        {
+          "text": "profundidad de campo adecuada",
+          "points": 15
+        },
+        {
+          "text": "ausencia de desenfoque por movimiento",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-048",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de elementos corresponde a Enfoque?",
+      "answers": [
+        {
+          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
+          "points": 25
+        },
+        {
+          "text": "detalle suficiente",
+          "points": 20
+        },
+        {
+          "text": "zona anatómica relevante nítida",
+          "points": 18
+        },
+        {
+          "text": "profundidad de campo adecuada",
+          "points": 15
+        },
+        {
+          "text": "ausencia de desenfoque por movimiento",
+          "points": 12
+        },
+        {
+          "text": "distancia de trabajo consistente",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-049",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Qué elementos son relevantes en Encuadre?",
+      "answers": [
+        {
+          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
+          "points": 45
+        },
+        {
+          "text": "campo de interés",
+          "points": 30
+        },
+        {
+          "text": "orientación",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-050",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son aspectos fundamentales de Encuadre?",
+      "answers": [
+        {
+          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
+          "points": 35
+        },
+        {
+          "text": "campo de interés",
+          "points": 30
+        },
+        {
+          "text": "orientación",
+          "points": 20
+        },
+        {
+          "text": "centrado",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-051",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué factores deben considerarse al evaluar Encuadre?",
+      "answers": [
+        {
+          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
+          "points": 30
+        },
+        {
+          "text": "campo de interés",
+          "points": 25
+        },
+        {
+          "text": "orientación",
+          "points": 20
+        },
+        {
+          "text": "centrado",
+          "points": 15
+        },
+        {
+          "text": "magnificación",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-052",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de elementos corresponde a Encuadre?",
+      "answers": [
+        {
+          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
+          "points": 25
+        },
+        {
+          "text": "campo de interés",
+          "points": 20
+        },
+        {
+          "text": "orientación",
+          "points": 18
+        },
+        {
+          "text": "centrado",
+          "points": 15
+        },
+        {
+          "text": "magnificación",
+          "points": 12
+        },
+        {
+          "text": "ausencia de elementos distractores",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-053",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos son relevantes en Posición del paciente?",
+      "answers": [
+        {
+          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
+          "points": 45
+        },
+        {
+          "text": "posición de cabeza",
+          "points": 30
+        },
+        {
+          "text": "postura",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-054",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son aspectos fundamentales de Posición del paciente?",
+      "answers": [
+        {
+          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
+          "points": 35
+        },
+        {
+          "text": "posición de cabeza",
+          "points": 30
+        },
+        {
+          "text": "postura",
+          "points": 20
+        },
+        {
+          "text": "distancia a cámara",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-055",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué factores deben considerarse al evaluar Posición del paciente?",
+      "answers": [
+        {
+          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
+          "points": 30
+        },
+        {
+          "text": "posición de cabeza",
+          "points": 25
+        },
+        {
+          "text": "postura",
+          "points": 20
+        },
+        {
+          "text": "distancia a cámara",
+          "points": 15
+        },
+        {
+          "text": "altura de cámara",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-056",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de elementos corresponde a Posición del paciente?",
+      "answers": [
+        {
+          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
+          "points": 25
+        },
+        {
+          "text": "posición de cabeza",
+          "points": 20
+        },
+        {
+          "text": "postura",
+          "points": 18
+        },
+        {
+          "text": "distancia a cámara",
+          "points": 15
+        },
+        {
+          "text": "altura de cámara",
+          "points": 12
+        },
+        {
+          "text": "expresión facial",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-057",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos son relevantes en Posición de cámara?",
+      "answers": [
+        {
+          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
+          "points": 45
+        },
+        {
+          "text": "altura",
+          "points": 30
+        },
+        {
+          "text": "ángulo",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-058",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son aspectos fundamentales de Posición de cámara?",
+      "answers": [
+        {
+          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
+          "points": 35
+        },
+        {
+          "text": "altura",
+          "points": 30
+        },
+        {
+          "text": "ángulo",
+          "points": 20
+        },
+        {
+          "text": "distancia",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-059",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué factores deben considerarse al evaluar Posición de cámara?",
+      "answers": [
+        {
+          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
+          "points": 30
+        },
+        {
+          "text": "altura",
+          "points": 25
+        },
+        {
+          "text": "ángulo",
+          "points": 20
+        },
+        {
+          "text": "distancia",
+          "points": 15
+        },
+        {
+          "text": "centrado",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-060",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de elementos corresponde a Posición de cámara?",
+      "answers": [
+        {
+          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
+          "points": 25
+        },
+        {
+          "text": "altura",
+          "points": 20
+        },
+        {
+          "text": "ángulo",
+          "points": 18
+        },
+        {
+          "text": "distancia",
+          "points": 15
+        },
+        {
+          "text": "centrado",
+          "points": 12
+        },
+        {
+          "text": "orientación",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-061",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos son relevantes en Fotografía de sonrisa?",
+      "answers": [
+        {
+          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
+          "points": 45
+        },
+        {
+          "text": "línea de sonrisa",
+          "points": 30
+        },
+        {
+          "text": "exposición dental",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-062",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía de sonrisa?",
+      "answers": [
+        {
+          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
+          "points": 35
+        },
+        {
+          "text": "línea de sonrisa",
+          "points": 30
+        },
+        {
+          "text": "exposición dental",
+          "points": 20
+        },
+        {
+          "text": "corredores bucales",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-063",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía de sonrisa?",
+      "answers": [
+        {
+          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
+          "points": 30
+        },
+        {
+          "text": "línea de sonrisa",
+          "points": 25
+        },
+        {
+          "text": "exposición dental",
+          "points": 20
+        },
+        {
+          "text": "corredores bucales",
+          "points": 15
+        },
+        {
+          "text": "simetría",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-064",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía de sonrisa?",
+      "answers": [
+        {
+          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
+          "points": 25
+        },
+        {
+          "text": "línea de sonrisa",
+          "points": 20
+        },
+        {
+          "text": "exposición dental",
+          "points": 18
+        },
+        {
+          "text": "corredores bucales",
+          "points": 15
+        },
+        {
+          "text": "simetría",
+          "points": 12
+        },
+        {
+          "text": "relación labial",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-065",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos son relevantes en Fotografía periodontal?",
+      "answers": [
+        {
+          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
+          "points": 45
+        },
+        {
+          "text": "recesiones",
+          "points": 30
+        },
+        {
+          "text": "inflamación",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-066",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía periodontal?",
+      "answers": [
+        {
+          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
+          "points": 35
+        },
+        {
+          "text": "recesiones",
+          "points": 30
+        },
+        {
+          "text": "inflamación",
+          "points": 20
+        },
+        {
+          "text": "pigmentación",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-067",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía periodontal?",
+      "answers": [
+        {
+          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
+          "points": 30
+        },
+        {
+          "text": "recesiones",
+          "points": 25
+        },
+        {
+          "text": "inflamación",
+          "points": 20
+        },
+        {
+          "text": "pigmentación",
+          "points": 15
+        },
+        {
+          "text": "morfología gingival",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-068",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía periodontal?",
+      "answers": [
+        {
+          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
+          "points": 25
+        },
+        {
+          "text": "recesiones",
+          "points": 20
+        },
+        {
+          "text": "inflamación",
+          "points": 18
+        },
+        {
+          "text": "pigmentación",
+          "points": 15
+        },
+        {
+          "text": "morfología gingival",
+          "points": 12
+        },
+        {
+          "text": "lesiones",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-069",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Qué elementos son relevantes en Fotografía restauradora?",
+      "answers": [
+        {
+          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
+          "points": 45
+        },
+        {
+          "text": "documentar situación inicial",
+          "points": 30
+        },
+        {
+          "text": "seleccionar y comunicar color",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-070",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía restauradora?",
+      "answers": [
+        {
+          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
+          "points": 35
+        },
+        {
+          "text": "documentar situación inicial",
+          "points": 30
+        },
+        {
+          "text": "seleccionar y comunicar color",
+          "points": 20
+        },
+        {
+          "text": "registrar aislamiento y procedimientos",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-071",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía restauradora?",
+      "answers": [
+        {
+          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
+          "points": 30
+        },
+        {
+          "text": "documentar situación inicial",
+          "points": 25
+        },
+        {
+          "text": "seleccionar y comunicar color",
+          "points": 20
+        },
+        {
+          "text": "registrar aislamiento y procedimientos",
+          "points": 15
+        },
+        {
+          "text": "comparar resultado",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-072",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía restauradora?",
+      "answers": [
+        {
+          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
+          "points": 25
+        },
+        {
+          "text": "documentar situación inicial",
+          "points": 20
+        },
+        {
+          "text": "seleccionar y comunicar color",
+          "points": 18
+        },
+        {
+          "text": "registrar aislamiento y procedimientos",
+          "points": 15
+        },
+        {
+          "text": "comparar resultado",
+          "points": 12
+        },
+        {
+          "text": "documentar anatomía",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-073",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Fotografía ortodóncica?",
+      "answers": [
+        {
+          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
+          "points": 45
+        },
+        {
+          "text": "documentación inicial",
+          "points": 30
+        },
+        {
+          "text": "seguimiento",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-074",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía ortodóncica?",
+      "answers": [
+        {
+          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
+          "points": 35
+        },
+        {
+          "text": "documentación inicial",
+          "points": 30
+        },
+        {
+          "text": "seguimiento",
+          "points": 20
+        },
+        {
+          "text": "comparación pretratamiento-postratamiento",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-075",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía ortodóncica?",
+      "answers": [
+        {
+          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
+          "points": 30
+        },
+        {
+          "text": "documentación inicial",
+          "points": 25
+        },
+        {
+          "text": "seguimiento",
+          "points": 20
+        },
+        {
+          "text": "comparación pretratamiento-postratamiento",
+          "points": 15
+        },
+        {
+          "text": "comunicación clínica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-076",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía ortodóncica?",
+      "answers": [
+        {
+          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
+          "points": 25
+        },
+        {
+          "text": "documentación inicial",
+          "points": 20
+        },
+        {
+          "text": "seguimiento",
+          "points": 18
+        },
+        {
+          "text": "comparación pretratamiento-postratamiento",
+          "points": 15
+        },
+        {
+          "text": "comunicación clínica",
+          "points": 12
+        },
+        {
+          "text": "evaluación de cambios",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-077",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Fotografía de cirugía?",
+      "answers": [
+        {
+          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
+          "points": 45
+        },
+        {
+          "text": "bioseguridad",
+          "points": 30
+        },
+        {
+          "text": "campo limpio",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-078",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía de cirugía?",
+      "answers": [
+        {
+          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
+          "points": 35
+        },
+        {
+          "text": "bioseguridad",
+          "points": 30
+        },
+        {
+          "text": "campo limpio",
+          "points": 20
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-079",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía de cirugía?",
+      "answers": [
+        {
+          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
+          "points": 30
+        },
+        {
+          "text": "bioseguridad",
+          "points": 25
+        },
+        {
+          "text": "campo limpio",
+          "points": 20
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 15
+        },
+        {
+          "text": "identificación de la zona",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-080",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía de cirugía?",
+      "answers": [
+        {
+          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
+          "points": 25
+        },
+        {
+          "text": "bioseguridad",
+          "points": 20
+        },
+        {
+          "text": "campo limpio",
+          "points": 18
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 15
+        },
+        {
+          "text": "identificación de la zona",
+          "points": 12
+        },
+        {
+          "text": "documentación objetiva",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-081",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Fotografía de lesiones?",
+      "answers": [
+        {
+          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
+          "points": 45
+        },
+        {
+          "text": "orientación",
+          "points": 30
+        },
+        {
+          "text": "escala cuando sea pertinente",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-082",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía de lesiones?",
+      "answers": [
+        {
+          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
+          "points": 35
+        },
+        {
+          "text": "orientación",
+          "points": 30
+        },
+        {
+          "text": "escala cuando sea pertinente",
+          "points": 20
+        },
+        {
+          "text": "iluminación",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-083",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía de lesiones?",
+      "answers": [
+        {
+          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
+          "points": 30
+        },
+        {
+          "text": "orientación",
+          "points": 25
+        },
+        {
+          "text": "escala cuando sea pertinente",
+          "points": 20
+        },
+        {
+          "text": "iluminación",
+          "points": 15
+        },
+        {
+          "text": "enfoque",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-084",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía de lesiones?",
+      "answers": [
+        {
+          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
+          "points": 25
+        },
+        {
+          "text": "orientación",
+          "points": 20
+        },
+        {
+          "text": "escala cuando sea pertinente",
+          "points": 18
+        },
+        {
+          "text": "iluminación",
+          "points": 15
+        },
+        {
+          "text": "enfoque",
+          "points": 12
+        },
+        {
+          "text": "localización anatómica",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-085",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Fotografía con smartphone?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
+          "points": 45
+        },
+        {
+          "text": "posición constante",
+          "points": 30
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-086",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Fotografía con smartphone?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
+          "points": 35
+        },
+        {
+          "text": "posición constante",
+          "points": 30
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 20
+        },
+        {
+          "text": "distancia consistente",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-087",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Fotografía con smartphone?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
+          "points": 30
+        },
+        {
+          "text": "posición constante",
+          "points": 25
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 20
+        },
+        {
+          "text": "distancia consistente",
+          "points": 15
+        },
+        {
+          "text": "enfoque",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-088",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Fotografía con smartphone?",
+      "answers": [
+        {
+          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
+          "points": 25
+        },
+        {
+          "text": "posición constante",
+          "points": 20
+        },
+        {
+          "text": "iluminación adecuada",
+          "points": 18
+        },
+        {
+          "text": "distancia consistente",
+          "points": 15
+        },
+        {
+          "text": "enfoque",
+          "points": 12
+        },
+        {
+          "text": "retractores o espejos cuando sean necesarios",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-089",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Almacenamiento?",
+      "answers": [
+        {
+          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
+          "points": 45
+        },
+        {
+          "text": "identificación adecuada",
+          "points": 30
+        },
+        {
+          "text": "seguridad",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-090",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Almacenamiento?",
+      "answers": [
+        {
+          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
+          "points": 35
+        },
+        {
+          "text": "identificación adecuada",
+          "points": 30
+        },
+        {
+          "text": "seguridad",
+          "points": 20
+        },
+        {
+          "text": "control de acceso",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-091",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Almacenamiento?",
+      "answers": [
+        {
+          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
+          "points": 30
+        },
+        {
+          "text": "identificación adecuada",
+          "points": 25
+        },
+        {
+          "text": "seguridad",
+          "points": 20
+        },
+        {
+          "text": "control de acceso",
+          "points": 15
+        },
+        {
+          "text": "respaldo",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-092",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Almacenamiento?",
+      "answers": [
+        {
+          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
+          "points": 25
+        },
+        {
+          "text": "identificación adecuada",
+          "points": 20
+        },
+        {
+          "text": "seguridad",
+          "points": 18
+        },
+        {
+          "text": "control de acceso",
+          "points": 15
+        },
+        {
+          "text": "respaldo",
+          "points": 12
+        },
+        {
+          "text": "integridad de archivos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-093",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Privacidad y consentimiento?",
+      "answers": [
+        {
+          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
+          "points": 45
+        },
+        {
+          "text": "consentimiento o autorización aplicable",
+          "points": 30
+        },
+        {
+          "text": "confidencialidad",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-094",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Privacidad y consentimiento?",
+      "answers": [
+        {
+          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
+          "points": 35
+        },
+        {
+          "text": "consentimiento o autorización aplicable",
+          "points": 30
+        },
+        {
+          "text": "confidencialidad",
+          "points": 20
+        },
+        {
+          "text": "finalidad del uso",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-095",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Privacidad y consentimiento?",
+      "answers": [
+        {
+          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
+          "points": 30
+        },
+        {
+          "text": "consentimiento o autorización aplicable",
+          "points": 25
+        },
+        {
+          "text": "confidencialidad",
+          "points": 20
+        },
+        {
+          "text": "finalidad del uso",
+          "points": 15
+        },
+        {
+          "text": "protección de identidad",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-096",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Privacidad y consentimiento?",
+      "answers": [
+        {
+          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
+          "points": 25
+        },
+        {
+          "text": "consentimiento o autorización aplicable",
+          "points": 20
+        },
+        {
+          "text": "confidencialidad",
+          "points": 18
+        },
+        {
+          "text": "finalidad del uso",
+          "points": 15
+        },
+        {
+          "text": "protección de identidad",
+          "points": 12
+        },
+        {
+          "text": "almacenamiento seguro",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-097",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué elementos son relevantes en Documentación longitudinal?",
+      "answers": [
+        {
+          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
+          "points": 45
+        },
+        {
+          "text": "comparar evolución",
+          "points": 30
+        },
+        {
+          "text": "documentar cambios",
+          "points": 25
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-098",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son aspectos fundamentales de Documentación longitudinal?",
+      "answers": [
+        {
+          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
+          "points": 35
+        },
+        {
+          "text": "comparar evolución",
+          "points": 30
+        },
+        {
+          "text": "documentar cambios",
+          "points": 20
+        },
+        {
+          "text": "evaluar resultados",
+          "points": 15
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-099",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué factores deben considerarse al evaluar Documentación longitudinal?",
+      "answers": [
+        {
+          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
+          "points": 30
+        },
+        {
+          "text": "comparar evolución",
+          "points": 25
+        },
+        {
+          "text": "documentar cambios",
+          "points": 20
+        },
+        {
+          "text": "evaluar resultados",
+          "points": 15
+        },
+        {
+          "text": "detectar cambios clínicos",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    },
+    {
+      "id": "ORG44-100",
+      "category": "Fotografía y documentación clínica odontológica",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de elementos corresponde a Documentación longitudinal?",
+      "answers": [
+        {
+          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
+          "points": 25
+        },
+        {
+          "text": "comparar evolución",
+          "points": 20
+        },
+        {
+          "text": "documentar cambios",
+          "points": 18
+        },
+        {
+          "text": "evaluar resultados",
+          "points": 15
+        },
+        {
+          "text": "detectar cambios clínicos",
+          "points": 12
+        },
+        {
+          "text": "comunicar progresión",
+          "points": 10
+        }
+      ],
+      "source": "Literatura de fotografía clínica odontológica y documentación estandarizada (PMID 35938814, 11203990, 3863799, 25838015, 39677078)."
+    }
+  ]
+}
