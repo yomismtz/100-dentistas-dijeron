@@ -3,7 +3,7 @@
     "id": "ORG6-001",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona un prefijo médico u odontológico que indique posición o dirección.",
+    "q": "¿Qué prefijos expresan relaciones espaciales como dentro, entre, sobre, debajo o alrededor?",
     "a": [
       [
         "intra-",
@@ -26,13 +26,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-002",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de un prefijo médico u odontológico que indique posición o dirección.",
+    "q": "¿Qué prefijos pueden utilizarse para describir la posición de una estructura respecto de otra?",
     "a": [
       [
         "intra-",
@@ -55,13 +55,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-003",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona un prefijo que exprese tamaño, cantidad o grado.",
+    "q": "¿Qué prefijos expresan tamaño, cantidad o grado?",
     "a": [
       [
         "micro-",
@@ -84,13 +84,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-004",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de un prefijo que exprese tamaño, cantidad o grado.",
+    "q": "¿Qué prefijos permiten describir aumento, disminución, pequeño tamaño o cantidad reducida?",
     "a": [
       [
         "micro-",
@@ -113,13 +113,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-005",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona un prefijo que indique relación dentro/fuera o a través de una estructura.",
+    "q": "¿Qué prefijos indican relaciones de interior, exterior, posición o paso a través?",
     "a": [
       [
         "endo-",
@@ -142,13 +142,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-006",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de un prefijo que indique relación dentro/fuera o a través de una estructura.",
+    "q": "¿Qué prefijos ayudan a distinguir una localización dentro, fuera o a través de una estructura?",
     "a": [
       [
         "endo-",
@@ -171,13 +171,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-007",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona un prefijo direccional usado en odontología.",
+    "q": "¿Qué términos se usan para describir direcciones o superficies dentarias?",
     "a": [
       [
         "mesio-",
@@ -200,13 +200,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-008",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de un prefijo direccional usado en odontología.",
+    "q": "¿Qué términos permiten ubicar una estructura dental respecto del eje mesiodistal o de las superficies externas e internas?",
     "a": [
       [
         "mesio-",
@@ -229,13 +229,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-009",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona un prefijo que pueda expresar desplazamiento o relación anteroposterior.",
+    "q": "¿Qué prefijos o elementos expresan avance, retroceso o relación espacial?",
     "a": [
       [
         "pro-",
@@ -258,13 +258,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-010",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de un prefijo que pueda expresar desplazamiento o relación anteroposterior.",
+    "q": "¿Qué elementos terminológicos pueden ayudar a describir posición, dirección o desplazamiento?",
     "a": [
       [
         "pro-",
@@ -287,13 +287,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-011",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una raíz o lexema relacionado con dientes o tejidos dentales.",
+    "q": "¿Qué raíces o formas combinantes se relacionan con dientes y tejidos dentales?",
     "a": [
       [
         "odont/o",
@@ -316,13 +316,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-012",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una raíz o lexema relacionado con dientes o tejidos dentales.",
+    "q": "¿Qué formas combinantes permiten identificar diente, dentina, esmalte o cemento en términos médicos?",
     "a": [
       [
         "odont/o",
@@ -345,13 +345,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-013",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una raíz relacionada con estructuras de la cavidad oral.",
+    "q": "¿Qué formas combinantes corresponden a estructuras de la cavidad oral?",
     "a": [
       [
         "stomat/o",
@@ -374,13 +374,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-014",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una raíz relacionada con estructuras de la cavidad oral.",
+    "q": "¿Qué raíces se utilizan para nombrar boca, encía, lengua, paladar o mejilla?",
     "a": [
       [
         "stomat/o",
@@ -403,13 +403,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-015",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una raíz relacionada con maxilares, mandíbula o alvéolo.",
+    "q": "¿Qué formas combinantes se relacionan con mandíbula, maxilar, alvéolo o región apical?",
     "a": [
       [
         "gnat/o (gnath/o)",
@@ -432,13 +432,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-016",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una raíz relacionada con maxilares, mandíbula o alvéolo.",
+    "q": "¿Qué raíces permiten reconocer estructuras maxilomandibulares y regiones del diente?",
     "a": [
       [
         "gnat/o (gnath/o)",
@@ -461,13 +461,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-017",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una raíz relacionada con tejidos blandos o secreciones orales.",
+    "q": "¿Qué formas combinantes se relacionan con encía, pulpa, saliva, moco o labio?",
     "a": [
       [
         "gingiv/o",
@@ -490,13 +490,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-018",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una raíz relacionada con tejidos blandos o secreciones orales.",
+    "q": "¿Qué raíces permiten identificar tejidos blandos y secreciones de la región oral?",
     "a": [
       [
         "gingiv/o",
@@ -519,13 +519,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-019",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona un lexema anatómico usado con frecuencia en odontología.",
+    "q": "¿Qué raíces anatómicas aparecen con frecuencia en términos odontológicos?",
     "a": [
       [
         "odont/o",
@@ -548,13 +548,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-020",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de un lexema anatómico usado con frecuencia en odontología.",
+    "q": "¿Qué formas combinantes permiten reconocer diente, maxilar, mandíbula, paladar o lengua?",
     "a": [
       [
         "odont/o",
@@ -577,13 +577,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-021",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una especialidad odontológica.",
+    "q": "¿Qué especialidades odontológicas tienen denominaciones formadas a partir de raíces griegas o latinas?",
     "a": [
       [
         "endodoncia",
@@ -606,13 +606,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-022",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una especialidad odontológica.",
+    "q": "¿Qué términos corresponden a áreas reconocidas de la práctica odontológica?",
     "a": [
       [
         "endodoncia",
@@ -635,13 +635,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-023",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una ciencia biomédica importante para odontología.",
+    "q": "¿Qué disciplinas biomédicas forman parte del vocabulario médico relacionado con odontología?",
     "a": [
       [
         "patología",
@@ -664,13 +664,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-024",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una ciencia biomédica importante para odontología.",
+    "q": "¿Qué ciencias utilizan términos técnicos fundamentales para interpretar enfermedad y tejidos?",
     "a": [
       [
         "patología",
@@ -693,13 +693,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-025",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una especialidad que trate principalmente tejidos o estructuras dentales específicas.",
+    "q": "¿Qué especialidades odontológicas se relacionan con tejidos, función o rehabilitación oral?",
     "a": [
       [
         "endodoncia",
@@ -722,13 +722,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-026",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una especialidad que trate principalmente tejidos o estructuras dentales específicas.",
+    "q": "¿Qué áreas odontológicas corresponden a endodoncia, periodoncia, ortodoncia, prostodoncia y odontopediatría?",
     "a": [
       [
         "endodoncia",
@@ -751,13 +751,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-027",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una disciplina que ayude al diagnóstico o comprensión de enfermedad.",
+    "q": "¿Qué disciplinas ayudan a estudiar microorganismos, tejidos, células o enfermedad?",
     "a": [
       [
         "patología",
@@ -780,13 +780,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-028",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una disciplina que ayude al diagnóstico o comprensión de enfermedad.",
+    "q": "¿Qué ciencias biomédicas aportan métodos para estudiar procesos patológicos en odontología?",
     "a": [
       [
         "patología",
@@ -809,13 +809,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-029",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Menciona una célula formadora de tejidos mineralizados orales o craneofaciales.",
+    "q": "¿Qué células participan en la formación de tejidos mineralizados?",
     "a": [
       [
         "osteoblasto",
@@ -838,13 +838,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-030",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "facil",
-    "q": "Da ejemplos válidos de una célula formadora de tejidos mineralizados orales o craneofaciales.",
+    "q": "¿Qué células se asocian con la formación de hueso, dentina, esmalte, cemento y cartílago?",
     "a": [
       [
         "osteoblasto",
@@ -867,13 +867,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-031",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una célula relacionada con remodelación, mantenimiento o recambio tisular.",
+    "q": "¿Qué células participan en el recambio y mantenimiento del tejido conjuntivo y óseo?",
     "a": [
       [
         "osteoclasto",
@@ -896,13 +896,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-032",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una célula relacionada con remodelación, mantenimiento o recambio tisular.",
+    "q": "¿Qué células intervienen en resorción, formación, mantenimiento y respuesta tisular?",
     "a": [
       [
         "osteoclasto",
@@ -925,13 +925,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-033",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una célula madura de un tejido corporal.",
+    "q": "¿Qué células representan formas maduras de distintos tejidos corporales?",
     "a": [
       [
         "osteocito",
@@ -954,13 +954,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-034",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una célula madura de un tejido corporal.",
+    "q": "¿Qué términos designan células maduras de hueso, cartílago, músculo, sangre y epitelio?",
     "a": [
       [
         "osteocito",
@@ -983,13 +983,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-035",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una célula vinculada con defensa o respuesta inmunitaria.",
+    "q": "¿Qué células participan en defensa y respuesta inmunitaria?",
     "a": [
       [
         "leucocito",
@@ -1012,13 +1012,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-036",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una célula vinculada con defensa o respuesta inmunitaria.",
+    "q": "¿Qué términos designan diferentes células leucocitarias y fagocíticas?",
     "a": [
       [
         "leucocito",
@@ -1041,13 +1041,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-037",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una célula cuyo nombre termine en -blasto.",
+    "q": "¿Qué células se relacionan con formación de tejidos mineralizados y tejido conjuntivo oral?",
     "a": [
       [
         "osteoblasto",
@@ -1070,13 +1070,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-038",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una célula cuyo nombre termine en -blasto.",
+    "q": "¿Qué células pueden encontrarse en procesos de formación de hueso, dentina, esmalte, cemento y tejido conjuntivo?",
     "a": [
       [
         "osteoblasto",
@@ -1099,13 +1099,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-039",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una célula cuyo nombre termine en -cito.",
+    "q": "¿Qué términos designan células maduras de tejidos mineralizados, musculares o sanguíneos?",
     "a": [
       [
         "osteocito",
@@ -1128,13 +1128,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-040",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una célula cuyo nombre termine en -cito.",
+    "q": "¿Qué nombres celulares permiten distinguir células maduras de hueso, cartílago, músculo, sangre y defensa?",
     "a": [
       [
         "osteocito",
@@ -1157,13 +1157,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-041",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona un término relacionado con morfología o agrupación bacteriana.",
+    "q": "¿Qué términos describen formas bacterianas o patrones de agrupación bacteriana?",
     "a": [
       [
         "coco (coccus)",
@@ -1186,13 +1186,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-042",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de un término relacionado con morfología o agrupación bacteriana.",
+    "q": "¿Qué elementos de la nomenclatura bacteriana permiten describir forma o disposición de bacterias?",
     "a": [
       [
         "coco (coccus)",
@@ -1215,13 +1215,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-043",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona un término básico de microbiología usado en odontología.",
+    "q": "¿Qué términos básicos aparecen al describir microorganismos y su relación con el huésped?",
     "a": [
       [
         "bacteria",
@@ -1244,13 +1244,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-044",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de un término básico de microbiología usado en odontología.",
+    "q": "¿Qué conceptos son fundamentales para hablar de bacterias, biofilm, patogenicidad, comensalismo y antibióticos?",
     "a": [
       [
         "bacteria",
@@ -1273,13 +1273,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-045",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona un término relacionado con microorganismos o agentes infecciosos.",
+    "q": "¿Qué raíces o términos se relacionan con bacterias, hongos y virus?",
     "a": [
       [
         "bacteri/o",
@@ -1294,21 +1294,21 @@
         20
       ],
       [
-        "patógeno",
+        "protozo/o",
         15
       ],
       [
-        "biofilm",
+        "parasit/o",
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-046",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de un término relacionado con microorganismos o agentes infecciosos.",
+    "q": "¿Qué formas terminológicas permiten identificar microorganismos o conceptos microbiológicos?",
     "a": [
       [
         "bacteri/o",
@@ -1323,21 +1323,21 @@
         20
       ],
       [
-        "patógeno",
+        "protozo/o",
         15
       ],
       [
-        "biofilm",
+        "parasit/o",
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-047",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una característica o relación metabólica microbiana.",
+    "q": "¿Qué términos describen relaciones de los microorganismos con oxígeno y huésped?",
     "a": [
       [
         "anaerobio",
@@ -1360,13 +1360,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-048",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una característica o relación metabólica microbiana.",
+    "q": "¿Qué conceptos permiten diferenciar microorganismos aerobios, anaerobios, comensales, patógenos y biofilm?",
     "a": [
       [
         "anaerobio",
@@ -1389,13 +1389,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-049",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Menciona una alteración de tamaño o posición de los maxilares.",
+    "q": "¿Qué términos describen alteraciones del tamaño o posición mandibular?",
     "a": [
       [
         "macrognatia",
@@ -1418,13 +1418,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-050",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "medio",
-    "q": "Da ejemplos válidos de una alteración de tamaño o posición de los maxilares.",
+    "q": "¿Qué diagnósticos o descriptores se utilizan para expresar aumento, disminución o posición anteroposterior mandibular?",
     "a": [
       [
         "macrognatia",
@@ -1447,13 +1447,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-051",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona un término craneofacial relacionado con dimensión o posición sagital.",
+    "q": "¿Qué términos describen relaciones sagitales y dimensionales de la mandíbula?",
     "a": [
       [
         "prognatismo",
@@ -1476,13 +1476,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-052",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de un término craneofacial relacionado con dimensión o posición sagital.",
+    "q": "¿Qué expresiones permiten diferenciar protrusión, retrusión y alteraciones de tamaño mandibular?",
     "a": [
       [
         "prognatismo",
@@ -1505,13 +1505,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-053",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona un movimiento dentario utilizado en ortodoncia.",
+    "q": "¿Qué términos describen movimientos dentarios durante el tratamiento ortodóncico?",
     "a": [
       [
         "intrusión",
@@ -1534,13 +1534,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-054",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de un movimiento dentario utilizado en ortodoncia.",
+    "q": "¿Qué palabras permiten distinguir intrusión, extrusión, rotación, versión y torsión?",
     "a": [
       [
         "intrusión",
@@ -1563,13 +1563,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-055",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona una forma de desplazamiento o cambio de posición dental.",
+    "q": "¿Qué términos se utilizan para describir movimientos dentarios en los tres planos del espacio?",
     "a": [
       [
         "intrusión",
@@ -1592,13 +1592,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-056",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de una forma de desplazamiento o cambio de posición dental.",
+    "q": "¿Qué vocabulario permite diferenciar intrusión, extrusión, rotación, inclinación y traslación?",
     "a": [
       [
         "intrusión",
@@ -1621,13 +1621,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-057",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona una anomalía de número o tamaño dental.",
+    "q": "¿Qué términos describen alteraciones del número y tamaño dental?",
     "a": [
       [
         "anodoncia",
@@ -1650,13 +1650,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-058",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de una anomalía de número o tamaño dental.",
+    "q": "¿Qué diagnósticos corresponden a ausencia, reducción o aumento del número o tamaño de los dientes?",
     "a": [
       [
         "anodoncia",
@@ -1679,13 +1679,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-059",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona una alteración del desarrollo dental.",
+    "q": "¿Qué términos permiten diferenciar anomalías de número y tamaño dental?",
     "a": [
       [
         "anodoncia",
@@ -1708,13 +1708,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-060",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de una alteración del desarrollo dental.",
+    "q": "¿Qué vocabulario odontológico se utiliza para describir ausencia dental y alteraciones del tamaño?",
     "a": [
       [
         "anodoncia",
@@ -1737,13 +1737,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-061",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona un término patológico relacionado con inflamación, crecimiento o muerte celular.",
+    "q": "¿Qué términos describen cambios en la cantidad, estructura o viabilidad celular?",
     "a": [
       [
         "osteítis",
@@ -1766,13 +1766,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-062",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de un término patológico relacionado con inflamación, crecimiento o muerte celular.",
+    "q": "¿Qué palabras se utilizan para referirse a inflamación ósea, crecimiento celular, displasia, muerte celular programada o necrosis?",
     "a": [
       [
         "osteítis",
@@ -1795,13 +1795,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-063",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona una alteración del crecimiento o desarrollo celular o tisular.",
+    "q": "¿Qué términos describen aumento, disminución o alteración del desarrollo tisular?",
     "a": [
       [
         "hiperplasia",
@@ -1824,13 +1824,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-064",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de una alteración del crecimiento o desarrollo celular o tisular.",
+    "q": "¿Qué conceptos permiten distinguir hiperplasia, hipoplasia, hipertrofia, atrofia y displasia?",
     "a": [
       [
         "hiperplasia",
@@ -1853,13 +1853,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-065",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona una enfermedad o condición inflamatoria periodontal o periimplantaria.",
+    "q": "¿Qué diagnósticos y condiciones corresponden a enfermedad periodontal o periimplantaria?",
     "a": [
       [
         "gingivitis",
@@ -1882,13 +1882,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-066",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de una enfermedad o condición inflamatoria periodontal o periimplantaria.",
+    "q": "¿Qué términos se utilizan para describir inflamación periodontal, lesiones periimplantarias y abscesos?",
     "a": [
       [
         "gingivitis",
@@ -1911,13 +1911,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-067",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona un término clínico frecuente en periodoncia.",
+    "q": "¿Qué términos clínicos son frecuentes al describir tejidos periodontales?",
     "a": [
       [
         "gingivitis",
@@ -1940,13 +1940,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-068",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de un término clínico frecuente en periodoncia.",
+    "q": "¿Qué vocabulario permite describir gingivitis, periodontitis, recesión, bolsa y pérdida de inserción?",
     "a": [
       [
         "gingivitis",
@@ -1969,13 +1969,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-069",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Menciona un diagnóstico o condición pulpar/periapical.",
+    "q": "¿Qué diagnósticos o condiciones se utilizan en endodoncia y patología periapical?",
     "a": [
       [
         "pulpitis",
@@ -1998,13 +1998,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-070",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "dificil",
-    "q": "Da ejemplos válidos de un diagnóstico o condición pulpar/periapical.",
+    "q": "¿Qué términos permiten describir inflamación pulpar, necrosis y enfermedad apical?",
     "a": [
       [
         "pulpitis",
@@ -2027,13 +2027,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-071",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona un término frecuente en endodoncia.",
+    "q": "¿Qué términos anatómicos y diagnósticos aparecen con frecuencia en endodoncia?",
     "a": [
       [
         "pulpitis",
@@ -2056,13 +2056,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-072",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de un término frecuente en endodoncia.",
+    "q": "¿Qué vocabulario permite identificar pulpa, conducto, ápice y enfermedades periapicales?",
     "a": [
       [
         "pulpitis",
@@ -2085,13 +2085,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-073",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona una condición o término frecuente de medicina oral o glándulas salivales.",
+    "q": "¿Qué términos se relacionan con glándulas salivales y lesiones de la mucosa oral?",
     "a": [
       [
         "sialadenitis",
@@ -2114,13 +2114,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-074",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de una condición o término frecuente de medicina oral o glándulas salivales.",
+    "q": "¿Qué vocabulario permite describir alteraciones de saliva, glándulas y mucosa oral?",
     "a": [
       [
         "sialadenitis",
@@ -2143,13 +2143,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-075",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona un término relacionado con alteraciones salivales u orales.",
+    "q": "¿Qué términos distinguen alteraciones de la saliva y procesos de la mucosa oral?",
     "a": [
       [
         "xerostomía",
@@ -2172,13 +2172,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-076",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de un término relacionado con alteraciones salivales u orales.",
+    "q": "¿Qué conceptos permiten diferenciar xerostomía, hiposalivación, sialadenitis, sialolitiasis y mucositis?",
     "a": [
       [
         "xerostomía",
@@ -2201,13 +2201,13 @@
         10
       ]
     ],
-    "source": "Banco ampliado interdisciplinario"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-077",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona sufijos que suelen indicar procesos o estados patológicos.",
+    "q": "¿Qué sufijos aparecen con frecuencia en términos médicos de enfermedad o estado patológico?",
     "a": [
       [
         "-itis",
@@ -2230,13 +2230,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-078",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de sufijos que suelen indicar procesos o estados patológicos.",
+    "q": "¿Qué terminaciones ayudan a reconocer inflamación, proceso, tumor, enfermedad o condición relacionada con sangre?",
     "a": [
       [
         "-itis",
@@ -2259,13 +2259,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-079",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona sufijos relacionados con procedimientos quirúrgicos.",
+    "q": "¿Qué sufijos se utilizan para nombrar procedimientos quirúrgicos?",
     "a": [
       [
         "-ectomía",
@@ -2288,13 +2288,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-080",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de sufijos relacionados con procedimientos quirúrgicos.",
+    "q": "¿Qué terminaciones permiten reconocer extirpación, incisión, reparación, sutura o creación de una abertura?",
     "a": [
       [
         "-ectomía",
@@ -2317,13 +2317,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-081",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona raíces relacionadas con hueso, músculo o nervio.",
+    "q": "¿Qué raíces se relacionan con hueso, músculo, nervio, médula y tendón?",
     "a": [
       [
         "oste/o",
@@ -2346,13 +2346,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-082",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de raíces relacionadas con hueso, músculo o nervio.",
+    "q": "¿Qué formas combinantes permiten identificar estructuras musculoesqueléticas y nerviosas?",
     "a": [
       [
         "oste/o",
@@ -2375,13 +2375,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-083",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona raíces relacionadas con sangre o vasos.",
+    "q": "¿Qué raíces se relacionan con sangre, vasos y arterias?",
     "a": [
       [
         "hem/o",
@@ -2404,13 +2404,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-084",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de raíces relacionadas con sangre o vasos.",
+    "q": "¿Qué formas combinantes permiten reconocer sangre y diferentes estructuras vasculares?",
     "a": [
       [
         "hem/o",
@@ -2433,13 +2433,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-085",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona términos direccionales de superficies dentales.",
+    "q": "¿Qué términos describen superficies o direcciones dentarias?",
     "a": [
       [
         "Mesial",
@@ -2462,13 +2462,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-086",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de términos direccionales de superficies dentales.",
+    "q": "¿Qué vocabulario permite ubicar una superficie dental respecto de la línea media, vestíbulo, lengua o paladar?",
     "a": [
       [
         "Mesial",
@@ -2491,13 +2491,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-087",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona términos usados para describir zonas del diente.",
+    "q": "¿Qué términos describen regiones anatómicas del diente?",
     "a": [
       [
         "Cervical",
@@ -2520,13 +2520,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-088",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de términos usados para describir zonas del diente.",
+    "q": "¿Qué vocabulario permite diferenciar zonas cervical, coronal, apical, incisal y oclusal?",
     "a": [
       [
         "Cervical",
@@ -2549,13 +2549,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-089",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona prefijos numéricos frecuentes en terminología médica.",
+    "q": "¿Qué prefijos indican cantidades o multiplicidades?",
     "a": [
       [
         "mono-",
@@ -2578,13 +2578,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-090",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de prefijos numéricos frecuentes en terminología médica.",
+    "q": "¿Qué elementos permiten expresar uno, dos, tres, cuatro o muchos?",
     "a": [
       [
         "mono-",
@@ -2607,13 +2607,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-091",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona prefijos que expresan velocidad o tiempo.",
+    "q": "¿Qué prefijos pueden expresar velocidad, tiempo, novedad o secuencia?",
     "a": [
       [
         "bradi-",
@@ -2636,13 +2636,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-092",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de prefijos que expresan velocidad o tiempo.",
+    "q": "¿Qué elementos terminológicos permiten describir lentitud, rapidez, tiempo, novedad o posición posterior?",
     "a": [
       [
         "bradi-",
@@ -2665,13 +2665,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-093",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona términos relacionados con inflamación oral.",
+    "q": "¿Qué términos odontológicos terminados en -itis describen inflamación?",
     "a": [
       [
         "Gingivitis",
@@ -2694,13 +2694,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-094",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de términos relacionados con inflamación oral.",
+    "q": "¿Qué diagnósticos orales ilustran el uso de la terminación relacionada con inflamación?",
     "a": [
       [
         "Gingivitis",
@@ -2723,13 +2723,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-095",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona términos relacionados con dolor en región oral o facial.",
+    "q": "¿Qué términos describen dolor en regiones oral, facial, articular o muscular?",
     "a": [
       [
         "Odontalgia",
@@ -2752,13 +2752,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-096",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de términos relacionados con dolor en región oral o facial.",
+    "q": "¿Qué palabras permiten distinguir dolor dental, neural, articular, muscular o cefálico?",
     "a": [
       [
         "Odontalgia",
@@ -2781,13 +2781,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-097",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona términos formados con la raíz odont/o.",
+    "q": "¿Qué términos contienen la raíz odont/o y se relacionan con dientes?",
     "a": [
       [
         "Odontología",
@@ -2810,13 +2810,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-098",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de términos formados con la raíz odont/o.",
+    "q": "¿Qué palabras permiten reconocer la raíz odont/o en profesiones, células, procesos o enfermedades?",
     "a": [
       [
         "Odontología",
@@ -2839,13 +2839,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-099",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Menciona términos formados con la raíz gingiv/o.",
+    "q": "¿Qué términos contienen la raíz gingiv/o y se relacionan con la encía?",
     "a": [
       [
         "Gingivitis",
@@ -2868,13 +2868,13 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   },
   {
     "id": "ORG6-100",
     "cat": "Nomenclatura y etimología médica",
     "difficulty": "extremo",
-    "q": "Da ejemplos válidos de términos formados con la raíz gingiv/o.",
+    "q": "¿Qué palabras permiten reconocer la raíz gingiv/o en enfermedades, procedimientos y descriptores gingivales?",
     "a": [
       [
         "Gingivitis",
@@ -2897,6 +2897,6 @@
         10
       ]
     ],
-    "source": "Terminología médica/odontológica grecolatina revisada"
+    "source": "Terminología médica y odontológica: NCBI Bookshelf, Medical Terminology, 2nd ed. 2024; NLM/MedlinePlus; Andrews EA. The language of dentistry. Dent Assist. 2007;76(2):56-9. PMID 17503613."
   }
 ]
