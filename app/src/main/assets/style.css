@@ -336,3 +336,8 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 .answerFeedback.hint{color:#b9ddff}
 
 .timer.countdownPulse{transform:scale(1.12);filter:drop-shadow(0 0 10px rgba(255,215,80,.9));transition:transform .12s ease,filter .12s ease}.timer.urgent{font-weight:1000}
+
+
+/* Curiosidades EXTREMO: apartado independiente del banco académico */
+.curiosityMode{border:2px solid #f0c65a!important;background:linear-gradient(135deg,#17222b,#3a2d12)!important;color:#ffe9a3!important;box-shadow:0 0 20px rgba(240,198,90,.18);}
+.curiosityMode:hover{transform:translateY(-1px);filter:brightness(1.08);}
