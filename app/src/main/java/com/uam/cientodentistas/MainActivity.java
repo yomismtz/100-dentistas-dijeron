@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
     private volatile boolean ttsReady = false;
     private static final int VOICE_REQUEST = 4107;
     private static final int AUDIO_PERMISSION_REQUEST = 4108;
+    private static final int CONNECTIVITY_PERMISSION_REQUEST = 4109;
     private String pendingVoiceLanguage = "es-MX";
 
     @Override
@@ -68,6 +69,7 @@ public class MainActivity extends Activity {
 
         webView.addJavascriptInterface(new NarratorBridge(), "AndroidNarrator");
         webView.addJavascriptInterface(new VoiceBridge(), "AndroidVoice");
+        webView.addJavascriptInterface(new ConnectivityBridge(), "AndroidConnectivity");
         webView.addJavascriptInterface(new AssetBridge(), "AndroidAssets");
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
@@ -91,6 +93,31 @@ public class MainActivity extends Activity {
                 return;
             }
             launchVoiceRecognizer();
+        }
+    }
+
+    private class ConnectivityBridge {
+        @JavascriptInterface public boolean needsRuntimePermission() {
+            if (android.os.Build.VERSION.SDK_INT >= 31) {
+                return checkSelfPermission(Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED
+                        || checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED
+                        || checkSelfPermission(Manifest.permission.BLUETOOTH_ADVERTISE) != PackageManager.PERMISSION_GRANTED;
+            }
+            if (android.os.Build.VERSION.SDK_INT >= 33) {
+                return checkSelfPermission(Manifest.permission.NEARBY_WIFI_DEVICES) != PackageManager.PERMISSION_GRANTED;
+            }
+            return false;
+        }
+        @JavascriptInterface public void requestPermissions() {
+            if (android.os.Build.VERSION.SDK_INT >= 31) {
+                requestPermissions(new String[]{
+                        Manifest.permission.BLUETOOTH_SCAN,
+                        Manifest.permission.BLUETOOTH_CONNECT,
+                        Manifest.permission.BLUETOOTH_ADVERTISE
+                }, CONNECTIVITY_PERMISSION_REQUEST);
+            } else if (android.os.Build.VERSION.SDK_INT >= 33) {
+                requestPermissions(new String[]{Manifest.permission.NEARBY_WIFI_DEVICES}, CONNECTIVITY_PERMISSION_REQUEST);
+            }
         }
     }
 
@@ -215,6 +242,7 @@ public class MainActivity extends Activity {
             webView.removeJavascriptInterface("AndroidNarrator");
             webView.removeJavascriptInterface("AndroidAssets");
             webView.removeJavascriptInterface("AndroidVoice");
+            webView.removeJavascriptInterface("AndroidConnectivity");
             webView.destroy();
             webView = null;
         }
