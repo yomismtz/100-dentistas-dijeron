@@ -28,7 +28,7 @@
     "id": "ORG3-002",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué estructuras básicas deben funcionar coordinadamente para una oclusión estable?",
+    "q": "¿Qué estructuras aportan soporte y control al sistema oclusal durante la función?",
     "a": [
       [
         "Dientes",
@@ -74,7 +74,7 @@
     "id": "ORG3-004",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué guías pueden participar durante excursiones mandibulares?",
+    "q": "¿Qué movimientos deben observarse para valorar una excursión mandibular lateral?",
     "a": [
       [
         "Guía canina",
@@ -98,24 +98,20 @@
     "q": "¿Qué elementos anatómicos se consideran en la evaluación estática del sistema oclusal?",
     "a": [
       [
-        "Huesos",
-        30
+        "Dientes",
+        35
       ],
       [
-        "Músculos",
+        "ATM",
         25
       ],
       [
-        "Vasos",
+        "Músculos",
         20
       ],
       [
-        "Dientes",
-        15
-      ],
-      [
-        "Ligamentos",
-        10
+        "Periodonto",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -124,27 +120,23 @@
     "id": "ORG3-006",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué estructuras anatómicas forman el soporte estático que se revisa en oclusión?",
+    "q": "¿Qué hallazgos permiten diferenciar una guía canina de una función de grupo?",
     "a": [
       [
-        "Huesos",
-        30
+        "Dientes",
+        35
       ],
       [
-        "Músculos",
+        "Maxilares",
         25
       ],
       [
-        "Vasos",
+        "ATM",
         20
       ],
       [
-        "Dientes",
-        15
-      ],
-      [
-        "Ligamentos",
-        10
+        "Músculos",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -156,20 +148,20 @@
     "q": "¿Qué componentes fisiológicos se consideran al valorar la oclusión estática?",
     "a": [
       [
-        "ATM",
-        35
+        "Dientes",
+        30
       ],
       [
-        "Oclusión",
-        30
+        "Periodonto",
+        25
+      ],
+      [
+        "ATM",
+        25
       ],
       [
         "Sistema neuromuscular",
         20
-      ],
-      [
-        "Complejo periodontal",
-        15
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -178,23 +170,23 @@
     "id": "ORG3-008",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué sistemas funcionales deben integrarse al análisis estático de la oclusión?",
+    "q": "¿Qué elementos se valoran al estudiar la desoclusión posterior durante una lateralidad?",
     "a": [
       [
-        "ATM",
-        35
-      ],
-      [
-        "Oclusión",
+        "Dientes",
         30
       ],
       [
-        "Sistema neuromuscular",
-        20
+        "ATM",
+        25
       ],
       [
-        "Complejo periodontal",
-        15
+        "Sistema neuromuscular",
+        25
+      ],
+      [
+        "Periodonto",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -206,16 +198,16 @@
     "q": "¿Qué términos describen una oclusión que produce daño o disfunción según el contexto clínico?",
     "a": [
       [
-        "Patológica",
-        45
+        "Traumática",
+        40
       ],
       [
-        "Traumática",
+        "Patológica",
         35
       ],
       [
         "No fisiológica",
-        20
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -224,18 +216,22 @@
     "id": "ORG3-010",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Cómo puede describirse una oclusión no fisiológica cuando genera lesión o sobrecarga?",
+    "q": "¿Qué relación existe entre las estructuras articulares y la posición mandibular durante la oclusión?",
     "a": [
       [
-        "Patológica",
-        45
-      ],
-      [
-        "Traumática",
+        "Lesión periodontal",
         35
       ],
       [
-        "No fisiológica",
+        "Movilidad",
+        25
+      ],
+      [
+        "Dolor o sensibilidad",
+        20
+      ],
+      [
+        "Alteración funcional",
         20
       ]
     ],
@@ -266,7 +262,7 @@
     "id": "ORG3-012",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué categorías de Angle describen la relación molar sagital?",
+    "q": "¿Qué componentes neuromusculares participan en el control de los contactos dentarios?",
     "a": [
       [
         "Clase I",
@@ -308,7 +304,7 @@
     "id": "ORG3-014",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué patrones de sobremordida pueden encontrarse al explorar la oclusión?",
+    "q": "¿Qué relación debe evaluarse entre dientes, periodonto, músculos y ATM?",
     "a": [
       [
         "Normal",
@@ -350,7 +346,7 @@
     "id": "ORG3-016",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Cómo puede clasificarse clínicamente el resalte incisivo?",
+    "q": "¿Qué elementos del sistema estomatognático deben correlacionarse para interpretar la función oclusal?",
     "a": [
       [
         "Normal",
@@ -374,16 +370,16 @@
     "q": "¿Qué alteraciones transversales posteriores pueden encontrarse?",
     "a": [
       [
-        "Cruzada unilateral",
-        45
+        "Unilateral",
+        40
       ],
       [
-        "Cruzada bilateral",
+        "Bilateral",
         35
       ],
       [
-        "Mordida tijera",
-        20
+        "Mordida en tijera",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -392,19 +388,19 @@
     "id": "ORG3-018",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué relaciones transversales anómalas se revisan en sectores posteriores?",
+    "q": "¿Qué expresión clínica corresponde a una oclusión asociada con lesión por fuerzas?",
     "a": [
       [
-        "Cruzada unilateral",
-        45
+        "Mordida en tijera",
+        40
       ],
       [
-        "Cruzada bilateral",
+        "Mordida cruzada unilateral",
         35
       ],
       [
-        "Mordida tijera",
-        20
+        "Mordida cruzada bilateral",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -434,7 +430,7 @@
     "id": "ORG3-020",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Cómo pueden relacionarse las líneas medias superior e inferior?",
+    "q": "¿Qué hallazgos indican que la carga oclusal puede superar la adaptación de los tejidos?",
     "a": [
       [
         "Coincidentes",
@@ -458,23 +454,23 @@
     "q": "¿Qué movimientos mandibulares básicos se evalúan?",
     "a": [
       [
-        "Apertura",
+        "Apertura y cierre",
         30
       ],
       [
-        "Cierre",
+        "Protrusión",
         25
       ],
       [
-        "Protrusión",
+        "Lateralidad derecha",
         20
       ],
       [
-        "Retrusión",
+        "Lateralidad izquierda",
         15
       ],
       [
-        "Lateralidad",
+        "Retrusión",
         10
       ]
     ],
@@ -484,7 +480,7 @@
     "id": "ORG3-022",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué movimientos funcionales realiza la mandíbula durante el examen?",
+    "q": "¿Qué relación molar corresponde a cada una de las clases de Angle?",
     "a": [
       [
         "Apertura",
@@ -499,11 +495,11 @@
         20
       ],
       [
-        "Retrusión",
+        "Lateralidad",
         15
       ],
       [
-        "Lateralidad",
+        "Retrusión",
         10
       ]
     ],
@@ -516,15 +512,15 @@
     "q": "¿Qué lados se distinguen durante una lateralidad mandibular?",
     "a": [
       [
-        "Trabajo",
-        45
+        "Lado de trabajo",
+        50
       ],
       [
-        "No trabajo",
-        35
+        "Lado de no trabajo",
+        30
       ],
       [
-        "Balance",
+        "Lado de balance",
         20
       ]
     ],
@@ -534,18 +530,18 @@
     "id": "ORG3-024",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué términos describen los lados de trabajo durante el movimiento lateral?",
+    "q": "¿Qué referencia anatómica utiliza la clasificación molar de Angle?",
     "a": [
       [
-        "Trabajo",
-        45
+        "Lado de trabajo",
+        50
       ],
       [
-        "No trabajo",
-        35
+        "Lado de no trabajo",
+        30
       ],
       [
-        "Balance",
+        "Lado de balance",
         20
       ]
     ],
@@ -559,15 +555,15 @@
     "a": [
       [
         "Guía canina",
-        45
+        40
       ],
       [
-        "Función grupal",
+        "Función de grupo",
         35
       ],
       [
-        "Guía mixta",
-        20
+        "Guía anterior combinada",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -576,19 +572,19 @@
     "id": "ORG3-026",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué esquemas de desoclusión lateral se usan para describir la dinámica?",
+    "q": "¿Qué diferencia clínica existe entre sobremordida profunda y mordida abierta?",
     "a": [
       [
         "Guía canina",
-        45
+        40
       ],
       [
-        "Función grupal",
+        "Función de grupo",
         35
       ],
       [
-        "Guía mixta",
-        20
+        "Guía anterior combinada",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -618,7 +614,7 @@
     "id": "ORG3-028",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué contactos anteriores orientan protrusión y lateralidad?",
+    "q": "¿Qué hallazgos verticales se registran en el sector anterior?",
     "a": [
       [
         "Guía incisiva",
@@ -643,15 +639,15 @@
     "a": [
       [
         "Relación céntrica",
-        45
+        40
       ],
       [
         "Máxima intercuspidación",
         35
       ],
       [
-        "Oclusión céntrica",
-        20
+        "Posición mandibular habitual",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -660,19 +656,19 @@
     "id": "ORG3-030",
     "cat": "Oclusión",
     "difficulty": "facil",
-    "q": "¿Qué referencias se usan para comparar posición articular y dentaria?",
+    "q": "¿Qué significa encontrar un overjet negativo?",
     "a": [
       [
         "Relación céntrica",
-        45
+        40
       ],
       [
         "Máxima intercuspidación",
         35
       ],
       [
-        "Oclusión céntrica",
-        20
+        "Posición mandibular habitual",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -702,7 +698,7 @@
     "id": "ORG3-032",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué curvas ayudan a describir la organización tridimensional de la oclusión?",
+    "q": "¿Cómo se identifica clínicamente un resalte incisivo aumentado?",
     "a": [
       [
         "Curva Spee",
@@ -727,15 +723,15 @@
     "a": [
       [
         "Incisivos",
-        45
+        40
       ],
       [
         "Caninos",
-        35
+        30
       ],
       [
-        "Molares",
-        20
+        "Premolares y molares",
+        30
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -744,19 +740,19 @@
     "id": "ORG3-034",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué grupos dentarios se usan para observar la orientación del plano oclusal?",
+    "q": "¿Qué diferencia una mordida cruzada posterior unilateral de una bilateral?",
     "a": [
       [
         "Incisivos",
-        45
+        40
       ],
       [
         "Caninos",
-        35
+        30
       ],
       [
         "Molares",
-        20
+        30
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -786,7 +782,7 @@
     "id": "ORG3-036",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué relaciones de contacto se describen en una oclusión posterior?",
+    "q": "¿Cómo se reconoce una mordida en tijera en el sector posterior?",
     "a": [
       [
         "Cúspide-fosa",
@@ -811,15 +807,15 @@
     "a": [
       [
         "Arco facial",
-        45
+        40
       ],
       [
         "Registro intermaxilar",
         35
       ],
       [
-        "Modelos",
-        20
+        "Modelos de estudio",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -828,19 +824,19 @@
     "id": "ORG3-038",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué registros clínicos apoyan el análisis oclusal instrumental?",
+    "q": "¿Cómo se registra una desviación de la línea media mandibular respecto de la maxilar?",
     "a": [
       [
-        "Arco facial",
-        45
+        "Registro intermaxilar",
+        40
       ],
       [
-        "Registro intermaxilar",
+        "Arco facial",
         35
       ],
       [
-        "Modelos",
-        20
+        "Modelos de estudio",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -878,7 +874,7 @@
     "id": "ORG3-040",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué signos deben hacer sospechar sobrecarga oclusal?",
+    "q": "¿Qué significa que las líneas medias dentarias no coincidan?",
     "a": [
       [
         "Movilidad",
@@ -914,15 +910,15 @@
         35
       ],
       [
-        "Estabilidad",
+        "Estabilidad funcional",
         30
       ],
       [
-        "Adaptación",
+        "Adaptación periodontal",
         20
       ],
       [
-        "Función",
+        "Función sin lesión",
         15
       ]
     ],
@@ -932,7 +928,7 @@
     "id": "ORG3-042",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué hallazgos apoyan que la función oclusal está adaptada?",
+    "q": "¿Qué movimientos se solicitan habitualmente al paciente durante la exploración mandibular?",
     "a": [
       [
         "Confort",
@@ -960,15 +956,15 @@
     "q": "¿Qué tipos de interferencia excéntrica pueden registrarse?",
     "a": [
       [
-        "Trabajo",
+        "Interferencia de trabajo",
         45
       ],
       [
-        "No trabajo",
+        "Interferencia de no trabajo",
         35
       ],
       [
-        "Protrusiva",
+        "Interferencia protrusiva",
         20
       ]
     ],
@@ -978,19 +974,19 @@
     "id": "ORG3-044",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué interferencias se buscan durante movimientos mandibulares?",
+    "q": "¿Qué excursiones permiten valorar la trayectoria mandibular y los contactos?",
     "a": [
       [
-        "Trabajo",
-        45
+        "Contactos en no trabajo",
+        40
       ],
       [
-        "No trabajo",
+        "Contactos posteriores protrusivos",
         35
       ],
       [
-        "Protrusiva",
-        20
+        "Contactos de trabajo no deseados",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1024,7 +1020,7 @@
     "id": "ORG3-046",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué metas clínicas guían la corrección selectiva de interferencias?",
+    "q": "¿Cómo se identifica el lado de trabajo en una lateralidad?",
     "a": [
       [
         "Eliminar interferencias",
@@ -1052,20 +1048,20 @@
     "q": "¿Qué hallazgos pueden relacionarse con bruxismo?",
     "a": [
       [
-        "Desgaste",
+        "Desgaste dental",
         35
       ],
       [
-        "Fracturas",
-        30
+        "Fracturas o fisuras",
+        25
       ],
       [
-        "Dolor muscular",
+        "Dolor o fatiga muscular",
         20
       ],
       [
-        "Sensibilidad",
-        15
+        "Hipertrofia del masetero",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1074,23 +1070,23 @@
     "id": "ORG3-048",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué signos clínicos pueden acompañar una parafunción de apretamiento o rechinamiento?",
+    "q": "¿Qué ocurre con el cóndilo del lado de trabajo durante una excursión lateral?",
     "a": [
       [
-        "Desgaste",
+        "Desgaste dental",
         35
       ],
       [
-        "Fracturas",
-        30
+        "Fracturas dentarias",
+        25
       ],
       [
-        "Dolor muscular",
+        "Fatiga muscular",
         20
       ],
       [
-        "Sensibilidad",
-        15
+        "Sensibilidad dental",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1120,7 +1116,7 @@
     "id": "ORG3-050",
     "cat": "Oclusión",
     "difficulty": "medio",
-    "q": "¿Qué rasgos distinguen la relación céntrica como referencia articular?",
+    "q": "¿Qué diferencia clínica existe entre guía canina y función de grupo?",
     "a": [
       [
         "Repetible",
@@ -1144,15 +1140,15 @@
     "q": "¿Qué propiedades se asocian con máxima intercuspidación?",
     "a": [
       [
-        "Dentaria",
+        "Máxima relación entre superficies dentarias",
         45
       ],
       [
-        "Máximos contactos",
+        "Posición dentaria",
         35
       ],
       [
-        "Cierre habitual",
+        "Contacto habitual del paciente",
         20
       ]
     ],
@@ -1162,19 +1158,19 @@
     "id": "ORG3-052",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué rasgos describen la posición de máxima intercuspidación?",
+    "q": "¿Qué contactos se consideran en el lado de trabajo durante una lateralidad?",
     "a": [
       [
-        "Dentaria",
+        "Máxima intercuspidación",
         45
       ],
       [
-        "Máximos contactos",
-        35
+        "Cierre habitual",
+        30
       ],
       [
-        "Cierre habitual",
-        20
+        "Posición de máxima relación dentaria",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1204,7 +1200,7 @@
     "id": "ORG3-054",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué manifestaciones pueden indicar discrepancia RC-MI?",
+    "q": "¿Qué dientes pueden participar en la guía anterior además de los incisivos?",
     "a": [
       [
         "Deslizamiento",
@@ -1228,16 +1224,16 @@
     "q": "¿Qué caracteriza una guía canina?",
     "a": [
       [
-        "Contacto canino",
-        45
+        "Contacto predominante de canino",
+        40
       ],
       [
         "Desoclusión posterior",
         35
       ],
       [
-        "Movimiento lateral",
-        20
+        "Excursión lateral",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1246,19 +1242,19 @@
     "id": "ORG3-056",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué hallazgos esperas en una lateralidad con protección canina?",
+    "q": "¿Qué función tiene la guía anterior durante una protrusión?",
     "a": [
       [
         "Contacto canino",
-        45
+        40
       ],
       [
-        "Desoclusión posterior",
+        "Separación posterior",
         35
       ],
       [
-        "Movimiento lateral",
-        20
+        "Movimiento hacia el lado de trabajo",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1270,16 +1266,16 @@
     "q": "¿Qué caracteriza una función de grupo?",
     "a": [
       [
-        "Contactos múltiples",
+        "Varios dientes del lado de trabajo",
         45
       ],
       [
-        "Lado de trabajo",
-        35
+        "Distribución de contactos",
+        30
       ],
       [
         "Carga compartida",
-        20
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1288,7 +1284,7 @@
     "id": "ORG3-058",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué rasgos definen la función grupal en lateralidad?",
+    "q": "¿Qué posición mandibular depende de una referencia articular y cuál de los contactos dentarios?",
     "a": [
       [
         "Contactos múltiples",
@@ -1296,11 +1292,11 @@
       ],
       [
         "Lado de trabajo",
-        35
+        30
       ],
       [
-        "Carga compartida",
-        20
+        "Distribución de carga",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1330,7 +1326,7 @@
     "id": "ORG3-060",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué ocurre durante una protrusión guiada por incisivos?",
+    "q": "¿Por qué relación céntrica y máxima intercuspidación no son necesariamente coincidentes?",
     "a": [
       [
         "Contacto anterior",
@@ -1372,7 +1368,7 @@
     "id": "ORG3-062",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué excursiones se exploran para estudiar contactos dinámicos?",
+    "q": "¿Qué representa la curva de Spee frente a la curva de Wilson?",
     "a": [
       [
         "Protrusión",
@@ -1422,7 +1418,7 @@
     "id": "ORG3-064",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué datos describen la oclusión cuando la mandíbula está cerrada?",
+    "q": "¿Qué orientación espacial describe principalmente la curva de Wilson?",
     "a": [
       [
         "Overjet",
@@ -1455,19 +1451,19 @@
     "a": [
       [
         "Encía",
-        35
+        25
       ],
       [
         "Ligamento periodontal",
         30
       ],
       [
-        "Cemento",
+        "Cemento radicular",
         20
       ],
       [
         "Hueso alveolar",
-        15
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1476,23 +1472,23 @@
     "id": "ORG3-066",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué componentes periodontales participan en el soporte dentario?",
+    "q": "¿Qué grupos dentarios permiten evaluar la continuidad del plano oclusal?",
     "a": [
       [
-        "Encía",
-        35
+        "Cemento",
+        25
       ],
       [
         "Ligamento periodontal",
-        30
-      ],
-      [
-        "Cemento",
-        20
+        35
       ],
       [
         "Hueso alveolar",
-        15
+        30
+      ],
+      [
+        "Encía",
+        10
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1505,19 +1501,19 @@
     "a": [
       [
         "Masetero",
-        35
-      ],
-      [
-        "Temporal",
         30
       ],
       [
+        "Temporal",
+        25
+      ],
+      [
         "Pterigoideo medial",
-        20
+        25
       ],
       [
         "Pterigoideo lateral",
-        15
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1526,23 +1522,23 @@
     "id": "ORG3-068",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué músculos se consideran al evaluar función neuromuscular masticatoria?",
+    "q": "¿Qué referencias pueden utilizarse para valorar la inclinación del plano oclusal?",
     "a": [
       [
         "Masetero",
-        35
-      ],
-      [
-        "Temporal",
         30
       ],
       [
+        "Temporal",
+        25
+      ],
+      [
         "Pterigoideo medial",
-        20
+        25
       ],
       [
         "Pterigoideo lateral",
-        15
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1554,20 +1550,20 @@
     "q": "¿Qué estructuras principales integran la ATM?",
     "a": [
       [
-        "Cóndilo",
-        35
-      ],
-      [
-        "Disco",
+        "Cóndilo mandibular",
         30
       ],
       [
-        "Temporal",
-        20
+        "Disco articular",
+        25
       ],
       [
-        "Cápsula",
-        15
+        "Fosa y eminencia articulares",
+        25
+      ],
+      [
+        "Cápsula articular",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1576,23 +1572,23 @@
     "id": "ORG3-070",
     "cat": "Oclusión",
     "difficulty": "dificil",
-    "q": "¿Qué componentes anatómicos básicos forman la articulación temporomandibular?",
+    "q": "¿Qué diferencia existe entre un contacto cúspide-fosa y uno cúspide-reborde?",
     "a": [
       [
-        "Cóndilo",
-        35
-      ],
-      [
-        "Disco",
+        "Cóndilo mandibular",
         30
       ],
       [
-        "Temporal",
-        20
+        "Disco articular",
+        25
       ],
       [
-        "Cápsula",
-        15
+        "Fosa mandibular",
+        25
+      ],
+      [
+        "Eminencia articular",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1604,20 +1600,20 @@
     "q": "¿Qué registros apoyan un diagnóstico oclusal completo?",
     "a": [
       [
-        "Fotografías",
+        "Historia y exploración clínica",
         35
       ],
       [
-        "Modelos",
-        30
+        "Fotografías",
+        25
       ],
       [
-        "Radiografías",
+        "Modelos o escaneos",
         20
       ],
       [
-        "Registro mordida",
-        15
+        "Imágenes radiográficas cuando están indicadas",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1626,23 +1622,23 @@
     "id": "ORG3-072",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué documentación es útil para estudiar una oclusión antes de tratar?",
+    "q": "¿Qué función biomecánica tiene un contacto tripódico?",
     "a": [
       [
-        "Fotografías",
-        35
-      ],
-      [
-        "Modelos",
+        "Examen intraoral",
         30
       ],
       [
-        "Radiografías",
+        "Examen extraoral",
         20
       ],
       [
-        "Registro mordida",
-        15
+        "Registros oclusales",
+        25
+      ],
+      [
+        "Radiografías indicadas",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1672,7 +1668,7 @@
     "id": "ORG3-074",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué medios clínicos se usan para localizar contactos dentarios?",
+    "q": "¿Qué registros se utilizan para relacionar modelos con la posición del paciente?",
     "a": [
       [
         "Papel articular",
@@ -1697,14 +1693,18 @@
     "a": [
       [
         "Localización",
-        45
-      ],
-      [
-        "Secuencia",
         35
       ],
       [
+        "Momento o fase del movimiento",
+        25
+      ],
+      [
         "Repetibilidad",
+        20
+      ],
+      [
+        "Correlación con otros hallazgos",
         20
       ]
     ],
@@ -1714,18 +1714,22 @@
     "id": "ORG3-076",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué características de los contactos deben correlacionarse clínicamente?",
+    "q": "¿Qué registro intermaxilar puede utilizarse para reproducir una relación de cierre?",
     "a": [
       [
         "Localización",
-        45
-      ],
-      [
-        "Secuencia",
         35
       ],
       [
+        "Magnitud o persistencia del contacto",
+        25
+      ],
+      [
         "Repetibilidad",
+        20
+      ],
+      [
+        "Contexto funcional",
         20
       ]
     ],
@@ -1746,7 +1750,7 @@
         35
       ],
       [
-        "Combinación",
+        "Combinación de ambos",
         20
       ]
     ],
@@ -1756,7 +1760,7 @@
     "id": "ORG3-078",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué tipos de movimiento se combinan durante apertura mandibular?",
+    "q": "¿Qué signo periodontal puede acompañar fuerzas oclusales excesivas?",
     "a": [
       [
         "Rotación",
@@ -1767,7 +1771,7 @@
         35
       ],
       [
-        "Combinación",
+        "Movimiento combinado",
         20
       ]
     ],
@@ -1781,15 +1785,15 @@
     "a": [
       [
         "Laterotrusión",
-        45
+        40
       ],
       [
         "Mediotrusión",
         35
       ],
       [
-        "Traslación lateral",
-        20
+        "Desplazamiento condilar medial",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1798,19 +1802,19 @@
     "id": "ORG3-080",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué movimientos se reconocen durante excursiones laterales?",
+    "q": "¿Qué combinación de hallazgos aumenta la sospecha de trauma por oclusión?",
     "a": [
       [
         "Laterotrusión",
-        45
+        40
       ],
       [
         "Mediotrusión",
         35
       ],
       [
-        "Traslación lateral",
-        20
+        "Traslación condilar",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1840,7 +1844,7 @@
     "id": "ORG3-082",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué conceptos de organización oclusal se emplean en dentaduras completas?",
+    "q": "¿Qué características indican que una oclusión puede ser tolerada por los tejidos?",
     "a": [
       [
         "Balanceada bilateral",
@@ -1865,15 +1869,15 @@
     "a": [
       [
         "Masticación",
-        45
+        40
       ],
       [
         "Deglución",
-        35
+        30
       ],
       [
         "Fonación",
-        20
+        30
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1882,19 +1886,19 @@
     "id": "ORG3-084",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué actividades funcionales requieren integración del sistema estomatognático?",
+    "q": "¿Cómo se reconoce clínicamente una función oclusal adaptada?",
     "a": [
       [
         "Masticación",
-        45
+        40
       ],
       [
         "Deglución",
-        35
+        30
       ],
       [
         "Fonación",
-        20
+        30
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1907,7 +1911,7 @@
     "a": [
       [
         "Bruxismo",
-        45
+        40
       ],
       [
         "Apretamiento",
@@ -1915,7 +1919,7 @@
       ],
       [
         "Onicofagia",
-        20
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1924,11 +1928,11 @@
     "id": "ORG3-086",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué hábitos no funcionales pueden incrementar fuerzas dentarias?",
+    "q": "¿Qué diferencia una interferencia de trabajo de una de no trabajo?",
     "a": [
       [
         "Bruxismo",
-        45
+        40
       ],
       [
         "Apretamiento",
@@ -1936,7 +1940,7 @@
       ],
       [
         "Onicofagia",
-        20
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1948,16 +1952,20 @@
     "q": "¿Qué hallazgos radiográficos pueden acompañar sobrecarga oclusal?",
     "a": [
       [
-        "PDL ensanchado",
-        45
-      ],
-      [
-        "Lámina dura",
+        "Ensanchamiento del espacio periodontal",
         35
       ],
       [
-        "Pérdida ósea",
+        "Alteraciones de la lámina dura",
+        30
+      ],
+      [
+        "Cambios en el hueso alveolar",
         20
+      ],
+      [
+        "Alteración de la movilidad",
+        15
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1966,19 +1974,23 @@
     "id": "ORG3-088",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué cambios radiográficos pueden orientar a trauma oclusal junto con clínica?",
+    "q": "¿Qué contactos deben investigarse durante protrusión además de los de lateralidad?",
     "a": [
       [
-        "PDL ensanchado",
-        45
-      ],
-      [
-        "Lámina dura",
+        "Espacio periodontal ensanchado",
         35
       ],
       [
-        "Pérdida ósea",
+        "Cambios de la lámina dura",
+        30
+      ],
+      [
+        "Cambios de trabeculado óseo",
         20
+      ],
+      [
+        "Movilidad dental",
+        15
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -1991,19 +2003,19 @@
     "a": [
       [
         "Desgaste",
-        35
-      ],
-      [
-        "Fisuras",
         30
       ],
       [
+        "Fisuras",
+        25
+      ],
+      [
         "Fracturas",
-        20
+        25
       ],
       [
         "Movilidad",
-        15
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2012,23 +2024,23 @@
     "id": "ORG3-090",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué daños dentarios pueden asociarse con sobrecarga oclusal?",
+    "q": "¿Cuándo puede estar indicado un ajuste oclusal selectivo?",
     "a": [
       [
         "Desgaste",
-        35
-      ],
-      [
-        "Fisuras",
         30
       ],
       [
         "Fracturas",
-        20
+        25
       ],
       [
-        "Movilidad",
-        15
+        "Fisuras",
+        25
+      ],
+      [
+        "Sensibilidad",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2040,11 +2052,11 @@
     "q": "¿Qué factores deben correlacionarse antes de atribuir síntomas a la oclusión?",
     "a": [
       [
-        "Clínica",
+        "Historia y síntomas",
         30
       ],
       [
-        "Función",
+        "Exploración funcional",
         25
       ],
       [
@@ -2066,7 +2078,7 @@
     "id": "ORG3-092",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué dominios conviene revisar antes de concluir que existe patología oclusal?",
+    "q": "¿Qué debe evitarse durante un ajuste oclusal para no eliminar estructura innecesariamente?",
     "a": [
       [
         "Clínica",
@@ -2098,16 +2110,16 @@
     "q": "¿Qué términos diferencian adaptación de daño oclusal?",
     "a": [
       [
-        "Fisiológica",
-        45
+        "Adaptación fisiológica",
+        40
       ],
       [
-        "Patológica",
+        "Trauma por oclusión",
         35
       ],
       [
-        "Traumática",
-        20
+        "Daño estructural",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2116,19 +2128,19 @@
     "id": "ORG3-094",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué categorías ayudan a distinguir función tolerada de sobrecarga lesiva?",
+    "q": "¿Por qué el desgaste dental por sí solo no confirma bruxismo?",
     "a": [
       [
-        "Fisiológica",
-        45
+        "Respuesta adaptativa",
+        40
       ],
       [
-        "Patológica",
+        "Sobrecarga",
         35
       ],
       [
-        "Traumática",
-        20
+        "Lesión tisular",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2145,11 +2157,11 @@
       ],
       [
         "Caninos",
-        35
+        30
       ],
       [
-        "Anteriores",
-        20
+        "Otros dientes anteriores",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2158,19 +2170,19 @@
     "id": "ORG3-096",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué grupos dentarios suelen participar en la guía protrusiva?",
+    "q": "¿Qué otros hallazgos pueden acompañar una actividad de bruxismo?",
     "a": [
       [
-        "Incisivos",
+        "Incisivos superiores e inferiores",
         45
       ],
       [
         "Caninos",
-        35
+        30
       ],
       [
-        "Anteriores",
-        20
+        "Guía anterior combinada",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2182,16 +2194,16 @@
     "q": "¿Qué contactos deben evitarse si interfieren con una excursión lateral?",
     "a": [
       [
-        "No trabajo",
-        45
+        "Contactos de no trabajo",
+        40
       ],
       [
-        "Trabajo posterior",
+        "Contactos posteriores protrusivos",
         35
       ],
       [
-        "Contacto prematuro",
-        20
+        "Contactos prematuros clínicamente relevantes",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2200,19 +2212,19 @@
     "id": "ORG3-098",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué interferencias posteriores pueden alterar una lateralidad funcional?",
+    "q": "¿Qué propiedad de la relación céntrica permite utilizarla como referencia?",
     "a": [
       [
-        "No trabajo",
-        45
+        "Contactos de no trabajo",
+        40
       ],
       [
-        "Trabajo posterior",
+        "Contactos posteriores durante protrusión",
         35
       ],
       [
-        "Contacto prematuro",
-        20
+        "Contactos prematuros",
+        25
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2224,20 +2236,20 @@
     "q": "¿Qué criterios ayudan a describir una oclusión estable?",
     "a": [
       [
-        "Contactos estables",
-        35
-      ],
-      [
-        "Fuerzas axiales",
+        "Contactos reproducibles",
         30
       ],
       [
-        "Sin interferencias",
-        20
+        "Distribución funcional de fuerzas",
+        25
       ],
       [
-        "Confort funcional",
-        15
+        "Ausencia de interferencias relevantes",
+        25
+      ],
+      [
+        "Confort y función",
+        20
       ]
     ],
     "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
@@ -2246,25 +2258,25 @@
     "id": "ORG3-100",
     "cat": "Oclusión",
     "difficulty": "extremo",
-    "q": "¿Qué rasgos clínicos se buscan al valorar estabilidad oclusal?",
+    "q": "¿Qué significa que la relación céntrica sea independiente del contacto dentario?",
     "a": [
       [
-        "Contactos estables",
-        35
-      ],
-      [
-        "Fuerzas axiales",
+        "Contactos reproducibles",
         30
       ],
       [
-        "Sin interferencias",
-        20
+        "Fuerzas compatibles con el soporte periodontal",
+        25
       ],
       [
-        "Confort funcional",
-        15
+        "Función confortable",
+        25
+      ],
+      [
+        "Ausencia de interferencias relevantes",
+        20
       ]
     ],
-    "source": "NCBI/PubMed: oclusión estática y dinámica, guía anterior, oclusión traumática; clasificación docente indicada por la autora"
+    "source": "PubMed: trauma por oclusión y cambios dentoperiodontales, PMID 1602041; PMID 7021239; PMID 40150044"
   }
 ]
