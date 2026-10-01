@@ -1,1 +1,2102 @@
-[{"id":"ORG13-1","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-2","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-3","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-4","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-5","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-6","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-7","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-8","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-9","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-10","cat":"Cirugía bucal","difficulty":"facil","q":"Fundamentos: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-11","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-12","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-13","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-14","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-15","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-16","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-17","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-18","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-19","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-20","cat":"Cirugía bucal","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-21","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-22","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-23","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-24","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-25","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-26","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-27","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-28","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-29","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-30","cat":"Cirugía bucal","difficulty":"facil","q":"Evaluación: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-31","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-32","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-33","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-34","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-35","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-36","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-37","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-38","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-39","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-40","cat":"Cirugía bucal","difficulty":"medio","q":"Prevención: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-41","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-42","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-43","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-44","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-45","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-46","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-47","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-48","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-49","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-50","cat":"Cirugía bucal","difficulty":"medio","q":"Tratamiento: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-51","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-52","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-53","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-54","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-55","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-56","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-57","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-58","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-59","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-60","cat":"Cirugía bucal","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-61","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-62","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-63","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-64","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-65","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-66","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-67","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-68","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-69","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-70","cat":"Cirugía bucal","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-71","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-72","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-73","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-74","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-75","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-76","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-77","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-78","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-79","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-80","cat":"Cirugía bucal","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-81","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-82","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-83","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-84","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-85","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-86","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-87","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-88","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-89","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-90","cat":"Cirugía bucal","difficulty":"extremo","q":"Documentación: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-91","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de fundamentos en Cirugía bucal.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-92","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de diagnóstico en Cirugía bucal.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-93","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de evaluación en Cirugía bucal.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-94","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de prevención en Cirugía bucal.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-95","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de tratamiento en Cirugía bucal.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-96","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de seguimiento en Cirugía bucal.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-97","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de complicaciones en Cirugía bucal.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-98","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de pronóstico en Cirugía bucal.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-99","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de documentación en Cirugía bucal.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG13-100","cat":"Cirugía bucal","difficulty":"extremo","q":"Seguridad: menciona tres elementos de seguridad en Cirugía bucal.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"}]
+[
+  {
+    "id": "ORG13-1",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe realizarse antes de una cirugía bucal?",
+    "a": [
+      [
+        "historia clínica actualizada",
+        45
+      ],
+      [
+        "exploración clínica",
+        30
+      ],
+      [
+        "estudios complementarios indicados",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-2",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué datos ayudan a estimar el riesgo quirúrgico?",
+    "a": [
+      [
+        "enfermedades sistémicas",
+        45
+      ],
+      [
+        "medicación actual",
+        30
+      ],
+      [
+        "antecedentes relevantes",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-3",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe confirmarse antes de iniciar el procedimiento?",
+    "a": [
+      [
+        "identidad del paciente",
+        45
+      ],
+      [
+        "procedimiento y sitio",
+        30
+      ],
+      [
+        "consentimiento",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-4",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué puede modificar el plan quirúrgico?",
+    "a": [
+      [
+        "hallazgos anatómicos",
+        45
+      ],
+      [
+        "condiciones sistémicas",
+        30
+      ],
+      [
+        "diagnóstico definitivo",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-5",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué antecedentes son especialmente relevantes en cirugía bucal?",
+    "a": [
+      [
+        "enfermedades sistémicas",
+        45
+      ],
+      [
+        "medicamentos",
+        30
+      ],
+      [
+        "antecedentes hemorrágicos",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-6",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué información debe registrarse de los medicamentos?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "dosis",
+        30
+      ],
+      [
+        "frecuencia",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-7",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué antecedentes aumentan el riesgo de sangrado?",
+    "a": [
+      [
+        "trastornos de coagulación",
+        45
+      ],
+      [
+        "anticoagulantes",
+        30
+      ],
+      [
+        "antiagregantes",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-8",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe investigarse sobre anestesias previas?",
+    "a": [
+      [
+        "reacciones adversas",
+        45
+      ],
+      [
+        "complicaciones",
+        30
+      ],
+      [
+        "anestésico implicado",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-9",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe incluir el consentimiento para una cirugía?",
+    "a": [
+      [
+        "procedimiento propuesto",
+        45
+      ],
+      [
+        "riesgos y beneficios",
+        30
+      ],
+      [
+        "alternativas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-10",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe explicarse si existen varias opciones terapéuticas?",
+    "a": [
+      [
+        "opciones disponibles",
+        45
+      ],
+      [
+        "beneficios esperados",
+        30
+      ],
+      [
+        "riesgos relevantes",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-11",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe comprobarse antes de comenzar?",
+    "a": [
+      [
+        "identidad",
+        45
+      ],
+      [
+        "procedimiento",
+        30
+      ],
+      [
+        "consentimiento",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-12",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe documentarse sobre el consentimiento?",
+    "a": [
+      [
+        "información proporcionada",
+        45
+      ],
+      [
+        "aceptación",
+        30
+      ],
+      [
+        "procedimiento autorizado",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-13",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué medidas reducen la contaminación durante una cirugía?",
+    "a": [
+      [
+        "higiene de manos",
+        45
+      ],
+      [
+        "equipo de protección",
+        30
+      ],
+      [
+        "instrumental esterilizado",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-14",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe hacerse con instrumental reutilizable?",
+    "a": [
+      [
+        "limpieza",
+        45
+      ],
+      [
+        "empaque",
+        30
+      ],
+      [
+        "esterilización",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-15",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué principio es esencial durante la técnica aséptica?",
+    "a": [
+      [
+        "evitar contaminación cruzada",
+        45
+      ],
+      [
+        "mantener el campo limpio",
+        30
+      ],
+      [
+        "manipular correctamente el instrumental",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-16",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué forma parte del control de infecciones?",
+    "a": [
+      [
+        "higiene de manos",
+        45
+      ],
+      [
+        "barreras de protección",
+        30
+      ],
+      [
+        "esterilización",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-17",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué factores influyen en la selección del anestésico local?",
+    "a": [
+      [
+        "procedimiento",
+        45
+      ],
+      [
+        "duración",
+        30
+      ],
+      [
+        "condiciones del paciente",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-18",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe verificarse antes de administrarlo?",
+    "a": [
+      [
+        "alergias",
+        45
+      ],
+      [
+        "antecedentes médicos",
+        30
+      ],
+      [
+        "dosis calculada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-19",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué manifestaciones pueden indicar toxicidad sistémica?",
+    "a": [
+      [
+        "síntomas neurológicos",
+        45
+      ],
+      [
+        "alteraciones cardiovasculares",
+        30
+      ],
+      [
+        "progresión clínica",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-20",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué favorece una administración segura?",
+    "a": [
+      [
+        "dosis apropiada",
+        45
+      ],
+      [
+        "aspiración cuando está indicada",
+        30
+      ],
+      [
+        "inyección lenta",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-21",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué principios son importantes durante una exodoncia simple?",
+    "a": [
+      [
+        "luxación controlada",
+        45
+      ],
+      [
+        "fuerza adecuada",
+        30
+      ],
+      [
+        "protección de tejidos",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-22",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué instrumentos pueden utilizarse?",
+    "a": [
+      [
+        "elevadores",
+        45
+      ],
+      [
+        "fórceps",
+        30
+      ],
+      [
+        "curetas cuando están indicadas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-23",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe valorarse antes de extraer un diente?",
+    "a": [
+      [
+        "morfología radicular",
+        45
+      ],
+      [
+        "soporte óseo",
+        30
+      ],
+      [
+        "relaciones anatómicas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-24",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Cuál es el objetivo de la luxación?",
+    "a": [
+      [
+        "expandir progresivamente el alveolo",
+        45
+      ],
+      [
+        "seccionar fibras periodontales",
+        30
+      ],
+      [
+        "movilizar el diente",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-25",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Cuándo puede requerirse una exodoncia quirúrgica?",
+    "a": [
+      [
+        "acceso insuficiente",
+        45
+      ],
+      [
+        "raíces complejas",
+        30
+      ],
+      [
+        "diente parcialmente incluido",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-26",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué puede formar parte de una exodoncia quirúrgica?",
+    "a": [
+      [
+        "colgajo",
+        45
+      ],
+      [
+        "osteotomía indicada",
+        30
+      ],
+      [
+        "odontosección indicada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-27",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe considerarse para realizar una odontosección?",
+    "a": [
+      [
+        "morfología radicular",
+        45
+      ],
+      [
+        "acceso",
+        30
+      ],
+      [
+        "estructuras vecinas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-28",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué objetivo tiene una osteotomía limitada?",
+    "a": [
+      [
+        "facilitar acceso",
+        45
+      ],
+      [
+        "reducir fuerzas",
+        30
+      ],
+      [
+        "preservar hueso",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-29",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué debe valorarse en un tercer molar?",
+    "a": [
+      [
+        "posición",
+        45
+      ],
+      [
+        "relaciones anatómicas",
+        30
+      ],
+      [
+        "patología asociada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-30",
+    "cat": "Cirugía bucal",
+    "difficulty": "facil",
+    "q": "¿Qué hallazgos pueden justificar valoración quirúrgica?",
+    "a": [
+      [
+        "pericoronitis recurrente",
+        45
+      ],
+      [
+        "caries no restaurable",
+        30
+      ],
+      [
+        "patología asociada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-31",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué estructura es crítica al valorar un tercer molar inferior?",
+    "a": [
+      [
+        "conducto mandibular",
+        45
+      ],
+      [
+        "segundo molar",
+        30
+      ],
+      [
+        "cortical lingual",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-32",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué estudios pueden emplearse según la complejidad?",
+    "a": [
+      [
+        "panorámica",
+        45
+      ],
+      [
+        "radiografía intraoral cuando procede",
+        30
+      ],
+      [
+        "CBCT indicada clínicamente",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-33",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué factores se valoran en un diente incluido?",
+    "a": [
+      [
+        "posición",
+        45
+      ],
+      [
+        "profundidad",
+        30
+      ],
+      [
+        "relación anatómica",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-34",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué complicaciones pueden asociarse con dientes retenidos?",
+    "a": [
+      [
+        "reabsorción radicular",
+        45
+      ],
+      [
+        "quistes",
+        30
+      ],
+      [
+        "infección",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-35",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué objetivos puede tener el tratamiento?",
+    "a": [
+      [
+        "eliminar patología",
+        45
+      ],
+      [
+        "facilitar erupción cuando es viable",
+        30
+      ],
+      [
+        "preservar estructuras",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-36",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué información radiográfica es útil?",
+    "a": [
+      [
+        "localización",
+        45
+      ],
+      [
+        "relación con raíces",
+        30
+      ],
+      [
+        "relación con estructuras vecinas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-37",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué características debe tener un colgajo adecuado?",
+    "a": [
+      [
+        "base vascularizada",
+        45
+      ],
+      [
+        "acceso suficiente",
+        30
+      ],
+      [
+        "cierre sin tensión",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-38",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué debe evitarse al diseñarlo?",
+    "a": [
+      [
+        "base demasiado estrecha",
+        45
+      ],
+      [
+        "tensión excesiva",
+        30
+      ],
+      [
+        "lesión innecesaria",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-39",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué favorece su cicatrización?",
+    "a": [
+      [
+        "aporte sanguíneo",
+        45
+      ],
+      [
+        "manejo cuidadoso",
+        30
+      ],
+      [
+        "cierre estable",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-40",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué influye en su diseño?",
+    "a": [
+      [
+        "acceso",
+        45
+      ],
+      [
+        "anatomía",
+        30
+      ],
+      [
+        "procedimiento",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-41",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué objetivos tienen las suturas?",
+    "a": [
+      [
+        "aproximar tejidos",
+        45
+      ],
+      [
+        "estabilizar la herida",
+        30
+      ],
+      [
+        "favorecer cicatrización",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-42",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué características debe tener una sutura?",
+    "a": [
+      [
+        "resistencia suficiente",
+        45
+      ],
+      [
+        "manejo adecuado",
+        30
+      ],
+      [
+        "baja reacción tisular",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-43",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué debe considerarse al elegir el material?",
+    "a": [
+      [
+        "procedimiento",
+        45
+      ],
+      [
+        "tejido",
+        30
+      ],
+      [
+        "necesidad de retiro",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-44",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué puede producir una sutura demasiado tensa?",
+    "a": [
+      [
+        "isquemia",
+        45
+      ],
+      [
+        "dehiscencia",
+        30
+      ],
+      [
+        "alteración de cicatrización",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-45",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué medidas ayudan a controlar un sangrado local?",
+    "a": [
+      [
+        "presión directa",
+        45
+      ],
+      [
+        "agentes hemostáticos indicados",
+        30
+      ],
+      [
+        "sutura",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-46",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué debe evaluarse ante sangrado persistente?",
+    "a": [
+      [
+        "sitio de sangrado",
+        45
+      ],
+      [
+        "estado sistémico",
+        30
+      ],
+      [
+        "medicación",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-47",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué medida es fundamental inicialmente en un alveolo?",
+    "a": [
+      [
+        "presión con gasa",
+        45
+      ],
+      [
+        "estabilización del coágulo",
+        30
+      ],
+      [
+        "reevaluación",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-48",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué factores pueden favorecer hemorragia postoperatoria?",
+    "a": [
+      [
+        "trastornos de coagulación",
+        45
+      ],
+      [
+        "medicación antitrombótica",
+        30
+      ],
+      [
+        "traumatismo local",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-49",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué etapas participan en la cicatrización?",
+    "a": [
+      [
+        "hemostasia",
+        45
+      ],
+      [
+        "inflamación",
+        30
+      ],
+      [
+        "proliferación y remodelación",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-50",
+    "cat": "Cirugía bucal",
+    "difficulty": "medio",
+    "q": "¿Qué células predominan tempranamente en la inflamación?",
+    "a": [
+      [
+        "neutrófilos",
+        45
+      ],
+      [
+        "macrófagos",
+        30
+      ],
+      [
+        "células inflamatorias",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-51",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué caracteriza la fase proliferativa?",
+    "a": [
+      [
+        "tejido de granulación",
+        45
+      ],
+      [
+        "angiogénesis",
+        30
+      ],
+      [
+        "deposición de matriz",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-52",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué ocurre durante la remodelación?",
+    "a": [
+      [
+        "reorganización del colágeno",
+        45
+      ],
+      [
+        "maduración tisular",
+        30
+      ],
+      [
+        "aumento de resistencia",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-53",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué cuadro es típico de alveolitis seca?",
+    "a": [
+      [
+        "dolor postextracción intenso",
+        45
+      ],
+      [
+        "pérdida del coágulo",
+        30
+      ],
+      [
+        "inicio diferido",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-54",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué factores se asocian con mayor riesgo?",
+    "a": [
+      [
+        "tabaquismo",
+        45
+      ],
+      [
+        "extracción difícil",
+        30
+      ],
+      [
+        "antecedente de alveolitis",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-55",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué medidas forman parte del manejo?",
+    "a": [
+      [
+        "irrigación cuidadosa indicada",
+        45
+      ],
+      [
+        "analgesia",
+        30
+      ],
+      [
+        "curación local",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-56",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué hallazgo caracteriza mejor la alveolitis?",
+    "a": [
+      [
+        "dolor intenso",
+        45
+      ],
+      [
+        "alveolo sin coágulo adecuado",
+        30
+      ],
+      [
+        "ausencia de una colección purulenta como hallazgo principal",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-57",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué signos sugieren propagación de una infección?",
+    "a": [
+      [
+        "aumento de volumen progresivo",
+        45
+      ],
+      [
+        "fiebre o compromiso sistémico",
+        30
+      ],
+      [
+        "disfagia o dificultad respiratoria",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-58",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un principio central ante una colección purulenta?",
+    "a": [
+      [
+        "control del foco",
+        45
+      ],
+      [
+        "drenaje indicado",
+        30
+      ],
+      [
+        "tratamiento del diente causal",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-59",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Cuándo puede requerirse atención urgente?",
+    "a": [
+      [
+        "compromiso de vía aérea",
+        45
+      ],
+      [
+        "diseminación rápida",
+        30
+      ],
+      [
+        "signos sistémicos importantes",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-60",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué papel tienen los antibióticos?",
+    "a": [
+      [
+        "son complemento cuando están indicados",
+        45
+      ],
+      [
+        "no sustituyen el control del foco",
+        30
+      ],
+      [
+        "deben seleccionarse según el cuadro",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-61",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué estructura puede lesionarse al extraer molares superiores?",
+    "a": [
+      [
+        "seno maxilar",
+        45
+      ],
+      [
+        "membrana sinusal",
+        30
+      ],
+      [
+        "tejidos alveolares",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-62",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué puede sugerir una comunicación oroantral?",
+    "a": [
+      [
+        "paso de aire o líquidos",
+        45
+      ],
+      [
+        "comunicación visible",
+        30
+      ],
+      [
+        "síntomas sinusales",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-63",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué factores aumentan su riesgo?",
+    "a": [
+      [
+        "raíces próximas al seno",
+        45
+      ],
+      [
+        "anatomía sinusal",
+        30
+      ],
+      [
+        "extracción traumática",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-64",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué debe hacerse si se sospecha?",
+    "a": [
+      [
+        "valorar tamaño y localización",
+        45
+      ],
+      [
+        "proteger tejidos",
+        30
+      ],
+      [
+        "planificar cierre o referencia",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-65",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué estructura se relaciona con raíces de terceros molares inferiores?",
+    "a": [
+      [
+        "nervio alveolar inferior",
+        45
+      ],
+      [
+        "conducto mandibular",
+        30
+      ],
+      [
+        "cortical mandibular",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-66",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones pueden indicar lesión nerviosa?",
+    "a": [
+      [
+        "parestesia",
+        45
+      ],
+      [
+        "hipoestesia",
+        30
+      ],
+      [
+        "disestesia",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-67",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué estudio aporta información tridimensional cuando está indicado?",
+    "a": [
+      [
+        "CBCT",
+        45
+      ],
+      [
+        "panorámica inicial",
+        30
+      ],
+      [
+        "otras proyecciones según el caso",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-68",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué ayuda a reducir el riesgo de lesión?",
+    "a": [
+      [
+        "evaluación radiográfica",
+        45
+      ],
+      [
+        "planificación",
+        30
+      ],
+      [
+        "técnica atraumática",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-69",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué territorios tienen sensibilidad general del nervio lingual?",
+    "a": [
+      [
+        "mucosa lingual anterior",
+        45
+      ],
+      [
+        "encía lingual mandibular",
+        30
+      ],
+      [
+        "dos tercios anteriores de la lengua",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-70",
+    "cat": "Cirugía bucal",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones pueden aparecer tras una lesión?",
+    "a": [
+      [
+        "parestesia",
+        45
+      ],
+      [
+        "hipoestesia",
+        30
+      ],
+      [
+        "disestesia",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-71",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué procedimientos presentan riesgo para el nervio lingual?",
+    "a": [
+      [
+        "cirugía de terceros molares inferiores",
+        45
+      ],
+      [
+        "incisiones linguales profundas",
+        30
+      ],
+      [
+        "procedimientos próximos a su trayecto",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-72",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe documentarse ante una alteración sensitiva?",
+    "a": [
+      [
+        "distribución",
+        45
+      ],
+      [
+        "inicio y evolución",
+        30
+      ],
+      [
+        "exploración neurosensorial",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-73",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Cuándo puede estar indicada una biopsia oral?",
+    "a": [
+      [
+        "lesión persistente sin diagnóstico",
+        45
+      ],
+      [
+        "lesión sospechosa",
+        30
+      ],
+      [
+        "lesión que requiere histopatología",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-74",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe acompañar una muestra?",
+    "a": [
+      [
+        "identificación del paciente",
+        45
+      ],
+      [
+        "sitio de la lesión",
+        30
+      ],
+      [
+        "datos clínicos",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-75",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe evitarse al tomar una biopsia?",
+    "a": [
+      [
+        "traumatizar la muestra",
+        45
+      ],
+      [
+        "medio de conservación incorrecto",
+        30
+      ],
+      [
+        "omitir datos clínicos",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-76",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué tipos generales de biopsia se utilizan?",
+    "a": [
+      [
+        "incisional",
+        45
+      ],
+      [
+        "excisional",
+        30
+      ],
+      [
+        "técnicas específicas según la lesión",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-77",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué características deben evaluarse en una lesión oral?",
+    "a": [
+      [
+        "localización",
+        45
+      ],
+      [
+        "tamaño",
+        30
+      ],
+      [
+        "color y superficie",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-78",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué hallazgos aumentan la sospecha de malignidad?",
+    "a": [
+      [
+        "induración",
+        45
+      ],
+      [
+        "ulceración persistente",
+        30
+      ],
+      [
+        "crecimiento progresivo",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-79",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué conducta es apropiada ante una lesión persistente sin causa clara?",
+    "a": [
+      [
+        "reevaluación",
+        45
+      ],
+      [
+        "eliminar irritantes cuando procede",
+        30
+      ],
+      [
+        "biopsia o referencia indicada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-80",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse para vigilar una lesión?",
+    "a": [
+      [
+        "dimensiones",
+        45
+      ],
+      [
+        "localización",
+        30
+      ],
+      [
+        "evolución",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-81",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué estudios ayudan a valorar un quiste odontogénico?",
+    "a": [
+      [
+        "exploración",
+        45
+      ],
+      [
+        "imagen",
+        30
+      ],
+      [
+        "histopatología indicada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-82",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué características pueden observarse?",
+    "a": [
+      [
+        "radiolucidez delimitada",
+        45
+      ],
+      [
+        "relación con un diente",
+        30
+      ],
+      [
+        "expansión",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-83",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué determina el tratamiento?",
+    "a": [
+      [
+        "tipo de lesión",
+        45
+      ],
+      [
+        "tamaño y localización",
+        30
+      ],
+      [
+        "relación anatómica",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-84",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Por qué puede requerirse histopatología?",
+    "a": [
+      [
+        "confirmar diagnóstico",
+        45
+      ],
+      [
+        "diferenciar entidades",
+        30
+      ],
+      [
+        "caracterizar la lesión",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-85",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe evaluarse ante un trauma dentoalveolar?",
+    "a": [
+      [
+        "diente y periodonto",
+        45
+      ],
+      [
+        "tejidos blandos",
+        30
+      ],
+      [
+        "hueso alveolar",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-86",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué hallazgos pueden acompañar una luxación?",
+    "a": [
+      [
+        "movilidad alterada",
+        45
+      ],
+      [
+        "cambio de posición",
+        30
+      ],
+      [
+        "dolor a la percusión",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-87",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué estudios pueden ser útiles?",
+    "a": [
+      [
+        "radiografías",
+        45
+      ],
+      [
+        "exploración clínica",
+        30
+      ],
+      [
+        "CBCT indicada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-88",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué objetivos tiene el manejo inicial?",
+    "a": [
+      [
+        "reposición indicada",
+        45
+      ],
+      [
+        "estabilización",
+        30
+      ],
+      [
+        "seguimiento",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-89",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué complicaciones pueden aparecer tras cirugía bucal?",
+    "a": [
+      [
+        "dolor",
+        45
+      ],
+      [
+        "edema",
+        30
+      ],
+      [
+        "sangrado",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-90",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué hallazgos requieren valoración urgente?",
+    "a": [
+      [
+        "dificultad respiratoria",
+        45
+      ],
+      [
+        "sangrado no controlado",
+        30
+      ],
+      [
+        "deterioro sistémico",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-91",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué factores pueden favorecer complicaciones?",
+    "a": [
+      [
+        "técnica traumática",
+        45
+      ],
+      [
+        "higiene deficiente",
+        30
+      ],
+      [
+        "factores sistémicos",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-92",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe incluir la valoración de una complicación?",
+    "a": [
+      [
+        "historia del procedimiento",
+        45
+      ],
+      [
+        "exploración",
+        30
+      ],
+      [
+        "estudios indicados",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-93",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe determinarse antes de indicar cirugía?",
+    "a": [
+      [
+        "diagnóstico",
+        45
+      ],
+      [
+        "beneficio esperado",
+        30
+      ],
+      [
+        "riesgos y alternativas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-94",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué situación puede justificar posponer una cirugía electiva?",
+    "a": [
+      [
+        "condición sistémica no controlada",
+        45
+      ],
+      [
+        "enfermedad aguda relevante",
+        30
+      ],
+      [
+        "condiciones inseguras",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-95",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué principio guía una contraindicación relativa?",
+    "a": [
+      [
+        "valoración individual del riesgo",
+        45
+      ],
+      [
+        "modificación del plan",
+        30
+      ],
+      [
+        "consulta médica indicada",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-96",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué puede aumentar la prioridad de un procedimiento?",
+    "a": [
+      [
+        "dolor no controlado",
+        45
+      ],
+      [
+        "infección progresiva",
+        30
+      ],
+      [
+        "compromiso funcional",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-97",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué integra una planificación quirúrgica adecuada?",
+    "a": [
+      [
+        "diagnóstico",
+        45
+      ],
+      [
+        "objetivos",
+        30
+      ],
+      [
+        "manejo de complicaciones previsibles",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-98",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué anatomía debe revisarse antes de cirugía compleja?",
+    "a": [
+      [
+        "nervios",
+        45
+      ],
+      [
+        "cavidades anatómicas",
+        30
+      ],
+      [
+        "relaciones radiculares",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-99",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué debe considerarse al planear una extracción compleja?",
+    "a": [
+      [
+        "acceso",
+        45
+      ],
+      [
+        "instrumental",
+        30
+      ],
+      [
+        "odontosección u osteotomía indicadas",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  },
+  {
+    "id": "ORG13-100",
+    "cat": "Cirugía bucal",
+    "difficulty": "extremo",
+    "q": "¿Qué permite una buena planificación?",
+    "a": [
+      [
+        "reducir riesgos",
+        45
+      ],
+      [
+        "seleccionar técnica",
+        30
+      ],
+      [
+        "preparar contingencias",
+        15
+      ]
+    ],
+    "source": "AAPD. Reference Manual of Pediatric Dentistry; literatura quirúrgica oral indexada y guías clínicas."
+  }
+]
