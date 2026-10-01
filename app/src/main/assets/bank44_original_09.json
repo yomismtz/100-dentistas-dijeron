@@ -1,1 +1,2502 @@
-[{"id":"ORG9-1","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-2","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-3","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-4","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-5","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-6","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-7","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-8","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-9","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-10","cat":"Realización del expediente clínico","difficulty":"facil","q":"Fundamentos: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-11","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-12","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-13","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-14","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-15","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-16","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-17","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-18","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-19","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-20","cat":"Realización del expediente clínico","difficulty":"facil","q":"Diagnóstico: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-21","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-22","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-23","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-24","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-25","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-26","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-27","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-28","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-29","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-30","cat":"Realización del expediente clínico","difficulty":"facil","q":"Evaluación: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-31","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-32","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-33","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-34","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-35","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-36","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-37","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-38","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-39","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-40","cat":"Realización del expediente clínico","difficulty":"medio","q":"Prevención: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-41","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-42","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-43","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-44","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-45","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-46","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-47","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-48","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-49","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-50","cat":"Realización del expediente clínico","difficulty":"medio","q":"Tratamiento: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-51","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-52","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-53","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-54","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-55","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-56","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-57","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-58","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-59","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-60","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Seguimiento: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-61","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-62","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-63","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-64","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-65","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-66","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-67","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-68","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-69","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-70","cat":"Realización del expediente clínico","difficulty":"dificil","q":"Complicaciones: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-71","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-72","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-73","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-74","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-75","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-76","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-77","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-78","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-79","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-80","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Pronóstico: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-81","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-82","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-83","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-84","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-85","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-86","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-87","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-88","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-89","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-90","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Documentación: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-91","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de fundamentos en Realización del expediente clínico.","a":[["fundamentos: evaluación",45],["fundamentos: correlación clínica",35],["fundamentos: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-92","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de diagnóstico en Realización del expediente clínico.","a":[["diagnóstico: evaluación",45],["diagnóstico: correlación clínica",35],["diagnóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-93","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de evaluación en Realización del expediente clínico.","a":[["evaluación: evaluación",45],["evaluación: correlación clínica",35],["evaluación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-94","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de prevención en Realización del expediente clínico.","a":[["prevención: evaluación",45],["prevención: correlación clínica",35],["prevención: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-95","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de tratamiento en Realización del expediente clínico.","a":[["tratamiento: evaluación",45],["tratamiento: correlación clínica",35],["tratamiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-96","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de seguimiento en Realización del expediente clínico.","a":[["seguimiento: evaluación",45],["seguimiento: correlación clínica",35],["seguimiento: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-97","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de complicaciones en Realización del expediente clínico.","a":[["complicaciones: evaluación",45],["complicaciones: correlación clínica",35],["complicaciones: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-98","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de pronóstico en Realización del expediente clínico.","a":[["pronóstico: evaluación",45],["pronóstico: correlación clínica",35],["pronóstico: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-99","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de documentación en Realización del expediente clínico.","a":[["documentación: evaluación",45],["documentación: correlación clínica",35],["documentación: seguimiento",20]],"source":"Banco académico consolidado"},{"id":"ORG9-100","cat":"Realización del expediente clínico","difficulty":"extremo","q":"Seguridad: menciona tres elementos de seguridad en Realización del expediente clínico.","a":[["seguridad: evaluación",45],["seguridad: correlación clínica",35],["seguridad: seguimiento",20]],"source":"Banco académico consolidado"}]
+[
+  {
+    "id": "ORG9-001",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a identificación?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "edad",
+        30
+      ],
+      [
+        "sexo",
+        15
+      ],
+      [
+        "fecha de nacimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-002",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en identificación?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "edad",
+        30
+      ],
+      [
+        "sexo",
+        15
+      ],
+      [
+        "fecha de nacimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-003",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de identificación?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "edad",
+        30
+      ],
+      [
+        "sexo",
+        15
+      ],
+      [
+        "fecha de nacimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-004",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a identificación?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "edad",
+        30
+      ],
+      [
+        "sexo",
+        15
+      ],
+      [
+        "fecha de nacimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-005",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a motivo de consulta?",
+    "a": [
+      [
+        "razón principal",
+        45
+      ],
+      [
+        "síntoma",
+        30
+      ],
+      [
+        "tiempo de evolución",
+        15
+      ],
+      [
+        "demanda",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-006",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en motivo de consulta?",
+    "a": [
+      [
+        "razón principal",
+        45
+      ],
+      [
+        "síntoma",
+        30
+      ],
+      [
+        "tiempo de evolución",
+        15
+      ],
+      [
+        "demanda",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-007",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de motivo de consulta?",
+    "a": [
+      [
+        "razón principal",
+        45
+      ],
+      [
+        "síntoma",
+        30
+      ],
+      [
+        "tiempo de evolución",
+        15
+      ],
+      [
+        "demanda",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-008",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a motivo de consulta?",
+    "a": [
+      [
+        "razón principal",
+        45
+      ],
+      [
+        "síntoma",
+        30
+      ],
+      [
+        "tiempo de evolución",
+        15
+      ],
+      [
+        "demanda",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-009",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a antecedentes familiares?",
+    "a": [
+      [
+        "diabetes",
+        45
+      ],
+      [
+        "hipertensión",
+        30
+      ],
+      [
+        "cáncer",
+        15
+      ],
+      [
+        "herencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-010",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en antecedentes familiares?",
+    "a": [
+      [
+        "diabetes",
+        45
+      ],
+      [
+        "hipertensión",
+        30
+      ],
+      [
+        "cáncer",
+        15
+      ],
+      [
+        "herencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-011",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de antecedentes familiares?",
+    "a": [
+      [
+        "diabetes",
+        45
+      ],
+      [
+        "hipertensión",
+        30
+      ],
+      [
+        "cáncer",
+        15
+      ],
+      [
+        "herencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-012",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a antecedentes familiares?",
+    "a": [
+      [
+        "diabetes",
+        45
+      ],
+      [
+        "hipertensión",
+        30
+      ],
+      [
+        "cáncer",
+        15
+      ],
+      [
+        "herencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-013",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a antecedentes personales?",
+    "a": [
+      [
+        "enfermedades",
+        45
+      ],
+      [
+        "cirugías",
+        30
+      ],
+      [
+        "hospitalizaciones",
+        15
+      ],
+      [
+        "traumas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-014",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en antecedentes personales?",
+    "a": [
+      [
+        "enfermedades",
+        45
+      ],
+      [
+        "cirugías",
+        30
+      ],
+      [
+        "hospitalizaciones",
+        15
+      ],
+      [
+        "traumas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-015",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de antecedentes personales?",
+    "a": [
+      [
+        "enfermedades",
+        45
+      ],
+      [
+        "cirugías",
+        30
+      ],
+      [
+        "hospitalizaciones",
+        15
+      ],
+      [
+        "traumas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-016",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a antecedentes personales?",
+    "a": [
+      [
+        "enfermedades",
+        45
+      ],
+      [
+        "cirugías",
+        30
+      ],
+      [
+        "hospitalizaciones",
+        15
+      ],
+      [
+        "traumas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-017",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a alergias?",
+    "a": [
+      [
+        "medicamentos",
+        45
+      ],
+      [
+        "látex",
+        30
+      ],
+      [
+        "alimentos",
+        15
+      ],
+      [
+        "anestésicos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-018",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en alergias?",
+    "a": [
+      [
+        "medicamentos",
+        45
+      ],
+      [
+        "látex",
+        30
+      ],
+      [
+        "alimentos",
+        15
+      ],
+      [
+        "anestésicos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-019",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de alergias?",
+    "a": [
+      [
+        "medicamentos",
+        45
+      ],
+      [
+        "látex",
+        30
+      ],
+      [
+        "alimentos",
+        15
+      ],
+      [
+        "anestésicos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-020",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a alergias?",
+    "a": [
+      [
+        "medicamentos",
+        45
+      ],
+      [
+        "látex",
+        30
+      ],
+      [
+        "alimentos",
+        15
+      ],
+      [
+        "anestésicos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-021",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a medicación actual?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "dosis",
+        30
+      ],
+      [
+        "frecuencia",
+        15
+      ],
+      [
+        "duración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-022",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en medicación actual?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "dosis",
+        30
+      ],
+      [
+        "frecuencia",
+        15
+      ],
+      [
+        "duración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-023",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de medicación actual?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "dosis",
+        30
+      ],
+      [
+        "frecuencia",
+        15
+      ],
+      [
+        "duración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-024",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a medicación actual?",
+    "a": [
+      [
+        "nombre",
+        45
+      ],
+      [
+        "dosis",
+        30
+      ],
+      [
+        "frecuencia",
+        15
+      ],
+      [
+        "duración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-025",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a signos vitales?",
+    "a": [
+      [
+        "presión arterial",
+        45
+      ],
+      [
+        "pulso",
+        30
+      ],
+      [
+        "temperatura",
+        15
+      ],
+      [
+        "respiración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-026",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en signos vitales?",
+    "a": [
+      [
+        "presión arterial",
+        45
+      ],
+      [
+        "pulso",
+        30
+      ],
+      [
+        "temperatura",
+        15
+      ],
+      [
+        "respiración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-027",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Cuál es un elemento de signos vitales?",
+    "a": [
+      [
+        "presión arterial",
+        45
+      ],
+      [
+        "pulso",
+        30
+      ],
+      [
+        "temperatura",
+        15
+      ],
+      [
+        "respiración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-028",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "En clínica, ¿qué pertenece a signos vitales?",
+    "a": [
+      [
+        "presión arterial",
+        45
+      ],
+      [
+        "pulso",
+        30
+      ],
+      [
+        "temperatura",
+        15
+      ],
+      [
+        "respiración",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-029",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué dato corresponde a exploración extraoral?",
+    "a": [
+      [
+        "asimetría",
+        45
+      ],
+      [
+        "ganglios",
+        30
+      ],
+      [
+        "piel",
+        15
+      ],
+      [
+        "labios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-030",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "facil",
+    "q": "¿Qué debe registrarse en exploración extraoral?",
+    "a": [
+      [
+        "asimetría",
+        45
+      ],
+      [
+        "ganglios",
+        30
+      ],
+      [
+        "piel",
+        15
+      ],
+      [
+        "labios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-031",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de exploración extraoral?",
+    "a": [
+      [
+        "asimetría",
+        45
+      ],
+      [
+        "ganglios",
+        30
+      ],
+      [
+        "piel",
+        15
+      ],
+      [
+        "labios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-032",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a exploración extraoral?",
+    "a": [
+      [
+        "asimetría",
+        45
+      ],
+      [
+        "ganglios",
+        30
+      ],
+      [
+        "piel",
+        15
+      ],
+      [
+        "labios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-033",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a mucosas?",
+    "a": [
+      [
+        "color",
+        45
+      ],
+      [
+        "integridad",
+        30
+      ],
+      [
+        "lesiones",
+        15
+      ],
+      [
+        "humedad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-034",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en mucosas?",
+    "a": [
+      [
+        "color",
+        45
+      ],
+      [
+        "integridad",
+        30
+      ],
+      [
+        "lesiones",
+        15
+      ],
+      [
+        "humedad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-035",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de mucosas?",
+    "a": [
+      [
+        "color",
+        45
+      ],
+      [
+        "integridad",
+        30
+      ],
+      [
+        "lesiones",
+        15
+      ],
+      [
+        "humedad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-036",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a mucosas?",
+    "a": [
+      [
+        "color",
+        45
+      ],
+      [
+        "integridad",
+        30
+      ],
+      [
+        "lesiones",
+        15
+      ],
+      [
+        "humedad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-037",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a exploración dental?",
+    "a": [
+      [
+        "caries",
+        45
+      ],
+      [
+        "fracturas",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-038",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en exploración dental?",
+    "a": [
+      [
+        "caries",
+        45
+      ],
+      [
+        "fracturas",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-039",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de exploración dental?",
+    "a": [
+      [
+        "caries",
+        45
+      ],
+      [
+        "fracturas",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-040",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a exploración dental?",
+    "a": [
+      [
+        "caries",
+        45
+      ],
+      [
+        "fracturas",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-041",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a periodonto?",
+    "a": [
+      [
+        "sangrado",
+        45
+      ],
+      [
+        "sondaje",
+        30
+      ],
+      [
+        "movilidad",
+        15
+      ],
+      [
+        "recesión",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-042",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en periodonto?",
+    "a": [
+      [
+        "sangrado",
+        45
+      ],
+      [
+        "sondaje",
+        30
+      ],
+      [
+        "movilidad",
+        15
+      ],
+      [
+        "recesión",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-043",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de periodonto?",
+    "a": [
+      [
+        "sangrado",
+        45
+      ],
+      [
+        "sondaje",
+        30
+      ],
+      [
+        "movilidad",
+        15
+      ],
+      [
+        "recesión",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-044",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a periodonto?",
+    "a": [
+      [
+        "sangrado",
+        45
+      ],
+      [
+        "sondaje",
+        30
+      ],
+      [
+        "movilidad",
+        15
+      ],
+      [
+        "recesión",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-045",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a ATM?",
+    "a": [
+      [
+        "dolor",
+        45
+      ],
+      [
+        "ruidos",
+        30
+      ],
+      [
+        "apertura",
+        15
+      ],
+      [
+        "desviación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-046",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en ATM?",
+    "a": [
+      [
+        "dolor",
+        45
+      ],
+      [
+        "ruidos",
+        30
+      ],
+      [
+        "apertura",
+        15
+      ],
+      [
+        "desviación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-047",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Cuál es un elemento de ATM?",
+    "a": [
+      [
+        "dolor",
+        45
+      ],
+      [
+        "ruidos",
+        30
+      ],
+      [
+        "apertura",
+        15
+      ],
+      [
+        "desviación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-048",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "En clínica, ¿qué pertenece a ATM?",
+    "a": [
+      [
+        "dolor",
+        45
+      ],
+      [
+        "ruidos",
+        30
+      ],
+      [
+        "apertura",
+        15
+      ],
+      [
+        "desviación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-049",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué dato corresponde a oclusión?",
+    "a": [
+      [
+        "overjet",
+        45
+      ],
+      [
+        "overbite",
+        30
+      ],
+      [
+        "relación molar",
+        15
+      ],
+      [
+        "mordida cruzada",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-050",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "medio",
+    "q": "¿Qué debe registrarse en oclusión?",
+    "a": [
+      [
+        "overjet",
+        45
+      ],
+      [
+        "overbite",
+        30
+      ],
+      [
+        "relación molar",
+        15
+      ],
+      [
+        "mordida cruzada",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-051",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de oclusión?",
+    "a": [
+      [
+        "overjet",
+        45
+      ],
+      [
+        "overbite",
+        30
+      ],
+      [
+        "relación molar",
+        15
+      ],
+      [
+        "mordida cruzada",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-052",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a oclusión?",
+    "a": [
+      [
+        "overjet",
+        45
+      ],
+      [
+        "overbite",
+        30
+      ],
+      [
+        "relación molar",
+        15
+      ],
+      [
+        "mordida cruzada",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-053",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a odontograma?",
+    "a": [
+      [
+        "dientes",
+        45
+      ],
+      [
+        "superficies",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-054",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en odontograma?",
+    "a": [
+      [
+        "dientes",
+        45
+      ],
+      [
+        "superficies",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-055",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de odontograma?",
+    "a": [
+      [
+        "dientes",
+        45
+      ],
+      [
+        "superficies",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-056",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a odontograma?",
+    "a": [
+      [
+        "dientes",
+        45
+      ],
+      [
+        "superficies",
+        30
+      ],
+      [
+        "restauraciones",
+        15
+      ],
+      [
+        "ausencias",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-057",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a periodontograma?",
+    "a": [
+      [
+        "profundidad",
+        45
+      ],
+      [
+        "sangrado",
+        30
+      ],
+      [
+        "recesión",
+        15
+      ],
+      [
+        "movilidad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-058",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en periodontograma?",
+    "a": [
+      [
+        "profundidad",
+        45
+      ],
+      [
+        "sangrado",
+        30
+      ],
+      [
+        "recesión",
+        15
+      ],
+      [
+        "movilidad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-059",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de periodontograma?",
+    "a": [
+      [
+        "profundidad",
+        45
+      ],
+      [
+        "sangrado",
+        30
+      ],
+      [
+        "recesión",
+        15
+      ],
+      [
+        "movilidad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-060",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a periodontograma?",
+    "a": [
+      [
+        "profundidad",
+        45
+      ],
+      [
+        "sangrado",
+        30
+      ],
+      [
+        "recesión",
+        15
+      ],
+      [
+        "movilidad",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-061",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a diagnóstico?",
+    "a": [
+      [
+        "hallazgos",
+        45
+      ],
+      [
+        "signos",
+        30
+      ],
+      [
+        "síntomas",
+        15
+      ],
+      [
+        "estudios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-062",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en diagnóstico?",
+    "a": [
+      [
+        "hallazgos",
+        45
+      ],
+      [
+        "signos",
+        30
+      ],
+      [
+        "síntomas",
+        15
+      ],
+      [
+        "estudios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-063",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de diagnóstico?",
+    "a": [
+      [
+        "hallazgos",
+        45
+      ],
+      [
+        "signos",
+        30
+      ],
+      [
+        "síntomas",
+        15
+      ],
+      [
+        "estudios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-064",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a diagnóstico?",
+    "a": [
+      [
+        "hallazgos",
+        45
+      ],
+      [
+        "signos",
+        30
+      ],
+      [
+        "síntomas",
+        15
+      ],
+      [
+        "estudios",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-065",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a pronóstico?",
+    "a": [
+      [
+        "favorable",
+        45
+      ],
+      [
+        "reservado",
+        30
+      ],
+      [
+        "desfavorable",
+        15
+      ],
+      [
+        "individual",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-066",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en pronóstico?",
+    "a": [
+      [
+        "favorable",
+        45
+      ],
+      [
+        "reservado",
+        30
+      ],
+      [
+        "desfavorable",
+        15
+      ],
+      [
+        "individual",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-067",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Cuál es un elemento de pronóstico?",
+    "a": [
+      [
+        "favorable",
+        45
+      ],
+      [
+        "reservado",
+        30
+      ],
+      [
+        "desfavorable",
+        15
+      ],
+      [
+        "individual",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-068",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "En clínica, ¿qué pertenece a pronóstico?",
+    "a": [
+      [
+        "favorable",
+        45
+      ],
+      [
+        "reservado",
+        30
+      ],
+      [
+        "desfavorable",
+        15
+      ],
+      [
+        "individual",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-069",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué dato corresponde a plan de tratamiento?",
+    "a": [
+      [
+        "prioridades",
+        45
+      ],
+      [
+        "procedimientos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "alternativas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-070",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "dificil",
+    "q": "¿Qué debe registrarse en plan de tratamiento?",
+    "a": [
+      [
+        "prioridades",
+        45
+      ],
+      [
+        "procedimientos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "alternativas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-071",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de plan de tratamiento?",
+    "a": [
+      [
+        "prioridades",
+        45
+      ],
+      [
+        "procedimientos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "alternativas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-072",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a plan de tratamiento?",
+    "a": [
+      [
+        "prioridades",
+        45
+      ],
+      [
+        "procedimientos",
+        30
+      ],
+      [
+        "secuencia",
+        15
+      ],
+      [
+        "alternativas",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-073",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a consentimiento informado?",
+    "a": [
+      [
+        "riesgos",
+        45
+      ],
+      [
+        "beneficios",
+        30
+      ],
+      [
+        "alternativas",
+        15
+      ],
+      [
+        "procedimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-074",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en consentimiento informado?",
+    "a": [
+      [
+        "riesgos",
+        45
+      ],
+      [
+        "beneficios",
+        30
+      ],
+      [
+        "alternativas",
+        15
+      ],
+      [
+        "procedimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-075",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de consentimiento informado?",
+    "a": [
+      [
+        "riesgos",
+        45
+      ],
+      [
+        "beneficios",
+        30
+      ],
+      [
+        "alternativas",
+        15
+      ],
+      [
+        "procedimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-076",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a consentimiento informado?",
+    "a": [
+      [
+        "riesgos",
+        45
+      ],
+      [
+        "beneficios",
+        30
+      ],
+      [
+        "alternativas",
+        15
+      ],
+      [
+        "procedimiento",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-077",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a nota de evolución?",
+    "a": [
+      [
+        "fecha",
+        45
+      ],
+      [
+        "procedimiento",
+        30
+      ],
+      [
+        "respuesta",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-078",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en nota de evolución?",
+    "a": [
+      [
+        "fecha",
+        45
+      ],
+      [
+        "procedimiento",
+        30
+      ],
+      [
+        "respuesta",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-079",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de nota de evolución?",
+    "a": [
+      [
+        "fecha",
+        45
+      ],
+      [
+        "procedimiento",
+        30
+      ],
+      [
+        "respuesta",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-080",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a nota de evolución?",
+    "a": [
+      [
+        "fecha",
+        45
+      ],
+      [
+        "procedimiento",
+        30
+      ],
+      [
+        "respuesta",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-081",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a nota postoperatoria?",
+    "a": [
+      [
+        "procedimiento",
+        45
+      ],
+      [
+        "hallazgos",
+        30
+      ],
+      [
+        "complicaciones",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-082",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en nota postoperatoria?",
+    "a": [
+      [
+        "procedimiento",
+        45
+      ],
+      [
+        "hallazgos",
+        30
+      ],
+      [
+        "complicaciones",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-083",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de nota postoperatoria?",
+    "a": [
+      [
+        "procedimiento",
+        45
+      ],
+      [
+        "hallazgos",
+        30
+      ],
+      [
+        "complicaciones",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-084",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a nota postoperatoria?",
+    "a": [
+      [
+        "procedimiento",
+        45
+      ],
+      [
+        "hallazgos",
+        30
+      ],
+      [
+        "complicaciones",
+        15
+      ],
+      [
+        "indicaciones",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-085",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a referencia?",
+    "a": [
+      [
+        "motivo",
+        45
+      ],
+      [
+        "especialidad",
+        30
+      ],
+      [
+        "resumen",
+        15
+      ],
+      [
+        "urgencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-086",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en referencia?",
+    "a": [
+      [
+        "motivo",
+        45
+      ],
+      [
+        "especialidad",
+        30
+      ],
+      [
+        "resumen",
+        15
+      ],
+      [
+        "urgencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-087",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de referencia?",
+    "a": [
+      [
+        "motivo",
+        45
+      ],
+      [
+        "especialidad",
+        30
+      ],
+      [
+        "resumen",
+        15
+      ],
+      [
+        "urgencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-088",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a referencia?",
+    "a": [
+      [
+        "motivo",
+        45
+      ],
+      [
+        "especialidad",
+        30
+      ],
+      [
+        "resumen",
+        15
+      ],
+      [
+        "urgencia",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-089",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a estudios de imagen?",
+    "a": [
+      [
+        "tipo",
+        45
+      ],
+      [
+        "fecha",
+        30
+      ],
+      [
+        "hallazgos",
+        15
+      ],
+      [
+        "interpretación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-090",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en estudios de imagen?",
+    "a": [
+      [
+        "tipo",
+        45
+      ],
+      [
+        "fecha",
+        30
+      ],
+      [
+        "hallazgos",
+        15
+      ],
+      [
+        "interpretación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-091",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de estudios de imagen?",
+    "a": [
+      [
+        "tipo",
+        45
+      ],
+      [
+        "fecha",
+        30
+      ],
+      [
+        "hallazgos",
+        15
+      ],
+      [
+        "interpretación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-092",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a estudios de imagen?",
+    "a": [
+      [
+        "tipo",
+        45
+      ],
+      [
+        "fecha",
+        30
+      ],
+      [
+        "hallazgos",
+        15
+      ],
+      [
+        "interpretación",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-093",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a fotografía clínica?",
+    "a": [
+      [
+        "frontal",
+        45
+      ],
+      [
+        "perfil",
+        30
+      ],
+      [
+        "intraoral",
+        15
+      ],
+      [
+        "oclusal",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-094",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en fotografía clínica?",
+    "a": [
+      [
+        "frontal",
+        45
+      ],
+      [
+        "perfil",
+        30
+      ],
+      [
+        "intraoral",
+        15
+      ],
+      [
+        "oclusal",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-095",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de fotografía clínica?",
+    "a": [
+      [
+        "frontal",
+        45
+      ],
+      [
+        "perfil",
+        30
+      ],
+      [
+        "intraoral",
+        15
+      ],
+      [
+        "oclusal",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-096",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a fotografía clínica?",
+    "a": [
+      [
+        "frontal",
+        45
+      ],
+      [
+        "perfil",
+        30
+      ],
+      [
+        "intraoral",
+        15
+      ],
+      [
+        "oclusal",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-097",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué dato corresponde a confidencialidad?",
+    "a": [
+      [
+        "privacidad",
+        45
+      ],
+      [
+        "acceso restringido",
+        30
+      ],
+      [
+        "resguardo",
+        15
+      ],
+      [
+        "datos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-098",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Qué debe registrarse en confidencialidad?",
+    "a": [
+      [
+        "privacidad",
+        45
+      ],
+      [
+        "acceso restringido",
+        30
+      ],
+      [
+        "resguardo",
+        15
+      ],
+      [
+        "datos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-099",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "¿Cuál es un elemento de confidencialidad?",
+    "a": [
+      [
+        "privacidad",
+        45
+      ],
+      [
+        "acceso restringido",
+        30
+      ],
+      [
+        "resguardo",
+        15
+      ],
+      [
+        "datos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  },
+  {
+    "id": "ORG9-100",
+    "cat": "Realización del expediente clínico",
+    "difficulty": "extremo",
+    "q": "En clínica, ¿qué pertenece a confidencialidad?",
+    "a": [
+      [
+        "privacidad",
+        45
+      ],
+      [
+        "acceso restringido",
+        30
+      ],
+      [
+        "resguardo",
+        15
+      ],
+      [
+        "datos",
+        10
+      ]
+    ],
+    "source": "NOM-004-SSA3-2012; NOM-013-SSA2-2015; ADA Dental Recordkeeping Guidelines."
+  }
+]
