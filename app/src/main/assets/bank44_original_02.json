@@ -1,0 +1,2278 @@
+[
+  {
+    "id": "ORG2-001",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Cuáles son las glándulas salivales mayores?",
+    "a": [
+      [
+        "Parótida",
+        45
+      ],
+      [
+        "Submandibular",
+        35
+      ],
+      [
+        "Sublingual",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-002",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué glándulas producen la mayor parte de la saliva?",
+    "a": [
+      [
+        "Parótida",
+        45
+      ],
+      [
+        "Submandibular",
+        35
+      ],
+      [
+        "Sublingual",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-003",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué funciones principales cumple la saliva?",
+    "a": [
+      [
+        "Lubricación",
+        30
+      ],
+      [
+        "Buffer",
+        25
+      ],
+      [
+        "Remineralización",
+        20
+      ],
+      [
+        "Antimicrobiana",
+        15
+      ],
+      [
+        "Digestión",
+        10
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-004",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué tareas fisiológicas realiza la saliva en la cavidad oral?",
+    "a": [
+      [
+        "Lubricación",
+        30
+      ],
+      [
+        "Buffer",
+        25
+      ],
+      [
+        "Remineralización",
+        20
+      ],
+      [
+        "Antimicrobiana",
+        15
+      ],
+      [
+        "Digestión",
+        10
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-005",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué estímulos aumentan el flujo salival?",
+    "a": [
+      [
+        "Masticación",
+        35
+      ],
+      [
+        "Sabor",
+        30
+      ],
+      [
+        "Olfato",
+        20
+      ],
+      [
+        "Estimulación táctil",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-006",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué situaciones fisiológicas pueden estimular la secreción de saliva?",
+    "a": [
+      [
+        "Masticación",
+        35
+      ],
+      [
+        "Sabor",
+        30
+      ],
+      [
+        "Olfato",
+        20
+      ],
+      [
+        "Estimulación táctil",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-007",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué sistema regula principalmente la secreción salival?",
+    "a": [
+      [
+        "Parasimpático",
+        45
+      ],
+      [
+        "Simpático",
+        35
+      ],
+      [
+        "Sistema autónomo",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-008",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué control nervioso participa en el reflejo salival?",
+    "a": [
+      [
+        "Parasimpático",
+        45
+      ],
+      [
+        "Simpático",
+        35
+      ],
+      [
+        "Sistema autónomo",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-009",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué funciones tiene la saliva durante la masticación?",
+    "a": [
+      [
+        "Humecta",
+        35
+      ],
+      [
+        "Lubrica",
+        30
+      ],
+      [
+        "Forma bolo",
+        20
+      ],
+      [
+        "Facilita deglución",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-010",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Cómo facilita la saliva el procesamiento oral del alimento?",
+    "a": [
+      [
+        "Humecta",
+        35
+      ],
+      [
+        "Lubrica",
+        30
+      ],
+      [
+        "Forma bolo",
+        20
+      ],
+      [
+        "Facilita deglución",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-011",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Cuáles son las fases clásicas de la deglución?",
+    "a": [
+      [
+        "Oral",
+        45
+      ],
+      [
+        "Faríngea",
+        35
+      ],
+      [
+        "Esofágica",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-012",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué etapas forman el acto de tragar?",
+    "a": [
+      [
+        "Oral",
+        45
+      ],
+      [
+        "Faríngea",
+        35
+      ],
+      [
+        "Esofágica",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-013",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué estructuras participan activamente en la masticación?",
+    "a": [
+      [
+        "Mandíbula",
+        35
+      ],
+      [
+        "Lengua",
+        30
+      ],
+      [
+        "Dientes",
+        20
+      ],
+      [
+        "Músculos",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-014",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué componentes motores ayudan a triturar y manipular alimento?",
+    "a": [
+      [
+        "Mandíbula",
+        35
+      ],
+      [
+        "Lengua",
+        30
+      ],
+      [
+        "Dientes",
+        20
+      ],
+      [
+        "Músculos",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-015",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué músculos elevan principalmente la mandíbula?",
+    "a": [
+      [
+        "Masetero",
+        45
+      ],
+      [
+        "Temporal",
+        35
+      ],
+      [
+        "Pterigoideo medial",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-016",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué músculos generan cierre mandibular durante masticación?",
+    "a": [
+      [
+        "Masetero",
+        45
+      ],
+      [
+        "Temporal",
+        35
+      ],
+      [
+        "Pterigoideo medial",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-017",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué músculo participa de forma importante en protrusión mandibular?",
+    "a": [
+      [
+        "Pterigoideo lateral",
+        45
+      ],
+      [
+        "Masetero superficial",
+        35
+      ],
+      [
+        "Pterigoideo medial",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-018",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué músculo ayuda a llevar el cóndilo hacia delante?",
+    "a": [
+      [
+        "Pterigoideo lateral",
+        45
+      ],
+      [
+        "Masetero superficial",
+        35
+      ],
+      [
+        "Pterigoideo medial",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-019",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué movimientos mandibulares básicos ocurren durante función oral?",
+    "a": [
+      [
+        "Apertura",
+        30
+      ],
+      [
+        "Cierre",
+        25
+      ],
+      [
+        "Protrusión",
+        20
+      ],
+      [
+        "Retrusión",
+        15
+      ],
+      [
+        "Lateralidad",
+        10
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-020",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué movimientos combina la mandíbula al masticar?",
+    "a": [
+      [
+        "Apertura",
+        30
+      ],
+      [
+        "Cierre",
+        25
+      ],
+      [
+        "Protrusión",
+        20
+      ],
+      [
+        "Retrusión",
+        15
+      ],
+      [
+        "Lateralidad",
+        10
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-021",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué modalidades gustativas básicas se reconocen?",
+    "a": [
+      [
+        "Dulce",
+        30
+      ],
+      [
+        "Salado",
+        25
+      ],
+      [
+        "Ácido",
+        20
+      ],
+      [
+        "Amargo",
+        15
+      ],
+      [
+        "Umami",
+        10
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-022",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué sabores básicos pueden detectar los receptores gustativos?",
+    "a": [
+      [
+        "Dulce",
+        30
+      ],
+      [
+        "Salado",
+        25
+      ],
+      [
+        "Ácido",
+        20
+      ],
+      [
+        "Amargo",
+        15
+      ],
+      [
+        "Umami",
+        10
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-023",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué nervios llevan gusto desde la lengua?",
+    "a": [
+      [
+        "Facial VII",
+        45
+      ],
+      [
+        "Glosofaríngeo IX",
+        35
+      ],
+      [
+        "Vago X",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-024",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué pares craneales participan en la sensibilidad gustativa?",
+    "a": [
+      [
+        "Facial VII",
+        45
+      ],
+      [
+        "Glosofaríngeo IX",
+        35
+      ],
+      [
+        "Vago X",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-025",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué nervio aporta sensibilidad general principal a la cara y boca?",
+    "a": [
+      [
+        "V1 oftálmica",
+        45
+      ],
+      [
+        "V2 maxilar",
+        35
+      ],
+      [
+        "V3 mandibular",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-026",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué par craneal conduce gran parte de la sensibilidad orofacial?",
+    "a": [
+      [
+        "V1 oftálmica",
+        45
+      ],
+      [
+        "V2 maxilar",
+        35
+      ],
+      [
+        "V3 mandibular",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-027",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué funciones fisiológicas realiza la lengua?",
+    "a": [
+      [
+        "Gusto",
+        35
+      ],
+      [
+        "Deglución",
+        30
+      ],
+      [
+        "Fonación",
+        20
+      ],
+      [
+        "Masticación",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-028",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué tareas orales dependen de la lengua?",
+    "a": [
+      [
+        "Gusto",
+        35
+      ],
+      [
+        "Deglución",
+        30
+      ],
+      [
+        "Fonación",
+        20
+      ],
+      [
+        "Masticación",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-029",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué funciones cumplen las mucinas salivales?",
+    "a": [
+      [
+        "Lubricación",
+        45
+      ],
+      [
+        "Protección mucosa",
+        35
+      ],
+      [
+        "Formación bolo",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-030",
+    "cat": "Fisiología",
+    "difficulty": "facil",
+    "q": "¿Qué efectos producen las glicoproteínas mucosas de la saliva?",
+    "a": [
+      [
+        "Lubricación",
+        45
+      ],
+      [
+        "Protección mucosa",
+        35
+      ],
+      [
+        "Formación bolo",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-031",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué enzima salival inicia digestión del almidón?",
+    "a": [
+      [
+        "Amilasa",
+        45
+      ],
+      [
+        "Ptialina",
+        35
+      ],
+      [
+        "Alfa-amilasa",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-032",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué enzima de la saliva participa en digestión de carbohidratos?",
+    "a": [
+      [
+        "Amilasa",
+        45
+      ],
+      [
+        "Ptialina",
+        35
+      ],
+      [
+        "Alfa-amilasa",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-033",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué componente salival contribuye al efecto buffer?",
+    "a": [
+      [
+        "Bicarbonato",
+        45
+      ],
+      [
+        "Fosfato",
+        35
+      ],
+      [
+        "Proteínas",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-034",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué iones ayudan a neutralizar ácidos en saliva?",
+    "a": [
+      [
+        "Bicarbonato",
+        45
+      ],
+      [
+        "Fosfato",
+        35
+      ],
+      [
+        "Proteínas",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-035",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué minerales salivales favorecen remineralización?",
+    "a": [
+      [
+        "Calcio",
+        45
+      ],
+      [
+        "Fosfato",
+        35
+      ],
+      [
+        "Fluoruro",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-036",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué iones ayudan a mantener el equilibrio mineral del esmalte?",
+    "a": [
+      [
+        "Calcio",
+        45
+      ],
+      [
+        "Fosfato",
+        35
+      ],
+      [
+        "Fluoruro",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-037",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué propiedades protegen la mucosa oral?",
+    "a": [
+      [
+        "Humectación",
+        35
+      ],
+      [
+        "Lubricación",
+        30
+      ],
+      [
+        "Limpieza",
+        20
+      ],
+      [
+        "Antimicrobiana",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-038",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué funciones salivales mantienen integridad de tejidos blandos?",
+    "a": [
+      [
+        "Humectación",
+        35
+      ],
+      [
+        "Lubricación",
+        30
+      ],
+      [
+        "Limpieza",
+        20
+      ],
+      [
+        "Antimicrobiana",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-039",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué cambia al aumentar el flujo salival?",
+    "a": [
+      [
+        "Volumen",
+        45
+      ],
+      [
+        "Bicarbonato",
+        35
+      ],
+      [
+        "Aclaramiento",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-040",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué características suelen aumentar en saliva estimulada?",
+    "a": [
+      [
+        "Volumen",
+        45
+      ],
+      [
+        "Bicarbonato",
+        35
+      ],
+      [
+        "Aclaramiento",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-041",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué glándula aporta gran parte de la saliva estimulada?",
+    "a": [
+      [
+        "Parótida",
+        45
+      ],
+      [
+        "Submandibular",
+        35
+      ],
+      [
+        "Sublingual",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-042",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué glándula responde intensamente a estímulos gustativos?",
+    "a": [
+      [
+        "Parótida",
+        45
+      ],
+      [
+        "Submandibular",
+        35
+      ],
+      [
+        "Sublingual",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-043",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué glándula aporta gran parte de la saliva en reposo?",
+    "a": [
+      [
+        "Submandibular",
+        45
+      ],
+      [
+        "Sublingual",
+        35
+      ],
+      [
+        "Parótida",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-044",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué glándula suele contribuir más al flujo no estimulado?",
+    "a": [
+      [
+        "Submandibular",
+        45
+      ],
+      [
+        "Sublingual",
+        35
+      ],
+      [
+        "Parótida",
+        20
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-045",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué factores pueden reducir transitoriamente el flujo salival?",
+    "a": [
+      [
+        "Ansiedad",
+        35
+      ],
+      [
+        "Deshidratación",
+        30
+      ],
+      [
+        "Sueño",
+        20
+      ],
+      [
+        "Estrés",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-046",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué condiciones fisiológicas o emocionales pueden disminuir saliva?",
+    "a": [
+      [
+        "Ansiedad",
+        35
+      ],
+      [
+        "Deshidratación",
+        30
+      ],
+      [
+        "Sueño",
+        20
+      ],
+      [
+        "Estrés",
+        15
+      ]
+    ],
+    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
+  },
+  {
+    "id": "ORG2-047",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué funciones del periodonto participan en la masticación?",
+    "a": [
+      [
+        "Propiocepción",
+        35
+      ],
+      [
+        "Amortiguación",
+        30
+      ],
+      [
+        "Soporte",
+        20
+      ],
+      [
+        "Sensibilidad",
+        15
+      ]
+    ],
+    "source": "PubMed systematic review of periodontal mechanoreceptors: PMID 28226300."
+  },
+  {
+    "id": "ORG2-048",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué capacidades del ligamento periodontal ayudan al control de fuerzas?",
+    "a": [
+      [
+        "Propiocepción",
+        35
+      ],
+      [
+        "Amortiguación",
+        30
+      ],
+      [
+        "Soporte",
+        20
+      ],
+      [
+        "Sensibilidad",
+        15
+      ]
+    ],
+    "source": "PubMed systematic review of periodontal mechanoreceptors: PMID 28226300."
+  },
+  {
+    "id": "ORG2-049",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué receptores aportan información sobre fuerzas dentarias?",
+    "a": [
+      [
+        "Mecanorreceptores periodontales",
+        45
+      ],
+      [
+        "Husos musculares",
+        35
+      ],
+      [
+        "Receptores articulares",
+        20
+      ]
+    ],
+    "source": "PubMed systematic review of periodontal mechanoreceptors: PMID 28226300."
+  },
+  {
+    "id": "ORG2-050",
+    "cat": "Fisiología",
+    "difficulty": "medio",
+    "q": "¿Qué sensores ayudan a modular la mordida durante masticación?",
+    "a": [
+      [
+        "Mecanorreceptores periodontales",
+        45
+      ],
+      [
+        "Husos musculares",
+        35
+      ],
+      [
+        "Receptores articulares",
+        20
+      ]
+    ],
+    "source": "PubMed systematic review of periodontal mechanoreceptors: PMID 28226300."
+  },
+  {
+    "id": "ORG2-051",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué funciones fisiológicas tiene el ligamento periodontal?",
+    "a": [
+      [
+        "Soporte",
+        35
+      ],
+      [
+        "Propiocepción",
+        30
+      ],
+      [
+        "Amortiguación",
+        20
+      ],
+      [
+        "Nutrición",
+        15
+      ]
+    ],
+    "source": "PubMed systematic review of periodontal mechanoreceptors: PMID 28226300."
+  },
+  {
+    "id": "ORG2-052",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué tareas cumple el PDL además de fijar el diente?",
+    "a": [
+      [
+        "Soporte",
+        35
+      ],
+      [
+        "Propiocepción",
+        30
+      ],
+      [
+        "Amortiguación",
+        20
+      ],
+      [
+        "Nutrición",
+        15
+      ]
+    ],
+    "source": "PubMed systematic review of periodontal mechanoreceptors: PMID 28226300."
+  },
+  {
+    "id": "ORG2-053",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué componentes participan en el reflejo masticatorio?",
+    "a": [
+      [
+        "Aferencias sensoriales",
+        35
+      ],
+      [
+        "Tronco encefálico",
+        30
+      ],
+      [
+        "Motoneuronas",
+        20
+      ],
+      [
+        "Músculos",
+        15
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-054",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué sistemas integran el control automático de la masticación?",
+    "a": [
+      [
+        "Aferencias sensoriales",
+        35
+      ],
+      [
+        "Tronco encefálico",
+        30
+      ],
+      [
+        "Motoneuronas",
+        20
+      ],
+      [
+        "Músculos",
+        15
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-055",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué variables del alimento modifican la masticación?",
+    "a": [
+      [
+        "Dureza",
+        35
+      ],
+      [
+        "Tamaño",
+        30
+      ],
+      [
+        "Textura",
+        20
+      ],
+      [
+        "Humedad",
+        15
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-056",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué características de comida cambian fuerza y ciclos masticatorios?",
+    "a": [
+      [
+        "Dureza",
+        35
+      ],
+      [
+        "Tamaño",
+        30
+      ],
+      [
+        "Textura",
+        20
+      ],
+      [
+        "Humedad",
+        15
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-057",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué ocurre con la fuerza masticatoria ante alimentos más duros?",
+    "a": [
+      [
+        "Fuerza",
+        45
+      ],
+      [
+        "Actividad muscular",
+        35
+      ],
+      [
+        "Ciclos masticatorios",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-058",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué respuestas motoras pueden aumentar con mayor resistencia del alimento?",
+    "a": [
+      [
+        "Fuerza",
+        45
+      ],
+      [
+        "Actividad muscular",
+        35
+      ],
+      [
+        "Ciclos masticatorios",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-059",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué procesos forman el bolo alimenticio?",
+    "a": [
+      [
+        "Trituración",
+        35
+      ],
+      [
+        "Mezcla salival",
+        30
+      ],
+      [
+        "Compactación",
+        20
+      ],
+      [
+        "Lubricación",
+        15
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-060",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué acciones orales preparan el alimento para deglutir?",
+    "a": [
+      [
+        "Trituración",
+        35
+      ],
+      [
+        "Mezcla salival",
+        30
+      ],
+      [
+        "Compactación",
+        20
+      ],
+      [
+        "Lubricación",
+        15
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-061",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué estructuras impulsan el bolo en la fase oral?",
+    "a": [
+      [
+        "Lengua",
+        45
+      ],
+      [
+        "Paladar",
+        35
+      ],
+      [
+        "Mejillas",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-062",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué componentes mueven el bolo hacia la orofaringe?",
+    "a": [
+      [
+        "Lengua",
+        45
+      ],
+      [
+        "Paladar",
+        35
+      ],
+      [
+        "Mejillas",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-063",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué ocurre en la fase faríngea de la deglución?",
+    "a": [
+      [
+        "Elevación laríngea",
+        45
+      ],
+      [
+        "Cierre glótico",
+        35
+      ],
+      [
+        "Propulsión faríngea",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-064",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué acciones protegen la vía aérea durante el paso faríngeo?",
+    "a": [
+      [
+        "Elevación laríngea",
+        45
+      ],
+      [
+        "Cierre glótico",
+        35
+      ],
+      [
+        "Propulsión faríngea",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-065",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué sucede en la fase esofágica?",
+    "a": [
+      [
+        "Peristalsis",
+        45
+      ],
+      [
+        "Relajación esfínter",
+        35
+      ],
+      [
+        "Transporte esofágico",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-066",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué mecanismos trasladan el bolo hacia el estómago?",
+    "a": [
+      [
+        "Peristalsis",
+        45
+      ],
+      [
+        "Relajación esfínter",
+        35
+      ],
+      [
+        "Transporte esofágico",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed oral physiology/swallowing literature: PMID 16829493; PMID 32119292; PMID 39397618."
+  },
+  {
+    "id": "ORG2-067",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué papel cumple la saliva en el gusto?",
+    "a": [
+      [
+        "Disuelve tastantes",
+        45
+      ],
+      [
+        "Transporta solutos",
+        35
+      ],
+      [
+        "Protege receptores",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-068",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Cómo ayuda la saliva a que los tastantes alcancen receptores?",
+    "a": [
+      [
+        "Disuelve tastantes",
+        45
+      ],
+      [
+        "Transporta solutos",
+        35
+      ],
+      [
+        "Protege receptores",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-069",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Qué estructuras contienen botones gustativos?",
+    "a": [
+      [
+        "Papilas linguales",
+        45
+      ],
+      [
+        "Paladar blando",
+        35
+      ],
+      [
+        "Epiglotis",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-070",
+    "cat": "Fisiología",
+    "difficulty": "dificil",
+    "q": "¿Dónde se localizan receptores del gusto en la cavidad oral?",
+    "a": [
+      [
+        "Papilas linguales",
+        45
+      ],
+      [
+        "Paladar blando",
+        35
+      ],
+      [
+        "Epiglotis",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-071",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué papilas linguales contienen numerosos botones gustativos?",
+    "a": [
+      [
+        "Fungiformes",
+        45
+      ],
+      [
+        "Foliadas",
+        35
+      ],
+      [
+        "Circunvaladas",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-072",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué tipos de papilas participan especialmente en percepción gustativa?",
+    "a": [
+      [
+        "Fungiformes",
+        45
+      ],
+      [
+        "Foliadas",
+        35
+      ],
+      [
+        "Circunvaladas",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-073",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué papilas tienen función principalmente mecánica?",
+    "a": [
+      [
+        "Filiformes",
+        45
+      ],
+      [
+        "Cónicas",
+        35
+      ],
+      [
+        "Marginales",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-074",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué papilas linguales carecen de función gustativa principal?",
+    "a": [
+      [
+        "Filiformes",
+        45
+      ],
+      [
+        "Cónicas",
+        35
+      ],
+      [
+        "Marginales",
+        20
+      ]
+    ],
+    "source": "PubMed-indexed gustatory physiology: PMID 29356478."
+  },
+  {
+    "id": "ORG2-075",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué funciones cumple la pulpa dental?",
+    "a": [
+      [
+        "Sensorial",
+        35
+      ],
+      [
+        "Nutritiva",
+        30
+      ],
+      [
+        "Formativa",
+        20
+      ],
+      [
+        "Defensiva",
+        15
+      ]
+    ],
+    "source": "PubMed dental pulp/odontoblast physiology: PMID 30725797; PMID 28954208."
+  },
+  {
+    "id": "ORG2-076",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué tareas fisiológicas realiza el tejido pulpar?",
+    "a": [
+      [
+        "Sensorial",
+        35
+      ],
+      [
+        "Nutritiva",
+        30
+      ],
+      [
+        "Formativa",
+        20
+      ],
+      [
+        "Defensiva",
+        15
+      ]
+    ],
+    "source": "PubMed dental pulp/odontoblast physiology: PMID 30725797; PMID 28954208."
+  },
+  {
+    "id": "ORG2-077",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué células forman dentina?",
+    "a": [
+      [
+        "Odontoblastos",
+        45
+      ],
+      [
+        "Células pulpares",
+        35
+      ],
+      [
+        "Preodontoblastos",
+        20
+      ]
+    ],
+    "source": "PubMed dental pulp/odontoblast physiology: PMID 30725797; PMID 28954208."
+  },
+  {
+    "id": "ORG2-078",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué células pulpares producen matriz dentinaria?",
+    "a": [
+      [
+        "Odontoblastos",
+        45
+      ],
+      [
+        "Células pulpares",
+        35
+      ],
+      [
+        "Preodontoblastos",
+        20
+      ]
+    ],
+    "source": "PubMed dental pulp/odontoblast physiology: PMID 30725797; PMID 28954208."
+  },
+  {
+    "id": "ORG2-079",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué fibras nerviosas transmiten dolor pulpar?",
+    "a": [
+      [
+        "Fibras A-delta",
+        45
+      ],
+      [
+        "Fibras C",
+        35
+      ],
+      [
+        "Nociceptores",
+        20
+      ]
+    ],
+    "source": "PubMed dental pulp neurophysiology: PMID 11199715; PMID 19239745."
+  },
+  {
+    "id": "ORG2-080",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué tipos de fibras participan en nocicepción dental?",
+    "a": [
+      [
+        "Fibras A-delta",
+        45
+      ],
+      [
+        "Fibras C",
+        35
+      ],
+      [
+        "Nociceptores",
+        20
+      ]
+    ],
+    "source": "PubMed dental pulp neurophysiology: PMID 11199715; PMID 19239745."
+  },
+  {
+    "id": "ORG2-081",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué estímulos pueden activar nociceptores pulpares?",
+    "a": [
+      [
+        "Térmicos",
+        45
+      ],
+      [
+        "Mecánicos",
+        35
+      ],
+      [
+        "Químicos",
+        20
+      ]
+    ],
+    "source": "PubMed dental pulp neurophysiology: PMID 11199715; PMID 19239745."
+  },
+  {
+    "id": "ORG2-082",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué cambios pueden provocar sensación dolorosa en dentina-pulpa?",
+    "a": [
+      [
+        "Térmicos",
+        45
+      ],
+      [
+        "Mecánicos",
+        35
+      ],
+      [
+        "Químicos",
+        20
+      ]
+    ],
+    "source": "PubMed dental pulp neurophysiology: PMID 11199715; PMID 19239745."
+  },
+  {
+    "id": "ORG2-083",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué teoría explica sensibilidad dentinaria por movimiento de fluido?",
+    "a": [
+      [
+        "Teoría hidrodinámica",
+        45
+      ],
+      [
+        "Movimiento tubular",
+        35
+      ],
+      [
+        "Flujo dentinario",
+        20
+      ]
+    ],
+    "source": "PubMed dentin sensitivity literature: PMID 1508886; PMID 7996085; PMID 34302871."
+  },
+  {
+    "id": "ORG2-084",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué concepto relaciona túbulos dentinarios y dolor ante estímulos?",
+    "a": [
+      [
+        "Teoría hidrodinámica",
+        45
+      ],
+      [
+        "Movimiento tubular",
+        35
+      ],
+      [
+        "Flujo dentinario",
+        20
+      ]
+    ],
+    "source": "PubMed dentin sensitivity literature: PMID 1508886; PMID 7996085; PMID 34302871."
+  },
+  {
+    "id": "ORG2-085",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué funciones fisiológicas cumple la ATM?",
+    "a": [
+      [
+        "Rotación",
+        35
+      ],
+      [
+        "Traslación",
+        30
+      ],
+      [
+        "Carga",
+        20
+      ],
+      [
+        "Movimiento mandibular",
+        15
+      ]
+    ],
+    "source": "PubMed TMJ biomechanics: PMID 23272550; PMID 8209212; PMID 15858318."
+  },
+  {
+    "id": "ORG2-086",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué tareas permite la articulación temporomandibular?",
+    "a": [
+      [
+        "Rotación",
+        35
+      ],
+      [
+        "Traslación",
+        30
+      ],
+      [
+        "Carga",
+        20
+      ],
+      [
+        "Movimiento mandibular",
+        15
+      ]
+    ],
+    "source": "PubMed TMJ biomechanics: PMID 23272550; PMID 8209212; PMID 15858318."
+  },
+  {
+    "id": "ORG2-087",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué tejidos articulares ayudan a distribuir carga en ATM?",
+    "a": [
+      [
+        "Disco articular",
+        45
+      ],
+      [
+        "Fibrocartílago",
+        35
+      ],
+      [
+        "Ligamentos",
+        20
+      ]
+    ],
+    "source": "PubMed TMJ biomechanics: PMID 23272550; PMID 8209212; PMID 15858318."
+  },
+  {
+    "id": "ORG2-088",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué estructuras amortiguan y guían fuerzas dentro de la articulación?",
+    "a": [
+      [
+        "Disco articular",
+        45
+      ],
+      [
+        "Fibrocartílago",
+        35
+      ],
+      [
+        "Ligamentos",
+        20
+      ]
+    ],
+    "source": "PubMed TMJ biomechanics: PMID 23272550; PMID 8209212; PMID 15858318."
+  },
+  {
+    "id": "ORG2-089",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué funciones dependen del sistema estomatognático?",
+    "a": [
+      [
+        "Masticación",
+        35
+      ],
+      [
+        "Deglución",
+        30
+      ],
+      [
+        "Fonación",
+        20
+      ],
+      [
+        "Respiración",
+        15
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-090",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué actividades requieren coordinación entre dientes, músculos y articulaciones?",
+    "a": [
+      [
+        "Masticación",
+        35
+      ],
+      [
+        "Deglución",
+        30
+      ],
+      [
+        "Fonación",
+        20
+      ],
+      [
+        "Respiración",
+        15
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-091",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué componentes participan en el control neuromuscular orofacial?",
+    "a": [
+      [
+        "Nervios",
+        35
+      ],
+      [
+        "Músculos",
+        30
+      ],
+      [
+        "Receptores",
+        20
+      ],
+      [
+        "SNC",
+        15
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-092",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué elementos integran sensación y movimiento en función oral?",
+    "a": [
+      [
+        "Nervios",
+        35
+      ],
+      [
+        "Músculos",
+        30
+      ],
+      [
+        "Receptores",
+        20
+      ],
+      [
+        "SNC",
+        15
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-093",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué puede aumentar la actividad muscular masticatoria?",
+    "a": [
+      [
+        "Alimento duro",
+        45
+      ],
+      [
+        "Apretamiento",
+        35
+      ],
+      [
+        "Masticación intensa",
+        20
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-094",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué factores funcionales pueden incrementar reclutamiento de músculos mandibulares?",
+    "a": [
+      [
+        "Alimento duro",
+        45
+      ],
+      [
+        "Apretamiento",
+        35
+      ],
+      [
+        "Masticación intensa",
+        20
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-095",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué músculos ayudan a abrir la mandíbula?",
+    "a": [
+      [
+        "Suprahioideos",
+        45
+      ],
+      [
+        "Pterigoideo lateral",
+        35
+      ],
+      [
+        "Digástrico",
+        20
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-096",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué grupos musculares participan en depresión mandibular?",
+    "a": [
+      [
+        "Suprahioideos",
+        45
+      ],
+      [
+        "Pterigoideo lateral",
+        35
+      ],
+      [
+        "Digástrico",
+        20
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-097",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué funciones cumplen las mejillas durante masticación?",
+    "a": [
+      [
+        "Contener alimento",
+        45
+      ],
+      [
+        "Guiar bolo",
+        35
+      ],
+      [
+        "Estabilizar mejillas",
+        20
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-098",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué papel tienen los músculos bucales en el control del bolo?",
+    "a": [
+      [
+        "Contener alimento",
+        45
+      ],
+      [
+        "Guiar bolo",
+        35
+      ],
+      [
+        "Estabilizar mejillas",
+        20
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-099",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué mecanismos ayudan al aclaramiento oral?",
+    "a": [
+      [
+        "Flujo salival",
+        35
+      ],
+      [
+        "Deglución",
+        30
+      ],
+      [
+        "Movimientos linguales",
+        20
+      ],
+      [
+        "Masticación",
+        15
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  },
+  {
+    "id": "ORG2-100",
+    "cat": "Fisiología",
+    "difficulty": "extremo",
+    "q": "¿Qué factores eliminan restos y ácidos de la cavidad oral?",
+    "a": [
+      [
+        "Flujo salival",
+        35
+      ],
+      [
+        "Deglución",
+        30
+      ],
+      [
+        "Movimientos linguales",
+        20
+      ],
+      [
+        "Masticación",
+        15
+      ]
+    ],
+    "source": "PubMed oral physiology/mastication literature: PMID 16564557; PMID 16829493; PMID 28226300."
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "target_total": 4400,
+  "questions_per_category": 100,
+  "difficulty_distribution": {"facil":30,"medio":20,"dificil":20,"extremo":30},
+  "answer_count": {"min":3,"max":7},
+  "categories": [
+    "Psicología infantil","Fisiología","Oclusión","Desarrollo de la oclusión","Desarrollo craneofacial",
+    "Nomenclatura y etimología médica","Hábitos y parafunciones","Laboratorio de ortodoncia y ortopedia",
+    "Realización del expediente clínico","Ortodoncia","Ortopedia maxilar","Endodoncia",
+    "Cirugía bucal","Periodoncia","Implantología","Embriología dental","Operatoria dental",
+    "Anestesia dental","Anatomía dental","Cariología","Odontopediatría","Prótesis dental",
+    "Radiología oral y maxilofacial","Patología bucal","Medicina bucal","Farmacología odontológica",
+    "Materiales dentales","Prótesis fija","Prótesis removible","Prótesis total","Rehabilitación oral",
+    "Articulación temporomandibular y trastornos temporomandibulares","Odontología preventiva",
+    "Salud pública y odontología comunitaria","Microbiología oral","Infecciones odontogénicas",
+    "Urgencias médicas en odontología","Traumatología dental","Odontología geriátrica",
+    "Odontología para pacientes con necesidades especiales","Odontología forense",
+    "Bioética y legislación odontológica","Fotografía y documentación clínica odontológica",
+    "Oclusión funcional y ajuste oclusal avanzado"
+  ]
+}

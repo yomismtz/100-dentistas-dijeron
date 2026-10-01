@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#06131a">
+  <title>Así los dentistas lo dijeron</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="languageSwitch" aria-label="Language selector">
+    <button data-lang="es">ES</button><button data-lang="en">EN</button>
+    <button id="voiceToggle" class="voiceToggle" aria-label="Narradora" title="Narradora">🔊</button>
+  </div>
+  <main id="home" class="screen home">
+    <img src="portada_tiny.jpg" alt="Así los dentistas lo dijeron">
+    <img class="homeLogo" src="logo_app.webp" alt="Así los dentistas lo dijeron">
+    <div class="homeGlow" aria-hidden="true"></div>
+    <div class="homeActions">
+      <button id="mode1v1" class="primary">👤 1 CONTRA 1</button>
+      <button id="modeTeams">👥 EQUIPO CONTRA EQUIPO</button>
+      <button id="modeCpu">🤖 CONTRA LA COMPUTADORA</button>
+      <button id="help">¿CÓMO SE JUEGA?</button>
+    </div>
+  </main>
+  <main id="game" class="screen hidden" aria-live="polite">
+    <header class="topbar">
+      <button id="prev" class="iconBtn" aria-label="Ronda anterior">◀</button>
+      <div class="roundInfo">
+        <span id="round">Ronda 1 · ×1</span>
+        <span id="progress">1 / 6</span>
+        <span id="turn">TURNO: EQUIPO 1</span>
+      </div>
+      <button id="exitGame" class="exitGameBtn" aria-label="Salir del juego">SALIR</button><button id="menu" class="iconBtn" aria-label="Menú">☰</button>
+      <button id="next" class="iconBtn" aria-label="Ronda siguiente">▶</button>
+    </header>
+    <section class="board">
+      <div class="questionRow">
+        <h1 id="question"></h1>
+        <div class="timerBox" title="Tiempo para responder">
+          <span>TIEMPO</span>
+          <div><strong id="timer">10</strong><small>s</small></div>
+        </div>
+        <div class="bank" title="Puntos revelados en esta ronda"><span>BANCO</span><strong id="bank">0</strong></div>
+      </div>
+      <div id="faceoff" class="faceoff hidden">
+        <div class="faceoffTitle">⚡ CAREO ⚡</div>
+        <p>Presiona primero para ganar el derecho a responder.</p>
+        <div class="faceoffButtons"><button id="faceoffPlayer">🦷 JUGADOR</button><button id="faceoffCpu">🤖 COMPUTADORA</button></div>
+      </div>
+      <div id="answerEntry" class="answerEntry hidden">
+        <input id="answerText" type="text" autocomplete="off" enterkeyhint="send" placeholder="Escribe tu respuesta…" />
+        <button id="answerMic" type="button" title="Responder por voz">🎤 VOZ</button>
+        <button id="answerSend" type="button">RESPONDER</button>
+        <div id="answerFeedback" class="answerFeedback" aria-live="assertive"></div>
+      </div>
+      <div id="answers" class="answers"></div>
+      <div id="strikes" class="strikes" aria-label="Errores"></div>
+    </section>
+    <footer class="scorebar">
+      <section class="team teamOne">
+        <button class="teamName" data-team="1">EQUIPO 1</button>
+        <strong id="s1">0</strong>
+        <button class="award" data-team="1">DAR BANCO</button>
+      </section>
+      <section class="centerControls">
+        <button id="buzz" class="danger">✖ ERROR</button>
+        <button id="undo" title="Deshacer última asignación">↶</button>
+        <button id="resetRound" title="Reiniciar ronda">↻ RONDA</button>
+      </section>
+      <section class="team teamTwo">
+        <button class="teamName" data-team="2">EQUIPO 2</button>
+        <strong id="s2">0</strong>
+        <button class="award" data-team="2">DAR BANCO</button>
+      </section>
+    </footer>
+  </main>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modalCard">
+      <button id="closeModal" class="closeBtn">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <div id="strikeFlash" class="strikeFlash hidden"><div>✖ ✖ ✖</div></div>
+  <audio id="sndStart" src="intro_short.mp3" preload="auto"></audio>
+  <audio id="sndGood" src="good.mp3" preload="auto"></audio>
+  <audio id="sndBad" src="error.mp3" preload="auto"></audio>
+  <script src="i18n.js"></script>
+  <script src="narrator.js"></script>
+  <script src="app.js"></script>
+  <script src="characters.js"></script>
+  <script src="primer_parcial.js"></script>
+</body>
+</html>
