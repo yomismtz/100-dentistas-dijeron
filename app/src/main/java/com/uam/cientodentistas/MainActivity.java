@@ -110,13 +110,13 @@ public class MainActivity extends Activity {
         }
         @JavascriptInterface public void requestPermissions() {
             if (android.os.Build.VERSION.SDK_INT >= 31) {
-                requestPermissions(new String[]{
+                MainActivity.this.requestPermissions(new String[]{
                         Manifest.permission.BLUETOOTH_SCAN,
                         Manifest.permission.BLUETOOTH_CONNECT,
                         Manifest.permission.BLUETOOTH_ADVERTISE
                 }, CONNECTIVITY_PERMISSION_REQUEST);
             } else if (android.os.Build.VERSION.SDK_INT >= 33) {
-                requestPermissions(new String[]{Manifest.permission.NEARBY_WIFI_DEVICES}, CONNECTIVITY_PERMISSION_REQUEST);
+                MainActivity.this.requestPermissions(new String[]{Manifest.permission.NEARBY_WIFI_DEVICES}, CONNECTIVITY_PERMISSION_REQUEST);
             }
         }
     }
