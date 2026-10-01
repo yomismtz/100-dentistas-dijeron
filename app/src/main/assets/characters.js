@@ -746,7 +746,7 @@ const CHARACTER_CPU_PROFILES = {
     keywords:['biofilm','cálculo','calculo','profilaxis','higiene','flúor','fluor','cepill','hilo dental','prevención','prevencion','gingiv'],
     accuracy:{focus:.91,neutral:.61,weak:.43}, delay:[850,1700]
   },
-  LA MUELA DEL JUICIO: {
+  'LA MUELA DEL JUICIO': {
     tier:'legendary', focus:[],
     keywords:[],
     accuracy:{focus:.96,neutral:.93,weak:.88}, delay:[650,1250]
