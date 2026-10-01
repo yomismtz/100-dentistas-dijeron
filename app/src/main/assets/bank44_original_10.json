@@ -3,7 +3,7 @@
     "id": "ORG10-001",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a Clase I de Angle?",
+    "q": "¿Qué hallazgos son compatibles con una Clase I de Angle?",
     "a": [
       [
         "relación molar normal",
@@ -28,7 +28,7 @@
     "id": "ORG10-002",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en Clase I de Angle?",
+    "q": "¿Qué características pueden coexistir con una relación molar Clase I?",
     "a": [
       [
         "relación molar normal",
@@ -53,7 +53,7 @@
     "id": "ORG10-003",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de Clase I de Angle?",
+    "q": "¿Qué elementos se revisan al describir una Clase I?",
     "a": [
       [
         "relación molar normal",
@@ -78,7 +78,7 @@
     "id": "ORG10-004",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a Clase I de Angle?",
+    "q": "¿Qué afirmaciones describen una Clase I en clínica?",
     "a": [
       [
         "relación molar normal",
@@ -103,7 +103,7 @@
     "id": "ORG10-005",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a Clase II de Angle?",
+    "q": "¿Qué características pueden acompañar una Clase II de Angle?",
     "a": [
       [
         "relación molar distal",
@@ -128,7 +128,7 @@
     "id": "ORG10-006",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en Clase II de Angle?",
+    "q": "¿Qué elementos deben considerarse en una Clase II?",
     "a": [
       [
         "relación molar distal",
@@ -153,7 +153,7 @@
     "id": "ORG10-007",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de Clase II de Angle?",
+    "q": "¿Qué hallazgos pueden participar en una relación Clase II?",
     "a": [
       [
         "relación molar distal",
@@ -178,7 +178,7 @@
     "id": "ORG10-008",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a Clase II de Angle?",
+    "q": "¿Qué afirmaciones son compatibles con una Clase II?",
     "a": [
       [
         "relación molar distal",
@@ -203,7 +203,7 @@
     "id": "ORG10-009",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a Clase III de Angle?",
+    "q": "¿Qué características pueden acompañar una Clase III de Angle?",
     "a": [
       [
         "relación molar mesial",
@@ -228,7 +228,7 @@
     "id": "ORG10-010",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en Clase III de Angle?",
+    "q": "¿Qué elementos deben considerarse en una Clase III?",
     "a": [
       [
         "relación molar mesial",
@@ -253,7 +253,7 @@
     "id": "ORG10-011",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de Clase III de Angle?",
+    "q": "¿Qué hallazgos pueden participar en una relación Clase III?",
     "a": [
       [
         "relación molar mesial",
@@ -278,7 +278,7 @@
     "id": "ORG10-012",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a Clase III de Angle?",
+    "q": "¿Qué afirmaciones son compatibles con una Clase III?",
     "a": [
       [
         "relación molar mesial",
@@ -303,7 +303,7 @@
     "id": "ORG10-013",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a overjet?",
+    "q": "¿Qué describe correctamente el overjet?",
     "a": [
       [
         "resalte horizontal",
@@ -328,7 +328,7 @@
     "id": "ORG10-014",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en overjet?",
+    "q": "¿Cómo se interpreta clínicamente el overjet?",
     "a": [
       [
         "resalte horizontal",
@@ -353,7 +353,7 @@
     "id": "ORG10-015",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de overjet?",
+    "q": "¿Qué elementos forman parte de la evaluación del overjet?",
     "a": [
       [
         "resalte horizontal",
@@ -378,7 +378,7 @@
     "id": "ORG10-016",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a overjet?",
+    "q": "¿Qué afirmaciones son correctas sobre el resalte horizontal?",
     "a": [
       [
         "resalte horizontal",
@@ -403,7 +403,7 @@
     "id": "ORG10-017",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a overbite?",
+    "q": "¿Qué describe correctamente el overbite?",
     "a": [
       [
         "sobremordida vertical",
@@ -428,7 +428,7 @@
     "id": "ORG10-018",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en overbite?",
+    "q": "¿Cómo se evalúa clínicamente la sobremordida vertical?",
     "a": [
       [
         "sobremordida vertical",
@@ -453,7 +453,7 @@
     "id": "ORG10-019",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de overbite?",
+    "q": "¿Qué elementos forman parte del registro de overbite?",
     "a": [
       [
         "sobremordida vertical",
@@ -478,7 +478,7 @@
     "id": "ORG10-020",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a overbite?",
+    "q": "¿Qué afirmaciones son correctas sobre la sobremordida vertical?",
     "a": [
       [
         "sobremordida vertical",
@@ -503,7 +503,7 @@
     "id": "ORG10-021",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a mordida abierta?",
+    "q": "¿Qué características definen una mordida abierta?",
     "a": [
       [
         "falta de contacto",
@@ -528,7 +528,7 @@
     "id": "ORG10-022",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en mordida abierta?",
+    "q": "¿Cómo puede describirse una mordida abierta?",
     "a": [
       [
         "falta de contacto",
@@ -553,7 +553,7 @@
     "id": "ORG10-023",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de mordida abierta?",
+    "q": "¿Qué elementos son compatibles con una mordida abierta?",
     "a": [
       [
         "falta de contacto",
@@ -578,7 +578,7 @@
     "id": "ORG10-024",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a mordida abierta?",
+    "q": "¿Qué afirmaciones son correctas sobre la mordida abierta?",
     "a": [
       [
         "falta de contacto",
@@ -603,7 +603,7 @@
     "id": "ORG10-025",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a mordida cruzada?",
+    "q": "¿Qué características puede presentar una mordida cruzada?",
     "a": [
       [
         "relación transversal invertida",
@@ -628,7 +628,7 @@
     "id": "ORG10-026",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en mordida cruzada?",
+    "q": "¿Cómo puede clasificarse clínicamente una mordida cruzada?",
     "a": [
       [
         "relación transversal invertida",
@@ -653,7 +653,7 @@
     "id": "ORG10-027",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Cuál es un elemento de mordida cruzada?",
+    "q": "¿Qué elementos deben registrarse ante una mordida cruzada?",
     "a": [
       [
         "relación transversal invertida",
@@ -678,7 +678,7 @@
     "id": "ORG10-028",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "En clínica, ¿qué pertenece a mordida cruzada?",
+    "q": "¿Qué afirmaciones son correctas sobre las mordidas cruzadas?",
     "a": [
       [
         "relación transversal invertida",
@@ -703,7 +703,7 @@
     "id": "ORG10-029",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué dato corresponde a apiñamiento?",
+    "q": "¿Qué caracteriza al apiñamiento dental?",
     "a": [
       [
         "falta de espacio",
@@ -728,7 +728,7 @@
     "id": "ORG10-030",
     "cat": "Ortodoncia",
     "difficulty": "facil",
-    "q": "¿Qué debe registrarse en apiñamiento?",
+    "q": "¿Qué hallazgos pueden acompañar al apiñamiento?",
     "a": [
       [
         "falta de espacio",
@@ -753,7 +753,7 @@
     "id": "ORG10-031",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Cuál es un elemento de apiñamiento?",
+    "q": "¿Cómo puede describirse clínicamente el apiñamiento?",
     "a": [
       [
         "falta de espacio",
@@ -778,7 +778,7 @@
     "id": "ORG10-032",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "En clínica, ¿qué pertenece a apiñamiento?",
+    "q": "¿Qué afirmaciones son correctas sobre la falta de espacio dental?",
     "a": [
       [
         "falta de espacio",
@@ -803,7 +803,7 @@
     "id": "ORG10-033",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué dato corresponde a diastema?",
+    "q": "¿Qué características corresponden a un diastema?",
     "a": [
       [
         "espacio interdental",
@@ -828,7 +828,7 @@
     "id": "ORG10-034",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué debe registrarse en diastema?",
+    "q": "¿Cómo puede clasificarse un diastema?",
     "a": [
       [
         "espacio interdental",
@@ -853,7 +853,7 @@
     "id": "ORG10-035",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Cuál es un elemento de diastema?",
+    "q": "¿Qué afirmaciones son correctas sobre los espacios interdentales?",
     "a": [
       [
         "espacio interdental",
@@ -878,7 +878,7 @@
     "id": "ORG10-036",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "En clínica, ¿qué pertenece a diastema?",
+    "q": "¿Qué debe considerarse al valorar un diastema?",
     "a": [
       [
         "espacio interdental",
@@ -903,7 +903,7 @@
     "id": "ORG10-037",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué dato corresponde a curva de Spee?",
+    "q": "¿Qué describe la curva de Spee?",
     "a": [
       [
         "curvatura sagital",
@@ -928,7 +928,7 @@
     "id": "ORG10-038",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué debe registrarse en curva de Spee?",
+    "q": "¿Cómo se caracteriza la curva de Spee?",
     "a": [
       [
         "curvatura sagital",
@@ -953,7 +953,7 @@
     "id": "ORG10-039",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Cuál es un elemento de curva de Spee?",
+    "q": "¿Qué cambios puede presentar la curva de Spee?",
     "a": [
       [
         "curvatura sagital",
@@ -978,7 +978,7 @@
     "id": "ORG10-040",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "En clínica, ¿qué pertenece a curva de Spee?",
+    "q": "¿Qué afirmaciones son correctas sobre esta curvatura oclusal?",
     "a": [
       [
         "curvatura sagital",
@@ -1003,7 +1003,7 @@
     "id": "ORG10-041",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué dato corresponde a curva de Wilson?",
+    "q": "¿Qué describe la curva de Wilson?",
     "a": [
       [
         "curvatura transversal",
@@ -1028,7 +1028,7 @@
     "id": "ORG10-042",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué debe registrarse en curva de Wilson?",
+    "q": "¿Qué elementos se relacionan con la curva de Wilson?",
     "a": [
       [
         "curvatura transversal",
@@ -1053,7 +1053,7 @@
     "id": "ORG10-043",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Cuál es un elemento de curva de Wilson?",
+    "q": "¿Cómo se caracteriza la curvatura transversal posterior?",
     "a": [
       [
         "curvatura transversal",
@@ -1078,7 +1078,7 @@
     "id": "ORG10-044",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "En clínica, ¿qué pertenece a curva de Wilson?",
+    "q": "¿Qué afirmaciones son correctas sobre la curva de Wilson?",
     "a": [
       [
         "curvatura transversal",
@@ -1103,7 +1103,7 @@
     "id": "ORG10-045",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué dato corresponde a línea media?",
+    "q": "¿Qué debe evaluarse al estudiar las líneas medias dentales?",
     "a": [
       [
         "coincidencia",
@@ -1128,7 +1128,7 @@
     "id": "ORG10-046",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué debe registrarse en línea media?",
+    "q": "¿Qué elementos forman parte del análisis de la línea media?",
     "a": [
       [
         "coincidencia",
@@ -1153,7 +1153,7 @@
     "id": "ORG10-047",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Cuál es un elemento de línea media?",
+    "q": "¿Cómo se registra una discrepancia de líneas medias?",
     "a": [
       [
         "coincidencia",
@@ -1178,7 +1178,7 @@
     "id": "ORG10-048",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "En clínica, ¿qué pertenece a línea media?",
+    "q": "¿Qué afirmaciones son correctas sobre las líneas medias?",
     "a": [
       [
         "coincidencia",
@@ -1203,7 +1203,7 @@
     "id": "ORG10-049",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué dato corresponde a SNA?",
+    "q": "¿Qué información aporta el SNA?",
     "a": [
       [
         "posición maxilar",
@@ -1228,7 +1228,7 @@
     "id": "ORG10-050",
     "cat": "Ortodoncia",
     "difficulty": "medio",
-    "q": "¿Qué debe registrarse en SNA?",
+    "q": "¿Qué elementos intervienen en la interpretación del SNA?",
     "a": [
       [
         "posición maxilar",
@@ -1253,7 +1253,7 @@
     "id": "ORG10-051",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Cuál es un elemento de SNA?",
+    "q": "¿Cómo se utiliza el SNA en cefalometría?",
     "a": [
       [
         "posición maxilar",
@@ -1278,7 +1278,7 @@
     "id": "ORG10-052",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "En clínica, ¿qué pertenece a SNA?",
+    "q": "¿Qué afirmaciones son correctas sobre el ángulo SNA?",
     "a": [
       [
         "posición maxilar",
@@ -1303,7 +1303,7 @@
     "id": "ORG10-053",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué dato corresponde a SNB?",
+    "q": "¿Qué información aporta el SNB?",
     "a": [
       [
         "posición mandibular",
@@ -1328,7 +1328,7 @@
     "id": "ORG10-054",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué debe registrarse en SNB?",
+    "q": "¿Qué elementos intervienen en la interpretación del SNB?",
     "a": [
       [
         "posición mandibular",
@@ -1353,7 +1353,7 @@
     "id": "ORG10-055",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Cuál es un elemento de SNB?",
+    "q": "¿Cómo se utiliza el SNB en cefalometría?",
     "a": [
       [
         "posición mandibular",
@@ -1378,7 +1378,7 @@
     "id": "ORG10-056",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "En clínica, ¿qué pertenece a SNB?",
+    "q": "¿Qué afirmaciones son correctas sobre el ángulo SNB?",
     "a": [
       [
         "posición mandibular",
@@ -1403,7 +1403,7 @@
     "id": "ORG10-057",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué dato corresponde a ANB?",
+    "q": "¿Qué información aporta el ANB?",
     "a": [
       [
         "relación sagital",
@@ -1428,7 +1428,7 @@
     "id": "ORG10-058",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué debe registrarse en ANB?",
+    "q": "¿Cómo se interpreta el ángulo ANB?",
     "a": [
       [
         "relación sagital",
@@ -1453,7 +1453,7 @@
     "id": "ORG10-059",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Cuál es un elemento de ANB?",
+    "q": "¿Qué elementos deben considerarse al usar ANB?",
     "a": [
       [
         "relación sagital",
@@ -1478,7 +1478,7 @@
     "id": "ORG10-060",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "En clínica, ¿qué pertenece a ANB?",
+    "q": "¿Qué afirmaciones son correctas sobre la relación esquelética sagital?",
     "a": [
       [
         "relación sagital",
@@ -1503,7 +1503,7 @@
     "id": "ORG10-061",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué dato corresponde a SN-GoGn?",
+    "q": "¿Qué información aporta el ángulo SN-GoGn?",
     "a": [
       [
         "patrón vertical",
@@ -1528,7 +1528,7 @@
     "id": "ORG10-062",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué debe registrarse en SN-GoGn?",
+    "q": "¿Cómo se utiliza SN-GoGn en cefalometría?",
     "a": [
       [
         "patrón vertical",
@@ -1553,7 +1553,7 @@
     "id": "ORG10-063",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Cuál es un elemento de SN-GoGn?",
+    "q": "¿Qué elementos se relacionan con el patrón vertical mandibular?",
     "a": [
       [
         "patrón vertical",
@@ -1578,7 +1578,7 @@
     "id": "ORG10-064",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "En clínica, ¿qué pertenece a SN-GoGn?",
+    "q": "¿Qué afirmaciones son correctas sobre SN-GoGn?",
     "a": [
       [
         "patrón vertical",
@@ -1603,7 +1603,7 @@
     "id": "ORG10-065",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué dato corresponde a cefalometría?",
+    "q": "¿Qué caracteriza al análisis de Wits?",
     "a": [
       [
         "ángulos",
@@ -1628,7 +1628,7 @@
     "id": "ORG10-066",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué debe registrarse en cefalometría?",
+    "q": "¿Cómo se realiza el análisis de Wits?",
     "a": [
       [
         "ángulos",
@@ -1653,7 +1653,7 @@
     "id": "ORG10-067",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Cuál es un elemento de cefalometría?",
+    "q": "¿Qué información aporta Wits en ortodoncia?",
     "a": [
       [
         "ángulos",
@@ -1678,7 +1678,7 @@
     "id": "ORG10-068",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "En clínica, ¿qué pertenece a cefalometría?",
+    "q": "¿Qué afirmaciones son correctas sobre Wits?",
     "a": [
       [
         "ángulos",
@@ -1703,7 +1703,7 @@
     "id": "ORG10-069",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué dato corresponde a crecimiento mandibular?",
+    "q": "¿Qué puede incluir un análisis cefalométrico?",
     "a": [
       [
         "remodelación",
@@ -1728,7 +1728,7 @@
     "id": "ORG10-070",
     "cat": "Ortodoncia",
     "difficulty": "dificil",
-    "q": "¿Qué debe registrarse en crecimiento mandibular?",
+    "q": "¿Qué variables se estudian en cefalometría?",
     "a": [
       [
         "remodelación",
@@ -1753,7 +1753,7 @@
     "id": "ORG10-071",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de crecimiento mandibular?",
+    "q": "¿Qué información puede aportar una cefalometría lateral?",
     "a": [
       [
         "remodelación",
@@ -1778,7 +1778,7 @@
     "id": "ORG10-072",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a crecimiento mandibular?",
+    "q": "¿Qué afirmaciones son correctas sobre el análisis cefalométrico?",
     "a": [
       [
         "remodelación",
@@ -1803,7 +1803,7 @@
     "id": "ORG10-073",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a expansión maxilar?",
+    "q": "¿Qué procesos participan en el crecimiento mandibular?",
     "a": [
       [
         "aumento transversal",
@@ -1828,7 +1828,7 @@
     "id": "ORG10-074",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en expansión maxilar?",
+    "q": "¿Qué debe considerarse al valorar el crecimiento mandibular?",
     "a": [
       [
         "aumento transversal",
@@ -1853,7 +1853,7 @@
     "id": "ORG10-075",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de expansión maxilar?",
+    "q": "¿Qué fenómenos pueden modificar la posición mandibular durante el crecimiento?",
     "a": [
       [
         "aumento transversal",
@@ -1878,7 +1878,7 @@
     "id": "ORG10-076",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a expansión maxilar?",
+    "q": "¿Qué afirmaciones son correctas sobre el crecimiento mandibular?",
     "a": [
       [
         "aumento transversal",
@@ -1903,7 +1903,7 @@
     "id": "ORG10-077",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a brackets?",
+    "q": "¿Qué procesos participan en el crecimiento maxilar?",
     "a": [
       [
         "aparatología fija",
@@ -1928,7 +1928,7 @@
     "id": "ORG10-078",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en brackets?",
+    "q": "¿Qué debe considerarse al valorar el crecimiento del maxilar?",
     "a": [
       [
         "aparatología fija",
@@ -1953,7 +1953,7 @@
     "id": "ORG10-079",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de brackets?",
+    "q": "¿Qué mecanismos contribuyen a los cambios maxilares durante el desarrollo?",
     "a": [
       [
         "aparatología fija",
@@ -1978,7 +1978,7 @@
     "id": "ORG10-080",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a brackets?",
+    "q": "¿Qué afirmaciones son correctas sobre el crecimiento maxilar?",
     "a": [
       [
         "aparatología fija",
@@ -2003,7 +2003,7 @@
     "id": "ORG10-081",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a alineación?",
+    "q": "¿Qué debe considerarse al realizar una expansión maxilar?",
     "a": [
       [
         "nivelación",
@@ -2028,7 +2028,7 @@
     "id": "ORG10-082",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en alineación?",
+    "q": "¿Qué efectos puede producir la expansión transversal?",
     "a": [
       [
         "nivelación",
@@ -2053,7 +2053,7 @@
     "id": "ORG10-083",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de alineación?",
+    "q": "¿Qué afirmaciones son correctas sobre la expansión maxilar?",
     "a": [
       [
         "nivelación",
@@ -2078,7 +2078,7 @@
     "id": "ORG10-084",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a alineación?",
+    "q": "¿Qué aspectos deben evaluarse antes de indicar expansión?",
     "a": [
       [
         "nivelación",
@@ -2103,7 +2103,7 @@
     "id": "ORG10-085",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a anclaje?",
+    "q": "¿Qué componentes pueden formar parte de una aparatología fija?",
     "a": [
       [
         "resistencia al movimiento",
@@ -2128,7 +2128,7 @@
     "id": "ORG10-086",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en anclaje?",
+    "q": "¿Qué elementos son habituales en la aparatología ortodóncica fija?",
     "a": [
       [
         "resistencia al movimiento",
@@ -2153,7 +2153,7 @@
     "id": "ORG10-087",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de anclaje?",
+    "q": "¿Qué componentes pueden encontrarse en un sistema de brackets?",
     "a": [
       [
         "resistencia al movimiento",
@@ -2178,7 +2178,7 @@
     "id": "ORG10-088",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a anclaje?",
+    "q": "¿Qué afirmaciones son correctas sobre la aparatología fija?",
     "a": [
       [
         "resistencia al movimiento",
@@ -2203,7 +2203,7 @@
     "id": "ORG10-089",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a retención?",
+    "q": "¿Qué objetivos pueden formar parte de la fase de alineación y nivelación?",
     "a": [
       [
         "mantener resultado",
@@ -2228,7 +2228,7 @@
     "id": "ORG10-090",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en retención?",
+    "q": "¿Qué se busca durante la alineación ortodóncica?",
     "a": [
       [
         "mantener resultado",
@@ -2253,7 +2253,7 @@
     "id": "ORG10-091",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de retención?",
+    "q": "¿Qué elementos se controlan durante la fase inicial con arcos?",
     "a": [
       [
         "mantener resultado",
@@ -2278,7 +2278,7 @@
     "id": "ORG10-092",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a retención?",
+    "q": "¿Qué afirmaciones son correctas sobre alineación y nivelación?",
     "a": [
       [
         "mantener resultado",
@@ -2303,7 +2303,7 @@
     "id": "ORG10-093",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a ortodoncia interceptiva?",
+    "q": "¿Qué describe el anclaje ortodóncico?",
     "a": [
       [
         "intervención temprana",
@@ -2328,7 +2328,7 @@
     "id": "ORG10-094",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en ortodoncia interceptiva?",
+    "q": "¿Qué elementos pueden aportar anclaje durante un tratamiento?",
     "a": [
       [
         "intervención temprana",
@@ -2353,7 +2353,7 @@
     "id": "ORG10-095",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de ortodoncia interceptiva?",
+    "q": "¿Cómo se controla el anclaje en biomecánica ortodóncica?",
     "a": [
       [
         "intervención temprana",
@@ -2378,7 +2378,7 @@
     "id": "ORG10-096",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a ortodoncia interceptiva?",
+    "q": "¿Qué afirmaciones son correctas sobre el anclaje?",
     "a": [
       [
         "intervención temprana",
@@ -2403,7 +2403,7 @@
     "id": "ORG10-097",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué dato corresponde a extracción ortodóncica?",
+    "q": "¿Qué objetivos y medios corresponden a la retención ortodóncica?",
     "a": [
       [
         "crear espacio",
@@ -2428,7 +2428,7 @@
     "id": "ORG10-098",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Qué debe registrarse en extracción ortodóncica?",
+    "q": "¿Qué debe considerarse después de la fase activa?",
     "a": [
       [
         "crear espacio",
@@ -2453,7 +2453,7 @@
     "id": "ORG10-099",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "¿Cuál es un elemento de extracción ortodóncica?",
+    "q": "¿Qué elementos forman parte de la fase de retención?",
     "a": [
       [
         "crear espacio",
@@ -2478,7 +2478,7 @@
     "id": "ORG10-100",
     "cat": "Ortodoncia",
     "difficulty": "extremo",
-    "q": "En clínica, ¿qué pertenece a extracción ortodóncica?",
+    "q": "¿Qué afirmaciones son correctas sobre la estabilidad después de ortodoncia?",
     "a": [
       [
         "crear espacio",
