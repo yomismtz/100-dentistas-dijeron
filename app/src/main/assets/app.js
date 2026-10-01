@@ -150,7 +150,7 @@ function areaForQuestion(q) {
 }
 
 function availableAreas() {
-  const canonicalAreas = ["Psicología infantil","Fisiología","Oclusión","Desarrollo de la oclusión","Desarrollo craneofacial","Nomenclatura y etimología médica","Hábitos y parafunciones","Laboratorio de ortodoncia y ortopedia","Realización del expediente clínico","Ortodoncia","Ortopedia maxilar","Endodoncia","Cirugía bucal","Periodoncia","Implantología","Embriología dental","Operatoria dental","Anestesia dental","Anatomía dental","Cariología","Odontopediatría","Prótesis dental","Radiología oral y maxilofacial","Patología bucal","Medicina bucal","Farmacología odontológica","Materiales dentales","Prótesis fija","Prótesis removible","Prótesis total","Rehabilitación oral","Articulación temporomandibular y trastornos temporomandibulares","Odontología preventiva","Salud pública y odontología comunitaria","Microbiología oral","Infecciones odontogénicas","Urgencias médicas en odontología","Traumatología dental","Odontología geriátrica","Odontología para pacientes con necesidades especiales","Odontología forense","Bioética y legislación odontológica","Fotografía y documentación clínica odontológica","Oclusión funcional y ajuste oclusal avanzado"];
+  const canonicalAreas = ["Psicología infantil","Fisiología","Oclusión","Desarrollo de la oclusión","Desarrollo craneofacial","Nomenclatura y etimología médica","Hábitos y parafunciones","Laboratorio de ortodoncia y ortopedia","Realización del expediente clínico","Ortodoncia","Ortopedia maxilar","Endodoncia","Cirugía bucal","Periodoncia","Implantología","Embriología dental","Operatoria dental","Anestesia dental","Anatomía dental","Cariología","Odontopediatría","Prótesis dental","Odontología preventiva","Radiología oral y maxilofacial","Patología bucal","Medicina bucal","Farmacología odontológica","Materiales dentales","Prótesis fija","Prótesis removible","Prótesis total","Rehabilitación oral","Articulación temporomandibular y trastornos temporomandibulares","Odontología estética","Salud pública y odontología comunitaria","Microbiología oral","Infecciones odontogénicas","Urgencias médicas en odontología","Traumatología dental","Odontología geriátrica","Odontología para pacientes con necesidades especiales","Odontología forense","Bioética y legislación odontológica","Fotografía y documentación clínica odontológica","Oclusión funcional y ajuste oclusal avanzado"];
   const loaded = new Set(questionPool.map(q => areaForQuestion(q)).filter(Boolean));
   return canonicalAreas.filter(area => loaded.has(area));
 }
@@ -889,12 +889,13 @@ function showAreaSelector(mode) {
 function showDifficultySelector() {
   openModal(`
     <h2>🎓 DIFICULTAD</h2>
-    <p>Elige la dificultad general. La especialidad de tu personaje —y la del rival especialista— siempre se juega en nivel avanzado.</p>
+    <p>Elige la dificultad general. Para desbloquear al personaje de una especialidad, la ronda final debe superarse en <b>SÚPER DIFÍCIL</b>.</p>
     <div class="menuStack">
       <button data-difficulty="basic">🟢 BÁSICO</button>
       <button data-difficulty="intermediate">🟡 INTERMEDIO</button>
       <button data-difficulty="advanced">🔴 AVANZADO</button>
       <button data-difficulty="extreme">⚫ EXTREMO</button>
+      <button data-difficulty="super">🟣 SÚPER DIFÍCIL</button>
       <button data-difficulty="mixed">🎲 MIXTO</button>
     </div>`);
   document.querySelectorAll('[data-difficulty]').forEach(btn => btn.onclick = () => {
@@ -940,7 +941,7 @@ function showTeamSetup() {
 
 function showCpuSetup() {
   const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
-  const fallback = ['SOFÍA','VALERIA','SANTIAGO','ALEX','MATEO','LUCÍA','DIEGO','RENATA','CARLOS','MÍA','EMMA','AURORA','DON PÉREZ','NOVA'];
+  const fallback = ['SOFÍA','VALERIA','SANTIAGO','ALEX','MATEO','LUCÍA','DIEGO','RENATA','CARLOS','MÍA','EMMA','EL RATÓN DE LOS DIENTES','LA MUELA DEL JUICIO','SANTA APOLONIA','EL DIOS DE LOS DIENTES','NOVA'];
   const names = chars.length ? chars.map(c=>c.name) : fallback;
   openModal(`
     <h2>🤖 CONTRA LA COMPUTADORA</h2>
@@ -976,7 +977,7 @@ function startFinalChallenge(){
       const unlocked=(result.unlocked||[]).map(name=>chars.find(ch=>ch.name===name)).filter(Boolean);
       const unlockMsg=unlocked.length
         ? `<p>🔓 <b>DESBLOQUEADO:</b> ${unlocked.map(ch=>ch.specialty).join(' · ')}</p>`
-        : (total>400&&selectedAreas.length!==1?'<p>Para desbloquear un especialista con más de 400 puntos, juega la final con un solo apartado seleccionado.</p>':'');
+        : (total>=300&&(gameConfig.difficulty!=='super'||selectedAreas.length!==1)?'<p>Para desbloquear al especialista necesitas 300 puntos o más, SÚPER DIFÍCIL y un solo apartado seleccionado.</p>':'');
       openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
       $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};$('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};return;
     }
