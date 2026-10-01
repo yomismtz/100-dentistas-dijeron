@@ -9,7 +9,7 @@ from pathlib import Path
 
 ASSETS=Path("app/src/main/assets")
 BANK_FILES=sorted(ASSETS.glob("bank44_*.json"))
-CURIOSITY=ASSETS/"curiosidades_odontologia_300.json"
+CURIOSITY_FILES=sorted(ASSETS.glob("curiosidades_odontologia_extremo_*.json"))
 REPORT=Path("build/question_audit_4700.json")
 REPORT.parent.mkdir(parents=True,exist_ok=True)
 
@@ -29,7 +29,7 @@ def words(s):
 summary={
     "target":{"academic":4400,"curiosities":300,"total":4700},
     "academic":{"files":len(BANK_FILES),"questions":0,"categories":{}},
-    "curiosities":{"present":CURIOSITY.exists(),"questions":0},
+    "curiosities":{"present":bool(CURIOSITY_FILES),"questions":0},
     "answers":{"total":0,"over_3_words":0,"with_aliases":0},
     "issues":{"structural":[],"long_answer_examples":[],"placeholder_examples":[]},
     "repetition":{"question_text_duplicates":0,"answer_set_duplicates":0,"most_repeated_answers":[]}
@@ -96,12 +96,23 @@ for path in BANK_FILES:
         summary["issues"]["structural"].append(path.name+" no contiene lista"); continue
     audit_items(data,path.name)
 
-if CURIOSITY.exists():
-    try:
-        data=json.loads(CURIOSITY.read_text(encoding="utf-8"))
-        if isinstance(data,list): audit_items(data,CURIOSITY.name,True)
-        else: summary["issues"]["structural"].append(CURIOSITY.name+" no contiene lista")
-    except Exception as e: summary["issues"]["structural"].append(f"{CURIOSITY.name} JSON inválido: {e}")
+if CURIOSITY_FILES:
+    for path in CURIOSITY_FILES:
+        try:
+            data=json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(data,list):
+                weights=[40,25,15,12,8]
+                normalized=[]
+                for q in data:
+                    if isinstance(q,dict) and isinstance(q.get("a"),list) and len(q["a"])==5:
+                        qq=dict(q)
+                        qq["a"]=[[str(a),weights[i]] for i,a in enumerate(q["a"])]
+                        normalized.append(qq)
+                audit_items(normalized,path.name,True)
+            else:
+                summary["issues"]["structural"].append(path.name+" no contiene lista")
+        except Exception as e:
+            summary["issues"]["structural"].append(f"{path.name} JSON inválido: {e}")
 
 summary["academic"]["categories"]={k:dict(v) for k,v in sorted(cat_stats.items())}
 summary["repetition"]["question_text_duplicates"]=sum(v-1 for v in seen_q.values() if v>1)
@@ -111,6 +122,7 @@ summary["answers"]["over_3_words_percent"]=round(100*summary["answers"]["over_3_
 summary["status"]={
     "academic_count_ok":summary["academic"]["questions"]==4400,
     "academic_categories_ok":len(cat_stats)==44,
+    "curiosities_files_ok":len(CURIOSITY_FILES)==6,
     "curiosities_count_ok":summary["curiosities"]["questions"]==300,
     "total_count_ok":summary["academic"]["questions"]+summary["curiosities"]["questions"]==4700,
     "short_answers_ok":summary["answers"]["over_3_words"]==0
