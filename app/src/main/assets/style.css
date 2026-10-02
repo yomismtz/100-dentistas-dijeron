@@ -461,3 +461,40 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
   #game:not(.hidden) .answerEntry{margin:3px auto 5px}
   #game:not(.hidden) #answerMic{min-height:48px}
 }
+
+
+/* Careo como ventana de frente a frente */
+#game:not(.hidden) #faceoff{
+  position:fixed!important;
+  inset:0!important;
+  z-index:55!important;
+  width:auto!important;
+  min-height:100vh!important;
+  box-sizing:border-box;
+  background:radial-gradient(circle at 50% 38%,#123e55f5 0,#061923f8 58%,#02090dfb 100%);
+  border:0;
+  border-radius:0;
+  box-shadow:inset 0 0 0 5px #d9a83f,inset 0 0 70px #000;
+}
+#game:not(.hidden) .faceoffQuestion{
+  width:min(1050px,88vw);
+  padding:clamp(12px,1.5vw,22px);
+  border:2px solid #d8b467;
+  border-radius:18px;
+  background:#03151ee8;
+  color:#fff;
+  font-size:clamp(22px,3.2vw,44px);
+  line-height:1.12;
+  font-weight:900;
+  box-shadow:0 10px 35px #0009;
+}
+@media(max-height:520px) and (orientation:landscape){
+  #game:not(.hidden) #faceoff{
+    min-height:100vh!important;
+  }
+  #game:not(.hidden) .faceoffQuestion{
+    width:min(1000px,88vw);
+    font-size:clamp(18px,2.6vw,30px);
+    padding:8px 14px;
+  }
+}
