@@ -296,6 +296,49 @@ function saveState() {
   localStorage.setItem('dentistas-settings', JSON.stringify({teamNames}));
 }
 
+const GAME_SAVE_KEY = 'dentistas-active-game-v7';
+
+function saveActiveGame() {
+  try {
+    if (!gameVisible() || phase === 'over' || !questions.length) return;
+    const snapshot = {
+      version: 7,
+      savedAt: Date.now(),
+      gameConfig: JSON.parse(JSON.stringify(gameConfig)),
+      questions: JSON.parse(JSON.stringify(questions)),
+      roundIndex,
+      revealed: [...revealed],
+      strikes,
+      bank,
+      scores: [...scores],
+      teamNames: [...teamNames],
+      awardHistory: [...awardHistory],
+      currentTeam,
+      phase,
+      timerRemaining,
+      faceoffDoneThisRound
+    };
+    localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(snapshot));
+  } catch (_) {}
+}
+
+function clearActiveGame() {
+  try { localStorage.removeItem(GAME_SAVE_KEY); } catch (_) {}
+}
+
+function readActiveGame() {
+  try {
+    const s = JSON.parse(localStorage.getItem(GAME_SAVE_KEY) || 'null');
+    if (!s || s.version !== 7 || !Array.isArray(s.questions) || !s.questions.length) return null;
+    if (s.roundIndex < 0 || s.roundIndex >= s.questions.length) return null;
+    if (!Array.isArray(s.scores) || s.scores.length !== 2) return null;
+    if (!Array.isArray(s.revealed)) return null;
+    return s;
+  } catch (_) {
+    return null;
+  }
+}
+
 function loadState() {
   try {
     const s = JSON.parse(localStorage.getItem('dentistas-settings') || '{}');
@@ -303,6 +346,55 @@ function loadState() {
       teamNames = s.teamNames.map(String);
     }
   } catch (_) {}
+}
+
+function resumeActiveGame(snapshot) {
+  if (!snapshot) return;
+  gameConfig = {...gameConfig, ...(snapshot.gameConfig || {})};
+  questions = snapshot.questions;
+  roundIndex = snapshot.roundIndex;
+  revealed = [...snapshot.revealed];
+  strikes = Number(snapshot.strikes) || 0;
+  bank = Number(snapshot.bank) || 0;
+  scores = snapshot.scores.map(Number);
+  teamNames = snapshot.teamNames?.length === 2 ? snapshot.teamNames.map(String) : teamNames;
+  awardHistory = Array.isArray(snapshot.awardHistory) ? snapshot.awardHistory : [];
+  currentTeam = Number(snapshot.currentTeam) || 0;
+  phase = snapshot.phase === 'steal' ? 'steal' : 'play';
+  timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
+  faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
+
+  $('#home').classList.add('hidden');
+  $('#game').classList.remove('hidden');
+  updateScoreUI();
+  showRound(false);
+  updateTimerUI();
+  setTimeout(() => {
+    if (!gameVisible() || phase === 'over') return;
+    if (phase === 'steal') {
+      startFaceoff();
+    } else if (faceoffDoneThisRound) {
+      $('#answerEntry')?.classList.remove('hidden');
+      startTimer(timerRemaining);
+      if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+    } else {
+      beginTurnAfterQuestion();
+    }
+  }, 120);
+}
+
+function offerResumeGame() {
+  const snapshot = readActiveGame();
+  if (!snapshot || !questionPool.length) return;
+  const minutes = Math.max(1, Math.round((Date.now() - snapshot.savedAt) / 60000));
+  const message = isEn()
+    ? `A saved game was found from about ${minutes} minute${minutes === 1 ? '' : 's'} ago. Continue it?`
+    : `Se encontró una partida guardada de hace aproximadamente ${minutes} minuto${minutes === 1 ? '' : 's'}. ¿Continuar?`;
+  if (confirm(message)) {
+    resumeActiveGame(snapshot);
+  } else {
+    clearActiveGame();
+  }
 }
 
 function shuffle(items) {
