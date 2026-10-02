@@ -1350,21 +1350,24 @@ function showHelp() {
 
 function showMenu() {
   openModal(isEn() ? `
-    <h2>Menu</h2>
+    <h2>Game Menu</h2>
     <div class="menuStack">
       <button id="mHelp">Instructions</button>
       <button id="mNew">New random game</button>
+      <button id="mPresenter">Presenter controls</button>
       <button id="mHome">Home</button>
     </div>`
   : `
-    <h2>Menú</h2>
+    <h2>Menú del juego</h2>
     <div class="menuStack">
       <button id="mHelp">Instrucciones</button>
       <button id="mNew">Nueva partida aleatoria</button>
+      <button id="mPresenter">Controles del moderador</button>
       <button id="mHome">Portada</button>
     </div>`);
 
   $('#mHelp').onclick = showHelp;
+  $('#mPresenter').onclick = showPresenterControls;
   $('#mNew').onclick = () => {
     const msg = isEn() ? 'End this game and draw 8 new questions?' : '¿Terminar esta partida y sortear 8 preguntas nuevas?';
     if (confirm(msg)) {
@@ -1378,6 +1381,50 @@ function showMenu() {
     stopGameAudio();
     $('#game').classList.add('hidden');
     $('#home').classList.remove('hidden');
+  };
+}
+
+function showPresenterControls() {
+  openModal(isEn() ? `
+    <h2>Presenter controls</h2>
+    <div class="menuStack presenterMenu">
+      <button id="pRepeat">🔊 Repeat question</button>
+      <button id="pReveal">👁 Reveal all answers</button>
+      <button id="pPause">⏸ Pause / resume</button>
+      <button id="pError">✖ Add strike</button>
+    </div>`
+  : `
+    <h2>Controles del moderador</h2>
+    <div class="menuStack presenterMenu">
+      <button id="pRepeat">🔊 Repetir pregunta</button>
+      <button id="pReveal">👁 Revelar respuestas</button>
+      <button id="pPause">⏸ Pausar / continuar</button>
+      <button id="pError">✖ Añadir error</button>
+    </div>`);
+
+  $('#pRepeat').onclick = () => {
+    closeModal(false);
+    const q = questions[roundIndex];
+    if (q) narrate(qText(q), {lang:qVoiceLang(q), rate:.9});
+  };
+  $('#pReveal').onclick = () => {
+    closeModal(false);
+    revealRemainingAndNarrate(() => {
+      if (phase !== 'over') beginTurnAfterQuestion();
+    });
+  };
+  $('#pPause').onclick = () => {
+    if (timerHandle) {
+      stopTimer();
+      $('#pPause').textContent = isEn() ? '▶ Resume' : '▶ Continuar';
+    } else {
+      startTimer(Math.max(1,timerRemaining));
+      $('#pPause').textContent = isEn() ? '⏸ Pause' : '⏸ Pausar';
+    }
+  };
+  $('#pError').onclick = () => {
+    closeModal(false);
+    addStrike('presenter');
   };
 }
 
