@@ -1548,17 +1548,19 @@ function startFinalChallenge(){
 
   const finish = (timeout = false) => {
     if(finalResolving) return;
-    finalResolving = true;
-    stopFinalTimer();
 
     const q = pool[currentPoolIndex];
     const txt = timeout ? '' : String($('#finalAnswer')?.value || '').trim();
 
-    if(isSkipCommand(txt)){
+    // PASO/SKIP/SKID/NEXT debe entrar al flujo de pausa antes de activar
+    // el guard de resolución; de lo contrario skipCurrent() sería bloqueado.
+    if(!timeout && isSkipCommand(txt)){
       skipCurrent();
       return;
     }
 
+    finalResolving = true;
+    stopFinalTimer();
     resolveNormalAnswer(q, txt, timeout);
   };
 
