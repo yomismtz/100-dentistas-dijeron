@@ -916,10 +916,11 @@ function showRoundTransition() {
   overlay.innerHTML = `<div class="roundTransitionCard"><span>${lang === 'en' ? 'ROUND' : 'RONDA'} ${roundIndex + 1}</span><strong>×${mult}</strong><small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small></div>`;
   document.body.appendChild(overlay);
   gameSound('transition');
-  narrate(`${tx('round')} ${roundIndex + 1}. ${mult} ${tx('points')}.`, {rate:.92});
+  // La pregunta se narra inmediatamente después: no superponer la voz de "Ronda"
+  // con la narración de la pregunta. La transición es solo visual y muy breve.
   clearTimeout(roundTransitionHandle);
-  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 700);
-  setTimeout(() => overlay.remove(), 1050);
+  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 300);
+  setTimeout(() => overlay.remove(), 520);
 }
 
 function showRound(reset = true) {
