@@ -80,9 +80,6 @@ const CHARACTERS = [
   { name:'SANTA APOLONIA', specialty:'SANTA APOLONIA', category:null, role:'Patrona de la Odontología', icon:'🕊️', image:'characters/49_santa_apolonia.png', tone:'legendary-gold', rarity:'LEGENDARIO',
     strengths:['Historia dental','Protección','Sabiduría'], weaknesses:['Desbloqueo avanzado'], power:'LEGADO DE APOLONIA', tool:'Palma de mártir',
     stats:[['Sabiduría',5],['Historia',5],['Protección',5],['Conocimiento',5],['Prestigio',5]] },
-  { name:'EL HADA DE LOS DIENTES', specialty:'EL HADA DE LOS DIENTES', category:null, role:'La Guardiana de las Rondas Rápidas', icon:'🧚', image:'characters/aurora_hada_dientes.webp', tone:'legendary-mint', rarity:'LEGENDARIO',
-    strengths:['Velocidad','Magia dental','Rondas rápidas'], weaknesses:['Desbloqueo avanzado'], power:'MAGIA DEL HADA', tool:'Varita dental',
-    stats:[['Velocidad',5],['Estrategia',5],['Conocimiento',5],['Magia',5],['Precisión',5]] },
   { name:'EL SUPERDIENTE', specialty:'EL SUPERDIENTE', category:null, role:'La Leyenda Final', icon:'🦸', image:'characters/50_dios_de_los_dientes.png', tone:'legendary-gold', rarity:'MÍTICO',
     strengths:['Todas las áreas','Dominio total','Juego completo'], weaknesses:['Solo para quien complete todos los juegos'], power:'DOMINIO ABSOLUTO', tool:'Molar de oro',
     stats:[['Conocimiento',5],['Diagnóstico',5],['Precisión',5],['Velocidad',5],['Complejidad',5]] }
@@ -95,7 +92,6 @@ const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v2';
 const FINAL_PROGRESS_KEY = 'dentistas-final-progress-v2';
 const FINAL_UNLOCK_KEY = 'dentistas-final-unlocks-v2';
 const MUELA_QUICK_WINS = 5;
-const HADA_QUICK_WINS = 10;
 const SANTA_QUICK_WINS = 30;
 
 function loadCharacterProgress(){try{return JSON.parse(localStorage.getItem(CHARACTER_PROGRESS_KEY)||'{}')||{};}catch(_){return {};}}
@@ -141,7 +137,6 @@ function recordFinalResult({score=0,difficulty='',area='',legendary=false}={}){
   };
   unlockIfEligible('EL RATÓN DE LOS DIENTES', p.curiositiesWins>=1);
   unlockIfEligible('LA MUELA DEL JUICIO', p.wins>=MUELA_QUICK_WINS);
-  unlockIfEligible('EL HADA DE LOS DIENTES', p.wins>=HADA_QUICK_WINS);
   unlockIfEligible('SANTA APOLONIA', p.wins>=SANTA_QUICK_WINS);
   unlockIfEligible('EL SUPERDIENTE', unlockedSpecialistCount()>=45);
   return {progress:p,unlocked:[...new Set(unlocked)]};
@@ -160,7 +155,6 @@ function characterUnlocked(character){
   const fp=loadFinalProgress();
   if(character.name==='EL RATÓN DE LOS DIENTES') return fp.curiositiesWins>=1;
   if(character.name==='LA MUELA DEL JUICIO') return fp.wins>=MUELA_QUICK_WINS;
-  if(character.name==='EL HADA DE LOS DIENTES') return fp.wins>=HADA_QUICK_WINS;
   if(character.name==='SANTA APOLONIA') return fp.wins>=SANTA_QUICK_WINS;
   if(character.name==='EL SUPERDIENTE') return unlockedSpecialistCount()>=45;
   return false;
@@ -171,7 +165,6 @@ function characterUnlockLabel(character){
   if(character.rarity==='ESPECIALISTA') return 'Supera 300 puntos en la ronda final de '+character.category+' en SÚPER DIFÍCIL';
   if(character.name==='EL RATÓN DE LOS DIENTES') return 'Gana la ronda rápida de Datos Curiosos de Odontología';
   if(character.name==='LA MUELA DEL JUICIO') return 'Gana 5 rondas rápidas';
-  if(character.name==='EL HADA DE LOS DIENTES') return 'Gana 10 rondas rápidas';
   if(character.name==='SANTA APOLONIA') return 'Gana 30 rondas rápidas';
   if(character.name==='EL SUPERDIENTE') return 'Gana todos los 45 juegos de especialidad';
   return 'Progreso del juego';
