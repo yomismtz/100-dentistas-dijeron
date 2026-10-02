@@ -1380,37 +1380,133 @@ function showOneVsOneSetup() {
 
 function startFinalChallenge(){
   invalidateTurn();
-  const pool=shuffle(filteredPool()).slice(0,10);
-  if(pool.length<10){openModal('<h2>RONDA FINAL</h2><p>No hay suficientes preguntas en esta selección.</p>');return;}
-  let n=0,total=0;
-  const ask=()=>{
-    if(n>=pool.length){
-      const won=total>=300;
-      const selectedAreas=gameConfig.selectedAreas||[];
-      const unlockArea=selectedAreas.length===1?selectedAreas[0]:'';
-      const result=window.DentistasRecordFinalResult?.({score:total,difficulty:gameConfig.difficulty,area:unlockArea})||{unlocked:[]};
-      const chars=Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[];
-      const unlocked=(result.unlocked||[]).map(name=>chars.find(ch=>ch.name===name)).filter(Boolean);
-      const unlockMsg=unlocked.length
-        ? `<p>🔓 <b>DESBLOQUEADO:</b> ${unlocked.map(ch=>ch.specialty).join(' · ')}</p>`
-        : (total>=300&&(gameConfig.difficulty!=='super'||selectedAreas.length!==1)?'<p>Para desbloquear al especialista necesitas 300 puntos o más, SÚPER DIFÍCIL y un solo apartado seleccionado.</p>':'');
-      openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
-      $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};$('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};return;
-    }
-    const q=pool[n];let seconds=30;
-    openModal(`<h2>⚡ RONDA FINAL · ${n+1}/10</h2><p class="finalQuestion">${qText(q)}</p><p>Tiempo: <b id="finalSeconds">${seconds}</b>s · Puntos: <b>${total}</b>/300</p><div class="answerEntry finalEntry"><input id="finalAnswer" type="text" autocomplete="off" placeholder="Escribe tu respuesta…"><button id="finalSend">RESPONDER</button></div>`);
-    const input=$('#finalAnswer');input?.focus();
-    const finish=(timeout=false)=>{
-      clearInterval(tick);const txt=timeout?'':input?.value||'';let idx=-1;
-      const oldQ=questions[roundIndex];const oldRev=revealed;questions[roundIndex]=q;revealed=Array(q.a.length).fill(false);idx=matchTypedAnswer(txt);questions[roundIndex]=oldQ;revealed=oldRev;
-      const pts=idx>=0?(Number(q.a[idx][1])||0):0;total+=pts;n++;
-      const said=idx>=0?aText(q,idx):'Sin respuesta válida';
-      narrate(`${said}. ${pts} puntos.`,{lang:qVoiceLang(q),rate:.93,onend:ask,onerror:ask});
+  // La ronda final siempre usa SÚPER DIFÍCIL y consta exactamente de 10 preguntas.
+  gameConfig.difficulty = 'super';
+  const selectedAreas = gameConfig.selectedAreas || [];
+  const selectedPool = selectedAreas.length
+    ? questionPool.filter(q => selectedAreas.includes(areaForQuestion(q)))
+    : [...questionPool];
+  const superPool = selectedPool.filter(q => questionDifficulty(q) === 'super');
+  if(superPool.length < 10){
+    openModal(isEn()
+      ? '<h2>FINAL UNAVAILABLE</h2><p>There are not enough SÚPER DIFÍCIL questions in the selected area(s) to build the 10-question final.</p>'
+      : '<h2>RONDA FINAL NO DISPONIBLE</h2><p>No hay suficientes preguntas de SÚPER DIFÍCIL en los apartados seleccionados para formar las 10 preguntas de la final.</p>');
+    return;
+  }
+
+  const pool = shuffle(superPool).slice(0,10);
+  let n = 0;
+  let total = 0;
+  let finalResolving = false;
+  let finalTimer = null;
+  let finalSeconds = 30;
+
+  const cleanup = () => {
+    if(finalTimer){ clearInterval(finalTimer); finalTimer = null; }
+    finalResolving = true;
+  };
+
+  const finish = (timeout = false) => {
+    if(finalResolving) return;
+    finalResolving = true;
+    if(finalTimer){ clearInterval(finalTimer); finalTimer = null; }
+
+    const q = pool[n];
+    const txt = timeout ? '' : String($('#finalAnswer')?.value || '').trim();
+    const oldQ = questions[roundIndex];
+    const oldRev = revealed;
+    questions[roundIndex] = q;
+    revealed = Array(q.a.length).fill(false);
+
+    const idx = txt ? matchTypedAnswer(txt) : -1;
+    questions[roundIndex] = oldQ;
+    revealed = oldRev;
+
+    const pts = idx >= 0 ? (Number(q.a[idx][1]) || 0) : 0;
+    total += pts;
+    const said = idx >= 0 ? aText(q, idx) : (isEn() ? 'No valid answer' : 'Sin respuesta válida');
+
+    const next = () => {
+      n += 1;
+      finalResolving = false;
+      ask();
     };
-    const tick=setInterval(()=>{seconds--;const el=$('#finalSeconds');if(el)el.textContent=seconds;if(seconds<=0)finish(true);},1000);
-    $('#finalSend').onclick=()=>finish(false);input.onkeydown=e=>{if(e.key==='Enter')finish(false);};
-    narrate(qText(q),{lang:qVoiceLang(q),rate:.9});
-  };ask();
+    const spoken = narrate(`${said}. ${pts} ${tx('points')}.`, {
+      lang:qVoiceLang(q), rate:.93, onend:next, onerror:next
+    });
+    if(spoken === false) next();
+  };
+
+  const startQuestionTimer = () => {
+    if(finalResolving) return;
+    finalSeconds = 30;
+    const el = $('#finalSeconds');
+    if(el) el.textContent = String(finalSeconds);
+    finalTimer = setInterval(() => {
+      if(finalResolving) return;
+      finalSeconds -= 1;
+      const timerEl = $('#finalSeconds');
+      if(timerEl) timerEl.textContent = String(finalSeconds);
+      if(finalSeconds <= 0) finish(true);
+    },1000);
+  };
+
+  const ask = () => {
+    if(n >= pool.length){
+      cleanup();
+      const won = total >= 300;
+      const unlockArea = selectedAreas.length === 1 ? selectedAreas[0] : '';
+      const result = window.DentistasRecordFinalResult?.({
+        score:total,
+        difficulty:'super',
+        area:unlockArea
+      }) || {unlocked:[]};
+      const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
+      const unlocked = (result.unlocked || []).map(name => chars.find(ch => ch.name === name)).filter(Boolean);
+      const unlockMsg = unlocked.length
+        ? `<p>🔓 <b>DESBLOQUEADO:</b> ${unlocked.map(ch=>ch.specialty).join(' · ')}</p>`
+        : (total>=300 && selectedAreas.length!==1
+          ? '<p>La meta de 300 puntos se alcanzó, pero para desbloquear un especialista debes jugar con un solo apartado seleccionado.</p>'
+          : '');
+      openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
+      $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};
+      $('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
+      return;
+    }
+
+    const q = pool[n];
+    finalResolving = true;
+    finalSeconds = 30;
+    openModal(`<h2>⚡ RONDA FINAL · ${n+1}/10</h2><p class="finalQuestion">${qText(q)}</p><p>Tiempo: <b id="finalSeconds">30</b>s · Puntos: <b>${total}</b>/300</p><div class="answerEntry finalEntry"><input id="finalAnswer" type="text" autocomplete="off" placeholder="Escribe tu respuesta…"><button id="finalSend">RESPONDER</button></div>`);
+    const input = $('#finalAnswer');
+    const send = $('#finalSend');
+    const begin = () => {
+      if(!finalResolving) return;
+      finalResolving = false;
+      if(send) send.disabled = false;
+      if(input) input.disabled = false;
+      startQuestionTimer();
+    };
+    if(send) send.disabled = true;
+    if(input) input.disabled = true;
+
+    const spoken = narrate(qText(q), {
+      lang:qVoiceLang(q), rate:.9, onend:begin, onerror:begin
+    });
+    if(spoken === false) begin();
+
+    const submit = () => {
+      if(finalResolving) return;
+      finish(false);
+    };
+    if(send) send.onclick = submit;
+    if(input){
+      input.focus();
+      input.onkeydown = e => { if(e.key === 'Enter'){ e.preventDefault(); submit(); } };
+    }
+  };
+
+  ask();
 }
 
 async function startNewGame() {
