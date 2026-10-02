@@ -320,7 +320,8 @@ function saveActiveGame() {
       timerRemaining,
       faceoffDoneThisRound,
       gamePaused,
-      turnResolving: false
+      turnResolving: false,
+      savedReason: arguments.length ? String(arguments[0] || '').slice(0,80) : ''
     };
     localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(snapshot));
   } catch (_) {}
