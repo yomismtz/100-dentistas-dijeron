@@ -421,6 +421,50 @@ function gameVisible() {
   return $('#game') && !$('#game').classList.contains('hidden');
 }
 
+/* Paso 8: precarga ligera para que el siguiente turno no tenga trabajo de red/DOM. */
+const roundPreloadCache = new Map();
+
+function preloadResource(url) {
+  if (!url || typeof url !== 'string') return;
+  try {
+    if (/\\.(png|jpe?g|webp|gif|svg)(\\?|#|$)/i.test(url)) {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = url;
+    } else if ('speechSynthesis' in window) {
+      window.speechSynthesis.getVoices();
+    }
+  } catch (_) {}
+}
+
+function preloadRound(index) {
+  const q = questions[index];
+  if (!q) return;
+  const key = String(q.id || questionKey(q) || index);
+  if (roundPreloadCache.has(key)) return;
+
+  const payload = {
+    question: qText(q),
+    answers: Array.isArray(q.a) ? q.a.map((_, i) => aText(q, i)) : []
+  };
+  roundPreloadCache.set(key, payload);
+
+  const imageCandidates = [q.image, q.img, q.imageUrl, q.image_url, q.clinicalImage]
+    .filter(Boolean);
+  imageCandidates.forEach(preloadResource);
+
+  /* Solicita las voces antes del turno para evitar el primer retraso de TTS. */
+  try {
+    if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
+  } catch (_) {}
+}
+
+function preloadAdjacentRounds(index = roundIndex) {
+  preloadRound(index);
+  preloadRound(index + 1);
+  preloadRound(index + 2);
+}
+
 function updateTimerUI() {
   const timer = $('#timer');
   if (!timer) return;
@@ -833,6 +877,7 @@ function showRound(reset = true) {
   }
 
   const q = questions[roundIndex];
+  preloadAdjacentRounds(roundIndex);
   const mult = roundMultiplier();
   $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
@@ -853,6 +898,7 @@ function showRound(reset = true) {
 
   updateTurnUI();
   if (reset) showRoundTransition();
+  preloadAdjacentRounds(roundIndex);
   if (reset) beginTurnAfterQuestion();
   else startTimer(preservedTime);
 }
@@ -946,7 +992,7 @@ function endRoundAfterSteal(winnerTeam, successful) {
       const message = isEn()
         ? `Steal failed. ${teamNames[awardedTeam]} keeps the ${pointsWon}-point bank.`
         : `Robo fallido. ${teamNames[awardedTeam]} conserva el banco de ${pointsWon} puntos.`;
-      const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 900);
+      const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 650);
       const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
       if (spoken === false) finish();
     }
@@ -965,7 +1011,6 @@ function awardCompletedRound(team, points){
   updateScoreUI();
   updateBankUI();
   updateTurnUI();
-  if (points > 0) animateScoreGain(team, points);
   if (points > 0) showRoundPointsAward(team, points);
   const message = isEn()
     ? `${teamNames[team]} wins the round and receives ${points} points.`
@@ -973,7 +1018,7 @@ function awardCompletedRound(team, points){
   const finish = () => setTimeout(() => {
     if (roundIndex >= questions.length - 1) finishGame();
     else nextRound();
-  }, 900);
+  }, 650);
   const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
   if (spoken === false) finish();
 }
@@ -1369,6 +1414,7 @@ function nextRound() {
     return;
   }
   roundIndex += 1;
+  preloadAdjacentRounds(roundIndex);
   showRound(true);
 }
 
