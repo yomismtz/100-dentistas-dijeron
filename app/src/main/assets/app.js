@@ -506,6 +506,24 @@ function finishFaceoff(winner){
   if(winner==='cpu') scheduleCpuTurn();
 }
 function startFaceoff(){
+  // Paso 3: el robo es automático. No hay segundo careo; el equipo rival recibe directamente el turno.
+  if(phase === 'steal'){
+    faceoffActive=false;
+    clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
+    $('#faceoff')?.classList.add('hidden');
+    $('#answerEntry')?.classList.remove('hidden');
+    updateTurnUI();
+    const stealIntro = isEn()
+      ? `STEAL! ${teamNames[currentTeam]}, answer now.`
+      : `¡ROBO! ${teamNames[currentTeam]}, responde ahora.`;
+    const resume = () => {
+      startTimer(TURN_SECONDS);
+      if(gameConfig.mode==='cpu'&&currentTeam===1) scheduleCpuTurn();
+    };
+    const spoken = narrate(stealIntro,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:resume,onerror:resume});
+    if(spoken===false) resume();
+    return;
+  }
   if(faceoffDoneThisRound){
     $('#answerEntry')?.classList.remove('hidden');
     startTimer(TURN_SECONDS);
