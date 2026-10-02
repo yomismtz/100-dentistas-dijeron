@@ -1029,18 +1029,18 @@ function announceRoundWinner(team, points, reason='bank'){
   if (spoken === false) finish();
 }
 function endRoundAfterSteal(winnerTeam, successful) {
-  const pointsWon = bank;
-  if (winnerTeam !== null && pointsWon > 0) {
-    awardHistory.push({team:winnerTeam, points:pointsWon});
-    scores[winnerTeam] += pointsWon;
-  }
-  // El banco siempre debe terminar asignado automáticamente.
-  // Si el robo falla, el banco vuelve al equipo que lo construyó.
-  const awardedTeam = successful ? winnerTeam : (winnerTeam === null ? 1 - currentTeam : winnerTeam);
-  if (!successful && pointsWon > 0) {
+  const pointsWon = Math.max(0, Number(bank) || 0);
+  // El robo/fallo asigna el banco exactamente una sola vez.
+  // Si el robo falla, vuelve al equipo que construyó el banco.
+  const awardedTeam = successful
+    ? (winnerTeam === 1 ? 1 : 0)
+    : (winnerTeam === null ? 1 - currentTeam : (winnerTeam === 1 ? 1 : 0));
+
+  if (pointsWon > 0) {
     awardHistory.push({team:awardedTeam, points:pointsWon});
     scores[awardedTeam] += pointsWon;
   }
+
   bank = 0;
   phase = 'over';
   clearActiveGame();
@@ -1062,6 +1062,9 @@ function endRoundAfterSteal(winnerTeam, successful) {
   });
 }
 function awardCompletedRound(team, points){
+  if (phase === 'over') return;
+  team = team === 1 ? 1 : 0;
+  points = Math.max(0, Number(points) || 0);
   if (points > 0) {
     awardHistory.push({team, points});
     scores[team] += points;
