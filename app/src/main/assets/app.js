@@ -1380,13 +1380,15 @@ function showOneVsOneSetup() {
 
 function startFinalChallenge(){
   invalidateTurn();
-  // La ronda final siempre usa SÚPER DIFÍCIL y consta exactamente de 10 preguntas.
+  // Final: 10 preguntas, 15 s por pregunta y 150 s de tiempo total.
+  // "PASO", "SKIP" y "NEXT" dejan la pregunta pendiente para el repaso final.
   gameConfig.difficulty = 'super';
   const selectedAreas = gameConfig.selectedAreas || [];
   const selectedPool = selectedAreas.length
     ? questionPool.filter(q => selectedAreas.includes(areaForQuestion(q)))
     : [...questionPool];
   const superPool = selectedPool.filter(q => questionDifficulty(q) === 'super');
+
   if(superPool.length < 10){
     openModal(isEn()
       ? '<h2>FINAL UNAVAILABLE</h2><p>There are not enough SÚPER DIFÍCIL questions in the selected area(s) to build the 10-question final.</p>'
@@ -1395,91 +1397,206 @@ function startFinalChallenge(){
   }
 
   const pool = shuffle(superPool).slice(0,10);
+  const pending = [];
   let n = 0;
   let total = 0;
   let finalResolving = false;
   let finalTimer = null;
-  let finalSeconds = 30;
+  let finalSeconds = 15;
+  let finalTotalSeconds = 150;
+  let phase = 'firstPass';
+  let currentPoolIndex = -1;
+
+  const stopFinalTimer = () => {
+    if(finalTimer){ clearInterval(finalTimer); finalTimer = null; }
+  };
 
   const cleanup = () => {
-    if(finalTimer){ clearInterval(finalTimer); finalTimer = null; }
+    stopFinalTimer();
     finalResolving = true;
   };
 
-  const finish = (timeout = false) => {
-    if(finalResolving) return;
-    finalResolving = true;
-    if(finalTimer){ clearInterval(finalTimer); finalTimer = null; }
+  const normalizeFinalCommand = text =>
+    String(text || '').trim().toLowerCase()
+      .normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')
+      .replace(/[^a-z0-9 ]/g,' ')
+      .replace(/\\s+/g,' ').trim();
 
-    const q = pool[n];
-    const txt = timeout ? '' : String($('#finalAnswer')?.value || '').trim();
+  const isSkipCommand = text => {
+    const v = normalizeFinalCommand(text);
+    return v === 'paso' || v === 'skip' || v === 'next' || v === 'siguiente';
+  };
+
+  const recordAnswer = (q, txt, timeout = false) => {
     const oldQ = questions[roundIndex];
     const oldRev = revealed;
     questions[roundIndex] = q;
     revealed = Array(q.a.length).fill(false);
 
     const idx = txt ? matchTypedAnswer(txt) : -1;
+
     questions[roundIndex] = oldQ;
     revealed = oldRev;
 
     const pts = idx >= 0 ? (Number(q.a[idx][1]) || 0) : 0;
     total += pts;
-    const said = idx >= 0 ? aText(q, idx) : (isEn() ? 'No valid answer' : 'Sin respuesta válida');
+    return {
+      idx,
+      pts,
+      said: idx >= 0
+        ? aText(q, idx)
+        : (timeout
+          ? (isEn() ? 'Time' : 'Tiempo agotado')
+          : (isEn() ? 'No valid answer' : 'Sin respuesta válida'))
+    };
+  };
 
+  const moveToNext = () => {
+    n += 1;
+    finalResolving = false;
+    ask();
+  };
+
+  const resolveNormalAnswer = (q, txt, timeout = false) => {
+    const result = recordAnswer(q, txt, timeout);
+    const spoken = narrate(`${result.said}. ${result.pts} ${tx('points')}.`, {
+      lang:qVoiceLang(q), rate:.93,
+      onend:moveToNext, onerror:moveToNext
+    });
+    if(spoken === false) moveToNext();
+  };
+
+  const skipCurrent = () => {
+    if(finalResolving) return;
+    finalResolving = true;
+    stopFinalTimer();
+
+    if(!pending.includes(currentPoolIndex)) pending.push(currentPoolIndex);
+
+    const q = pool[currentPoolIndex];
     const next = () => {
       n += 1;
       finalResolving = false;
       ask();
     };
-    const spoken = narrate(`${said}. ${pts} ${tx('points')}.`, {
-      lang:qVoiceLang(q), rate:.93, onend:next, onerror:next
-    });
+    const spoken = narrate(
+      isEn() ? 'Skipped. We will return to this question if time remains.' : 'Paso. Regresaremos a esta pregunta si queda tiempo.',
+      {lang:isEn()?'en-US':'es-MX', rate:.96, onend:next, onerror:next}
+    );
     if(spoken === false) next();
+  };
+
+  const finish = (timeout = false) => {
+    if(finalResolving) return;
+    finalResolving = true;
+    stopFinalTimer();
+
+    const q = pool[currentPoolIndex];
+    const txt = timeout ? '' : String($('#finalAnswer')?.value || '').trim();
+
+    if(isSkipCommand(txt)){
+      skipCurrent();
+      return;
+    }
+
+    resolveNormalAnswer(q, txt, timeout);
   };
 
   const startQuestionTimer = () => {
     if(finalResolving) return;
-    finalSeconds = 30;
+    finalSeconds = 15;
     const el = $('#finalSeconds');
-    if(el) el.textContent = String(finalSeconds);
+    if(el) el.textContent = '15';
+
     finalTimer = setInterval(() => {
       if(finalResolving) return;
       finalSeconds -= 1;
+      finalTotalSeconds -= 1;
+
       const timerEl = $('#finalSeconds');
-      if(timerEl) timerEl.textContent = String(finalSeconds);
+      const totalEl = $('#finalTotalSeconds');
+      if(timerEl) timerEl.textContent = String(Math.max(0, finalSeconds));
+      if(totalEl) totalEl.textContent = String(Math.max(0, finalTotalSeconds));
+
+      if(finalTotalSeconds <= 0){
+        stopFinalTimer();
+        finalResolving = true;
+        // El tiempo total terminó: no se inicia el repaso de pendientes.
+        cleanup();
+        showFinalResults();
+        return;
+      }
+
       if(finalSeconds <= 0) finish(true);
     },1000);
   };
 
+  const showFinalResults = () => {
+    cleanup();
+    const won = total >= 300;
+    const unlockArea = selectedAreas.length === 1 ? selectedAreas[0] : '';
+    const result = window.DentistasRecordFinalResult?.({
+      score:total,
+      difficulty:'super',
+      area:unlockArea
+    }) || {unlocked:[]};
+    const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
+    const unlocked = (result.unlocked || []).map(name => chars.find(ch => ch.name === name)).filter(Boolean);
+    const unlockMsg = unlocked.length
+      ? `<p>🔓 <b>DESBLOQUEADO:</b> ${unlocked.map(ch=>ch.specialty).join(' · ')}</p>`
+      : (total>=300 && selectedAreas.length!==1
+        ? '<p>La meta de 300 puntos se alcanzó, pero para desbloquear un especialista debes jugar con un solo apartado seleccionado.</p>'
+        : '');
+
+    openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p><p>Tiempo final: <b>${Math.max(0, finalTotalSeconds)} s</b>.</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
+    $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};
+    $('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
+  };
+
   const ask = () => {
+    // Primera pasada: 10 preguntas. Después, solo se repasan las que se marcaron PASO/SKIP/NEXT.
     if(n >= pool.length){
-      cleanup();
-      const won = total >= 300;
-      const unlockArea = selectedAreas.length === 1 ? selectedAreas[0] : '';
-      const result = window.DentistasRecordFinalResult?.({
-        score:total,
-        difficulty:'super',
-        area:unlockArea
-      }) || {unlocked:[]};
-      const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
-      const unlocked = (result.unlocked || []).map(name => chars.find(ch => ch.name === name)).filter(Boolean);
-      const unlockMsg = unlocked.length
-        ? `<p>🔓 <b>DESBLOQUEADO:</b> ${unlocked.map(ch=>ch.specialty).join(' · ')}</p>`
-        : (total>=300 && selectedAreas.length!==1
-          ? '<p>La meta de 300 puntos se alcanzó, pero para desbloquear un especialista debes jugar con un solo apartado seleccionado.</p>'
-          : '');
-      openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
-      $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};
-      $('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
-      return;
+      if(phase === 'firstPass' && pending.length && finalTotalSeconds > 0){
+        phase = 'review';
+        n = 0;
+      } else {
+        showFinalResults();
+        return;
+      }
     }
 
-    const q = pool[n];
+    let poolIndex;
+    if(phase === 'firstPass'){
+      poolIndex = n;
+    } else {
+      if(n >= pending.length){
+        showFinalResults();
+        return;
+      }
+      poolIndex = pending[n];
+    }
+
+    currentPoolIndex = poolIndex;
+    const q = pool[poolIndex];
     finalResolving = true;
-    finalSeconds = 30;
-    openModal(`<h2>⚡ RONDA FINAL · ${n+1}/10</h2><p class="finalQuestion">${qText(q)}</p><p>Tiempo: <b id="finalSeconds">30</b>s · Puntos: <b>${total}</b>/300</p><div class="answerEntry finalEntry"><input id="finalAnswer" type="text" autocomplete="off" placeholder="Escribe tu respuesta…"><button id="finalSend">RESPONDER</button></div>`);
+    finalSeconds = 15;
+
+    const reviewLabel = phase === 'review'
+      ? (isEn() ? ' · REVIEW' : ' · REPASO')
+      : '';
+
+    openModal(`<h2>⚡ RONDA FINAL${reviewLabel} · ${phase === 'firstPass' ? n+1 : n+1}/10</h2>
+      <p class="finalQuestion">${qText(q)}</p>
+      <p>Tiempo: <b id="finalSeconds">15</b>s · Total: <b id="finalTotalSeconds">${Math.max(0,finalTotalSeconds)}</b>s · Puntos: <b>${total}</b>/300</p>
+      <div class="answerEntry finalEntry">
+        <input id="finalAnswer" type="text" autocomplete="off" placeholder="Respuesta, PASO, SKIP o NEXT…">
+        <button id="finalSend">RESPONDER</button>
+      </div>
+      <p class="finalSkipHint">Puedes escribir <b>PASO</b>, <b>SKIP</b> o <b>NEXT</b> para dejar esta pregunta pendiente y continuar.</p>`);
+
     const input = $('#finalAnswer');
     const send = $('#finalSend');
+
     const begin = () => {
       if(!finalResolving) return;
       finalResolving = false;
@@ -1487,6 +1604,7 @@ function startFinalChallenge(){
       if(input) input.disabled = false;
       startQuestionTimer();
     };
+
     if(send) send.disabled = true;
     if(input) input.disabled = true;
 
@@ -1499,10 +1617,16 @@ function startFinalChallenge(){
       if(finalResolving) return;
       finish(false);
     };
+
     if(send) send.onclick = submit;
     if(input){
       input.focus();
-      input.onkeydown = e => { if(e.key === 'Enter'){ e.preventDefault(); submit(); } };
+      input.onkeydown = e => {
+        if(e.key === 'Enter'){
+          e.preventDefault();
+          submit();
+        }
+      };
     }
   };
 
