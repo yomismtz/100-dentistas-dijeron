@@ -599,15 +599,34 @@ function updateScoreUI() {
   document.querySelectorAll('.teamName').forEach((b, idx) => b.textContent = teamNames[idx]);
 }
 
+function animatePointsGain(points) {
+  if (!points || points <= 0 || !gameVisible()) return;
+  const bankBox = document.querySelector('.bank');
+  if (!bankBox) return;
+  const el = document.createElement('div');
+  el.className = 'pointsFloat';
+  el.textContent = `+${points}`;
+  bankBox.appendChild(el);
+  requestAnimationFrame(() => el.classList.add('show'));
+  setTimeout(() => el.remove(), 850);
+}
 function updateBankUI() {
   const value = $('#bank');
   const box = document.querySelector('.bank');
+  const changed = bank !== lastBankValue;
   if (value) value.textContent = bank;
-  if (box && bank !== lastBankValue) {
-    box.classList.remove('bump');
+  if (box && changed) {
+    const delta = bank - lastBankValue;
+    box.classList.remove('bump','bankFlash','bankGain','bankDrop');
     void box.offsetWidth;
     box.classList.add('bump');
-    setTimeout(() => box.classList.remove('bump'), 320);
+    if (delta > 0) {
+      box.classList.add('bankGain');
+      animatePointsGain(delta);
+    } else if (delta < 0) {
+      box.classList.add('bankDrop');
+    }
+    setTimeout(() => box.classList.remove('bump','bankFlash','bankGain','bankDrop'), 520);
   }
   lastBankValue = bank;
 }
@@ -768,6 +787,18 @@ function revealRemainingAndNarrate(onDone) {
   if (spoken === false) finish();
 }
 
+function animateScoreGain(team, points) {
+  if (!points || points <= 0) return;
+  const teamEls = document.querySelectorAll('.team');
+  const target = teamEls[team];
+  if (!target) return;
+  const el = document.createElement('div');
+  el.className = 'scoreFloat';
+  el.textContent = `+${points}`;
+  target.appendChild(el);
+  requestAnimationFrame(() => el.classList.add('show'));
+  setTimeout(() => el.remove(), 1100);
+}
 function showRoundPointsAward(team, points){
   const old = document.querySelector('.roundPointsAward');
   if(old) old.remove();
@@ -830,11 +861,14 @@ function awardCompletedRound(team, points){
     awardHistory.push({team, points});
     scores[team] += points;
   }
+  const awardedPoints = bank;
   bank = 0;
   phase = 'over';
+  if (awardedPoints > 0) animateScoreGain(team, awardedPoints);
   updateScoreUI();
   updateBankUI();
   updateTurnUI();
+  if (points > 0) animateScoreGain(team, points);
   if (points > 0) showRoundPointsAward(team, points);
   const message = isEn()
     ? `${teamNames[team]} wins the round and receives ${points} points.`
