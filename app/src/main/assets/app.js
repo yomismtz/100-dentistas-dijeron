@@ -797,7 +797,14 @@ function addStrike(reason = 'manual') {
   }
 
   updateTurnUI();
-  beginTurnAfterQuestion();
+  const warning = isEn()
+    ? `Second mistake. ${teamNames[1-currentTeam]} may now discuss possible answers as a team.`
+    : `Segundo error. ${teamNames[1-currentTeam]} ya puede reunirse y buscar alternativas.`;
+  const resume = () => beginTurnAfterQuestion();
+  const spoken = strikes === 2
+    ? narrate(warning, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:resume, onerror:resume})
+    : false;
+  if (spoken === false) resume();
 }
 
 function awardBank(team) {
@@ -981,7 +988,7 @@ function startFinalChallenge(){
       openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
       $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};$('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};return;
     }
-    const q=pool[n];let seconds=20;
+    const q=pool[n];let seconds=30;
     openModal(`<h2>⚡ RONDA FINAL · ${n+1}/10</h2><p class="finalQuestion">${qText(q)}</p><p>Tiempo: <b id="finalSeconds">${seconds}</b>s · Puntos: <b>${total}</b>/300</p><div class="answerEntry finalEntry"><input id="finalAnswer" type="text" autocomplete="off" placeholder="Escribe tu respuesta…"><button id="finalSend">RESPONDER</button></div>`);
     const input=$('#finalAnswer');input?.focus();
     const finish=(timeout=false)=>{
@@ -1141,12 +1148,12 @@ function showHelp() {
         <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 30 segundos</b>.</li>
         <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
         <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 30 segundos después de narrar la pregunta.</li>
-        <li>Las rondas <b>1 y 2 valen ×1</b>, las rondas <b>3 y 4 valen ×2</b> y las rondas <b>5 y 6 valen ×3</b>.</li>
+        <li>Las rondas <b>1–4 valen ×1</b>, las rondas <b>5–6 valen ×2</b> y las rondas <b>7–8 valen ×3</b>.</li>
         <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
         <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
         <li>Al tercer error pierde el control y el turno pasa al rival.</li>
         <li>Si había puntos en el banco, el rival dispone de <b>30 segundos y una sola respuesta</b> para robarlo.</li>
-        <li>Si el rival acierta, gana todo el banco. Si falla o se termina el tiempo, el banco se pierde.</li>
+        <li>Si el rival acierta, gana todo el banco. Si falla, los puntos permanecen con el equipo original.</li>
         <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
         <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
       </ol>
