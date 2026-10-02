@@ -857,7 +857,7 @@ function scheduleCpuTurn() {
   const delay = window.DentistasCharacterCPU?.delayFor?.(character) || 1200;
   cpuTimerHandle = setTimeout(() => {
     cpuTimerHandle = null;
-    if (gameConfig.mode !== 'cpu' || currentTeam !== 1 || phase === 'over' || !gameVisible()) return;
+    if (gameConfig.mode !== 'cpu' || currentTeam !== 1 || phase === 'over' || gamePaused || turnResolving || !gameVisible()) return;
     const hidden = revealed.map((v,i)=>v ? -1 : i).filter(i=>i>=0);
     const accuracy = window.DentistasCharacterCPU?.accuracyFor?.(character,q) ?? .72;
     if (hidden.length && Math.random() <= accuracy) {
@@ -1062,15 +1062,15 @@ function endRoundAfterSteal(winnerTeam, successful) {
   });
 }
 function awardCompletedRound(team, points){
-  if (phase === 'over') return;
+  if (phase === 'over' || gamePaused || turnResolving) return;
   team = team === 1 ? 1 : 0;
-  points = Math.max(0, Number(points) || 0);
-  if (points > 0) {
-    awardHistory.push({team, points});
-    scores[team] += points;
-  }
-  const awardedPoints = bank;
+  // La fuente de verdad es el banco actual; evita discrepancias por un valor stale.
+  const awardedPoints = Math.max(0, Number(bank) || 0);
   bank = 0;
+  if (awardedPoints > 0) {
+    awardHistory.push({team, points:awardedPoints});
+    scores[team] += awardedPoints;
+  }
   phase = 'over';
   clearActiveGame();
   if (awardedPoints > 0) animateScoreGain(team, awardedPoints);
@@ -1164,6 +1164,7 @@ function showCorrectFeedback(message) {
 
 function addStrike(reason = 'manual') {
   if (phase === 'over' || gamePaused || turnResolving) return;
+  if (strikes >= 3 && phase !== 'steal') return;
   turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
