@@ -1512,6 +1512,7 @@ function startFinalChallenge(){
   };
 
   const moveToNext = () => {
+    stopFinalTimer();
     n += 1;
     finalResolving = false;
     ask();
@@ -1535,6 +1536,7 @@ function startFinalChallenge(){
 
     const q = pool[currentPoolIndex];
     const next = () => {
+      stopFinalTimer();
       n += 1;
       finalResolving = false;
       ask();
@@ -1570,6 +1572,7 @@ function startFinalChallenge(){
     const el = $('#finalSeconds');
     if(el) el.textContent = '15';
 
+    stopFinalTimer();
     finalTimer = setInterval(() => {
       if(finalResolving) return;
       finalSeconds -= 1;
