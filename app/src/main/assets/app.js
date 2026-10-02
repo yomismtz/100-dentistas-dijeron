@@ -1644,12 +1644,13 @@ function startFinalChallenge(){
       <p>Tiempo: <b id="finalSeconds">15</b>s · Total: <b id="finalTotalSeconds">${Math.max(0,finalTotalSeconds)}</b>s · Puntos: <b>${total}</b>/300</p>
       <div class="answerEntry finalEntry">
         <input id="finalAnswer" type="text" autocomplete="off" placeholder="Respuesta, PASO, SKIP, SKID o NEXT…">
-        <button id="finalSend">RESPONDER</button>
+        <button id="finalMic" type="button">🎤 VOZ</button><button id="finalSend">RESPONDER</button>
       </div>
       <p class="finalSkipHint">Puedes usar <b>PASO</b>, <b>SKIP</b>, <b>SKID</b> o <b>NEXT</b> para dejar esta pregunta pendiente y continuar.</p>`);
 
     const input = $('#finalAnswer');
     const send = $('#finalSend');
+    const mic = $('#finalMic');
 
     const begin = () => {
       if(!finalResolving) return;
@@ -1673,6 +1674,17 @@ function startFinalChallenge(){
     };
 
     if(send) send.onclick = submit;
+    if(mic) mic.onclick = () => {
+      if(finalResolving) return;
+      const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+      if(!SR){ mic.textContent='🎤 VOZ NO DISPONIBLE'; setTimeout(()=>mic.textContent='🎤 VOZ',1200); return; }
+      mic.textContent='🎙️ ESCUCHANDO';
+      const rec=new SR(); rec.lang=isEn()?'en-US':'es-MX'; rec.interimResults=false; rec.maxAlternatives=1;
+      rec.onresult=e=>{ const t=e.results?.[0]?.[0]?.transcript||''; if(input) input.value=t; mic.textContent='🎤 VOZ'; finish(false); };
+      rec.onerror=()=>{ mic.textContent='🎤 VOZ'; };
+      rec.onend=()=>{ if(mic.textContent==='🎙️ ESCUCHANDO') mic.textContent='🎤 VOZ'; };
+      try{rec.start();}catch(_){mic.textContent='🎤 VOZ';}
+    };
     if(input){
       input.focus();
       input.onkeydown = e => {
