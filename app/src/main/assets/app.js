@@ -1424,7 +1424,7 @@ function startFinalChallenge(){
 
   const isSkipCommand = text => {
     const v = normalizeFinalCommand(text);
-    return v === 'paso' || v === 'skip' || v === 'next' || v === 'siguiente';
+    return v === 'paso' || v === 'skip' || v === 'skid' || v === 'next' || v === 'siguiente';
   };
 
   const recordAnswer = (q, txt, timeout = false) => {
@@ -1589,10 +1589,10 @@ function startFinalChallenge(){
       <p class="finalQuestion">${qText(q)}</p>
       <p>Tiempo: <b id="finalSeconds">15</b>s · Total: <b id="finalTotalSeconds">${Math.max(0,finalTotalSeconds)}</b>s · Puntos: <b>${total}</b>/300</p>
       <div class="answerEntry finalEntry">
-        <input id="finalAnswer" type="text" autocomplete="off" placeholder="Respuesta, PASO, SKIP o NEXT…">
+        <input id="finalAnswer" type="text" autocomplete="off" placeholder="Respuesta, PASO, SKIP, SKID o NEXT…">
         <button id="finalSend">RESPONDER</button>
       </div>
-      <p class="finalSkipHint">Puedes escribir <b>PASO</b>, <b>SKIP</b> o <b>NEXT</b> para dejar esta pregunta pendiente y continuar.</p>`);
+      <p class="finalSkipHint">Puedes usar <b>PASO</b>, <b>SKIP</b>, <b>SKID</b> o <b>NEXT</b> para dejar esta pregunta pendiente y continuar.</p>`);
 
     const input = $('#finalAnswer');
     const send = $('#finalSend');
