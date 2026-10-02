@@ -705,6 +705,12 @@ function submitTypedAnswer(){
 }
 window.DentistasVoice=window.DentistasVoice||{
   nativeResult(text,ok){
+    if(typeof window.__finalVoiceHandler==='function'){
+      const handler=window.__finalVoiceHandler;
+      window.__finalVoiceHandler=null;
+      handler(String(text||''),Boolean(ok));
+      return;
+    }
     const b=$('#answerMic');if(b)b.textContent='🎤 RESPONDER';
     if(!ok){setAnswerFeedback('No se entendió la respuesta. Pulsa el micrófono y repite.','hint');return;}
     submitVoiceAnswer(String(text||''));
@@ -1676,14 +1682,25 @@ function startFinalChallenge(){
     if(send) send.onclick = submit;
     if(mic) mic.onclick = () => {
       if(finalResolving) return;
+      mic.textContent='🎙️ ESCUCHANDO';
+      const handleResult=(text,ok)=>{
+        if(mic) mic.textContent='🎤 VOZ';
+        if(!ok) return;
+        if(input) input.value=String(text||'');
+        finish(false);
+      };
+      if(window.AndroidVoice?.isAvailable?.()){
+        window.__finalVoiceHandler=handleResult;
+        try{ window.AndroidVoice.start(isEn()?'en-US':'es-MX'); return; }
+        catch(_){ window.__finalVoiceHandler=null; }
+      }
       const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
       if(!SR){ mic.textContent='🎤 VOZ NO DISPONIBLE'; setTimeout(()=>mic.textContent='🎤 VOZ',1200); return; }
-      mic.textContent='🎙️ ESCUCHANDO';
       const rec=new SR(); rec.lang=isEn()?'en-US':'es-MX'; rec.interimResults=false; rec.maxAlternatives=1;
-      rec.onresult=e=>{ const t=e.results?.[0]?.[0]?.transcript||''; if(input) input.value=t; mic.textContent='🎤 VOZ'; finish(false); };
-      rec.onerror=()=>{ mic.textContent='🎤 VOZ'; };
+      rec.onresult=e=>{ const t=e.results?.[0]?.[0]?.transcript||''; handleResult(t,true); };
+      rec.onerror=()=>handleResult('',false);
       rec.onend=()=>{ if(mic.textContent==='🎙️ ESCUCHANDO') mic.textContent='🎤 VOZ'; };
-      try{rec.start();}catch(_){mic.textContent='🎤 VOZ';}
+      try{rec.start();}catch(_){handleResult('',false);}
     };
     if(input){
       input.focus();
