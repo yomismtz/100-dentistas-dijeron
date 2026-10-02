@@ -296,13 +296,13 @@ function saveState() {
   localStorage.setItem('dentistas-settings', JSON.stringify({teamNames}));
 }
 
-const GAME_SAVE_KEY = 'dentistas-active-game-v7';
+const GAME_SAVE_KEY = 'dentistas-active-game-v10';
 
 function saveActiveGame() {
   try {
     if (!gameVisible() || phase === 'over' || !questions.length) return;
     const snapshot = {
-      version: 7,
+      version: 10,
       savedAt: Date.now(),
       gameConfig: JSON.parse(JSON.stringify(gameConfig)),
       questions: JSON.parse(JSON.stringify(questions)),
@@ -326,10 +326,25 @@ function clearActiveGame() {
   try { localStorage.removeItem(GAME_SAVE_KEY); } catch (_) {}
 }
 
+function normalizeSavedGame(snapshot) {
+  if (!snapshot || !Array.isArray(snapshot.questions) || !snapshot.questions.length) return null;
+  snapshot.questions = snapshot.questions.filter(q => q && Array.isArray(q.a) && q.a.length >= 3);
+  snapshot.roundIndex = Math.max(0, Math.min(Number(snapshot.roundIndex) || 0, snapshot.questions.length - 1));
+  snapshot.scores = Array.isArray(snapshot.scores) && snapshot.scores.length === 2 ? snapshot.scores.map(v => Math.max(0, Number(v) || 0)) : [0,0];
+  snapshot.revealed = Array.isArray(snapshot.revealed) ? snapshot.revealed : Array(snapshot.questions[snapshot.roundIndex].a.length).fill(false);
+  snapshot.revealed = snapshot.revealed.slice(0, snapshot.questions[snapshot.roundIndex].a.length);
+  while (snapshot.revealed.length < snapshot.questions[snapshot.roundIndex].a.length) snapshot.revealed.push(false);
+  snapshot.strikes = Math.max(0, Math.min(3, Number(snapshot.strikes) || 0));
+  snapshot.bank = Math.max(0, Number(snapshot.bank) || 0);
+  snapshot.currentTeam = Number(snapshot.currentTeam) === 1 ? 1 : 0;
+  snapshot.timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
+  return snapshot;
+}
+
 function readActiveGame() {
   try {
     const s = JSON.parse(localStorage.getItem(GAME_SAVE_KEY) || 'null');
-    if (!s || s.version !== 7 || !Array.isArray(s.questions) || !s.questions.length) return null;
+    if (!s || s.version !== 10 || !Array.isArray(s.questions) || !s.questions.length) return null;
     if (s.roundIndex < 0 || s.roundIndex >= s.questions.length) return null;
     if (!Array.isArray(s.scores) || s.scores.length !== 2) return null;
     if (!Array.isArray(s.revealed)) return null;
@@ -1533,6 +1548,15 @@ function showMenu() {
   };
 }
 
+function presenterRoundSafetyCheck() {
+  if (phase === 'over' || !questions[roundIndex]) return false;
+  stopTimer();
+  clearCpuTurn();
+  turnNarrationToken += 1;
+  window.DentistasNarrator?.stop?.();
+  return true;
+}
+
 function showPresenterControls() {
   openModal(isEn() ? `
     <h2>Presenter controls</h2>
@@ -1553,12 +1577,13 @@ function showPresenterControls() {
 
   $('#pRepeat').onclick = () => {
     closeModal(false);
+    presenterRoundSafetyCheck();
     const q = questions[roundIndex];
     if (q) narrate(qText(q), {lang:qVoiceLang(q), rate:.9});
   };
   $('#pReveal').onclick = () => {
     closeModal(false);
-    if (phase === 'over') return;
+    if (!presenterRoundSafetyCheck()) return;
     const team = currentTeam;
     revealRemainingAndNarrate(() => {
       if (phase === 'over') return;
@@ -1576,6 +1601,7 @@ function showPresenterControls() {
   };
   $('#pError').onclick = () => {
     closeModal(false);
+    if (!presenterRoundSafetyCheck()) return;
     addStrike('presenter');
   };
 }
