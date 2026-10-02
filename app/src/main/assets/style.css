@@ -336,3 +336,60 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 .answerFeedback.hint{color:#b9ddff}
 
 .timer.countdownPulse{transform:scale(1.12);filter:drop-shadow(0 0 10px rgba(255,215,80,.9));transition:transform .12s ease,filter .12s ease}.timer.urgent{font-weight:1000}
+
+
+/* ===== Ajuste de tablero: evitar amontonamiento y solapamiento de respuestas ===== */
+#game:not(.hidden) .board{
+  overflow:hidden!important;
+  min-height:0!important;
+}
+#game:not(.hidden) .answers{
+  min-height:0!important;
+  overflow:hidden!important;
+  gap:clamp(5px,.7vh,9px)!important;
+}
+#game:not(.hidden) .answer{
+  flex:1 1 0!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:clamp(5px,.7vh,10px) clamp(9px,1vw,16px)!important;
+  font-size:clamp(15px,2.15vw,30px)!important;
+}
+#game:not(.hidden) .answer .num{
+  width:clamp(28px,3.1vw,42px)!important;
+  height:clamp(28px,3.1vw,42px)!important;
+  flex:0 0 auto!important;
+}
+#game:not(.hidden) .strikes{
+  min-height:.65em!important;
+}
+@media(max-height:520px) and (orientation:landscape){
+  #game:not(.hidden) .board{
+    height:65%!important;
+    padding:.75% 3.5%!important;
+  }
+  #game:not(.hidden) .questionRow{
+    margin-bottom:.35%!important;
+    gap:.7rem!important;
+  }
+  #game:not(.hidden) .questionRow h1{
+    font-size:clamp(18px,2.45vw,30px)!important;
+  }
+  #game:not(.hidden) .answerEntry{
+    margin:5px auto 7px!important;
+    gap:6px!important;
+  }
+  #game:not(.hidden) .answerEntry input,
+  #game:not(.hidden) .answerEntry button{
+    min-height:46px!important;
+  }
+  #game:not(.hidden) .answer{
+    padding:3px 8px!important;
+    font-size:clamp(14px,1.9vw,24px)!important;
+    border-width:1px!important;
+  }
+  #game:not(.hidden) .answer .num{
+    width:27px!important;
+    height:27px!important;
+  }
+}
