@@ -7,8 +7,8 @@ const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
 const isEn = () => I18N?.getLang?.() === 'en';
-const qText = q => isEn() && q?.q_en ? q.q_en : q?.q || '';
-const aText = (q, idx) => isEn() && Array.isArray(q?.a_en) && q.a_en[idx] ? q.a_en[idx] : q?.a?.[idx]?.[0] || '';
+const qText = q => { const ov = isEn() ? window.DentistasEnglishOverrides?.[q?.id] : null; return ov?.[0] || (isEn() && q?.q_en ? q.q_en : q?.q || ''); };
+const aText = (q, idx) => { const ov = isEn() ? window.DentistasEnglishOverrides?.[q?.id] : null; return ov?.[1]?.[idx] || (isEn() && Array.isArray(q?.a_en) && q.a_en[idx] ? q.a_en[idx] : q?.a?.[idx]?.[0] || ''); };
 const qVoiceLang = q => isEn() && q?.q_en ? 'en-US' : 'es-MX';
 const BANK_FILES = [
   'bank44_original_01.json',
