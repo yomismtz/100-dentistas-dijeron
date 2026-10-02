@@ -298,13 +298,13 @@ function saveState() {
   localStorage.setItem('dentistas-settings', JSON.stringify({teamNames}));
 }
 
-const GAME_SAVE_KEY = 'dentistas-active-game-v12';
+const GAME_SAVE_KEY = 'dentistas-active-game-v14';
 
 function saveActiveGame() {
   try {
     if (!gameVisible() || phase === 'over' || !questions.length) return;
     const snapshot = {
-      version: 12,
+      version: 14,
       savedAt: Date.now(),
       gameConfig: JSON.parse(JSON.stringify(gameConfig)),
       questions: JSON.parse(JSON.stringify(questions)),
@@ -319,6 +319,7 @@ function saveActiveGame() {
       phase,
       timerRemaining,
       faceoffDoneThisRound,
+      gamePaused,
       turnResolving: false
     };
     localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(snapshot));
@@ -331,28 +332,77 @@ function clearActiveGame() {
 
 function normalizeSavedGame(snapshot) {
   if (!snapshot || !Array.isArray(snapshot.questions) || !snapshot.questions.length) return null;
-  snapshot.questions = snapshot.questions.filter(q => q && Array.isArray(q.a) && q.a.length >= 3);
+
+  snapshot.questions = snapshot.questions.filter(q => {
+    return q && Array.isArray(q.a) && q.a.length >= 3 && q.a.length <= 7;
+  });
+  if (!snapshot.questions.length) return null;
+
   snapshot.roundIndex = Math.max(0, Math.min(Number(snapshot.roundIndex) || 0, snapshot.questions.length - 1));
-  snapshot.scores = Array.isArray(snapshot.scores) && snapshot.scores.length === 2 ? snapshot.scores.map(v => Math.max(0, Number(v) || 0)) : [0,0];
-  snapshot.revealed = Array.isArray(snapshot.revealed) ? snapshot.revealed : Array(snapshot.questions[snapshot.roundIndex].a.length).fill(false);
-  snapshot.revealed = snapshot.revealed.slice(0, snapshot.questions[snapshot.roundIndex].a.length);
-  while (snapshot.revealed.length < snapshot.questions[snapshot.roundIndex].a.length) snapshot.revealed.push(false);
+
+  const currentQuestion = snapshot.questions[snapshot.roundIndex];
+  if (!currentQuestion || !Array.isArray(currentQuestion.a)) return null;
+
+  snapshot.scores = Array.isArray(snapshot.scores) && snapshot.scores.length === 2
+    ? snapshot.scores.map(v => Math.max(0, Number(v) || 0))
+    : [0,0];
+
+  snapshot.revealed = Array.isArray(snapshot.revealed)
+    ? snapshot.revealed.slice(0, currentQuestion.a.length)
+    : [];
+
+  while (snapshot.revealed.length < currentQuestion.a.length) snapshot.revealed.push(false);
+  snapshot.revealed = snapshot.revealed.map(Boolean);
+
   snapshot.strikes = Math.max(0, Math.min(3, Number(snapshot.strikes) || 0));
   snapshot.bank = Math.max(0, Number(snapshot.bank) || 0);
   snapshot.currentTeam = Number(snapshot.currentTeam) === 1 ? 1 : 0;
-  snapshot.timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
+
+  const validPhase = snapshot.phase === 'steal' || snapshot.phase === 'play';
+  snapshot.phase = validPhase ? snapshot.phase : 'play';
+
+  snapshot.timerRemaining = Math.max(
+    1,
+    Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS)
+  );
+
+  snapshot.teamNames = Array.isArray(snapshot.teamNames) && snapshot.teamNames.length === 2
+    ? snapshot.teamNames.map(v => String(v || '').trim().slice(0, 18))
+    : ['EQUIPO 1','EQUIPO 2'];
+
+  snapshot.awardHistory = Array.isArray(snapshot.awardHistory)
+    ? snapshot.awardHistory
+        .filter(x => x && (x.team === 0 || x.team === 1) && Number.isFinite(Number(x.points)) && Number(x.points) >= 0)
+        .map(x => ({team:x.team, points:Math.max(0, Number(x.points))}))
+    : [];
+
+  snapshot.gamePaused = Boolean(snapshot.gamePaused);
+  snapshot.faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
+  snapshot.savedAt = Number.isFinite(Number(snapshot.savedAt)) ? Number(snapshot.savedAt) : Date.now();
+
   return snapshot;
 }
 
 function readActiveGame() {
   try {
-    const s = JSON.parse(localStorage.getItem(GAME_SAVE_KEY) || 'null');
-    if (!s || s.version !== 12 || !Array.isArray(s.questions) || !s.questions.length) return null;
-    if (s.roundIndex < 0 || s.roundIndex >= s.questions.length) return null;
-    if (!Array.isArray(s.scores) || s.scores.length !== 2) return null;
-    if (!Array.isArray(s.revealed)) return null;
-    return s;
+    const raw = localStorage.getItem(GAME_SAVE_KEY);
+    if (!raw) return null;
+
+    const snapshot = JSON.parse(raw);
+    if (!snapshot || snapshot.version !== 14) {
+      clearActiveGame();
+      return null;
+    }
+
+    const normalized = normalizeSavedGame(snapshot);
+    if (!normalized) {
+      clearActiveGame();
+      return null;
+    }
+
+    return normalized;
   } catch (_) {
+    clearActiveGame();
     return null;
   }
 }
@@ -379,11 +429,10 @@ function resumeActiveGame(snapshot) {
   awardHistory = Array.isArray(snapshot.awardHistory) ? snapshot.awardHistory : [];
   currentTeam = Number(snapshot.currentTeam) || 0;
   phase = snapshot.phase === 'steal' ? 'steal' : 'play';
-  gamePaused = false;
+  gamePaused = Boolean(snapshot.gamePaused);
   turnResolving = false;
   timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
   faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
-  turnResolving = false;
 
   $('#home').classList.add('hidden');
   $('#game').classList.remove('hidden');
@@ -392,6 +441,11 @@ function resumeActiveGame(snapshot) {
   updateTimerUI();
   setTimeout(() => {
     if (!gameVisible() || phase === 'over') return;
+    if (gamePaused) {
+      updateTimerUI();
+      updateTurnUI();
+      return;
+    }
     if (phase === 'steal') {
       startFaceoff();
     } else if (faceoffDoneThisRound) {
