@@ -750,6 +750,21 @@ function revealRemainingAndNarrate(onDone) {
   if (spoken === false) finish();
 }
 
+function announceRoundWinner(team, points, reason='bank'){
+  const name = team !== null && team !== undefined ? teamNames[team] : '';
+  const lastRound = roundIndex >= questions.length - 1;
+  const message = reason === 'steal'
+    ? (isEn() ? `Steal successful. ${name} wins the bank: ${points} points.` : `¡Robo exitoso! ${name} gana el banco: ${points} puntos.`)
+    : (isEn() ? `${name} wins the round and receives ${points} points.` : `${name} gana la ronda y recibe ${points} puntos.`);
+  const finish = () => {
+    setTimeout(() => {
+      if (lastRound) finishGame();
+      else nextRound();
+    }, 900);
+  };
+  const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX', rate:.9, onend:finish, onerror:finish});
+  if (spoken === false) finish();
+}
 function endRoundAfterSteal(winnerTeam, successful) {
   const pointsWon = bank;
   if (winnerTeam !== null && pointsWon > 0) {
@@ -762,10 +777,35 @@ function endRoundAfterSteal(winnerTeam, successful) {
   updateBankUI();
   updateTurnUI();
   revealRemainingAndNarrate(() => {
-    openModal(successful
-      ? (isEn() ? `<h2>STEAL SUCCESSFUL</h2><p><b>${teamNames[winnerTeam]}</b> wins <b>${pointsWon} points</b>.</p>` : `<h2>ROBO EXITOSO</h2><p><b>${teamNames[winnerTeam]}</b> gana <b>${pointsWon} puntos</b>.</p>`)
-      : (isEn() ? `<h2>STEAL FAILED</h2><p>The steal failed. The round ends.</p>` : `<h2>ROBO FALLIDO</h2><p>El robo falló. La ronda termina.</p>`));
+    if (successful) announceRoundWinner(winnerTeam, pointsWon, 'steal');
+    else {
+      const lastRound = roundIndex >= questions.length - 1;
+      const message = isEn() ? 'Steal failed. The round ends.' : 'Robo fallido. La ronda termina.';
+      const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 900);
+      const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
+      if (spoken === false) finish();
+    }
   });
+}
+function awardCompletedRound(team, points){
+  if (points > 0) {
+    awardHistory.push({team, points});
+    scores[team] += points;
+  }
+  bank = 0;
+  phase = 'over';
+  updateScoreUI();
+  updateBankUI();
+  updateTurnUI();
+  const message = isEn()
+    ? `${teamNames[team]} wins the round and receives ${points} points.`
+    : `${teamNames[team]} gana la ronda y recibe ${points} puntos.`;
+  const finish = () => setTimeout(() => {
+    if (roundIndex >= questions.length - 1) finishGame();
+    else nextRound();
+  }, 900);
+  const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
+  if (spoken === false) finish();
 }
 
 function revealAnswer(idx, btn) {
@@ -790,6 +830,13 @@ function revealAnswer(idx, btn) {
   updateBankUI();
   play(audio.good);
   updateTurnUI();
+  const allRevealed = revealed.every(Boolean);
+  if (allRevealed) {
+    const finishRound = () => awardCompletedRound(currentTeam, bank);
+    const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:finishRound, onerror:finishRound});
+    if (spoken === false) finishRound();
+    return;
+  }
   const nextTurn = () => { if (phase !== 'over' && gameVisible()) beginTurnAfterQuestion(); };
   const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:nextTurn, onerror:nextTurn});
   if (spoken === false) nextTurn();
