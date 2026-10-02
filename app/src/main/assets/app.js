@@ -768,6 +768,16 @@ function revealRemainingAndNarrate(onDone) {
   if (spoken === false) finish();
 }
 
+function showRoundPointsAward(team, points){
+  const old = document.querySelector('.roundPointsAward');
+  if(old) old.remove();
+  const el = document.createElement('div');
+  el.className = 'roundPointsAward';
+  el.innerHTML = `<strong>+${points}</strong><span>${teamNames[team] || ''}</span>`;
+  document.body.appendChild(el);
+  requestAnimationFrame(() => el.classList.add('show'));
+  setTimeout(() => el.remove(), 1200);
+}
 function announceRoundWinner(team, points, reason='bank'){
   const name = team !== null && team !== undefined ? teamNames[team] : '';
   const lastRound = roundIndex >= questions.length - 1;
@@ -789,16 +799,26 @@ function endRoundAfterSteal(winnerTeam, successful) {
     awardHistory.push({team:winnerTeam, points:pointsWon});
     scores[winnerTeam] += pointsWon;
   }
+  // El banco siempre debe terminar asignado automáticamente.
+  // Si el robo falla, el banco vuelve al equipo que lo construyó.
+  const awardedTeam = successful ? winnerTeam : (winnerTeam === null ? 1 - currentTeam : winnerTeam);
+  if (!successful && pointsWon > 0) {
+    awardHistory.push({team:awardedTeam, points:pointsWon});
+    scores[awardedTeam] += pointsWon;
+  }
   bank = 0;
   phase = 'over';
   updateScoreUI();
   updateBankUI();
   updateTurnUI();
+  if (pointsWon > 0) showRoundPointsAward(awardedTeam, pointsWon);
   revealRemainingAndNarrate(() => {
     if (successful) announceRoundWinner(winnerTeam, pointsWon, 'steal');
     else {
       const lastRound = roundIndex >= questions.length - 1;
-      const message = isEn() ? 'Steal failed. The round ends.' : 'Robo fallido. La ronda termina.';
+      const message = isEn()
+        ? `Steal failed. ${teamNames[awardedTeam]} keeps the ${pointsWon}-point bank.`
+        : `Robo fallido. ${teamNames[awardedTeam]} conserva el banco de ${pointsWon} puntos.`;
       const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 900);
       const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
       if (spoken === false) finish();
@@ -815,6 +835,7 @@ function awardCompletedRound(team, points){
   updateScoreUI();
   updateBankUI();
   updateTurnUI();
+  if (points > 0) showRoundPointsAward(team, points);
   const message = isEn()
     ? `${teamNames[team]} wins the round and receives ${points} points.`
     : `${teamNames[team]} gana la ronda y recibe ${points} puntos.`;
