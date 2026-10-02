@@ -1583,8 +1583,14 @@ async function loadQuestionPool() {
 }
 
 loadState();
-loadQuestionPool();
+loadQuestionPool().then(() => offerResumeGame());
 updateTimerUI();
+
+window.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') saveActiveGame();
+});
+window.addEventListener('pagehide', saveActiveGame);
+window.addEventListener('beforeunload', saveActiveGame);
 
 $('#mode1v1').onclick = () => showPlayerCharacterSelector(showOneVsOneSetup);
 $('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
@@ -1639,6 +1645,7 @@ window.DentistasAppBack = function () {
     }
     const game = document.querySelector('#game');
     if (game && !game.classList.contains('hidden')) {
+      saveActiveGame();
       stopTimer();
       game.classList.add('hidden');
       document.querySelector('#home')?.classList.remove('hidden');
