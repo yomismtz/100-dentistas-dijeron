@@ -1410,6 +1410,4 @@ window.DentistasAppBack = function () {
 })();
 $('#faceoffTeam1')?.addEventListener('click',()=>finishFaceoff(0));
 $('#faceoffTeam2')?.addEventListener('click',()=>finishFaceoff(1));
-$('#answerSend')?.addEventListener('click',submitTypedAnswer);
-$('#answerText')?.addEventListener('keydown',e=>{if(e.key==='Enter')submitTypedAnswer();});
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
