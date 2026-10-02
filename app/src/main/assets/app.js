@@ -594,6 +594,7 @@ function finishFaceoff(winner){
   $('#answerEntry')?.classList.remove('hidden');
   currentTeam=winner==='cpu'?1:Number(winner)||0;
   updateTurnUI();
+  saveActiveGame();
   startTimer(TURN_SECONDS);
   if(winner==='cpu') scheduleCpuTurn();
 }
@@ -624,6 +625,7 @@ function startFaceoff(){
   }
   faceoffDoneThisRound=true;
   faceoffActive=true;
+  saveActiveGame();
   const fq=$('#faceoffQuestion');
   if(fq) fq.textContent=qText(questions[roundIndex]);
   $('#faceoff')?.classList.remove('hidden');
@@ -682,6 +684,7 @@ function startTimer(initialSeconds = TURN_SECONDS) {
       stopTimer();
       addStrike('timeout');
     }
+    saveActiveGame();
   }, 1000);
 }
 
@@ -931,6 +934,7 @@ function endRoundAfterSteal(winnerTeam, successful) {
   }
   bank = 0;
   phase = 'over';
+  clearActiveGame();
   updateScoreUI();
   updateBankUI();
   updateTurnUI();
@@ -956,6 +960,7 @@ function awardCompletedRound(team, points){
   const awardedPoints = bank;
   bank = 0;
   phase = 'over';
+  clearActiveGame();
   if (awardedPoints > 0) animateScoreGain(team, awardedPoints);
   updateScoreUI();
   updateBankUI();
@@ -979,6 +984,7 @@ function revealAnswer(idx, btn) {
 
   const q = questions[roundIndex];
   revealed[idx] = true;
+  saveActiveGame();
   btn.classList.remove('covered'); btn.classList.add('revealed'); btn.disabled = true;
 
   if (phase === 'steal') {
@@ -1051,6 +1057,7 @@ function addStrike(reason = 'manual') {
 
   if (strikes >= 3) return;
   strikes += 1;
+  saveActiveGame();
   updateStrikesUI();
   play(audio.bad);
 
@@ -1065,6 +1072,7 @@ function addStrike(reason = 'manual') {
     const previousTeam = currentTeam;
     currentTeam = 1 - currentTeam;
     phase = 'steal';
+    saveActiveGame();
     updateTurnUI();
     const intro = isEn()
       ? `Third mistake. ${teamNames[previousTeam]} loses control. ${teamNames[currentTeam]} can steal the bank.`
@@ -1114,6 +1122,7 @@ function undoAward() {
   currentTeam = last.team;
   phase = 'play';
   strikes = 0;
+  saveActiveGame();
 
   updateScoreUI();
   updateBankUI();
@@ -1304,6 +1313,7 @@ async function startNewGame() {
   bank = 0;
   currentTeam = 0;
   phase = 'play';
+  clearActiveGame();
 
   $('#home').classList.add('hidden');
   $('#game').classList.remove('hidden');
@@ -1315,6 +1325,7 @@ async function startNewGame() {
 function finishGame() {
   invalidateTurn();
   phase = 'over';
+  clearActiveGame();
   gameSound('victory');
   updateTurnUI();
 
