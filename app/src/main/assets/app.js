@@ -848,12 +848,36 @@ function flashThreeStrikes() {
   setTimeout(() => flash.classList.add('hidden'), 900);
 }
 
+function showErrorFeedback(message, level = 1) {
+  const el = $('#answerFeedback');
+  if (!el) return;
+  el.className = 'answerFeedback errorFeedback';
+  el.textContent = message;
+  el.dataset.level = String(level);
+  el.classList.remove('errorPulse');
+  void el.offsetWidth;
+  el.classList.add('errorPulse');
+  setTimeout(() => { if (el.dataset.level === String(level)) el.classList.remove('errorPulse'); }, 900);
+}
+
+function showCorrectFeedback(message) {
+  const el = $('#answerFeedback');
+  if (!el) return;
+  el.className = 'answerFeedback correctFeedback';
+  el.textContent = message;
+  el.classList.remove('correctPulse');
+  void el.offsetWidth;
+  el.classList.add('correctPulse');
+  setTimeout(() => el.classList.remove('correctPulse'), 900);
+}
+
 function addStrike(reason = 'manual') {
   if (phase === 'over') return;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
   if (phase === 'steal') {
     play(audio.bad);
+    showErrorFeedback(isEn() ? 'STEAL FAILED' : 'ROBO FALLIDO', 3);
     endRoundAfterSteal(null, false);
     return;
   }
@@ -862,6 +886,11 @@ function addStrike(reason = 'manual') {
   strikes += 1;
   updateStrikesUI();
   play(audio.bad);
+
+  const labels = isEn()
+    ? ['','FIRST MISTAKE','SECOND MISTAKE','THIRD MISTAKE']
+    : ['','PRIMER ERROR','SEGUNDO ERROR','TERCER ERROR'];
+  showErrorFeedback(labels[strikes], strikes);
 
   if (strikes >= 3) {
     strikes = 3;
@@ -889,7 +918,6 @@ function addStrike(reason = 'manual') {
     : false;
   if (spoken === false) resume();
 }
-
 function awardBank(team) {
   if (bank <= 0 || phase === 'over') return;
   stopTimer();
