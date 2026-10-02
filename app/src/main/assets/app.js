@@ -237,6 +237,7 @@ let lastBankValue = 0;
 let lastTurnSignature = '';
 let turnNarrationToken = 0;
 let soundGeneration = 0;
+let gamePaused = false;
 
 const audio = {
   start: $('#sndStart'),
@@ -376,6 +377,7 @@ function resumeActiveGame(snapshot) {
   awardHistory = Array.isArray(snapshot.awardHistory) ? snapshot.awardHistory : [];
   currentTeam = Number(snapshot.currentTeam) || 0;
   phase = snapshot.phase === 'steal' ? 'steal' : 'play';
+  gamePaused = false;
   timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
   faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
 
@@ -500,6 +502,38 @@ function stopTimer() {
     clearInterval(timerHandle);
     timerHandle = null;
   }
+}
+
+function pauseGame() {
+  if (phase === 'over' || !gameVisible()) return;
+  gamePaused = true;
+  stopTimer();
+  clearCpuTurn();
+  turnNarrationToken += 1;
+  window.DentistasNarrator?.stop?.();
+  updateTimerUI();
+  saveActiveGame();
+}
+
+function resumeGame() {
+  if (phase === 'over' || !gameVisible()) return;
+  gamePaused = false;
+  if (faceoffActive) { startFaceoff(); return; }
+  if (faceoffDoneThisRound || phase === 'steal') {
+    $('#answerEntry')?.classList.remove('hidden');
+    const resume = () => {
+      if (phase === 'over' || gamePaused) return;
+      startTimer(Math.max(1, timerRemaining));
+      if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+    };
+    if (phase === 'steal') {
+      const intro = isEn() ? 'STEAL! ' + teamNames[currentTeam] + ', answer now.' : '¡ROBO! ' + teamNames[currentTeam] + ', responde ahora.';
+      const spoken = narrate(intro,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:resume,onerror:resume});
+      if (spoken === false) resume();
+    } else resume();
+    return;
+  }
+  beginTurnAfterQuestion();
 }
 
 const ANSWER_STOP=new Set(['el','la','los','las','un','una','unos','unas','de','del','al','y','e','o','u','en','con','por','para','que','se','su','sus','es','son']);
@@ -718,6 +752,7 @@ function beginTurnAfterQuestion() {
 
 function startTimer(initialSeconds = TURN_SECONDS) {
   stopTimer();
+  if (gamePaused) return;
   if (phase === 'over' || !gameVisible()) {
     updateTimerUI();
     return;
@@ -853,8 +888,8 @@ function updateTurnUI() {
     lastTurnSignature = turnSignature;
   }
 
-  $('#buzz').disabled = phase === 'over';
-  document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || bank <= 0);
+  $('#buzz').disabled = phase === 'over' || gamePaused;
+  document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || gamePaused || bank <= 0);
   updateTimerUI();
 }
 
@@ -1373,6 +1408,7 @@ async function startNewGame() {
   bank = 0;
   currentTeam = 0;
   phase = 'play';
+  gamePaused = false;
   clearActiveGame();
 
   $('#home').classList.add('hidden');
@@ -1591,13 +1627,9 @@ function showPresenterControls() {
     });
   };
   $('#pPause').onclick = () => {
-    if (timerHandle) {
-      stopTimer();
-      $('#pPause').textContent = isEn() ? '▶ Resume' : '▶ Continuar';
-    } else {
-      startTimer(Math.max(1,timerRemaining));
-      $('#pPause').textContent = isEn() ? '⏸ Pause' : '⏸ Pausar';
-    }
+    closeModal(false);
+    if (gamePaused) resumeGame();
+    else pauseGame();
   };
   $('#pError').onclick = () => {
     closeModal(false);
