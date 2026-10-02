@@ -238,6 +238,7 @@ let lastTurnSignature = '';
 let turnNarrationToken = 0;
 let soundGeneration = 0;
 let gamePaused = false;
+let turnResolving = false;
 
 const audio = {
   start: $('#sndStart'),
@@ -297,13 +298,13 @@ function saveState() {
   localStorage.setItem('dentistas-settings', JSON.stringify({teamNames}));
 }
 
-const GAME_SAVE_KEY = 'dentistas-active-game-v10';
+const GAME_SAVE_KEY = 'dentistas-active-game-v12';
 
 function saveActiveGame() {
   try {
     if (!gameVisible() || phase === 'over' || !questions.length) return;
     const snapshot = {
-      version: 10,
+      version: 12,
       savedAt: Date.now(),
       gameConfig: JSON.parse(JSON.stringify(gameConfig)),
       questions: JSON.parse(JSON.stringify(questions)),
@@ -317,7 +318,8 @@ function saveActiveGame() {
       currentTeam,
       phase,
       timerRemaining,
-      faceoffDoneThisRound
+      faceoffDoneThisRound,
+      turnResolving: false
     };
     localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(snapshot));
   } catch (_) {}
@@ -345,7 +347,7 @@ function normalizeSavedGame(snapshot) {
 function readActiveGame() {
   try {
     const s = JSON.parse(localStorage.getItem(GAME_SAVE_KEY) || 'null');
-    if (!s || s.version !== 10 || !Array.isArray(s.questions) || !s.questions.length) return null;
+    if (!s || s.version !== 12 || !Array.isArray(s.questions) || !s.questions.length) return null;
     if (s.roundIndex < 0 || s.roundIndex >= s.questions.length) return null;
     if (!Array.isArray(s.scores) || s.scores.length !== 2) return null;
     if (!Array.isArray(s.revealed)) return null;
@@ -378,8 +380,10 @@ function resumeActiveGame(snapshot) {
   currentTeam = Number(snapshot.currentTeam) || 0;
   phase = snapshot.phase === 'steal' ? 'steal' : 'play';
   gamePaused = false;
+  turnResolving = false;
   timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
   faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
+  turnResolving = false;
 
   $('#home').classList.add('hidden');
   $('#game').classList.remove('hidden');
@@ -506,6 +510,7 @@ function stopTimer() {
 
 function pauseGame() {
   if (phase === 'over' || !gameVisible()) return;
+  turnResolving = false;
   gamePaused = true;
   stopTimer();
   clearCpuTurn();
@@ -517,6 +522,7 @@ function pauseGame() {
 
 function resumeGame() {
   if (phase === 'over' || !gameVisible()) return;
+  turnResolving = false;
   gamePaused = false;
   if (faceoffActive) { startFaceoff(); return; }
   if (faceoffDoneThisRound || phase === 'steal') {
@@ -651,6 +657,7 @@ window.DentistasVoice=window.DentistasVoice||{
   }
 };
 function submitVoiceAnswer(text){
+  if (phase === 'over' || gamePaused || turnResolving) return;
   const result=matchTypedAnswerDetailed(String(text||'').trim());
   if(result.status==='empty'){
     setAnswerFeedback('No se detectó una respuesta. Pulsa el micrófono y repite.','hint');return;
@@ -668,6 +675,7 @@ function submitVoiceAnswer(text){
   addStrike('answer');
 }
 function startVoiceAnswer(){
+  if (phase === 'over' || gamePaused || turnResolving) return;
   const b=$('#answerMic');if(b)b.textContent='🎙️ ESCUCHANDO';
   const lang=isEn()?'en-US':'es-MX';
   if(window.AndroidVoice?.isAvailable?.()){window.AndroidVoice.start(lang);return;}
@@ -680,7 +688,7 @@ function startVoiceAnswer(){
   try{rec.start();}catch(_){if(b)b.textContent='🎤 RESPONDER';}
 }
 function finishFaceoff(winner){
-  if(!faceoffActive)return;
+  if(!faceoffActive || gamePaused || turnResolving)return;
   faceoffActive=false;
   clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
   $('#faceoff')?.classList.add('hidden');
@@ -692,6 +700,7 @@ function finishFaceoff(winner){
   if(winner==='cpu') scheduleCpuTurn();
 }
 function startFaceoff(){
+  if (gamePaused || turnResolving) return;
   // Paso 3: el robo es automático. No hay segundo careo; el equipo rival recibe directamente el turno.
   if(phase === 'steal'){
     faceoffActive=false;
@@ -734,6 +743,7 @@ function startFaceoff(){
   }
 }
 function beginTurnAfterQuestion() {
+  if (gamePaused || turnResolving) return;
   invalidateTurn();
   timerRemaining = TURN_SECONDS;
   updateTimerUI();
@@ -888,7 +898,9 @@ function updateTurnUI() {
     lastTurnSignature = turnSignature;
   }
 
-  $('#buzz').disabled = phase === 'over' || gamePaused;
+  $('#buzz').disabled = phase === 'over' || gamePaused || turnResolving;
+  const mic = $('#answerMic');
+  if (mic) mic.disabled = phase === 'over' || gamePaused || turnResolving;
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || gamePaused || bank <= 0);
   updateTimerUI();
 }
@@ -912,6 +924,7 @@ function showRoundTransition() {
 
 function showRound(reset = true) {
   if (!questions.length) return;
+  turnResolving = false;
   const preservedTime = timerRemaining;
   stopTimer();
   roundIndex = Math.max(0, Math.min(roundIndex, questions.length - 1));
@@ -1010,7 +1023,7 @@ function announceRoundWinner(team, points, reason='bank'){
     setTimeout(() => {
       if (lastRound) finishGame();
       else nextRound();
-    }, 900);
+    }, 500);
   };
   const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX', rate:.9, onend:finish, onerror:finish});
   if (spoken === false) finish();
@@ -1042,7 +1055,7 @@ function endRoundAfterSteal(winnerTeam, successful) {
       const message = isEn()
         ? `Steal failed. ${teamNames[awardedTeam]} keeps the ${pointsWon}-point bank.`
         : `Robo fallido. ${teamNames[awardedTeam]} conserva el banco de ${pointsWon} puntos.`;
-      const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 650);
+      const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 500);
       const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
       if (spoken === false) finish();
     }
@@ -1068,13 +1081,14 @@ function awardCompletedRound(team, points){
   const finish = () => setTimeout(() => {
     if (roundIndex >= questions.length - 1) finishGame();
     else nextRound();
-  }, 650);
+  }, 500);
   const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
   if (spoken === false) finish();
 }
 
 function revealAnswer(idx, btn) {
-  if (phase === 'over' || revealed[idx]) return;
+  if (phase === 'over' || gamePaused || turnResolving || revealed[idx]) return;
+  turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
   const q = questions[roundIndex];
@@ -1085,7 +1099,7 @@ function revealAnswer(idx, btn) {
   if (phase === 'steal') {
     play(audio.good);
     const answerAnnouncement = `${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`;
-    const finish = () => endRoundAfterSteal(currentTeam, true);
+    const finish = () => { turnResolving = false; endRoundAfterSteal(currentTeam, true); };
     showCorrectFeedback(isEn() ? 'STEAL SUCCESSFUL' : '¡ROBO EXITOSO!');
     const spoken = narrate(answerAnnouncement, {lang:qVoiceLang(q), rate:.93, onend:finish, onerror:finish});
     if (spoken === false) finish();
@@ -1100,12 +1114,18 @@ function revealAnswer(idx, btn) {
   updateTurnUI();
   const allRevealed = revealed.every(Boolean);
   if (allRevealed) {
-    const finishRound = () => awardCompletedRound(currentTeam, bank);
+    const finishRound = () => { turnResolving = false; awardCompletedRound(currentTeam, bank); };
     const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:finishRound, onerror:finishRound});
     if (spoken === false) finishRound();
     return;
   }
-  const nextTurn = () => { if (phase !== 'over' && gameVisible()) beginTurnAfterQuestion(); };
+  const nextTurn = () => {
+    if (phase === 'over' || !gameVisible()) return;
+    setTimeout(() => {
+      turnResolving = false;
+      if (!gamePaused && phase !== 'over' && gameVisible()) beginTurnAfterQuestion();
+    }, 500);
+  };
   const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:nextTurn, onerror:nextTurn});
   if (spoken === false) nextTurn();
 }
@@ -1140,12 +1160,14 @@ function showCorrectFeedback(message) {
 }
 
 function addStrike(reason = 'manual') {
-  if (phase === 'over') return;
+  if (phase === 'over' || gamePaused || turnResolving) return;
+  turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
   if (phase === 'steal') {
     play(audio.bad);
     showErrorFeedback(isEn() ? 'STEAL FAILED' : 'ROBO FALLIDO', 3);
+    turnResolving = false;
     endRoundAfterSteal(null, false);
     return;
   }
@@ -1172,7 +1194,7 @@ function addStrike(reason = 'manual') {
     const intro = isEn()
       ? `Third mistake. ${teamNames[previousTeam]} loses control. ${teamNames[currentTeam]} can steal the bank.`
       : `Tercer error. ${teamNames[previousTeam]} pierde el control. ${teamNames[currentTeam]} puede robar el banco.`;
-    const startSteal = () => beginTurnAfterQuestion();
+    const startSteal = () => { turnResolving = false; beginTurnAfterQuestion(); };
     const spoken = narrate(intro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:startSteal, onerror:startSteal});
     if (spoken === false) startSteal();
     return;
@@ -1182,7 +1204,7 @@ function addStrike(reason = 'manual') {
   const warning = isEn()
     ? `Second mistake. ${teamNames[1-currentTeam]} may now discuss possible answers as a team.`
     : `Segundo error. ${teamNames[1-currentTeam]} ya puede reunirse y buscar alternativas.`;
-  const resume = () => beginTurnAfterQuestion();
+  const resume = () => { turnResolving = false; beginTurnAfterQuestion(); };
   const spoken = strikes === 2
     ? narrate(warning, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:resume, onerror:resume})
     : false;
@@ -1409,6 +1431,7 @@ async function startNewGame() {
   currentTeam = 0;
   phase = 'play';
   gamePaused = false;
+  turnResolving = false;
   clearActiveGame();
 
   $('#home').classList.add('hidden');
