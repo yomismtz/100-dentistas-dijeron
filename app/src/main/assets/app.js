@@ -514,6 +514,8 @@ function startFaceoff(){
   }
   faceoffDoneThisRound=true;
   faceoffActive=true;
+  const fq=$('#faceoffQuestion');
+  if(fq) fq.textContent=qText(questions[roundIndex]);
   $('#faceoff')?.classList.remove('hidden');
   $('#answerEntry')?.classList.add('hidden');
   const b1=$('#faceoffTeam1'), b2=$('#faceoffTeam2');
