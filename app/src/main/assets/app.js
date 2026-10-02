@@ -1132,7 +1132,7 @@ function showHelp() {
         <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
         <li>On the third mistake, control passes to the opposing team.</li>
         <li>If the bank has points, the opponent gets <b>30 seconds and one answer</b> to steal it.</li>
-        <li>If the steal succeeds, the opponent wins the whole bank. If it fails or time expires, the bank is lost.</li>
+        <li>If the steal succeeds, the opponent wins the whole bank. If it fails, the points remain with the original team.</li>
         <li><b>AWARD BANK</b> remains available as a moderator control.</li>
         <li>After round 8, the final score and winner are shown.</li>
       </ol>
