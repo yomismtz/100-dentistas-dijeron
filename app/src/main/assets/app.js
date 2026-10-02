@@ -838,6 +838,7 @@ function revealAnswer(idx, btn) {
     play(audio.good);
     const answerAnnouncement = `${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`;
     const finish = () => endRoundAfterSteal(currentTeam, true);
+    showCorrectFeedback(isEn() ? 'STEAL SUCCESSFUL' : '¡ROBO EXITOSO!');
     const spoken = narrate(answerAnnouncement, {lang:qVoiceLang(q), rate:.93, onend:finish, onerror:finish});
     if (spoken === false) finish();
     return;
