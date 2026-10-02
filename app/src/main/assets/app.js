@@ -1468,7 +1468,7 @@ function showHelp() {
         <li>On the third mistake, control passes to the opposing team.</li>
         <li>If the bank has points, the opponent gets <b>30 seconds and one answer</b> to steal it.</li>
         <li>If the steal succeeds, the opponent wins the whole bank. If it fails, the points remain with the original team.</li>
-        <li><b>AWARD BANK</b> remains available as a moderator control.</li>
+        <li>Round points are assigned <b>automatically</b> to the team that wins the round.</li>
         <li>After round 8, the final score and winner are shown.</li>
       </ol>
       <p>Current bank: <b>${questionPool.length || 116} questions</b>.</p>
@@ -1489,7 +1489,7 @@ function showHelp() {
         <li>Al tercer error pierde el control y el turno pasa al rival.</li>
         <li>Si había puntos en el banco, el rival dispone de <b>30 segundos y una sola respuesta</b> para robarlo.</li>
         <li>Si el rival acierta, gana todo el banco. Si falla, los puntos permanecen con el equipo original.</li>
-        <li><b>DAR BANCO</b> queda como control manual del moderador.</li>
+        <li>Los puntos de la ronda se asignan <b>automáticamente</b> al equipo que gana la ronda.</li>
         <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
       </ol>
       <p>Base actual: <b>${questionPool.length || 116} preguntas</b>.</p>
@@ -1538,7 +1538,7 @@ function showPresenterControls() {
     <h2>Presenter controls</h2>
     <div class="menuStack presenterMenu">
       <button id="pRepeat">🔊 Repeat question</button>
-      <button id="pReveal">👁 Reveal all answers</button>
+      <button id="pReveal">👁 Reveal answers and finish round</button>
       <button id="pPause">⏸ Pause / resume</button>
       <button id="pError">✖ Add strike</button>
     </div>`
@@ -1546,7 +1546,7 @@ function showPresenterControls() {
     <h2>Controles del moderador</h2>
     <div class="menuStack presenterMenu">
       <button id="pRepeat">🔊 Repetir pregunta</button>
-      <button id="pReveal">👁 Revelar respuestas</button>
+      <button id="pReveal">👁 Revelar respuestas y cerrar ronda</button>
       <button id="pPause">⏸ Pausar / continuar</button>
       <button id="pError">✖ Añadir error</button>
     </div>`);
@@ -1558,8 +1558,11 @@ function showPresenterControls() {
   };
   $('#pReveal').onclick = () => {
     closeModal(false);
+    if (phase === 'over') return;
+    const team = currentTeam;
     revealRemainingAndNarrate(() => {
-      if (phase !== 'over') beginTurnAfterQuestion();
+      if (phase === 'over') return;
+      awardCompletedRound(team, bank);
     });
   };
   $('#pPause').onclick = () => {
