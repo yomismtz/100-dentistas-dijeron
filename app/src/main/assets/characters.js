@@ -80,8 +80,11 @@ const CHARACTERS = [
   { name:'SANTA APOLONIA', specialty:'SANTA APOLONIA', category:null, role:'Patrona de la Odontología', icon:'🕊️', image:'characters/49_santa_apolonia.png', tone:'legendary-gold', rarity:'LEGENDARIO',
     strengths:['Historia dental','Protección','Sabiduría'], weaknesses:['Desbloqueo avanzado'], power:'LEGADO DE APOLONIA', tool:'Palma de mártir',
     stats:[['Sabiduría',5],['Historia',5],['Protección',5],['Conocimiento',5],['Prestigio',5]] },
-  { name:'EL DIOS DE LOS DIENTES', specialty:'DOMINIO TOTAL DE LA ODONTOLOGÍA', category:null, role:'La Leyenda Final', icon:'👑', image:'characters/50_dios_de_los_dientes.png', tone:'legendary-gold', rarity:'MÍTICO',
-    strengths:['Todas las áreas','Rondas extremas','Dominio total'], weaknesses:['Solo para quien complete el juego'], power:'DOMINIO ABSOLUTO', tool:'Molar de oro',
+  { name:'EL HADA DE LOS DIENTES', specialty:'EL HADA DE LOS DIENTES', category:null, role:'La Guardiana de las Rondas Rápidas', icon:'🧚', image:'characters/aurora_hada_dientes.webp', tone:'legendary-mint', rarity:'LEGENDARIO',
+    strengths:['Velocidad','Magia dental','Rondas rápidas'], weaknesses:['Desbloqueo avanzado'], power:'MAGIA DEL HADA', tool:'Varita dental',
+    stats:[['Velocidad',5],['Estrategia',5],['Conocimiento',5],['Magia',5],['Precisión',5]] },
+  { name:'EL SUPERDIENTE', specialty:'EL SUPERDIENTE', category:null, role:'La Leyenda Final', icon:'🦸', image:'characters/50_dios_de_los_dientes.png', tone:'legendary-gold', rarity:'MÍTICO',
+    strengths:['Todas las áreas','Dominio total','Juego completo'], weaknesses:['Solo para quien complete todos los juegos'], power:'DOMINIO ABSOLUTO', tool:'Molar de oro',
     stats:[['Conocimiento',5],['Diagnóstico',5],['Precisión',5],['Velocidad',5],['Complejidad',5]] }
 ]
 
@@ -91,15 +94,15 @@ window.DentistasCharacters = CHARACTERS;
 const CHARACTER_PROGRESS_KEY = 'dentistas-character-progression-v2';
 const FINAL_PROGRESS_KEY = 'dentistas-final-progress-v2';
 const FINAL_UNLOCK_KEY = 'dentistas-final-unlocks-v2';
-const MUELA_DIFFICULT_FINAL_WINS = 5;
-const SANTA_EXTREME_FINAL_WINS = 5;
-const RATON_SPECIALISTS = 30;
+const MUELA_QUICK_WINS = 5;
+const HADA_QUICK_WINS = 10;
+const SANTA_QUICK_WINS = 30;
 
 function loadCharacterProgress(){try{return JSON.parse(localStorage.getItem(CHARACTER_PROGRESS_KEY)||'{}')||{};}catch(_){return {};}}
 function saveCharacterProgress(p){try{localStorage.setItem(CHARACTER_PROGRESS_KEY,JSON.stringify(p));}catch(_){}}
 function loadFinalProgress(){
-  try{return Object.assign({wins:0,difficultWins:0,extremeWins:0,curiositiesExtremeWins:0,legendaryWins:0,bestScore:0},JSON.parse(localStorage.getItem(FINAL_PROGRESS_KEY)||'{}')||{});}
-  catch(_){return {wins:0,difficultWins:0,extremeWins:0,curiositiesExtremeWins:0,legendaryWins:0,bestScore:0};}
+  try{return Object.assign({wins:0,difficultWins:0,extremeWins:0,curiositiesWins:0,curiositiesExtremeWins:0,legendaryWins:0,bestScore:0},JSON.parse(localStorage.getItem(FINAL_PROGRESS_KEY)||'{}')||{});}
+  catch(_){return {wins:0,difficultWins:0,extremeWins:0,curiositiesWins:0,curiositiesExtremeWins:0,legendaryWins:0,bestScore:0};}
 }
 function saveFinalProgress(p){try{localStorage.setItem(FINAL_PROGRESS_KEY,JSON.stringify(p));}catch(_){}}
 function finalUnlockedNames(){try{return JSON.parse(localStorage.getItem(FINAL_UNLOCK_KEY)||'[]')||[];}catch(_){return [];}}
@@ -121,7 +124,10 @@ function recordFinalResult({score=0,difficulty='',area='',legendary=false}={}){
     p.wins+=1;
     if(d==='advanced'||d==='dificil'||d==='difícil') p.difficultWins+=1;
     if(d==='extreme'||d==='extremo') p.extremeWins+=1;
-    if((d==='extreme'||d==='extremo')&&/curiosidades/i.test(a)) p.curiositiesExtremeWins+=1;
+    if(/curiosidades/i.test(a)) {
+      p.curiositiesWins+=1;
+      if(d==='extreme'||d==='extremo') p.curiositiesExtremeWins+=1;
+    }
     if(legendary) p.legendaryWins+=1;
   }
   let unlocked=[];
@@ -130,10 +136,14 @@ function recordFinalResult({score=0,difficulty='',area='',legendary=false}={}){
     if(ch && !finalUnlockedNames().includes(ch.name)){unlockCharacterFromFinal(ch.name);unlocked.push(ch.name);}
   }
   saveFinalProgress(p);
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL RATÓN DE LOS DIENTES')) && !finalUnlockedNames().includes('EL RATÓN DE LOS DIENTES')){unlockCharacterFromFinal('EL RATÓN DE LOS DIENTES');unlocked.push('EL RATÓN DE LOS DIENTES');}
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='LA MUELA DEL JUICIO')) && !finalUnlockedNames().includes('LA MUELA DEL JUICIO')){unlockCharacterFromFinal('LA MUELA DEL JUICIO');unlocked.push('LA MUELA DEL JUICIO');}
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='SANTA APOLONIA')) && !finalUnlockedNames().includes('SANTA APOLONIA')){unlockCharacterFromFinal('SANTA APOLONIA');unlocked.push('SANTA APOLONIA');}
-  if(characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL DIOS DE LOS DIENTES')) && !finalUnlockedNames().includes('EL DIOS DE LOS DIENTES')){unlockCharacterFromFinal('EL DIOS DE LOS DIENTES');unlocked.push('EL DIOS DE LOS DIENTES');}
+  const unlockIfEligible=(name,eligible)=>{
+    if(eligible && !finalUnlockedNames().includes(name)){unlockCharacterFromFinal(name);unlocked.push(name);}
+  };
+  unlockIfEligible('EL RATÓN DE LOS DIENTES', p.curiositiesWins>=1);
+  unlockIfEligible('LA MUELA DEL JUICIO', p.wins>=MUELA_QUICK_WINS);
+  unlockIfEligible('EL HADA DE LOS DIENTES', p.wins>=HADA_QUICK_WINS);
+  unlockIfEligible('SANTA APOLONIA', p.wins>=SANTA_QUICK_WINS);
+  unlockIfEligible('EL SUPERDIENTE', unlockedSpecialistCount()>=45);
   return {progress:p,unlocked:[...new Set(unlocked)]};
 }
 function recordCharacterModuleResult(moduleName,percent){
@@ -148,26 +158,22 @@ function characterUnlocked(character){
   if(unlocked.includes(character.name)) return true;
   if(character.rarity==='ESPECIALISTA') return false;
   const fp=loadFinalProgress();
-  if(character.name==='EL RATÓN DE LOS DIENTES') return unlockedSpecialistCount()>=RATON_SPECIALISTS || fp.curiositiesExtremeWins>=1;
-  if(character.name==='LA MUELA DEL JUICIO') return fp.difficultWins>=MUELA_DIFFICULT_FINAL_WINS;
-  if(character.name==='SANTA APOLONIA') return fp.extremeWins>=SANTA_EXTREME_FINAL_WINS;
-  if(character.name==='EL DIOS DE LOS DIENTES'){
-    return unlockedSpecialistCount()>=45 &&
-      characterUnlocked(CHARACTERS.find(ch=>ch.name==='EL RATÓN DE LOS DIENTES')) &&
-      characterUnlocked(CHARACTERS.find(ch=>ch.name==='LA MUELA DEL JUICIO')) &&
-      characterUnlocked(CHARACTERS.find(ch=>ch.name==='SANTA APOLONIA')) &&
-      fp.legendaryWins>=1;
-  }
+  if(character.name==='EL RATÓN DE LOS DIENTES') return fp.curiositiesWins>=1;
+  if(character.name==='LA MUELA DEL JUICIO') return fp.wins>=MUELA_QUICK_WINS;
+  if(character.name==='EL HADA DE LOS DIENTES') return fp.wins>=HADA_QUICK_WINS;
+  if(character.name==='SANTA APOLONIA') return fp.wins>=SANTA_QUICK_WINS;
+  if(character.name==='EL SUPERDIENTE') return unlockedSpecialistCount()>=45;
   return false;
 }
 function characterUnlockLabel(character){
   if(!character) return '';
   if(character.name==='NOVA') return 'Disponible desde el inicio';
   if(character.rarity==='ESPECIALISTA') return 'Supera 300 puntos en la ronda final de '+character.category+' en SÚPER DIFÍCIL';
-  if(character.name==='EL RATÓN DE LOS DIENTES') return 'Desbloquea 30 especialistas o gana Curiosidades en Extremo';
-  if(character.name==='LA MUELA DEL JUICIO') return 'Gana '+MUELA_DIFFICULT_FINAL_WINS+' rondas finales en Difícil';
-  if(character.name==='SANTA APOLONIA') return 'Gana '+SANTA_EXTREME_FINAL_WINS+' rondas finales en Extremo';
-  if(character.name==='EL DIOS DE LOS DIENTES') return 'Completa los 45 especialistas, las tres leyendas y la Final Legendaria';
+  if(character.name==='EL RATÓN DE LOS DIENTES') return 'Gana la ronda rápida de Datos Curiosos de Odontología';
+  if(character.name==='LA MUELA DEL JUICIO') return 'Gana 5 rondas rápidas';
+  if(character.name==='EL HADA DE LOS DIENTES') return 'Gana 10 rondas rápidas';
+  if(character.name==='SANTA APOLONIA') return 'Gana 30 rondas rápidas';
+  if(character.name==='EL SUPERDIENTE') return 'Gana todos los 45 juegos de especialidad';
   return 'Progreso del juego';
 }
 window.DentistasCharacterUnlocked=characterUnlocked;
