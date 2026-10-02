@@ -460,37 +460,71 @@ function submitTypedAnswer(){
 }
 window.DentistasVoice=window.DentistasVoice||{
   nativeResult(text,ok){
-    const b=$('#answerMic');if(b)b.textContent='🎤 VOZ';
-    if(!ok){setAnswerFeedback('No se entendió la respuesta. Intenta otra vez o escríbela.','hint');return;}
-    const input=$('#answerText');if(input)input.value=String(text||'');
-    submitTypedAnswer();
+    const b=$('#answerMic');if(b)b.textContent='🎤 RESPONDER';
+    if(!ok){setAnswerFeedback('No se entendió la respuesta. Pulsa el micrófono y repite.','hint');return;}
+    submitVoiceAnswer(String(text||''));
   }
 };
+function submitVoiceAnswer(text){
+  const result=matchTypedAnswerDetailed(String(text||'').trim());
+  if(result.status==='empty'){
+    setAnswerFeedback('No se detectó una respuesta. Pulsa el micrófono y repite.','hint');return;
+  }
+  if(result.status==='ambiguous'){
+    setAnswerFeedback('Respuesta ambigua. Repite la respuesta de forma más específica.','ambiguous');return;
+  }
+  if(result.status==='correct'){
+    const btn=document.querySelectorAll('#answers button')[result.index];
+    setAnswerFeedback('✓ Respuesta correcta','correct');
+    if(btn)revealAnswer(result.index,btn);
+    return;
+  }
+  setAnswerFeedback('✖ Esa respuesta no está entre las opciones ocultas.','wrong');
+  addStrike('answer');
+}
 function startVoiceAnswer(){
   const b=$('#answerMic');if(b)b.textContent='🎙️ ESCUCHANDO';
   const lang=isEn()?'en-US':'es-MX';
   if(window.AndroidVoice?.isAvailable?.()){window.AndroidVoice.start(lang);return;}
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){if(b)b.textContent='🎤 VOZ';setAnswerFeedback('El reconocimiento de voz no está disponible. Puedes escribir la respuesta.','hint');return;}
+  if(!SR){if(b)b.textContent='🎤 RESPONDER';setAnswerFeedback('El reconocimiento de voz no está disponible en este dispositivo.','hint');return;}
   const rec=new SR();rec.lang=lang;rec.interimResults=false;rec.maxAlternatives=1;
-  rec.onresult=e=>{const t=e.results?.[0]?.[0]?.transcript||'';if($('#answerText'))$('#answerText').value=t;submitTypedAnswer();};
-  rec.onerror=()=>{if(b)b.textContent='🎤 VOZ';setAnswerFeedback('No se entendió la respuesta.','hint');};
-  rec.onend=()=>{if(b)b.textContent='🎤 VOZ';};
-  try{rec.start();}catch(_){if(b)b.textContent='🎤 VOZ';}
+  rec.onresult=e=>{const t=e.results?.[0]?.[0]?.transcript||'';submitVoiceAnswer(t);};
+  rec.onerror=()=>{if(b)b.textContent='🎤 RESPONDER';setAnswerFeedback('No se entendió la respuesta. Pulsa el micrófono y repite.','hint');};
+  rec.onend=()=>{if(b)b.textContent='🎤 RESPONDER';};
+  try{rec.start();}catch(_){if(b)b.textContent='🎤 RESPONDER';}
 }
 function finishFaceoff(winner){
-  if(!faceoffActive)return;faceoffActive=false;clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
-  $('#faceoff')?.classList.add('hidden');$('#answerEntry')?.classList.remove('hidden');
-  currentTeam=winner==='cpu'?1:0;updateTurnUI();startTimer(TURN_SECONDS);
+  if(!faceoffActive)return;
+  faceoffActive=false;
+  clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
+  $('#faceoff')?.classList.add('hidden');
+  $('#answerEntry')?.classList.remove('hidden');
+  currentTeam=winner==='cpu'?1:Number(winner)||0;
+  updateTurnUI();
+  startTimer(TURN_SECONDS);
   if(winner==='cpu') scheduleCpuTurn();
 }
 function startFaceoff(){
-  if(faceoffDoneThisRound){ $('#answerEntry')?.classList.remove('hidden'); startTimer(TURN_SECONDS); if(gameConfig.mode==='cpu'&&currentTeam===1) scheduleCpuTurn(); return; }
+  if(faceoffDoneThisRound){
+    $('#answerEntry')?.classList.remove('hidden');
+    startTimer(TURN_SECONDS);
+    if(gameConfig.mode==='cpu'&&currentTeam===1) scheduleCpuTurn();
+    return;
+  }
   faceoffDoneThisRound=true;
-  if(gameConfig.mode!=='cpu'){ $('#answerEntry')?.classList.remove('hidden'); startTimer(TURN_SECONDS); return; }
-  faceoffActive=true;$('#faceoff')?.classList.remove('hidden');$('#answerEntry')?.classList.add('hidden');
-  const ch=cpuCharacterObject();const base=window.DentistasCharacterCPU?.delayFor?.(ch)||1200;
-  faceoffCpuHandle=setTimeout(()=>finishFaceoff('cpu'),Math.max(700,Math.min(3000,base+Math.random()*900)));
+  faceoffActive=true;
+  $('#faceoff')?.classList.remove('hidden');
+  $('#answerEntry')?.classList.add('hidden');
+  const b1=$('#faceoffTeam1'), b2=$('#faceoffTeam2');
+  if(b1)b1.textContent='🦷 '+(teamNames[0]||'EQUIPO 1');
+  if(b2)b2.textContent='🦷 '+(teamNames[1]||'EQUIPO 2');
+  if(gameConfig.mode==='cpu'){
+    if(b2)b2.textContent='🤖 '+(teamNames[1]||'COMPUTADORA');
+    const ch=cpuCharacterObject();
+    const base=window.DentistasCharacterCPU?.delayFor?.(ch)||1200;
+    faceoffCpuHandle=setTimeout(()=>finishFaceoff(1),Math.max(700,Math.min(3000,base+Math.random()*900)));
+  }
 }
 function beginTurnAfterQuestion() {
   invalidateTurn();
@@ -1325,7 +1359,8 @@ window.DentistasAppBack = function () {
   `;
   document.head.appendChild(st);
 })();
-$('#faceoffPlayer')?.addEventListener('click',()=>finishFaceoff('player'));
+$('#faceoffTeam1')?.addEventListener('click',()=>finishFaceoff(0));
+$('#faceoffTeam2')?.addEventListener('click',()=>finishFaceoff(1));
 $('#answerSend')?.addEventListener('click',submitTypedAnswer);
 $('#answerText')?.addEventListener('keydown',e=>{if(e.key==='Enter')submitTypedAnswer();});
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
