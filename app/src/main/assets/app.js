@@ -235,6 +235,7 @@ let audioCtx = null;
 let roundTransitionHandle = null;
 let lastBankValue = 0;
 let lastTurnSignature = '';
+let lastActiveGameSaveAt = 0;
 let turnNarrationToken = 0;
 let soundGeneration = 0;
 let gamePaused = false;
@@ -302,6 +303,8 @@ const GAME_SAVE_KEY = 'dentistas-active-game-v14';
 
 function saveActiveGame() {
   try {
+    const reason = arguments.length ? String(arguments[0] || '').slice(0,80) : '';
+    if (reason === 'timer' && Date.now() - lastActiveGameSaveAt < 5000) return;
     if (!gameVisible() || phase === 'over' || !questions.length) return;
     const snapshot = {
       version: 14,
@@ -321,9 +324,10 @@ function saveActiveGame() {
       faceoffDoneThisRound,
       gamePaused,
       turnResolving: false,
-      savedReason: arguments.length ? String(arguments[0] || '').slice(0,80) : ''
+      savedReason: reason
     };
     localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(snapshot));
+    lastActiveGameSaveAt = Date.now();
   } catch (_) {}
 }
 
@@ -849,7 +853,7 @@ function startTimer(initialSeconds = TURN_SECONDS) {
       stopTimer();
       addStrike('timeout');
     }
-    saveActiveGame();
+    saveActiveGame('timer');
   }, 1000);
 }
 
@@ -980,8 +984,8 @@ function showRoundTransition() {
   // La pregunta se narra inmediatamente después: no superponer la voz de "Ronda"
   // con la narración de la pregunta. La transición es solo visual y muy breve.
   clearTimeout(roundTransitionHandle);
-  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 300);
-  setTimeout(() => overlay.remove(), 520);
+  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 220);
+  setTimeout(() => overlay.remove(), 360);
 }
 
 function showRound(reset = true) {
@@ -1023,7 +1027,6 @@ function showRound(reset = true) {
 
   updateTurnUI();
   if (reset) showRoundTransition();
-  preloadAdjacentRounds(roundIndex);
   if (reset) beginTurnAfterQuestion();
   else startTimer(preservedTime);
 }
