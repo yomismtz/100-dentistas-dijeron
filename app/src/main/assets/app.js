@@ -825,6 +825,7 @@ function revealAnswer(idx, btn) {
     return;
   }
 
+  showCorrectFeedback(isEn() ? 'CORRECT!' : '¡CORRECTO!');
   const gainedPoints = (Number(q.a[idx][1]) || 0) * roundMultiplier();
   bank += gainedPoints;
   updateBankUI();
