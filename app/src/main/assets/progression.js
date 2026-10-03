@@ -7,7 +7,7 @@
     .progressBar{height:14px;border-radius:99px;background:#071019;overflow:hidden;border:1px solid #36515d}
     .progressBar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#20b8c9,#e4b54d);transition:width .5s ease}
     .progressMeta{display:flex;justify-content:space-between;gap:1rem;margin-top:.4rem;font-weight:900}
-    .collectionGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.55rem;max-height:54vh;overflow:auto;padding:.2rem}
+    .collectionGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.55rem;max-height:58vh;overflow:auto;padding:.2rem}.collectionSection{margin:.8rem 0 .35rem;font-weight:950;letter-spacing:.05em;color:#e8c76c}.collectionSection:first-child{margin-top:.25rem}.collectionCard{transition:transform .16s ease,box-shadow .16s ease}.collectionCard:hover{transform:translateY(-2px)}
     .collectionCard{position:relative;min-height:145px;padding:.35rem;border:1px solid #3b6974;border-radius:13px;background:#0b1d27;color:#fff;cursor:pointer;overflow:hidden}
     .collectionCard.unlocked{border-color:#c7a657;box-shadow:0 0 13px #c7a65722}
     .collectionCard.legendary{border-color:#a96bc9}
@@ -40,6 +40,7 @@
   const unlocked=ch=>typeof window.DentistasCharacterUnlocked==='function'&&window.DentistasCharacterUnlocked(ch);
   const num=ch=>chars().indexOf(ch)+1;
   const progress=()=>{const all=chars().filter(c=>c.rarity==='ESPECIALISTA');return {all,done:all.filter(unlocked).length};};
+  const rarityLabel=ch=>ch.rarity==='ESPECIALISTA'?'ESPECIALISTA':(ch.rarity==='LEGENDARIO'||ch.rarity==='MÍTICO'?'LEGENDARIO':'INICIAL');
   const label=ch=>typeof window.DentistasCharacterUnlockLabel==='function'?window.DentistasCharacterUnlockLabel(ch):'Progreso del juego';
 
   function render(){
@@ -56,7 +57,7 @@
         <p style="margin:.5rem 0 0;opacity:.78">Colección: <b>${total} personajes</b> · Finales ganadas ≥300: <b>${finalWins}</b></p>
       </div>
       <div class="collectionLegend"><span>🦷 Especialista</span><span>🌟 Legendario</span><span>🔒 Bloqueado</span><span>🎓 Inicial</span></div>
-      <div class="collectionGrid">
+      <div class="collectionSection">🎓 ESPECIALISTAS · 45</div><div class="collectionGrid">
         ${chars().map(ch=>{
           const ok=unlocked(ch), n=num(ch), special=ch.rarity==='ESPECIALISTA', legendary=ch.rarity==='LEGENDARIO'||ch.rarity==='MÍTICO';
           return `<button type="button" class="collectionCard ${ok?'unlocked':'locked'} ${legendary?'legendary':''}" data-char="${esc(ch.name)}">
@@ -83,7 +84,7 @@
         <img src="${esc(ch.image)}" alt="">
         <div>
           <h3>${esc(ch.category||ch.specialty)}</h3>
-          <p style="margin:.25rem 0"><b>${esc(ch.role)}</b></p>
+          <p style="margin:.25rem 0"><b>${esc(ch.role||ch.ability||'Especialista odontológico')}</b></p><p style="margin:.25rem 0;opacity:.86"><b>Habilidad:</b> ${esc(ch.ability||ch.skill||'Especialidad odontológica')}</p>
           <p style="opacity:.78">${ok?'Personaje desbloqueado.':esc(label(ch))}</p>
           ${stats.map(([name,value])=>`<div class="statRow"><span>${esc(name)}</span><b>${Number(value)||0}/5</b><div class="miniBar"><span style="width:${Math.min(100,(Number(value)||0)*20)}%"></span></div></div>`).join('')}
         </div>
