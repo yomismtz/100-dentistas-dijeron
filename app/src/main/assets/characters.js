@@ -169,6 +169,8 @@ function characterUnlockLabel(character){
   if(character.name==='EL SUPERDIENTE') return 'Gana todos los 45 juegos de especialidad';
   return 'Progreso del juego';
 }
+window.DentistasLoadFinalProgress=loadFinalProgress;
+window.DentistasLoadCharacterProgress=loadCharacterProgress;
 window.DentistasCharacterUnlocked=characterUnlocked;
 window.DentistasCharacterUnlockLabel=characterUnlockLabel;
 window.DentistasUnlockCharacterFromFinal=unlockCharacterFromFinal;
