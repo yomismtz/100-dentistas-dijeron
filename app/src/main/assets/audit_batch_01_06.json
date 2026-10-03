@@ -1,0 +1,112 @@
+{
+  "batch": "01-06",
+  "auditedAt": "2026-10-02",
+  "categories": [
+    {
+      "category": 1,
+      "file": "bank44_original_01.json",
+      "questions": 100,
+      "difficulty": {
+        "facil": 30,
+        "medio": 20,
+        "dificil": 20,
+        "extremo": 30
+      },
+      "structuralErrors": 0,
+      "duplicateAnswers": 0,
+      "totalPointsErrors": 0,
+      "uniqueLeaderErrors": 0,
+      "englishTranslated": 100
+    },
+    {
+      "category": 2,
+      "file": "bank44_original_02.json",
+      "questions": 100,
+      "difficulty": {
+        "facil": 30,
+        "medio": 20,
+        "dificil": 20,
+        "extremo": 30
+      },
+      "structuralErrors": 0,
+      "duplicateAnswers": 0,
+      "totalPointsErrors": 0,
+      "uniqueLeaderErrors": 0,
+      "englishTranslated": 100
+    },
+    {
+      "category": 3,
+      "file": "bank44_original_03.json",
+      "questions": 100,
+      "difficulty": {
+        "facil": 30,
+        "medio": 20,
+        "dificil": 20,
+        "extremo": 30
+      },
+      "structuralErrors": 0,
+      "duplicateAnswers": 0,
+      "totalPointsErrors": 0,
+      "uniqueLeaderErrors": 0,
+      "englishTranslated": 50
+    },
+    {
+      "category": 4,
+      "file": "bank44_original_04.json",
+      "questions": 100,
+      "difficulty": {
+        "facil": 30,
+        "medio": 20,
+        "dificil": 20,
+        "extremo": 30
+      },
+      "structuralErrors": 0,
+      "duplicateAnswers": 0,
+      "totalPointsErrors": 0,
+      "uniqueLeaderErrors": 0,
+      "englishTranslated": 30
+    },
+    {
+      "category": 5,
+      "file": "bank44_original_05.json",
+      "questions": 100,
+      "difficulty": {
+        "facil": 30,
+        "medio": 20,
+        "dificil": 20,
+        "extremo": 30
+      },
+      "structuralErrors": 0,
+      "duplicateAnswers": 0,
+      "totalPointsErrors": 0,
+      "uniqueLeaderErrors": 0,
+      "englishTranslated": 0
+    },
+    {
+      "category": 6,
+      "file": "bank44_original_06.json",
+      "questions": 100,
+      "difficulty": {
+        "facil": 30,
+        "medio": 20,
+        "dificil": 20,
+        "extremo": 30
+      },
+      "structuralErrors": 0,
+      "duplicateAnswers": 0,
+      "totalPointsErrors": 0,
+      "uniqueLeaderErrors": 0,
+      "englishTranslated": 0
+    }
+  ],
+  "totals": {
+    "questions": 600,
+    "structuralErrors": 0,
+    "duplicateAnswers": 0,
+    "totalPointsErrors": 0,
+    "uniqueLeaderErrors": 0,
+    "englishTranslated": 280,
+    "englishPending": 320
+  },
+  "note": "La auditoría estructural no sustituye una revisión clínica semántica pregunta por pregunta. Las traducciones se contabilizan mediante los overrides ingleses cargados por la app."
+}
