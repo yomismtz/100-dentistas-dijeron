@@ -299,7 +299,8 @@ function saveState() {
   localStorage.setItem('dentistas-settings', JSON.stringify({teamNames}));
 }
 
-const GAME_SAVE_KEY = 'dentistas-active-game-v14';
+const GAME_SAVE_KEY = 'dentistas-active-game-v15';
+const GAME_SAVE_VERSION = 15;
 
 function saveActiveGame() {
   try {
@@ -307,7 +308,7 @@ function saveActiveGame() {
     if (reason === 'timer' && Date.now() - lastActiveGameSaveAt < 5000) return;
     if (!gameVisible() || phase === 'over' || !questions.length) return;
     const snapshot = {
-      version: 14,
+      version: GAME_SAVE_VERSION,
       savedAt: Date.now(),
       gameConfig: JSON.parse(JSON.stringify(gameConfig)),
       questions: JSON.parse(JSON.stringify(questions)),
@@ -394,7 +395,7 @@ function readActiveGame() {
     if (!raw) return null;
 
     const snapshot = JSON.parse(raw);
-    if (!snapshot || snapshot.version !== 14) {
+    if (!snapshot || (snapshot.version !== 14 && snapshot.version !== GAME_SAVE_VERSION)) {
       clearActiveGame();
       return null;
     }
@@ -405,6 +406,11 @@ function readActiveGame() {
       return null;
     }
 
+    // Migración transparente de partidas v14: al reabrir se actualizan al formato actual.
+    if (normalized.version !== GAME_SAVE_VERSION) {
+      normalized.version = GAME_SAVE_VERSION;
+      try { localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(normalized)); } catch (_) {}
+    }
     return normalized;
   } catch (_) {
     clearActiveGame();
@@ -2073,6 +2079,7 @@ if (exitGame) exitGame.onclick = () => {
   invalidateTurn();
   stopGameAudio();
   phase = 'over';
+  clearActiveGame();
   $('#game').classList.add('hidden');
   $('#home').classList.remove('hidden');
 };
