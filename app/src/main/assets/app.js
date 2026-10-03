@@ -1634,6 +1634,7 @@ function startFinalChallenge(){
   const showFinalResults = () => {
     cleanup();
     const won = total >= 300;
+    window.DentistasStats?.recordFinal?.(won);
     const unlockArea = selectedAreas.length === 1 ? selectedAreas[0] : '';
     const result = window.DentistasRecordFinalResult?.({
       score:total,
