@@ -253,6 +253,9 @@ const audio = {
 
 function tone(freq=440, duration=0.12, type='sine', volume=0.05) {
   try {
+    const audioState = window.DentistasAudio?.state;
+    if (audioState?.muted) return;
+    if (audioState) volume *= Math.max(0, Math.min(1, Number(audioState.master) || 0));
     audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
     const osc = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
@@ -293,6 +296,9 @@ function stopGameAudio() {
 
 function play(sound) {
   try {
+    const audioState = window.DentistasAudio?.state;
+    if (audioState?.muted) return;
+    sound.volume = audioState ? Math.max(0, Math.min(1, Number(audioState.master) || 0)) : 1;
     sound.currentTime = 0;
     const p = sound.play();
     if (p && p.catch) p.catch(() => {});
