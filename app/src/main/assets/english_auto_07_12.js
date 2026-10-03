@@ -222,12 +222,15 @@
       if(x.startsWith(a)){
         const rest=x.slice(a.length).replace(/\?$/,"").trim();
         const tr=translateClause(rest);
-        if(a==="¿Qué información aporta " || a==="¿Qué aporta "){
-          return b.replace("...","").trim()+" "+tr+"?";
-        }
-        if(a==="¿Cómo se interpreta clínicamente " || a==="¿Cómo se utiliza " || a==="¿Cómo se evalúa clínicamente "){
-          return b.replace("...","").trim()+" "+tr+"?";
-        }
+        if(a==="¿Qué información aporta ") return "What information does "+tr+" provide?";
+        if(a==="¿Qué aporta ") return "What does "+tr+" provide?";
+        if(a==="¿Cómo se interpreta clínicamente ") return "How is "+tr+" interpreted clinically?";
+        if(a==="¿Cómo se utiliza ") return "How is "+tr+" used?";
+        if(a==="¿Cómo se evalúa clínicamente ") return "How is "+tr+" evaluated clinically?";
+        if(a==="¿Qué objetivos debe cumplir ") return "What objectives should "+tr+" meet?";
+        if(a==="¿Qué funciones cumple ") return "What functions does "+tr+" perform?";
+        if(a==="¿Qué función cumple ") return "What function does "+tr+" serve?";
+        if(a==="¿Qué características hacen útil ") return "What characteristics make "+tr+" useful?";
         return b+tr+"?";
       }
     }
