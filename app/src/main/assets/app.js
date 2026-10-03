@@ -2134,6 +2134,7 @@ async function loadQuestionPool() {
 }
 
 loadState();
+window.DentistasQuestionPool=()=>questionPool;
 loadQuestionPool().then(() => offerResumeGame());
 updateTimerUI();
 
