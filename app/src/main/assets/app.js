@@ -236,6 +236,10 @@ let roundTransitionHandle = null;
 let lastBankValue = 0;
 let lastTurnSignature = '';
 let lastActiveGameSaveAt = 0;
+let sessionCorrect = 0;
+let sessionStrikes = 0;
+let sessionSteals = 0;
+let sessionStealAttempts = 0;
 let turnNarrationToken = 0;
 let soundGeneration = 0;
 let gamePaused = false;
@@ -1184,11 +1188,13 @@ function revealAnswer(idx, btn) {
 
   const q = questions[roundIndex];
   revealed[idx] = true;
+  sessionCorrect += 1;
   saveActiveGame();
   btn.classList.remove('covered'); btn.classList.add('revealed'); btn.disabled = true;
 
   if (phase === 'steal') {
-    play(audio.good);
+    sessionStealAttempts += 1;
+    sessionSteals += 1;
     const answerAnnouncement = `${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`;
     const finish = () => { turnResolving = false; endRoundAfterSteal(currentTeam, true); };
     showCorrectFeedback(isEn() ? 'STEAL SUCCESSFUL' : '¡ROBO EXITOSO!');
@@ -1252,11 +1258,13 @@ function showCorrectFeedback(message) {
 
 function addStrike(reason = 'manual') {
   if (phase === 'over' || gamePaused || turnResolving) return;
+  sessionStrikes += 1;
   if (strikes >= 3 && phase !== 'steal') return;
   turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
   if (phase === 'steal') {
+    sessionStealAttempts += 1;
     play(audio.bad);
     showErrorFeedback(isEn() ? 'STEAL FAILED' : 'ROBO FALLIDO', 3);
     turnResolving = false;
@@ -1768,6 +1776,10 @@ async function startNewGame() {
   revealed = [];
   strikes = 0;
   bank = 0;
+  sessionCorrect = 0;
+  sessionStrikes = 0;
+  sessionSteals = 0;
+  sessionStealAttempts = 0;
   currentTeam = 0;
   phase = 'play';
   gamePaused = false;
@@ -1782,6 +1794,17 @@ async function startNewGame() {
 }
 
 function finishGame() {
+  const totalPoints = Math.max(0, Number(scores[0]) || 0) + Math.max(0, Number(scores[1]) || 0);
+  const outcome = scores[0] > scores[1] ? 'win' : scores[1] > scores[0] ? 'loss' : 'tie';
+  window.DentistasStats?.recordGame?.({
+    outcome,
+    points: totalPoints,
+    rounds: questions.length,
+    correct: sessionCorrect,
+    strikes: sessionStrikes,
+    steals: sessionSteals,
+    stealAttempts: sessionStealAttempts
+  });
   invalidateTurn();
   phase = 'over';
   clearActiveGame();
