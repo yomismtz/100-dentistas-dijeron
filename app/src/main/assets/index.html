@@ -32,7 +32,7 @@
     <section class="board">
       <div class="questionRow"><h1 id="question"></h1><div class="timerBox" title="Tiempo para responder"><span>TIEMPO</span><div><strong id="timer">30</strong><small>s</small></div></div><div class="bank" title="Puntos revelados en esta ronda"><span>BANCO</span><strong id="bank">0</strong></div></div>
       <div id="faceoff" class="faceoff hidden"><div class="faceoffTitle">⚡ CAREO ⚡</div><div id="faceoffQuestion" class="faceoffQuestion"></div><p>Lee la pregunta y pulsa primero tu botón. Quien pulse primero gana el derecho a responder.</p><div class="faceoffButtons"><button id="faceoffTeam1">🦷 EQUIPO 1</button><button id="faceoffTeam2">🦷 EQUIPO 2</button></div></div>
-      <div id="answerEntry" class="answerEntry hidden"><button id="answerMic" type="button" title="Responder por voz">🎤 RESPONDER</button><div id="answerFeedback" class="answerFeedback" aria-live="assertive"></div></div>
+      <div id="answerEntry" class="answerEntry hidden"><button id="answerMic" type="button" title="Responder por voz">🎤 RESPONDER</button><div id="voiceRecognized" class="voiceRecognized hidden" aria-live="polite"><span id="voiceRecognizedText"></span><div class="voiceConfirmActions"><button id="voiceConfirm" type="button">✓ CONFIRMAR</button><button id="voiceRepeat" type="button">↻ REPETIR</button></div></div><div id="answerFeedback" class="answerFeedback" aria-live="assertive"></div></div>
       <div id="answers" class="answers"></div><div id="strikes" class="strikes" aria-label="Errores"></div>
     </section>
     <footer class="scorebar"><section class="team teamOne"><button class="teamName" data-team="1">EQUIPO 1</button><strong id="s1">0</strong><button class="award" data-team="1">DAR BANCO</button></section><section class="centerControls"><button id="buzz" class="danger">✖ ERROR</button><button id="undo" title="Deshacer última asignación">↶</button><button id="resetRound" title="Reiniciar ronda">↻ RONDA</button></section><section class="team teamTwo"><button class="teamName" data-team="2">EQUIPO 2</button><strong id="s2">0</strong><button class="award" data-team="2">DAR BANCO</button></section></footer>
@@ -45,6 +45,6 @@
 <script src="english_overrides_03_011_020.js"></script>
 <script src="english_overrides_03_021_030.js"></script>
 <script src="english_overrides_03_031_040.js"></script>
-<script src="english_overrides_03_041_050.js"></script><script src="english_overrides_04.js"></script><script src="app.js"></script><script src="flow_polish.js"></script><script src="characters.js"></script><script src="primer_parcial.js"></script>
+<script src="english_overrides_03_041_050.js"></script><script src="english_overrides_04.js"></script><script src="app.js"></script><script src="flow_polish.js"></script><script src="voice_polish.js"></script><script src="characters.js"></script><script src="primer_parcial.js"></script>
 </body>
 </html>
