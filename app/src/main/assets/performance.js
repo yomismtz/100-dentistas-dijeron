@@ -51,6 +51,5 @@
   window.addEventListener('dentistas-round-finished', cleanupRoundResources);
   window.addEventListener('dentistas-memory-check', memoryCheck);
 
-  // Diagnóstico ligero: no falla en WebView donde performance.memory no existe.
-  setInterval(memoryCheck, 60000);
+  // El diagnóstico se ejecuta al cambiar de ronda; no mantenemos un temporizador permanente.
 })();
