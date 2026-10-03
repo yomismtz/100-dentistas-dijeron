@@ -540,9 +540,9 @@ function preloadRound(index) {
 }
 
 function preloadAdjacentRounds(index = roundIndex) {
+  // Solo anticipamos la siguiente pregunta para reducir memoria y trabajo del WebView.
   preloadRound(index);
   preloadRound(index + 1);
-  preloadRound(index + 2);
 }
 
 function updateTimerUI() {
@@ -853,6 +853,7 @@ function startTimer(initialSeconds = TURN_SECONDS) {
       stopTimer();
       addStrike('timeout');
     }
+    // El guardado ya está limitado por ventana de tiempo; evitamos escrituras innecesarias.
     saveActiveGame('timer');
   }, 1000);
 }
