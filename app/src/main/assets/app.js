@@ -540,9 +540,18 @@ function preloadRound(index) {
 }
 
 function preloadAdjacentRounds(index = roundIndex) {
-  // Solo anticipamos la siguiente pregunta para reducir memoria y trabajo del WebView.
+  // Solo anticipamos la siguiente pregunta y descartamos las anteriores.
   preloadRound(index);
   preloadRound(index + 1);
+
+  const keep = new Set([index, index + 1].map(i => {
+    const q = questions[i];
+    return q ? String(q.id || questionKey(q) || i) : null;
+  }).filter(Boolean));
+
+  roundPreloadCache.forEach((_, key) => {
+    if (!keep.has(key)) roundPreloadCache.delete(key);
+  });
 }
 
 function updateTimerUI() {
@@ -1028,6 +1037,12 @@ function showRound(reset = true) {
 
   updateTurnUI();
   if (reset) showRoundTransition();
+  try {
+    window.dispatchEvent(new CustomEvent('dentistas-round-shown', {
+      detail: { roundIndex, total: questions.length }
+    }));
+    window.DentistasPerformance?.memoryCheck?.();
+  } catch (_) {}
   if (reset) beginTurnAfterQuestion();
   else startTimer(preservedTime);
 }
