@@ -2001,6 +2001,50 @@ function showPresenterControls() {
   };
 }
 
+function auditQuestionRecord(q, source) {
+  const issues = [];
+  const text = String(q?.q || '').trim();
+  if (!text) issues.push('pregunta vacía');
+  if (!Array.isArray(q?.a) || q.a.length < 3 || q.a.length > 7) issues.push('respuestas fuera de 3–7');
+  const seen = new Set();
+  (q?.a || []).forEach((a, i) => {
+    const answer = String(a?.[0] || '').trim();
+    const points = Number(a?.[1]);
+    if (!answer) issues.push('respuesta vacía #' + (i + 1));
+    const key = answer.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ');
+    if (seen.has(key)) issues.push('respuesta duplicada');
+    seen.add(key);
+    if (!Number.isFinite(points) || points <= 0) issues.push('puntos inválidos');
+  });
+  const points = (q?.a || []).map(a => Number(a?.[1]));
+  const total = points.reduce((s,p) => s + p, 0);
+  if (points.length && total !== 100) issues.push('puntos no suman 100');
+  const max = points.length ? Math.max(...points) : 0;
+  if (points.length && points.filter(p => p === max).length !== 1) issues.push('sin líder único');
+  return {ok: issues.length === 0, issues, source, id: q?.id || null};
+}
+
+function buildQuestionAudit(records) {
+  const audit = { totalInput: records.length, valid: 0, invalid: 0, duplicates: 0, issues: [] };
+  const ids = new Set();
+  const textKeys = new Set();
+  records.forEach(q => {
+    const result = auditQuestionRecord(q, q?.__source || '');
+    if (result.ok) audit.valid += 1;
+    else {
+      audit.invalid += 1;
+      if (audit.issues.length < 100) audit.issues.push(result);
+    }
+    const idKey = q?.id ? String(q.id) : '';
+    const textKey = String(q?.q || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+    if (idKey && ids.has(idKey)) audit.duplicates += 1;
+    if (textKey && textKeys.has(textKey)) audit.duplicates += 1;
+    if (idKey) ids.add(idKey);
+    if (textKey) textKeys.add(textKey);
+  });
+  return audit;
+}
+
 async function loadQuestionPool() {
   const task = (async () => {
     const combined = [];
@@ -2017,7 +2061,11 @@ async function loadQuestionPool() {
               const total = points.reduce((sum,p)=>sum+p,0);
               const highest = validPoints ? Math.max(...points) : 0;
               const uniqueLeader = validPoints && points.filter(p => p === highest).length === 1;
-              if (validPoints && total === 100 && uniqueLeader) combined.push({...q, area:specialtyArea(q, file)});
+              if (validPoints && total === 100 && uniqueLeader) {
+                const normalized = {...q, area:specialtyArea(q, file), __source:file};
+                const audit = auditQuestionRecord(normalized, file);
+                if (audit.ok) combined.push(normalized);
+              }
             }
           });
         }
@@ -2045,6 +2093,9 @@ async function loadQuestionPool() {
     }
 
     questionPool = dedupeQuestionPool(combined);
+    window.DentistasQuestionAudit = buildQuestionAudit(combined);
+    window.DentistasQuestionAudit.uniquePool = questionPool.length;
+    window.DentistasQuestionAudit.sources = BANK_FILES.length;
     updateScoreUI();
     return questionPool;
   })();
