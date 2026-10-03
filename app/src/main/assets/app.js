@@ -300,6 +300,7 @@ function saveState() {
 }
 
 const GAME_SAVE_KEY = 'dentistas-active-game-v15';
+const LEGACY_GAME_SAVE_KEY = 'dentistas-active-game-v14';
 const GAME_SAVE_VERSION = 15;
 
 function saveActiveGame() {
@@ -333,7 +334,7 @@ function saveActiveGame() {
 }
 
 function clearActiveGame() {
-  try { localStorage.removeItem(GAME_SAVE_KEY); } catch (_) {}
+  try { localStorage.removeItem(GAME_SAVE_KEY); localStorage.removeItem(LEGACY_GAME_SAVE_KEY); } catch (_) {}
 }
 
 function normalizeSavedGame(snapshot) {
@@ -391,7 +392,7 @@ function normalizeSavedGame(snapshot) {
 
 function readActiveGame() {
   try {
-    const raw = localStorage.getItem(GAME_SAVE_KEY);
+    const raw = localStorage.getItem(GAME_SAVE_KEY) || localStorage.getItem(LEGACY_GAME_SAVE_KEY);
     if (!raw) return null;
 
     const snapshot = JSON.parse(raw);
@@ -409,7 +410,7 @@ function readActiveGame() {
     // Migración transparente de partidas v14: al reabrir se actualizan al formato actual.
     if (normalized.version !== GAME_SAVE_VERSION) {
       normalized.version = GAME_SAVE_VERSION;
-      try { localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(normalized)); } catch (_) {}
+      try { localStorage.setItem(GAME_SAVE_KEY, JSON.stringify(normalized)); localStorage.removeItem(LEGACY_GAME_SAVE_KEY); } catch (_) {}
     }
     return normalized;
   } catch (_) {
