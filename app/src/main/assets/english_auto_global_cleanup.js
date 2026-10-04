@@ -48,7 +48,7 @@ function clean(s){
  let x=String(s||"");
  for(const k of Object.keys(M).sort((a,b)=>b.length-a.length))x=x.replace(new RegExp("(?<![\\p{L}\\p{N}])"+esc(k)+"(?![\\p{L}\\p{N}])","giu"),M[k]);
  x=x.replace(/\bwhat\s+what\b/gi,"what").replace(/\bwhat\s+qué\b/gi,"what").replace(/\bwhich\s+which\b/gi,"which");
- x=x.replace(/\s+([?.])/g,"$1").replace(/\?+$/,"?").replace(/\s+/g," ").trim();
+ x=x.replace(/[¿¡]/g,"").replace(/\s+([?.])/g,"$1").replace(/\?+$/,"?").replace(/\s+/g," ").trim();
  return x;
 }
 for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate1318","DentistasEnglishAutoTranslate1924","DentistasEnglishAutoTranslate2530","DentistasEnglishAutoTranslate31","DentistasEnglishAutoTranslate3245"]){
