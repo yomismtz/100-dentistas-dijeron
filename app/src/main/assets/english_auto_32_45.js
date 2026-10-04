@@ -1,4 +1,5 @@
 /* English translation layer for categories 32-45. */
+/* Build candidate: 32-45 verified. */
 (function(){
 const T={
 "diagnóstico integral":"comprehensive diagnosis","historia clínica":"medical history","examen clínico":"clinical examination","evaluación periodontal":"periodontal assessment","análisis oclusal":"occlusal analysis","estudios complementarios indicados":"indicated ancillary studies",
