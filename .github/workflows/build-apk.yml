@@ -23,6 +23,10 @@ jobs:
           python3 scripts/validate_45_categories.py
 
 
+      - name: Auditar traducción inglesa 1-45
+        run: |
+          node scripts/audit_english_translation.js
+
       - name: Validar JavaScript del juego
         run: |
           node --check app/src/main/assets/app.js
@@ -65,9 +69,9 @@ jobs:
         run: |
           gradle --no-daemon bundleRelease
 
-      - name: Build debug APK
+      - name: Build release APK
         run: |
-          gradle --no-daemon assembleDebug
+          gradle --no-daemon assembleRelease
 
       - name: Inspect AAB signature
         run: |
@@ -85,8 +89,8 @@ jobs:
       - name: Upload release APK
         uses: actions/upload-artifact@v4
         with:
-          name: 100-dentistas-dijeron-v1.2-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: 100-dentistas-dijeron-v1.2-release-apk
+          path: app/build/outputs/apk/release/app-release.apk
           if-no-files-found: error
 
 # Release build trigger: compile current main after completed app changes.
