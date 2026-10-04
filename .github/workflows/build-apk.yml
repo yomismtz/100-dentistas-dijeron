@@ -88,3 +88,5 @@ jobs:
           name: 100-dentistas-dijeron-v1.2-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+
+# Release build trigger: compile current main after completed app changes.
