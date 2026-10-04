@@ -41,7 +41,7 @@ const M={
 "signos":"signs","principios":"principles","espacio":"space","presión":"pressure","presion":"pressure","método":"method","metodo":"method",
 "manejo":"management","recursos":"resources","participación":"participation","participacion":"participation","competencia":"competence",
 "protocolo":"protocol","impresión":"impression","impresion":"impression","cubeta":"tray","rodillos":"rims","montaje":"arrangement",
-"procesamiento":"processing","polimerización":"polymerization","polimerizacion":"polymerization","rebasado":"relining","mucosa":"mucosa","abrir":"open","datos de identificación":"identification data","datos":"data","identificación":"identification","verificarse":"be verified"
+"procesamiento":"processing","polimerización":"polymerization","polimerizacion":"polymerization","rebasado":"relining","mucosa":"mucosa","abrir":"open","datos de identificación":"identification data","datos":"data","identificación":"identification","verificarse":"be verified","planificar":"planning","cuatro":"four","aspectos":"aspects","grupo":"group","uso":"use","vasoconstrictores":"vasoconstrictors","evaluación médica":"medical assessment","evaluacion medica":"medical assessment","administrar":"administer","cálculo":"calculation","calculo":"calculation","pacientes pediátricos":"pediatric patients","pediátricos":"pediatric","pediatric":"pediatric","características clínicas":"clinical characteristics","caracteristicas clinicas":"clinical characteristics","precauciones":"precautions","agujas":"needles","aspiración":"aspiration","aspiracion":"aspiration","inyectar":"inject","anestésicos":"anesthetics","anestesicos":"anesthetics"
 };
 function esc(s){return s.replace(/[.*+?^$()|[\]\\]/g,"\\$&")}
 function clean(s){
