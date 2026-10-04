@@ -41,7 +41,7 @@ const M={
 "signos":"signs","principios":"principles","espacio":"space","presión":"pressure","presion":"pressure","método":"method","metodo":"method",
 "manejo":"management","recursos":"resources","participación":"participation","participacion":"participation","competencia":"competence",
 "protocolo":"protocol","impresión":"impression","impresion":"impression","cubeta":"tray","rodillos":"rims","montaje":"arrangement",
-"procesamiento":"processing","polimerización":"polymerization","polimerizacion":"polymerization","rebasado":"relining","mucosa":"mucosa"
+"procesamiento":"processing","polimerización":"polymerization","polimerizacion":"polymerization","rebasado":"relining","mucosa":"mucosa","abrir":"open","datos de identificación":"identification data","datos":"data","identificación":"identification","verificarse":"be verified"
 };
 function esc(s){return s.replace(/[.*+?^$()|[\]\\]/g,"\\$&")}
 function clean(s){
