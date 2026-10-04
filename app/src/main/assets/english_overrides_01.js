@@ -3,4 +3,4 @@ Object.assign(window.DentistasEnglishOverrides, {"ORG1-001":["What basic behavio
 Object.defineProperties(Object.prototype, {
   q_en: { configurable:true, get:function(){ const id=this&&this.id; return id&&window.DentistasEnglishOverrides["bank44_original_01"]?.[id]?.[0] || undefined; }},
   a_en: { configurable:true, get:function(){ const id=this&&this.id; return id&&window.DentistasEnglishOverrides["bank44_original_01"]?.[id]?.[1] || undefined; }}
-}););
+});
