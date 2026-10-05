@@ -73,11 +73,14 @@ jobs:
         run: |
           gradle --no-daemon assembleRelease
 
-      - name: Inspect AAB signature
+      - name: Inspect Release artifacts and SHA-256
         run: |
           echo "AAB generado:"
-          ls -lh app/build/outputs/bundle/release/app-release.aab
-          jarsigner -verify -verbose -certs app/build/outputs/bundle/release/app-release.aab || true
+          ls -lh app/build/outputs/bundle/release/*.aab
+          echo "APK generado:"
+          ls -lh app/build/outputs/apk/release/*.apk
+          jarsigner -verify -verbose -certs app/build/outputs/bundle/release/*.aab || true
+          sha256sum app/build/outputs/bundle/release/*.aab app/build/outputs/apk/release/*.apk | tee release-sha256.txt
 
       - name: Upload release AAB
         uses: actions/upload-artifact@v4
@@ -90,7 +93,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: 100-dentistas-dijeron-v1.2-release-apk
-          path: app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
+      - name: Upload SHA-256
+        uses: actions/upload-artifact@v4
+        with:
+          name: 100-dentistas-dijeron-v1.2-sha256
+          path: release-sha256.txt
           if-no-files-found: error
 
 # Release build trigger: compile current main after completed app changes.
