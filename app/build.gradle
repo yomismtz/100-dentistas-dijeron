@@ -34,6 +34,9 @@ android {
             minifyEnabled false
             if (hasUploadSigning) {
                 signingConfig signingConfigs.release
+            } else {
+                // Fallback únicamente para generar un APK/AAB instalable de prueba; no es apto para Play Console.
+                signingConfig signingConfigs.debug
             }
         }
     }
