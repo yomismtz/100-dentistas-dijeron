@@ -9,7 +9,7 @@
       "answers": [
         {
           "text": "documentar hallazgos",
-          "points": 45
+          "points": 30
         },
         {
           "text": "comparar cambios",
@@ -26,7 +26,7 @@
       "answers": [
         {
           "text": "documentar hallazgos",
-          "points": 35
+          "points": 25
         },
         {
           "text": "comparar cambios",
@@ -47,7 +47,7 @@
       "answers": [
         {
           "text": "documentar hallazgos",
-          "points": 30
+          "points": 20
         },
         {
           "text": "comparar cambios",
@@ -101,7 +101,7 @@
       "answers": [
         {
           "text": "reproducibilidad",
-          "points": 45
+          "points": 30
         },
         {
           "text": "comparabilidad",
@@ -118,7 +118,7 @@
       "answers": [
         {
           "text": "reproducibilidad",
-          "points": 35
+          "points": 25
         },
         {
           "text": "comparabilidad",
@@ -139,7 +139,7 @@
       "answers": [
         {
           "text": "reproducibilidad",
-          "points": 30
+          "points": 20
         },
         {
           "text": "comparabilidad",
@@ -193,7 +193,7 @@
       "answers": [
         {
           "text": "frontal",
-          "points": 45
+          "points": 30
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -210,7 +210,7 @@
       "answers": [
         {
           "text": "frontal",
-          "points": 35
+          "points": 25
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -231,7 +231,7 @@
       "answers": [
         {
           "text": "frontal",
-          "points": 30
+          "points": 20
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -285,7 +285,7 @@
       "answers": [
         {
           "text": "frontal",
-          "points": 45
+          "points": 30
         },
         {
           "text": "lateral derecha",
@@ -302,7 +302,7 @@
       "answers": [
         {
           "text": "frontal",
-          "points": 35
+          "points": 25
         },
         {
           "text": "lateral derecha",
@@ -323,7 +323,7 @@
       "answers": [
         {
           "text": "frontal",
-          "points": 30
+          "points": 20
         },
         {
           "text": "lateral derecha",
@@ -377,7 +377,7 @@
       "answers": [
         {
           "text": "separar labios y mejillas",
-          "points": 45
+          "points": 30
         },
         {
           "text": "exponer superficies dentales",
@@ -394,7 +394,7 @@
       "answers": [
         {
           "text": "separar labios y mejillas",
-          "points": 35
+          "points": 25
         },
         {
           "text": "exponer superficies dentales",
@@ -415,7 +415,7 @@
       "answers": [
         {
           "text": "separar labios y mejillas",
-          "points": 30
+          "points": 20
         },
         {
           "text": "exponer superficies dentales",
@@ -469,7 +469,7 @@
       "answers": [
         {
           "text": "capturar superficies indirectas",
-          "points": 45
+          "points": 30
         },
         {
           "text": "obtener vistas oclusales",
@@ -486,7 +486,7 @@
       "answers": [
         {
           "text": "capturar superficies indirectas",
-          "points": 35
+          "points": 25
         },
         {
           "text": "obtener vistas oclusales",
@@ -507,7 +507,7 @@
       "answers": [
         {
           "text": "capturar superficies indirectas",
-          "points": 30
+          "points": 20
         },
         {
           "text": "obtener vistas oclusales",
@@ -561,7 +561,7 @@
       "answers": [
         {
           "text": "dirección de la luz",
-          "points": 45
+          "points": 30
         },
         {
           "text": "intensidad",
@@ -578,7 +578,7 @@
       "answers": [
         {
           "text": "dirección de la luz",
-          "points": 35
+          "points": 25
         },
         {
           "text": "intensidad",
@@ -599,7 +599,7 @@
       "answers": [
         {
           "text": "dirección de la luz",
-          "points": 30
+          "points": 20
         },
         {
           "text": "intensidad",
@@ -653,7 +653,7 @@
       "answers": [
         {
           "text": "apertura",
-          "points": 45
+          "points": 30
         },
         {
           "text": "velocidad de obturación",
@@ -670,7 +670,7 @@
       "answers": [
         {
           "text": "apertura",
-          "points": 35
+          "points": 25
         },
         {
           "text": "velocidad de obturación",
@@ -691,7 +691,7 @@
       "answers": [
         {
           "text": "apertura",
-          "points": 30
+          "points": 20
         },
         {
           "text": "velocidad de obturación",
@@ -745,7 +745,7 @@
       "answers": [
         {
           "text": "apertura del diafragma",
-          "points": 45
+          "points": 30
         },
         {
           "text": "distancia de enfoque",
@@ -762,7 +762,7 @@
       "answers": [
         {
           "text": "apertura del diafragma",
-          "points": 35
+          "points": 25
         },
         {
           "text": "distancia de enfoque",
@@ -783,7 +783,7 @@
       "answers": [
         {
           "text": "apertura del diafragma",
-          "points": 30
+          "points": 20
         },
         {
           "text": "distancia de enfoque",
@@ -837,7 +837,7 @@
       "answers": [
         {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 45
+          "points": 30
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -854,7 +854,7 @@
       "answers": [
         {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 35
+          "points": 25
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -875,7 +875,7 @@
       "answers": [
         {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 30
+          "points": 20
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -929,7 +929,7 @@
       "answers": [
         {
           "text": "iluminación controlada",
-          "points": 45
+          "points": 30
         },
         {
           "text": "balance de blancos adecuado",
@@ -946,7 +946,7 @@
       "answers": [
         {
           "text": "iluminación controlada",
-          "points": 35
+          "points": 25
         },
         {
           "text": "balance de blancos adecuado",
@@ -967,7 +967,7 @@
       "answers": [
         {
           "text": "iluminación controlada",
-          "points": 30
+          "points": 20
         },
         {
           "text": "balance de blancos adecuado",
@@ -1021,7 +1021,7 @@
       "answers": [
         {
           "text": "detalle suficiente",
-          "points": 45
+          "points": 30
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1038,7 +1038,7 @@
       "answers": [
         {
           "text": "detalle suficiente",
-          "points": 35
+          "points": 25
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1059,7 +1059,7 @@
       "answers": [
         {
           "text": "detalle suficiente",
-          "points": 30
+          "points": 20
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1113,7 +1113,7 @@
       "answers": [
         {
           "text": "campo de interés",
-          "points": 45
+          "points": 30
         },
         {
           "text": "orientación",
@@ -1130,7 +1130,7 @@
       "answers": [
         {
           "text": "campo de interés",
-          "points": 35
+          "points": 25
         },
         {
           "text": "orientación",
@@ -1151,7 +1151,7 @@
       "answers": [
         {
           "text": "campo de interés",
-          "points": 30
+          "points": 20
         },
         {
           "text": "orientación",
@@ -1205,7 +1205,7 @@
       "answers": [
         {
           "text": "posición de cabeza",
-          "points": 45
+          "points": 30
         },
         {
           "text": "postura",
@@ -1222,7 +1222,7 @@
       "answers": [
         {
           "text": "posición de cabeza",
-          "points": 35
+          "points": 25
         },
         {
           "text": "postura",
@@ -1243,7 +1243,7 @@
       "answers": [
         {
           "text": "posición de cabeza",
-          "points": 30
+          "points": 20
         },
         {
           "text": "postura",
@@ -1297,7 +1297,7 @@
       "answers": [
         {
           "text": "altura",
-          "points": 45
+          "points": 30
         },
         {
           "text": "ángulo",
@@ -1314,7 +1314,7 @@
       "answers": [
         {
           "text": "altura",
-          "points": 35
+          "points": 25
         },
         {
           "text": "ángulo",
@@ -1335,7 +1335,7 @@
       "answers": [
         {
           "text": "altura",
-          "points": 30
+          "points": 20
         },
         {
           "text": "ángulo",
@@ -1389,7 +1389,7 @@
       "answers": [
         {
           "text": "línea de sonrisa",
-          "points": 45
+          "points": 30
         },
         {
           "text": "exposición dental",
@@ -1406,7 +1406,7 @@
       "answers": [
         {
           "text": "línea de sonrisa",
-          "points": 35
+          "points": 25
         },
         {
           "text": "exposición dental",
@@ -1427,7 +1427,7 @@
       "answers": [
         {
           "text": "línea de sonrisa",
-          "points": 30
+          "points": 20
         },
         {
           "text": "exposición dental",
@@ -1481,7 +1481,7 @@
       "answers": [
         {
           "text": "recesiones",
-          "points": 45
+          "points": 30
         },
         {
           "text": "inflamación",
@@ -1498,7 +1498,7 @@
       "answers": [
         {
           "text": "recesiones",
-          "points": 35
+          "points": 25
         },
         {
           "text": "inflamación",
@@ -1519,7 +1519,7 @@
       "answers": [
         {
           "text": "recesiones",
-          "points": 30
+          "points": 20
         },
         {
           "text": "inflamación",
@@ -1573,7 +1573,7 @@
       "answers": [
         {
           "text": "documentar situación inicial",
-          "points": 45
+          "points": 30
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1590,7 +1590,7 @@
       "answers": [
         {
           "text": "documentar situación inicial",
-          "points": 35
+          "points": 25
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1611,7 +1611,7 @@
       "answers": [
         {
           "text": "documentar situación inicial",
-          "points": 30
+          "points": 20
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1665,7 +1665,7 @@
       "answers": [
         {
           "text": "documentación inicial",
-          "points": 45
+          "points": 30
         },
         {
           "text": "seguimiento",
@@ -1682,7 +1682,7 @@
       "answers": [
         {
           "text": "documentación inicial",
-          "points": 35
+          "points": 25
         },
         {
           "text": "seguimiento",
@@ -1703,7 +1703,7 @@
       "answers": [
         {
           "text": "documentación inicial",
-          "points": 30
+          "points": 20
         },
         {
           "text": "seguimiento",
@@ -1757,7 +1757,7 @@
       "answers": [
         {
           "text": "bioseguridad",
-          "points": 45
+          "points": 30
         },
         {
           "text": "campo limpio",
@@ -1774,7 +1774,7 @@
       "answers": [
         {
           "text": "bioseguridad",
-          "points": 35
+          "points": 25
         },
         {
           "text": "campo limpio",
@@ -1795,7 +1795,7 @@
       "answers": [
         {
           "text": "bioseguridad",
-          "points": 30
+          "points": 20
         },
         {
           "text": "campo limpio",
@@ -1849,7 +1849,7 @@
       "answers": [
         {
           "text": "orientación",
-          "points": 45
+          "points": 30
         },
         {
           "text": "escala cuando sea pertinente",
@@ -1866,7 +1866,7 @@
       "answers": [
         {
           "text": "orientación",
-          "points": 35
+          "points": 25
         },
         {
           "text": "escala cuando sea pertinente",
@@ -1887,7 +1887,7 @@
       "answers": [
         {
           "text": "orientación",
-          "points": 30
+          "points": 20
         },
         {
           "text": "escala cuando sea pertinente",
@@ -1941,7 +1941,7 @@
       "answers": [
         {
           "text": "posición constante",
-          "points": 45
+          "points": 30
         },
         {
           "text": "iluminación adecuada",
@@ -1958,7 +1958,7 @@
       "answers": [
         {
           "text": "posición constante",
-          "points": 35
+          "points": 25
         },
         {
           "text": "iluminación adecuada",
@@ -1979,7 +1979,7 @@
       "answers": [
         {
           "text": "posición constante",
-          "points": 30
+          "points": 20
         },
         {
           "text": "iluminación adecuada",
@@ -2033,7 +2033,7 @@
       "answers": [
         {
           "text": "identificación adecuada",
-          "points": 45
+          "points": 30
         },
         {
           "text": "seguridad",
@@ -2050,7 +2050,7 @@
       "answers": [
         {
           "text": "identificación adecuada",
-          "points": 35
+          "points": 25
         },
         {
           "text": "seguridad",
@@ -2071,7 +2071,7 @@
       "answers": [
         {
           "text": "identificación adecuada",
-          "points": 30
+          "points": 20
         },
         {
           "text": "seguridad",
@@ -2125,7 +2125,7 @@
       "answers": [
         {
           "text": "consentimiento o autorización aplicable",
-          "points": 45
+          "points": 30
         },
         {
           "text": "confidencialidad",
@@ -2142,7 +2142,7 @@
       "answers": [
         {
           "text": "consentimiento o autorización aplicable",
-          "points": 35
+          "points": 25
         },
         {
           "text": "confidencialidad",
@@ -2163,7 +2163,7 @@
       "answers": [
         {
           "text": "consentimiento o autorización aplicable",
-          "points": 30
+          "points": 20
         },
         {
           "text": "confidencialidad",
@@ -2217,7 +2217,7 @@
       "answers": [
         {
           "text": "comparar evolución",
-          "points": 45
+          "points": 30
         },
         {
           "text": "documentar cambios",
@@ -2234,7 +2234,7 @@
       "answers": [
         {
           "text": "comparar evolución",
-          "points": 35
+          "points": 25
         },
         {
           "text": "documentar cambios",
@@ -2255,7 +2255,7 @@
       "answers": [
         {
           "text": "comparar evolución",
-          "points": 30
+          "points": 20
         },
         {
           "text": "documentar cambios",
