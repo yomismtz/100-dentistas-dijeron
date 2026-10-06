@@ -1,1 +1,2821 @@
-{"category":"Odontologia geriatrica","questions":[{"id":"ORG40-001","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan envejecimiento oral?","answers":[{"text":"cambios tisulares","points":45},{"text":"desgaste dental","points":30},{"text":"recesion","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-002","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de envejecimiento oral?","answers":[{"text":"cambios tisulares","points":35},{"text":"desgaste dental","points":30},{"text":"recesion","points":20},{"text":"cambios salivales","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-003","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en envejecimiento oral?","answers":[{"text":"cambios tisulares","points":30},{"text":"desgaste dental","points":25},{"text":"recesion","points":20},{"text":"cambios salivales","points":15},{"text":"perdida dentaria","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-004","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a envejecimiento oral?","answers":[{"text":"cambios tisulares","points":30},{"text":"desgaste dental","points":25},{"text":"recesion","points":20},{"text":"cambios salivales","points":15},{"text":"perdida dentaria","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-005","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan historia clinica geriatrica?","answers":[{"text":"enfermedades sistemicas","points":25},{"text":"medicamentos","points":20},{"text":"capacidad funcional","points":18},{"text":"cognicion","points":15},{"text":"nutricion","points":12},{"text":"apoyo del cuidador","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-006","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de historia clinica geriatrica?","answers":[{"text":"enfermedades sistemicas","points":45},{"text":"medicamentos","points":30},{"text":"capacidad funcional","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-007","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en historia clinica geriatrica?","answers":[{"text":"enfermedades sistemicas","points":35},{"text":"medicamentos","points":30},{"text":"capacidad funcional","points":20},{"text":"cognicion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-008","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a historia clinica geriatrica?","answers":[{"text":"enfermedades sistemicas","points":30},{"text":"medicamentos","points":25},{"text":"capacidad funcional","points":20},{"text":"cognicion","points":15},{"text":"nutricion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-009","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan polifarmacia?","answers":[{"text":"multiples medicamentos","points":25},{"text":"interacciones","points":20},{"text":"efectos adversos","points":18},{"text":"xerostomia","points":15},{"text":"hipotension","points":12},{"text":"sangrado","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-010","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de polifarmacia?","answers":[{"text":"multiples medicamentos","points":25},{"text":"interacciones","points":20},{"text":"efectos adversos","points":18},{"text":"xerostomia","points":15},{"text":"hipotension","points":12},{"text":"sangrado","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-011","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en polifarmacia?","answers":[{"text":"multiples medicamentos","points":45},{"text":"interacciones","points":30},{"text":"efectos adversos","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-012","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a polifarmacia?","answers":[{"text":"multiples medicamentos","points":35},{"text":"interacciones","points":30},{"text":"efectos adversos","points":20},{"text":"xerostomia","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-013","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan xerostomia?","answers":[{"text":"boca seca","points":30},{"text":"flujo salival reducido","points":25},{"text":"caries","points":20},{"text":"disfagia","points":15},{"text":"candidiasis","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-014","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de xerostomia?","answers":[{"text":"boca seca","points":25},{"text":"flujo salival reducido","points":20},{"text":"caries","points":18},{"text":"disfagia","points":15},{"text":"candidiasis","points":12},{"text":"medicamentos","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-015","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en xerostomia?","answers":[{"text":"boca seca","points":25},{"text":"flujo salival reducido","points":20},{"text":"caries","points":18},{"text":"disfagia","points":15},{"text":"candidiasis","points":12},{"text":"medicamentos","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-016","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a xerostomia?","answers":[{"text":"boca seca","points":45},{"text":"flujo salival reducido","points":30},{"text":"caries","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-017","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan caries radicular?","answers":[{"text":"superficie radicular expuesta","points":35},{"text":"recesion","points":30},{"text":"xerostomia","points":20},{"text":"placa","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-018","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de caries radicular?","answers":[{"text":"superficie radicular expuesta","points":30},{"text":"recesion","points":25},{"text":"xerostomia","points":20},{"text":"placa","points":15},{"text":"fluoruro","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-019","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en caries radicular?","answers":[{"text":"superficie radicular expuesta","points":25},{"text":"recesion","points":20},{"text":"xerostomia","points":18},{"text":"placa","points":15},{"text":"fluoruro","points":12},{"text":"dieta","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-020","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a caries radicular?","answers":[{"text":"superficie radicular expuesta","points":25},{"text":"recesion","points":20},{"text":"xerostomia","points":18},{"text":"placa","points":15},{"text":"fluoruro","points":12},{"text":"dieta","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-021","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan caries coronal?","answers":[{"text":"riesgo individual","points":45},{"text":"fluoruro","points":30},{"text":"higiene","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-022","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de caries coronal?","answers":[{"text":"riesgo individual","points":35},{"text":"fluoruro","points":30},{"text":"higiene","points":20},{"text":"dieta","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-023","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en caries coronal?","answers":[{"text":"riesgo individual","points":30},{"text":"fluoruro","points":25},{"text":"higiene","points":20},{"text":"dieta","points":15},{"text":"medicamentos","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-024","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a caries coronal?","answers":[{"text":"riesgo individual","points":25},{"text":"fluoruro","points":20},{"text":"higiene","points":18},{"text":"dieta","points":15},{"text":"medicamentos","points":12},{"text":"dependencia","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-025","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan enfermedad periodontal?","answers":[{"text":"biofilm","points":25},{"text":"perdida de insercion","points":20},{"text":"recesion","points":18},{"text":"mantenimiento","points":15},{"text":"factores sistemicos","points":12},{"text":"higiene","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-026","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de enfermedad periodontal?","answers":[{"text":"biofilm","points":45},{"text":"perdida de insercion","points":30},{"text":"recesion","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-027","category":"Odontologia geriatrica","difficulty":"facil","question":"Que aspectos deben considerarse en enfermedad periodontal?","answers":[{"text":"biofilm","points":35},{"text":"perdida de insercion","points":30},{"text":"recesion","points":20},{"text":"mantenimiento","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-028","category":"Odontologia geriatrica","difficulty":"facil","question":"Que conjunto de elementos corresponde a enfermedad periodontal?","answers":[{"text":"biofilm","points":30},{"text":"perdida de insercion","points":25},{"text":"recesion","points":20},{"text":"mantenimiento","points":15},{"text":"factores sistemicos","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-029","category":"Odontologia geriatrica","difficulty":"facil","question":"Que elementos caracterizan perdida dentaria?","answers":[{"text":"caries","points":25},{"text":"periodontitis","points":20},{"text":"trauma","points":18},{"text":"funcion","points":15},{"text":"nutricion","points":12},{"text":"calidad de vida","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-030","category":"Odontologia geriatrica","difficulty":"facil","question":"Cuales son aspectos fundamentales de perdida dentaria?","answers":[{"text":"caries","points":25},{"text":"periodontitis","points":20},{"text":"trauma","points":18},{"text":"funcion","points":15},{"text":"nutricion","points":12},{"text":"calidad de vida","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-031","category":"Odontologia geriatrica","difficulty":"medio","question":"Que aspectos deben considerarse en perdida dentaria?","answers":[{"text":"caries","points":45},{"text":"periodontitis","points":30},{"text":"trauma","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-032","category":"Odontologia geriatrica","difficulty":"medio","question":"Que conjunto de elementos corresponde a perdida dentaria?","answers":[{"text":"caries","points":35},{"text":"periodontitis","points":30},{"text":"trauma","points":20},{"text":"funcion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-033","category":"Odontologia geriatrica","difficulty":"medio","question":"Que elementos caracterizan funcion masticatoria?","answers":[{"text":"dientes funcionales","points":30},{"text":"oclusion","points":25},{"text":"protesis","points":20},{"text":"fuerza","points":15},{"text":"seleccion alimentaria","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-034","category":"Odontologia geriatrica","difficulty":"medio","question":"Cuales son aspectos fundamentales de funcion masticatoria?","answers":[{"text":"dientes funcionales","points":25},{"text":"oclusion","points":20},{"text":"protesis","points":18},{"text":"fuerza","points":15},{"text":"seleccion alimentaria","points":12},{"text":"deglucion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-035","category":"Odontologia geriatrica","difficulty":"medio","question":"Que aspectos deben considerarse en funcion masticatoria?","answers":[{"text":"dientes funcionales","points":25},{"text":"oclusion","points":20},{"text":"protesis","points":18},{"text":"fuerza","points":15},{"text":"seleccion alimentaria","points":12},{"text":"deglucion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-036","category":"Odontologia geriatrica","difficulty":"medio","question":"Que conjunto de elementos corresponde a funcion masticatoria?","answers":[{"text":"dientes funcionales","points":45},{"text":"oclusion","points":30},{"text":"protesis","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-037","category":"Odontologia geriatrica","difficulty":"medio","question":"Que elementos caracterizan nutricion?","answers":[{"text":"masticacion","points":35},{"text":"seleccion alimentaria","points":30},{"text":"consistencia","points":20},{"text":"desnutricion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-038","category":"Odontologia geriatrica","difficulty":"medio","question":"Cuales son aspectos fundamentales de nutricion?","answers":[{"text":"masticacion","points":30},{"text":"seleccion alimentaria","points":25},{"text":"consistencia","points":20},{"text":"desnutricion","points":15},{"text":"dolor","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-039","category":"Odontologia geriatrica","difficulty":"medio","question":"Que aspectos deben considerarse en nutricion?","answers":[{"text":"masticacion","points":25},{"text":"seleccion alimentaria","points":20},{"text":"consistencia","points":18},{"text":"desnutricion","points":15},{"text":"dolor","points":12},{"text":"protesis","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-040","category":"Odontologia geriatrica","difficulty":"medio","question":"Que conjunto de elementos corresponde a nutricion?","answers":[{"text":"masticacion","points":25},{"text":"seleccion alimentaria","points":20},{"text":"consistencia","points":18},{"text":"desnutricion","points":15},{"text":"dolor","points":12},{"text":"protesis","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-041","category":"Odontologia geriatrica","difficulty":"medio","question":"Que elementos caracterizan protesis en adultos mayores?","answers":[{"text":"retencion","points":45},{"text":"estabilidad","points":30},{"text":"higiene","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-042","category":"Odontologia geriatrica","difficulty":"medio","question":"Cuales son aspectos fundamentales de protesis en adultos mayores?","answers":[{"text":"retencion","points":35},{"text":"estabilidad","points":30},{"text":"higiene","points":20},{"text":"adaptacion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-043","category":"Odontologia geriatrica","difficulty":"medio","question":"Que aspectos deben considerarse en protesis en adultos mayores?","answers":[{"text":"retencion","points":30},{"text":"estabilidad","points":25},{"text":"higiene","points":20},{"text":"adaptacion","points":15},{"text":"rebase","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-044","category":"Odontologia geriatrica","difficulty":"medio","question":"Que conjunto de elementos corresponde a protesis en adultos mayores?","answers":[{"text":"retencion","points":25},{"text":"estabilidad","points":20},{"text":"higiene","points":18},{"text":"adaptacion","points":15},{"text":"rebase","points":12},{"text":"revision","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-045","category":"Odontologia geriatrica","difficulty":"medio","question":"Que elementos caracterizan implantes en adultos mayores?","answers":[{"text":"evaluacion medica","points":25},{"text":"hueso","points":20},{"text":"higiene","points":18},{"text":"mantenimiento","points":15},{"text":"medicacion","points":12},{"text":"expectativas","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-046","category":"Odontologia geriatrica","difficulty":"medio","question":"Cuales son aspectos fundamentales de implantes en adultos mayores?","answers":[{"text":"evaluacion medica","points":45},{"text":"hueso","points":30},{"text":"higiene","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-047","category":"Odontologia geriatrica","difficulty":"medio","question":"Que aspectos deben considerarse en implantes en adultos mayores?","answers":[{"text":"evaluacion medica","points":35},{"text":"hueso","points":30},{"text":"higiene","points":20},{"text":"mantenimiento","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-048","category":"Odontologia geriatrica","difficulty":"medio","question":"Que conjunto de elementos corresponde a implantes en adultos mayores?","answers":[{"text":"evaluacion medica","points":30},{"text":"hueso","points":25},{"text":"higiene","points":20},{"text":"mantenimiento","points":15},{"text":"medicacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-049","category":"Odontologia geriatrica","difficulty":"medio","question":"Que elementos caracterizan fragilidad?","answers":[{"text":"reserva fisiologica","points":25},{"text":"vulnerabilidad","points":20},{"text":"perdida funcional","points":18},{"text":"complicaciones","points":15},{"text":"evaluacion","points":12},{"text":"plan individual","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-050","category":"Odontologia geriatrica","difficulty":"medio","question":"Cuales son aspectos fundamentales de fragilidad?","answers":[{"text":"reserva fisiologica","points":25},{"text":"vulnerabilidad","points":20},{"text":"perdida funcional","points":18},{"text":"complicaciones","points":15},{"text":"evaluacion","points":12},{"text":"plan individual","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-051","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que aspectos deben considerarse en fragilidad?","answers":[{"text":"reserva fisiologica","points":45},{"text":"vulnerabilidad","points":30},{"text":"perdida funcional","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-052","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que conjunto de elementos corresponde a fragilidad?","answers":[{"text":"reserva fisiologica","points":35},{"text":"vulnerabilidad","points":30},{"text":"perdida funcional","points":20},{"text":"complicaciones","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-053","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que elementos caracterizan deterioro cognitivo?","answers":[{"text":"comunicacion adaptada","points":30},{"text":"capacidad","points":25},{"text":"cuidador","points":20},{"text":"prevencion","points":15},{"text":"consentimiento","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-054","category":"Odontologia geriatrica","difficulty":"dificil","question":"Cuales son aspectos fundamentales de deterioro cognitivo?","answers":[{"text":"comunicacion adaptada","points":25},{"text":"capacidad","points":20},{"text":"cuidador","points":18},{"text":"prevencion","points":15},{"text":"consentimiento","points":12},{"text":"seguimiento","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-055","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que aspectos deben considerarse en deterioro cognitivo?","answers":[{"text":"comunicacion adaptada","points":25},{"text":"capacidad","points":20},{"text":"cuidador","points":18},{"text":"prevencion","points":15},{"text":"consentimiento","points":12},{"text":"seguimiento","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-056","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que conjunto de elementos corresponde a deterioro cognitivo?","answers":[{"text":"comunicacion adaptada","points":45},{"text":"capacidad","points":30},{"text":"cuidador","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-057","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que elementos caracterizan demencia?","answers":[{"text":"cambios cognitivos","points":35},{"text":"dependencia","points":30},{"text":"higiene adaptada","points":20},{"text":"cuidador","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-058","category":"Odontologia geriatrica","difficulty":"dificil","question":"Cuales son aspectos fundamentales de demencia?","answers":[{"text":"cambios cognitivos","points":30},{"text":"dependencia","points":25},{"text":"higiene adaptada","points":20},{"text":"cuidador","points":15},{"text":"dolor","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-059","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que aspectos deben considerarse en demencia?","answers":[{"text":"cambios cognitivos","points":25},{"text":"dependencia","points":20},{"text":"higiene adaptada","points":18},{"text":"cuidador","points":15},{"text":"dolor","points":12},{"text":"continuidad","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-060","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que conjunto de elementos corresponde a demencia?","answers":[{"text":"cambios cognitivos","points":25},{"text":"dependencia","points":20},{"text":"higiene adaptada","points":18},{"text":"cuidador","points":15},{"text":"dolor","points":12},{"text":"continuidad","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-061","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que elementos caracterizan disfagia?","answers":[{"text":"dificultad para deglutir","points":45},{"text":"aspiracion","points":30},{"text":"adaptacion","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-062","category":"Odontologia geriatrica","difficulty":"dificil","question":"Cuales son aspectos fundamentales de disfagia?","answers":[{"text":"dificultad para deglutir","points":35},{"text":"aspiracion","points":30},{"text":"adaptacion","points":20},{"text":"referencia","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-063","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que aspectos deben considerarse en disfagia?","answers":[{"text":"dificultad para deglutir","points":30},{"text":"aspiracion","points":25},{"text":"adaptacion","points":20},{"text":"referencia","points":15},{"text":"higiene","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-064","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que conjunto de elementos corresponde a disfagia?","answers":[{"text":"dificultad para deglutir","points":25},{"text":"aspiracion","points":20},{"text":"adaptacion","points":18},{"text":"referencia","points":15},{"text":"higiene","points":12},{"text":"coordinacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-065","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que elementos caracterizan diabetes?","answers":[{"text":"riesgo periodontal","points":25},{"text":"control glucemico","points":20},{"text":"infeccion","points":18},{"text":"cicatrizacion","points":15},{"text":"medicacion","points":12},{"text":"coordinacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-066","category":"Odontologia geriatrica","difficulty":"dificil","question":"Cuales son aspectos fundamentales de diabetes?","answers":[{"text":"riesgo periodontal","points":45},{"text":"control glucemico","points":30},{"text":"infeccion","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-067","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que aspectos deben considerarse en diabetes?","answers":[{"text":"riesgo periodontal","points":35},{"text":"control glucemico","points":30},{"text":"infeccion","points":20},{"text":"cicatrizacion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-068","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que conjunto de elementos corresponde a diabetes?","answers":[{"text":"riesgo periodontal","points":30},{"text":"control glucemico","points":25},{"text":"infeccion","points":20},{"text":"cicatrizacion","points":15},{"text":"medicacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-069","category":"Odontologia geriatrica","difficulty":"dificil","question":"Que elementos caracterizan anticoagulantes?","answers":[{"text":"historia farmacologica","points":25},{"text":"sangrado","points":20},{"text":"no suspender sin indicacion","points":18},{"text":"planificacion","points":15},{"text":"hemostasia local","points":12},{"text":"coordinacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-070","category":"Odontologia geriatrica","difficulty":"dificil","question":"Cuales son aspectos fundamentales de anticoagulantes?","answers":[{"text":"historia farmacologica","points":25},{"text":"sangrado","points":20},{"text":"no suspender sin indicacion","points":18},{"text":"planificacion","points":15},{"text":"hemostasia local","points":12},{"text":"coordinacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-071","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en anticoagulantes?","answers":[{"text":"historia farmacologica","points":45},{"text":"sangrado","points":30},{"text":"no suspender sin indicacion","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-072","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a anticoagulantes?","answers":[{"text":"historia farmacologica","points":35},{"text":"sangrado","points":30},{"text":"no suspender sin indicacion","points":20},{"text":"planificacion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-073","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan antirresortivos?","answers":[{"text":"bisfosfonatos","points":30},{"text":"denosumab","points":25},{"text":"osteonecrosis relacionada con medicamentos","points":20},{"text":"historia farmacologica","points":15},{"text":"prevencion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-074","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de antirresortivos?","answers":[{"text":"bisfosfonatos","points":25},{"text":"denosumab","points":20},{"text":"osteonecrosis relacionada con medicamentos","points":18},{"text":"historia farmacologica","points":15},{"text":"prevencion","points":12},{"text":"valoracion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-075","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en antirresortivos?","answers":[{"text":"bisfosfonatos","points":25},{"text":"denosumab","points":20},{"text":"osteonecrosis relacionada con medicamentos","points":18},{"text":"historia farmacologica","points":15},{"text":"prevencion","points":12},{"text":"valoracion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-076","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a antirresortivos?","answers":[{"text":"bisfosfonatos","points":45},{"text":"denosumab","points":30},{"text":"osteonecrosis relacionada con medicamentos","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-077","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan hipertension?","answers":[{"text":"presion arterial","points":35},{"text":"antihipertensivos","points":30},{"text":"hipotension ortostatica","points":20},{"text":"riesgo cardiovascular","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-078","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de hipertension?","answers":[{"text":"presion arterial","points":30},{"text":"antihipertensivos","points":25},{"text":"hipotension ortostatica","points":20},{"text":"riesgo cardiovascular","points":15},{"text":"adaptacion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-079","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en hipertension?","answers":[{"text":"presion arterial","points":25},{"text":"antihipertensivos","points":20},{"text":"hipotension ortostatica","points":18},{"text":"riesgo cardiovascular","points":15},{"text":"adaptacion","points":12},{"text":"seguimiento","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-080","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a hipertension?","answers":[{"text":"presion arterial","points":25},{"text":"antihipertensivos","points":20},{"text":"hipotension ortostatica","points":18},{"text":"riesgo cardiovascular","points":15},{"text":"adaptacion","points":12},{"text":"seguimiento","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-081","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan cancer y salud oral?","answers":[{"text":"tratamiento oncologico","points":45},{"text":"xerostomia","points":30},{"text":"mucositis","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-082","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de cancer y salud oral?","answers":[{"text":"tratamiento oncologico","points":35},{"text":"xerostomia","points":30},{"text":"mucositis","points":20},{"text":"infeccion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-083","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en cancer y salud oral?","answers":[{"text":"tratamiento oncologico","points":30},{"text":"xerostomia","points":25},{"text":"mucositis","points":20},{"text":"infeccion","points":15},{"text":"radioterapia","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-084","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a cancer y salud oral?","answers":[{"text":"tratamiento oncologico","points":25},{"text":"xerostomia","points":20},{"text":"mucositis","points":18},{"text":"infeccion","points":15},{"text":"radioterapia","points":12},{"text":"prevencion","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-085","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan radioterapia cabeza y cuello?","answers":[{"text":"xerostomia","points":25},{"text":"caries por radiacion","points":20},{"text":"osteorradionecrosis","points":18},{"text":"fluoruro","points":15},{"text":"higiene","points":12},{"text":"seguimiento","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-086","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de radioterapia cabeza y cuello?","answers":[{"text":"xerostomia","points":45},{"text":"caries por radiacion","points":30},{"text":"osteorradionecrosis","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-087","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en radioterapia cabeza y cuello?","answers":[{"text":"xerostomia","points":35},{"text":"caries por radiacion","points":30},{"text":"osteorradionecrosis","points":20},{"text":"fluoruro","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-088","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a radioterapia cabeza y cuello?","answers":[{"text":"xerostomia","points":30},{"text":"caries por radiacion","points":25},{"text":"osteorradionecrosis","points":20},{"text":"fluoruro","points":15},{"text":"higiene","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-089","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan candidiasis oral?","answers":[{"text":"xerostomia","points":25},{"text":"protesis","points":20},{"text":"inmunosupresion","points":18},{"text":"antibioticos","points":15},{"text":"lesiones","points":12},{"text":"higiene","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-090","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de candidiasis oral?","answers":[{"text":"xerostomia","points":25},{"text":"protesis","points":20},{"text":"inmunosupresion","points":18},{"text":"antibioticos","points":15},{"text":"lesiones","points":12},{"text":"higiene","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-091","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en candidiasis oral?","answers":[{"text":"xerostomia","points":45},{"text":"protesis","points":30},{"text":"inmunosupresion","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-092","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a candidiasis oral?","answers":[{"text":"xerostomia","points":35},{"text":"protesis","points":30},{"text":"inmunosupresion","points":20},{"text":"antibioticos","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-093","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan lesiones de mucosa?","answers":[{"text":"exploracion","points":30},{"text":"trauma protetico","points":25},{"text":"tabaco","points":20},{"text":"alcohol","points":15},{"text":"persistencia","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-094","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de lesiones de mucosa?","answers":[{"text":"exploracion","points":25},{"text":"trauma protetico","points":20},{"text":"tabaco","points":18},{"text":"alcohol","points":15},{"text":"persistencia","points":12},{"text":"referencia","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-095","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en lesiones de mucosa?","answers":[{"text":"exploracion","points":25},{"text":"trauma protetico","points":20},{"text":"tabaco","points":18},{"text":"alcohol","points":15},{"text":"persistencia","points":12},{"text":"referencia","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-096","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a lesiones de mucosa?","answers":[{"text":"exploracion","points":45},{"text":"trauma protetico","points":30},{"text":"tabaco","points":25}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-097","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que elementos caracterizan calidad de vida oral?","answers":[{"text":"dolor","points":35},{"text":"funcion","points":30},{"text":"habla","points":20},{"text":"alimentacion","points":15}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-098","category":"Odontologia geriatrica","difficulty":"extremo","question":"Cuales son aspectos fundamentales de calidad de vida oral?","answers":[{"text":"dolor","points":30},{"text":"funcion","points":25},{"text":"habla","points":20},{"text":"alimentacion","points":15},{"text":"estetica","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-099","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que aspectos deben considerarse en calidad de vida oral?","answers":[{"text":"dolor","points":25},{"text":"funcion","points":20},{"text":"habla","points":18},{"text":"alimentacion","points":15},{"text":"estetica","points":12},{"text":"interaccion social","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."},{"id":"ORG40-100","category":"Odontologia geriatrica","difficulty":"extremo","question":"Que conjunto de elementos corresponde a calidad de vida oral?","answers":[{"text":"dolor","points":25},{"text":"funcion","points":20},{"text":"habla","points":18},{"text":"alimentacion","points":15},{"text":"estetica","points":12},{"text":"interaccion social","points":10}],"source":"Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."}]}
+{
+  "category": "Odontologia geriatrica",
+  "questions": [
+    {
+      "id": "ORG40-001",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 aspectos clave de envejecimiento oral?",
+      "answers": [
+        {
+          "text": "cambios tisulares",
+          "points": 45
+        },
+        {
+          "text": "desgaste dental",
+          "points": 30
+        },
+        {
+          "text": "recesion",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-002",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 aspectos clave de envejecimiento oral?",
+      "answers": [
+        {
+          "text": "cambios tisulares",
+          "points": 35
+        },
+        {
+          "text": "desgaste dental",
+          "points": 30
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "cambios salivales",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-003",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de envejecimiento oral?",
+      "answers": [
+        {
+          "text": "cambios tisulares",
+          "points": 30
+        },
+        {
+          "text": "desgaste dental",
+          "points": 25
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "cambios salivales",
+          "points": 15
+        },
+        {
+          "text": "perdida dentaria",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-004",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de envejecimiento oral?",
+      "answers": [
+        {
+          "text": "cambios tisulares",
+          "points": 30
+        },
+        {
+          "text": "desgaste dental",
+          "points": 25
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "cambios salivales",
+          "points": 15
+        },
+        {
+          "text": "perdida dentaria",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-005",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de historia clínica geriátrica?",
+      "answers": [
+        {
+          "text": "enfermedades sistemicas",
+          "points": 25
+        },
+        {
+          "text": "medicamentos",
+          "points": 20
+        },
+        {
+          "text": "capacidad funcional",
+          "points": 18
+        },
+        {
+          "text": "cognicion",
+          "points": 15
+        },
+        {
+          "text": "nutricion",
+          "points": 12
+        },
+        {
+          "text": "apoyo del cuidador",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-006",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 aspectos clave de historia clínica geriátrica?",
+      "answers": [
+        {
+          "text": "enfermedades sistemicas",
+          "points": 45
+        },
+        {
+          "text": "medicamentos",
+          "points": 30
+        },
+        {
+          "text": "capacidad funcional",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-007",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 aspectos clave de historia clínica geriátrica?",
+      "answers": [
+        {
+          "text": "enfermedades sistemicas",
+          "points": 35
+        },
+        {
+          "text": "medicamentos",
+          "points": 30
+        },
+        {
+          "text": "capacidad funcional",
+          "points": 20
+        },
+        {
+          "text": "cognicion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-008",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de historia clínica geriátrica?",
+      "answers": [
+        {
+          "text": "enfermedades sistemicas",
+          "points": 30
+        },
+        {
+          "text": "medicamentos",
+          "points": 25
+        },
+        {
+          "text": "capacidad funcional",
+          "points": 20
+        },
+        {
+          "text": "cognicion",
+          "points": 15
+        },
+        {
+          "text": "nutricion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-009",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de polifarmacia?",
+      "answers": [
+        {
+          "text": "multiples medicamentos",
+          "points": 25
+        },
+        {
+          "text": "interacciones",
+          "points": 20
+        },
+        {
+          "text": "efectos adversos",
+          "points": 18
+        },
+        {
+          "text": "xerostomia",
+          "points": 15
+        },
+        {
+          "text": "hipotension",
+          "points": 12
+        },
+        {
+          "text": "sangrado",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-010",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de polifarmacia?",
+      "answers": [
+        {
+          "text": "multiples medicamentos",
+          "points": 25
+        },
+        {
+          "text": "interacciones",
+          "points": 20
+        },
+        {
+          "text": "efectos adversos",
+          "points": 18
+        },
+        {
+          "text": "xerostomia",
+          "points": 15
+        },
+        {
+          "text": "hipotension",
+          "points": 12
+        },
+        {
+          "text": "sangrado",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-011",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 aspectos clave de polifarmacia?",
+      "answers": [
+        {
+          "text": "multiples medicamentos",
+          "points": 45
+        },
+        {
+          "text": "interacciones",
+          "points": 30
+        },
+        {
+          "text": "efectos adversos",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-012",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 aspectos clave de polifarmacia?",
+      "answers": [
+        {
+          "text": "multiples medicamentos",
+          "points": 35
+        },
+        {
+          "text": "interacciones",
+          "points": 30
+        },
+        {
+          "text": "efectos adversos",
+          "points": 20
+        },
+        {
+          "text": "xerostomia",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-013",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de xerostomía?",
+      "answers": [
+        {
+          "text": "boca seca",
+          "points": 30
+        },
+        {
+          "text": "flujo salival reducido",
+          "points": 25
+        },
+        {
+          "text": "caries",
+          "points": 20
+        },
+        {
+          "text": "disfagia",
+          "points": 15
+        },
+        {
+          "text": "candidiasis",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-014",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de xerostomía?",
+      "answers": [
+        {
+          "text": "boca seca",
+          "points": 25
+        },
+        {
+          "text": "flujo salival reducido",
+          "points": 20
+        },
+        {
+          "text": "caries",
+          "points": 18
+        },
+        {
+          "text": "disfagia",
+          "points": 15
+        },
+        {
+          "text": "candidiasis",
+          "points": 12
+        },
+        {
+          "text": "medicamentos",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-015",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de xerostomía?",
+      "answers": [
+        {
+          "text": "boca seca",
+          "points": 25
+        },
+        {
+          "text": "flujo salival reducido",
+          "points": 20
+        },
+        {
+          "text": "caries",
+          "points": 18
+        },
+        {
+          "text": "disfagia",
+          "points": 15
+        },
+        {
+          "text": "candidiasis",
+          "points": 12
+        },
+        {
+          "text": "medicamentos",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-016",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 aspectos clave de xerostomía?",
+      "answers": [
+        {
+          "text": "boca seca",
+          "points": 45
+        },
+        {
+          "text": "flujo salival reducido",
+          "points": 30
+        },
+        {
+          "text": "caries",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-017",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 aspectos clave de caries radicular?",
+      "answers": [
+        {
+          "text": "superficie radicular expuesta",
+          "points": 35
+        },
+        {
+          "text": "recesion",
+          "points": 30
+        },
+        {
+          "text": "xerostomia",
+          "points": 20
+        },
+        {
+          "text": "placa",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-018",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de caries radicular?",
+      "answers": [
+        {
+          "text": "superficie radicular expuesta",
+          "points": 30
+        },
+        {
+          "text": "recesion",
+          "points": 25
+        },
+        {
+          "text": "xerostomia",
+          "points": 20
+        },
+        {
+          "text": "placa",
+          "points": 15
+        },
+        {
+          "text": "fluoruro",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-019",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de caries radicular?",
+      "answers": [
+        {
+          "text": "superficie radicular expuesta",
+          "points": 25
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "xerostomia",
+          "points": 18
+        },
+        {
+          "text": "placa",
+          "points": 15
+        },
+        {
+          "text": "fluoruro",
+          "points": 12
+        },
+        {
+          "text": "dieta",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-020",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de caries radicular?",
+      "answers": [
+        {
+          "text": "superficie radicular expuesta",
+          "points": 25
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "xerostomia",
+          "points": 18
+        },
+        {
+          "text": "placa",
+          "points": 15
+        },
+        {
+          "text": "fluoruro",
+          "points": 12
+        },
+        {
+          "text": "dieta",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-021",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 aspectos clave de caries coronal?",
+      "answers": [
+        {
+          "text": "riesgo individual",
+          "points": 45
+        },
+        {
+          "text": "fluoruro",
+          "points": 30
+        },
+        {
+          "text": "higiene",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-022",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 aspectos clave de caries coronal?",
+      "answers": [
+        {
+          "text": "riesgo individual",
+          "points": 35
+        },
+        {
+          "text": "fluoruro",
+          "points": 30
+        },
+        {
+          "text": "higiene",
+          "points": 20
+        },
+        {
+          "text": "dieta",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-023",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de caries coronal?",
+      "answers": [
+        {
+          "text": "riesgo individual",
+          "points": 30
+        },
+        {
+          "text": "fluoruro",
+          "points": 25
+        },
+        {
+          "text": "higiene",
+          "points": 20
+        },
+        {
+          "text": "dieta",
+          "points": 15
+        },
+        {
+          "text": "medicamentos",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-024",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de caries coronal?",
+      "answers": [
+        {
+          "text": "riesgo individual",
+          "points": 25
+        },
+        {
+          "text": "fluoruro",
+          "points": 20
+        },
+        {
+          "text": "higiene",
+          "points": 18
+        },
+        {
+          "text": "dieta",
+          "points": 15
+        },
+        {
+          "text": "medicamentos",
+          "points": 12
+        },
+        {
+          "text": "dependencia",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-025",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de enfermedad periodontal?",
+      "answers": [
+        {
+          "text": "biofilm",
+          "points": 25
+        },
+        {
+          "text": "perdida de insercion",
+          "points": 20
+        },
+        {
+          "text": "recesion",
+          "points": 18
+        },
+        {
+          "text": "mantenimiento",
+          "points": 15
+        },
+        {
+          "text": "factores sistemicos",
+          "points": 12
+        },
+        {
+          "text": "higiene",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-026",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 aspectos clave de enfermedad periodontal?",
+      "answers": [
+        {
+          "text": "biofilm",
+          "points": 45
+        },
+        {
+          "text": "perdida de insercion",
+          "points": 30
+        },
+        {
+          "text": "recesion",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-027",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 aspectos clave de enfermedad periodontal?",
+      "answers": [
+        {
+          "text": "biofilm",
+          "points": 35
+        },
+        {
+          "text": "perdida de insercion",
+          "points": 30
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "mantenimiento",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-028",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 aspectos clave de enfermedad periodontal?",
+      "answers": [
+        {
+          "text": "biofilm",
+          "points": 30
+        },
+        {
+          "text": "perdida de insercion",
+          "points": 25
+        },
+        {
+          "text": "recesion",
+          "points": 20
+        },
+        {
+          "text": "mantenimiento",
+          "points": 15
+        },
+        {
+          "text": "factores sistemicos",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-029",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de pérdida dentaria?",
+      "answers": [
+        {
+          "text": "caries",
+          "points": 25
+        },
+        {
+          "text": "periodontitis",
+          "points": 20
+        },
+        {
+          "text": "trauma",
+          "points": 18
+        },
+        {
+          "text": "funcion",
+          "points": 15
+        },
+        {
+          "text": "nutricion",
+          "points": 12
+        },
+        {
+          "text": "calidad de vida",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-030",
+      "category": "Odontologia geriatrica",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 aspectos clave de pérdida dentaria?",
+      "answers": [
+        {
+          "text": "caries",
+          "points": 25
+        },
+        {
+          "text": "periodontitis",
+          "points": 20
+        },
+        {
+          "text": "trauma",
+          "points": 18
+        },
+        {
+          "text": "funcion",
+          "points": 15
+        },
+        {
+          "text": "nutricion",
+          "points": 12
+        },
+        {
+          "text": "calidad de vida",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-031",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 3 aspectos clave de pérdida dentaria?",
+      "answers": [
+        {
+          "text": "caries",
+          "points": 45
+        },
+        {
+          "text": "periodontitis",
+          "points": 30
+        },
+        {
+          "text": "trauma",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-032",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 4 aspectos clave de pérdida dentaria?",
+      "answers": [
+        {
+          "text": "caries",
+          "points": 35
+        },
+        {
+          "text": "periodontitis",
+          "points": 30
+        },
+        {
+          "text": "trauma",
+          "points": 20
+        },
+        {
+          "text": "funcion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-033",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 5 aspectos clave de función masticatoria?",
+      "answers": [
+        {
+          "text": "dientes funcionales",
+          "points": 30
+        },
+        {
+          "text": "oclusion",
+          "points": 25
+        },
+        {
+          "text": "protesis",
+          "points": 20
+        },
+        {
+          "text": "fuerza",
+          "points": 15
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-034",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de función masticatoria?",
+      "answers": [
+        {
+          "text": "dientes funcionales",
+          "points": 25
+        },
+        {
+          "text": "oclusion",
+          "points": 20
+        },
+        {
+          "text": "protesis",
+          "points": 18
+        },
+        {
+          "text": "fuerza",
+          "points": 15
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 12
+        },
+        {
+          "text": "deglucion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-035",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de función masticatoria?",
+      "answers": [
+        {
+          "text": "dientes funcionales",
+          "points": 25
+        },
+        {
+          "text": "oclusion",
+          "points": 20
+        },
+        {
+          "text": "protesis",
+          "points": 18
+        },
+        {
+          "text": "fuerza",
+          "points": 15
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 12
+        },
+        {
+          "text": "deglucion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-036",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 3 aspectos clave de función masticatoria?",
+      "answers": [
+        {
+          "text": "dientes funcionales",
+          "points": 45
+        },
+        {
+          "text": "oclusion",
+          "points": 30
+        },
+        {
+          "text": "protesis",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-037",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 4 aspectos clave de nutrición?",
+      "answers": [
+        {
+          "text": "masticacion",
+          "points": 35
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 30
+        },
+        {
+          "text": "consistencia",
+          "points": 20
+        },
+        {
+          "text": "desnutricion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-038",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 5 aspectos clave de nutrición?",
+      "answers": [
+        {
+          "text": "masticacion",
+          "points": 30
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 25
+        },
+        {
+          "text": "consistencia",
+          "points": 20
+        },
+        {
+          "text": "desnutricion",
+          "points": 15
+        },
+        {
+          "text": "dolor",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-039",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de nutrición?",
+      "answers": [
+        {
+          "text": "masticacion",
+          "points": 25
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 20
+        },
+        {
+          "text": "consistencia",
+          "points": 18
+        },
+        {
+          "text": "desnutricion",
+          "points": 15
+        },
+        {
+          "text": "dolor",
+          "points": 12
+        },
+        {
+          "text": "protesis",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-040",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de nutrición?",
+      "answers": [
+        {
+          "text": "masticacion",
+          "points": 25
+        },
+        {
+          "text": "seleccion alimentaria",
+          "points": 20
+        },
+        {
+          "text": "consistencia",
+          "points": 18
+        },
+        {
+          "text": "desnutricion",
+          "points": 15
+        },
+        {
+          "text": "dolor",
+          "points": 12
+        },
+        {
+          "text": "protesis",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-041",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 3 aspectos clave de prótesis en adultos mayores?",
+      "answers": [
+        {
+          "text": "retencion",
+          "points": 45
+        },
+        {
+          "text": "estabilidad",
+          "points": 30
+        },
+        {
+          "text": "higiene",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-042",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 4 aspectos clave de prótesis en adultos mayores?",
+      "answers": [
+        {
+          "text": "retencion",
+          "points": 35
+        },
+        {
+          "text": "estabilidad",
+          "points": 30
+        },
+        {
+          "text": "higiene",
+          "points": 20
+        },
+        {
+          "text": "adaptacion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-043",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 5 aspectos clave de prótesis en adultos mayores?",
+      "answers": [
+        {
+          "text": "retencion",
+          "points": 30
+        },
+        {
+          "text": "estabilidad",
+          "points": 25
+        },
+        {
+          "text": "higiene",
+          "points": 20
+        },
+        {
+          "text": "adaptacion",
+          "points": 15
+        },
+        {
+          "text": "rebase",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-044",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de prótesis en adultos mayores?",
+      "answers": [
+        {
+          "text": "retencion",
+          "points": 25
+        },
+        {
+          "text": "estabilidad",
+          "points": 20
+        },
+        {
+          "text": "higiene",
+          "points": 18
+        },
+        {
+          "text": "adaptacion",
+          "points": 15
+        },
+        {
+          "text": "rebase",
+          "points": 12
+        },
+        {
+          "text": "revision",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-045",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de implantes en adultos mayores?",
+      "answers": [
+        {
+          "text": "evaluacion medica",
+          "points": 25
+        },
+        {
+          "text": "hueso",
+          "points": 20
+        },
+        {
+          "text": "higiene",
+          "points": 18
+        },
+        {
+          "text": "mantenimiento",
+          "points": 15
+        },
+        {
+          "text": "medicacion",
+          "points": 12
+        },
+        {
+          "text": "expectativas",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-046",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 3 aspectos clave de implantes en adultos mayores?",
+      "answers": [
+        {
+          "text": "evaluacion medica",
+          "points": 45
+        },
+        {
+          "text": "hueso",
+          "points": 30
+        },
+        {
+          "text": "higiene",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-047",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 4 aspectos clave de implantes en adultos mayores?",
+      "answers": [
+        {
+          "text": "evaluacion medica",
+          "points": 35
+        },
+        {
+          "text": "hueso",
+          "points": 30
+        },
+        {
+          "text": "higiene",
+          "points": 20
+        },
+        {
+          "text": "mantenimiento",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-048",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 5 aspectos clave de implantes en adultos mayores?",
+      "answers": [
+        {
+          "text": "evaluacion medica",
+          "points": 30
+        },
+        {
+          "text": "hueso",
+          "points": 25
+        },
+        {
+          "text": "higiene",
+          "points": 20
+        },
+        {
+          "text": "mantenimiento",
+          "points": 15
+        },
+        {
+          "text": "medicacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-049",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de fragilidad?",
+      "answers": [
+        {
+          "text": "reserva fisiologica",
+          "points": 25
+        },
+        {
+          "text": "vulnerabilidad",
+          "points": 20
+        },
+        {
+          "text": "perdida funcional",
+          "points": 18
+        },
+        {
+          "text": "complicaciones",
+          "points": 15
+        },
+        {
+          "text": "evaluacion",
+          "points": 12
+        },
+        {
+          "text": "plan individual",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-050",
+      "category": "Odontologia geriatrica",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 aspectos clave de fragilidad?",
+      "answers": [
+        {
+          "text": "reserva fisiologica",
+          "points": 25
+        },
+        {
+          "text": "vulnerabilidad",
+          "points": 20
+        },
+        {
+          "text": "perdida funcional",
+          "points": 18
+        },
+        {
+          "text": "complicaciones",
+          "points": 15
+        },
+        {
+          "text": "evaluacion",
+          "points": 12
+        },
+        {
+          "text": "plan individual",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-051",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 3 aspectos clave de fragilidad?",
+      "answers": [
+        {
+          "text": "reserva fisiologica",
+          "points": 45
+        },
+        {
+          "text": "vulnerabilidad",
+          "points": 30
+        },
+        {
+          "text": "perdida funcional",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-052",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 4 aspectos clave de fragilidad?",
+      "answers": [
+        {
+          "text": "reserva fisiologica",
+          "points": 35
+        },
+        {
+          "text": "vulnerabilidad",
+          "points": 30
+        },
+        {
+          "text": "perdida funcional",
+          "points": 20
+        },
+        {
+          "text": "complicaciones",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-053",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 5 aspectos clave de deterioro cognitivo?",
+      "answers": [
+        {
+          "text": "comunicacion adaptada",
+          "points": 30
+        },
+        {
+          "text": "capacidad",
+          "points": 25
+        },
+        {
+          "text": "cuidador",
+          "points": 20
+        },
+        {
+          "text": "prevencion",
+          "points": 15
+        },
+        {
+          "text": "consentimiento",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-054",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de deterioro cognitivo?",
+      "answers": [
+        {
+          "text": "comunicacion adaptada",
+          "points": 25
+        },
+        {
+          "text": "capacidad",
+          "points": 20
+        },
+        {
+          "text": "cuidador",
+          "points": 18
+        },
+        {
+          "text": "prevencion",
+          "points": 15
+        },
+        {
+          "text": "consentimiento",
+          "points": 12
+        },
+        {
+          "text": "seguimiento",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-055",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de deterioro cognitivo?",
+      "answers": [
+        {
+          "text": "comunicacion adaptada",
+          "points": 25
+        },
+        {
+          "text": "capacidad",
+          "points": 20
+        },
+        {
+          "text": "cuidador",
+          "points": 18
+        },
+        {
+          "text": "prevencion",
+          "points": 15
+        },
+        {
+          "text": "consentimiento",
+          "points": 12
+        },
+        {
+          "text": "seguimiento",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-056",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 3 aspectos clave de deterioro cognitivo?",
+      "answers": [
+        {
+          "text": "comunicacion adaptada",
+          "points": 45
+        },
+        {
+          "text": "capacidad",
+          "points": 30
+        },
+        {
+          "text": "cuidador",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-057",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 4 aspectos clave de demencia?",
+      "answers": [
+        {
+          "text": "cambios cognitivos",
+          "points": 35
+        },
+        {
+          "text": "dependencia",
+          "points": 30
+        },
+        {
+          "text": "higiene adaptada",
+          "points": 20
+        },
+        {
+          "text": "cuidador",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-058",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 5 aspectos clave de demencia?",
+      "answers": [
+        {
+          "text": "cambios cognitivos",
+          "points": 30
+        },
+        {
+          "text": "dependencia",
+          "points": 25
+        },
+        {
+          "text": "higiene adaptada",
+          "points": 20
+        },
+        {
+          "text": "cuidador",
+          "points": 15
+        },
+        {
+          "text": "dolor",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-059",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de demencia?",
+      "answers": [
+        {
+          "text": "cambios cognitivos",
+          "points": 25
+        },
+        {
+          "text": "dependencia",
+          "points": 20
+        },
+        {
+          "text": "higiene adaptada",
+          "points": 18
+        },
+        {
+          "text": "cuidador",
+          "points": 15
+        },
+        {
+          "text": "dolor",
+          "points": 12
+        },
+        {
+          "text": "continuidad",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-060",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de demencia?",
+      "answers": [
+        {
+          "text": "cambios cognitivos",
+          "points": 25
+        },
+        {
+          "text": "dependencia",
+          "points": 20
+        },
+        {
+          "text": "higiene adaptada",
+          "points": 18
+        },
+        {
+          "text": "cuidador",
+          "points": 15
+        },
+        {
+          "text": "dolor",
+          "points": 12
+        },
+        {
+          "text": "continuidad",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-061",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 3 aspectos clave de disfagia?",
+      "answers": [
+        {
+          "text": "dificultad para deglutir",
+          "points": 45
+        },
+        {
+          "text": "aspiracion",
+          "points": 30
+        },
+        {
+          "text": "adaptacion",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-062",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 4 aspectos clave de disfagia?",
+      "answers": [
+        {
+          "text": "dificultad para deglutir",
+          "points": 35
+        },
+        {
+          "text": "aspiracion",
+          "points": 30
+        },
+        {
+          "text": "adaptacion",
+          "points": 20
+        },
+        {
+          "text": "referencia",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-063",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 5 aspectos clave de disfagia?",
+      "answers": [
+        {
+          "text": "dificultad para deglutir",
+          "points": 30
+        },
+        {
+          "text": "aspiracion",
+          "points": 25
+        },
+        {
+          "text": "adaptacion",
+          "points": 20
+        },
+        {
+          "text": "referencia",
+          "points": 15
+        },
+        {
+          "text": "higiene",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-064",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de disfagia?",
+      "answers": [
+        {
+          "text": "dificultad para deglutir",
+          "points": 25
+        },
+        {
+          "text": "aspiracion",
+          "points": 20
+        },
+        {
+          "text": "adaptacion",
+          "points": 18
+        },
+        {
+          "text": "referencia",
+          "points": 15
+        },
+        {
+          "text": "higiene",
+          "points": 12
+        },
+        {
+          "text": "coordinacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-065",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de diabetes?",
+      "answers": [
+        {
+          "text": "riesgo periodontal",
+          "points": 25
+        },
+        {
+          "text": "control glucemico",
+          "points": 20
+        },
+        {
+          "text": "infeccion",
+          "points": 18
+        },
+        {
+          "text": "cicatrizacion",
+          "points": 15
+        },
+        {
+          "text": "medicacion",
+          "points": 12
+        },
+        {
+          "text": "coordinacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-066",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 3 aspectos clave de diabetes?",
+      "answers": [
+        {
+          "text": "riesgo periodontal",
+          "points": 45
+        },
+        {
+          "text": "control glucemico",
+          "points": 30
+        },
+        {
+          "text": "infeccion",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-067",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 4 aspectos clave de diabetes?",
+      "answers": [
+        {
+          "text": "riesgo periodontal",
+          "points": 35
+        },
+        {
+          "text": "control glucemico",
+          "points": 30
+        },
+        {
+          "text": "infeccion",
+          "points": 20
+        },
+        {
+          "text": "cicatrizacion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-068",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 5 aspectos clave de diabetes?",
+      "answers": [
+        {
+          "text": "riesgo periodontal",
+          "points": 30
+        },
+        {
+          "text": "control glucemico",
+          "points": 25
+        },
+        {
+          "text": "infeccion",
+          "points": 20
+        },
+        {
+          "text": "cicatrizacion",
+          "points": 15
+        },
+        {
+          "text": "medicacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-069",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de anticoagulantes?",
+      "answers": [
+        {
+          "text": "historia farmacologica",
+          "points": 25
+        },
+        {
+          "text": "sangrado",
+          "points": 20
+        },
+        {
+          "text": "no suspender sin indicacion",
+          "points": 18
+        },
+        {
+          "text": "planificacion",
+          "points": 15
+        },
+        {
+          "text": "hemostasia local",
+          "points": 12
+        },
+        {
+          "text": "coordinacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-070",
+      "category": "Odontologia geriatrica",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 aspectos clave de anticoagulantes?",
+      "answers": [
+        {
+          "text": "historia farmacologica",
+          "points": 25
+        },
+        {
+          "text": "sangrado",
+          "points": 20
+        },
+        {
+          "text": "no suspender sin indicacion",
+          "points": 18
+        },
+        {
+          "text": "planificacion",
+          "points": 15
+        },
+        {
+          "text": "hemostasia local",
+          "points": 12
+        },
+        {
+          "text": "coordinacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-071",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 aspectos clave de anticoagulantes?",
+      "answers": [
+        {
+          "text": "historia farmacologica",
+          "points": 45
+        },
+        {
+          "text": "sangrado",
+          "points": 30
+        },
+        {
+          "text": "no suspender sin indicacion",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-072",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 aspectos clave de anticoagulantes?",
+      "answers": [
+        {
+          "text": "historia farmacologica",
+          "points": 35
+        },
+        {
+          "text": "sangrado",
+          "points": 30
+        },
+        {
+          "text": "no suspender sin indicacion",
+          "points": 20
+        },
+        {
+          "text": "planificacion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-073",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 aspectos clave de antirresortivos?",
+      "answers": [
+        {
+          "text": "bisfosfonatos",
+          "points": 30
+        },
+        {
+          "text": "denosumab",
+          "points": 25
+        },
+        {
+          "text": "osteonecrosis relacionada con medicamentos",
+          "points": 20
+        },
+        {
+          "text": "historia farmacologica",
+          "points": 15
+        },
+        {
+          "text": "prevencion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-074",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de antirresortivos?",
+      "answers": [
+        {
+          "text": "bisfosfonatos",
+          "points": 25
+        },
+        {
+          "text": "denosumab",
+          "points": 20
+        },
+        {
+          "text": "osteonecrosis relacionada con medicamentos",
+          "points": 18
+        },
+        {
+          "text": "historia farmacologica",
+          "points": 15
+        },
+        {
+          "text": "prevencion",
+          "points": 12
+        },
+        {
+          "text": "valoracion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-075",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de antirresortivos?",
+      "answers": [
+        {
+          "text": "bisfosfonatos",
+          "points": 25
+        },
+        {
+          "text": "denosumab",
+          "points": 20
+        },
+        {
+          "text": "osteonecrosis relacionada con medicamentos",
+          "points": 18
+        },
+        {
+          "text": "historia farmacologica",
+          "points": 15
+        },
+        {
+          "text": "prevencion",
+          "points": 12
+        },
+        {
+          "text": "valoracion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-076",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 aspectos clave de antirresortivos?",
+      "answers": [
+        {
+          "text": "bisfosfonatos",
+          "points": 45
+        },
+        {
+          "text": "denosumab",
+          "points": 30
+        },
+        {
+          "text": "osteonecrosis relacionada con medicamentos",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-077",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 aspectos clave de hipertensión?",
+      "answers": [
+        {
+          "text": "presion arterial",
+          "points": 35
+        },
+        {
+          "text": "antihipertensivos",
+          "points": 30
+        },
+        {
+          "text": "hipotension ortostatica",
+          "points": 20
+        },
+        {
+          "text": "riesgo cardiovascular",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-078",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 aspectos clave de hipertensión?",
+      "answers": [
+        {
+          "text": "presion arterial",
+          "points": 30
+        },
+        {
+          "text": "antihipertensivos",
+          "points": 25
+        },
+        {
+          "text": "hipotension ortostatica",
+          "points": 20
+        },
+        {
+          "text": "riesgo cardiovascular",
+          "points": 15
+        },
+        {
+          "text": "adaptacion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-079",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de hipertensión?",
+      "answers": [
+        {
+          "text": "presion arterial",
+          "points": 25
+        },
+        {
+          "text": "antihipertensivos",
+          "points": 20
+        },
+        {
+          "text": "hipotension ortostatica",
+          "points": 18
+        },
+        {
+          "text": "riesgo cardiovascular",
+          "points": 15
+        },
+        {
+          "text": "adaptacion",
+          "points": 12
+        },
+        {
+          "text": "seguimiento",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-080",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de hipertensión?",
+      "answers": [
+        {
+          "text": "presion arterial",
+          "points": 25
+        },
+        {
+          "text": "antihipertensivos",
+          "points": 20
+        },
+        {
+          "text": "hipotension ortostatica",
+          "points": 18
+        },
+        {
+          "text": "riesgo cardiovascular",
+          "points": 15
+        },
+        {
+          "text": "adaptacion",
+          "points": 12
+        },
+        {
+          "text": "seguimiento",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-081",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 aspectos clave de cáncer y salud oral?",
+      "answers": [
+        {
+          "text": "tratamiento oncologico",
+          "points": 45
+        },
+        {
+          "text": "xerostomia",
+          "points": 30
+        },
+        {
+          "text": "mucositis",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-082",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 aspectos clave de cáncer y salud oral?",
+      "answers": [
+        {
+          "text": "tratamiento oncologico",
+          "points": 35
+        },
+        {
+          "text": "xerostomia",
+          "points": 30
+        },
+        {
+          "text": "mucositis",
+          "points": 20
+        },
+        {
+          "text": "infeccion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-083",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 aspectos clave de cáncer y salud oral?",
+      "answers": [
+        {
+          "text": "tratamiento oncologico",
+          "points": 30
+        },
+        {
+          "text": "xerostomia",
+          "points": 25
+        },
+        {
+          "text": "mucositis",
+          "points": 20
+        },
+        {
+          "text": "infeccion",
+          "points": 15
+        },
+        {
+          "text": "radioterapia",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-084",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de cáncer y salud oral?",
+      "answers": [
+        {
+          "text": "tratamiento oncologico",
+          "points": 25
+        },
+        {
+          "text": "xerostomia",
+          "points": 20
+        },
+        {
+          "text": "mucositis",
+          "points": 18
+        },
+        {
+          "text": "infeccion",
+          "points": 15
+        },
+        {
+          "text": "radioterapia",
+          "points": 12
+        },
+        {
+          "text": "prevencion",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-085",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de radioterapia de cabeza y cuello?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 25
+        },
+        {
+          "text": "caries por radiacion",
+          "points": 20
+        },
+        {
+          "text": "osteorradionecrosis",
+          "points": 18
+        },
+        {
+          "text": "fluoruro",
+          "points": 15
+        },
+        {
+          "text": "higiene",
+          "points": 12
+        },
+        {
+          "text": "seguimiento",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-086",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 aspectos clave de radioterapia de cabeza y cuello?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 45
+        },
+        {
+          "text": "caries por radiacion",
+          "points": 30
+        },
+        {
+          "text": "osteorradionecrosis",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-087",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 aspectos clave de radioterapia de cabeza y cuello?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 35
+        },
+        {
+          "text": "caries por radiacion",
+          "points": 30
+        },
+        {
+          "text": "osteorradionecrosis",
+          "points": 20
+        },
+        {
+          "text": "fluoruro",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-088",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 aspectos clave de radioterapia de cabeza y cuello?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 30
+        },
+        {
+          "text": "caries por radiacion",
+          "points": 25
+        },
+        {
+          "text": "osteorradionecrosis",
+          "points": 20
+        },
+        {
+          "text": "fluoruro",
+          "points": 15
+        },
+        {
+          "text": "higiene",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-089",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de candidiasis oral?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 25
+        },
+        {
+          "text": "protesis",
+          "points": 20
+        },
+        {
+          "text": "inmunosupresion",
+          "points": 18
+        },
+        {
+          "text": "antibioticos",
+          "points": 15
+        },
+        {
+          "text": "lesiones",
+          "points": 12
+        },
+        {
+          "text": "higiene",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-090",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de candidiasis oral?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 25
+        },
+        {
+          "text": "protesis",
+          "points": 20
+        },
+        {
+          "text": "inmunosupresion",
+          "points": 18
+        },
+        {
+          "text": "antibioticos",
+          "points": 15
+        },
+        {
+          "text": "lesiones",
+          "points": 12
+        },
+        {
+          "text": "higiene",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-091",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 aspectos clave de candidiasis oral?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 45
+        },
+        {
+          "text": "protesis",
+          "points": 30
+        },
+        {
+          "text": "inmunosupresion",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-092",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 aspectos clave de candidiasis oral?",
+      "answers": [
+        {
+          "text": "xerostomia",
+          "points": 35
+        },
+        {
+          "text": "protesis",
+          "points": 30
+        },
+        {
+          "text": "inmunosupresion",
+          "points": 20
+        },
+        {
+          "text": "antibioticos",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-093",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 aspectos clave de lesiones de mucosa?",
+      "answers": [
+        {
+          "text": "exploracion",
+          "points": 30
+        },
+        {
+          "text": "trauma protetico",
+          "points": 25
+        },
+        {
+          "text": "tabaco",
+          "points": 20
+        },
+        {
+          "text": "alcohol",
+          "points": 15
+        },
+        {
+          "text": "persistencia",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-094",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de lesiones de mucosa?",
+      "answers": [
+        {
+          "text": "exploracion",
+          "points": 25
+        },
+        {
+          "text": "trauma protetico",
+          "points": 20
+        },
+        {
+          "text": "tabaco",
+          "points": 18
+        },
+        {
+          "text": "alcohol",
+          "points": 15
+        },
+        {
+          "text": "persistencia",
+          "points": 12
+        },
+        {
+          "text": "referencia",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-095",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de lesiones de mucosa?",
+      "answers": [
+        {
+          "text": "exploracion",
+          "points": 25
+        },
+        {
+          "text": "trauma protetico",
+          "points": 20
+        },
+        {
+          "text": "tabaco",
+          "points": 18
+        },
+        {
+          "text": "alcohol",
+          "points": 15
+        },
+        {
+          "text": "persistencia",
+          "points": 12
+        },
+        {
+          "text": "referencia",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-096",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 aspectos clave de lesiones de mucosa?",
+      "answers": [
+        {
+          "text": "exploracion",
+          "points": 45
+        },
+        {
+          "text": "trauma protetico",
+          "points": 30
+        },
+        {
+          "text": "tabaco",
+          "points": 25
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-097",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 aspectos clave de calidad de vida oral?",
+      "answers": [
+        {
+          "text": "dolor",
+          "points": 35
+        },
+        {
+          "text": "funcion",
+          "points": 30
+        },
+        {
+          "text": "habla",
+          "points": 20
+        },
+        {
+          "text": "alimentacion",
+          "points": 15
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-098",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 aspectos clave de calidad de vida oral?",
+      "answers": [
+        {
+          "text": "dolor",
+          "points": 30
+        },
+        {
+          "text": "funcion",
+          "points": 25
+        },
+        {
+          "text": "habla",
+          "points": 20
+        },
+        {
+          "text": "alimentacion",
+          "points": 15
+        },
+        {
+          "text": "estetica",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-099",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de calidad de vida oral?",
+      "answers": [
+        {
+          "text": "dolor",
+          "points": 25
+        },
+        {
+          "text": "funcion",
+          "points": 20
+        },
+        {
+          "text": "habla",
+          "points": 18
+        },
+        {
+          "text": "alimentacion",
+          "points": 15
+        },
+        {
+          "text": "estetica",
+          "points": 12
+        },
+        {
+          "text": "interaccion social",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    },
+    {
+      "id": "ORG40-100",
+      "category": "Odontologia geriatrica",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 aspectos clave de calidad de vida oral?",
+      "answers": [
+        {
+          "text": "dolor",
+          "points": 25
+        },
+        {
+          "text": "funcion",
+          "points": 20
+        },
+        {
+          "text": "habla",
+          "points": 18
+        },
+        {
+          "text": "alimentacion",
+          "points": 15
+        },
+        {
+          "text": "estetica",
+          "points": 12
+        },
+        {
+          "text": "interaccion social",
+          "points": 10
+        }
+      ],
+      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
+    }
+  ]
+}
