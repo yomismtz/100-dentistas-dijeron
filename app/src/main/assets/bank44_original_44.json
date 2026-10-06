@@ -5,15 +5,11 @@
       "id": "ORG44-001",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Objetivo clínico?",
+      "question": "¿Cuál es una función principal de la fotografía clínica odontológica?",
       "answers": [
         {
-          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
-          "points": 45
-        },
-        {
           "text": "documentar hallazgos",
-          "points": 30
+          "points": 45
         },
         {
           "text": "comparar cambios",
@@ -26,15 +22,11 @@
       "id": "ORG44-002",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Objetivo clínico?",
+      "question": "¿Cuál es una función principal de la fotografía clínica odontológica?",
       "answers": [
         {
-          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
-          "points": 35
-        },
-        {
           "text": "documentar hallazgos",
-          "points": 30
+          "points": 35
         },
         {
           "text": "comparar cambios",
@@ -51,15 +43,11 @@
       "id": "ORG44-003",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Objetivo clínico?",
+      "question": "¿Cuál es una función principal de la fotografía clínica odontológica?",
       "answers": [
         {
-          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
-          "points": 30
-        },
-        {
           "text": "documentar hallazgos",
-          "points": 25
+          "points": 30
         },
         {
           "text": "comparar cambios",
@@ -80,15 +68,11 @@
       "id": "ORG44-004",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Objetivo clínico?",
+      "question": "¿Cuál es una función principal de la fotografía clínica odontológica?",
       "answers": [
         {
-          "text": "¿Cuál es una función principal de la fotografía clínica odontológica?",
-          "points": 25
-        },
-        {
           "text": "documentar hallazgos",
-          "points": 20
+          "points": 25
         },
         {
           "text": "comparar cambios",
@@ -113,15 +97,11 @@
       "id": "ORG44-005",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Estandarización?",
+      "question": "¿Por qué es importante estandarizar la fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
-          "points": 45
-        },
-        {
           "text": "reproducibilidad",
-          "points": 30
+          "points": 45
         },
         {
           "text": "comparabilidad",
@@ -134,15 +114,11 @@
       "id": "ORG44-006",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Estandarización?",
+      "question": "¿Por qué es importante estandarizar la fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
-          "points": 35
-        },
-        {
           "text": "reproducibilidad",
-          "points": 30
+          "points": 35
         },
         {
           "text": "comparabilidad",
@@ -159,15 +135,11 @@
       "id": "ORG44-007",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Estandarización?",
+      "question": "¿Por qué es importante estandarizar la fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
-          "points": 30
-        },
-        {
           "text": "reproducibilidad",
-          "points": 25
+          "points": 30
         },
         {
           "text": "comparabilidad",
@@ -188,15 +160,11 @@
       "id": "ORG44-008",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Estandarización?",
+      "question": "¿Por qué es importante estandarizar la fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante estandarizar la fotografía clínica?",
-          "points": 25
-        },
-        {
           "text": "reproducibilidad",
-          "points": 20
+          "points": 25
         },
         {
           "text": "comparabilidad",
@@ -221,15 +189,11 @@
       "id": "ORG44-009",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Serie extraoral?",
+      "question": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
-          "points": 45
-        },
-        {
           "text": "frontal",
-          "points": 30
+          "points": 45
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -242,15 +206,11 @@
       "id": "ORG44-010",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Serie extraoral?",
+      "question": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
-          "points": 35
-        },
-        {
           "text": "frontal",
-          "points": 30
+          "points": 35
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -267,15 +227,11 @@
       "id": "ORG44-011",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Serie extraoral?",
+      "question": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
-          "points": 30
-        },
-        {
           "text": "frontal",
-          "points": 25
+          "points": 30
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -296,15 +252,11 @@
       "id": "ORG44-012",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Serie extraoral?",
+      "question": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué vistas extraorales pueden formar parte de una serie clínica estandarizada?",
-          "points": 25
-        },
-        {
           "text": "frontal",
-          "points": 20
+          "points": 25
         },
         {
           "text": "perfil derecho o izquierdo según protocolo",
@@ -329,15 +281,11 @@
       "id": "ORG44-013",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Serie intraoral?",
+      "question": "¿Qué vistas suelen integrar una serie intraoral completa?",
       "answers": [
         {
-          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
-          "points": 45
-        },
-        {
           "text": "frontal",
-          "points": 30
+          "points": 45
         },
         {
           "text": "lateral derecha",
@@ -350,15 +298,11 @@
       "id": "ORG44-014",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Serie intraoral?",
+      "question": "¿Qué vistas suelen integrar una serie intraoral completa?",
       "answers": [
         {
-          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
-          "points": 35
-        },
-        {
           "text": "frontal",
-          "points": 30
+          "points": 35
         },
         {
           "text": "lateral derecha",
@@ -375,15 +319,11 @@
       "id": "ORG44-015",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Serie intraoral?",
+      "question": "¿Qué vistas suelen integrar una serie intraoral completa?",
       "answers": [
         {
-          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
-          "points": 30
-        },
-        {
           "text": "frontal",
-          "points": 25
+          "points": 30
         },
         {
           "text": "lateral derecha",
@@ -404,15 +344,11 @@
       "id": "ORG44-016",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Serie intraoral?",
+      "question": "¿Qué vistas suelen integrar una serie intraoral completa?",
       "answers": [
         {
-          "text": "¿Qué vistas suelen integrar una serie intraoral completa?",
-          "points": 25
-        },
-        {
           "text": "frontal",
-          "points": 20
+          "points": 25
         },
         {
           "text": "lateral derecha",
@@ -437,15 +373,11 @@
       "id": "ORG44-017",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Retractores?",
+      "question": "¿Cuál es la función de los retractores en fotografía intraoral?",
       "answers": [
         {
-          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
-          "points": 45
-        },
-        {
           "text": "separar labios y mejillas",
-          "points": 30
+          "points": 45
         },
         {
           "text": "exponer superficies dentales",
@@ -458,15 +390,11 @@
       "id": "ORG44-018",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Retractores?",
+      "question": "¿Cuál es la función de los retractores en fotografía intraoral?",
       "answers": [
         {
-          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
-          "points": 35
-        },
-        {
           "text": "separar labios y mejillas",
-          "points": 30
+          "points": 35
         },
         {
           "text": "exponer superficies dentales",
@@ -483,15 +411,11 @@
       "id": "ORG44-019",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Retractores?",
+      "question": "¿Cuál es la función de los retractores en fotografía intraoral?",
       "answers": [
         {
-          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
-          "points": 30
-        },
-        {
           "text": "separar labios y mejillas",
-          "points": 25
+          "points": 30
         },
         {
           "text": "exponer superficies dentales",
@@ -512,15 +436,11 @@
       "id": "ORG44-020",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Retractores?",
+      "question": "¿Cuál es la función de los retractores en fotografía intraoral?",
       "answers": [
         {
-          "text": "¿Cuál es la función de los retractores en fotografía intraoral?",
-          "points": 25
-        },
-        {
           "text": "separar labios y mejillas",
-          "points": 20
+          "points": 25
         },
         {
           "text": "exponer superficies dentales",
@@ -545,15 +465,11 @@
       "id": "ORG44-021",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Espejos intraorales?",
+      "question": "¿Para qué se utilizan los espejos intraorales?",
       "answers": [
         {
-          "text": "¿Para qué se utilizan los espejos intraorales?",
-          "points": 45
-        },
-        {
           "text": "capturar superficies indirectas",
-          "points": 30
+          "points": 45
         },
         {
           "text": "obtener vistas oclusales",
@@ -566,15 +482,11 @@
       "id": "ORG44-022",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Espejos intraorales?",
+      "question": "¿Para qué se utilizan los espejos intraorales?",
       "answers": [
         {
-          "text": "¿Para qué se utilizan los espejos intraorales?",
-          "points": 35
-        },
-        {
           "text": "capturar superficies indirectas",
-          "points": 30
+          "points": 35
         },
         {
           "text": "obtener vistas oclusales",
@@ -591,15 +503,11 @@
       "id": "ORG44-023",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Espejos intraorales?",
+      "question": "¿Para qué se utilizan los espejos intraorales?",
       "answers": [
         {
-          "text": "¿Para qué se utilizan los espejos intraorales?",
-          "points": 30
-        },
-        {
           "text": "capturar superficies indirectas",
-          "points": 25
+          "points": 30
         },
         {
           "text": "obtener vistas oclusales",
@@ -620,15 +528,11 @@
       "id": "ORG44-024",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Espejos intraorales?",
+      "question": "¿Para qué se utilizan los espejos intraorales?",
       "answers": [
         {
-          "text": "¿Para qué se utilizan los espejos intraorales?",
-          "points": 25
-        },
-        {
           "text": "capturar superficies indirectas",
-          "points": 20
+          "points": 25
         },
         {
           "text": "obtener vistas oclusales",
@@ -653,15 +557,11 @@
       "id": "ORG44-025",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Iluminación?",
+      "question": "¿Qué factores de iluminación son relevantes en fotografía dental?",
       "answers": [
         {
-          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
-          "points": 45
-        },
-        {
           "text": "dirección de la luz",
-          "points": 30
+          "points": 45
         },
         {
           "text": "intensidad",
@@ -674,15 +574,11 @@
       "id": "ORG44-026",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Iluminación?",
+      "question": "¿Qué factores de iluminación son relevantes en fotografía dental?",
       "answers": [
         {
-          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
-          "points": 35
-        },
-        {
           "text": "dirección de la luz",
-          "points": 30
+          "points": 35
         },
         {
           "text": "intensidad",
@@ -699,15 +595,11 @@
       "id": "ORG44-027",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué factores deben considerarse al evaluar Iluminación?",
+      "question": "¿Qué factores de iluminación son relevantes en fotografía dental?",
       "answers": [
         {
-          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
-          "points": 30
-        },
-        {
           "text": "dirección de la luz",
-          "points": 25
+          "points": 30
         },
         {
           "text": "intensidad",
@@ -728,15 +620,11 @@
       "id": "ORG44-028",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de elementos corresponde a Iluminación?",
+      "question": "¿Qué factores de iluminación son relevantes en fotografía dental?",
       "answers": [
         {
-          "text": "¿Qué factores de iluminación son relevantes en fotografía dental?",
-          "points": 25
-        },
-        {
           "text": "dirección de la luz",
-          "points": 20
+          "points": 25
         },
         {
           "text": "intensidad",
@@ -761,15 +649,11 @@
       "id": "ORG44-029",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Qué elementos son relevantes en Exposición?",
+      "question": "¿Qué controles fotográficos influyen directamente en la exposición?",
       "answers": [
         {
-          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
-          "points": 45
-        },
-        {
           "text": "apertura",
-          "points": 30
+          "points": 45
         },
         {
           "text": "velocidad de obturación",
@@ -782,15 +666,11 @@
       "id": "ORG44-030",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "facil",
-      "question": "¿Cuáles son aspectos fundamentales de Exposición?",
+      "question": "¿Qué controles fotográficos influyen directamente en la exposición?",
       "answers": [
         {
-          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
-          "points": 35
-        },
-        {
           "text": "apertura",
-          "points": 30
+          "points": 35
         },
         {
           "text": "velocidad de obturación",
@@ -807,15 +687,11 @@
       "id": "ORG44-031",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué factores deben considerarse al evaluar Exposición?",
+      "question": "¿Qué controles fotográficos influyen directamente en la exposición?",
       "answers": [
         {
-          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
-          "points": 30
-        },
-        {
           "text": "apertura",
-          "points": 25
+          "points": 30
         },
         {
           "text": "velocidad de obturación",
@@ -836,15 +712,11 @@
       "id": "ORG44-032",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de elementos corresponde a Exposición?",
+      "question": "¿Qué controles fotográficos influyen directamente en la exposición?",
       "answers": [
         {
-          "text": "¿Qué controles fotográficos influyen directamente en la exposición?",
-          "points": 25
-        },
-        {
           "text": "apertura",
-          "points": 20
+          "points": 25
         },
         {
           "text": "velocidad de obturación",
@@ -869,15 +741,11 @@
       "id": "ORG44-033",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué elementos son relevantes en Profundidad de campo?",
+      "question": "¿Qué control suele influir de manera importante en la profundidad de campo?",
       "answers": [
         {
-          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
-          "points": 45
-        },
-        {
           "text": "apertura del diafragma",
-          "points": 30
+          "points": 45
         },
         {
           "text": "distancia de enfoque",
@@ -890,15 +758,11 @@
       "id": "ORG44-034",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son aspectos fundamentales de Profundidad de campo?",
+      "question": "¿Qué control suele influir de manera importante en la profundidad de campo?",
       "answers": [
         {
-          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
-          "points": 35
-        },
-        {
           "text": "apertura del diafragma",
-          "points": 30
+          "points": 35
         },
         {
           "text": "distancia de enfoque",
@@ -915,15 +779,11 @@
       "id": "ORG44-035",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué factores deben considerarse al evaluar Profundidad de campo?",
+      "question": "¿Qué control suele influir de manera importante en la profundidad de campo?",
       "answers": [
         {
-          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
-          "points": 30
-        },
-        {
           "text": "apertura del diafragma",
-          "points": 25
+          "points": 30
         },
         {
           "text": "distancia de enfoque",
@@ -944,15 +804,11 @@
       "id": "ORG44-036",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de elementos corresponde a Profundidad de campo?",
+      "question": "¿Qué control suele influir de manera importante en la profundidad de campo?",
       "answers": [
         {
-          "text": "¿Qué control suele influir de manera importante en la profundidad de campo?",
-          "points": 25
-        },
-        {
           "text": "apertura del diafragma",
-          "points": 20
+          "points": 25
         },
         {
           "text": "distancia de enfoque",
@@ -977,15 +833,11 @@
       "id": "ORG44-037",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué elementos son relevantes en Balance de blancos?",
+      "question": "¿Por qué es importante el balance de blancos en fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
-          "points": 45
-        },
-        {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 30
+          "points": 45
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -998,15 +850,11 @@
       "id": "ORG44-038",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son aspectos fundamentales de Balance de blancos?",
+      "question": "¿Por qué es importante el balance de blancos en fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
-          "points": 35
-        },
-        {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 30
+          "points": 35
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -1023,15 +871,11 @@
       "id": "ORG44-039",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué factores deben considerarse al evaluar Balance de blancos?",
+      "question": "¿Por qué es importante el balance de blancos en fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
-          "points": 30
-        },
-        {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 25
+          "points": 30
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -1052,15 +896,11 @@
       "id": "ORG44-040",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de elementos corresponde a Balance de blancos?",
+      "question": "¿Por qué es importante el balance de blancos en fotografía clínica?",
       "answers": [
         {
-          "text": "¿Por qué es importante el balance de blancos en fotografía clínica?",
-          "points": 25
-        },
-        {
           "text": "reproducir colores con mayor fidelidad",
-          "points": 20
+          "points": 25
         },
         {
           "text": "mantener consistencia entre fotografías",
@@ -1085,15 +925,11 @@
       "id": "ORG44-041",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué elementos son relevantes en Color dental?",
+      "question": "¿Qué condiciones ayudan a documentar el color dental?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a documentar el color dental?",
-          "points": 45
-        },
-        {
           "text": "iluminación controlada",
-          "points": 30
+          "points": 45
         },
         {
           "text": "balance de blancos adecuado",
@@ -1106,15 +942,11 @@
       "id": "ORG44-042",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son aspectos fundamentales de Color dental?",
+      "question": "¿Qué condiciones ayudan a documentar el color dental?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a documentar el color dental?",
-          "points": 35
-        },
-        {
           "text": "iluminación controlada",
-          "points": 30
+          "points": 35
         },
         {
           "text": "balance de blancos adecuado",
@@ -1131,15 +963,11 @@
       "id": "ORG44-043",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué factores deben considerarse al evaluar Color dental?",
+      "question": "¿Qué condiciones ayudan a documentar el color dental?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a documentar el color dental?",
-          "points": 30
-        },
-        {
           "text": "iluminación controlada",
-          "points": 25
+          "points": 30
         },
         {
           "text": "balance de blancos adecuado",
@@ -1160,15 +988,11 @@
       "id": "ORG44-044",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de elementos corresponde a Color dental?",
+      "question": "¿Qué condiciones ayudan a documentar el color dental?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a documentar el color dental?",
-          "points": 25
-        },
-        {
           "text": "iluminación controlada",
-          "points": 20
+          "points": 25
         },
         {
           "text": "balance de blancos adecuado",
@@ -1193,15 +1017,11 @@
       "id": "ORG44-045",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué elementos son relevantes en Enfoque?",
+      "question": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
       "answers": [
         {
-          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
-          "points": 45
-        },
-        {
           "text": "detalle suficiente",
-          "points": 30
+          "points": 45
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1214,15 +1034,11 @@
       "id": "ORG44-046",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son aspectos fundamentales de Enfoque?",
+      "question": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
       "answers": [
         {
-          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
-          "points": 35
-        },
-        {
           "text": "detalle suficiente",
-          "points": 30
+          "points": 35
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1239,15 +1055,11 @@
       "id": "ORG44-047",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué factores deben considerarse al evaluar Enfoque?",
+      "question": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
       "answers": [
         {
-          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
-          "points": 30
-        },
-        {
           "text": "detalle suficiente",
-          "points": 25
+          "points": 30
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1268,15 +1080,11 @@
       "id": "ORG44-048",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de elementos corresponde a Enfoque?",
+      "question": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
       "answers": [
         {
-          "text": "¿Qué características debe tener una fotografía clínica correctamente enfocada?",
-          "points": 25
-        },
-        {
           "text": "detalle suficiente",
-          "points": 20
+          "points": 25
         },
         {
           "text": "zona anatómica relevante nítida",
@@ -1301,15 +1109,11 @@
       "id": "ORG44-049",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Qué elementos son relevantes en Encuadre?",
+      "question": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
       "answers": [
         {
-          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
-          "points": 45
-        },
-        {
           "text": "campo de interés",
-          "points": 30
+          "points": 45
         },
         {
           "text": "orientación",
@@ -1322,15 +1126,11 @@
       "id": "ORG44-050",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son aspectos fundamentales de Encuadre?",
+      "question": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
       "answers": [
         {
-          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
-          "points": 35
-        },
-        {
           "text": "campo de interés",
-          "points": 30
+          "points": 35
         },
         {
           "text": "orientación",
@@ -1347,15 +1147,11 @@
       "id": "ORG44-051",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué factores deben considerarse al evaluar Encuadre?",
+      "question": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
       "answers": [
         {
-          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
-          "points": 30
-        },
-        {
           "text": "campo de interés",
-          "points": 25
+          "points": 30
         },
         {
           "text": "orientación",
@@ -1376,15 +1172,11 @@
       "id": "ORG44-052",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de elementos corresponde a Encuadre?",
+      "question": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
       "answers": [
         {
-          "text": "¿Qué aspectos deben cuidarse en el encuadre clínico?",
-          "points": 25
-        },
-        {
           "text": "campo de interés",
-          "points": 20
+          "points": 25
         },
         {
           "text": "orientación",
@@ -1409,15 +1201,11 @@
       "id": "ORG44-053",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué elementos son relevantes en Posición del paciente?",
+      "question": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
       "answers": [
         {
-          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
-          "points": 45
-        },
-        {
           "text": "posición de cabeza",
-          "points": 30
+          "points": 45
         },
         {
           "text": "postura",
@@ -1430,15 +1218,11 @@
       "id": "ORG44-054",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Cuáles son aspectos fundamentales de Posición del paciente?",
+      "question": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
       "answers": [
         {
-          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
-          "points": 35
-        },
-        {
           "text": "posición de cabeza",
-          "points": 30
+          "points": 35
         },
         {
           "text": "postura",
@@ -1455,15 +1239,11 @@
       "id": "ORG44-055",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué factores deben considerarse al evaluar Posición del paciente?",
+      "question": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
       "answers": [
         {
-          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
-          "points": 30
-        },
-        {
           "text": "posición de cabeza",
-          "points": 25
+          "points": 30
         },
         {
           "text": "postura",
@@ -1484,15 +1264,11 @@
       "id": "ORG44-056",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de elementos corresponde a Posición del paciente?",
+      "question": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
       "answers": [
         {
-          "text": "¿Qué variables deben estandarizarse para fotografías extraorales comparables?",
-          "points": 25
-        },
-        {
           "text": "posición de cabeza",
-          "points": 20
+          "points": 25
         },
         {
           "text": "postura",
@@ -1517,15 +1293,11 @@
       "id": "ORG44-057",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué elementos son relevantes en Posición de cámara?",
+      "question": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
       "answers": [
         {
-          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
-          "points": 45
-        },
-        {
           "text": "altura",
-          "points": 30
+          "points": 45
         },
         {
           "text": "ángulo",
@@ -1538,15 +1310,11 @@
       "id": "ORG44-058",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Cuáles son aspectos fundamentales de Posición de cámara?",
+      "question": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
       "answers": [
         {
-          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
-          "points": 35
-        },
-        {
           "text": "altura",
-          "points": 30
+          "points": 35
         },
         {
           "text": "ángulo",
@@ -1563,15 +1331,11 @@
       "id": "ORG44-059",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué factores deben considerarse al evaluar Posición de cámara?",
+      "question": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
       "answers": [
         {
-          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
-          "points": 30
-        },
-        {
           "text": "altura",
-          "points": 25
+          "points": 30
         },
         {
           "text": "ángulo",
@@ -1592,15 +1356,11 @@
       "id": "ORG44-060",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de elementos corresponde a Posición de cámara?",
+      "question": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
       "answers": [
         {
-          "text": "¿Qué debe controlarse para obtener fotografías intraorales reproducibles?",
-          "points": 25
-        },
-        {
           "text": "altura",
-          "points": 20
+          "points": 25
         },
         {
           "text": "ángulo",
@@ -1625,15 +1385,11 @@
       "id": "ORG44-061",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué elementos son relevantes en Fotografía de sonrisa?",
+      "question": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
       "answers": [
         {
-          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
-          "points": 45
-        },
-        {
           "text": "línea de sonrisa",
-          "points": 30
+          "points": 45
         },
         {
           "text": "exposición dental",
@@ -1646,15 +1402,11 @@
       "id": "ORG44-062",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía de sonrisa?",
+      "question": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
       "answers": [
         {
-          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
-          "points": 35
-        },
-        {
           "text": "línea de sonrisa",
-          "points": 30
+          "points": 35
         },
         {
           "text": "exposición dental",
@@ -1671,15 +1423,11 @@
       "id": "ORG44-063",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía de sonrisa?",
+      "question": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
       "answers": [
         {
-          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
-          "points": 30
-        },
-        {
           "text": "línea de sonrisa",
-          "points": 25
+          "points": 30
         },
         {
           "text": "exposición dental",
@@ -1700,15 +1448,11 @@
       "id": "ORG44-064",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía de sonrisa?",
+      "question": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
       "answers": [
         {
-          "text": "¿Qué elementos pueden documentarse en una fotografía de sonrisa?",
-          "points": 25
-        },
-        {
           "text": "línea de sonrisa",
-          "points": 20
+          "points": 25
         },
         {
           "text": "exposición dental",
@@ -1733,15 +1477,11 @@
       "id": "ORG44-065",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué elementos son relevantes en Fotografía periodontal?",
+      "question": "¿Qué puede documentarse fotográficamente en periodoncia?",
       "answers": [
         {
-          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
-          "points": 45
-        },
-        {
           "text": "recesiones",
-          "points": 30
+          "points": 45
         },
         {
           "text": "inflamación",
@@ -1754,15 +1494,11 @@
       "id": "ORG44-066",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía periodontal?",
+      "question": "¿Qué puede documentarse fotográficamente en periodoncia?",
       "answers": [
         {
-          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
-          "points": 35
-        },
-        {
           "text": "recesiones",
-          "points": 30
+          "points": 35
         },
         {
           "text": "inflamación",
@@ -1779,15 +1515,11 @@
       "id": "ORG44-067",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía periodontal?",
+      "question": "¿Qué puede documentarse fotográficamente en periodoncia?",
       "answers": [
         {
-          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
-          "points": 30
-        },
-        {
           "text": "recesiones",
-          "points": 25
+          "points": 30
         },
         {
           "text": "inflamación",
@@ -1808,15 +1540,11 @@
       "id": "ORG44-068",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía periodontal?",
+      "question": "¿Qué puede documentarse fotográficamente en periodoncia?",
       "answers": [
         {
-          "text": "¿Qué puede documentarse fotográficamente en periodoncia?",
-          "points": 25
-        },
-        {
           "text": "recesiones",
-          "points": 20
+          "points": 25
         },
         {
           "text": "inflamación",
@@ -1841,15 +1569,11 @@
       "id": "ORG44-069",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Qué elementos son relevantes en Fotografía restauradora?",
+      "question": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
       "answers": [
         {
-          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
-          "points": 45
-        },
-        {
           "text": "documentar situación inicial",
-          "points": 30
+          "points": 45
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1862,15 +1586,11 @@
       "id": "ORG44-070",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "dificil",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía restauradora?",
+      "question": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
       "answers": [
         {
-          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
-          "points": 35
-        },
-        {
           "text": "documentar situación inicial",
-          "points": 30
+          "points": 35
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1887,15 +1607,11 @@
       "id": "ORG44-071",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía restauradora?",
+      "question": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
       "answers": [
         {
-          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
-          "points": 30
-        },
-        {
           "text": "documentar situación inicial",
-          "points": 25
+          "points": 30
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1916,15 +1632,11 @@
       "id": "ORG44-072",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía restauradora?",
+      "question": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
       "answers": [
         {
-          "text": "¿Qué utilidad tiene la fotografía en odontología restauradora?",
-          "points": 25
-        },
-        {
           "text": "documentar situación inicial",
-          "points": 20
+          "points": 25
         },
         {
           "text": "seleccionar y comunicar color",
@@ -1949,15 +1661,11 @@
       "id": "ORG44-073",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Fotografía ortodóncica?",
+      "question": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
-          "points": 45
-        },
-        {
           "text": "documentación inicial",
-          "points": 30
+          "points": 45
         },
         {
           "text": "seguimiento",
@@ -1970,15 +1678,11 @@
       "id": "ORG44-074",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía ortodóncica?",
+      "question": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
-          "points": 35
-        },
-        {
           "text": "documentación inicial",
-          "points": 30
+          "points": 35
         },
         {
           "text": "seguimiento",
@@ -1995,15 +1699,11 @@
       "id": "ORG44-075",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía ortodóncica?",
+      "question": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
-          "points": 30
-        },
-        {
           "text": "documentación inicial",
-          "points": 25
+          "points": 30
         },
         {
           "text": "seguimiento",
@@ -2024,15 +1724,11 @@
       "id": "ORG44-076",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía ortodóncica?",
+      "question": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
       "answers": [
         {
-          "text": "¿Qué aporta una serie fotográfica ortodóncica estandarizada?",
-          "points": 25
-        },
-        {
           "text": "documentación inicial",
-          "points": 20
+          "points": 25
         },
         {
           "text": "seguimiento",
@@ -2057,15 +1753,11 @@
       "id": "ORG44-077",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Fotografía de cirugía?",
+      "question": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
       "answers": [
         {
-          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
-          "points": 45
-        },
-        {
           "text": "bioseguridad",
-          "points": 30
+          "points": 45
         },
         {
           "text": "campo limpio",
@@ -2078,15 +1770,11 @@
       "id": "ORG44-078",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía de cirugía?",
+      "question": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
       "answers": [
         {
-          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
-          "points": 35
-        },
-        {
           "text": "bioseguridad",
-          "points": 30
+          "points": 35
         },
         {
           "text": "campo limpio",
@@ -2103,15 +1791,11 @@
       "id": "ORG44-079",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía de cirugía?",
+      "question": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
       "answers": [
         {
-          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
-          "points": 30
-        },
-        {
           "text": "bioseguridad",
-          "points": 25
+          "points": 30
         },
         {
           "text": "campo limpio",
@@ -2132,15 +1816,11 @@
       "id": "ORG44-080",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía de cirugía?",
+      "question": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
       "answers": [
         {
-          "text": "¿Qué principios son relevantes al fotografiar procedimientos quirúrgicos?",
-          "points": 25
-        },
-        {
           "text": "bioseguridad",
-          "points": 20
+          "points": 25
         },
         {
           "text": "campo limpio",
@@ -2165,15 +1845,11 @@
       "id": "ORG44-081",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Fotografía de lesiones?",
+      "question": "¿Qué elementos son importantes al fotografiar una lesión oral?",
       "answers": [
         {
-          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
-          "points": 45
-        },
-        {
           "text": "orientación",
-          "points": 30
+          "points": 45
         },
         {
           "text": "escala cuando sea pertinente",
@@ -2186,15 +1862,11 @@
       "id": "ORG44-082",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía de lesiones?",
+      "question": "¿Qué elementos son importantes al fotografiar una lesión oral?",
       "answers": [
         {
-          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
-          "points": 35
-        },
-        {
           "text": "orientación",
-          "points": 30
+          "points": 35
         },
         {
           "text": "escala cuando sea pertinente",
@@ -2211,15 +1883,11 @@
       "id": "ORG44-083",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía de lesiones?",
+      "question": "¿Qué elementos son importantes al fotografiar una lesión oral?",
       "answers": [
         {
-          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
-          "points": 30
-        },
-        {
           "text": "orientación",
-          "points": 25
+          "points": 30
         },
         {
           "text": "escala cuando sea pertinente",
@@ -2240,15 +1908,11 @@
       "id": "ORG44-084",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía de lesiones?",
+      "question": "¿Qué elementos son importantes al fotografiar una lesión oral?",
       "answers": [
         {
-          "text": "¿Qué elementos son importantes al fotografiar una lesión oral?",
-          "points": 25
-        },
-        {
           "text": "orientación",
-          "points": 20
+          "points": 25
         },
         {
           "text": "escala cuando sea pertinente",
@@ -2273,15 +1937,11 @@
       "id": "ORG44-085",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Fotografía con smartphone?",
+      "question": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
-          "points": 45
-        },
-        {
           "text": "posición constante",
-          "points": 30
+          "points": 45
         },
         {
           "text": "iluminación adecuada",
@@ -2294,15 +1954,11 @@
       "id": "ORG44-086",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Fotografía con smartphone?",
+      "question": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
-          "points": 35
-        },
-        {
           "text": "posición constante",
-          "points": 30
+          "points": 35
         },
         {
           "text": "iluminación adecuada",
@@ -2319,15 +1975,11 @@
       "id": "ORG44-087",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Fotografía con smartphone?",
+      "question": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
-          "points": 30
-        },
-        {
           "text": "posición constante",
-          "points": 25
+          "points": 30
         },
         {
           "text": "iluminación adecuada",
@@ -2348,15 +2000,11 @@
       "id": "ORG44-088",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Fotografía con smartphone?",
+      "question": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
       "answers": [
         {
-          "text": "¿Qué condiciones ayudan a obtener fotografías clínicas reproducibles con un teléfono?",
-          "points": 25
-        },
-        {
           "text": "posición constante",
-          "points": 20
+          "points": 25
         },
         {
           "text": "iluminación adecuada",
@@ -2381,15 +2029,11 @@
       "id": "ORG44-089",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Almacenamiento?",
+      "question": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
       "answers": [
         {
-          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
-          "points": 45
-        },
-        {
           "text": "identificación adecuada",
-          "points": 30
+          "points": 45
         },
         {
           "text": "seguridad",
@@ -2402,15 +2046,11 @@
       "id": "ORG44-090",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Almacenamiento?",
+      "question": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
       "answers": [
         {
-          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
-          "points": 35
-        },
-        {
           "text": "identificación adecuada",
-          "points": 30
+          "points": 35
         },
         {
           "text": "seguridad",
@@ -2427,15 +2067,11 @@
       "id": "ORG44-091",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Almacenamiento?",
+      "question": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
       "answers": [
         {
-          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
-          "points": 30
-        },
-        {
           "text": "identificación adecuada",
-          "points": 25
+          "points": 30
         },
         {
           "text": "seguridad",
@@ -2456,15 +2092,11 @@
       "id": "ORG44-092",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Almacenamiento?",
+      "question": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
       "answers": [
         {
-          "text": "¿Qué medidas son relevantes para almacenar fotografías clínicas digitales?",
-          "points": 25
-        },
-        {
           "text": "identificación adecuada",
-          "points": 20
+          "points": 25
         },
         {
           "text": "seguridad",
@@ -2489,15 +2121,11 @@
       "id": "ORG44-093",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Privacidad y consentimiento?",
+      "question": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
       "answers": [
         {
-          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
-          "points": 45
-        },
-        {
           "text": "consentimiento o autorización aplicable",
-          "points": 30
+          "points": 45
         },
         {
           "text": "confidencialidad",
@@ -2510,15 +2138,11 @@
       "id": "ORG44-094",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Privacidad y consentimiento?",
+      "question": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
       "answers": [
         {
-          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
-          "points": 35
-        },
-        {
           "text": "consentimiento o autorización aplicable",
-          "points": 30
+          "points": 35
         },
         {
           "text": "confidencialidad",
@@ -2535,15 +2159,11 @@
       "id": "ORG44-095",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Privacidad y consentimiento?",
+      "question": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
       "answers": [
         {
-          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
-          "points": 30
-        },
-        {
           "text": "consentimiento o autorización aplicable",
-          "points": 25
+          "points": 30
         },
         {
           "text": "confidencialidad",
@@ -2564,15 +2184,11 @@
       "id": "ORG44-096",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Privacidad y consentimiento?",
+      "question": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
       "answers": [
         {
-          "text": "¿Qué debe considerarse antes de usar fotografías clínicas identificables para docencia o publicación?",
-          "points": 25
-        },
-        {
           "text": "consentimiento o autorización aplicable",
-          "points": 20
+          "points": 25
         },
         {
           "text": "confidencialidad",
@@ -2597,15 +2213,11 @@
       "id": "ORG44-097",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué elementos son relevantes en Documentación longitudinal?",
+      "question": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
       "answers": [
         {
-          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
-          "points": 45
-        },
-        {
           "text": "comparar evolución",
-          "points": 30
+          "points": 45
         },
         {
           "text": "documentar cambios",
@@ -2618,15 +2230,11 @@
       "id": "ORG44-098",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Cuáles son aspectos fundamentales de Documentación longitudinal?",
+      "question": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
       "answers": [
         {
-          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
-          "points": 35
-        },
-        {
           "text": "comparar evolución",
-          "points": 30
+          "points": 35
         },
         {
           "text": "documentar cambios",
@@ -2643,15 +2251,11 @@
       "id": "ORG44-099",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben considerarse al evaluar Documentación longitudinal?",
+      "question": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
       "answers": [
         {
-          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
-          "points": 30
-        },
-        {
           "text": "comparar evolución",
-          "points": 25
+          "points": 30
         },
         {
           "text": "documentar cambios",
@@ -2672,15 +2276,11 @@
       "id": "ORG44-100",
       "category": "Fotografía y documentación clínica odontológica",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de elementos corresponde a Documentación longitudinal?",
+      "question": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
       "answers": [
         {
-          "text": "¿Qué permite una fotografía clínica estandarizada tomada en diferentes momentos?",
-          "points": 25
-        },
-        {
           "text": "comparar evolución",
-          "points": 20
+          "points": 25
         },
         {
           "text": "documentar cambios",
