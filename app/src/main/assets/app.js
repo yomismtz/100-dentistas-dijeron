@@ -2,7 +2,7 @@
 
 const $ = (s) => document.querySelector(s);
 const GAME_SIZE = 8;
-const TURN_SECONDS = 30;
+const TURN_SECONDS = 20;
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
@@ -229,6 +229,7 @@ let scores = [0, 0];
 let teamNames = ['EQUIPO 1', 'EQUIPO 2'];
 let awardHistory = [];
 let currentTeam = 0;
+let teamMemberIndex = [0, 0];
 let phase = 'play'; // play | steal | over
 let timerRemaining = TURN_SECONDS;
 let timerHandle = null;
@@ -790,12 +791,30 @@ function finishFaceoff(winner){
     ? (isEn() ? 'the computer' : 'la computadora')
     : (teamNames[currentTeam] || (isEn() ? `team ${currentTeam+1}` : `equipo ${currentTeam+1}`));
   const announcement = isEn() ? `We go with ${winnerName}.` : `Nos vamos con ${winnerName}.`;
+  const q = questions[roundIndex];
   const resume = () => {
     startTimer(TURN_SECONDS);
     if(winner==='cpu') scheduleCpuTurn();
   };
-  const spoken = narrate(announcement,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:resume,onerror:resume});
-  if(spoken===false) resume();
+  const readQuestion = () => {
+    if (!q) { resume(); return; }
+    const answerPrompt = isEn()
+      ? 'The question is on screen. Answer by voice using the microphone.'
+      : 'Tenemos la siguiente pregunta en pantalla. Proceda a contestarla con su voz usando el micrófono.';
+    const spokenPrompt = narrate(answerPrompt,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:()=>{
+      const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
+      if(spokenQuestion===false) resume();
+    },onerror:()=>{
+      const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
+      if(spokenQuestion===false) resume();
+    }});
+    if(spokenPrompt===false) {
+      const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
+      if(spokenQuestion===false) resume();
+    }
+  };
+  const spoken = narrate(announcement,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:readQuestion,onerror:readQuestion});
+  if(spoken===false) readQuestion();
 }
 
 function startFaceoff(){
@@ -848,15 +867,29 @@ function beginTurnAfterQuestion() {
   updateTimerUI();
   const q = questions[roundIndex];
   if (!q || phase === 'over' || !gameVisible()) return;
+  const memberLabel = gameConfig.mode === 'teams' && Number(gameConfig.teamSize) > 1
+    ? (isEn() ? `Next member of ${teamNames[currentTeam]}` : `Siguiente miembro de ${teamNames[currentTeam]}`)
+    : (isEn() ? `Player ${currentTeam + 1}` : `Jugador ${currentTeam + 1}`);
 
   const token = ++turnNarrationToken;
   const start = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
     startFaceoff();
   };
-
-  const spoken = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
-  if (spoken === false) start();
+  const roundIntro = isEn()
+    ? `Welcome to 100 Dentistas Dijeron. Round number ${roundIndex + 1}. ${memberLabel}. We have the following question on screen. Please read it.`
+    : `Bienvenidos a 100 Dentistas Dijeron. Ronda número ${roundIndex + 1}. ${memberLabel}. Tenemos la siguiente pregunta en pantalla. Proceda a leerla.`;
+  const spokenIntro = narrate(roundIntro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:()=>{
+    const spokenQuestion = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
+    if (spokenQuestion === false) start();
+  }, onerror:()=>{
+    const spokenQuestion = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
+    if (spokenQuestion === false) start();
+  }});
+  if (spokenIntro === false) {
+    const spokenQuestion = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
+    if (spokenQuestion === false) start();
+  }
 }
 
 function startTimer(initialSeconds = TURN_SECONDS) {
@@ -875,7 +908,8 @@ function startTimer(initialSeconds = TURN_SECONDS) {
     updateTimerUI();
     if (timerRemaining > 0 && timerRemaining <= 10) {
       const urgency = 11 - timerRemaining;
-      gameSound('countdown');
+      const volume = 0.045 + ((11 - timerRemaining) / 10) * 0.06;
+      tone(620 + urgency * 24, .11, 'square', volume);
       const timerEl=$('#timer');
       timerEl?.classList.remove('countdownPulse');
       void timerEl?.offsetWidth;
@@ -1250,6 +1284,9 @@ function revealAnswer(idx, btn) {
   }
   const nextTurn = () => {
     if (phase === 'over' || !gameVisible()) return;
+    if (gameConfig.mode === 'teams' && Number(gameConfig.teamSize) > 1) {
+      teamMemberIndex[currentTeam] = (teamMemberIndex[currentTeam] + 1) % Number(gameConfig.teamSize);
+    }
     setTimeout(() => {
       turnResolving = false;
       if (!gamePaused && phase !== 'over' && gameVisible()) beginTurnAfterQuestion();
@@ -1490,12 +1527,14 @@ function showCpuSetup() {
   const chosen = eligible[Math.floor(Math.random() * Math.max(1, eligible.length))] || pool[0];
   gameConfig.cpuCharacter = chosen?.name || 'NOVA';
   teamNames = ['JUGADOR', 'COMPUTADORA'];
+  teamMemberIndex = [0, 0];
   showAreaSelector('cpu');
 }
 
 function showOneVsOneSetup() {
   teamNames = ['JUGADOR 1','JUGADOR 2'];
   gameConfig.teamSize = 1;
+  teamMemberIndex = [0, 0];
   showAreaSelector('1v1');
 }
 
@@ -1808,6 +1847,7 @@ async function startNewGame() {
   sessionSteals = 0;
   sessionStealAttempts = 0;
   currentTeam = 0;
+  teamMemberIndex = [0, 0];
   phase = 'play';
   gamePaused = false;
   turnResolving = false;
