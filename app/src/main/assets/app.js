@@ -510,9 +510,7 @@ function chooseGameQuestions() {
 }
 
 function roundMultiplier(index = roundIndex) {
-  if (index <= 3) return 1;
-  if (index <= 5) return 2;
-  return 3;
+  return Math.max(1, Number(index) + 1);
 }
 
 function gameVisible() {
@@ -788,9 +786,18 @@ function finishFaceoff(winner){
   currentTeam=winner==='cpu'?1:Number(winner)||0;
   updateTurnUI();
   saveActiveGame();
-  startTimer(TURN_SECONDS);
-  if(winner==='cpu') scheduleCpuTurn();
+  const winnerName = gameConfig.mode==='cpu' && currentTeam===1
+    ? (isEn() ? 'the computer' : 'la computadora')
+    : (teamNames[currentTeam] || (isEn() ? `team ${currentTeam+1}` : `equipo ${currentTeam+1}`));
+  const announcement = isEn() ? `We go with ${winnerName}.` : `Nos vamos con ${winnerName}.`;
+  const resume = () => {
+    startTimer(TURN_SECONDS);
+    if(winner==='cpu') scheduleCpuTurn();
+  };
+  const spoken = narrate(announcement,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:resume,onerror:resume});
+  if(spoken===false) resume();
 }
+
 function startFaceoff(){
   if (gamePaused || turnResolving) return;
   // Paso 3: el robo es automático. No hay segundo careo; el equipo rival recibe directamente el turno.
@@ -998,6 +1005,25 @@ function updateTurnUI() {
   updateTimerUI();
 }
 
+function showRoundTransition(onDone) {
+  const old = document.querySelector('#roundTransition');
+  if (old) old.remove();
+  const overlay = document.createElement('div');
+  overlay.id = 'roundTransition';
+  overlay.className = 'roundTransition';
+  const mult = roundMultiplier();
+  const lang = I18N?.getLang?.() || 'es';
+  overlay.innerHTML = `<div class="roundTransitionCard"><span>${lang === 'en' ? 'ROUND' : 'RONDA'} ${roundIndex + 1}</span><strong>×${mult}</strong><small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small></div>`;
+  document.body.appendChild(overlay);
+  gameSound('transition');
+  clearTimeout(roundTransitionHandle);
+  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 850);
+  setTimeout(() => {
+    overlay.remove();
+    if (typeof onDone === 'function') onDone();
+  }, 1100);
+}
+
 function showRoundTransition() {
   const old = document.querySelector('#roundTransition');
   if (old) old.remove();
@@ -1054,15 +1080,14 @@ function showRound(reset = true) {
   });
 
   updateTurnUI();
-  if (reset) showRoundTransition();
+  if (reset) showRoundTransition(() => beginTurnAfterQuestion());
   try {
     window.dispatchEvent(new CustomEvent('dentistas-round-shown', {
       detail: { roundIndex, total: questions.length }
     }));
     window.DentistasPerformance?.memoryCheck?.();
   } catch (_) {}
-  if (reset) beginTurnAfterQuestion();
-  else startTimer(preservedTime);
+  if (!reset) startTimer(preservedTime);
 }
 
 function revealRemainingAndNarrate(onDone) {
@@ -1460,18 +1485,12 @@ function showTeamSetup() {
 function showCpuSetup() {
   const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
   const fallback = ['SOFÍA','VALERIA','SANTIAGO','ALEX','MATEO','LUCÍA','DIEGO','RENATA','CARLOS','MÍA','EMMA','EL RATÓN DE LOS DIENTES','LA MUELA DEL JUICIO','SANTA APOLONIA','EL DIOS DE LOS DIENTES','NOVA'];
-  const names = chars.length ? chars.map(c=>c.name) : fallback;
-  openModal(`
-    <h2>🤖 CONTRA LA COMPUTADORA</h2>
-    <p>Elige al especialista que será tu rival.</p>
-    <div class="cpuPicker">
-      ${names.map(n=>{const ch=chars.find(c=>c.name===n);return `<button type="button" data-cpu="${n}">${ch?.specialty||n}</button>`}).join('')}
-    </div>`);
-  document.querySelectorAll('[data-cpu]').forEach(btn => btn.onclick = () => {
-    gameConfig.cpuCharacter = btn.dataset.cpu;
-    teamNames = ['JUGADOR', gameConfig.cpuCharacter];
-    showAreaSelector('cpu');
-  });
+  const pool = chars.length ? chars : fallback.map(name => ({name}));
+  const eligible = pool.filter(ch => ch.name !== gameConfig.playerCharacter);
+  const chosen = eligible[Math.floor(Math.random() * Math.max(1, eligible.length))] || pool[0];
+  gameConfig.cpuCharacter = chosen?.name || 'NOVA';
+  teamNames = ['JUGADOR', 'COMPUTADORA'];
+  showAreaSelector('cpu');
 }
 
 function showOneVsOneSetup() {
@@ -1830,7 +1849,7 @@ function finishGame() {
 
   openModal(
     `${result}
-${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–4: <b>×1</b> · Rounds 5–6: <b>×2</b> · Rounds 7–8: <b>×3</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–4: <b>×1</b> · Rondas 5–6: <b>×2</b> · Rondas 7–8: <b>×3</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
+${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–8: <b>×1, ×2, ×3, ×4, ×5, ×6, ×7, ×8</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–8: <b>×1, ×2, ×3, ×4, ×5, ×6, ×7, ×8</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
      <div class="menuStack">
        <button id="mFinal">⚡ RONDA FINAL · META 300</button>
        <button id="mAgain"> ${tx('newGame')} </button>
@@ -1907,7 +1926,7 @@ function showHelp() {
         <li>Each answer must be given before the <b>30-second timer</b> ends.</li>
         <li>If time reaches zero without a correct answer, <b>1 strike</b> is added automatically.</li>
         <li>After a correct answer or a strike, the timer restarts after the question is narrated, with 30 seconds.</li>
-        <li>Rounds <b>1–4 are ×1</b>, rounds <b>5–6 are ×2</b>, and rounds <b>7–8 are ×3</b>.</li>
+        <li>Rounds <b>1–8 increase from ×1 to ×8</b>.</li>
         <li>A correct answer reveals the board item and adds its multiplied value to the <b>Bank</b>.</li>
         <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
         <li>On the third mistake, control passes to the opposing team.</li>
@@ -1928,7 +1947,7 @@ function showHelp() {
         <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 30 segundos</b>.</li>
         <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
         <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 30 segundos después de narrar la pregunta.</li>
-        <li>Las rondas <b>1–4 valen ×1</b>, las rondas <b>5–6 valen ×2</b> y las rondas <b>7–8 valen ×3</b>.</li>
+        <li>Cada ronda aumenta el multiplicador: <b>Ronda 1 ×1</b>, <b>Ronda 2 ×2</b>, hasta <b>Ronda 8 ×8</b>.</li>
         <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
         <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
         <li>Al tercer error pierde el control y el turno pasa al rival.</li>
