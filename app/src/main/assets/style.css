@@ -629,3 +629,6 @@ button{color:var(--text)}
 .landing{background:#160d29!important}.landingShade{background:linear-gradient(180deg,#10072222 0%,#160d2933 40%,#0a0414dd 100%)!important}.landingPanel{border-color:#79f2c088!important;background:linear-gradient(180deg,#24104fcc,#120a26ee)!important}.landingEyebrow{color:#79f2c0!important}.landingPanel h1{color:#fff!important;text-shadow:0 3px 18px #090414,0 0 22px #d62fae55!important}.landingPanel p{color:#e5dcf2!important}.landingOpen{border-color:#79f2c0!important;background:linear-gradient(180deg,#d62fae,#8e1d72)!important;box-shadow:inset 0 1px #ffb5ea66,0 12px 30px #090414aa,0 0 26px #d62fae55!important}
 #home:not(.hidden){background-color:#160d29!important}.exitGameBtn{border-color:#ff8bdc!important;background:linear-gradient(180deg,#d62fae,#8e1d72)!important}
 .homeGlow{background:radial-gradient(ellipse,#18c7c266 0,#7a3ff233 35%,transparent 72%)!important}
+
+
+/* APK build trigger */
