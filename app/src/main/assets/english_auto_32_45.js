@@ -23,7 +23,28 @@ const W={"qué":"what","que":"what","cuáles":"which","cuales":"which","cuál":"
 function esc(s){return s.replace(/[.*+?^$()|[\]\\]/g,"\\$&")}
 function map(s,m){let x=s;for(const k of Object.keys(m).sort((a,b)=>b.length-a.length))x=x.replace(new RegExp("(?<![\\p{L}\\p{N}])"+esc(k)+"(?![\\p{L}\\p{N}])","giu"),m[k]);return x.replace(/\\s+/g," ").trim()}
 function tr(s){let x=s.replace(/^¿|\?$/g,"").trim();x=map(x,T);x=map(x,W);return x}
-function q(s){if(/^¿(Qué|Que) características dentales pueden contribuir/i.test(s))return "What dental characteristics can contribute to human identification?";if(/^¿Qué información puede integrar/i.test(s))return "What information can a useful antemortem dental record contain for identification?";if(/^¿Qué se registra durante/i.test(s))return "What is recorded during the postmortem dental examination?";if(/^¿Cuál es una función principal/i.test(s))return "What is a primary function of dental clinical photography?";if(/^¿Por qué es importante/i.test(s))return "Why is standardization of clinical photography important?";return "What "+tr(s)+"?"}
+function q(s){
+  const raw=String(s||'').trim();
+  let m;
+  if((m=raw.match(/^¿Qué elementos deben considerarse en (.+)\?$/i))) return "What elements should be considered in "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Cuáles son aspectos fundamentales de (.+)\?$/i))) return "What are the fundamental aspects of "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Cuáles son características o criterios relevantes de (.+)\?$/i))) return "What are the relevant characteristics or criteria of "+tr(m[1])+"?";
+  if((m=raw.match(/^Al valorar (.+), ¿qué criterios deben revisarse\?$/i))) return "When assessing "+tr(m[1])+", what criteria should be reviewed?";
+  if((m=raw.match(/^En (.+), ¿qué aspectos son clínicamente pertinentes\?$/i))) return "In "+tr(m[1])+", what aspects are clinically relevant?";
+  if((m=raw.match(/^¿Qué conjunto de factores corresponde a (.+)\?$/i))) return "What set of factors corresponds to "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Qué conjunto de conceptos se relaciona con (.+)\?$/i))) return "What set of concepts is related to "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Qué elementos caracterizan (.+)\?$/i))) return "What elements characterize "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Qué debe considerarse al evaluar (.+)\?$/i))) return "What should be considered when evaluating "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Qué aspectos deben considerarse al evaluar (.+)\?$/i))) return "What aspects should be considered when evaluating "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Por qué es importante (.+)\?$/i))) return "Why is "+tr(m[1])+" important?";
+  if((m=raw.match(/^¿Cuál es una función principal de (.+)\?$/i))) return "What is a primary function of "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Qué es (.+)\?$/i))) return "What is "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Qué son (.+)\?$/i))) return "What are "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Cuáles son (.+)\?$/i))) return "What are "+tr(m[1])+"?";
+  if((m=raw.match(/^¿Cuál es (.+)\?$/i))) return "What is "+tr(m[1])+"?";
+  let x=tr(raw).replace(/^what\s+what\s+/i,"what ").replace(/^what\s+which\s+/i,"what ").replace(/^which\s+are\s+/i,"what are ").replace(/\s+/g," ").trim();
+  return x.replace(/\?$/,'')+"?";
+}
 window.DentistasEnglishAutoTranslate3245={translate:function(s){return /^¿|^Que |^Cuales |^Qué |^Cuáles /i.test(s)?q(s):tr(s)}};
 })();
 /* Revision layer: terminology and question-template corrections for categories 31-45. */
