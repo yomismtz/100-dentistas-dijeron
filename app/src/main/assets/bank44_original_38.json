@@ -1,1 +1,2905 @@
-{"category":"Urgencias médicas en odontología","questions":[{"id":"ORG38-001","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan preparación para emergencias?","answers":[{"text":"plan de emergencia","points":45},{"text":"personal entrenado","points":30},{"text":"botiquín","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-002","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de preparación para emergencias?","answers":[{"text":"plan de emergencia","points":35},{"text":"personal entrenado","points":30},{"text":"botiquín","points":20},{"text":"equipo de oxígeno","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-003","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en preparación para emergencias?","answers":[{"text":"plan de emergencia","points":30},{"text":"personal entrenado","points":25},{"text":"botiquín","points":20},{"text":"equipo de oxígeno","points":15},{"text":"DEA","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-004","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a preparación para emergencias?","answers":[{"text":"plan de emergencia","points":25},{"text":"personal entrenado","points":20},{"text":"botiquín","points":18},{"text":"equipo de oxígeno","points":15},{"text":"DEA","points":12},{"text":"teléfono de emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-005","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan evaluación inicial?","answers":[{"text":"seguridad de la escena","points":22},{"text":"respuesta del paciente","points":18},{"text":"vía aérea","points":16},{"text":"respiración","points":14},{"text":"circulación","points":12},{"text":"activación de ayuda","points":10},{"text":"signos vitales","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-006","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de evaluación inicial?","answers":[{"text":"seguridad de la escena","points":45},{"text":"respuesta del paciente","points":30},{"text":"vía aérea","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-007","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en evaluación inicial?","answers":[{"text":"seguridad de la escena","points":35},{"text":"respuesta del paciente","points":30},{"text":"vía aérea","points":20},{"text":"respiración","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-008","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a evaluación inicial?","answers":[{"text":"seguridad de la escena","points":30},{"text":"respuesta del paciente","points":25},{"text":"vía aérea","points":20},{"text":"respiración","points":15},{"text":"circulación","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-009","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan síncope vasovagal?","answers":[{"text":"pródromo","points":25},{"text":"palidez","points":20},{"text":"sudoración","points":18},{"text":"bradicardia posible","points":15},{"text":"posición supina","points":12},{"text":"elevación de piernas","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-010","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de síncope vasovagal?","answers":[{"text":"pródromo","points":22},{"text":"palidez","points":18},{"text":"sudoración","points":16},{"text":"bradicardia posible","points":14},{"text":"posición supina","points":12},{"text":"elevación de piernas","points":10},{"text":"recuperación","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-011","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en síncope vasovagal?","answers":[{"text":"pródromo","points":45},{"text":"palidez","points":30},{"text":"sudoración","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-012","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a síncope vasovagal?","answers":[{"text":"pródromo","points":35},{"text":"palidez","points":30},{"text":"sudoración","points":20},{"text":"bradicardia posible","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-013","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan hipotensión ortostática?","answers":[{"text":"descenso de presión al incorporarse","points":30},{"text":"mareo","points":25},{"text":"presíncope","points":20},{"text":"cambio postural","points":15},{"text":"prevención mediante cambios graduales","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-014","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de hipotensión ortostática?","answers":[{"text":"descenso de presión al incorporarse","points":25},{"text":"mareo","points":20},{"text":"presíncope","points":18},{"text":"cambio postural","points":15},{"text":"prevención mediante cambios graduales","points":12},{"text":"evaluación del paciente","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-015","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en hipotensión ortostática?","answers":[{"text":"descenso de presión al incorporarse","points":22},{"text":"mareo","points":18},{"text":"presíncope","points":16},{"text":"cambio postural","points":14},{"text":"prevención mediante cambios graduales","points":12},{"text":"evaluación del paciente","points":10},{"text":"protección contra caídas","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-016","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a hipotensión ortostática?","answers":[{"text":"descenso de presión al incorporarse","points":45},{"text":"mareo","points":30},{"text":"presíncope","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-017","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan hipoglucemia?","answers":[{"text":"sudoración","points":35},{"text":"temblor","points":30},{"text":"confusión","points":20},{"text":"glucosa baja","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-018","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de hipoglucemia?","answers":[{"text":"sudoración","points":30},{"text":"temblor","points":25},{"text":"confusión","points":20},{"text":"glucosa baja","points":15},{"text":"carbohidrato oral si está consciente","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-019","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en hipoglucemia?","answers":[{"text":"sudoración","points":25},{"text":"temblor","points":20},{"text":"confusión","points":18},{"text":"glucosa baja","points":15},{"text":"carbohidrato oral si está consciente","points":12},{"text":"reevaluación","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-020","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a hipoglucemia?","answers":[{"text":"sudoración","points":22},{"text":"temblor","points":18},{"text":"confusión","points":16},{"text":"glucosa baja","points":14},{"text":"carbohidrato oral si está consciente","points":12},{"text":"reevaluación","points":10},{"text":"ayuda de emergencia si no puede ingerir","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-021","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan hiperglucemia grave?","answers":[{"text":"sed intensa","points":45},{"text":"poliuria","points":30},{"text":"alteración del estado mental","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-022","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de hiperglucemia grave?","answers":[{"text":"sed intensa","points":35},{"text":"poliuria","points":30},{"text":"alteración del estado mental","points":20},{"text":"deshidratación","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-023","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en hiperglucemia grave?","answers":[{"text":"sed intensa","points":30},{"text":"poliuria","points":25},{"text":"alteración del estado mental","points":20},{"text":"deshidratación","points":15},{"text":"evaluación médica","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-024","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a hiperglucemia grave?","answers":[{"text":"sed intensa","points":25},{"text":"poliuria","points":20},{"text":"alteración del estado mental","points":18},{"text":"deshidratación","points":15},{"text":"evaluación médica","points":12},{"text":"no administrar azúcar sin indicación","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-025","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan crisis convulsiva?","answers":[{"text":"proteger al paciente","points":22},{"text":"retirar objetos peligrosos","points":18},{"text":"no sujetar por la fuerza","points":16},{"text":"no introducir objetos en la boca","points":14},{"text":"control del tiempo","points":12},{"text":"posición lateral tras la crisis si procede","points":10},{"text":"activar ayuda ante criterios de gravedad","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-026","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de crisis convulsiva?","answers":[{"text":"proteger al paciente","points":45},{"text":"retirar objetos peligrosos","points":30},{"text":"no sujetar por la fuerza","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-027","category":"Urgencias médicas en odontología","difficulty":"facil","question":"En este tema, ¿qué aspectos deben considerarse en crisis convulsiva?","answers":[{"text":"proteger al paciente","points":35},{"text":"retirar objetos peligrosos","points":30},{"text":"no sujetar por la fuerza","points":20},{"text":"no introducir objetos en la boca","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-028","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué conjunto de elementos corresponde a crisis convulsiva?","answers":[{"text":"proteger al paciente","points":30},{"text":"retirar objetos peligrosos","points":25},{"text":"no sujetar por la fuerza","points":20},{"text":"no introducir objetos en la boca","points":15},{"text":"control del tiempo","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-029","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Qué elementos caracterizan asma aguda?","answers":[{"text":"disnea","points":25},{"text":"sibilancias","points":20},{"text":"opresión torácica","points":18},{"text":"broncodilatador prescrito","points":15},{"text":"posición confortable","points":12},{"text":"oxígeno cuando esté indicado","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-030","category":"Urgencias médicas en odontología","difficulty":"facil","question":"¿Cuáles son aspectos fundamentales de asma aguda?","answers":[{"text":"disnea","points":22},{"text":"sibilancias","points":18},{"text":"opresión torácica","points":16},{"text":"broncodilatador prescrito","points":14},{"text":"posición confortable","points":12},{"text":"oxígeno cuando esté indicado","points":10},{"text":"emergencias si no responde","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-031","category":"Urgencias médicas en odontología","difficulty":"medio","question":"En este tema, ¿qué aspectos deben considerarse en asma aguda?","answers":[{"text":"disnea","points":45},{"text":"sibilancias","points":30},{"text":"opresión torácica","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-032","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué conjunto de elementos corresponde a asma aguda?","answers":[{"text":"disnea","points":35},{"text":"sibilancias","points":30},{"text":"opresión torácica","points":20},{"text":"broncodilatador prescrito","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-033","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué elementos caracterizan hiperventilación?","answers":[{"text":"respiración rápida","points":30},{"text":"parestesias","points":25},{"text":"mareo","points":20},{"text":"ansiedad posible","points":15},{"text":"tranquilización","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-034","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Cuáles son aspectos fundamentales de hiperventilación?","answers":[{"text":"respiración rápida","points":25},{"text":"parestesias","points":20},{"text":"mareo","points":18},{"text":"ansiedad posible","points":15},{"text":"tranquilización","points":12},{"text":"corregir desencadenante","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-035","category":"Urgencias médicas en odontología","difficulty":"medio","question":"En este tema, ¿qué aspectos deben considerarse en hiperventilación?","answers":[{"text":"respiración rápida","points":22},{"text":"parestesias","points":18},{"text":"mareo","points":16},{"text":"ansiedad posible","points":14},{"text":"tranquilización","points":12},{"text":"corregir desencadenante","points":10},{"text":"diferenciar de causas graves","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-036","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué conjunto de elementos corresponde a hiperventilación?","answers":[{"text":"respiración rápida","points":45},{"text":"parestesias","points":30},{"text":"mareo","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-037","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué elementos caracterizan anafilaxia?","answers":[{"text":"inicio rápido","points":35},{"text":"dificultad respiratoria","points":30},{"text":"edema de vía aérea","points":20},{"text":"urticaria posible","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-038","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Cuáles son aspectos fundamentales de anafilaxia?","answers":[{"text":"inicio rápido","points":30},{"text":"dificultad respiratoria","points":25},{"text":"edema de vía aérea","points":20},{"text":"urticaria posible","points":15},{"text":"epinefrina intramuscular","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-039","category":"Urgencias médicas en odontología","difficulty":"medio","question":"En este tema, ¿qué aspectos deben considerarse en anafilaxia?","answers":[{"text":"inicio rápido","points":25},{"text":"dificultad respiratoria","points":20},{"text":"edema de vía aérea","points":18},{"text":"urticaria posible","points":15},{"text":"epinefrina intramuscular","points":12},{"text":"activación inmediata de emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-040","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué conjunto de elementos corresponde a anafilaxia?","answers":[{"text":"inicio rápido","points":22},{"text":"dificultad respiratoria","points":18},{"text":"edema de vía aérea","points":16},{"text":"urticaria posible","points":14},{"text":"epinefrina intramuscular","points":12},{"text":"activación inmediata de emergencias","points":10},{"text":"monitorización","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-041","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué elementos caracterizan reacción alérgica leve?","answers":[{"text":"urticaria","points":45},{"text":"prurito","points":30},{"text":"ausencia de compromiso respiratorio grave","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-042","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Cuáles son aspectos fundamentales de reacción alérgica leve?","answers":[{"text":"urticaria","points":35},{"text":"prurito","points":30},{"text":"ausencia de compromiso respiratorio grave","points":20},{"text":"observación","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-043","category":"Urgencias médicas en odontología","difficulty":"medio","question":"En este tema, ¿qué aspectos deben considerarse en reacción alérgica leve?","answers":[{"text":"urticaria","points":30},{"text":"prurito","points":25},{"text":"ausencia de compromiso respiratorio grave","points":20},{"text":"observación","points":15},{"text":"evaluación de progresión","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-044","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué conjunto de elementos corresponde a reacción alérgica leve?","answers":[{"text":"urticaria","points":25},{"text":"prurito","points":20},{"text":"ausencia de compromiso respiratorio grave","points":18},{"text":"observación","points":15},{"text":"evaluación de progresión","points":12},{"text":"tratamiento apropiado","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-045","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué elementos caracterizan toxicidad sistémica por anestésicos locales?","answers":[{"text":"síntomas neurológicos iniciales","points":22},{"text":"parestesias periorales","points":18},{"text":"tinnitus","points":16},{"text":"convulsiones en toxicidad grave","points":14},{"text":"suspender administración","points":12},{"text":"soporte vital","points":10},{"text":"emergencias","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-046","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Cuáles son aspectos fundamentales de toxicidad sistémica por anestésicos locales?","answers":[{"text":"síntomas neurológicos iniciales","points":45},{"text":"parestesias periorales","points":30},{"text":"tinnitus","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-047","category":"Urgencias médicas en odontología","difficulty":"medio","question":"En este tema, ¿qué aspectos deben considerarse en toxicidad sistémica por anestésicos locales?","answers":[{"text":"síntomas neurológicos iniciales","points":35},{"text":"parestesias periorales","points":30},{"text":"tinnitus","points":20},{"text":"convulsiones en toxicidad grave","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-048","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué conjunto de elementos corresponde a toxicidad sistémica por anestésicos locales?","answers":[{"text":"síntomas neurológicos iniciales","points":30},{"text":"parestesias periorales","points":25},{"text":"tinnitus","points":20},{"text":"convulsiones en toxicidad grave","points":15},{"text":"suspender administración","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-049","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Qué elementos caracterizan angina?","answers":[{"text":"dolor o presión torácica","points":25},{"text":"posible irradiación","points":20},{"text":"reposo","points":18},{"text":"medicación prescrita cuando corresponda","points":15},{"text":"evaluación","points":12},{"text":"activación de emergencias si persiste o es sospechosa","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-050","category":"Urgencias médicas en odontología","difficulty":"medio","question":"¿Cuáles son aspectos fundamentales de angina?","answers":[{"text":"dolor o presión torácica","points":22},{"text":"posible irradiación","points":18},{"text":"reposo","points":16},{"text":"medicación prescrita cuando corresponda","points":14},{"text":"evaluación","points":12},{"text":"activación de emergencias si persiste o es sospechosa","points":10},{"text":"no continuar tratamiento dental","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-051","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"En este tema, ¿qué aspectos deben considerarse en angina?","answers":[{"text":"dolor o presión torácica","points":45},{"text":"posible irradiación","points":30},{"text":"reposo","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-052","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué conjunto de elementos corresponde a angina?","answers":[{"text":"dolor o presión torácica","points":35},{"text":"posible irradiación","points":30},{"text":"reposo","points":20},{"text":"medicación prescrita cuando corresponda","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-053","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué elementos caracterizan síndrome coronario agudo?","answers":[{"text":"dolor torácico persistente","points":30},{"text":"disnea","points":25},{"text":"sudoración","points":20},{"text":"náusea posible","points":15},{"text":"activación de emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-054","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Cuáles son aspectos fundamentales de síndrome coronario agudo?","answers":[{"text":"dolor torácico persistente","points":25},{"text":"disnea","points":20},{"text":"sudoración","points":18},{"text":"náusea posible","points":15},{"text":"activación de emergencias","points":12},{"text":"monitorización","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-055","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"En este tema, ¿qué aspectos deben considerarse en síndrome coronario agudo?","answers":[{"text":"dolor torácico persistente","points":22},{"text":"disnea","points":18},{"text":"sudoración","points":16},{"text":"náusea posible","points":14},{"text":"activación de emergencias","points":12},{"text":"monitorización","points":10},{"text":"RCP si pierde signos de circulación","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-056","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué conjunto de elementos corresponde a síndrome coronario agudo?","answers":[{"text":"dolor torácico persistente","points":45},{"text":"disnea","points":30},{"text":"sudoración","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-057","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué elementos caracterizan paro cardiaco?","answers":[{"text":"inconsciencia","points":35},{"text":"respiración ausente o anormal","points":30},{"text":"RCP","points":20},{"text":"DEA","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-058","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Cuáles son aspectos fundamentales de paro cardiaco?","answers":[{"text":"inconsciencia","points":30},{"text":"respiración ausente o anormal","points":25},{"text":"RCP","points":20},{"text":"DEA","points":15},{"text":"activación de servicios de emergencia","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-059","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"En este tema, ¿qué aspectos deben considerarse en paro cardiaco?","answers":[{"text":"inconsciencia","points":25},{"text":"respiración ausente o anormal","points":20},{"text":"RCP","points":18},{"text":"DEA","points":15},{"text":"activación de servicios de emergencia","points":12},{"text":"compresiones torácicas","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-060","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué conjunto de elementos corresponde a paro cardiaco?","answers":[{"text":"inconsciencia","points":22},{"text":"respiración ausente o anormal","points":18},{"text":"RCP","points":16},{"text":"DEA","points":14},{"text":"activación de servicios de emergencia","points":12},{"text":"compresiones torácicas","points":10},{"text":"reanudar RCP tras descarga cuando corresponda","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-061","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué elementos caracterizan accidente cerebrovascular?","answers":[{"text":"debilidad facial","points":45},{"text":"debilidad de un brazo","points":30},{"text":"alteración del habla","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-062","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Cuáles son aspectos fundamentales de accidente cerebrovascular?","answers":[{"text":"debilidad facial","points":35},{"text":"debilidad de un brazo","points":30},{"text":"alteración del habla","points":20},{"text":"inicio súbito","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-063","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"En este tema, ¿qué aspectos deben considerarse en accidente cerebrovascular?","answers":[{"text":"debilidad facial","points":30},{"text":"debilidad de un brazo","points":25},{"text":"alteración del habla","points":20},{"text":"inicio súbito","points":15},{"text":"activar emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-064","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué conjunto de elementos corresponde a accidente cerebrovascular?","answers":[{"text":"debilidad facial","points":25},{"text":"debilidad de un brazo","points":20},{"text":"alteración del habla","points":18},{"text":"inicio súbito","points":15},{"text":"activar emergencias","points":12},{"text":"registrar hora de inicio","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-065","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué elementos caracterizan obstrucción de vía aérea por cuerpo extraño?","answers":[{"text":"tos efectiva","points":22},{"text":"tos inefectiva","points":18},{"text":"incapacidad para hablar","points":16},{"text":"maniobras de desobstrucción","points":14},{"text":"activación de emergencias","points":12},{"text":"RCP si pierde respuesta","points":10},{"text":"reevaluación","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-066","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Cuáles son aspectos fundamentales de obstrucción de vía aérea por cuerpo extraño?","answers":[{"text":"tos efectiva","points":45},{"text":"tos inefectiva","points":30},{"text":"incapacidad para hablar","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-067","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"En este tema, ¿qué aspectos deben considerarse en obstrucción de vía aérea por cuerpo extraño?","answers":[{"text":"tos efectiva","points":35},{"text":"tos inefectiva","points":30},{"text":"incapacidad para hablar","points":20},{"text":"maniobras de desobstrucción","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-068","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué conjunto de elementos corresponde a obstrucción de vía aérea por cuerpo extraño?","answers":[{"text":"tos efectiva","points":30},{"text":"tos inefectiva","points":25},{"text":"incapacidad para hablar","points":20},{"text":"maniobras de desobstrucción","points":15},{"text":"activación de emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-069","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Qué elementos caracterizan hemorragia médica?","answers":[{"text":"compresión directa","points":25},{"text":"evaluación del estado general","points":20},{"text":"signos de choque","points":18},{"text":"activación de emergencias si es grave","points":15},{"text":"control de la fuente","points":12},{"text":"monitorización","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-070","category":"Urgencias médicas en odontología","difficulty":"dificil","question":"¿Cuáles son aspectos fundamentales de hemorragia médica?","answers":[{"text":"compresión directa","points":22},{"text":"evaluación del estado general","points":18},{"text":"signos de choque","points":16},{"text":"activación de emergencias si es grave","points":14},{"text":"control de la fuente","points":12},{"text":"monitorización","points":10},{"text":"no abandonar al paciente","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-071","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en hemorragia médica?","answers":[{"text":"compresión directa","points":45},{"text":"evaluación del estado general","points":30},{"text":"signos de choque","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-072","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a hemorragia médica?","answers":[{"text":"compresión directa","points":35},{"text":"evaluación del estado general","points":30},{"text":"signos de choque","points":20},{"text":"activación de emergencias si es grave","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-073","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan crisis hipertensiva?","answers":[{"text":"presión arterial muy elevada","points":30},{"text":"síntomas de lesión aguda de órgano","points":25},{"text":"dolor torácico posible","points":20},{"text":"síntomas neurológicos posibles","points":15},{"text":"repetir medición correctamente","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-074","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de crisis hipertensiva?","answers":[{"text":"presión arterial muy elevada","points":25},{"text":"síntomas de lesión aguda de órgano","points":20},{"text":"dolor torácico posible","points":18},{"text":"síntomas neurológicos posibles","points":15},{"text":"repetir medición correctamente","points":12},{"text":"evaluación urgente según síntomas","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-075","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en crisis hipertensiva?","answers":[{"text":"presión arterial muy elevada","points":22},{"text":"síntomas de lesión aguda de órgano","points":18},{"text":"dolor torácico posible","points":16},{"text":"síntomas neurológicos posibles","points":14},{"text":"repetir medición correctamente","points":12},{"text":"evaluación urgente según síntomas","points":10},{"text":"no bajar la presión bruscamente por cuenta propia","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-076","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a crisis hipertensiva?","answers":[{"text":"presión arterial muy elevada","points":45},{"text":"síntomas de lesión aguda de órgano","points":30},{"text":"dolor torácico posible","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-077","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan insuficiencia suprarrenal aguda?","answers":[{"text":"debilidad","points":35},{"text":"hipotensión","points":30},{"text":"alteración de conciencia","points":20},{"text":"antecedente de insuficiencia suprarrenal o corticoides","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-078","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de insuficiencia suprarrenal aguda?","answers":[{"text":"debilidad","points":30},{"text":"hipotensión","points":25},{"text":"alteración de conciencia","points":20},{"text":"antecedente de insuficiencia suprarrenal o corticoides","points":15},{"text":"hidrocortisona de emergencia según protocolo","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-079","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en insuficiencia suprarrenal aguda?","answers":[{"text":"debilidad","points":25},{"text":"hipotensión","points":20},{"text":"alteración de conciencia","points":18},{"text":"antecedente de insuficiencia suprarrenal o corticoides","points":15},{"text":"hidrocortisona de emergencia según protocolo","points":12},{"text":"activación de emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-080","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a insuficiencia suprarrenal aguda?","answers":[{"text":"debilidad","points":22},{"text":"hipotensión","points":18},{"text":"alteración de conciencia","points":16},{"text":"antecedente de insuficiencia suprarrenal o corticoides","points":14},{"text":"hidrocortisona de emergencia según protocolo","points":12},{"text":"activación de emergencias","points":10},{"text":"soporte vital","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-081","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan reacción vasoconstrictora?","answers":[{"text":"palpitaciones","points":45},{"text":"temblor","points":30},{"text":"ansiedad","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-082","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de reacción vasoconstrictora?","answers":[{"text":"palpitaciones","points":35},{"text":"temblor","points":30},{"text":"ansiedad","points":20},{"text":"taquicardia transitoria","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-083","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en reacción vasoconstrictora?","answers":[{"text":"palpitaciones","points":30},{"text":"temblor","points":25},{"text":"ansiedad","points":20},{"text":"taquicardia transitoria","points":15},{"text":"evaluación","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-084","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a reacción vasoconstrictora?","answers":[{"text":"palpitaciones","points":25},{"text":"temblor","points":20},{"text":"ansiedad","points":18},{"text":"taquicardia transitoria","points":15},{"text":"evaluación","points":12},{"text":"reaseguro","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-085","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan sobredosis de opioides?","answers":[{"text":"depresión respiratoria","points":22},{"text":"somnolencia profunda","points":18},{"text":"pupilas pequeñas posibles","points":16},{"text":"naloxona cuando esté indicada","points":14},{"text":"ventilación de apoyo","points":12},{"text":"activación de emergencias","points":10},{"text":"monitorización","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-086","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de sobredosis de opioides?","answers":[{"text":"depresión respiratoria","points":45},{"text":"somnolencia profunda","points":30},{"text":"pupilas pequeñas posibles","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-087","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en sobredosis de opioides?","answers":[{"text":"depresión respiratoria","points":35},{"text":"somnolencia profunda","points":30},{"text":"pupilas pequeñas posibles","points":20},{"text":"naloxona cuando esté indicada","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-088","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a sobredosis de opioides?","answers":[{"text":"depresión respiratoria","points":30},{"text":"somnolencia profunda","points":25},{"text":"pupilas pequeñas posibles","points":20},{"text":"naloxona cuando esté indicada","points":15},{"text":"ventilación de apoyo","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-089","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan shock?","answers":[{"text":"alteración de perfusión","points":25},{"text":"piel fría o pálida","points":20},{"text":"taquicardia posible","points":18},{"text":"hipotensión posible","points":15},{"text":"posición apropiada según causa","points":12},{"text":"activación de emergencias","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-090","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de shock?","answers":[{"text":"alteración de perfusión","points":22},{"text":"piel fría o pálida","points":18},{"text":"taquicardia posible","points":16},{"text":"hipotensión posible","points":14},{"text":"posición apropiada según causa","points":12},{"text":"activación de emergencias","points":10},{"text":"soporte vital","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-091","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en shock?","answers":[{"text":"alteración de perfusión","points":45},{"text":"piel fría o pálida","points":30},{"text":"taquicardia posible","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-092","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a shock?","answers":[{"text":"alteración de perfusión","points":35},{"text":"piel fría o pálida","points":30},{"text":"taquicardia posible","points":20},{"text":"hipotensión posible","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-093","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan alteración de conciencia?","answers":[{"text":"evaluación de respuesta","points":30},{"text":"vía aérea","points":25},{"text":"respiración","points":20},{"text":"circulación","points":15},{"text":"glucosa cuando esté indicada","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-094","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de alteración de conciencia?","answers":[{"text":"evaluación de respuesta","points":25},{"text":"vía aérea","points":20},{"text":"respiración","points":18},{"text":"circulación","points":15},{"text":"glucosa cuando esté indicada","points":12},{"text":"posición segura","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-095","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en alteración de conciencia?","answers":[{"text":"evaluación de respuesta","points":22},{"text":"vía aérea","points":18},{"text":"respiración","points":16},{"text":"circulación","points":14},{"text":"glucosa cuando esté indicada","points":12},{"text":"posición segura","points":10},{"text":"activación de emergencias","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-096","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a alteración de conciencia?","answers":[{"text":"evaluación de respuesta","points":45},{"text":"vía aérea","points":30},{"text":"respiración","points":25}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-097","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué elementos caracterizan documentación y seguimiento?","answers":[{"text":"hora del evento","points":35},{"text":"signos y síntomas","points":30},{"text":"medidas realizadas","points":20},{"text":"medicación administrada","points":15}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-098","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Cuáles son aspectos fundamentales de documentación y seguimiento?","answers":[{"text":"hora del evento","points":30},{"text":"signos y síntomas","points":25},{"text":"medidas realizadas","points":20},{"text":"medicación administrada","points":15},{"text":"respuesta al tratamiento","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-099","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"En este tema, ¿qué aspectos deben considerarse en documentación y seguimiento?","answers":[{"text":"hora del evento","points":25},{"text":"signos y síntomas","points":20},{"text":"medidas realizadas","points":18},{"text":"medicación administrada","points":15},{"text":"respuesta al tratamiento","points":12},{"text":"servicios activados","points":10}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."},{"id":"ORG38-100","category":"Urgencias médicas en odontología","difficulty":"extremo","question":"¿Qué conjunto de elementos corresponde a documentación y seguimiento?","answers":[{"text":"hora del evento","points":22},{"text":"signos y síntomas","points":18},{"text":"medidas realizadas","points":16},{"text":"medicación administrada","points":14},{"text":"respuesta al tratamiento","points":12},{"text":"servicios activados","points":10},{"text":"registro clínico","points":8}],"source":"American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."}]}
+{
+  "category": "Urgencias médicas en odontología",
+  "questions": [
+    {
+      "id": "ORG38-001",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 elementos que caracterizan la preparación para emergencias?",
+      "answers": [
+        {
+          "text": "plan de emergencia",
+          "points": 45
+        },
+        {
+          "text": "personal entrenado",
+          "points": 30
+        },
+        {
+          "text": "botiquín",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-002",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 4 aspectos fundamentales deben considerarse en la preparación para emergencias?",
+      "answers": [
+        {
+          "text": "plan de emergencia",
+          "points": 35
+        },
+        {
+          "text": "personal entrenado",
+          "points": 30
+        },
+        {
+          "text": "botiquín",
+          "points": 20
+        },
+        {
+          "text": "equipo de oxígeno",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-003",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de la preparación para emergencias, ¿cuáles son 5 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "plan de emergencia",
+          "points": 30
+        },
+        {
+          "text": "personal entrenado",
+          "points": 25
+        },
+        {
+          "text": "botiquín",
+          "points": 20
+        },
+        {
+          "text": "equipo de oxígeno",
+          "points": 15
+        },
+        {
+          "text": "DEA",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-004",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 6 elementos corresponde a la preparación para emergencias?",
+      "answers": [
+        {
+          "text": "plan de emergencia",
+          "points": 25
+        },
+        {
+          "text": "personal entrenado",
+          "points": 20
+        },
+        {
+          "text": "botiquín",
+          "points": 18
+        },
+        {
+          "text": "equipo de oxígeno",
+          "points": 15
+        },
+        {
+          "text": "DEA",
+          "points": 12
+        },
+        {
+          "text": "teléfono de emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-005",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 7 elementos que caracterizan la evaluación inicial?",
+      "answers": [
+        {
+          "text": "seguridad de la escena",
+          "points": 22
+        },
+        {
+          "text": "respuesta del paciente",
+          "points": 18
+        },
+        {
+          "text": "vía aérea",
+          "points": 16
+        },
+        {
+          "text": "respiración",
+          "points": 14
+        },
+        {
+          "text": "circulación",
+          "points": 12
+        },
+        {
+          "text": "activación de ayuda",
+          "points": 10
+        },
+        {
+          "text": "signos vitales",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-006",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 3 aspectos fundamentales deben considerarse en la evaluación inicial?",
+      "answers": [
+        {
+          "text": "seguridad de la escena",
+          "points": 45
+        },
+        {
+          "text": "respuesta del paciente",
+          "points": 30
+        },
+        {
+          "text": "vía aérea",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-007",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de la evaluación inicial, ¿cuáles son 4 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "seguridad de la escena",
+          "points": 35
+        },
+        {
+          "text": "respuesta del paciente",
+          "points": 30
+        },
+        {
+          "text": "vía aérea",
+          "points": 20
+        },
+        {
+          "text": "respiración",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-008",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 5 elementos corresponde a la evaluación inicial?",
+      "answers": [
+        {
+          "text": "seguridad de la escena",
+          "points": 30
+        },
+        {
+          "text": "respuesta del paciente",
+          "points": 25
+        },
+        {
+          "text": "vía aérea",
+          "points": 20
+        },
+        {
+          "text": "respiración",
+          "points": 15
+        },
+        {
+          "text": "circulación",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-009",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 elementos que caracterizan el síncope vasovagal?",
+      "answers": [
+        {
+          "text": "pródromo",
+          "points": 25
+        },
+        {
+          "text": "palidez",
+          "points": 20
+        },
+        {
+          "text": "sudoración",
+          "points": 18
+        },
+        {
+          "text": "bradicardia posible",
+          "points": 15
+        },
+        {
+          "text": "posición supina",
+          "points": 12
+        },
+        {
+          "text": "elevación de piernas",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-010",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 7 aspectos fundamentales deben considerarse en el síncope vasovagal?",
+      "answers": [
+        {
+          "text": "pródromo",
+          "points": 22
+        },
+        {
+          "text": "palidez",
+          "points": 18
+        },
+        {
+          "text": "sudoración",
+          "points": 16
+        },
+        {
+          "text": "bradicardia posible",
+          "points": 14
+        },
+        {
+          "text": "posición supina",
+          "points": 12
+        },
+        {
+          "text": "elevación de piernas",
+          "points": 10
+        },
+        {
+          "text": "recuperación",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-011",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de el síncope vasovagal, ¿cuáles son 3 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "pródromo",
+          "points": 45
+        },
+        {
+          "text": "palidez",
+          "points": 30
+        },
+        {
+          "text": "sudoración",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-012",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 4 elementos corresponde a el síncope vasovagal?",
+      "answers": [
+        {
+          "text": "pródromo",
+          "points": 35
+        },
+        {
+          "text": "palidez",
+          "points": 30
+        },
+        {
+          "text": "sudoración",
+          "points": 20
+        },
+        {
+          "text": "bradicardia posible",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-013",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 5 elementos que caracterizan la hipotensión ortostática?",
+      "answers": [
+        {
+          "text": "descenso de presión al incorporarse",
+          "points": 30
+        },
+        {
+          "text": "mareo",
+          "points": 25
+        },
+        {
+          "text": "presíncope",
+          "points": 20
+        },
+        {
+          "text": "cambio postural",
+          "points": 15
+        },
+        {
+          "text": "prevención mediante cambios graduales",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-014",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 6 aspectos fundamentales deben considerarse en la hipotensión ortostática?",
+      "answers": [
+        {
+          "text": "descenso de presión al incorporarse",
+          "points": 25
+        },
+        {
+          "text": "mareo",
+          "points": 20
+        },
+        {
+          "text": "presíncope",
+          "points": 18
+        },
+        {
+          "text": "cambio postural",
+          "points": 15
+        },
+        {
+          "text": "prevención mediante cambios graduales",
+          "points": 12
+        },
+        {
+          "text": "evaluación del paciente",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-015",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de la hipotensión ortostática, ¿cuáles son 7 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "descenso de presión al incorporarse",
+          "points": 22
+        },
+        {
+          "text": "mareo",
+          "points": 18
+        },
+        {
+          "text": "presíncope",
+          "points": 16
+        },
+        {
+          "text": "cambio postural",
+          "points": 14
+        },
+        {
+          "text": "prevención mediante cambios graduales",
+          "points": 12
+        },
+        {
+          "text": "evaluación del paciente",
+          "points": 10
+        },
+        {
+          "text": "protección contra caídas",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-016",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 3 elementos corresponde a la hipotensión ortostática?",
+      "answers": [
+        {
+          "text": "descenso de presión al incorporarse",
+          "points": 45
+        },
+        {
+          "text": "mareo",
+          "points": 30
+        },
+        {
+          "text": "presíncope",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-017",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 4 elementos que caracterizan la hipoglucemia?",
+      "answers": [
+        {
+          "text": "sudoración",
+          "points": 35
+        },
+        {
+          "text": "temblor",
+          "points": 30
+        },
+        {
+          "text": "confusión",
+          "points": 20
+        },
+        {
+          "text": "glucosa baja",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-018",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 5 aspectos fundamentales deben considerarse en la hipoglucemia?",
+      "answers": [
+        {
+          "text": "sudoración",
+          "points": 30
+        },
+        {
+          "text": "temblor",
+          "points": 25
+        },
+        {
+          "text": "confusión",
+          "points": 20
+        },
+        {
+          "text": "glucosa baja",
+          "points": 15
+        },
+        {
+          "text": "carbohidrato oral si está consciente",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-019",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de la hipoglucemia, ¿cuáles son 6 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "sudoración",
+          "points": 25
+        },
+        {
+          "text": "temblor",
+          "points": 20
+        },
+        {
+          "text": "confusión",
+          "points": 18
+        },
+        {
+          "text": "glucosa baja",
+          "points": 15
+        },
+        {
+          "text": "carbohidrato oral si está consciente",
+          "points": 12
+        },
+        {
+          "text": "reevaluación",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-020",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 7 elementos corresponde a la hipoglucemia?",
+      "answers": [
+        {
+          "text": "sudoración",
+          "points": 22
+        },
+        {
+          "text": "temblor",
+          "points": 18
+        },
+        {
+          "text": "confusión",
+          "points": 16
+        },
+        {
+          "text": "glucosa baja",
+          "points": 14
+        },
+        {
+          "text": "carbohidrato oral si está consciente",
+          "points": 12
+        },
+        {
+          "text": "reevaluación",
+          "points": 10
+        },
+        {
+          "text": "ayuda de emergencia si no puede ingerir",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-021",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 3 elementos que caracterizan la hiperglucemia grave?",
+      "answers": [
+        {
+          "text": "sed intensa",
+          "points": 45
+        },
+        {
+          "text": "poliuria",
+          "points": 30
+        },
+        {
+          "text": "alteración del estado mental",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-022",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 4 aspectos fundamentales deben considerarse en la hiperglucemia grave?",
+      "answers": [
+        {
+          "text": "sed intensa",
+          "points": 35
+        },
+        {
+          "text": "poliuria",
+          "points": 30
+        },
+        {
+          "text": "alteración del estado mental",
+          "points": 20
+        },
+        {
+          "text": "deshidratación",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-023",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de la hiperglucemia grave, ¿cuáles son 5 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "sed intensa",
+          "points": 30
+        },
+        {
+          "text": "poliuria",
+          "points": 25
+        },
+        {
+          "text": "alteración del estado mental",
+          "points": 20
+        },
+        {
+          "text": "deshidratación",
+          "points": 15
+        },
+        {
+          "text": "evaluación médica",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-024",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 6 elementos corresponde a la hiperglucemia grave?",
+      "answers": [
+        {
+          "text": "sed intensa",
+          "points": 25
+        },
+        {
+          "text": "poliuria",
+          "points": 20
+        },
+        {
+          "text": "alteración del estado mental",
+          "points": 18
+        },
+        {
+          "text": "deshidratación",
+          "points": 15
+        },
+        {
+          "text": "evaluación médica",
+          "points": 12
+        },
+        {
+          "text": "no administrar azúcar sin indicación",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-025",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 7 elementos que caracterizan la crisis convulsiva?",
+      "answers": [
+        {
+          "text": "proteger al paciente",
+          "points": 22
+        },
+        {
+          "text": "retirar objetos peligrosos",
+          "points": 18
+        },
+        {
+          "text": "no sujetar por la fuerza",
+          "points": 16
+        },
+        {
+          "text": "no introducir objetos en la boca",
+          "points": 14
+        },
+        {
+          "text": "control del tiempo",
+          "points": 12
+        },
+        {
+          "text": "posición lateral tras la crisis si procede",
+          "points": 10
+        },
+        {
+          "text": "activar ayuda ante criterios de gravedad",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-026",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 3 aspectos fundamentales deben considerarse en la crisis convulsiva?",
+      "answers": [
+        {
+          "text": "proteger al paciente",
+          "points": 45
+        },
+        {
+          "text": "retirar objetos peligrosos",
+          "points": 30
+        },
+        {
+          "text": "no sujetar por la fuerza",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-027",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "En la evaluación clínica de la crisis convulsiva, ¿cuáles son 4 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "proteger al paciente",
+          "points": 35
+        },
+        {
+          "text": "retirar objetos peligrosos",
+          "points": 30
+        },
+        {
+          "text": "no sujetar por la fuerza",
+          "points": 20
+        },
+        {
+          "text": "no introducir objetos en la boca",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-028",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué conjunto de 5 elementos corresponde a la crisis convulsiva?",
+      "answers": [
+        {
+          "text": "proteger al paciente",
+          "points": 30
+        },
+        {
+          "text": "retirar objetos peligrosos",
+          "points": 25
+        },
+        {
+          "text": "no sujetar por la fuerza",
+          "points": 20
+        },
+        {
+          "text": "no introducir objetos en la boca",
+          "points": 15
+        },
+        {
+          "text": "control del tiempo",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-029",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Cuáles son 6 elementos que caracterizan el asma aguda?",
+      "answers": [
+        {
+          "text": "disnea",
+          "points": 25
+        },
+        {
+          "text": "sibilancias",
+          "points": 20
+        },
+        {
+          "text": "opresión torácica",
+          "points": 18
+        },
+        {
+          "text": "broncodilatador prescrito",
+          "points": 15
+        },
+        {
+          "text": "posición confortable",
+          "points": 12
+        },
+        {
+          "text": "oxígeno cuando esté indicado",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-030",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "facil",
+      "question": "¿Qué 7 aspectos fundamentales deben considerarse en el asma aguda?",
+      "answers": [
+        {
+          "text": "disnea",
+          "points": 22
+        },
+        {
+          "text": "sibilancias",
+          "points": 18
+        },
+        {
+          "text": "opresión torácica",
+          "points": 16
+        },
+        {
+          "text": "broncodilatador prescrito",
+          "points": 14
+        },
+        {
+          "text": "posición confortable",
+          "points": 12
+        },
+        {
+          "text": "oxígeno cuando esté indicado",
+          "points": 10
+        },
+        {
+          "text": "emergencias si no responde",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-031",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "En la evaluación clínica de el asma aguda, ¿cuáles son 3 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "disnea",
+          "points": 45
+        },
+        {
+          "text": "sibilancias",
+          "points": 30
+        },
+        {
+          "text": "opresión torácica",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-032",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de 4 elementos corresponde a el asma aguda?",
+      "answers": [
+        {
+          "text": "disnea",
+          "points": 35
+        },
+        {
+          "text": "sibilancias",
+          "points": 30
+        },
+        {
+          "text": "opresión torácica",
+          "points": 20
+        },
+        {
+          "text": "broncodilatador prescrito",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-033",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 5 elementos que caracterizan la hiperventilación?",
+      "answers": [
+        {
+          "text": "respiración rápida",
+          "points": 30
+        },
+        {
+          "text": "parestesias",
+          "points": 25
+        },
+        {
+          "text": "mareo",
+          "points": 20
+        },
+        {
+          "text": "ansiedad posible",
+          "points": 15
+        },
+        {
+          "text": "tranquilización",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-034",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué 6 aspectos fundamentales deben considerarse en la hiperventilación?",
+      "answers": [
+        {
+          "text": "respiración rápida",
+          "points": 25
+        },
+        {
+          "text": "parestesias",
+          "points": 20
+        },
+        {
+          "text": "mareo",
+          "points": 18
+        },
+        {
+          "text": "ansiedad posible",
+          "points": 15
+        },
+        {
+          "text": "tranquilización",
+          "points": 12
+        },
+        {
+          "text": "corregir desencadenante",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-035",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "En la evaluación clínica de la hiperventilación, ¿cuáles son 7 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "respiración rápida",
+          "points": 22
+        },
+        {
+          "text": "parestesias",
+          "points": 18
+        },
+        {
+          "text": "mareo",
+          "points": 16
+        },
+        {
+          "text": "ansiedad posible",
+          "points": 14
+        },
+        {
+          "text": "tranquilización",
+          "points": 12
+        },
+        {
+          "text": "corregir desencadenante",
+          "points": 10
+        },
+        {
+          "text": "diferenciar de causas graves",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-036",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de 3 elementos corresponde a la hiperventilación?",
+      "answers": [
+        {
+          "text": "respiración rápida",
+          "points": 45
+        },
+        {
+          "text": "parestesias",
+          "points": 30
+        },
+        {
+          "text": "mareo",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-037",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 4 elementos que caracterizan la anafilaxia?",
+      "answers": [
+        {
+          "text": "inicio rápido",
+          "points": 35
+        },
+        {
+          "text": "dificultad respiratoria",
+          "points": 30
+        },
+        {
+          "text": "edema de vía aérea",
+          "points": 20
+        },
+        {
+          "text": "urticaria posible",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-038",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué 5 aspectos fundamentales deben considerarse en la anafilaxia?",
+      "answers": [
+        {
+          "text": "inicio rápido",
+          "points": 30
+        },
+        {
+          "text": "dificultad respiratoria",
+          "points": 25
+        },
+        {
+          "text": "edema de vía aérea",
+          "points": 20
+        },
+        {
+          "text": "urticaria posible",
+          "points": 15
+        },
+        {
+          "text": "epinefrina intramuscular",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-039",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "En la evaluación clínica de la anafilaxia, ¿cuáles son 6 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "inicio rápido",
+          "points": 25
+        },
+        {
+          "text": "dificultad respiratoria",
+          "points": 20
+        },
+        {
+          "text": "edema de vía aérea",
+          "points": 18
+        },
+        {
+          "text": "urticaria posible",
+          "points": 15
+        },
+        {
+          "text": "epinefrina intramuscular",
+          "points": 12
+        },
+        {
+          "text": "activación inmediata de emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-040",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de 7 elementos corresponde a la anafilaxia?",
+      "answers": [
+        {
+          "text": "inicio rápido",
+          "points": 22
+        },
+        {
+          "text": "dificultad respiratoria",
+          "points": 18
+        },
+        {
+          "text": "edema de vía aérea",
+          "points": 16
+        },
+        {
+          "text": "urticaria posible",
+          "points": 14
+        },
+        {
+          "text": "epinefrina intramuscular",
+          "points": 12
+        },
+        {
+          "text": "activación inmediata de emergencias",
+          "points": 10
+        },
+        {
+          "text": "monitorización",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-041",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 3 elementos que caracterizan la reacción alérgica leve?",
+      "answers": [
+        {
+          "text": "urticaria",
+          "points": 45
+        },
+        {
+          "text": "prurito",
+          "points": 30
+        },
+        {
+          "text": "ausencia de compromiso respiratorio grave",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-042",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué 4 aspectos fundamentales deben considerarse en la reacción alérgica leve?",
+      "answers": [
+        {
+          "text": "urticaria",
+          "points": 35
+        },
+        {
+          "text": "prurito",
+          "points": 30
+        },
+        {
+          "text": "ausencia de compromiso respiratorio grave",
+          "points": 20
+        },
+        {
+          "text": "observación",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-043",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "En la evaluación clínica de la reacción alérgica leve, ¿cuáles son 5 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "urticaria",
+          "points": 30
+        },
+        {
+          "text": "prurito",
+          "points": 25
+        },
+        {
+          "text": "ausencia de compromiso respiratorio grave",
+          "points": 20
+        },
+        {
+          "text": "observación",
+          "points": 15
+        },
+        {
+          "text": "evaluación de progresión",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-044",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de 6 elementos corresponde a la reacción alérgica leve?",
+      "answers": [
+        {
+          "text": "urticaria",
+          "points": 25
+        },
+        {
+          "text": "prurito",
+          "points": 20
+        },
+        {
+          "text": "ausencia de compromiso respiratorio grave",
+          "points": 18
+        },
+        {
+          "text": "observación",
+          "points": 15
+        },
+        {
+          "text": "evaluación de progresión",
+          "points": 12
+        },
+        {
+          "text": "tratamiento apropiado",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-045",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 7 elementos que caracterizan la toxicidad sistémica por anestésicos locales?",
+      "answers": [
+        {
+          "text": "síntomas neurológicos iniciales",
+          "points": 22
+        },
+        {
+          "text": "parestesias periorales",
+          "points": 18
+        },
+        {
+          "text": "tinnitus",
+          "points": 16
+        },
+        {
+          "text": "convulsiones en toxicidad grave",
+          "points": 14
+        },
+        {
+          "text": "suspender administración",
+          "points": 12
+        },
+        {
+          "text": "soporte vital",
+          "points": 10
+        },
+        {
+          "text": "emergencias",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-046",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué 3 aspectos fundamentales deben considerarse en la toxicidad sistémica por anestésicos locales?",
+      "answers": [
+        {
+          "text": "síntomas neurológicos iniciales",
+          "points": 45
+        },
+        {
+          "text": "parestesias periorales",
+          "points": 30
+        },
+        {
+          "text": "tinnitus",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-047",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "En la evaluación clínica de la toxicidad sistémica por anestésicos locales, ¿cuáles son 4 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "síntomas neurológicos iniciales",
+          "points": 35
+        },
+        {
+          "text": "parestesias periorales",
+          "points": 30
+        },
+        {
+          "text": "tinnitus",
+          "points": 20
+        },
+        {
+          "text": "convulsiones en toxicidad grave",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-048",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué conjunto de 5 elementos corresponde a la toxicidad sistémica por anestésicos locales?",
+      "answers": [
+        {
+          "text": "síntomas neurológicos iniciales",
+          "points": 30
+        },
+        {
+          "text": "parestesias periorales",
+          "points": 25
+        },
+        {
+          "text": "tinnitus",
+          "points": 20
+        },
+        {
+          "text": "convulsiones en toxicidad grave",
+          "points": 15
+        },
+        {
+          "text": "suspender administración",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-049",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Cuáles son 6 elementos que caracterizan la angina?",
+      "answers": [
+        {
+          "text": "dolor o presión torácica",
+          "points": 25
+        },
+        {
+          "text": "posible irradiación",
+          "points": 20
+        },
+        {
+          "text": "reposo",
+          "points": 18
+        },
+        {
+          "text": "medicación prescrita cuando corresponda",
+          "points": 15
+        },
+        {
+          "text": "evaluación",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias si persiste o es sospechosa",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-050",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "medio",
+      "question": "¿Qué 7 aspectos fundamentales deben considerarse en la angina?",
+      "answers": [
+        {
+          "text": "dolor o presión torácica",
+          "points": 22
+        },
+        {
+          "text": "posible irradiación",
+          "points": 18
+        },
+        {
+          "text": "reposo",
+          "points": 16
+        },
+        {
+          "text": "medicación prescrita cuando corresponda",
+          "points": 14
+        },
+        {
+          "text": "evaluación",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias si persiste o es sospechosa",
+          "points": 10
+        },
+        {
+          "text": "no continuar tratamiento dental",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-051",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "En la evaluación clínica de la angina, ¿cuáles son 3 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "dolor o presión torácica",
+          "points": 45
+        },
+        {
+          "text": "posible irradiación",
+          "points": 30
+        },
+        {
+          "text": "reposo",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-052",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de 4 elementos corresponde a la angina?",
+      "answers": [
+        {
+          "text": "dolor o presión torácica",
+          "points": 35
+        },
+        {
+          "text": "posible irradiación",
+          "points": 30
+        },
+        {
+          "text": "reposo",
+          "points": 20
+        },
+        {
+          "text": "medicación prescrita cuando corresponda",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-053",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 5 elementos que caracterizan el síndrome coronario agudo?",
+      "answers": [
+        {
+          "text": "dolor torácico persistente",
+          "points": 30
+        },
+        {
+          "text": "disnea",
+          "points": 25
+        },
+        {
+          "text": "sudoración",
+          "points": 20
+        },
+        {
+          "text": "náusea posible",
+          "points": 15
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-054",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué 6 aspectos fundamentales deben considerarse en el síndrome coronario agudo?",
+      "answers": [
+        {
+          "text": "dolor torácico persistente",
+          "points": 25
+        },
+        {
+          "text": "disnea",
+          "points": 20
+        },
+        {
+          "text": "sudoración",
+          "points": 18
+        },
+        {
+          "text": "náusea posible",
+          "points": 15
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 12
+        },
+        {
+          "text": "monitorización",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-055",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "En la evaluación clínica de el síndrome coronario agudo, ¿cuáles son 7 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "dolor torácico persistente",
+          "points": 22
+        },
+        {
+          "text": "disnea",
+          "points": 18
+        },
+        {
+          "text": "sudoración",
+          "points": 16
+        },
+        {
+          "text": "náusea posible",
+          "points": 14
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 12
+        },
+        {
+          "text": "monitorización",
+          "points": 10
+        },
+        {
+          "text": "RCP si pierde signos de circulación",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-056",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de 3 elementos corresponde a el síndrome coronario agudo?",
+      "answers": [
+        {
+          "text": "dolor torácico persistente",
+          "points": 45
+        },
+        {
+          "text": "disnea",
+          "points": 30
+        },
+        {
+          "text": "sudoración",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-057",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 4 elementos que caracterizan el paro cardiaco?",
+      "answers": [
+        {
+          "text": "inconsciencia",
+          "points": 35
+        },
+        {
+          "text": "respiración ausente o anormal",
+          "points": 30
+        },
+        {
+          "text": "RCP",
+          "points": 20
+        },
+        {
+          "text": "DEA",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-058",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué 5 aspectos fundamentales deben considerarse en el paro cardiaco?",
+      "answers": [
+        {
+          "text": "inconsciencia",
+          "points": 30
+        },
+        {
+          "text": "respiración ausente o anormal",
+          "points": 25
+        },
+        {
+          "text": "RCP",
+          "points": 20
+        },
+        {
+          "text": "DEA",
+          "points": 15
+        },
+        {
+          "text": "activación de servicios de emergencia",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-059",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "En la evaluación clínica de el paro cardiaco, ¿cuáles son 6 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "inconsciencia",
+          "points": 25
+        },
+        {
+          "text": "respiración ausente o anormal",
+          "points": 20
+        },
+        {
+          "text": "RCP",
+          "points": 18
+        },
+        {
+          "text": "DEA",
+          "points": 15
+        },
+        {
+          "text": "activación de servicios de emergencia",
+          "points": 12
+        },
+        {
+          "text": "compresiones torácicas",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-060",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de 7 elementos corresponde a el paro cardiaco?",
+      "answers": [
+        {
+          "text": "inconsciencia",
+          "points": 22
+        },
+        {
+          "text": "respiración ausente o anormal",
+          "points": 18
+        },
+        {
+          "text": "RCP",
+          "points": 16
+        },
+        {
+          "text": "DEA",
+          "points": 14
+        },
+        {
+          "text": "activación de servicios de emergencia",
+          "points": 12
+        },
+        {
+          "text": "compresiones torácicas",
+          "points": 10
+        },
+        {
+          "text": "reanudar RCP tras descarga cuando corresponda",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-061",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 3 elementos que caracterizan el accidente cerebrovascular?",
+      "answers": [
+        {
+          "text": "debilidad facial",
+          "points": 45
+        },
+        {
+          "text": "debilidad de un brazo",
+          "points": 30
+        },
+        {
+          "text": "alteración del habla",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-062",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué 4 aspectos fundamentales deben considerarse en el accidente cerebrovascular?",
+      "answers": [
+        {
+          "text": "debilidad facial",
+          "points": 35
+        },
+        {
+          "text": "debilidad de un brazo",
+          "points": 30
+        },
+        {
+          "text": "alteración del habla",
+          "points": 20
+        },
+        {
+          "text": "inicio súbito",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-063",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "En la evaluación clínica de el accidente cerebrovascular, ¿cuáles son 5 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "debilidad facial",
+          "points": 30
+        },
+        {
+          "text": "debilidad de un brazo",
+          "points": 25
+        },
+        {
+          "text": "alteración del habla",
+          "points": 20
+        },
+        {
+          "text": "inicio súbito",
+          "points": 15
+        },
+        {
+          "text": "activar emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-064",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de 6 elementos corresponde a el accidente cerebrovascular?",
+      "answers": [
+        {
+          "text": "debilidad facial",
+          "points": 25
+        },
+        {
+          "text": "debilidad de un brazo",
+          "points": 20
+        },
+        {
+          "text": "alteración del habla",
+          "points": 18
+        },
+        {
+          "text": "inicio súbito",
+          "points": 15
+        },
+        {
+          "text": "activar emergencias",
+          "points": 12
+        },
+        {
+          "text": "registrar hora de inicio",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-065",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 7 elementos que caracterizan la obstrucción de la vía aérea por cuerpo extraño?",
+      "answers": [
+        {
+          "text": "tos efectiva",
+          "points": 22
+        },
+        {
+          "text": "tos inefectiva",
+          "points": 18
+        },
+        {
+          "text": "incapacidad para hablar",
+          "points": 16
+        },
+        {
+          "text": "maniobras de desobstrucción",
+          "points": 14
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 12
+        },
+        {
+          "text": "RCP si pierde respuesta",
+          "points": 10
+        },
+        {
+          "text": "reevaluación",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-066",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué 3 aspectos fundamentales deben considerarse en la obstrucción de la vía aérea por cuerpo extraño?",
+      "answers": [
+        {
+          "text": "tos efectiva",
+          "points": 45
+        },
+        {
+          "text": "tos inefectiva",
+          "points": 30
+        },
+        {
+          "text": "incapacidad para hablar",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-067",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "En la evaluación clínica de la obstrucción de la vía aérea por cuerpo extraño, ¿cuáles son 4 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "tos efectiva",
+          "points": 35
+        },
+        {
+          "text": "tos inefectiva",
+          "points": 30
+        },
+        {
+          "text": "incapacidad para hablar",
+          "points": 20
+        },
+        {
+          "text": "maniobras de desobstrucción",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-068",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué conjunto de 5 elementos corresponde a la obstrucción de la vía aérea por cuerpo extraño?",
+      "answers": [
+        {
+          "text": "tos efectiva",
+          "points": 30
+        },
+        {
+          "text": "tos inefectiva",
+          "points": 25
+        },
+        {
+          "text": "incapacidad para hablar",
+          "points": 20
+        },
+        {
+          "text": "maniobras de desobstrucción",
+          "points": 15
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-069",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Cuáles son 6 elementos que caracterizan la hemorragia médica?",
+      "answers": [
+        {
+          "text": "compresión directa",
+          "points": 25
+        },
+        {
+          "text": "evaluación del estado general",
+          "points": 20
+        },
+        {
+          "text": "signos de choque",
+          "points": 18
+        },
+        {
+          "text": "activación de emergencias si es grave",
+          "points": 15
+        },
+        {
+          "text": "control de la fuente",
+          "points": 12
+        },
+        {
+          "text": "monitorización",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-070",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "dificil",
+      "question": "¿Qué 7 aspectos fundamentales deben considerarse en la hemorragia médica?",
+      "answers": [
+        {
+          "text": "compresión directa",
+          "points": 22
+        },
+        {
+          "text": "evaluación del estado general",
+          "points": 18
+        },
+        {
+          "text": "signos de choque",
+          "points": 16
+        },
+        {
+          "text": "activación de emergencias si es grave",
+          "points": 14
+        },
+        {
+          "text": "control de la fuente",
+          "points": 12
+        },
+        {
+          "text": "monitorización",
+          "points": 10
+        },
+        {
+          "text": "no abandonar al paciente",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-071",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la hemorragia médica, ¿cuáles son 3 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "compresión directa",
+          "points": 45
+        },
+        {
+          "text": "evaluación del estado general",
+          "points": 30
+        },
+        {
+          "text": "signos de choque",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-072",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 4 elementos corresponde a la hemorragia médica?",
+      "answers": [
+        {
+          "text": "compresión directa",
+          "points": 35
+        },
+        {
+          "text": "evaluación del estado general",
+          "points": 30
+        },
+        {
+          "text": "signos de choque",
+          "points": 20
+        },
+        {
+          "text": "activación de emergencias si es grave",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-073",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 elementos que caracterizan la crisis hipertensiva?",
+      "answers": [
+        {
+          "text": "presión arterial muy elevada",
+          "points": 30
+        },
+        {
+          "text": "síntomas de lesión aguda de órgano",
+          "points": 25
+        },
+        {
+          "text": "dolor torácico posible",
+          "points": 20
+        },
+        {
+          "text": "síntomas neurológicos posibles",
+          "points": 15
+        },
+        {
+          "text": "repetir medición correctamente",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-074",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 6 aspectos fundamentales deben considerarse en la crisis hipertensiva?",
+      "answers": [
+        {
+          "text": "presión arterial muy elevada",
+          "points": 25
+        },
+        {
+          "text": "síntomas de lesión aguda de órgano",
+          "points": 20
+        },
+        {
+          "text": "dolor torácico posible",
+          "points": 18
+        },
+        {
+          "text": "síntomas neurológicos posibles",
+          "points": 15
+        },
+        {
+          "text": "repetir medición correctamente",
+          "points": 12
+        },
+        {
+          "text": "evaluación urgente según síntomas",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-075",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la crisis hipertensiva, ¿cuáles son 7 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "presión arterial muy elevada",
+          "points": 22
+        },
+        {
+          "text": "síntomas de lesión aguda de órgano",
+          "points": 18
+        },
+        {
+          "text": "dolor torácico posible",
+          "points": 16
+        },
+        {
+          "text": "síntomas neurológicos posibles",
+          "points": 14
+        },
+        {
+          "text": "repetir medición correctamente",
+          "points": 12
+        },
+        {
+          "text": "evaluación urgente según síntomas",
+          "points": 10
+        },
+        {
+          "text": "no bajar la presión bruscamente por cuenta propia",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-076",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 3 elementos corresponde a la crisis hipertensiva?",
+      "answers": [
+        {
+          "text": "presión arterial muy elevada",
+          "points": 45
+        },
+        {
+          "text": "síntomas de lesión aguda de órgano",
+          "points": 30
+        },
+        {
+          "text": "dolor torácico posible",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-077",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 elementos que caracterizan la insuficiencia suprarrenal aguda?",
+      "answers": [
+        {
+          "text": "debilidad",
+          "points": 35
+        },
+        {
+          "text": "hipotensión",
+          "points": 30
+        },
+        {
+          "text": "alteración de conciencia",
+          "points": 20
+        },
+        {
+          "text": "antecedente de insuficiencia suprarrenal o corticoides",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-078",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 5 aspectos fundamentales deben considerarse en la insuficiencia suprarrenal aguda?",
+      "answers": [
+        {
+          "text": "debilidad",
+          "points": 30
+        },
+        {
+          "text": "hipotensión",
+          "points": 25
+        },
+        {
+          "text": "alteración de conciencia",
+          "points": 20
+        },
+        {
+          "text": "antecedente de insuficiencia suprarrenal o corticoides",
+          "points": 15
+        },
+        {
+          "text": "hidrocortisona de emergencia según protocolo",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-079",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la insuficiencia suprarrenal aguda, ¿cuáles son 6 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "debilidad",
+          "points": 25
+        },
+        {
+          "text": "hipotensión",
+          "points": 20
+        },
+        {
+          "text": "alteración de conciencia",
+          "points": 18
+        },
+        {
+          "text": "antecedente de insuficiencia suprarrenal o corticoides",
+          "points": 15
+        },
+        {
+          "text": "hidrocortisona de emergencia según protocolo",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-080",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 7 elementos corresponde a la insuficiencia suprarrenal aguda?",
+      "answers": [
+        {
+          "text": "debilidad",
+          "points": 22
+        },
+        {
+          "text": "hipotensión",
+          "points": 18
+        },
+        {
+          "text": "alteración de conciencia",
+          "points": 16
+        },
+        {
+          "text": "antecedente de insuficiencia suprarrenal o corticoides",
+          "points": 14
+        },
+        {
+          "text": "hidrocortisona de emergencia según protocolo",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        },
+        {
+          "text": "soporte vital",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-081",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 3 elementos que caracterizan la reacción vasoconstrictora?",
+      "answers": [
+        {
+          "text": "palpitaciones",
+          "points": 45
+        },
+        {
+          "text": "temblor",
+          "points": 30
+        },
+        {
+          "text": "ansiedad",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-082",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 4 aspectos fundamentales deben considerarse en la reacción vasoconstrictora?",
+      "answers": [
+        {
+          "text": "palpitaciones",
+          "points": 35
+        },
+        {
+          "text": "temblor",
+          "points": 30
+        },
+        {
+          "text": "ansiedad",
+          "points": 20
+        },
+        {
+          "text": "taquicardia transitoria",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-083",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la reacción vasoconstrictora, ¿cuáles son 5 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "palpitaciones",
+          "points": 30
+        },
+        {
+          "text": "temblor",
+          "points": 25
+        },
+        {
+          "text": "ansiedad",
+          "points": 20
+        },
+        {
+          "text": "taquicardia transitoria",
+          "points": 15
+        },
+        {
+          "text": "evaluación",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-084",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 6 elementos corresponde a la reacción vasoconstrictora?",
+      "answers": [
+        {
+          "text": "palpitaciones",
+          "points": 25
+        },
+        {
+          "text": "temblor",
+          "points": 20
+        },
+        {
+          "text": "ansiedad",
+          "points": 18
+        },
+        {
+          "text": "taquicardia transitoria",
+          "points": 15
+        },
+        {
+          "text": "evaluación",
+          "points": 12
+        },
+        {
+          "text": "reaseguro",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-085",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 7 elementos que caracterizan la sobredosis de opioides?",
+      "answers": [
+        {
+          "text": "depresión respiratoria",
+          "points": 22
+        },
+        {
+          "text": "somnolencia profunda",
+          "points": 18
+        },
+        {
+          "text": "pupilas pequeñas posibles",
+          "points": 16
+        },
+        {
+          "text": "naloxona cuando esté indicada",
+          "points": 14
+        },
+        {
+          "text": "ventilación de apoyo",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        },
+        {
+          "text": "monitorización",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-086",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 3 aspectos fundamentales deben considerarse en la sobredosis de opioides?",
+      "answers": [
+        {
+          "text": "depresión respiratoria",
+          "points": 45
+        },
+        {
+          "text": "somnolencia profunda",
+          "points": 30
+        },
+        {
+          "text": "pupilas pequeñas posibles",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-087",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la sobredosis de opioides, ¿cuáles son 4 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "depresión respiratoria",
+          "points": 35
+        },
+        {
+          "text": "somnolencia profunda",
+          "points": 30
+        },
+        {
+          "text": "pupilas pequeñas posibles",
+          "points": 20
+        },
+        {
+          "text": "naloxona cuando esté indicada",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-088",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 5 elementos corresponde a la sobredosis de opioides?",
+      "answers": [
+        {
+          "text": "depresión respiratoria",
+          "points": 30
+        },
+        {
+          "text": "somnolencia profunda",
+          "points": 25
+        },
+        {
+          "text": "pupilas pequeñas posibles",
+          "points": 20
+        },
+        {
+          "text": "naloxona cuando esté indicada",
+          "points": 15
+        },
+        {
+          "text": "ventilación de apoyo",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-089",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 6 elementos que caracterizan el shock?",
+      "answers": [
+        {
+          "text": "alteración de perfusión",
+          "points": 25
+        },
+        {
+          "text": "piel fría o pálida",
+          "points": 20
+        },
+        {
+          "text": "taquicardia posible",
+          "points": 18
+        },
+        {
+          "text": "hipotensión posible",
+          "points": 15
+        },
+        {
+          "text": "posición apropiada según causa",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-090",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 7 aspectos fundamentales deben considerarse en el shock?",
+      "answers": [
+        {
+          "text": "alteración de perfusión",
+          "points": 22
+        },
+        {
+          "text": "piel fría o pálida",
+          "points": 18
+        },
+        {
+          "text": "taquicardia posible",
+          "points": 16
+        },
+        {
+          "text": "hipotensión posible",
+          "points": 14
+        },
+        {
+          "text": "posición apropiada según causa",
+          "points": 12
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 10
+        },
+        {
+          "text": "soporte vital",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-091",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de el shock, ¿cuáles son 3 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "alteración de perfusión",
+          "points": 45
+        },
+        {
+          "text": "piel fría o pálida",
+          "points": 30
+        },
+        {
+          "text": "taquicardia posible",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-092",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 4 elementos corresponde a el shock?",
+      "answers": [
+        {
+          "text": "alteración de perfusión",
+          "points": 35
+        },
+        {
+          "text": "piel fría o pálida",
+          "points": 30
+        },
+        {
+          "text": "taquicardia posible",
+          "points": 20
+        },
+        {
+          "text": "hipotensión posible",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-093",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 5 elementos que caracterizan la alteración de la conciencia?",
+      "answers": [
+        {
+          "text": "evaluación de respuesta",
+          "points": 30
+        },
+        {
+          "text": "vía aérea",
+          "points": 25
+        },
+        {
+          "text": "respiración",
+          "points": 20
+        },
+        {
+          "text": "circulación",
+          "points": 15
+        },
+        {
+          "text": "glucosa cuando esté indicada",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-094",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 6 aspectos fundamentales deben considerarse en la alteración de la conciencia?",
+      "answers": [
+        {
+          "text": "evaluación de respuesta",
+          "points": 25
+        },
+        {
+          "text": "vía aérea",
+          "points": 20
+        },
+        {
+          "text": "respiración",
+          "points": 18
+        },
+        {
+          "text": "circulación",
+          "points": 15
+        },
+        {
+          "text": "glucosa cuando esté indicada",
+          "points": 12
+        },
+        {
+          "text": "posición segura",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-095",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la alteración de la conciencia, ¿cuáles son 7 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "evaluación de respuesta",
+          "points": 22
+        },
+        {
+          "text": "vía aérea",
+          "points": 18
+        },
+        {
+          "text": "respiración",
+          "points": 16
+        },
+        {
+          "text": "circulación",
+          "points": 14
+        },
+        {
+          "text": "glucosa cuando esté indicada",
+          "points": 12
+        },
+        {
+          "text": "posición segura",
+          "points": 10
+        },
+        {
+          "text": "activación de emergencias",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-096",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 3 elementos corresponde a la alteración de la conciencia?",
+      "answers": [
+        {
+          "text": "evaluación de respuesta",
+          "points": 45
+        },
+        {
+          "text": "vía aérea",
+          "points": 30
+        },
+        {
+          "text": "respiración",
+          "points": 25
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-097",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Cuáles son 4 elementos que caracterizan la documentación y el seguimiento?",
+      "answers": [
+        {
+          "text": "hora del evento",
+          "points": 35
+        },
+        {
+          "text": "signos y síntomas",
+          "points": 30
+        },
+        {
+          "text": "medidas realizadas",
+          "points": 20
+        },
+        {
+          "text": "medicación administrada",
+          "points": 15
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-098",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué 5 aspectos fundamentales deben considerarse en la documentación y el seguimiento?",
+      "answers": [
+        {
+          "text": "hora del evento",
+          "points": 30
+        },
+        {
+          "text": "signos y síntomas",
+          "points": 25
+        },
+        {
+          "text": "medidas realizadas",
+          "points": 20
+        },
+        {
+          "text": "medicación administrada",
+          "points": 15
+        },
+        {
+          "text": "respuesta al tratamiento",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-099",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "En la evaluación clínica de la documentación y el seguimiento, ¿cuáles son 6 aspectos relevantes?",
+      "answers": [
+        {
+          "text": "hora del evento",
+          "points": 25
+        },
+        {
+          "text": "signos y síntomas",
+          "points": 20
+        },
+        {
+          "text": "medidas realizadas",
+          "points": 18
+        },
+        {
+          "text": "medicación administrada",
+          "points": 15
+        },
+        {
+          "text": "respuesta al tratamiento",
+          "points": 12
+        },
+        {
+          "text": "servicios activados",
+          "points": 10
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    },
+    {
+      "id": "ORG38-100",
+      "category": "Urgencias médicas en odontología",
+      "difficulty": "extremo",
+      "question": "¿Qué conjunto de 7 elementos corresponde a la documentación y el seguimiento?",
+      "answers": [
+        {
+          "text": "hora del evento",
+          "points": 22
+        },
+        {
+          "text": "signos y síntomas",
+          "points": 18
+        },
+        {
+          "text": "medidas realizadas",
+          "points": 16
+        },
+        {
+          "text": "medicación administrada",
+          "points": 14
+        },
+        {
+          "text": "respuesta al tratamiento",
+          "points": 12
+        },
+        {
+          "text": "servicios activados",
+          "points": 10
+        },
+        {
+          "text": "registro clínico",
+          "points": 8
+        }
+      ],
+      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
+    }
+  ]
+}
