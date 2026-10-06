@@ -1,5 +1,6 @@
 /* English translation layer for categories 13-18. */
 (function(){
+  "pronóstico":"prognosis",
 const Q=[
 ["¿Qué debe realizarse ","What should be performed "],["¿Qué datos ayudan a ","What data help "],["¿Qué datos permiten ","What data allow "],
 ["¿Qué debe confirmarse ","What should be confirmed "],["¿Qué puede modificar ","What may modify "],["¿Qué antecedentes son especialmente relevantes en ","Which history items are especially relevant in "],
