@@ -1,6 +1,5 @@
 /* English translation layer for categories 13-18. */
 (function(){
-  "pronóstico":"prognosis",
 const Q=[
 ["¿Qué debe realizarse ","What should be performed "],["¿Qué datos ayudan a ","What data help "],["¿Qué datos permiten ","What data allow "],
 ["¿Qué debe confirmarse ","What should be confirmed "],["¿Qué puede modificar ","What may modify "],["¿Qué antecedentes son especialmente relevantes en ","Which history items are especially relevant in "],
@@ -19,6 +18,7 @@ const Q=[
 ["¿Cómo ","How "],["¿Por qué ","Why "],["¿Cuándo ","When "]
 ];
 const T={
+"pronóstico":"prognosis",
 "cirugía bucal":"oral surgery","cirugía":"surgery","procedimiento quirúrgico":"surgical procedure","procedimiento":"procedure",
 "riesgo quirúrgico":"surgical risk","plan quirúrgico":"surgical plan","cirugía oral":"oral surgery",
 "historia clínica actualizada":"updated medical history","exploración clínica":"clinical examination","estudios complementarios indicados":"indicated ancillary studies",
