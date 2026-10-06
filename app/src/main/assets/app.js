@@ -799,8 +799,8 @@ function finishFaceoff(winner){
   const readQuestion = () => {
     if (!q) { resume(); return; }
     const answerPrompt = isEn()
-      ? 'The question is on screen. Answer by voice using the microphone.'
-      : 'Tenemos la siguiente pregunta en pantalla. Proceda a contestarla con su voz usando el micrófono.';
+      ? 'We are going with '+winnerName+'. We have the following question on screen. Answer by voice using the microphone.'
+      : 'Nos vamos con '+winnerName+'. Tenemos la siguiente pregunta en pantalla. Proceda a contestarla con su voz usando el micrófono.';
     const spokenPrompt = narrate(answerPrompt,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:()=>{
       const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
       if(spokenQuestion===false) resume();
@@ -908,13 +908,13 @@ function startTimer(initialSeconds = TURN_SECONDS) {
     updateTimerUI();
     if (timerRemaining > 0 && timerRemaining <= 10) {
       const urgency = 11 - timerRemaining;
-      const volume = 0.045 + ((11 - timerRemaining) / 10) * 0.06;
-      tone(620 + urgency * 24, .11, 'square', volume);
+      const volume = 0.055 + ((11 - timerRemaining) / 10) * 0.11;
+      tone(620 + urgency * 30, .12, 'square', volume);
       const timerEl=$('#timer');
       timerEl?.classList.remove('countdownPulse');
       void timerEl?.offsetWidth;
       timerEl?.classList.add('countdownPulse');
-      if (timerRemaining <= 3) setTimeout(() => tone(900 + urgency * 35, .08, 'square', .055), 170);
+      if (timerRemaining <= 5) setTimeout(() => tone(900 + urgency * 40, .10, 'square', .10), 150);
     }
 
     if (timerRemaining <= 0) {
