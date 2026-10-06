@@ -5,7 +5,7 @@
       "id": "ORG41-001",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué caracteriza a un paciente con necesidades especiales de atención de salud?",
+      "question": "¿Cuáles son 3 aspectos clave de las características de un paciente con necesidades especiales de atención de salud?",
       "answers": [
         {
           "text": "condición física o del desarrollo",
@@ -26,7 +26,7 @@
       "id": "ORG41-002",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles caracteriza a un paciente con necesidades especiales de atención de salud?",
+      "question": "¿Cuáles son 4 aspectos clave de las características de un paciente con necesidades especiales de atención de salud?",
       "answers": [
         {
           "text": "condición física o del desarrollo",
@@ -51,7 +51,7 @@
       "id": "ORG41-003",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros caracteriza a un paciente con necesidades especiales de atención de salud?",
+      "question": "¿Cuáles son 5 aspectos clave de las características de un paciente con necesidades especiales de atención de salud?",
       "answers": [
         {
           "text": "condición física o del desarrollo",
@@ -80,7 +80,7 @@
       "id": "ORG41-004",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de caracteriza a un paciente con necesidades especiales de atención de salud?",
+      "question": "¿Cuáles son 6 aspectos clave de las características de un paciente con necesidades especiales de atención de salud?",
       "answers": [
         {
           "text": "condición física o del desarrollo",
@@ -113,7 +113,7 @@
       "id": "ORG41-005",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué debe investigarse antes de atender odontológicamente a un paciente con necesidades especiales?",
+      "question": "¿Cuáles son 3 aspectos clave de la evaluación previa a la atención odontológica de un paciente con necesidades especiales?",
       "answers": [
         {
           "text": "diagnóstico médico",
@@ -134,7 +134,7 @@
       "id": "ORG41-006",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles debe investigarse antes de atender odontológicamente a un paciente con necesidades especiales?",
+      "question": "¿Cuáles son 4 aspectos clave de la evaluación previa a la atención odontológica de un paciente con necesidades especiales?",
       "answers": [
         {
           "text": "diagnóstico médico",
@@ -159,7 +159,7 @@
       "id": "ORG41-007",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros debe investigarse antes de atender odontológicamente a un paciente con necesidades especiales?",
+      "question": "¿Cuáles son 5 aspectos clave de la evaluación previa a la atención odontológica de un paciente con necesidades especiales?",
       "answers": [
         {
           "text": "diagnóstico médico",
@@ -188,7 +188,7 @@
       "id": "ORG41-008",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de debe investigarse antes de atender odontológicamente a un paciente con necesidades especiales?",
+      "question": "¿Cuáles son 6 aspectos clave de la evaluación previa a la atención odontológica de un paciente con necesidades especiales?",
       "answers": [
         {
           "text": "diagnóstico médico",
@@ -221,7 +221,7 @@
       "id": "ORG41-009",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué capacidades deben valorarse para adaptar la atención odontológica?",
+      "question": "¿Cuáles son 3 aspectos clave de las capacidades necesarias para adaptar la atención odontológica?",
       "answers": [
         {
           "text": "comunicación",
@@ -242,7 +242,7 @@
       "id": "ORG41-010",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles capacidades deben valorarse para adaptar la atención odontológica?",
+      "question": "¿Cuáles son 4 aspectos clave de las capacidades necesarias para adaptar la atención odontológica?",
       "answers": [
         {
           "text": "comunicación",
@@ -267,7 +267,7 @@
       "id": "ORG41-011",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros capacidades deben valorarse para adaptar la atención odontológica?",
+      "question": "¿Cuáles son 5 aspectos clave de las capacidades necesarias para adaptar la atención odontológica?",
       "answers": [
         {
           "text": "comunicación",
@@ -296,7 +296,7 @@
       "id": "ORG41-012",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de capacidades deben valorarse para adaptar la atención odontológica?",
+      "question": "¿Cuáles son 6 aspectos clave de las capacidades necesarias para adaptar la atención odontológica?",
       "answers": [
         {
           "text": "comunicación",
@@ -329,7 +329,7 @@
       "id": "ORG41-013",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué estrategias pueden facilitar la comunicación con un paciente con discapacidad?",
+      "question": "¿Cuáles son 3 aspectos clave de la comunicación con un paciente con discapacidad?",
       "answers": [
         {
           "text": "lenguaje claro",
@@ -350,7 +350,7 @@
       "id": "ORG41-014",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles estrategias pueden facilitar la comunicación con un paciente con discapacidad?",
+      "question": "¿Cuáles son 4 aspectos clave de la comunicación con un paciente con discapacidad?",
       "answers": [
         {
           "text": "lenguaje claro",
@@ -375,7 +375,7 @@
       "id": "ORG41-015",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros estrategias pueden facilitar la comunicación con un paciente con discapacidad?",
+      "question": "¿Cuáles son 5 aspectos clave de la comunicación con un paciente con discapacidad?",
       "answers": [
         {
           "text": "lenguaje claro",
@@ -404,7 +404,7 @@
       "id": "ORG41-016",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de estrategias pueden facilitar la comunicación con un paciente con discapacidad?",
+      "question": "¿Cuáles son 6 aspectos clave de la comunicación con un paciente con discapacidad?",
       "answers": [
         {
           "text": "lenguaje claro",
@@ -437,7 +437,7 @@
       "id": "ORG41-017",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué modificaciones pueden ayudar a un paciente con hipersensibilidad sensorial?",
+      "question": "¿Cuáles son 3 aspectos clave de las modificaciones para atender a un paciente con hipersensibilidad sensorial?",
       "answers": [
         {
           "text": "reducir estímulos innecesarios",
@@ -458,7 +458,7 @@
       "id": "ORG41-018",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles modificaciones pueden ayudar a un paciente con hipersensibilidad sensorial?",
+      "question": "¿Cuáles son 4 aspectos clave de las modificaciones para atender a un paciente con hipersensibilidad sensorial?",
       "answers": [
         {
           "text": "reducir estímulos innecesarios",
@@ -483,7 +483,7 @@
       "id": "ORG41-019",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros modificaciones pueden ayudar a un paciente con hipersensibilidad sensorial?",
+      "question": "¿Cuáles son 5 aspectos clave de las modificaciones para atender a un paciente con hipersensibilidad sensorial?",
       "answers": [
         {
           "text": "reducir estímulos innecesarios",
@@ -512,7 +512,7 @@
       "id": "ORG41-020",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de modificaciones pueden ayudar a un paciente con hipersensibilidad sensorial?",
+      "question": "¿Cuáles son 6 aspectos clave de las modificaciones para atender a un paciente con hipersensibilidad sensorial?",
       "answers": [
         {
           "text": "reducir estímulos innecesarios",
@@ -545,7 +545,7 @@
       "id": "ORG41-021",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué consideraciones pueden ser útiles durante la atención dental de una persona con trastorno del espectro autista?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención dental de una persona con trastorno del espectro autista?",
       "answers": [
         {
           "text": "anticipación de la visita",
@@ -566,7 +566,7 @@
       "id": "ORG41-022",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles consideraciones pueden ser útiles durante la atención dental de una persona con trastorno del espectro autista?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención dental de una persona con trastorno del espectro autista?",
       "answers": [
         {
           "text": "anticipación de la visita",
@@ -591,7 +591,7 @@
       "id": "ORG41-023",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros consideraciones pueden ser útiles durante la atención dental de una persona con trastorno del espectro autista?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención dental de una persona con trastorno del espectro autista?",
       "answers": [
         {
           "text": "anticipación de la visita",
@@ -620,7 +620,7 @@
       "id": "ORG41-024",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de consideraciones pueden ser útiles durante la atención dental de una persona con trastorno del espectro autista?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención dental de una persona con trastorno del espectro autista?",
       "answers": [
         {
           "text": "anticipación de la visita",
@@ -653,7 +653,7 @@
       "id": "ORG41-025",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué principios son importantes al atender a una persona con discapacidad intelectual?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de una persona con discapacidad intelectual?",
       "answers": [
         {
           "text": "individualizar la comunicación",
@@ -674,7 +674,7 @@
       "id": "ORG41-026",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles principios son importantes al atender a una persona con discapacidad intelectual?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de una persona con discapacidad intelectual?",
       "answers": [
         {
           "text": "individualizar la comunicación",
@@ -699,7 +699,7 @@
       "id": "ORG41-027",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué otros principios son importantes al atender a una persona con discapacidad intelectual?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de una persona con discapacidad intelectual?",
       "answers": [
         {
           "text": "individualizar la comunicación",
@@ -728,7 +728,7 @@
       "id": "ORG41-028",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué conjunto de principios son importantes al atender a una persona con discapacidad intelectual?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de una persona con discapacidad intelectual?",
       "answers": [
         {
           "text": "individualizar la comunicación",
@@ -761,7 +761,7 @@
       "id": "ORG41-029",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Qué debe considerarse en pacientes con limitaciones motoras?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de pacientes con limitaciones motoras?",
       "answers": [
         {
           "text": "acceso físico al consultorio",
@@ -782,7 +782,7 @@
       "id": "ORG41-030",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "facil",
-      "question": "¿Cuáles debe considerarse en pacientes con limitaciones motoras?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de pacientes con limitaciones motoras?",
       "answers": [
         {
           "text": "acceso físico al consultorio",
@@ -807,7 +807,7 @@
       "id": "ORG41-031",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué otros debe considerarse en pacientes con limitaciones motoras?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de pacientes con limitaciones motoras?",
       "answers": [
         {
           "text": "acceso físico al consultorio",
@@ -836,7 +836,7 @@
       "id": "ORG41-032",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de debe considerarse en pacientes con limitaciones motoras?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de pacientes con limitaciones motoras?",
       "answers": [
         {
           "text": "acceso físico al consultorio",
@@ -869,7 +869,7 @@
       "id": "ORG41-033",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué estrategias favorecen la atención de un paciente con discapacidad visual?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención de un paciente con discapacidad visual?",
       "answers": [
         {
           "text": "explicar verbalmente cada procedimiento",
@@ -890,7 +890,7 @@
       "id": "ORG41-034",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Cuáles estrategias favorecen la atención de un paciente con discapacidad visual?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención de un paciente con discapacidad visual?",
       "answers": [
         {
           "text": "explicar verbalmente cada procedimiento",
@@ -915,7 +915,7 @@
       "id": "ORG41-035",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué otros estrategias favorecen la atención de un paciente con discapacidad visual?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención de un paciente con discapacidad visual?",
       "answers": [
         {
           "text": "explicar verbalmente cada procedimiento",
@@ -944,7 +944,7 @@
       "id": "ORG41-036",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de estrategias favorecen la atención de un paciente con discapacidad visual?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención de un paciente con discapacidad visual?",
       "answers": [
         {
           "text": "explicar verbalmente cada procedimiento",
@@ -977,7 +977,7 @@
       "id": "ORG41-037",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué medidas pueden mejorar la comunicación con una persona con discapacidad auditiva?",
+      "question": "¿Cuáles son 3 aspectos clave de la comunicación con una persona con discapacidad auditiva?",
       "answers": [
         {
           "text": "hablar mirando al paciente",
@@ -998,7 +998,7 @@
       "id": "ORG41-038",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Cuáles medidas pueden mejorar la comunicación con una persona con discapacidad auditiva?",
+      "question": "¿Cuáles son 4 aspectos clave de la comunicación con una persona con discapacidad auditiva?",
       "answers": [
         {
           "text": "hablar mirando al paciente",
@@ -1023,7 +1023,7 @@
       "id": "ORG41-039",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué otros medidas pueden mejorar la comunicación con una persona con discapacidad auditiva?",
+      "question": "¿Cuáles son 5 aspectos clave de la comunicación con una persona con discapacidad auditiva?",
       "answers": [
         {
           "text": "hablar mirando al paciente",
@@ -1052,7 +1052,7 @@
       "id": "ORG41-040",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de medidas pueden mejorar la comunicación con una persona con discapacidad auditiva?",
+      "question": "¿Cuáles son 6 aspectos clave de la comunicación con una persona con discapacidad auditiva?",
       "answers": [
         {
           "text": "hablar mirando al paciente",
@@ -1085,7 +1085,7 @@
       "id": "ORG41-041",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué aspectos pueden requerir adaptación en pacientes con parálisis cerebral?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de pacientes con parálisis cerebral?",
       "answers": [
         {
           "text": "control postural",
@@ -1106,7 +1106,7 @@
       "id": "ORG41-042",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Cuáles aspectos pueden requerir adaptación en pacientes con parálisis cerebral?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de pacientes con parálisis cerebral?",
       "answers": [
         {
           "text": "control postural",
@@ -1131,7 +1131,7 @@
       "id": "ORG41-043",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué otros aspectos pueden requerir adaptación en pacientes con parálisis cerebral?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de pacientes con parálisis cerebral?",
       "answers": [
         {
           "text": "control postural",
@@ -1160,7 +1160,7 @@
       "id": "ORG41-044",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de aspectos pueden requerir adaptación en pacientes con parálisis cerebral?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de pacientes con parálisis cerebral?",
       "answers": [
         {
           "text": "control postural",
@@ -1193,7 +1193,7 @@
       "id": "ORG41-045",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué debe revisarse en un paciente con epilepsia antes de una consulta dental?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de un paciente con epilepsia?",
       "answers": [
         {
           "text": "frecuencia de crisis",
@@ -1214,7 +1214,7 @@
       "id": "ORG41-046",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Cuáles debe revisarse en un paciente con epilepsia antes de una consulta dental?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de un paciente con epilepsia?",
       "answers": [
         {
           "text": "frecuencia de crisis",
@@ -1239,7 +1239,7 @@
       "id": "ORG41-047",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué otros debe revisarse en un paciente con epilepsia antes de una consulta dental?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de un paciente con epilepsia?",
       "answers": [
         {
           "text": "frecuencia de crisis",
@@ -1268,7 +1268,7 @@
       "id": "ORG41-048",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué conjunto de debe revisarse en un paciente con epilepsia antes de una consulta dental?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de un paciente con epilepsia?",
       "answers": [
         {
           "text": "frecuencia de crisis",
@@ -1301,7 +1301,7 @@
       "id": "ORG41-049",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Qué problemas orales pueden requerir vigilancia especial en personas con síndrome de Down?",
+      "question": "¿Cuáles son 3 aspectos clave de la vigilancia de problemas orales en personas con síndrome de Down?",
       "answers": [
         {
           "text": "enfermedad periodontal",
@@ -1322,7 +1322,7 @@
       "id": "ORG41-050",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "medio",
-      "question": "¿Cuáles problemas orales pueden requerir vigilancia especial en personas con síndrome de Down?",
+      "question": "¿Cuáles son 4 aspectos clave de la vigilancia de problemas orales en personas con síndrome de Down?",
       "answers": [
         {
           "text": "enfermedad periodontal",
@@ -1347,7 +1347,7 @@
       "id": "ORG41-051",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué otros problemas orales pueden requerir vigilancia especial en personas con síndrome de Down?",
+      "question": "¿Cuáles son 5 aspectos clave de la vigilancia de problemas orales en personas con síndrome de Down?",
       "answers": [
         {
           "text": "enfermedad periodontal",
@@ -1376,7 +1376,7 @@
       "id": "ORG41-052",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de problemas orales pueden requerir vigilancia especial en personas con síndrome de Down?",
+      "question": "¿Cuáles son 6 aspectos clave de la vigilancia de problemas orales en personas con síndrome de Down?",
       "answers": [
         {
           "text": "enfermedad periodontal",
@@ -1409,7 +1409,7 @@
       "id": "ORG41-053",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué factores pueden afectar la atención dental en enfermedades neuromusculares?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención dental en enfermedades neuromusculares?",
       "answers": [
         {
           "text": "debilidad muscular",
@@ -1430,7 +1430,7 @@
       "id": "ORG41-054",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Cuáles factores pueden afectar la atención dental en enfermedades neuromusculares?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención dental en enfermedades neuromusculares?",
       "answers": [
         {
           "text": "debilidad muscular",
@@ -1455,7 +1455,7 @@
       "id": "ORG41-055",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué otros factores pueden afectar la atención dental en enfermedades neuromusculares?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención dental en enfermedades neuromusculares?",
       "answers": [
         {
           "text": "debilidad muscular",
@@ -1484,7 +1484,7 @@
       "id": "ORG41-056",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de factores pueden afectar la atención dental en enfermedades neuromusculares?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención dental en enfermedades neuromusculares?",
       "answers": [
         {
           "text": "debilidad muscular",
@@ -1517,7 +1517,7 @@
       "id": "ORG41-057",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué debe considerarse cuando un paciente con necesidades especiales presenta enfermedad cardiovascular?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de un paciente con enfermedad cardiovascular?",
       "answers": [
         {
           "text": "historia cardiovascular",
@@ -1538,7 +1538,7 @@
       "id": "ORG41-058",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Cuáles debe considerarse cuando un paciente con necesidades especiales presenta enfermedad cardiovascular?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de un paciente con enfermedad cardiovascular?",
       "answers": [
         {
           "text": "historia cardiovascular",
@@ -1563,7 +1563,7 @@
       "id": "ORG41-059",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué otros debe considerarse cuando un paciente con necesidades especiales presenta enfermedad cardiovascular?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de un paciente con enfermedad cardiovascular?",
       "answers": [
         {
           "text": "historia cardiovascular",
@@ -1592,7 +1592,7 @@
       "id": "ORG41-060",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de debe considerarse cuando un paciente con necesidades especiales presenta enfermedad cardiovascular?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de un paciente con enfermedad cardiovascular?",
       "answers": [
         {
           "text": "historia cardiovascular",
@@ -1625,7 +1625,7 @@
       "id": "ORG41-061",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué información es importante antes de procedimientos dentales en un paciente con trastorno hemorrágico?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención dental de un paciente con trastorno hemorrágico?",
       "answers": [
         {
           "text": "diagnóstico hematológico",
@@ -1646,7 +1646,7 @@
       "id": "ORG41-062",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Cuáles información es importante antes de procedimientos dentales en un paciente con trastorno hemorrágico?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención dental de un paciente con trastorno hemorrágico?",
       "answers": [
         {
           "text": "diagnóstico hematológico",
@@ -1671,7 +1671,7 @@
       "id": "ORG41-063",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué otros información es importante antes de procedimientos dentales en un paciente con trastorno hemorrágico?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención dental de un paciente con trastorno hemorrágico?",
       "answers": [
         {
           "text": "diagnóstico hematológico",
@@ -1700,7 +1700,7 @@
       "id": "ORG41-064",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de información es importante antes de procedimientos dentales en un paciente con trastorno hemorrágico?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención dental de un paciente con trastorno hemorrágico?",
       "answers": [
         {
           "text": "diagnóstico hematológico",
@@ -1733,7 +1733,7 @@
       "id": "ORG41-065",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué aspectos deben considerarse en pacientes inmunosuprimidos?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de pacientes inmunosuprimidos?",
       "answers": [
         {
           "text": "causa de inmunosupresión",
@@ -1754,7 +1754,7 @@
       "id": "ORG41-066",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Cuáles aspectos deben considerarse en pacientes inmunosuprimidos?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de pacientes inmunosuprimidos?",
       "answers": [
         {
           "text": "causa de inmunosupresión",
@@ -1779,7 +1779,7 @@
       "id": "ORG41-067",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué otros aspectos deben considerarse en pacientes inmunosuprimidos?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de pacientes inmunosuprimidos?",
       "answers": [
         {
           "text": "causa de inmunosupresión",
@@ -1808,7 +1808,7 @@
       "id": "ORG41-068",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué conjunto de aspectos deben considerarse en pacientes inmunosuprimidos?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de pacientes inmunosuprimidos?",
       "answers": [
         {
           "text": "causa de inmunosupresión",
@@ -1841,7 +1841,7 @@
       "id": "ORG41-069",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Qué debe valorarse en un paciente con tratamiento oncológico?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención odontológica de un paciente con tratamiento oncológico?",
       "answers": [
         {
           "text": "tipo de cáncer",
@@ -1862,7 +1862,7 @@
       "id": "ORG41-070",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "dificil",
-      "question": "¿Cuáles debe valorarse en un paciente con tratamiento oncológico?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención odontológica de un paciente con tratamiento oncológico?",
       "answers": [
         {
           "text": "tipo de cáncer",
@@ -1887,7 +1887,7 @@
       "id": "ORG41-071",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros debe valorarse en un paciente con tratamiento oncológico?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención odontológica de un paciente con tratamiento oncológico?",
       "answers": [
         {
           "text": "tipo de cáncer",
@@ -1916,7 +1916,7 @@
       "id": "ORG41-072",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de debe valorarse en un paciente con tratamiento oncológico?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención odontológica de un paciente con tratamiento oncológico?",
       "answers": [
         {
           "text": "tipo de cáncer",
@@ -1949,7 +1949,7 @@
       "id": "ORG41-073",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué principios son importantes si un paciente con necesidades especiales requiere sedación?",
+      "question": "¿Cuáles son 3 aspectos clave de la sedación en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "evaluación preoperatoria",
@@ -1970,7 +1970,7 @@
       "id": "ORG41-074",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Cuáles principios son importantes si un paciente con necesidades especiales requiere sedación?",
+      "question": "¿Cuáles son 4 aspectos clave de la sedación en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "evaluación preoperatoria",
@@ -1995,7 +1995,7 @@
       "id": "ORG41-075",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros principios son importantes si un paciente con necesidades especiales requiere sedación?",
+      "question": "¿Cuáles son 5 aspectos clave de la sedación en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "evaluación preoperatoria",
@@ -2024,7 +2024,7 @@
       "id": "ORG41-076",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de principios son importantes si un paciente con necesidades especiales requiere sedación?",
+      "question": "¿Cuáles son 6 aspectos clave de la sedación en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "evaluación preoperatoria",
@@ -2057,7 +2057,7 @@
       "id": "ORG41-077",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué situaciones pueden justificar realizar atención dental en un entorno hospitalario?",
+      "question": "¿Cuáles son 3 aspectos clave de la atención dental en un entorno hospitalario?",
       "answers": [
         {
           "text": "necesidades médicas complejas",
@@ -2078,7 +2078,7 @@
       "id": "ORG41-078",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué factores deben evaluarse antes de elegir un entorno hospitalario para atención dental?",
+      "question": "¿Cuáles son 4 aspectos clave de la atención dental en un entorno hospitalario?",
       "answers": [
         {
           "text": "necesidades médicas complejas",
@@ -2103,7 +2103,7 @@
       "id": "ORG41-079",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué circunstancias clínicas pueden hacer preferible un entorno hospitalario?",
+      "question": "¿Cuáles son 5 aspectos clave de la atención dental en un entorno hospitalario?",
       "answers": [
         {
           "text": "necesidades médicas complejas",
@@ -2132,7 +2132,7 @@
       "id": "ORG41-080",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué elementos deben integrarse al decidir si el tratamiento dental requiere atención hospitalaria?",
+      "question": "¿Cuáles son 6 aspectos clave de la atención dental en un entorno hospitalario?",
       "answers": [
         {
           "text": "necesidades médicas complejas",
@@ -2165,7 +2165,7 @@
       "id": "ORG41-081",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué componentes son prioritarios en la prevención de enfermedad oral en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 3 aspectos clave de la prevención de enfermedad oral en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "cepillado asistido cuando sea necesario",
@@ -2186,7 +2186,7 @@
       "id": "ORG41-082",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Cuáles componentes son prioritarios en la prevención de enfermedad oral en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 4 aspectos clave de la prevención de enfermedad oral en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "cepillado asistido cuando sea necesario",
@@ -2211,7 +2211,7 @@
       "id": "ORG41-083",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros componentes son prioritarios en la prevención de enfermedad oral en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 5 aspectos clave de la prevención de enfermedad oral en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "cepillado asistido cuando sea necesario",
@@ -2240,7 +2240,7 @@
       "id": "ORG41-084",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de componentes son prioritarios en la prevención de enfermedad oral en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 6 aspectos clave de la prevención de enfermedad oral en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "cepillado asistido cuando sea necesario",
@@ -2273,7 +2273,7 @@
       "id": "ORG41-085",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué factores pueden aumentar el riesgo de caries en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 3 aspectos clave de el riesgo de caries en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "dieta cariogénica",
@@ -2294,7 +2294,7 @@
       "id": "ORG41-086",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Cuáles factores pueden aumentar el riesgo de caries en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 4 aspectos clave de el riesgo de caries en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "dieta cariogénica",
@@ -2319,7 +2319,7 @@
       "id": "ORG41-087",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros factores pueden aumentar el riesgo de caries en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 5 aspectos clave de el riesgo de caries en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "dieta cariogénica",
@@ -2348,7 +2348,7 @@
       "id": "ORG41-088",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de factores pueden aumentar el riesgo de caries en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 6 aspectos clave de el riesgo de caries en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "dieta cariogénica",
@@ -2381,7 +2381,7 @@
       "id": "ORG41-089",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué factores pueden complicar el control periodontal en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 3 aspectos clave de el control periodontal en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "higiene limitada",
@@ -2402,7 +2402,7 @@
       "id": "ORG41-090",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Cuáles factores pueden complicar el control periodontal en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 4 aspectos clave de el control periodontal en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "higiene limitada",
@@ -2427,7 +2427,7 @@
       "id": "ORG41-091",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros factores pueden complicar el control periodontal en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 5 aspectos clave de el control periodontal en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "higiene limitada",
@@ -2456,7 +2456,7 @@
       "id": "ORG41-092",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de factores pueden complicar el control periodontal en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 6 aspectos clave de el control periodontal en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "higiene limitada",
@@ -2489,7 +2489,7 @@
       "id": "ORG41-093",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué principios deben respetarse al tomar decisiones de tratamiento en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 3 aspectos clave de las decisiones de tratamiento en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "consentimiento informado",
@@ -2510,7 +2510,7 @@
       "id": "ORG41-094",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Cuáles principios deben respetarse al tomar decisiones de tratamiento en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 4 aspectos clave de las decisiones de tratamiento en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "consentimiento informado",
@@ -2535,7 +2535,7 @@
       "id": "ORG41-095",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros principios deben respetarse al tomar decisiones de tratamiento en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 5 aspectos clave de las decisiones de tratamiento en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "consentimiento informado",
@@ -2564,7 +2564,7 @@
       "id": "ORG41-096",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de principios deben respetarse al tomar decisiones de tratamiento en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 6 aspectos clave de las decisiones de tratamiento en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "consentimiento informado",
@@ -2597,7 +2597,7 @@
       "id": "ORG41-097",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué favorece una transición adecuada de atención pediátrica a adulta en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 3 aspectos clave de la transición de atención pediátrica a adulta en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "planificación anticipada",
@@ -2618,7 +2618,7 @@
       "id": "ORG41-098",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Cuáles favorece una transición adecuada de atención pediátrica a adulta en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 4 aspectos clave de la transición de atención pediátrica a adulta en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "planificación anticipada",
@@ -2643,7 +2643,7 @@
       "id": "ORG41-099",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué otros favorece una transición adecuada de atención pediátrica a adulta en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 5 aspectos clave de la transición de atención pediátrica a adulta en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "planificación anticipada",
@@ -2672,7 +2672,7 @@
       "id": "ORG41-100",
       "category": "Odontología para pacientes con necesidades especiales",
       "difficulty": "extremo",
-      "question": "¿Qué conjunto de favorece una transición adecuada de atención pediátrica a adulta en pacientes con necesidades especiales?",
+      "question": "¿Cuáles son 6 aspectos clave de la transición de atención pediátrica a adulta en pacientes con necesidades especiales?",
       "answers": [
         {
           "text": "planificación anticipada",
