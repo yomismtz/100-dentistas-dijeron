@@ -246,6 +246,7 @@ let turnNarrationToken = 0;
 let soundGeneration = 0;
 let gamePaused = false;
 let turnResolving = false;
+let roundAdvanceReady = false;
 
 const audio = {
   start: $('#sndStart'),
@@ -336,6 +337,7 @@ function saveActiveGame() {
       phase,
       timerRemaining,
       faceoffDoneThisRound,
+      faceoffActive,
       gamePaused,
       turnResolving: false,
       savedReason: reason
@@ -397,6 +399,7 @@ function normalizeSavedGame(snapshot) {
 
   snapshot.gamePaused = Boolean(snapshot.gamePaused);
   snapshot.faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
+  faceoffActive = Boolean(snapshot.faceoffActive);
   snapshot.savedAt = Number.isFinite(Number(snapshot.savedAt)) ? Number(snapshot.savedAt) : Date.now();
 
   return snapshot;
@@ -778,114 +781,107 @@ function startVoiceAnswer(){
   rec.onend=()=>{if(b)b.textContent='🎤 RESPONDER';};
   try{rec.start();}catch(_){if(b)b.textContent='🎤 RESPONDER';}
 }
-function finishFaceoff(winner){
-  if(!faceoffActive || gamePaused || turnResolving)return;
-  faceoffActive=false;
-  clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
+function finishFaceoff(winner) {
+  if (!faceoffActive || gamePaused || turnResolving) return;
+  faceoffActive = false;
+  clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null;
   $('#faceoff')?.classList.add('hidden');
   $('#answerEntry')?.classList.remove('hidden');
-  currentTeam=winner==='cpu'?1:Number(winner)||0;
-  updateTurnUI();
-  saveActiveGame();
-  const winnerName = gameConfig.mode==='cpu' && currentTeam===1
-    ? (isEn() ? 'the computer' : 'la computadora')
-    : (teamNames[currentTeam] || (isEn() ? `team ${currentTeam+1}` : `equipo ${currentTeam+1}`));
-  const announcement = isEn() ? `We go with ${winnerName}.` : `Nos vamos con ${winnerName}.`;
-  const q = questions[roundIndex];
-  const resume = () => {
-    startTimer(TURN_SECONDS);
-    if(winner==='cpu') scheduleCpuTurn();
-  };
-  const readQuestion = () => {
-    if (!q) { resume(); return; }
-    const answerPrompt = isEn()
-      ? 'We are going with '+winnerName+'. We have the following question on screen. Answer by voice using the microphone.'
-      : 'Nos vamos con '+winnerName+'. Tenemos la siguiente pregunta en pantalla. Proceda a contestarla con su voz usando el micrófono.';
-    const spokenPrompt = narrate(answerPrompt,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:()=>{
-      const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
-      if(spokenQuestion===false) resume();
-    },onerror:()=>{
-      const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
-      if(spokenQuestion===false) resume();
-    }});
-    if(spokenPrompt===false) {
-      const spokenQuestion = narrate(qText(q),{lang:qVoiceLang(q),rate:.9,onend:resume,onerror:resume});
-      if(spokenQuestion===false) resume();
-    }
-  };
-  const spoken = narrate(announcement,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:readQuestion,onerror:readQuestion});
-  if(spoken===false) readQuestion();
-}
 
-function startFaceoff(){
-  if (gamePaused || turnResolving) return;
-  // Paso 3: el robo es automático. No hay segundo careo; el equipo rival recibe directamente el turno.
-  if(phase === 'steal'){
-    faceoffActive=false;
-    clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;
+  currentTeam = winner === 'cpu' ? 1 : Number(winner) || 0;
+  updateTurnUI();
+  document.querySelectorAll('#answers button').forEach((btn, idx) => {
+    btn.disabled = revealed[idx] || phase === 'over' || gamePaused;
+  });
+  saveActiveGame();
+
+  const winnerName = gameConfig.mode === 'cpu' && currentTeam === 1
+    ? (isEn() ? 'the computer' : 'la computadora')
+    : (teamNames[currentTeam] || (isEn() ? `team ${currentTeam + 1}` : `equipo ${currentTeam + 1}`));
+  const announcement = isEn() ? `We go with ${winnerName}.` : `Nos vamos con ${winnerName}.`;
+
+  const resume = () => {
+    if (phase === 'over' || gamePaused) return;
+    turnResolving = false;
+    startTimer(TURN_SECONDS);
+    if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+  };
+  const spoken = narrate(announcement, {
+    lang:isEn()?'en-US':'es-MX', rate:.94, onend:resume, onerror:resume
+  });
+  if (spoken === false) resume();
+}
+function startFaceoff() {
+  if (gamePaused || turnResolving || phase === 'over') return;
+
+  if (phase === 'steal') {
+    faceoffActive = false;
+    clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null;
     $('#faceoff')?.classList.add('hidden');
     $('#answerEntry')?.classList.remove('hidden');
     updateTurnUI();
-    const stealIntro = isEn()
-      ? `STEAL! ${teamNames[currentTeam]}, answer now.`
-      : `¡ROBO! ${teamNames[currentTeam]}, responde ahora.`;
-    const resume = () => {
-      startTimer(TURN_SECONDS);
-      if(gameConfig.mode==='cpu'&&currentTeam===1) scheduleCpuTurn();
-    };
-    const spoken = narrate(stealIntro,{lang:isEn()?'en-US':'es-MX',rate:.94,onend:resume,onerror:resume});
-    if(spoken===false) resume();
-    return;
-  }
-  if(faceoffDoneThisRound){
-    $('#answerEntry')?.classList.remove('hidden');
     startTimer(TURN_SECONDS);
-    if(gameConfig.mode==='cpu'&&currentTeam===1) scheduleCpuTurn();
+    if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
     return;
   }
-  faceoffDoneThisRound=true;
-  faceoffActive=true;
+
+  if (faceoffActive) return;
+  faceoffDoneThisRound = true;
+  faceoffActive = true;
   saveActiveGame();
-  const fq=$('#faceoffQuestion');
-  if(fq) fq.textContent=qText(questions[roundIndex]);
+
+  const fq = $('#faceoffQuestion');
+  if (fq) fq.textContent = qText(questions[roundIndex]);
   $('#faceoff')?.classList.remove('hidden');
   $('#answerEntry')?.classList.add('hidden');
-  const b1=$('#faceoffTeam1'), b2=$('#faceoffTeam2');
-  if(b1)b1.textContent='🦷 '+(teamNames[0]||'EQUIPO 1');
-  if(b2)b2.textContent='🦷 '+(teamNames[1]||'EQUIPO 2');
-  if(gameConfig.mode==='cpu'){
-    if(b2)b2.textContent='🤖 '+(teamNames[1]||'COMPUTADORA');
-    const ch=cpuCharacterObject();
-    const base=window.DentistasCharacterCPU?.delayFor?.(ch)||1200;
-    faceoffCpuHandle=setTimeout(()=>finishFaceoff(1),Math.max(700,Math.min(3000,base+Math.random()*900)));
+  document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
+
+  const b1 = $('#faceoffTeam1'), b2 = $('#faceoffTeam2');
+  if (b1) b1.textContent = '🦷 ' + (teamNames[0] || 'EQUIPO 1');
+  if (b2) b2.textContent = '🦷 ' + (teamNames[1] || 'EQUIPO 2');
+
+  if (gameConfig.mode === 'cpu') {
+    if (b2) b2.textContent = '🤖 ' + (teamNames[1] || 'COMPUTADORA');
+    const ch = cpuCharacterObject();
+    const base = window.DentistasCharacterCPU?.delayFor?.(ch) || 1200;
+    faceoffCpuHandle = setTimeout(() => finishFaceoff(1),
+      Math.max(700, Math.min(3000, base + Math.random() * 900)));
   }
 }
 function beginTurnAfterQuestion() {
-  if (gamePaused || turnResolving) return;
+  if (gamePaused || turnResolving || phase === 'over' || phase === 'steal') return;
   invalidateTurn();
   timerRemaining = TURN_SECONDS;
   updateTimerUI();
   const q = questions[roundIndex];
-  if (!q || phase === 'over' || !gameVisible()) return;
-  const memberLabel = gameConfig.mode === 'teams' && Number(gameConfig.teamSize) > 1
-    ? (isEn() ? `Next member of ${teamNames[currentTeam]}` : `Siguiente miembro de ${teamNames[currentTeam]}`)
-    : (isEn() ? `Player ${currentTeam + 1}` : `Jugador ${currentTeam + 1}`);
+  if (!q || !gameVisible()) return;
 
   const token = ++turnNarrationToken;
-  const start = () => {
+  const readQuestionThenFaceoff = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-    startFaceoff();
+    const spokenQuestion = narrate(qText(q), {
+      lang:qVoiceLang(q), rate:.9,
+      onend:() => {
+        if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
+        startFaceoff();
+      },
+      onerror:() => {
+        if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
+        startFaceoff();
+      }
+    });
+    if (spokenQuestion === false) startFaceoff();
   };
-  const roundIntro = isEn()
-    ? `Welcome to 100 Dentistas Dijeron. Round number ${roundIndex + 1}. ${memberLabel}. We have the following question on screen. Please read it.`
-    : `Bienvenidos a 100 Dentistas Dijeron. Ronda número ${roundIndex + 1}. ${memberLabel}. Tenemos la siguiente pregunta en pantalla. Proceda a leerla.`;
-  // En el formato tipo "100 Mexicanos Dijeron", la pregunta queda visible
-  // para que los participantes la lean antes del careo. La narradora NO la
-  // vuelve a leer aquí; la lee después al jugador/equipo que gana el careo.
-  const spokenIntro = narrate(roundIntro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:start, onerror:start});
-  if (spokenIntro === false) start();
-}
 
+  const intro = isEn()
+    ? 'Welcome to Asì los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
+    : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en pantalla, cuatro respuestas correctas. Tienen que mencionar la más popular.';
+  const spokenIntro = narrate(intro, {
+    lang:isEn()?'en-US':'es-MX', rate:.92,
+    onend:readQuestionThenFaceoff, onerror:readQuestionThenFaceoff
+  });
+  if (spokenIntro === false) readQuestionThenFaceoff();
+}
 function startTimer(initialSeconds = TURN_SECONDS) {
   stopTimer();
   if (gamePaused) return;
@@ -1026,9 +1022,12 @@ function updateTurnUI() {
     lastTurnSignature = turnSignature;
   }
 
-  $('#buzz').disabled = phase === 'over' || gamePaused || turnResolving;
+  $('#buzz').disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound;
   const mic = $('#answerMic');
-  if (mic) mic.disabled = phase === 'over' || gamePaused || turnResolving;
+  if (mic) mic.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound;
+  document.querySelectorAll('#answers button').forEach((btn, idx) => {
+    btn.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound || revealed[idx];
+  });
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || gamePaused || bank <= 0);
   updateTimerUI();
 }
@@ -1041,17 +1040,29 @@ function showRoundTransition(onDone) {
   overlay.className = 'roundTransition';
   const mult = roundMultiplier();
   const lang = I18N?.getLang?.() || 'es';
-  overlay.innerHTML = `<div class="roundTransitionCard"><span>${lang === 'en' ? 'ROUND' : 'RONDA'} ${roundIndex + 1}</span><strong>×${mult}</strong><small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small></div>`;
+  const label = lang === 'en' ? 'ROUND' : 'RONDA';
+  overlay.innerHTML = `
+    <div class="roundTransitionCard">
+      <div class="roundTransitionVisual" aria-label="${label} ${roundIndex + 1}">
+        <img src="round_transition.gif" alt="" class="roundTransitionGif">
+        <span class="roundTransitionNumber">${roundIndex + 1}</span>
+      </div>
+      <div class="roundTransitionInfo">
+        <span>${label} ${roundIndex + 1}</span>
+        <strong>×${mult}</strong>
+        <small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small>
+      </div>
+    </div>`;
   document.body.appendChild(overlay);
+  preloadResource('round_transition.gif');
   gameSound('transition');
   clearTimeout(roundTransitionHandle);
-  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 850);
+  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 1100);
   setTimeout(() => {
     overlay.remove();
     if (typeof onDone === 'function') onDone();
-  }, 1100);
+  }, 1450);
 }
-
 function showRoundTransition() {
   const old = document.querySelector('#roundTransition');
   if (old) old.remove();
@@ -1084,9 +1095,40 @@ function showRoundTransition() {
   setTimeout(() => overlay.remove(), 1450);
 }
 
+function setRoundAdvanceReady(ready) {
+  roundAdvanceReady = Boolean(ready);
+  const next = $('#next');
+  const continueBtn = $('#roundContinue');
+  const isLast = roundIndex >= questions.length - 1;
+  const label = isLast
+    ? (isEn() ? '🏁 SEE FINAL RESULT' : '🏁 VER RESULTADO FINAL')
+    : (isEn() ? '▶ NEXT ROUND' : '▶ PASAR A LA SIGUIENTE RONDA');
+  if (next) {
+    next.classList.toggle('hidden', !roundAdvanceReady);
+    next.disabled = !roundAdvanceReady;
+    next.textContent = label;
+    next.setAttribute('aria-label', label.replace(/[🏁▶]/g,'').trim());
+  }
+  if (continueBtn) {
+    continueBtn.classList.toggle('hidden', !roundAdvanceReady);
+    continueBtn.disabled = !roundAdvanceReady;
+    continueBtn.textContent = label;
+  }
+}
+function showRoundContinueButton() {
+  setRoundAdvanceReady(true);
+  const continueBtn = $('#roundContinue');
+  if (continueBtn) {
+    continueBtn.classList.remove('hidden');
+    continueBtn.disabled = false;
+    continueBtn.focus?.();
+  }
+}
+
 function showRound(reset = true) {
   if (!questions.length) return;
   turnResolving = false;
+  if (reset) setRoundAdvanceReady(false);
   const preservedTime = timerRemaining;
   stopTimer();
   roundIndex = Math.max(0, Math.min(roundIndex, questions.length - 1));
@@ -1179,58 +1221,35 @@ function showRoundPointsAward(team, points){
   requestAnimationFrame(() => el.classList.add('show'));
   setTimeout(() => el.remove(), 1200);
 }
-function announceRoundWinner(team, points, reason='bank'){
+function announceRoundWinner(team, points, reason='bank') {
   const name = team !== null && team !== undefined ? teamNames[team] : '';
-  const lastRound = roundIndex >= questions.length - 1;
   const message = reason === 'steal'
     ? (isEn() ? `Steal successful. ${name} wins the bank: ${points} points.` : `¡Robo exitoso! ${name} gana el banco: ${points} puntos.`)
     : (isEn() ? `${name} wins the round and receives ${points} points.` : `${name} gana la ronda y recibe ${points} puntos.`);
-  const finish = () => {
-    setTimeout(() => {
-      if (lastRound) finishGame();
-      else nextRound();
-    }, 500);
-  };
-  const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX', rate:.9, onend:finish, onerror:finish});
+  const finish = () => showRoundContinueButton();
+  const spoken = narrate(message, {
+    lang:isEn()?'en-US':'es-MX', rate:.9, onend:finish, onerror:finish
+  });
   if (spoken === false) finish();
 }
 function endRoundAfterSteal(winnerTeam, successful) {
   const pointsWon = Math.max(0, Number(bank) || 0);
-  // El robo/fallo asigna el banco exactamente una sola vez.
-  // Si el robo falla, vuelve al equipo que construyó el banco.
-  const awardedTeam = successful
-    ? (winnerTeam === 1 ? 1 : 0)
-    : (winnerTeam === null ? 1 - currentTeam : (winnerTeam === 1 ? 1 : 0));
-
+  const awardedTeam = successful ? currentTeam : (1 - currentTeam);
   if (pointsWon > 0) {
     awardHistory.push({team:awardedTeam, points:pointsWon});
     scores[awardedTeam] += pointsWon;
   }
-
   bank = 0;
   phase = 'over';
+  stopTimer(); clearCpuTurn(); faceoffActive = false;
   clearActiveGame();
-  updateScoreUI();
-  updateBankUI();
-  updateTurnUI();
+  updateScoreUI(); updateBankUI(); updateTurnUI();
   if (pointsWon > 0) showRoundPointsAward(awardedTeam, pointsWon);
-  revealRemainingAndNarrate(() => {
-    if (successful) announceRoundWinner(winnerTeam, pointsWon, 'steal');
-    else {
-      const lastRound = roundIndex >= questions.length - 1;
-      const message = isEn()
-        ? `Steal failed. ${teamNames[awardedTeam]} keeps the ${pointsWon}-point bank.`
-        : `Robo fallido. ${teamNames[awardedTeam]} conserva el banco de ${pointsWon} puntos.`;
-      const finish = () => setTimeout(() => lastRound ? finishGame() : nextRound(), 500);
-      const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
-      if (spoken === false) finish();
-    }
-  });
+  revealRemainingAndNarrate(() => announceRoundWinner(awardedTeam, pointsWon, successful ? 'steal' : 'bank'));
 }
-function awardCompletedRound(team, points){
+function awardCompletedRound(team, points) {
   if (phase === 'over' || gamePaused || turnResolving) return;
   team = team === 1 ? 1 : 0;
-  // La fuente de verdad es el banco actual; evita discrepancias por un valor stale.
   const awardedPoints = Math.max(0, Number(bank) || 0);
   bank = 0;
   if (awardedPoints > 0) {
@@ -1238,25 +1257,15 @@ function awardCompletedRound(team, points){
     scores[team] += awardedPoints;
   }
   phase = 'over';
+  stopTimer(); clearCpuTurn(); faceoffActive = false;
   clearActiveGame();
   if (awardedPoints > 0) animateScoreGain(team, awardedPoints);
-  updateScoreUI();
-  updateBankUI();
-  updateTurnUI();
-  if (points > 0) showRoundPointsAward(team, points);
-  const message = isEn()
-    ? `${teamNames[team]} wins the round and receives ${points} points.`
-    : `${teamNames[team]} gana la ronda y recibe ${points} puntos.`;
-  const finish = () => setTimeout(() => {
-    if (roundIndex >= questions.length - 1) finishGame();
-    else nextRound();
-  }, 500);
-  const spoken = narrate(message, {lang:isEn()?'en-US':'es-MX',rate:.9,onend:finish,onerror:finish});
-  if (spoken === false) finish();
+  updateScoreUI(); updateBankUI(); updateTurnUI();
+  if (awardedPoints > 0) showRoundPointsAward(team, awardedPoints);
+  revealRemainingAndNarrate(() => announceRoundWinner(team, awardedPoints, 'bank'));
 }
-
 function revealAnswer(idx, btn) {
-  if (phase === 'over' || gamePaused || turnResolving || revealed[idx]) return;
+  if (phase === 'over' || gamePaused || turnResolving || revealed[idx] || faceoffActive || !faceoffDoneThisRound) return;
   turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
@@ -1272,7 +1281,9 @@ function revealAnswer(idx, btn) {
     const answerAnnouncement = `${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`;
     const finish = () => { turnResolving = false; endRoundAfterSteal(currentTeam, true); };
     showCorrectFeedback(isEn() ? 'STEAL SUCCESSFUL' : '¡ROBO EXITOSO!');
-    const spoken = narrate(answerAnnouncement, {lang:qVoiceLang(q), rate:.93, onend:finish, onerror:finish});
+    const spoken = narrate(answerAnnouncement, {
+      lang:qVoiceLang(q), rate:.93, onend:finish, onerror:finish
+    });
     if (spoken === false) finish();
     return;
   }
@@ -1283,27 +1294,22 @@ function revealAnswer(idx, btn) {
   updateBankUI();
   play(audio.good);
   updateTurnUI();
-  const allRevealed = revealed.every(Boolean);
-  if (allRevealed) {
-    const finishRound = () => { turnResolving = false; awardCompletedRound(currentTeam, bank); };
-    const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:finishRound, onerror:finishRound});
-    if (spoken === false) finishRound();
-    return;
-  }
-  const nextTurn = () => {
-    if (phase === 'over' || !gameVisible()) return;
-    if (gameConfig.mode === 'teams' && Number(gameConfig.teamSize) > 1) {
-      teamMemberIndex[currentTeam] = (teamMemberIndex[currentTeam] + 1) % Number(gameConfig.teamSize);
-    }
-    setTimeout(() => {
-      turnResolving = false;
-      if (!gamePaused && phase !== 'over' && gameVisible()) beginTurnAfterQuestion();
-    }, 500);
-  };
-  const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {lang:qVoiceLang(q), rate:.93, onend:nextTurn, onerror:nextTurn});
-  if (spoken === false) nextTurn();
-}
 
+  const allRevealed = revealed.every(Boolean);
+  const resumeAnswerPhase = () => {
+    if (phase === 'over' || gamePaused) return;
+    turnResolving = false;
+    startTimer(Math.max(1, timerRemaining));
+    if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+  };
+  const finishRound = () => { turnResolving = false; awardCompletedRound(currentTeam, bank); };
+  const spoken = narrate(`${aText(q, idx)}. ${gainedPoints} ${tx('points')}.`, {
+    lang:qVoiceLang(q), rate:.93,
+    onend:allRevealed ? finishRound : resumeAnswerPhase,
+    onerror:allRevealed ? finishRound : resumeAnswerPhase
+  });
+  if (spoken === false) allRevealed ? finishRound() : resumeAnswerPhase();
+}
 function flashThreeStrikes() {
   const flash = $('#strikeFlash');
   flash.classList.remove('hidden');
@@ -1336,7 +1342,6 @@ function showCorrectFeedback(message) {
 function addStrike(reason = 'manual') {
   if (phase === 'over' || gamePaused || turnResolving) return;
   sessionStrikes += 1;
-  if (strikes >= 3 && phase !== 'steal') return;
   turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
@@ -1344,48 +1349,59 @@ function addStrike(reason = 'manual') {
     sessionStealAttempts += 1;
     play(audio.bad);
     showErrorFeedback(isEn() ? 'STEAL FAILED' : 'ROBO FALLIDO', 3);
-    turnResolving = false;
-    endRoundAfterSteal(null, false);
+    setTimeout(() => { turnResolving = false; endRoundAfterSteal(null, false); }, 450);
     return;
   }
 
-  if (strikes >= 3) return;
-  strikes += 1;
+  strikes = Math.min(3, strikes + 1);
   saveActiveGame();
   updateStrikesUI();
   play(audio.bad);
-
   const labels = isEn()
-    ? ['','FIRST MISTAKE','SECOND MISTAKE','THIRD MISTAKE']
-    : ['','PRIMER ERROR','SEGUNDO ERROR','TERCER ERROR'];
+    ? ['', 'FIRST STRIKE', 'SECOND STRIKE', 'THIRD STRIKE']
+    : ['', 'PRIMER STRIKE', 'SEGUNDO STRIKE', 'TERCER STRIKE'];
   showErrorFeedback(labels[strikes], strikes);
 
-  if (strikes >= 3) {
-    strikes = 3;
-    flashThreeStrikes();
-    const previousTeam = currentTeam;
+  if (strikes === 3) {
     currentTeam = 1 - currentTeam;
     phase = 'steal';
     saveActiveGame();
     updateTurnUI();
     const intro = isEn()
-      ? `Third mistake. ${teamNames[previousTeam]} loses control. ${teamNames[currentTeam]} can steal the bank.`
-      : `Tercer error. ${teamNames[previousTeam]} pierde el control. ${teamNames[currentTeam]} puede robar el banco.`;
-    const startSteal = () => { turnResolving = false; beginTurnAfterQuestion(); };
-    const spoken = narrate(intro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:startSteal, onerror:startSteal});
+      ? `Third strike. We go with ${teamNames[currentTeam]} for the steal.`
+      : `Tercer strike. Nos vamos con ${teamNames[currentTeam]} para el robo de puntos.`;
+    const startSteal = () => {
+      if (phase === 'over' || gamePaused) return;
+      turnResolving = false;
+      $('#answerEntry')?.classList.remove('hidden');
+      startTimer(TURN_SECONDS);
+      if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+    };
+    const spoken = narrate(intro, {
+      lang:isEn()?'en-US':'es-MX', rate:.92, onend:startSteal, onerror:startSteal
+    });
     if (spoken === false) startSteal();
     return;
   }
 
   updateTurnUI();
-  const warning = isEn()
-    ? `Second mistake. ${teamNames[1-currentTeam]} may now discuss possible answers as a team.`
-    : `Segundo error. ${teamNames[1-currentTeam]} ya puede reunirse y buscar alternativas.`;
-  const resume = () => { turnResolving = false; beginTurnAfterQuestion(); };
-  const spoken = strikes === 2
-    ? narrate(warning, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:resume, onerror:resume})
-    : false;
-  if (spoken === false) resume();
+  const resume = () => {
+    if (phase === 'over' || gamePaused) return;
+    turnResolving = false;
+    startTimer(Math.max(1, timerRemaining));
+    if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+  };
+  if (strikes === 2) {
+    const warning = isEn()
+      ? 'The other team can discuss and make a team back for the steal.'
+      : 'El otro equipo puede hacer team back para robo de puntos.';
+    const spoken = narrate(warning, {
+      lang:isEn()?'en-US':'es-MX', rate:.92, onend:resume, onerror:resume
+    });
+    if (spoken === false) resume();
+  } else {
+    setTimeout(resume, 450);
+  }
 }
 function awardBank(team) {
   if (bank <= 0 || phase === 'over') return;
@@ -1921,6 +1937,8 @@ ${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1
 
 function nextRound() {
   closeModal(false);
+  if (!roundAdvanceReady) return;
+  setRoundAdvanceReady(false);
   if (roundIndex >= questions.length - 1) {
     finishGame();
     return;
@@ -1929,7 +1947,6 @@ function nextRound() {
   preloadAdjacentRounds(roundIndex);
   showRound(true);
 }
-
 function previousRound() {
   closeModal(false);
   if (roundIndex <= 0) return;
@@ -2205,6 +2222,7 @@ loadState();
 window.DentistasQuestionPool=()=>questionPool;
 loadQuestionPool().then(() => offerResumeGame());
 updateTimerUI();
+setRoundAdvanceReady(false);
 
 window.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') saveActiveGame();
@@ -2218,6 +2236,7 @@ $('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
 $('#help').onclick = showHelp;
 $('#prev').onclick = previousRound;
 $('#next').onclick = nextRound;
+$('#roundContinue')?.addEventListener('click', nextRound);
 $('#buzz').onclick = () => addStrike('manual');
 $('#undo').onclick = undoAward;
 $('#resetRound').onclick = resetRound;

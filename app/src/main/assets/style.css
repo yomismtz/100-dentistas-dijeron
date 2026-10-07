@@ -637,3 +637,7 @@ button{color:var(--text)}
 
 
 /* APK build trigger */
+
+.roundContinue{display:block;width:min(92vw,560px);margin:.45rem auto 0;padding:.8rem 1.1rem;border:2px solid #f6cb69;border-radius:16px;background:linear-gradient(135deg,#6d2396,#0c7589);color:#fff;font-weight:1000;font-size:clamp(17px,2.2vw,28px);letter-spacing:.03em;box-shadow:0 8px 26px #0008,0 0 22px #2dd4bf55;animation:roundContinuePulse 1.35s ease-in-out infinite}
+.roundContinue:disabled{opacity:.45;animation:none}
+@keyframes roundContinuePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
