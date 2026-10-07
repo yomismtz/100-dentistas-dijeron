@@ -399,7 +399,7 @@ function normalizeSavedGame(snapshot) {
 
   snapshot.gamePaused = Boolean(snapshot.gamePaused);
   snapshot.faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
-  faceoffActive = Boolean(snapshot.faceoffActive);
+  snapshot.faceoffActive = Boolean(snapshot.faceoffActive);
   snapshot.savedAt = Number.isFinite(Number(snapshot.savedAt)) ? Number(snapshot.savedAt) : Date.now();
 
   return snapshot;
@@ -874,7 +874,7 @@ function beginTurnAfterQuestion() {
   };
 
   const intro = isEn()
-    ? 'Welcome to Asì los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
+    ? 'Welcome to Así los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
     : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en pantalla, cuatro respuestas correctas. Tienen que mencionar la más popular.';
   const spokenIntro = narrate(intro, {
     lang:isEn()?'en-US':'es-MX', rate:.92,
