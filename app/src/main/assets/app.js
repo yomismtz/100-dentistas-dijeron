@@ -6,6 +6,23 @@ const TURN_SECONDS = 20;
 const I18N = window.DentistasI18n;
 const tx = (key) => I18N ? I18N.t(key) : key;
 const narrate = (text, opts={}) => window.DentistasNarrator?.speak?.(text, opts);
+const narrateWithFallback = (text, opts={}, fallbackDelay=null) => {
+  let finished = false;
+  let fallbackHandle = null;
+  const finish = (ok=true) => {
+    if (finished) return;
+    finished = true;
+    if (fallbackHandle) clearTimeout(fallbackHandle);
+    try { (ok ? opts.onend : opts.onerror)?.(); } catch (_) {}
+  };
+  const clean = String(text || '').replace(/<[^>]*>/g,' ').replace(/s+/g,' ').trim();
+  const estimate = Math.max(2200, Math.min(14000, Math.round((clean.length / 13.5) * 1000 + 1200)));
+  const delay = Number.isFinite(Number(fallbackDelay)) ? Math.max(estimate, Number(fallbackDelay)) : estimate;
+  const spoken = narrate(text, {...opts, onend:() => finish(true), onerror:() => finish(false)});
+  if (spoken === false) finish(false);
+  else fallbackHandle = setTimeout(() => finish(true), delay);
+  return spoken;
+};
 const isEn = () => I18N?.getLang?.() === 'en';
 const englishText = s => window.DentistasEnglishPostprocess?.(s) || s;
 const qText = q => { const ov = isEn() ? window.DentistasEnglishOverrides?.[q?.id] : null; const base = ov?.[0] || (isEn() && q?.q_en ? q.q_en : q?.q || ''); if(!isEn()) return base; if(/^(ORG7|ORG8|ORG9|ORG10|ORG11|ORG12)-/.test(q?.id||'') && window.DentistasEnglishAutoTranslate) return englishText(window.DentistasEnglishAutoTranslate.translate(base)); if(/^(ORG19|ORG20|ORG21|ORG22|ORG23|ORG24)-/.test(q?.id||'') && window.DentistasEnglishAutoTranslate1924) return englishText(window.DentistasEnglishAutoTranslate1924.translate(base)); if(/^(ORG13|ORG14|ORG15|ORG16|ORG17|ORG18)-/.test(q?.id||'') && window.DentistasEnglishAutoTranslate1318) return englishText(window.DentistasEnglishAutoTranslate1318.translate(base)); if(/^(ORG25|ORG26|ORG27|ORG28|ORG29|ORG30)-/.test(q?.id||'') && window.DentistasEnglishAutoTranslate2530) return englishText(window.DentistasEnglishAutoTranslate2530.translate(base)); if(/^ORG31-/.test(q?.id||'') && window.DentistasEnglishAutoTranslate31) return englishText(window.DentistasEnglishAutoTranslate31.translate(base)); if(/^(ORG32|ORG33|ORG34|ORG35|ORG36|ORG37|ORG38|ORG39|ORG40|ORG41|ORG42|ORG43|ORG44|ORG45)-/.test(q?.id||'') && window.DentistasEnglishAutoTranslate3245) return englishText(window.DentistasEnglishAutoTranslate3245.translate(base)); return base; };
@@ -785,7 +802,13 @@ function finishFaceoff(winner) {
   if (!faceoffActive || gamePaused || turnResolving) return;
   faceoffActive = false;
   clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null;
-  $('#faceoff')?.classList.add('hidden');
+
+  const faceoff = $('#faceoff');
+  if (faceoff) {
+    faceoff.classList.add('hidden');
+    faceoff.style.display = '';
+    faceoff.setAttribute('aria-hidden','true');
+  }
   $('#answerEntry')?.classList.remove('hidden');
 
   currentTeam = winner === 'cpu' ? 1 : Number(winner) || 0;
@@ -812,6 +835,7 @@ function finishFaceoff(winner) {
   });
   if (spoken === false) resume();
 }
+
 function startFaceoff() {
   if (gamePaused || turnResolving || phase === 'over') return;
 
@@ -833,7 +857,13 @@ function startFaceoff() {
 
   const fq = $('#faceoffQuestion');
   if (fq) fq.textContent = qText(questions[roundIndex]);
-  $('#faceoff')?.classList.remove('hidden');
+
+  const faceoff = $('#faceoff');
+  if (faceoff) {
+    faceoff.classList.remove('hidden');
+    faceoff.style.display = 'block';
+    faceoff.setAttribute('aria-hidden','false');
+  }
   $('#answerEntry')?.classList.add('hidden');
   document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
 
@@ -849,22 +879,34 @@ function startFaceoff() {
       Math.max(700, Math.min(3000, base + Math.random() * 900)));
   }
 }
+
 function beginTurnAfterQuestion() {
   if (gamePaused || turnResolving || phase === 'over' || phase === 'steal') return;
+
   invalidateTurn();
+  faceoffActive = false;
+  faceoffDoneThisRound = false;
+  $('#faceoff')?.classList.add('hidden');
+  $('#answerEntry')?.classList.add('hidden');
   timerRemaining = TURN_SECONDS;
   updateTimerUI();
+
   const q = questions[roundIndex];
   if (!q || !gameVisible()) return;
 
   const token = ++turnNarrationToken;
+
   const readQuestionThenFaceoff = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-    const spokenQuestion = narrate(qText(q), {
-      lang:qVoiceLang(q), rate:.9,
+    const spokenQuestion = narrateWithFallback(qText(q), {
+      lang:qVoiceLang(q),
+      rate:.9,
       onend:() => {
         if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-        startFaceoff();
+        setTimeout(() => {
+          if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
+          startFaceoff();
+        }, 120);
       },
       onerror:() => {
         if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
@@ -877,12 +919,17 @@ function beginTurnAfterQuestion() {
   const intro = isEn()
     ? 'Welcome to Así los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
     : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en pantalla, cuatro respuestas correctas. Tienen que mencionar la más popular.';
-  const spokenIntro = narrate(intro, {
-    lang:isEn()?'en-US':'es-MX', rate:.92,
-    onend:readQuestionThenFaceoff, onerror:readQuestionThenFaceoff
+
+  const spokenIntro = narrateWithFallback(intro, {
+    lang:isEn()?'en-US':'es-MX',
+    rate:.92,
+    onend:readQuestionThenFaceoff,
+    onerror:readQuestionThenFaceoff
   });
   if (spokenIntro === false) readQuestionThenFaceoff();
 }
+
+
 function startTimer(initialSeconds = TURN_SECONDS) {
   stopTimer();
   if (gamePaused) return;
