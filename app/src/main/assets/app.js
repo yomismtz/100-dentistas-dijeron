@@ -789,6 +789,7 @@ function finishFaceoff(winner) {
   $('#answerEntry')?.classList.remove('hidden');
 
   currentTeam = winner === 'cpu' ? 1 : Number(winner) || 0;
+  faceoffDoneThisRound = true;
   updateTurnUI();
   document.querySelectorAll('#answers button').forEach((btn, idx) => {
     btn.disabled = revealed[idx] || phase === 'over' || gamePaused;
@@ -826,7 +827,7 @@ function startFaceoff() {
   }
 
   if (faceoffActive) return;
-  faceoffDoneThisRound = true;
+  faceoffDoneThisRound = false;
   faceoffActive = true;
   saveActiveGame();
 
@@ -1063,38 +1064,6 @@ function showRoundTransition(onDone) {
     if (typeof onDone === 'function') onDone();
   }, 1450);
 }
-function showRoundTransition() {
-  const old = document.querySelector('#roundTransition');
-  if (old) old.remove();
-
-  const overlay = document.createElement('div');
-  overlay.id = 'roundTransition';
-  overlay.className = 'roundTransition';
-  const mult = roundMultiplier();
-  const lang = I18N?.getLang?.() || 'es';
-  const label = lang === 'en' ? 'ROUND' : 'RONDA';
-
-  overlay.innerHTML = `
-    <div class="roundTransitionCard">
-      <div class="roundTransitionVisual" aria-label="${label} ${roundIndex + 1}">
-        <img src="round_transition.gif" alt="" class="roundTransitionGif">
-        <span class="roundTransitionNumber">${roundIndex + 1}</span>
-      </div>
-      <div class="roundTransitionInfo">
-        <span>${label} ${roundIndex + 1}</span>
-        <strong>×${mult}</strong>
-        <small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small>
-      </div>
-    </div>`;
-  document.body.appendChild(overlay);
-  preloadResource('round_transition.gif');
-  gameSound('transition');
-
-  clearTimeout(roundTransitionHandle);
-  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 1100);
-  setTimeout(() => overlay.remove(), 1450);
-}
-
 function setRoundAdvanceReady(ready) {
   roundAdvanceReady = Boolean(ready);
   const next = $('#next');
