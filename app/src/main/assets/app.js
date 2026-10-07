@@ -1055,19 +1055,33 @@ function showRoundTransition(onDone) {
 function showRoundTransition() {
   const old = document.querySelector('#roundTransition');
   if (old) old.remove();
+
   const overlay = document.createElement('div');
   overlay.id = 'roundTransition';
   overlay.className = 'roundTransition';
   const mult = roundMultiplier();
   const lang = I18N?.getLang?.() || 'es';
-  overlay.innerHTML = `<div class="roundTransitionCard"><span>${lang === 'en' ? 'ROUND' : 'RONDA'} ${roundIndex + 1}</span><strong>×${mult}</strong><small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small></div>`;
+  const label = lang === 'en' ? 'ROUND' : 'RONDA';
+
+  overlay.innerHTML = `
+    <div class="roundTransitionCard">
+      <div class="roundTransitionVisual" aria-label="${label} ${roundIndex + 1}">
+        <img src="round_transition.gif" alt="" class="roundTransitionGif">
+        <span class="roundTransitionNumber">${roundIndex + 1}</span>
+      </div>
+      <div class="roundTransitionInfo">
+        <span>${label} ${roundIndex + 1}</span>
+        <strong>×${mult}</strong>
+        <small>${lang === 'en' ? 'POINTS' : 'PUNTOS'}</small>
+      </div>
+    </div>`;
   document.body.appendChild(overlay);
+  preloadResource('round_transition.gif');
   gameSound('transition');
-  // La pregunta se narra inmediatamente después: no superponer la voz de "Ronda"
-  // con la narración de la pregunta. La transición es solo visual y muy breve.
+
   clearTimeout(roundTransitionHandle);
-  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 220);
-  setTimeout(() => overlay.remove(), 360);
+  roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 1100);
+  setTimeout(() => overlay.remove(), 1450);
 }
 
 function showRound(reset = true) {
