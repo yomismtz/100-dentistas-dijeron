@@ -879,17 +879,11 @@ function beginTurnAfterQuestion() {
   const roundIntro = isEn()
     ? `Welcome to 100 Dentistas Dijeron. Round number ${roundIndex + 1}. ${memberLabel}. We have the following question on screen. Please read it.`
     : `Bienvenidos a 100 Dentistas Dijeron. Ronda número ${roundIndex + 1}. ${memberLabel}. Tenemos la siguiente pregunta en pantalla. Proceda a leerla.`;
-  const spokenIntro = narrate(roundIntro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:()=>{
-    const spokenQuestion = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
-    if (spokenQuestion === false) start();
-  }, onerror:()=>{
-    const spokenQuestion = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
-    if (spokenQuestion === false) start();
-  }});
-  if (spokenIntro === false) {
-    const spokenQuestion = narrate(qText(q), {lang:qVoiceLang(q), rate:.9, onend:start, onerror:start});
-    if (spokenQuestion === false) start();
-  }
+  // En el formato tipo "100 Mexicanos Dijeron", la pregunta queda visible
+  // para que los participantes la lean antes del careo. La narradora NO la
+  // vuelve a leer aquí; la lee después al jugador/equipo que gana el careo.
+  const spokenIntro = narrate(roundIntro, {lang:isEn()?'en-US':'es-MX', rate:.92, onend:start, onerror:start});
+  if (spokenIntro === false) start();
 }
 
 function startTimer(initialSeconds = TURN_SECONDS) {
