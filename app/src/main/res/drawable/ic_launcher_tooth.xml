@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
-  <path android:fillColor="#003E9E" android:pathData="M54,6 A48,48 0,1 1,53.9,6"/>
-  <path android:fillColor="@android:color/transparent" android:strokeColor="#F5B82E" android:strokeWidth="5" android:pathData="M54,7 A47,47 0,1 1,53.9,7"/>
-  <path android:fillColor="#FFFFFF" android:strokeColor="#DCE9FF" android:strokeWidth="1.5" android:pathData="M31,29 C38,20 47,25 54,28 C61,25 70,20 77,29 C84,39 76,51 73,61 C70,71 70,88 63,91 C57,94 59,73 54,73 C49,73 51,94 45,91 C38,88 38,71 35,61 C32,51 24,39 31,29 Z"/>
-  <path android:fillColor="@android:color/transparent" android:strokeColor="#FFC83D" android:strokeWidth="4" android:pathData="M12,64 C28,51 76,47 96,37"/>
-  <path android:fillColor="@android:color/transparent" android:strokeColor="#FFF0A3" android:strokeWidth="1.2" android:pathData="M13,62 C31,50 76,46 95,36"/>
-  <path android:fillColor="#FFD54A" android:pathData="M21,34 L23,40 L29,42 L23,44 L21,50 L19,44 L13,42 L19,40 Z"/>
-  <path android:fillColor="#FFD54A" android:pathData="M84,68 L86,74 L92,76 L86,78 L84,84 L82,78 L76,76 L82,74 Z"/>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <!-- Opción 3: Muela + concurso. Fondo violeta, corona dorada y camino turquesa. -->
+  <path android:fillColor="#7B2CBF" android:pathData="M54,4 A50,50 0,1 1,53.9,4"/>
+  <path android:fillColor="@android:color/transparent" android:strokeColor="#E83E8C" android:strokeWidth="3" android:pathData="M8,54 A46,46 0,1 1,7.9,54"/>
+  <path android:fillColor="#FFFFFF" android:strokeColor="#E8E7FF" android:strokeWidth="1.5"
+        android:pathData="M31,31 C38,22 47,26 54,29 C61,26 70,22 77,31 C84,41 76,52 73,62 C70,72 70,89 63,92 C57,95 59,74 54,74 C49,74 51,95 45,92 C38,89 38,72 35,62 C32,52 24,41 31,31 Z"/>
+  <!-- Corona: identidad de concurso y victoria. -->
+  <path android:fillColor="#FFD54A" android:strokeColor="#F5A623" android:strokeWidth="1.5"
+        android:pathData="M34,27 L39,14 L47,22 L54,10 L61,22 L69,14 L74,27 L70,32 L38,32 Z"/>
+  <path android:fillColor="#FFF3A6" android:pathData="M39,27 L69,27 L67,30 L41,30 Z"/>
+  <!-- Camino hacia la muela. -->
+  <path android:fillColor="@android:color/transparent" android:strokeColor="#2DD4BF" android:strokeWidth="5"
+        android:pathData="M10,80 C28,66 39,65 54,72 C69,79 80,68 98,53"/>
+  <path android:fillColor="@android:color/transparent" android:strokeColor="#A7F3D0" android:strokeWidth="1.5"
+        android:pathData="M11,78 C29,64 40,63 55,70 C70,77 81,66 97,51"/>
+  <!-- Destellos. -->
+  <path android:fillColor="#FFD54A" android:pathData="M18,30 L20,35 L25,37 L20,39 L18,44 L16,39 L11,37 L16,35 Z"/>
+  <path android:fillColor="#2DD4BF" android:pathData="M88,25 L90,30 L95,32 L90,34 L88,39 L86,34 L81,32 L86,30 Z"/>
 </vector>
