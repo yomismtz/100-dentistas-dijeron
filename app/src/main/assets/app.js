@@ -861,7 +861,9 @@ function startFaceoff() {
   const faceoff = $('#faceoff');
   if (faceoff) {
     faceoff.classList.remove('hidden');
-    faceoff.style.display = 'block';
+    faceoff.hidden = false;
+    faceoff.style.removeProperty('display');
+    faceoff.style.display = 'flex';
     faceoff.setAttribute('aria-hidden','false');
   }
   $('#answerEntry')?.classList.add('hidden');
@@ -882,11 +884,17 @@ function startFaceoff() {
 
 function beginTurnAfterQuestion() {
   if (gamePaused || turnResolving || phase === 'over' || phase === 'steal') return;
-
   invalidateTurn();
   faceoffActive = false;
   faceoffDoneThisRound = false;
-  $('#faceoff')?.classList.add('hidden');
+
+  const faceoff = $('#faceoff');
+  if (faceoff) {
+    faceoff.classList.add('hidden');
+    faceoff.hidden = true;
+    faceoff.style.display = 'none';
+    faceoff.setAttribute('aria-hidden','true');
+  }
   $('#answerEntry')?.classList.add('hidden');
   timerRemaining = TURN_SECONDS;
   updateTimerUI();
@@ -895,40 +903,56 @@ function beginTurnAfterQuestion() {
   if (!q || !gameVisible()) return;
 
   const token = ++turnNarrationToken;
+  const speechEstimateMs = (text, rate=.9) => {
+    const clean = String(text || '').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+    const cps = 13.5 * Math.max(.65, Number(rate) || .9);
+    return Math.max(2200, Math.min(12000, Math.round((clean.length / cps) * 1000 + 900)));
+  };
+
+  const showFaceoffOnce = (() => {
+    let opened = false;
+    return () => {
+      if (opened) return;
+      opened = true;
+      if (token !== turnNarrationToken || phase === 'over' || gamePaused || !gameVisible()) return;
+      startFaceoff();
+    };
+  })();
 
   const readQuestionThenFaceoff = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-    const spokenQuestion = narrateWithFallback(qText(q), {
+    const questionText = qText(q);
+    const delay = speechEstimateMs(questionText, .9);
+    setTimeout(showFaceoffOnce, delay);
+    const spoken = narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
       rate:.9,
-      onend:() => {
-        if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-        setTimeout(() => {
-          if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-          startFaceoff();
-        }, 120);
-      },
-      onerror:() => {
-        if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
-        startFaceoff();
-      }
-    });
-    if (spokenQuestion === false) startFaceoff();
+      onend:showFaceoffOnce,
+      onerror:showFaceoffOnce
+    }, delay);
+    if (spoken === false) showFaceoffOnce();
   };
 
   const intro = isEn()
     ? 'Welcome to Así los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
     : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en pantalla, cuatro respuestas correctas. Tienen que mencionar la más popular.';
-
+  let introDone = false;
+  const continueToQuestion = () => {
+    if (introDone) return;
+    introDone = true;
+    if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
+    readQuestionThenFaceoff();
+  };
+  const introDelay = speechEstimateMs(intro, .92);
+  setTimeout(continueToQuestion, introDelay);
   const spokenIntro = narrateWithFallback(intro, {
     lang:isEn()?'en-US':'es-MX',
     rate:.92,
-    onend:readQuestionThenFaceoff,
-    onerror:readQuestionThenFaceoff
-  });
-  if (spokenIntro === false) readQuestionThenFaceoff();
+    onend:continueToQuestion,
+    onerror:continueToQuestion
+  }, introDelay);
+  if (spokenIntro === false) continueToQuestion();
 }
-
 
 function startTimer(initialSeconds = TURN_SECONDS) {
   stopTimer();
