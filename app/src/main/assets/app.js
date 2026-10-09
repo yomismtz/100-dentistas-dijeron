@@ -805,6 +805,9 @@ function finishFaceoff(winner) {
   }
   console.info('[FACE OFF TRACE]', 'FACEOFF_WINNER', {winner, mode:gameConfig.mode, round:roundIndex + 1});
   faceoffActive = false;
+  // Lock answer input until the winner announcement finishes. Without this lock,
+  // a fast click can start the answer narration and interrupt the faceoff result.
+  turnResolving = true;
   clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null;
 
   const faceoff = $('#faceoff');
@@ -813,7 +816,7 @@ function finishFaceoff(winner) {
     faceoff.style.display = '';
     faceoff.setAttribute('aria-hidden','true');
   }
-  $('#answerEntry')?.classList.remove('hidden');
+  $('#answerEntry')?.classList.add('hidden');
 
   currentTeam = winner === 'cpu' ? 1 : Number(winner) || 0;
   faceoffDoneThisRound = true;
@@ -831,6 +834,7 @@ function finishFaceoff(winner) {
   const resume = () => {
     if (phase === 'over' || gamePaused) return;
     turnResolving = false;
+    $('#answerEntry')?.classList.remove('hidden');
     startTimer(TURN_SECONDS);
     if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
   };
