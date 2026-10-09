@@ -1058,8 +1058,8 @@ function beginTurnAfterQuestion() {
   };
 
   const intro = isEn()
-    ? 'Welcome to Así los dentistas lo dijeron. We have a question on the board and four possible answers. Name the most popular one.'
-    : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en el tablero y cuatro respuestas posibles. Mencionen la más popular.';
+    ? 'Welcome to Así los dentistas lo dijeron. We have a question on the board and four to seven valid answers. One is ranked as the most popular for this game. The points are game weights, not survey results.'
+    : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en el tablero y de cuatro a siete respuestas válidas. Una está marcada como la más popular para esta partida. Los puntos son ponderaciones del juego, no resultados de una encuesta.';
   console.info('[FACE OFF TRACE]', 'INTRO_START', {round:roundIndex + 1, mode:gameConfig.mode});
   let introDone = false;
   const continueToQuestion = () => {
