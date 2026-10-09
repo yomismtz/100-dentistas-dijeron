@@ -863,28 +863,37 @@ function startFaceoff() {
   }
 
   if (faceoffActive) return;
+
+  // Validate the required controls before changing game state. If a stale or
+  // mismatched HTML asset omits the faceoff panel/buttons, don't freeze the
+  // answers behind faceoffActive=true.
+  const faceoff = $('#faceoff');
+  const b1 = $('#faceoffTeam1'), b2 = $('#faceoffTeam2');
+  if (!faceoff || !b1 || !b2) {
+    console.error('[FACE OFF TRACE]', 'FACEOFF_DOM_MISSING', {
+      panel:!!faceoff, team1Button:!!b1, team2Button:!!b2, round:roundIndex + 1
+    });
+    return;
+  }
+
   faceoffDoneThisRound = false;
   faceoffActive = true;
-  console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN', {round:roundIndex + 1, mode:gameConfig.mode, elementFound:!!$('#faceoff'), team1ButtonFound:!!$('#faceoffTeam1'), team2ButtonFound:!!$('#faceoffTeam2')});
+  console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN', {round:roundIndex + 1, mode:gameConfig.mode, elementFound:true, team1ButtonFound:true, team2ButtonFound:true});
   saveActiveGame();
 
   const fq = $('#faceoffQuestion');
   if (fq) fq.textContent = qText(questions[roundIndex]);
 
-  const faceoff = $('#faceoff');
-  if (faceoff) {
-    faceoff.classList.remove('hidden');
-    faceoff.hidden = false;
-    faceoff.style.removeProperty('display');
-    faceoff.style.display = 'flex';
-    faceoff.setAttribute('aria-hidden','false');
-  }
+  faceoff.classList.remove('hidden');
+  faceoff.hidden = false;
+  faceoff.style.removeProperty('display');
+  faceoff.style.display = 'flex';
+  faceoff.setAttribute('aria-hidden','false');
   $('#answerEntry')?.classList.add('hidden');
   document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
 
-  const b1 = $('#faceoffTeam1'), b2 = $('#faceoffTeam2');
-  if (b1) b1.textContent = '🦷 ' + (teamNames[0] || 'EQUIPO 1');
-  if (b2) b2.textContent = '🦷 ' + (teamNames[1] || 'EQUIPO 2');
+  b1.textContent = '🦷 ' + (teamNames[0] || 'EQUIPO 1');
+  b2.textContent = '🦷 ' + (teamNames[1] || 'EQUIPO 2');
 
   if (gameConfig.mode === 'cpu') {
     if (b2) b2.textContent = '🤖 ' + (teamNames[1] || 'COMPUTADORA');
