@@ -2228,14 +2228,15 @@ function showHelp() {
         <li>The game is for <b>2 teams</b>.</li>
         <li>Each game uses <b>8 random questions</b> from the full bank.</li>
         <li>Questions do not repeat within the same game.</li>
-        <li>Each answer must be given before the <b>30-second timer</b> ends.</li>
+        <li>Each question has <b>4 to 7 valid answers</b>. The highest-scoring answer is the game's leader, not a result from a real survey.</li>
+        <li>Each answer must be given before the <b>20-second timer</b> ends. During the final 10 seconds, electronic bit-like countdown tones play.</li>
         <li>If time reaches zero without a correct answer, <b>1 strike</b> is added automatically.</li>
-        <li>After a correct answer or a strike, the timer restarts after the question is narrated, with 30 seconds.</li>
+        <li>After a correct answer or a strike, the timer restarts after the question is narrated, with 20 seconds.</li>
         <li>Rounds <b>1–8 increase from ×1 to ×8</b>.</li>
         <li>A correct answer reveals the board item and adds its multiplied value to the <b>Bank</b>.</li>
         <li>Each team can make up to <b>3 mistakes</b> during its turn.</li>
         <li>On the third mistake, control passes to the opposing team.</li>
-        <li>If the bank has points, the opponent gets <b>30 seconds and one answer</b> to steal it.</li>
+        <li>If the bank has points, the opponent gets <b>20 seconds and one answer</b> to steal it.</li>
         <li>If the steal succeeds, the opponent wins the whole bank. If it fails, the points remain with the original team.</li>
         <li>Round points are assigned <b>automatically</b> to the team that wins the round.</li>
         <li>After round 8, the final score and winner are shown.</li>
@@ -2249,14 +2250,15 @@ function showHelp() {
         <li>La partida es para <b>2 equipos</b>.</li>
         <li>Cada partida usa <b>8 preguntas aleatorias</b> elegidas de toda la base.</li>
         <li>Las preguntas no se repiten dentro de la misma partida.</li>
-        <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 30 segundos</b>.</li>
+        <li>Cada pregunta tiene <b>de 4 a 7 respuestas válidas</b>. La de mayor puntuación es la líder del juego, no el resultado de una encuesta real.</li>
+        <li>Cada respuesta debe darse antes de que termine el <b>cronómetro de 20 segundos</b>. Durante los últimos 10 segundos suena una cuenta regresiva de tonos electrónicos tipo bits.</li>
         <li>Si el cronómetro llega a cero sin respuesta correcta, se registra automáticamente <b>1 strike</b>.</li>
-        <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 30 segundos después de narrar la pregunta.</li>
+        <li>Después de una respuesta correcta o de un strike, el cronómetro vuelve a empezar en 20 segundos después de narrar la pregunta.</li>
         <li>Cada ronda aumenta el multiplicador: <b>Ronda 1 ×1</b>, <b>Ronda 2 ×2</b>, hasta <b>Ronda 8 ×8</b>.</li>
         <li>Una respuesta correcta revela la casilla y suma al <b>Banco</b> sus puntos multiplicados por el valor de la ronda.</li>
         <li>Cada equipo puede cometer como máximo <b>3 errores</b> durante su turno.</li>
         <li>Al tercer error pierde el control y el turno pasa al rival.</li>
-        <li>Si había puntos en el banco, el rival dispone de <b>30 segundos y una sola respuesta</b> para robarlo.</li>
+        <li>Si había puntos en el banco, el rival dispone de <b>20 segundos y una sola respuesta</b> para robarlo.</li>
         <li>Si el rival acierta, gana todo el banco. Si falla, los puntos permanecen con el equipo original.</li>
         <li>Los puntos de la ronda se asignan <b>automáticamente</b> al equipo que gana la ronda.</li>
         <li>Después de la ronda 8 se muestra el marcador final y el ganador.</li>
