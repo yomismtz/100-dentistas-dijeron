@@ -799,7 +799,11 @@ function startVoiceAnswer(){
   try{rec.start();}catch(_){if(b)b.textContent='🎤 RESPONDER';}
 }
 function finishFaceoff(winner) {
-  if (!faceoffActive || gamePaused || turnResolving) return;
+  if (!faceoffActive || gamePaused || turnResolving) {
+    console.info('[FACE OFF TRACE]', 'FACEOFF_WINNER_IGNORED', {winner, faceoffActive, gamePaused, turnResolving, phase});
+    return;
+  }
+  console.info('[FACE OFF TRACE]', 'FACEOFF_WINNER', {winner, mode:gameConfig.mode, round:roundIndex + 1});
   faceoffActive = false;
   clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null;
 
@@ -837,7 +841,11 @@ function finishFaceoff(winner) {
 }
 
 function startFaceoff() {
-  if (gamePaused || turnResolving || phase === 'over') return;
+  console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN_REQUEST', {gamePaused, turnResolving, phase, faceoffActive, faceoffDoneThisRound, round:roundIndex + 1});
+  if (gamePaused || turnResolving || phase === 'over') {
+    console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN_BLOCKED', {gamePaused, turnResolving, phase});
+    return;
+  }
 
   if (phase === 'steal') {
     faceoffActive = false;
@@ -853,6 +861,7 @@ function startFaceoff() {
   if (faceoffActive) return;
   faceoffDoneThisRound = false;
   faceoffActive = true;
+  console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN', {round:roundIndex + 1, mode:gameConfig.mode, elementFound:!!$('#faceoff'), team1ButtonFound:!!$('#faceoffTeam1'), team2ButtonFound:!!$('#faceoffTeam2')});
   saveActiveGame();
 
   const fq = $('#faceoffQuestion');
@@ -911,10 +920,13 @@ function beginTurnAfterQuestion() {
 
   const showFaceoffOnce = (() => {
     let opened = false;
-    return () => {
+    return (source='callback') => {
       if (opened) return;
+      const valid = token === turnNarrationToken && phase !== 'over' && !gamePaused && gameVisible();
+      console.info('[FACE OFF TRACE]', 'FACEOFF_GATE', {source, valid, token, currentToken:turnNarrationToken, phase, gamePaused, gameVisible:gameVisible(), round:roundIndex + 1});
+      // Do not consume the one-shot gate while the callback is stale or the game is paused.
+      if (!valid) return;
       opened = true;
-      if (token !== turnNarrationToken || phase === 'over' || gamePaused || !gameVisible()) return;
       startFaceoff();
     };
   })();
@@ -923,24 +935,35 @@ function beginTurnAfterQuestion() {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
     const questionText = qText(q);
     const delay = speechEstimateMs(questionText, .9);
-    setTimeout(showFaceoffOnce, delay);
+    console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_START', {round:roundIndex + 1, textLength:questionText.length, delayMs:delay, voiceAvailable:!!window.DentistasNarrator?.speak});
+    let questionSpeechFinished = false;
+    const finishQuestionSpeech = (source='callback') => {
+      if (questionSpeechFinished) return;
+      questionSpeechFinished = true;
+      console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_END', {source, round:roundIndex + 1});
+      showFaceoffOnce(source);
+    };
+    setTimeout(() => finishQuestionSpeech('duration-fallback'), delay);
     const spoken = narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
       rate:.9,
-      onend:showFaceoffOnce,
-      onerror:showFaceoffOnce
+      onend:() => finishQuestionSpeech('voice-onend'),
+      onerror:() => finishQuestionSpeech('voice-onerror')
     }, delay);
-    if (spoken === false) showFaceoffOnce();
+    if (spoken === false) finishQuestionSpeech('voice-unavailable');
   };
 
   const intro = isEn()
     ? 'Welcome to Así los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
     : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en pantalla, cuatro respuestas correctas. Tienen que mencionar la más popular.';
+  console.info('[FACE OFF TRACE]', 'INTRO_START', {round:roundIndex + 1, mode:gameConfig.mode});
   let introDone = false;
   const continueToQuestion = () => {
     if (introDone) return;
+    const valid = token === turnNarrationToken && phase !== 'over' && !gamePaused && gameVisible();
+    console.info('[FACE OFF TRACE]', 'INTRO_END', {source:'callback-or-fallback', valid, token, currentToken:turnNarrationToken, gamePaused});
+    if (!valid) return;
     introDone = true;
-    if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
     readQuestionThenFaceoff();
   };
   const introDelay = speechEstimateMs(intro, .92);
@@ -1105,6 +1128,7 @@ function updateTurnUI() {
 }
 
 function showRoundTransition(onDone) {
+  console.info('[FACE OFF TRACE]', 'ROUND_TRANSITION_START', {round:roundIndex + 1, hasCallback:typeof onDone === 'function'});
   const old = document.querySelector('#roundTransition');
   if (old) old.remove();
   const overlay = document.createElement('div');
@@ -1132,6 +1156,7 @@ function showRoundTransition(onDone) {
   roundTransitionHandle = setTimeout(() => overlay.classList.add('hide'), 1100);
   setTimeout(() => {
     overlay.remove();
+    console.info('[FACE OFF TRACE]', 'ROUND_TRANSITION_END', {round:roundIndex + 1, callbackType:typeof onDone});
     if (typeof onDone === 'function') onDone();
   }, 1450);
 }
@@ -2348,6 +2373,6 @@ window.DentistasAppBack = function () {
   `;
   document.head.appendChild(st);
 })();
-$('#faceoffTeam1')?.addEventListener('click',()=>finishFaceoff(0));
-$('#faceoffTeam2')?.addEventListener('click',()=>finishFaceoff(1));
+$('#faceoffTeam1')?.addEventListener('click',()=>{ console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:0, round:roundIndex + 1}); finishFaceoff(0); });
+$('#faceoffTeam2')?.addEventListener('click',()=>{ console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:1, round:roundIndex + 1}); finishFaceoff(1); });
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
