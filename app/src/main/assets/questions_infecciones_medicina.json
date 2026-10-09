@@ -1,1 +1,302 @@
-[{"cat":"Control de infecciones y medicina","q":"Equipo de protección personal usado en clínica dental:","a":[["Guantes",35],["Mascarilla",30],["Protección ocular o facial",20],["Bata o ropa de protección",15]],"q_en":"Personal protective equipment used in dental practice:","a_en":["Gloves","Mask","Eye or face protection","Protective gown or clothing"]},{"cat":"Control de infecciones y medicina","q":"Etapas del procesamiento de instrumental reutilizable:","a":[["Esterilización",35],["Limpieza",30],["Inspección y empaquetado",20],["Almacenamiento",15]],"q_en":"Stages in processing reusable instruments:","a_en":["Cleaning","Inspection and packaging","Sterilization","Storage"]},{"cat":"Control de infecciones y medicina","q":"Métodos de esterilización que pueden emplearse para instrumental compatible:","a":[["Vapor a presión",45],["Calor seco",35],["Vapor químico insaturado",20]],"q_en":"Sterilization methods that can be used for compatible instruments:","a_en":["Steam under pressure","Dry heat","Unsaturated chemical vapor"]},{"cat":"Control de infecciones y medicina","q":"Acciones para controlar contaminación de superficies clínicas:","a":[["Limpieza",35],["Desinfección",30],["Barreras de superficie",20],["Cambio o reprocesamiento entre pacientes",15]],"q_en":"Actions to control contamination of clinical surfaces:","a_en":["Cleaning","Disinfection","Surface barriers","Changing or reprocessing between patients"]},{"cat":"Control de infecciones y medicina","q":"Momentos importantes para higiene de manos en odontología:","a":[["Antes de atender al paciente",35],["Después de atender al paciente",30],["Después de retirar guantes",20],["Antes de procedimientos limpios",15]],"q_en":"Important moments for hand hygiene in dentistry:","a_en":["Before treating the patient","After treating the patient","After removing gloves","Before clean procedures"]},{"cat":"Control de infecciones y medicina","q":"Datos clave que deben revisarse en la historia médica:","a":[["Medicamentos",30],["Alergias",25],["Enfermedades sistémicas",20],["Cirugías u hospitalizaciones relevantes",15],["Embarazo cuando aplique",10]],"q_en":"Key information that should be reviewed in the medical history:","a_en":["Medications","Allergies","Systemic diseases","Relevant surgeries or hospitalizations","Pregnancy when applicable"]},{"cat":"Control de infecciones y medicina","q":"Signos vitales que pueden registrarse en consulta dental:","a":[["Presión arterial",30],["Frecuencia cardiaca",25],["Frecuencia respiratoria",20],["Temperatura",15],["Saturación de oxígeno",10]],"q_en":"Vital signs that may be recorded in dental practice:","a_en":["Blood pressure","Heart rate","Respiratory rate","Temperature","Oxygen saturation"]},{"cat":"Control de infecciones y medicina","q":"Emergencias médicas que pueden ocurrir en el consultorio dental:","a":[["Síncope",35],["Hipoglucemia",30],["Crisis asmática",20],["Anafilaxia",15]],"q_en":"Medical emergencies that may occur in the dental office:","a_en":["Syncope","Hypoglycemia","Asthma attack","Anaphylaxis"]},{"cat":"Control de infecciones y medicina","q":"Manifestaciones o complicaciones relevantes para la atención oral en diabetes mal controlada:","a":[["Mayor afectación periodontal",35],["Xerostomía",30],["Candidiasis",20],["Cicatrización alterada",15]],"q_en":"Manifestations or complications relevant to oral care in poorly controlled diabetes:","a_en":["Greater periodontal involvement","Xerostomia","Candidiasis","Impaired healing"]},{"cat":"Control de infecciones y medicina","q":"Causas frecuentes de xerostomía:","a":[["Medicamentos",35],["Síndrome de Sjögren",30],["Radioterapia de cabeza y cuello",20],["Deshidratación",15]],"q_en":"Common causes of xerostomia:","a_en":["Medications","Sjögren syndrome","Head and neck radiotherapy","Dehydration"]}]
+[
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Equipo de protección personal usado en clínica dental:",
+    "a": [
+      [
+        "Guantes",
+        35
+      ],
+      [
+        "Mascarilla",
+        30
+      ],
+      [
+        "Protección ocular o facial",
+        20
+      ],
+      [
+        "Bata o ropa de protección",
+        15
+      ]
+    ],
+    "q_en": "Personal protective equipment used in dental practice:",
+    "a_en": [
+      "Gloves",
+      "Mask",
+      "Eye or face protection",
+      "Protective gown or clothing"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Etapas del procesamiento de instrumental reutilizable:",
+    "a": [
+      [
+        "Esterilización",
+        35
+      ],
+      [
+        "Limpieza",
+        30
+      ],
+      [
+        "Inspección y empaquetado",
+        20
+      ],
+      [
+        "Almacenamiento",
+        15
+      ]
+    ],
+    "q_en": "Stages in processing reusable instruments:",
+    "a_en": [
+      "Cleaning",
+      "Inspection and packaging",
+      "Sterilization",
+      "Storage"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "¿Qué métodos de esterilización pueden utilizarse para instrumental compatible con cada proceso?",
+    "a": [
+      [
+        "Vapor a presión",
+        40
+      ],
+      [
+        "Calor seco",
+        25
+      ],
+      [
+        "Vapor químico insaturado",
+        20
+      ],
+      [
+        "Peróxido de hidrógeno vaporizado/plasma a baja temperatura",
+        15
+      ]
+    ],
+    "q_en": "Which sterilization methods can be used for instruments compatible with each process?",
+    "a_en": [
+      "Steam under pressure",
+      "Dry heat",
+      "Unsaturated chemical vapor",
+      "Low-temperature vaporized hydrogen peroxide/plasma"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Acciones para controlar contaminación de superficies clínicas:",
+    "a": [
+      [
+        "Limpieza",
+        35
+      ],
+      [
+        "Desinfección",
+        30
+      ],
+      [
+        "Barreras de superficie",
+        20
+      ],
+      [
+        "Cambio o reprocesamiento entre pacientes",
+        15
+      ]
+    ],
+    "q_en": "Actions to control contamination of clinical surfaces:",
+    "a_en": [
+      "Cleaning",
+      "Disinfection",
+      "Surface barriers",
+      "Changing or reprocessing between patients"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Momentos importantes para higiene de manos en odontología:",
+    "a": [
+      [
+        "Antes de atender al paciente",
+        35
+      ],
+      [
+        "Después de atender al paciente",
+        30
+      ],
+      [
+        "Después de retirar guantes",
+        20
+      ],
+      [
+        "Antes de procedimientos limpios",
+        15
+      ]
+    ],
+    "q_en": "Important moments for hand hygiene in dentistry:",
+    "a_en": [
+      "Before treating the patient",
+      "After treating the patient",
+      "After removing gloves",
+      "Before clean procedures"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Datos clave que deben revisarse en la historia médica:",
+    "a": [
+      [
+        "Medicamentos",
+        30
+      ],
+      [
+        "Alergias",
+        25
+      ],
+      [
+        "Enfermedades sistémicas",
+        20
+      ],
+      [
+        "Cirugías u hospitalizaciones relevantes",
+        15
+      ],
+      [
+        "Embarazo cuando aplique",
+        10
+      ]
+    ],
+    "q_en": "Key information that should be reviewed in the medical history:",
+    "a_en": [
+      "Medications",
+      "Allergies",
+      "Systemic diseases",
+      "Relevant surgeries or hospitalizations",
+      "Pregnancy when applicable"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Signos vitales que pueden registrarse en consulta dental:",
+    "a": [
+      [
+        "Presión arterial",
+        30
+      ],
+      [
+        "Frecuencia cardiaca",
+        25
+      ],
+      [
+        "Frecuencia respiratoria",
+        20
+      ],
+      [
+        "Temperatura",
+        15
+      ],
+      [
+        "Saturación de oxígeno",
+        10
+      ]
+    ],
+    "q_en": "Vital signs that may be recorded in dental practice:",
+    "a_en": [
+      "Blood pressure",
+      "Heart rate",
+      "Respiratory rate",
+      "Temperature",
+      "Oxygen saturation"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Emergencias médicas que pueden ocurrir en el consultorio dental:",
+    "a": [
+      [
+        "Síncope",
+        35
+      ],
+      [
+        "Hipoglucemia",
+        30
+      ],
+      [
+        "Crisis asmática",
+        20
+      ],
+      [
+        "Anafilaxia",
+        15
+      ]
+    ],
+    "q_en": "Medical emergencies that may occur in the dental office:",
+    "a_en": [
+      "Syncope",
+      "Hypoglycemia",
+      "Asthma attack",
+      "Anaphylaxis"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Manifestaciones o complicaciones relevantes para la atención oral en diabetes mal controlada:",
+    "a": [
+      [
+        "Mayor afectación periodontal",
+        35
+      ],
+      [
+        "Xerostomía",
+        30
+      ],
+      [
+        "Candidiasis",
+        20
+      ],
+      [
+        "Cicatrización alterada",
+        15
+      ]
+    ],
+    "q_en": "Manifestations or complications relevant to oral care in poorly controlled diabetes:",
+    "a_en": [
+      "Greater periodontal involvement",
+      "Xerostomia",
+      "Candidiasis",
+      "Impaired healing"
+    ]
+  },
+  {
+    "cat": "Control de infecciones y medicina",
+    "q": "Causas frecuentes de xerostomía:",
+    "a": [
+      [
+        "Medicamentos",
+        35
+      ],
+      [
+        "Síndrome de Sjögren",
+        30
+      ],
+      [
+        "Radioterapia de cabeza y cuello",
+        20
+      ],
+      [
+        "Deshidratación",
+        15
+      ]
+    ],
+    "q_en": "Common causes of xerostomia:",
+    "a_en": [
+      "Medications",
+      "Sjögren syndrome",
+      "Head and neck radiotherapy",
+      "Dehydration"
+    ]
+  }
+]
