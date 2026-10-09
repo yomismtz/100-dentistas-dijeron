@@ -264,6 +264,7 @@ let soundGeneration = 0;
 let gamePaused = false;
 let turnResolving = false;
 let roundAdvanceReady = false;
+let teamBackActive = false;
 
 const audio = {
   start: $('#sndStart'),
@@ -633,6 +634,11 @@ function resumeGame() {
   turnResolving = false;
   gamePaused = false;
   if (faceoffActive) { startFaceoff(); return; }
+  if (teamBackActive) {
+    const button = $('#teamBack');
+    if (button) { button.classList.remove('hidden'); button.disabled = false; }
+    return;
+  }
   if (faceoffDoneThisRound || phase === 'steal') {
     $('#answerEntry')?.classList.remove('hidden');
     const resume = () => {
@@ -735,7 +741,7 @@ function setAnswerFeedback(message,state=''){
   el.className='answerFeedback'+(state?' '+state:'');
 }
 function submitTypedAnswer(){
-  if(phase==='over'||!gameVisible())return;
+  if(phase==='over'||!gameVisible()||gamePaused||turnResolving||teamBackActive||faceoffActive||!faceoffDoneThisRound)return;
   const input=$('#answerText');
   const raw=String(input?.value||'').trim();
   const result=matchTypedAnswerDetailed(raw);
@@ -771,7 +777,7 @@ window.DentistasVoice=window.DentistasVoice||{
   }
 };
 function submitVoiceAnswer(text){
-  if (phase === 'over' || gamePaused || turnResolving) return;
+  if (phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound) return;
   const result=matchTypedAnswerDetailed(String(text||'').trim());
   if(result.status==='empty'){
     setAnswerFeedback('No se detectó una respuesta. Pulsa el micrófono y repite.','hint');return;
@@ -834,12 +840,23 @@ function finishFaceoff(winner) {
     : (teamNames[currentTeam] || (isEn() ? `team ${currentTeam + 1}` : `equipo ${currentTeam + 1}`));
   const announcement = isEn() ? `We go with ${winnerName}.` : `Nos vamos con ${winnerName}.`;
 
+  let resumed = false;
   const resume = () => {
-    if (phase === 'over' || gamePaused) return;
-    turnResolving = false;
-    $('#answerEntry')?.classList.remove('hidden');
-    startTimer(TURN_SECONDS);
-    if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+    if (resumed || phase === 'over' || gamePaused) return;
+    resumed = true;
+    const questionText = qText(questions[roundIndex]);
+    const questionDelay = Math.max(2200, Math.min(12000, Math.round((questionText.length / 12) * 1000 + 1000)));
+    const beginAnswering = () => {
+      turnResolving = false;
+      $('#answerEntry')?.classList.remove('hidden');
+      startTimer(TURN_SECONDS);
+      if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+    };
+    const spokenQuestion = narrateWithFallback(questionText, {
+      lang:qVoiceLang(questions[roundIndex]), rate:.9,
+      onend:beginAnswering, onerror:beginAnswering
+    }, questionDelay);
+    if (spokenQuestion === false) beginAnswering();
   };
   const spoken = narrate(announcement, {
     lang:isEn()?'en-US':'es-MX', rate:.94, onend:resume, onerror:resume
@@ -1040,8 +1057,8 @@ function beginTurnAfterQuestion() {
   };
 
   const intro = isEn()
-    ? 'Welcome to Así los dentistas lo dijeron. We have a question on screen, four correct answers. You have to name the most popular one.'
-    : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en pantalla, cuatro respuestas correctas. Tienen que mencionar la más popular.';
+    ? 'Welcome to Así los dentistas lo dijeron. We have a question on the board and four possible answers. Name the most popular one.'
+    : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en el tablero y cuatro respuestas posibles. Mencionen la más popular.';
   console.info('[FACE OFF TRACE]', 'INTRO_START', {round:roundIndex + 1, mode:gameConfig.mode});
   let introDone = false;
   const continueToQuestion = () => {
@@ -1205,7 +1222,11 @@ function updateTurnUI() {
 
   $('#buzz').disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound;
   const mic = $('#answerMic');
-  if (mic) mic.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound;
+  if (mic) mic.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
+  const answerText = $('#answerText');
+  if (answerText) answerText.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
+  const answerSubmit = $('#answerSubmit');
+  if (answerSubmit) answerSubmit.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
   document.querySelectorAll('#answers button').forEach((btn, idx) => {
     btn.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound || revealed[idx];
   });
@@ -1285,6 +1306,9 @@ function showRound(reset = true) {
   roundIndex = Math.max(0, Math.min(roundIndex, questions.length - 1));
 
   if (reset) {
+    teamBackActive = false;
+    $('#teamBack')?.classList.add('hidden');
+    $('#revealRemaining')?.classList.add('hidden');
     setAnswerFeedback('');
     revealed = Array(questions[roundIndex].a.length).fill(false);
     strikes = 0;
@@ -1373,6 +1397,13 @@ function showRoundPointsAward(team, points){
   setTimeout(() => el.remove(), 1200);
 }
 function announceRoundWinner(team, points, reason='bank') {
+  const revealButton = $('#revealRemaining');
+  const hasRemaining = revealed.some(value => !value);
+  if (revealButton) {
+    revealButton.classList.toggle('hidden', !hasRemaining);
+    revealButton.disabled = !hasRemaining;
+    revealButton.textContent = isEn() ? '👁 REVEAL REMAINING ANSWERS' : '👁 REVELAR RESPUESTAS RESTANTES';
+  }
   const name = team !== null && team !== undefined ? teamNames[team] : '';
   const message = reason === 'steal'
     ? (isEn() ? `Steal successful. ${name} wins the bank: ${points} points.` : `¡Robo exitoso! ${name} gana el banco: ${points} puntos.`)
@@ -1396,7 +1427,7 @@ function endRoundAfterSteal(winnerTeam, successful) {
   clearActiveGame();
   updateScoreUI(); updateBankUI(); updateTurnUI();
   if (pointsWon > 0) showRoundPointsAward(awardedTeam, pointsWon);
-  revealRemainingAndNarrate(() => announceRoundWinner(awardedTeam, pointsWon, successful ? 'steal' : 'bank'));
+  announceRoundWinner(awardedTeam, pointsWon, successful ? 'steal' : 'bank');
 }
 function awardCompletedRound(team, points) {
   if (phase === 'over' || gamePaused || turnResolving) return;
@@ -1413,10 +1444,10 @@ function awardCompletedRound(team, points) {
   if (awardedPoints > 0) animateScoreGain(team, awardedPoints);
   updateScoreUI(); updateBankUI(); updateTurnUI();
   if (awardedPoints > 0) showRoundPointsAward(team, awardedPoints);
-  revealRemainingAndNarrate(() => announceRoundWinner(team, awardedPoints, 'bank'));
+  announceRoundWinner(team, awardedPoints, 'bank');
 }
 function revealAnswer(idx, btn) {
-  if (phase === 'over' || gamePaused || turnResolving || revealed[idx] || faceoffActive || !faceoffDoneThisRound) return;
+  if (phase === 'over' || gamePaused || turnResolving || teamBackActive || revealed[idx] || faceoffActive || !faceoffDoneThisRound) return;
   turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
@@ -1514,6 +1545,8 @@ function addStrike(reason = 'manual') {
   showErrorFeedback(labels[strikes], strikes);
 
   if (strikes === 3) {
+    teamBackActive = false;
+    $('#teamBack')?.classList.add('hidden');
     currentTeam = 1 - currentTeam;
     phase = 'steal';
     saveActiveGame();
@@ -1543,9 +1576,15 @@ function addStrike(reason = 'manual') {
     if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
   };
   if (strikes === 2) {
+    const teamBack = $('#teamBack');
+    if (teamBack) {
+      teamBack.textContent = isEn() ? '🤝 TEAM BACK · DISCUSS' : '🤝 TEAM BACK · PONERSE DE ACUERDO';
+      teamBack.classList.remove('hidden');
+      teamBack.disabled = false;
+    }
     const warning = isEn()
-      ? 'The other team can discuss and make a team back for the steal.'
-      : 'El otro equipo puede hacer team back para robo de puntos.';
+      ? 'Second strike. The other team may call a team back to discuss and prepare for a possible steal.'
+      : 'Segundo strike. El otro equipo puede pedir team back para ponerse de acuerdo y preparar un posible robo.';
     const spoken = narrate(warning, {
       lang:isEn()?'en-US':'es-MX', rate:.92, onend:resume, onerror:resume
     });
@@ -1554,6 +1593,30 @@ function addStrike(reason = 'manual') {
     setTimeout(resume, 450);
   }
 }
+function toggleTeamBack() {
+  if (phase !== 'play' || strikes !== 2 || gamePaused || turnResolving) return;
+  const button = $('#teamBack');
+  if (!button) return;
+  if (!teamBackActive) {
+    teamBackActive = true;
+    stopTimer();
+    clearCpuTurn();
+    button.textContent = isEn() ? '▶ END TEAM BACK' : '▶ TERMINAR TEAM BACK';
+    setAnswerFeedback(isEn() ? 'TEAM BACK: discuss the possible answer. Press the button again when ready.' : 'TEAM BACK: pónganse de acuerdo. Pulsa de nuevo cuando estén listos.', 'hint');
+    document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
+    const mic = $('#answerMic'); if (mic) mic.disabled = true;
+    const input = $('#answerText'); if (input) input.disabled = true;
+    const submit = $('#answerSubmit'); if (submit) submit.disabled = true;
+    return;
+  }
+  teamBackActive = false;
+  button.classList.add('hidden');
+  setAnswerFeedback('');
+  updateTurnUI();
+  startTimer(Math.max(1, timerRemaining));
+  if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+}
+
 function awardBank(team) {
   if (bank <= 0 || phase === 'over') return;
   stopTimer();
@@ -2388,6 +2451,16 @@ $('#help').onclick = showHelp;
 $('#prev').onclick = previousRound;
 $('#next').onclick = nextRound;
 $('#roundContinue')?.addEventListener('click', nextRound);
+$('#teamBack')?.addEventListener('click', toggleTeamBack);
+$('#answerSubmit')?.addEventListener('click', submitTypedAnswer);
+$('#answerText')?.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); submitTypedAnswer(); } });
+$('#revealRemaining')?.addEventListener('click', () => {
+  if (phase !== 'over' || gamePaused) return;
+  const button = $('#revealRemaining');
+  if (button) { button.classList.add('hidden'); button.disabled = true; }
+  setRoundAdvanceReady(false);
+  revealRemainingAndNarrate(() => showRoundContinueButton());
+});
 $('#buzz').onclick = () => addStrike('manual');
 $('#undo').onclick = undoAward;
 $('#resetRound').onclick = resetRound;
