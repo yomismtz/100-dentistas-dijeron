@@ -1561,13 +1561,28 @@ function addStrike(reason = 'manual') {
     const intro = isEn()
       ? `Third strike. We go with ${teamNames[currentTeam]} for the steal.`
       : `Tercer strike. Nos vamos con ${teamNames[currentTeam]} para el robo de puntos.`;
+    let stealQuestionStarted = false;
     const startSteal = () => {
-      if (phase === 'over' || gamePaused) return;
-      turnResolving = false;
-      $('#answerEntry')?.classList.remove('hidden');
-      updateTurnUI();
-      startTimer(TURN_SECONDS);
-      if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+      if (stealQuestionStarted || phase === 'over' || gamePaused) return;
+      stealQuestionStarted = true;
+      $('#answerEntry')?.classList.add('hidden');
+      const questionText = qText(questions[roundIndex]);
+      const questionDelay = Math.max(2200, Math.min(12000, Math.round((questionText.length / 12) * 1000 + 1000)));
+      let answerPhaseStarted = false;
+      const resumeStealAnswer = () => {
+        if (answerPhaseStarted || phase === 'over' || gamePaused) return;
+        answerPhaseStarted = true;
+        turnResolving = false;
+        $('#answerEntry')?.classList.remove('hidden');
+        updateTurnUI();
+        startTimer(TURN_SECONDS);
+        if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+      };
+      const spokenQuestion = narrateWithFallback(questionText, {
+        lang:qVoiceLang(questions[roundIndex]), rate:.9,
+        onend:resumeStealAnswer, onerror:resumeStealAnswer
+      }, questionDelay);
+      if (spokenQuestion === false) resumeStealAnswer();
     };
     const spoken = narrate(intro, {
       lang:isEn()?'en-US':'es-MX', rate:.92, onend:startSteal, onerror:startSteal
