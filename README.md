@@ -12,20 +12,20 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 ## Funciones actuales
 
 - Base de 116 preguntas de distintas áreas de odontología.
-- 6 preguntas aleatorias por partida, sin repetirse dentro de la misma partida.
-- Rondas 1–2 ×1, rondas 3–4 ×2 y rondas 5–6 ×3.
+- 8 preguntas aleatorias por partida, sin repetirse dentro de la misma partida.
+- Rondas 1–2 ×1, rondas 3–4 ×2 y rondas 5–8 ×3.
 - Respuestas ocultas, banco de puntos y marcador para dos equipos.
 - Máximo de 3 strikes; al tercero cambia el control y puede activarse el robo.
-- Cronómetro de 10 segundos por respuesta; al agotarse registra un strike.
+- Cronómetro de 20 segundos por respuesta; durante los últimos 10 segundos suena una cuenta regresiva de tonos electrónicos tipo bits. Al agotarse el tiempo se registra un strike.
 - Selección de nombres y personajes para los equipos.
 - Celebración final con personaje ganador y trofeo.
 - Sonidos de inicio, acierto y error.
 - Funcionamiento local/offline en la versión actual.
-- Validación automática del banco: cada pregunta debe tener 3–5 respuestas y sumar 100 puntos base.
+- Banco principal de 116 preguntas: cada pregunta contiene de 4 a 7 respuestas válidas, con una única respuesta líder y puntos base que suman 100.
 
 ## Contenido académico
 
-Los puntos del tablero son ponderaciones lúdicas y no porcentajes obtenidos de una encuesta real de dentistas. La revisión científica y criterios del banco están documentados en [`VALIDACION_PREGUNTAS.md`](VALIDACION_PREGUNTAS.md).
+Los puntos del tablero son ponderaciones lúdicas: la respuesta con mayor puntuación se presenta como la más popular dentro de la dinámica del juego, pero el orden no procede de una encuesta real de dentistas. La validez clínica de las respuestas debe distinguirse de su posición en el tablero. Los criterios y las correcciones documentadas están en [`VALIDACION_PREGUNTAS.md`](VALIDACION_PREGUNTAS.md).
 
 ## Privacidad
 
