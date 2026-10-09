@@ -920,15 +920,31 @@ function beginTurnAfterQuestion() {
 
   const showFaceoffOnce = (() => {
     let opened = false;
-    return (source='callback') => {
+    let retryHandle = null;
+    const attempt = (source='callback') => {
       if (opened) return;
-      const valid = token === turnNarrationToken && phase !== 'over' && !gamePaused && gameVisible();
-      console.info('[FACE OFF TRACE]', 'FACEOFF_GATE', {source, valid, token, currentToken:turnNarrationToken, phase, gamePaused, gameVisible:gameVisible(), round:roundIndex + 1});
-      // Do not consume the one-shot gate while the callback is stale or the game is paused.
-      if (!valid) return;
-      opened = true;
+      const current = token === turnNarrationToken && phase !== 'over' && !gamePaused && gameVisible();
+      if (!current) {
+        console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_CANCELLED', {source, token, currentToken:turnNarrationToken, phase, gamePaused, gameVisible:gameVisible()});
+        return;
+      }
+      if (turnResolving) {
+        console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_RETRY', {source, reason:'turnResolving', round:roundIndex + 1});
+        retryHandle = setTimeout(() => attempt('retry-turnResolving'), 200);
+        return;
+      }
+      console.info('[FACE OFF TRACE]', 'FACEOFF_GATE', {source, valid:true, token, currentToken:turnNarrationToken, phase, gamePaused, turnResolving, round:roundIndex + 1});
       startFaceoff();
+      // Mark complete only after startFaceoff actually changed the game into faceoff state.
+      if (faceoffActive) {
+        opened = true;
+        if (retryHandle) clearTimeout(retryHandle);
+      } else {
+        console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_RETRY', {source, reason:'faceoff-not-active', round:roundIndex + 1});
+        retryHandle = setTimeout(() => attempt('retry-open'), 200);
+      }
     };
+    return attempt;
   })();
 
   const readQuestionThenFaceoff = () => {
