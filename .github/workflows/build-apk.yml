@@ -22,6 +22,10 @@ jobs:
         run: |
           python3 scripts/validate_45_categories.py
 
+      - name: Validar banco principal y respuestas clínicas estructuradas
+        run: |
+          python3 scripts/validate_questions.py
+
 
       - name: Auditar traducción inglesa 1-45
         run: |
