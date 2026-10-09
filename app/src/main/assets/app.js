@@ -1454,6 +1454,8 @@ function awardCompletedRound(team, points) {
 }
 function revealAnswer(idx, btn) {
   if (phase === 'over' || gamePaused || turnResolving || teamBackActive || revealed[idx] || faceoffActive || !faceoffDoneThisRound) return;
+  teamBackActive = false;
+  $('#teamBack')?.classList.add('hidden');
   turnResolving = true;
   stopTimer(); clearCpuTurn(); turnNarrationToken += 1; window.DentistasNarrator?.stop?.();
 
