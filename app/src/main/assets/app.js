@@ -849,6 +849,7 @@ function finishFaceoff(winner) {
     const beginAnswering = () => {
       turnResolving = false;
       $('#answerEntry')?.classList.remove('hidden');
+      updateTurnUI();
       startTimer(TURN_SECONDS);
       if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
     };
@@ -1227,6 +1228,8 @@ function updateTurnUI() {
   if (answerText) answerText.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
   const answerSubmit = $('#answerSubmit');
   if (answerSubmit) answerSubmit.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
+  const teamBackButton = $('#teamBack');
+  if (teamBackButton) teamBackButton.disabled = phase === 'over' || gamePaused || turnResolving || strikes !== 2;
   document.querySelectorAll('#answers button').forEach((btn, idx) => {
     btn.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound || revealed[idx];
   });
@@ -1481,6 +1484,7 @@ function revealAnswer(idx, btn) {
   const resumeAnswerPhase = () => {
     if (phase === 'over' || gamePaused) return;
     turnResolving = false;
+    updateTurnUI();
     startTimer(Math.max(1, timerRemaining));
     if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
   };
@@ -1558,6 +1562,7 @@ function addStrike(reason = 'manual') {
       if (phase === 'over' || gamePaused) return;
       turnResolving = false;
       $('#answerEntry')?.classList.remove('hidden');
+      updateTurnUI();
       startTimer(TURN_SECONDS);
       if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
     };
@@ -1572,6 +1577,7 @@ function addStrike(reason = 'manual') {
   const resume = () => {
     if (phase === 'over' || gamePaused) return;
     turnResolving = false;
+    updateTurnUI();
     startTimer(Math.max(1, timerRemaining));
     if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
   };
