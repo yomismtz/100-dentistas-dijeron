@@ -1,1 +1,307 @@
-[{"cat":"Endodoncia y restauradora","q":"Pruebas usadas para valorar el estado pulpar y periapical:","a":[["Frío",30],["Percusión",25],["Palpación",20],["Prueba eléctrica pulpar",15],["Calor",10]],"q_en":"Tests used to assess pulpal and periapical status:","a_en":["Cold test","Percussion","Palpation","Electric pulp test","Heat test"]},{"cat":"Endodoncia y restauradora","q":"Etapas generales de un tratamiento de conductos:","a":[["Limpieza y conformación",30],["Acceso",25],["Longitud de trabajo",20],["Irrigación",15],["Obturación",10]],"q_en":"General stages of root canal treatment:","a_en":["Access","Working length determination","Cleaning and shaping","Irrigation","Obturation"]},{"cat":"Endodoncia y restauradora","q":"Irrigantes o soluciones auxiliares usadas en endodoncia:","a":[["Hipoclorito de sodio",45],["EDTA",35],["Clorhexidina",20]],"q_en":"Irrigants or auxiliary solutions used in endodontics:","a_en":["Sodium hypochlorite","EDTA","Chlorhexidine"]},{"cat":"Endodoncia y restauradora","q":"Causas comunes de lesión pulpar:","a":[["Caries profunda",35],["Traumatismo",30],["Fisuras o fracturas",20],["Procedimientos restauradores extensos",15]],"q_en":"Common causes of pulpal injury:","a_en":["Deep caries","Trauma","Cracks or fractures","Extensive restorative procedures"]},{"cat":"Endodoncia y restauradora","q":"Hallazgos compatibles con periodontitis apical sintomática:","a":[["Dolor a la masticación",35],["Dolor a la percusión",30],["Sensibilidad apical",20],["Ensanchamiento del espacio periodontal",15]],"q_en":"Findings compatible with symptomatic apical periodontitis:","a_en":["Pain on chewing","Pain on percussion","Apical tenderness","Widening of the periodontal ligament space"]},{"cat":"Endodoncia y restauradora","q":"Errores o complicaciones procedimentales en endodoncia:","a":[["Separación de instrumento",35],["Perforación",30],["Escalón o transporte",20],["Sobreobturación",15]],"q_en":"Procedural errors or complications in endodontics:","a_en":["Instrument separation","Perforation","Ledge formation or transportation","Overfilling"]},{"cat":"Endodoncia y restauradora","q":"Materiales usados en restauraciones directas:","a":[["Resina compuesta",35],["Ionómero de vidrio",30],["Amalgama",20],["Compómero",15]],"q_en":"Materials used for direct restorations:","a_en":["Composite resin","Glass ionomer","Amalgam","Compomer"]},{"cat":"Endodoncia y restauradora","q":"Métodos de aislamiento del campo operatorio:","a":[["Dique de hule",35],["Rollos de algodón",30],["Succión de alto volumen",20],["Retractores o aisladores",15]],"q_en":"Methods of operative field isolation:","a_en":["Rubber dam","Cotton rolls","High-volume suction","Retractors or isolation devices"]},{"cat":"Endodoncia y restauradora","q":"Pasos generales de una restauración adhesiva con resina:","a":[["Colocación de resina",30],["Aislamiento",25],["Acondicionamiento según el sistema",20],["Aplicación del adhesivo",15],["Acabado y pulido",10]],"q_en":"General steps of an adhesive composite restoration:","a_en":["Isolation","Conditioning according to the adhesive system","Adhesive application","Composite placement","Finishing and polishing"]},{"cat":"Endodoncia y restauradora","q":"Causas frecuentes de fracaso de una restauración:","a":[["Caries secundaria",35],["Fractura",30],["Pérdida de adaptación marginal",20],["Desgaste o pérdida de material",15]],"q_en":"Common causes of restoration failure:","a_en":["Secondary caries","Fracture","Loss of marginal adaptation","Wear or loss of material"]}]
+[
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Pruebas usadas para valorar el estado pulpar y periapical:",
+    "a": [
+      [
+        "Frío",
+        30
+      ],
+      [
+        "Percusión",
+        25
+      ],
+      [
+        "Palpación",
+        20
+      ],
+      [
+        "Prueba eléctrica pulpar",
+        15
+      ],
+      [
+        "Calor",
+        10
+      ]
+    ],
+    "q_en": "Tests used to assess pulpal and periapical status:",
+    "a_en": [
+      "Cold test",
+      "Percussion",
+      "Palpation",
+      "Electric pulp test",
+      "Heat test"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Etapas generales de un tratamiento de conductos:",
+    "a": [
+      [
+        "Limpieza y conformación",
+        30
+      ],
+      [
+        "Acceso",
+        25
+      ],
+      [
+        "Longitud de trabajo",
+        20
+      ],
+      [
+        "Irrigación",
+        15
+      ],
+      [
+        "Obturación",
+        10
+      ]
+    ],
+    "q_en": "General stages of root canal treatment:",
+    "a_en": [
+      "Access",
+      "Working length determination",
+      "Cleaning and shaping",
+      "Irrigation",
+      "Obturation"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "¿Qué soluciones pueden emplearse en distintas fases de la irrigación endodóntica según el protocolo, sin mezclarlas indiscriminadamente?",
+    "a": [
+      [
+        "Hipoclorito de sodio",
+        40
+      ],
+      [
+        "EDTA",
+        25
+      ],
+      [
+        "Clorhexidina",
+        20
+      ],
+      [
+        "Ácido cítrico como agente quelante alternativo",
+        15
+      ]
+    ],
+    "q_en": "Which solutions may be used at different stages of endodontic irrigation according to the protocol, without mixing them indiscriminately?",
+    "a_en": [
+      "Sodium hypochlorite",
+      "EDTA",
+      "Chlorhexidine",
+      "Citric acid as an alternative chelating agent"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Causas comunes de lesión pulpar:",
+    "a": [
+      [
+        "Caries profunda",
+        35
+      ],
+      [
+        "Traumatismo",
+        30
+      ],
+      [
+        "Fisuras o fracturas",
+        20
+      ],
+      [
+        "Procedimientos restauradores extensos",
+        15
+      ]
+    ],
+    "q_en": "Common causes of pulpal injury:",
+    "a_en": [
+      "Deep caries",
+      "Trauma",
+      "Cracks or fractures",
+      "Extensive restorative procedures"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Hallazgos compatibles con periodontitis apical sintomática:",
+    "a": [
+      [
+        "Dolor a la masticación",
+        35
+      ],
+      [
+        "Dolor a la percusión",
+        30
+      ],
+      [
+        "Sensibilidad apical",
+        20
+      ],
+      [
+        "Ensanchamiento del espacio periodontal",
+        15
+      ]
+    ],
+    "q_en": "Findings compatible with symptomatic apical periodontitis:",
+    "a_en": [
+      "Pain on chewing",
+      "Pain on percussion",
+      "Apical tenderness",
+      "Widening of the periodontal ligament space"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Errores o complicaciones procedimentales en endodoncia:",
+    "a": [
+      [
+        "Separación de instrumento",
+        35
+      ],
+      [
+        "Perforación",
+        30
+      ],
+      [
+        "Escalón o transporte",
+        20
+      ],
+      [
+        "Sobreobturación",
+        15
+      ]
+    ],
+    "q_en": "Procedural errors or complications in endodontics:",
+    "a_en": [
+      "Instrument separation",
+      "Perforation",
+      "Ledge formation or transportation",
+      "Overfilling"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Materiales usados en restauraciones directas:",
+    "a": [
+      [
+        "Resina compuesta",
+        35
+      ],
+      [
+        "Ionómero de vidrio",
+        30
+      ],
+      [
+        "Amalgama",
+        20
+      ],
+      [
+        "Compómero",
+        15
+      ]
+    ],
+    "q_en": "Materials used for direct restorations:",
+    "a_en": [
+      "Composite resin",
+      "Glass ionomer",
+      "Amalgam",
+      "Compomer"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Métodos de aislamiento del campo operatorio:",
+    "a": [
+      [
+        "Dique de hule",
+        35
+      ],
+      [
+        "Rollos de algodón",
+        30
+      ],
+      [
+        "Succión de alto volumen",
+        20
+      ],
+      [
+        "Retractores o aisladores",
+        15
+      ]
+    ],
+    "q_en": "Methods of operative field isolation:",
+    "a_en": [
+      "Rubber dam",
+      "Cotton rolls",
+      "High-volume suction",
+      "Retractors or isolation devices"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Pasos generales de una restauración adhesiva con resina:",
+    "a": [
+      [
+        "Colocación de resina",
+        30
+      ],
+      [
+        "Aislamiento",
+        25
+      ],
+      [
+        "Acondicionamiento según el sistema",
+        20
+      ],
+      [
+        "Aplicación del adhesivo",
+        15
+      ],
+      [
+        "Acabado y pulido",
+        10
+      ]
+    ],
+    "q_en": "General steps of an adhesive composite restoration:",
+    "a_en": [
+      "Isolation",
+      "Conditioning according to the adhesive system",
+      "Adhesive application",
+      "Composite placement",
+      "Finishing and polishing"
+    ]
+  },
+  {
+    "cat": "Endodoncia y restauradora",
+    "q": "Causas frecuentes de fracaso de una restauración:",
+    "a": [
+      [
+        "Caries secundaria",
+        35
+      ],
+      [
+        "Fractura",
+        30
+      ],
+      [
+        "Pérdida de adaptación marginal",
+        20
+      ],
+      [
+        "Desgaste o pérdida de material",
+        15
+      ]
+    ],
+    "q_en": "Common causes of restoration failure:",
+    "a_en": [
+      "Secondary caries",
+      "Fracture",
+      "Loss of marginal adaptation",
+      "Wear or loss of material"
+    ]
+  }
+]
