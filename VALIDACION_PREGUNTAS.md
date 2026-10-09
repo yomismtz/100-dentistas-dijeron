@@ -1,14 +1,14 @@
 # Validación científica del banco de preguntas
 
-Fecha de revisión: 17 de septiembre de 2026.
+Fecha de revisión: 9 de octubre de 2026.
 
 ## Criterio de esta revisión
 
 La base se revisó con una regla editorial común para todo el juego:
 
-- Cada pregunta debe tener **3 a 5 respuestas correctas**.
+- Cada pregunta del banco principal debe tener **4 a 7 respuestas válidas y clínicamente defendibles**. Si un tema solo admite una lista cerrada de tres elementos, la pregunta debe reformularse a un concepto más amplio; nunca se debe inventar una respuesta incorrecta solo para cumplir el número.
 - Los puntos base de las respuestas de cada pregunta deben sumar **100**.
-- Los puntos son una **ponderación lúdica del juego** para ordenar respuestas más centrales o frecuentes en docencia; **no son porcentajes obtenidos de una encuesta real a 100 dentistas**.
+- Los puntos son una **ponderación lúdica del juego**; la respuesta con más puntos se presenta como líder o “más popular” dentro de la dinámica, pero los puntos **no son porcentajes ni resultados obtenidos de una encuesta real a 100 dentistas**.
 - Se evitó presentar como universal una intervención que depende del diagnóstico o cuya evidencia es limitada. En esos casos se usa redacción como “según el caso”, “cuando está indicado” o “como coadyuvante”.
 - Las preguntas que naturalmente solo tienen dos elementos (por ejemplo, los dos puntos del plano de Frankfort) se reformularon a un concepto más amplio para cumplir la mecánica de 3–5 respuestas sin inventar opciones falsas.
 
@@ -77,12 +77,18 @@ Se conservaron las preguntas que concuerdan con recomendaciones de control de in
 Fuente:
 - CDC Dental Infection Prevention and Control. https://www.cdc.gov/dental-infection-control/hcp/dental-ipc-faqs/cleaning-disinfecting-environmental-surface.html
 
+## Correcciones realizadas en esta actualización
+
+- Se ampliaron a cuatro respuestas válidas las 16 preguntas que tenían listas cerradas de tres elementos. En los casos donde el tema era estrictamente una lista de tres, se reformuló la pregunta a un concepto clínico o anatómico más amplio para no inventar opciones falsas.
+- Se añadieron traducciones inglesas equivalentes y se redistribuyeron las ponderaciones para que cada pregunta siga sumando 100 puntos y tenga una única respuesta líder.
+- Las preguntas sobre irrigación endodóntica aclaran que las soluciones dependen del protocolo y no deben mezclarse indiscriminadamente. Los tratamientos en dientes temporales se presentan como opciones dependientes del diagnóstico y de la restaurabilidad.
+
 ## Control automático
 
 El repositorio incluye `scripts/validate_questions.py`. Antes de compilar el APK, GitHub Actions comprueba automáticamente:
 
 1. que existan exactamente 116 preguntas;
-2. que cada pregunta tenga entre 3 y 5 respuestas;
+2. que cada pregunta tenga entre 4 y 7 respuestas válidas;
 3. que no haya preguntas o respuestas duplicadas dentro de su ámbito de validación;
 4. que cada respuesta tenga puntuación positiva;
 5. que las respuestas de cada pregunta sumen exactamente 100 puntos base.
