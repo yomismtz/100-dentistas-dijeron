@@ -10,7 +10,7 @@ La base se revisó con una regla editorial común para todo el juego:
 - Los puntos base de las respuestas de cada pregunta deben sumar **100**.
 - Los puntos son una **ponderación lúdica del juego**; la respuesta con más puntos se presenta como líder o “más popular” dentro de la dinámica, pero los puntos **no son porcentajes ni resultados obtenidos de una encuesta real a 100 dentistas**.
 - Se evitó presentar como universal una intervención que depende del diagnóstico o cuya evidencia es limitada. En esos casos se usa redacción como “según el caso”, “cuando está indicado” o “como coadyuvante”.
-- Las preguntas que naturalmente solo tienen dos elementos (por ejemplo, los dos puntos del plano de Frankfort) se reformularon a un concepto más amplio para cumplir la mecánica de 3–5 respuestas sin inventar opciones falsas.
+- Las preguntas que naturalmente solo tienen dos elementos (por ejemplo, los dos puntos del plano de Frankfort) se reformularon a un concepto más amplio para cumplir la mecánica de 4–7 respuestas sin inventar opciones falsas.
 
 ## Correcciones relevantes
 
@@ -19,7 +19,7 @@ La base se revisó con una regla editorial común para todo el juego:
 - **Powell:** se corrigió la lista de ángulos. El análisis incluye nasofrontal, nasofacial, nasomental y mentocervical; se retiró “nasolabial” de esa pregunta.
 - **ANB:** se cambió de “diagnósticos que da” a “relaciones esqueléticas sagitales que puede sugerir”, porque ANB debe interpretarse junto con otras variables cefalométricas y clínicas.
 - **Bolton:** se reformuló para preguntar qué identifica/cuantifica: relación anterior, relación total y excesos relativos maxilar o mandibular. El stripping o las extracciones son decisiones terapéuticas, no un resultado directo del análisis.
-- Se retiraron preguntas binarias o ambiguas sobre Frankfort, S-L y AB-Go-Gn y se sustituyeron por preguntas de planos y medidas cefalométricas con 3–5 respuestas válidas.
+- Se retiraron preguntas binarias o ambiguas sobre Frankfort, S-L y AB-Go-Gn y se sustituyeron por preguntas de planos y medidas cefalométricas con 4–7 respuestas válidas.
 
 Fuentes:
 - Hurmerinta K, Rahkamo A, Haavikko K. Comparison between cephalometric classification methods for sagittal jaw relationships. PubMed PMID 9249188. https://pubmed.ncbi.nlm.nih.gov/9249188/
