@@ -15,7 +15,7 @@ const narrateWithFallback = (text, opts={}, fallbackDelay=null) => {
     if (fallbackHandle) clearTimeout(fallbackHandle);
     try { (ok ? opts.onend : opts.onerror)?.(); } catch (_) {}
   };
-  const clean = String(text || '').replace(/<[^>]*>/g,' ').replace(/s+/g,' ').trim();
+  const clean = String(text || '').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
   const estimate = Math.max(2200, Math.min(14000, Math.round((clean.length / 13.5) * 1000 + 1200)));
   const delay = Number.isFinite(Number(fallbackDelay)) ? Math.max(estimate, Number(fallbackDelay)) : estimate;
   const spoken = narrate(text, {...opts, onend:() => finish(true), onerror:() => finish(false)});
@@ -892,7 +892,15 @@ function startFaceoff() {
 }
 
 function beginTurnAfterQuestion() {
-  if (gamePaused || turnResolving || phase === 'over' || phase === 'steal') return;
+  if (gamePaused || phase === 'over' || phase === 'steal') return;
+  // A fresh question has no answer-resolution operation in progress. Recover a stale
+  // lock here (before narration starts), otherwise the callback can exit permanently
+  // and the faceoff will never be reached.
+  if (phase === 'play' && !faceoffDoneThisRound && turnResolving) {
+    console.warn('[FACE OFF TRACE]', 'BEGIN_TURN_CLEAR_STALE_RESOLVING_LOCK', {round:roundIndex + 1});
+    turnResolving = false;
+  }
+  if (turnResolving) return;
   invalidateTurn();
   faceoffActive = false;
   faceoffDoneThisRound = false;
