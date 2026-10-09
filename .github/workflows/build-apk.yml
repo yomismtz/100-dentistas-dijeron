@@ -24,7 +24,7 @@ jobs:
 
       - name: Validar banco principal y respuestas clínicas estructuradas
         run: |
-          python3 scripts/validate_questions.py
+          python3 scripts/validate_main_question_bank.py
 
 
       - name: Auditar traducción inglesa 1-45
