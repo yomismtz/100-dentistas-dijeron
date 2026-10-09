@@ -1230,8 +1230,9 @@ function updateTurnUI() {
   if (answerSubmit) answerSubmit.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
   const teamBackButton = $('#teamBack');
   if (teamBackButton) teamBackButton.disabled = phase === 'over' || gamePaused || turnResolving || strikes !== 2;
-  document.querySelectorAll('#answers button').forEach((btn, idx) => {
-    btn.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound || revealed[idx];
+  document.querySelectorAll('#answers button').forEach((btn) => {
+    // Board tiles never accept direct clicks; only a validated text/voice answer reveals one.
+    btn.disabled = true;
   });
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || gamePaused || bank <= 0);
   updateTimerUI();
@@ -1337,7 +1338,9 @@ function showRound(reset = true) {
     const btn = document.createElement('button');
     btn.className = revealed[idx] ? 'answer revealed' : 'answer covered';
     btn.innerHTML = `<span class="num">${idx + 1}</span><span class="txt">${aText(q, idx)}</span><span class="pts">${answer[1]}</span>`;
-    btn.addEventListener('click', () => revealAnswer(idx, btn));
+    // The board is a display, not an answer shortcut. A response must be submitted
+    // by text or voice before its matching answer can be revealed.
+    btn.disabled = true;
     box.appendChild(btn);
   });
 
