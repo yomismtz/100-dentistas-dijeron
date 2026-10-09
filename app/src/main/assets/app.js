@@ -873,6 +873,28 @@ function startFaceoff() {
     console.error('[FACE OFF TRACE]', 'FACEOFF_DOM_MISSING', {
       panel:!!faceoff, team1Button:!!b1, team2Button:!!b2, round:roundIndex + 1
     });
+    // Fail open rather than leaving the round unplayable if the packaged HTML
+    // and JavaScript assets ever get out of sync.
+    faceoffActive = false;
+    faceoffDoneThisRound = true;
+    $('#answerEntry')?.classList.remove('hidden');
+    document.querySelectorAll('#answers button').forEach((btn, idx) => {
+      btn.disabled = Boolean(revealed[idx]) || phase === 'over' || gamePaused;
+    });
+    updateTurnUI();
+    const fallbackAnnouncement = isEn()
+      ? 'The faceoff could not be loaded. The round will continue.'
+      : 'No se pudo cargar el careo. La ronda continuará.';
+    const resumeWithoutFaceoff = () => {
+      if (phase === 'over' || gamePaused) return;
+      startTimer(TURN_SECONDS);
+      if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
+    };
+    const spokenFallback = narrate(fallbackAnnouncement, {
+      lang:isEn()?'en-US':'es-MX', rate:.94,
+      onend:resumeWithoutFaceoff, onerror:resumeWithoutFaceoff
+    });
+    if (spokenFallback === false) resumeWithoutFaceoff();
     return;
   }
 
