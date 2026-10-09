@@ -619,6 +619,9 @@ function pauseGame() {
   gamePaused = true;
   stopTimer();
   clearCpuTurn();
+  // Cancel the faceoff CPU response while paused; it must be rescheduled on resume.
+  clearTimeout(faceoffCpuHandle);
+  faceoffCpuHandle = null;
   turnNarrationToken += 1;
   window.DentistasNarrator?.stop?.();
   updateTimerUI();
@@ -844,6 +847,16 @@ function finishFaceoff(winner) {
   if (spoken === false) resume();
 }
 
+function scheduleFaceoffCpuWin() {
+  if (gameConfig.mode !== 'cpu' || !faceoffActive || gamePaused || phase === 'over' || faceoffCpuHandle !== null) return;
+  const ch = cpuCharacterObject();
+  const base = window.DentistasCharacterCPU?.delayFor?.(ch) || 1200;
+  faceoffCpuHandle = setTimeout(() => {
+    faceoffCpuHandle = null;
+    if (faceoffActive && !gamePaused && phase !== 'over') finishFaceoff(1);
+  }, Math.max(700, Math.min(3000, base + Math.random() * 900)));
+}
+
 function startFaceoff() {
   console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN_REQUEST', {gamePaused, turnResolving, phase, faceoffActive, faceoffDoneThisRound, round:roundIndex + 1});
   if (gamePaused || turnResolving || phase === 'over') {
@@ -862,7 +875,18 @@ function startFaceoff() {
     return;
   }
 
-  if (faceoffActive) return;
+  if (faceoffActive) {
+    // Resuming a paused faceoff must restore its panel and CPU response timer.
+    const activeFaceoff = $('#faceoff');
+    if (activeFaceoff) {
+      activeFaceoff.classList.remove('hidden');
+      activeFaceoff.hidden = false;
+      activeFaceoff.style.display = 'flex';
+      activeFaceoff.setAttribute('aria-hidden','false');
+    }
+    scheduleFaceoffCpuWin();
+    return;
+  }
 
   // Validate the required controls before changing game state. If a stale or
   // mismatched HTML asset omits the faceoff panel/buttons, don't freeze the
@@ -918,11 +942,8 @@ function startFaceoff() {
   b2.textContent = '🦷 ' + (teamNames[1] || 'EQUIPO 2');
 
   if (gameConfig.mode === 'cpu') {
-    if (b2) b2.textContent = '🤖 ' + (teamNames[1] || 'COMPUTADORA');
-    const ch = cpuCharacterObject();
-    const base = window.DentistasCharacterCPU?.delayFor?.(ch) || 1200;
-    faceoffCpuHandle = setTimeout(() => finishFaceoff(1),
-      Math.max(700, Math.min(3000, base + Math.random() * 900)));
+    b2.textContent = '🤖 ' + (teamNames[1] || 'COMPUTADORA');
+    scheduleFaceoffCpuWin();
   }
 }
 
