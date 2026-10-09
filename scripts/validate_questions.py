@@ -46,8 +46,8 @@ for filename in FILES:
             errors.append(f'{prefix}: pregunta duplicada: {q}')
         seen_questions.add(q_key)
 
-        if not isinstance(answers, list) or not (3 <= len(answers) <= 7):
-            errors.append(f'{prefix}: debe tener entre 3 y 7 respuestas; tiene {len(answers) if isinstance(answers, list) else "formato inválido"}')
+        if not isinstance(answers, list) or not (4 <= len(answers) <= 7):
+            errors.append(f'{prefix}: debe tener entre 4 y 7 respuestas; tiene {len(answers) if isinstance(answers, list) else "formato inválido"}')
             continue
         if not isinstance(answers_en, list) or len(answers_en) != len(answers):
             errors.append(f'{prefix}: a_en debe tener exactamente {len(answers)} respuestas traducidas')
