@@ -1,1 +1,292 @@
-[{"cat":"Odontopediatría y ortodoncia","q":"Técnicas básicas de guía de conducta en odontopediatría:","a":[["Decir-mostrar-hacer",35],["Refuerzo positivo y elogio descriptivo",30],["Distracción",20],["Preguntar-decir-preguntar (ask-tell-ask)",15]],"q_en":"Basic behavior guidance techniques in pediatric dentistry:","a_en":["Tell-show-do","Positive reinforcement and descriptive praise","Distraction","Ask-tell-ask"]},{"cat":"Odontopediatría y ortodoncia","q":"Factores de riesgo de caries en niños:","a":[["Consumo frecuente de azúcares",35],["Experiencia previa de caries",30],["Exposición insuficiente a fluoruro",20],["Control deficiente de biofilm",15]],"q_en":"Caries risk factors in children:","a_en":["Frequent sugar intake","Previous caries experience","Insufficient fluoride exposure","Poor biofilm control"]},{"cat":"Odontopediatría y ortodoncia","q":"Medidas preventivas frecuentes en odontopediatría:","a":[["Barniz de fluoruro",35],["Selladores",30],["Educación de higiene",20],["Consejería dietética",15]],"q_en":"Common preventive measures in pediatric dentistry:","a_en":["Fluoride varnish","Sealants","Oral-hygiene education","Dietary counseling"]},{"cat":"Odontopediatría y ortodoncia","q":"Terapias pulpares que pueden utilizarse en dientes temporales según el diagnóstico pulpar y el caso:","a":[["Tratamiento pulpar indirecto",45],["Pulpotomía",35],["Pulpectomía",20]],"q_en":"Pulp therapies that may be used in primary teeth depending on pulpal diagnosis and the case:","a_en":["Indirect pulp treatment","Pulpotomy","Pulpectomy"]},{"cat":"Odontopediatría y ortodoncia","q":"Ejemplos de mantenedores de espacio:","a":[["Banda y asa",35],["Arco lingual",30],["Botón de Nance",20],["Arco transpalatino",15]],"q_en":"Examples of space maintainers:","a_en":["Band and loop","Lingual arch","Nance appliance","Transpalatal arch"]},{"cat":"Odontopediatría y ortodoncia","q":"Registros comunes para diagnóstico ortodóncico:","a":[["Fotografías",35],["Modelos o escaneos",30],["Radiografía panorámica",20],["Radiografía cefalométrica",15]],"q_en":"Common records for orthodontic diagnosis:","a_en":["Photographs","Models or scans","Panoramic radiograph","Cephalometric radiograph"]},{"cat":"Odontopediatría y ortodoncia","q":"Clasificaciones de Angle que pueden describir la relación molar:","a":[["Clase I",45],["Clase II",35],["Clase III",20]],"q_en":"Angle classifications that can describe the molar relationship:","a_en":["Class I","Class II","Class III"]},{"cat":"Odontopediatría y ortodoncia","q":"¿Qué alteraciones o relaciones verticales de la oclusión pueden describirse clínicamente?","a":[["Sobremordida profunda",35],["Mordida abierta anterior",30],["Mordida abierta posterior",20],["Sobremordida reducida o borde a borde",15]],"q_en":"Which vertical occlusal alterations or relationships can be described clinically?","a_en":["Deep overbite","Anterior open bite","Posterior open bite","Reduced overbite or edge-to-edge"]},{"cat":"Odontopediatría y ortodoncia","q":"Tipos generales de aparatos ortodóncicos:","a":[["Aparatos fijos",35],["Aparatos removibles",30],["Aparatos funcionales",20],["Alineadores",15]],"q_en":"General types of orthodontic appliances:","a_en":["Fixed appliances","Removable appliances","Functional appliances","Aligners"]},{"cat":"Odontopediatría y ortodoncia","q":"Problemas que pueden abordarse de forma interceptiva durante el crecimiento:","a":[["Mordidas cruzadas",35],["Pérdida prematura de espacio",30],["Hábitos orales nocivos",20],["Erupción ectópica",15]],"q_en":"Problems that may be addressed interceptively during growth:","a_en":["Crossbites","Premature loss of space","Harmful oral habits","Ectopic eruption"]}]
+[
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Técnicas básicas de guía de conducta en odontopediatría:",
+    "a": [
+      [
+        "Decir-mostrar-hacer",
+        35
+      ],
+      [
+        "Refuerzo positivo y elogio descriptivo",
+        30
+      ],
+      [
+        "Distracción",
+        20
+      ],
+      [
+        "Preguntar-decir-preguntar (ask-tell-ask)",
+        15
+      ]
+    ],
+    "q_en": "Basic behavior guidance techniques in pediatric dentistry:",
+    "a_en": [
+      "Tell-show-do",
+      "Positive reinforcement and descriptive praise",
+      "Distraction",
+      "Ask-tell-ask"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Factores de riesgo de caries en niños:",
+    "a": [
+      [
+        "Consumo frecuente de azúcares",
+        35
+      ],
+      [
+        "Experiencia previa de caries",
+        30
+      ],
+      [
+        "Exposición insuficiente a fluoruro",
+        20
+      ],
+      [
+        "Control deficiente de biofilm",
+        15
+      ]
+    ],
+    "q_en": "Caries risk factors in children:",
+    "a_en": [
+      "Frequent sugar intake",
+      "Previous caries experience",
+      "Insufficient fluoride exposure",
+      "Poor biofilm control"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Medidas preventivas frecuentes en odontopediatría:",
+    "a": [
+      [
+        "Barniz de fluoruro",
+        35
+      ],
+      [
+        "Selladores",
+        30
+      ],
+      [
+        "Educación de higiene",
+        20
+      ],
+      [
+        "Consejería dietética",
+        15
+      ]
+    ],
+    "q_en": "Common preventive measures in pediatric dentistry:",
+    "a_en": [
+      "Fluoride varnish",
+      "Sealants",
+      "Oral-hygiene education",
+      "Dietary counseling"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "¿Qué tratamientos pueden considerarse ante caries profunda o enfermedad pulpar en dientes temporales, según el diagnóstico y la restaurabilidad?",
+    "a": [
+      [
+        "Tratamiento pulpar indirecto",
+        35
+      ],
+      [
+        "Pulpotomía",
+        30
+      ],
+      [
+        "Pulpectomía",
+        20
+      ],
+      [
+        "Extracción cuando el diente no es restaurable o el pronóstico es desfavorable",
+        15
+      ]
+    ],
+    "q_en": "Which treatments may be considered for deep caries or pulpal disease in primary teeth, depending on diagnosis and restorability?",
+    "a_en": [
+      "Indirect pulp treatment",
+      "Pulpotomy",
+      "Pulpectomy",
+      "Extraction when the tooth is not restorable or prognosis is poor"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Ejemplos de mantenedores de espacio:",
+    "a": [
+      [
+        "Banda y asa",
+        35
+      ],
+      [
+        "Arco lingual",
+        30
+      ],
+      [
+        "Botón de Nance",
+        20
+      ],
+      [
+        "Arco transpalatino",
+        15
+      ]
+    ],
+    "q_en": "Examples of space maintainers:",
+    "a_en": [
+      "Band and loop",
+      "Lingual arch",
+      "Nance appliance",
+      "Transpalatal arch"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Registros comunes para diagnóstico ortodóncico:",
+    "a": [
+      [
+        "Fotografías",
+        35
+      ],
+      [
+        "Modelos o escaneos",
+        30
+      ],
+      [
+        "Radiografía panorámica",
+        20
+      ],
+      [
+        "Radiografía cefalométrica",
+        15
+      ]
+    ],
+    "q_en": "Common records for orthodontic diagnosis:",
+    "a_en": [
+      "Photographs",
+      "Models or scans",
+      "Panoramic radiograph",
+      "Cephalometric radiograph"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "¿Qué categorías de la clasificación de Angle describen la relación molar?",
+    "a": [
+      [
+        "Clase I",
+        30
+      ],
+      [
+        "Clase II, división 1",
+        30
+      ],
+      [
+        "Clase II, división 2",
+        20
+      ],
+      [
+        "Clase III",
+        20
+      ]
+    ],
+    "q_en": "Which categories in Angle's classification describe the molar relationship?",
+    "a_en": [
+      "Class I",
+      "Class II, division 1",
+      "Class II, division 2",
+      "Class III"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "¿Qué alteraciones o relaciones verticales de la oclusión pueden describirse clínicamente?",
+    "a": [
+      [
+        "Sobremordida profunda",
+        35
+      ],
+      [
+        "Mordida abierta anterior",
+        30
+      ],
+      [
+        "Mordida abierta posterior",
+        20
+      ],
+      [
+        "Sobremordida reducida o borde a borde",
+        15
+      ]
+    ],
+    "q_en": "Which vertical occlusal alterations or relationships can be described clinically?",
+    "a_en": [
+      "Deep overbite",
+      "Anterior open bite",
+      "Posterior open bite",
+      "Reduced overbite or edge-to-edge"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Tipos generales de aparatos ortodóncicos:",
+    "a": [
+      [
+        "Aparatos fijos",
+        35
+      ],
+      [
+        "Aparatos removibles",
+        30
+      ],
+      [
+        "Aparatos funcionales",
+        20
+      ],
+      [
+        "Alineadores",
+        15
+      ]
+    ],
+    "q_en": "General types of orthodontic appliances:",
+    "a_en": [
+      "Fixed appliances",
+      "Removable appliances",
+      "Functional appliances",
+      "Aligners"
+    ]
+  },
+  {
+    "cat": "Odontopediatría y ortodoncia",
+    "q": "Problemas que pueden abordarse de forma interceptiva durante el crecimiento:",
+    "a": [
+      [
+        "Mordidas cruzadas",
+        35
+      ],
+      [
+        "Pérdida prematura de espacio",
+        30
+      ],
+      [
+        "Hábitos orales nocivos",
+        20
+      ],
+      [
+        "Erupción ectópica",
+        15
+      ]
+    ],
+    "q_en": "Problems that may be addressed interceptively during growth:",
+    "a_en": [
+      "Crossbites",
+      "Premature loss of space",
+      "Harmful oral habits",
+      "Ectopic eruption"
+    ]
+  }
+]
