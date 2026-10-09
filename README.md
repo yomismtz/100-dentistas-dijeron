@@ -13,7 +13,7 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 
 - Base de 116 preguntas de distintas áreas de odontología.
 - 8 preguntas aleatorias por partida, sin repetirse dentro de la misma partida.
-- Rondas 1–2 ×1, rondas 3–4 ×2 y rondas 5–8 ×3.
+- Multiplicador por ronda: ronda 1 ×1, ronda 2 ×2, y así sucesivamente hasta ronda 8 ×8.
 - Respuestas ocultas, banco de puntos y marcador para dos equipos.
 - Máximo de 3 strikes; al tercero cambia el control y puede activarse el robo.
 - Cronómetro de 20 segundos por respuesta; durante los últimos 10 segundos suena una cuenta regresiva de tonos electrónicos tipo bits. Al agotarse el tiempo se registra un strike.
