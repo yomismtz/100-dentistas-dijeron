@@ -928,6 +928,12 @@ function beginTurnAfterQuestion() {
         console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_CANCELLED', {source, token, currentToken:turnNarrationToken, phase, gamePaused, gameVisible:gameVisible()});
         return;
       }
+      // Before the first faceoff of a round no answer can be resolving. Clear a stale
+      // lock here so it cannot permanently suppress the faceoff after narration ends.
+      if (phase === 'play' && !faceoffDoneThisRound && turnResolving) {
+        console.warn('[FACE OFF TRACE]', 'FACEOFF_CLEAR_STALE_RESOLVING_LOCK', {source, round:roundIndex + 1});
+        turnResolving = false;
+      }
       if (turnResolving) {
         console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_RETRY', {source, reason:'turnResolving', round:roundIndex + 1});
         retryHandle = setTimeout(() => attempt('retry-turnResolving'), 200);
