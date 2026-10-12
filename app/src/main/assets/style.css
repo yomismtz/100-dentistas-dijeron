@@ -669,3 +669,80 @@ button{color:var(--text)}
 #game:not(.hidden) .startFaceoffButton:disabled{opacity:.62;cursor:default;filter:saturate(.6);box-shadow:none!important}
 #game:not(.hidden) .careoHint{max-width:38vw;color:#b9e8e5;font-size:clamp(11px,1.15vw,15px);font-weight:700}
 @media(max-width:700px){#game:not(.hidden) .careoLaunchRow{min-height:42px;padding:.1rem 0 .35rem}#game:not(.hidden) .startFaceoffButton{width:min(90%,340px);min-height:42px;font-size:clamp(13px,3vw,17px)}#game:not(.hidden) .careoHint{display:none}}
+
+
+/* ===== Auditoría responsive de la pantalla de juego v1.2.1 ===== */
+/* Mantiene visibles los controles y evita que preguntas largas se corten. */
+#game:not(.hidden){display:flex;flex-direction:column;min-height:0;height:100dvh;overflow:hidden}
+#game:not(.hidden) .topbar{flex:0 0 auto;min-width:0}
+#game:not(.hidden) .board{min-height:0;min-width:0;overflow-y:auto;overscroll-behavior:contain}
+#game:not(.hidden) .questionRow{min-width:0}
+#game:not(.hidden) .questionRow h1{min-width:0;overflow-wrap:anywhere;word-break:normal;hyphens:auto}
+#game:not(.hidden) .careoHint{overflow-wrap:anywhere}
+#game:not(.hidden) .faceoffQuestion{max-width:100%;overflow-wrap:anywhere;word-break:normal}
+#game:not(.hidden) .answer{min-width:0}
+#game:not(.hidden) .answer .txt{min-width:0;overflow-wrap:anywhere;word-break:normal}
+#game:not(.hidden) .scorebar{min-width:0}
+#game:not(.hidden) .team{min-width:0}
+#game:not(.hidden) .teamName{min-width:0}
+#game:not(.hidden) .centerControls button{min-width:42px;min-height:42px;padding:.45rem}
+@media(max-width:600px){
+  #game:not(.hidden){height:100dvh;height:100svh}
+  #game:not(.hidden) .topbar{height:auto;min-height:54px;gap:.3rem;padding:max(.35rem,env(safe-area-inset-top)) .35rem .35rem}
+  #game:not(.hidden) .topbar .iconBtn{min-width:38px;width:38px;height:42px;padding:.2rem;font-size:1rem;border-radius:10px}
+  #game:not(.hidden) #exitGame{min-width:46px;padding:.25rem;font-size:.7rem}
+  #game:not(.hidden) .roundInfo{min-width:0;flex-wrap:wrap;gap:.12rem .4rem;align-items:center;line-height:1.1}
+  #game:not(.hidden) .roundInfo #round{font-size:clamp(13px,3.5vw,18px);overflow-wrap:anywhere}
+  #game:not(.hidden) .roundInfo #progress{font-size:11px}
+  #game:not(.hidden) .roundInfo #turn{max-width:100%;font-size:10px;padding:.2rem .4rem;white-space:normal;text-align:center}
+  #game:not(.hidden) .board{flex:1 1 auto;height:auto;margin:.3rem .35rem;padding:.6rem .55rem;border-radius:17px;gap:.35rem}
+  #game:not(.hidden) .questionRow{gap:.35rem;margin:0;align-items:stretch}
+  #game:not(.hidden) .questionRow h1{font-size:clamp(17px,4.8vw,24px);line-height:1.2}
+  #game:not(.hidden) .timerBox,
+  #game:not(.hidden) .bank{min-width:62px;width:62px;padding:.35rem .25rem;border-radius:11px}
+  #game:not(.hidden) .timerBox span,
+  #game:not(.hidden) .bank span{font-size:9px;letter-spacing:.04em}
+  #game:not(.hidden) .timerBox strong,
+  #game:not(.hidden) .bank strong{font-size:clamp(22px,6vw,30px)}
+  #game:not(.hidden) .timerBox small{font-size:10px}
+  #game:not(.hidden) .careoLaunchRow{flex:0 0 auto;min-height:0;gap:0;padding:.1rem 0 .25rem}
+  #game:not(.hidden) .startFaceoffButton{width:100%;min-width:0;min-height:44px;padding:.55rem .65rem;font-size:clamp(13px,3.6vw,16px)}
+  #game:not(.hidden) .answers{flex:1 0 auto;gap:.35rem;justify-content:flex-start}
+  #game:not(.hidden) .answer{min-height:44px;padding:.38rem .5rem;gap:.45rem;border-radius:11px;font-size:clamp(14px,3.8vw,18px)}
+  #game:not(.hidden) .answer .num{flex:0 0 1.8rem;width:1.8rem;height:1.8rem}
+  #game:not(.hidden) .answer .pts{padding:.15rem .35rem}
+  #game:not(.hidden) .strikes{font-size:clamp(22px,6vw,32px);min-height:.9em}
+  #game:not(.hidden) .scorebar{flex:0 0 auto;height:auto;min-height:0;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:.25rem;padding:.35rem .35rem max(.35rem,env(safe-area-inset-bottom))}
+  #game:not(.hidden) .team{grid-template-columns:minmax(0,1fr) auto;gap:.25rem;padding:.3rem;border-radius:12px}
+  #game:not(.hidden) .teamName{max-width:100%;width:100%;padding:.35rem .2rem;font-size:clamp(9px,2.6vw,12px);overflow:hidden;text-overflow:ellipsis}
+  #game:not(.hidden) .team strong{font-size:clamp(22px,6vw,32px)}
+  #game:not(.hidden) .team .award{grid-column:1/-1;width:100%;padding:.35rem .15rem;font-size:clamp(9px,2.5vw,11px);border-radius:9px}
+  #game:not(.hidden) .centerControls{flex-wrap:wrap;max-width:94px;gap:.2rem}
+  #game:not(.hidden) .centerControls button{min-width:28px;min-height:34px;padding:.25rem;font-size:12px;border-radius:9px}
+  #game:not(.hidden) #buzz{flex:1 0 100%;font-size:10px}
+  #game:not(.hidden) .careoHint{display:none}
+  #game:not(.hidden) .faceoff{max-width:calc(100% - 1rem);padding:.75rem}
+  #game:not(.hidden) .faceoffButtons{gap:.4rem}
+  #game:not(.hidden) .faceoffButtons button{min-width:0;flex:1;padding:.7rem .35rem;font-size:clamp(12px,3.3vw,16px)}
+  #game:not(.hidden) .answerInputRow{display:flex;flex-wrap:wrap;gap:.35rem}
+  #game:not(.hidden) #answerText{flex:1 0 100%;min-width:0;width:100%}
+  #game:not(.hidden) #answerSubmit{flex:1}
+  #game:not(.hidden) #answerMic{min-width:52px}
+}
+@media(max-width:380px){
+  #game:not(.hidden) .topbar{gap:.2rem;padding-left:.25rem;padding-right:.25rem}
+  #game:not(.hidden) .topbar .iconBtn{min-width:32px;width:32px}
+  #game:not(.hidden) #exitGame{min-width:40px;font-size:9px}
+  #game:not(.hidden) .timerBox,
+  #game:not(.hidden) .bank{min-width:54px;width:54px}
+  #game:not(.hidden) .scorebar{gap:.15rem;padding-left:.2rem;padding-right:.2rem}
+  #game:not(.hidden) .centerControls{max-width:82px}
+}
+@media(max-height:620px) and (min-width:601px){
+  #game:not(.hidden) .topbar{height:auto;min-height:48px}
+  #game:not(.hidden) .board{flex:1 1 auto;height:auto;margin:.25rem .7rem;padding:.5rem 1rem;overflow-y:auto}
+  #game:not(.hidden) .scorebar{height:auto;min-height:105px;padding:.35rem .8rem}
+  #game:not(.hidden) .answer{min-height:38px;padding:.25rem .6rem;font-size:clamp(14px,2vw,20px)}
+  #game:not(.hidden) .careoLaunchRow{min-height:0;padding:.1rem 0 .25rem}
+  #game:not(.hidden) .startFaceoffButton{min-height:38px;padding:.35rem .8rem}
+}
