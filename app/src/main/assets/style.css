@@ -661,3 +661,11 @@ button{color:var(--text)}
 .answerInputRow button:disabled,.teamBack:disabled,.revealRemaining:disabled{opacity:.45;cursor:not-allowed}
 .teamBack{display:block;margin:.45rem auto;background:#61420b;border-color:#f5d28a}
 .revealRemaining{display:block;margin:.7rem auto;background:#0d5964;border-color:#8deaf0}
+
+
+/* Botón persistente para iniciar el careo de cada ronda */
+#game:not(.hidden) .careoLaunchRow{display:flex;align-items:center;justify-content:center;gap:.75rem;min-height:52px;flex-shrink:0;padding:.15rem 0 .55rem}
+#game:not(.hidden) .startFaceoffButton{min-width:min(270px,70vw);min-height:46px;padding:.6rem 1.15rem;border:2px solid #7ff4d1!important;border-radius:15px!important;background:linear-gradient(180deg,#11846c,#075448)!important;color:#fff!important;font-size:clamp(13px,1.35vw,18px);font-weight:1000;letter-spacing:.035em;white-space:nowrap;box-shadow:0 0 18px #41e7b955,inset 0 1px #ffffff55!important}
+#game:not(.hidden) .startFaceoffButton:disabled{opacity:.62;cursor:default;filter:saturate(.6);box-shadow:none!important}
+#game:not(.hidden) .careoHint{max-width:38vw;color:#b9e8e5;font-size:clamp(11px,1.15vw,15px);font-weight:700}
+@media(max-width:700px){#game:not(.hidden) .careoLaunchRow{min-height:42px;padding:.1rem 0 .35rem}#game:not(.hidden) .startFaceoffButton{width:min(90%,340px);min-height:42px;font-size:clamp(13px,3vw,17px)}#game:not(.hidden) .careoHint{display:none}}

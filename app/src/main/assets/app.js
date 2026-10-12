@@ -90,6 +90,8 @@ let gameConfig = { mode:'teams', selectedAreas:[], teamSize:1, cpuCharacter:'NOV
 let cpuTimerHandle = null;
 let faceoffActive = false;
 let faceoffDoneThisRound = false;
+let careoStartedThisRound = false;
+let questionVisibleThisRound = false;
 let faceoffCpuHandle = null;
 let questionPoolPromise = null;
 
@@ -356,6 +358,8 @@ function saveActiveGame() {
       timerRemaining,
       faceoffDoneThisRound,
       faceoffActive,
+      careoStartedThisRound,
+      questionVisibleThisRound,
       gamePaused,
       turnResolving: false,
       savedReason: reason
@@ -418,6 +422,10 @@ function normalizeSavedGame(snapshot) {
   snapshot.gamePaused = Boolean(snapshot.gamePaused);
   snapshot.faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
   snapshot.faceoffActive = Boolean(snapshot.faceoffActive);
+  snapshot.careoStartedThisRound = Boolean(snapshot.careoStartedThisRound || snapshot.faceoffActive || snapshot.faceoffDoneThisRound);
+  snapshot.questionVisibleThisRound = snapshot.questionVisibleThisRound === undefined
+    ? Boolean(snapshot.faceoffActive || snapshot.faceoffDoneThisRound)
+    : Boolean(snapshot.questionVisibleThisRound);
   snapshot.savedAt = Number.isFinite(Number(snapshot.savedAt)) ? Number(snapshot.savedAt) : Date.now();
 
   return snapshot;
@@ -478,6 +486,9 @@ function resumeActiveGame(snapshot) {
   turnResolving = false;
   timerRemaining = Math.max(1, Math.min(TURN_SECONDS, Number(snapshot.timerRemaining) || TURN_SECONDS));
   faceoffDoneThisRound = Boolean(snapshot.faceoffDoneThisRound);
+  faceoffActive = Boolean(snapshot.faceoffActive);
+  careoStartedThisRound = Boolean(snapshot.careoStartedThisRound);
+  questionVisibleThisRound = Boolean(snapshot.questionVisibleThisRound || snapshot.faceoffActive || snapshot.faceoffDoneThisRound);
 
   $('#home').classList.add('hidden');
   $('#game').classList.remove('hidden');
@@ -491,7 +502,7 @@ function resumeActiveGame(snapshot) {
       updateTurnUI();
       return;
     }
-    if (phase === 'steal') {
+    if (phase === 'steal' || faceoffActive) {
       startFaceoff();
     } else if (faceoffDoneThisRound) {
       $('#answerEntry')?.classList.remove('hidden');
@@ -600,6 +611,25 @@ function updateTimerUI() {
   timer.classList.toggle('paused', phase === 'over');
 }
 
+function updateCareoButton() {
+  const button = $('#startFaceoff');
+  if (!button) return;
+  const completed = faceoffDoneThisRound;
+  const inProgress = careoStartedThisRound && !completed;
+  button.textContent = isEn()
+    ? (completed ? '✓ FACEOFF COMPLETED' : inProgress ? '⚡ FACEOFF IN PROGRESS' : '⚡ START FACEOFF')
+    : (completed ? '✓ CAREO REALIZADO' : inProgress ? '⚡ CAREO EN CURSO' : '⚡ INICIAR CAREO');
+  button.disabled = phase === 'over' || gamePaused || phase === 'steal' ||
+    faceoffActive || careoStartedThisRound || faceoffDoneThisRound || !gameVisible();
+  button.setAttribute('aria-label', isEn() ? 'Start faceoff for this round' : 'Iniciar careo de esta ronda');
+  const hint = $('#careoHint');
+  if (hint) {
+    hint.textContent = isEn()
+      ? (faceoffActive ? 'Tap your team button first.' : completed ? 'Faceoff complete. Submit your answer.' : inProgress ? 'The narrator is reading the question.' : 'Tap to hear the question and begin the faceoff.')
+      : (faceoffActive ? 'Pulsa primero el botón de tu equipo.' : completed ? 'Careo terminado. Ya puedes responder.' : inProgress ? 'La narradora está leyendo la pregunta.' : 'Pulsa para escuchar la pregunta y comenzar el careo.');
+  }
+}
+
 function invalidateTurn() {
   turnNarrationToken += 1;
   stopTimer();
@@ -618,6 +648,12 @@ function pauseGame() {
   if (phase === 'over' || !gameVisible()) return;
   turnResolving = false;
   gamePaused = true;
+  if (phase === 'play' && !faceoffActive && !faceoffDoneThisRound) {
+    careoStartedThisRound = false;
+    questionVisibleThisRound = false;
+    const questionEl = $('#question');
+    if (questionEl) questionEl.textContent = '';
+  }
   stopTimer();
   clearCpuTurn();
   // Cancel the faceoff CPU response while paused; it must be rescheduled on resume.
@@ -853,6 +889,9 @@ function finishFaceoff(winner) {
       startTimer(TURN_SECONDS);
       if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
     };
+    questionVisibleThisRound = true;
+    const questionEl = $('#question');
+    if (questionEl) questionEl.textContent = questionText;
     const spokenQuestion = narrateWithFallback(questionText, {
       lang:qVoiceLang(questions[roundIndex]), rate:.9,
       onend:beginAnswering, onerror:beginAnswering
@@ -902,6 +941,7 @@ function startFaceoff() {
       activeFaceoff.style.display = 'flex';
       activeFaceoff.setAttribute('aria-hidden','false');
     }
+    updateCareoButton();
     scheduleFaceoffCpuWin();
     return;
   }
@@ -942,6 +982,8 @@ function startFaceoff() {
 
   faceoffDoneThisRound = false;
   faceoffActive = true;
+  careoStartedThisRound = true;
+  updateCareoButton();
   console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN', {round:roundIndex + 1, mode:gameConfig.mode, elementFound:true, team1ButtonFound:true, team2ButtonFound:true});
   saveActiveGame();
 
@@ -965,20 +1007,44 @@ function startFaceoff() {
   }
 }
 
-function beginTurnAfterQuestion() {
-  if (gamePaused || phase === 'over' || phase === 'steal') return;
-  // A fresh question has no answer-resolution operation in progress. Recover a stale
-  // lock here (before narration starts), otherwise the callback can exit permanently
-  // and the faceoff will never be reached.
+function beginTurnAfterQuestion(startCareo = false) {
+  if (gamePaused || phase === 'over' || phase === 'steal' || !gameVisible()) return;
   if (phase === 'play' && !faceoffDoneThisRound && turnResolving) {
-    console.warn('[FACE OFF TRACE]', 'BEGIN_TURN_CLEAR_STALE_RESOLVING_LOCK', {round:roundIndex + 1});
+    console.warn('[FACE OFF TRACE]', 'BEGIN_TURN_CLEAR_STALE_RESOLVING_LOCK', {round:roundIndex+1});
     turnResolving = false;
   }
   if (turnResolving) return;
+  if (!startCareo) {
+    invalidateTurn();
+    faceoffActive = false;
+    faceoffDoneThisRound = false;
+    careoStartedThisRound = false;
+    questionVisibleThisRound = false;
+    const resetFaceoff = $('#faceoff');
+    if (resetFaceoff) {
+      resetFaceoff.classList.add('hidden');
+      resetFaceoff.hidden = true;
+      resetFaceoff.style.display = 'none';
+      resetFaceoff.setAttribute('aria-hidden','true');
+    }
+    $('#answerEntry')?.classList.add('hidden');
+    const questionEl = $('#question');
+    if (questionEl) questionEl.textContent = '';
+    timerRemaining = TURN_SECONDS;
+    updateTimerUI();
+    updateTurnUI();
+    saveActiveGame();
+    return;
+  }
+  if (careoStartedThisRound || faceoffActive || faceoffDoneThisRound) return;
+  careoStartedThisRound = true;
+  questionVisibleThisRound = false;
+  const questionEl = $('#question');
+  if (questionEl) questionEl.textContent = '';
+  updateCareoButton();
   invalidateTurn();
   faceoffActive = false;
   faceoffDoneThisRound = false;
-
   const faceoff = $('#faceoff');
   if (faceoff) {
     faceoff.classList.add('hidden');
@@ -989,10 +1055,12 @@ function beginTurnAfterQuestion() {
   $('#answerEntry')?.classList.add('hidden');
   timerRemaining = TURN_SECONDS;
   updateTimerUI();
-
   const q = questions[roundIndex];
-  if (!q || !gameVisible()) return;
-
+  if (!q) {
+    careoStartedThisRound = false;
+    updateCareoButton();
+    return;
+  }
   const token = ++turnNarrationToken;
   const speechEstimateMs = (text, rate=.9) => {
     const clean = String(text || '').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
@@ -1038,6 +1106,10 @@ function beginTurnAfterQuestion() {
   const readQuestionThenFaceoff = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
     const questionText = qText(q);
+    questionVisibleThisRound = true;
+    const questionEl = $('#question');
+    if (questionEl) questionEl.textContent = questionText;
+    updateCareoButton();
     const delay = speechEstimateMs(questionText, .9);
     console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_START', {round:roundIndex + 1, textLength:questionText.length, delayMs:delay, voiceAvailable:!!window.DentistasNarrator?.speak});
     let questionSpeechFinished = false;
@@ -1058,8 +1130,8 @@ function beginTurnAfterQuestion() {
   };
 
   const intro = isEn()
-    ? 'Welcome to Así los dentistas lo dijeron. We have a question on the board and four to seven valid answers. One is ranked as the most popular for this game. The points are game weights, not survey results.'
-    : 'Bienvenidos a Así los dentistas lo dijeron. Tenemos una pregunta en el tablero y de cuatro a siete respuestas válidas. Una está marcada como la más popular para esta partida. Los puntos son ponderaciones del juego, no resultados de una encuesta.';
+    ? 'Attention teams. Listen carefully; the question is coming now.'
+    : 'Atención equipos. Escuchen con atención; la pregunta viene ahora.';
   console.info('[FACE OFF TRACE]', 'INTRO_START', {round:roundIndex + 1, mode:gameConfig.mode});
   let introDone = false;
   const continueToQuestion = () => {
@@ -1236,6 +1308,7 @@ function updateTurnUI() {
   });
   document.querySelectorAll('.award').forEach(b => b.disabled = phase === 'over' || gamePaused || bank <= 0);
   updateTimerUI();
+  updateCareoButton();
 }
 
 function showRoundTransition(onDone) {
@@ -1320,6 +1393,9 @@ function showRound(reset = true) {
     phase = 'play';
     currentTeam = roundIndex % 2;
     faceoffDoneThisRound = false;
+      faceoffActive = false;
+      careoStartedThisRound = false;
+      questionVisibleThisRound = false;
   }
 
   const q = questions[roundIndex];
@@ -1327,7 +1403,8 @@ function showRound(reset = true) {
   const mult = roundMultiplier();
   $('#round').textContent = `${tx('round')} ${roundIndex + 1} · ×${mult}`;
   $('#progress').textContent = `${roundIndex + 1} / ${questions.length}`;
-  $('#question').textContent = qText(q);
+  const questionEl = $('#question');
+  if (questionEl) questionEl.textContent = questionVisibleThisRound ? qText(q) : '';
 
   updateStrikesUI();
   updateBankUI();
@@ -1750,7 +1827,9 @@ function showDifficultySelector() {
 }
 
 function showPlayerCharacterSelector(next) {
-  const chars = Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : [];
+  const chars = typeof window.DentistasCharacterDisplayOrder === 'function'
+    ? window.DentistasCharacterDisplayOrder().map(item => item.character)
+    : (Array.isArray(window.DentistasCharacters) ? window.DentistasCharacters : []);
   openModal(`
     <h2>🦷 ELIGE TU PERSONAJE</h2>
     <p>NOVA está disponible desde el inicio. Los especialistas se desbloquean con tu progreso académico.</p>
@@ -2560,6 +2639,7 @@ window.DentistasAppBack = function () {
   `;
   document.head.appendChild(st);
 })();
+$('#startFaceoff')?.addEventListener('click', () => beginTurnAfterQuestion(true));
 $('#faceoffTeam1')?.addEventListener('click',()=>{ console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:0, round:roundIndex + 1}); finishFaceoff(0); });
 $('#faceoffTeam2')?.addEventListener('click',()=>{ console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:1, round:roundIndex + 1}); finishFaceoff(1); });
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);

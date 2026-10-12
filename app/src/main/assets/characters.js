@@ -159,6 +159,14 @@ function characterUnlocked(character){
   if(character.name==='EL SUPERDIENTE') return unlockedSpecialistCount()>=45;
   return false;
 }
+function characterDisplayOrder(){
+  return CHARACTERS.map((character,index)=>({character,index})).sort((a,b)=>{
+    const priority=item=>item.character.name==='NOVA'?0:characterUnlocked(item.character)?1:2;
+    return priority(a)-priority(b)||a.index-b.index;
+  });
+}
+window.DentistasCharacterDisplayOrder = characterDisplayOrder;
+
 function characterUnlockLabel(character){
   if(!character) return '';
   if(character.name==='NOVA') return 'Disponible desde el inicio';
@@ -350,7 +358,7 @@ function progressDashboardHtml() {
     return `<div class="progressModuleRow"><span>${label}</span><b>${score}%</b><div><i style="width:${score}%"></i></div></div>`;
   }).join('');
 
-  const collection = CHARACTERS.map(ch => {
+  const collection = characterDisplayOrder().map(({character:ch}) => {
     const unlockedNow = characterUnlocked(ch);
     const req = unlockRequirementProgress(ch);
     const nearest = req.missing.sort((a,b)=>a.remaining-b.remaining)[0];
@@ -433,7 +441,9 @@ window.DentistasProgression = {
   rules: CHARACTER_UNLOCK_RULES
 };
 
-let teamCharacters = [0, 4];
+const starterCharacterIndex = Math.max(0, CHARACTERS.findIndex(ch => ch.name === 'NOVA'));
+const firstUnlockedCharacterIndex = CHARACTERS.findIndex(ch => ch.name !== 'NOVA' && characterUnlocked(ch));
+let teamCharacters = [starterCharacterIndex, firstUnlockedCharacterIndex >= 0 ? firstUnlockedCharacterIndex : 0];
 
 (function loadCharacterSettings() {
   try {
@@ -441,7 +451,8 @@ let teamCharacters = [0, 4];
     if (Array.isArray(saved.teamCharacters) && saved.teamCharacters.length === 2) {
       teamCharacters = saved.teamCharacters.map((n, idx) => {
         const value = Number(n);
-        return Number.isInteger(value) && value >= 0 && value < CHARACTERS.length ? value : (idx === 0 ? 0 : 4);
+        const fallback = idx === 0 ? starterCharacterIndex : (firstUnlockedCharacterIndex >= 0 ? firstUnlockedCharacterIndex : 0);
+        return Number.isInteger(value) && value >= 0 && value < CHARACTERS.length ? value : fallback;
       });
     }
   } catch (_) {}
@@ -537,7 +548,7 @@ updateTurnUI = function updateTurnUIWithCharacters() {
 };
 
 function setupCharacterCards(teamIndex, container) {
-  container.innerHTML = CHARACTERS.map((character, idx) => `
+  container.innerHTML = characterDisplayOrder().map(({character, index:idx}) => `
     <button type="button" class="characterCard ${teamCharacters[teamIndex] === idx ? 'selected' : ''}" data-character="${idx}">
       <span class="charPortraitWrap tone-${character.tone}">
         <img class="charPortrait" src="${character.image}" alt="" onerror="this.classList.add('missing');this.nextElementSibling.classList.remove('hidden')">
