@@ -1080,14 +1080,15 @@ function beginTurnAfterQuestion(startCareo = false) {
       }
       // Before the first faceoff of a round no answer can be resolving. Clear a stale
       // lock here so it cannot permanently suppress the faceoff after narration ends.
+      // La lectura inicial no resuelve ninguna respuesta: un bloqueo residual
+      // no debe impedir que se abra el careo y dejar la partida congelada.
       if (phase === 'play' && !faceoffDoneThisRound && turnResolving) {
         console.warn('[FACE OFF TRACE]', 'FACEOFF_CLEAR_STALE_RESOLVING_LOCK', {source, round:roundIndex + 1});
         turnResolving = false;
       }
       if (turnResolving) {
-        console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_RETRY', {source, reason:'turnResolving', round:roundIndex + 1});
-        retryHandle = setTimeout(() => attempt('retry-turnResolving'), 200);
-        return;
+        console.warn('[FACE OFF TRACE]', 'FACEOFF_CLEAR_PRECAREO_LOCK', {source, round:roundIndex + 1});
+        turnResolving = false;
       }
       console.info('[FACE OFF TRACE]', 'FACEOFF_GATE', {source, valid:true, token, currentToken:turnNarrationToken, phase, gamePaused, turnResolving, round:roundIndex + 1});
       startFaceoff();
@@ -1116,9 +1117,13 @@ function beginTurnAfterQuestion(startCareo = false) {
     const finishQuestionSpeech = (source='callback') => {
       if (questionSpeechFinished) return;
       questionSpeechFinished = true;
+      clearTimeout(faceoffWatchdog);
       console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_END', {source, round:roundIndex + 1});
       showFaceoffOnce(source);
     };
+    // Respaldo independiente de la API de voz: algunos WebView/Android no
+    // disparan onend de forma fiable y la partida quedaba detenida en “careo en curso”.
+    const faceoffWatchdog = setTimeout(() => finishQuestionSpeech('watchdog-fallback'), delay + 1800);
     setTimeout(() => finishQuestionSpeech('duration-fallback'), delay);
     const spoken = narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
