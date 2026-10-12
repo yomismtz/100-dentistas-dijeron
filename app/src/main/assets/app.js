@@ -898,10 +898,19 @@ function finishFaceoff(winner) {
     }, questionDelay);
     if (spokenQuestion === false) beginAnswering();
   };
+  // Android WebView puede no emitir onend en algunos motores de voz.
+  // Evitar que, tras pulsar el ganador, la respuesta y el cronómetro queden bloqueados.
+  const announcementFallbackMs = Math.max(1800, Math.min(6500, Math.round((announcement.length / 12) * 1000 + 1400)));
+  const announcementWatchdog = setTimeout(resume, announcementFallbackMs);
   const spoken = narrate(announcement, {
-    lang:isEn()?'en-US':'es-MX', rate:.94, onend:resume, onerror:resume
+    lang:isEn()?'en-US':'es-MX', rate:.94,
+    onend:() => { clearTimeout(announcementWatchdog); resume(); },
+    onerror:() => { clearTimeout(announcementWatchdog); resume(); }
   });
-  if (spoken === false) resume();
+  if (spoken === false) {
+    clearTimeout(announcementWatchdog);
+    resume();
+  }
 }
 
 function scheduleFaceoffCpuWin() {
