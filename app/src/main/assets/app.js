@@ -1101,6 +1101,36 @@ function beginTurnAfterQuestion(startCareo = false) {
       }
       console.info('[FACE OFF TRACE]', 'FACEOFF_GATE', {source, valid:true, token, currentToken:turnNarrationToken, phase, gamePaused, turnResolving, round:roundIndex + 1});
       startFaceoff();
+      // Fallback duro: no dejar la partida congelada si una condición de estado
+      // impide abrir el careo aunque el panel y sus botones existan en el HTML.
+      if (!faceoffActive) {
+        const panel = $('#faceoff');
+        const team1 = $('#faceoffTeam1');
+        const team2 = $('#faceoffTeam2');
+        if (panel && team1 && team2 && phase === 'play' && !gamePaused) {
+          console.warn('[FACE OFF TRACE]', 'FACEOFF_FORCE_OPEN_FALLBACK', {source, round:roundIndex + 1});
+          turnResolving = false;
+          faceoffActive = true;
+          faceoffDoneThisRound = false;
+          careoStartedThisRound = true;
+          panel.classList.remove('hidden');
+          panel.hidden = false;
+          panel.style.display = 'flex';
+          panel.setAttribute('aria-hidden','false');
+          const fq = $('#faceoffQuestion');
+          if (fq) fq.textContent = qText(questions[roundIndex]);
+          team1.textContent = '🦷 ' + (teamNames[0] || 'JUGADOR 1');
+          team2.textContent = gameConfig.mode === 'cpu'
+            ? '🤖 ' + (teamNames[1] || 'COMPUTADORA')
+            : '🦷 ' + (teamNames[1] || 'JUGADOR 2');
+          $('#answerEntry')?.classList.add('hidden');
+          document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
+          updateCareoButton();
+          updateTurnUI();
+          saveActiveGame();
+          scheduleFaceoffCpuWin();
+        }
+      }
       // Mark complete only after startFaceoff actually changed the game into faceoff state.
       if (faceoffActive) {
         opened = true;
