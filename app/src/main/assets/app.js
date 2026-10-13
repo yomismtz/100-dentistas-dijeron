@@ -618,7 +618,7 @@ function updateCareoButton() {
   const inProgress = careoStartedThisRound && !completed;
   button.textContent = isEn()
     ? (completed ? '✓ FACEOFF COMPLETED' : inProgress ? '⚡ FACEOFF IN PROGRESS' : '⚡ START FACEOFF')
-    : (completed ? '✓ CAREO REALIZADO' : inProgress ? '⚡ CAREO EN CURSO' : '⚡ INICIAR CAREO');
+    : (completed ? '✓ CAREO REALIZADO' : inProgress ? '⚡ CAREO EN CURSO' : '▶ INICIAR RONDA');
   button.disabled = phase === 'over' || gamePaused || phase === 'steal' ||
     faceoffActive || careoStartedThisRound || faceoffDoneThisRound || !gameVisible();
   button.setAttribute('aria-label', isEn() ? 'Start faceoff for this round' : 'Iniciar careo de esta ronda');
@@ -1077,100 +1077,25 @@ function beginTurnAfterQuestion(startCareo = false) {
     return Math.max(2200, Math.min(12000, Math.round((clean.length / cps) * 1000 + 900)));
   };
 
-  const showFaceoffOnce = (() => {
-    let opened = false;
-    let retryHandle = null;
-    const attempt = (source='callback') => {
-      if (opened) return;
-      const current = token === turnNarrationToken && phase !== 'over' && !gamePaused && gameVisible();
-      if (!current) {
-        console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_CANCELLED', {source, token, currentToken:turnNarrationToken, phase, gamePaused, gameVisible:gameVisible()});
-        return;
-      }
-      // Before the first faceoff of a round no answer can be resolving. Clear a stale
-      // lock here so it cannot permanently suppress the faceoff after narration ends.
-      // La lectura inicial no resuelve ninguna respuesta: un bloqueo residual
-      // no debe impedir que se abra el careo y dejar la partida congelada.
-      if (phase === 'play' && !faceoffDoneThisRound && turnResolving) {
-        console.warn('[FACE OFF TRACE]', 'FACEOFF_CLEAR_STALE_RESOLVING_LOCK', {source, round:roundIndex + 1});
-        turnResolving = false;
-      }
-      if (turnResolving) {
-        console.warn('[FACE OFF TRACE]', 'FACEOFF_CLEAR_PRECAREO_LOCK', {source, round:roundIndex + 1});
-        turnResolving = false;
-      }
-      console.info('[FACE OFF TRACE]', 'FACEOFF_GATE', {source, valid:true, token, currentToken:turnNarrationToken, phase, gamePaused, turnResolving, round:roundIndex + 1});
-      startFaceoff();
-      // Fallback duro: no dejar la partida congelada si una condición de estado
-      // impide abrir el careo aunque el panel y sus botones existan en el HTML.
-      if (!faceoffActive) {
-        const panel = $('#faceoff');
-        const team1 = $('#faceoffTeam1');
-        const team2 = $('#faceoffTeam2');
-        if (panel && team1 && team2 && phase === 'play' && !gamePaused) {
-          console.warn('[FACE OFF TRACE]', 'FACEOFF_FORCE_OPEN_FALLBACK', {source, round:roundIndex + 1});
-          turnResolving = false;
-          faceoffActive = true;
-          faceoffDoneThisRound = false;
-          careoStartedThisRound = true;
-          panel.classList.remove('hidden');
-          panel.hidden = false;
-          panel.style.display = 'flex';
-          panel.setAttribute('aria-hidden','false');
-          const fq = $('#faceoffQuestion');
-          if (fq) fq.textContent = qText(questions[roundIndex]);
-          team1.textContent = '🦷 ' + (teamNames[0] || 'JUGADOR 1');
-          team2.textContent = gameConfig.mode === 'cpu'
-            ? '🤖 ' + (teamNames[1] || 'COMPUTADORA')
-            : '🦷 ' + (teamNames[1] || 'JUGADOR 2');
-          $('#answerEntry')?.classList.add('hidden');
-          document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
-          updateCareoButton();
-          updateTurnUI();
-          saveActiveGame();
-          scheduleFaceoffCpuWin();
-        }
-      }
-      // Mark complete only after startFaceoff actually changed the game into faceoff state.
-      if (faceoffActive) {
-        opened = true;
-        if (retryHandle) clearTimeout(retryHandle);
-      } else {
-        console.info('[FACE OFF TRACE]', 'FACEOFF_GATE_RETRY', {source, reason:'faceoff-not-active', round:roundIndex + 1});
-        retryHandle = setTimeout(() => attempt('retry-open'), 200);
-      }
-    };
-    return attempt;
-  })();
-
   const readQuestionThenFaceoff = () => {
-    if (token !== turnNarrationToken || phase === 'over' || !gameVisible()) return;
+    if (token !== turnNarrationToken || phase === 'over' || !gameVisible() || gamePaused) return;
     const questionText = qText(q);
     questionVisibleThisRound = true;
     const questionEl = $('#question');
     if (questionEl) questionEl.textContent = questionText;
+    const faceoffQuestion = $('#faceoffQuestion');
+    if (faceoffQuestion) faceoffQuestion.textContent = questionText;
+    // Mostrar pregunta y botones antes de iniciar la locución; permanecen visibles
+    // mientras la narradora habla para que ambos equipos puedan ver la pregunta.
+    turnResolving = false;
+    startFaceoff();
     updateCareoButton();
-    const delay = speechEstimateMs(questionText, .9);
-    console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_START', {round:roundIndex + 1, textLength:questionText.length, delayMs:delay, voiceAvailable:!!window.DentistasNarrator?.speak});
-    let questionSpeechFinished = false;
-    const finishQuestionSpeech = (source='callback') => {
-      if (questionSpeechFinished) return;
-      questionSpeechFinished = true;
-      clearTimeout(faceoffWatchdog);
-      console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_END', {source, round:roundIndex + 1});
-      showFaceoffOnce(source);
-    };
-    // Respaldo independiente de la API de voz: algunos WebView/Android no
-    // disparan onend de forma fiable y la partida quedaba detenida en “careo en curso”.
-    const faceoffWatchdog = setTimeout(() => finishQuestionSpeech('watchdog-fallback'), delay + 1800);
-    setTimeout(() => finishQuestionSpeech('duration-fallback'), delay);
+    console.info('[FACE OFF TRACE]', 'QUESTION_VISIBLE_AND_SPEECH_START', {round:roundIndex+1, textLength:questionText.length, faceoffActive});
     const spoken = narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
-      rate:.9,
-      onend:() => finishQuestionSpeech('voice-onend'),
-      onerror:() => finishQuestionSpeech('voice-onerror')
-    }, delay);
-    if (spoken === false) finishQuestionSpeech('voice-unavailable');
+      rate:.9
+    }, Math.max(2600, Math.min(14000, Math.round((questionText.length / 12.5) * 1000 + 1000))));
+    if (spoken === false) console.warn('[FACE OFF TRACE]', 'QUESTION_SPEECH_UNAVAILABLE');
   };
 
   const intro = isEn()
