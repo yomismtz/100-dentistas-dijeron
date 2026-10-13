@@ -29,7 +29,7 @@ Los puntos del tablero son ponderaciones lúdicas: la respuesta con mayor puntua
 
 ## Privacidad
 
-La versión actual no requiere cuenta y no declara permisos sensibles como ubicación, cámara, contactos o micrófono. Las preferencias del juego se guardan localmente. La política deberá actualizarse antes de publicar cualquier versión que incorpore reconocimiento de voz, analítica, servicios en línea u otros tratamientos de datos.
+La versión actual no requiere cuenta. Las preferencias y el progreso se guardan localmente. El manifiesto declara permisos de micrófono para reconocimiento de voz, Internet y dispositivos cercanos; consulta `docs/privacy.html` y `docs/data-safety.html`. La declaración de Google Play debe corresponder al comportamiento real del APK/AAB publicado.
 
 ## Compilar
 
