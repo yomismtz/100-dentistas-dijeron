@@ -793,3 +793,36 @@ button{color:var(--text)}
   #game:not(.hidden) .careoLaunchRow{min-height:0;padding:.1rem 0 .25rem}
   #game:not(.hidden) .startFaceoffButton{min-height:38px;padding:.35rem .8rem}
 }
+
+
+/* Corrección de ajuste para Android: el tablero y la barra inferior comparten
+   el alto visible real, sin sumar porcentajes que desborden la pantalla. */
+#game:not(.hidden){
+  height:100dvh!important; min-height:0!important; display:flex!important;
+  flex-direction:column!important; overflow:hidden!important;
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+#game:not(.hidden) .topbar{flex:0 0 9%;height:auto;min-height:9dvh}
+#game:not(.hidden) .board{
+  flex:1 1 0;height:auto!important;min-height:0!important;margin:0 1.2%;
+  padding:clamp(8px,1.2dvh,16px) clamp(10px,3vw,48px);overflow:hidden;
+}
+#game:not(.hidden) .scorebar{
+  flex:0 0 18%;height:auto!important;min-height:76px;
+  padding:clamp(4px,1dvh,12px) clamp(8px,1.5vw,24px);
+}
+#game:not(.hidden) .careoLaunchRow{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin:.35rem 0}
+#game:not(.hidden) .startFaceoffButton{padding:.55rem 1rem;min-height:44px}
+#game:not(.hidden) .careoHint{font-size:clamp(11px,1.2vw,16px)}
+#game:not(.hidden) #faceoff{height:100dvh!important;min-height:0!important;justify-content:center!important}
+#game:not(.hidden) #faceoffQuestion{
+  min-height:clamp(72px,12dvh,150px);display:flex;align-items:center;justify-content:center;
+  white-space:normal;overflow-wrap:anywhere;text-align:center;
+}
+@media(max-height:520px){
+  #game:not(.hidden) .topbar{flex-basis:10%;min-height:38px}
+  #game:not(.hidden) .scorebar{flex-basis:20%;min-height:58px}
+  #game:not(.hidden) .board{padding:4px 10px}
+  #game:not(.hidden) .questionRow h1{font-size:clamp(16px,2.5vw,28px)}
+  #game:not(.hidden) .careoLaunchRow{margin:2px 0}
+}
