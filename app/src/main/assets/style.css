@@ -472,14 +472,61 @@ html,body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Aria
 #game:not(.hidden) #faceoff{
   position:fixed!important;
   inset:0!important;
-  z-index:55!important;
+  z-index:150!important;
   width:auto!important;
   min-height:100vh!important;
+  height:100dvh!important;
   box-sizing:border-box;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:clamp(10px,2vh,22px)!important;
+  padding:clamp(16px,4vw,48px)!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  pointer-events:auto!important;
   background:radial-gradient(circle at 50% 38%,#123e55f5 0,#061923f8 58%,#02090dfb 100%);
   border:0;
   border-radius:0;
   box-shadow:inset 0 0 0 5px #d9a83f,inset 0 0 70px #000;
+}
+#faceoff .faceoffTitle,
+#faceoff .faceoffQuestion,
+#faceoff>p,
+#faceoff .faceoffButtons{
+  position:relative;
+  z-index:151;
+  flex:0 0 auto;
+  width:min(1050px,92vw);
+  max-width:100%;
+}
+#faceoff .faceoffTitle{
+  text-align:center;
+  font-size:clamp(28px,5vw,54px);
+}
+#faceoff>p{
+  margin:0;
+  text-align:center;
+  line-height:1.35;
+}
+#faceoff .faceoffButtons{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:clamp(10px,2vw,20px)!important;
+}
+#faceoff .faceoffButtons button{
+  min-width:0;
+  min-height:clamp(72px,13vh,112px);
+  padding:clamp(12px,2.5vw,24px);
+  white-space:normal;
+  overflow-wrap:anywhere;
+  pointer-events:auto!important;
+  touch-action:manipulation;
+}
+@media(max-width:520px){
+  #faceoff .faceoffButtons{grid-template-columns:1fr!important}
+  #faceoff .faceoffButtons button{min-height:64px}
 }
 #game:not(.hidden) .faceoffQuestion{
   width:min(1050px,88vw);
