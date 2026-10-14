@@ -1,10 +1,11 @@
-name: Deploy website to GitHub Pages
+name: Deploy website and playable game to GitHub Pages
 
 on:
   push:
     branches: [ main ]
     paths:
       - 'docs/**'
+      - 'app/src/main/assets/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -30,10 +31,19 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Assemble website and game
+        run: |
+          mkdir -p _site/game
+          cp -R docs/. _site/
+          cp -R app/src/main/assets/. _site/game/
+          test -s _site/game/index.html
+          test -s _site/game/app.js
+          test -s _site/game/style.css
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: docs
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
