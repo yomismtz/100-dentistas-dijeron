@@ -861,7 +861,11 @@ function finishFaceoff(winner) {
     faceoff.style.display = '';
     faceoff.setAttribute('aria-hidden','true');
   }
-  $('#answerEntry')?.classList.add('hidden');
+  const answerEntry = $('#answerEntry');
+  answerEntry?.classList.add('hidden');
+  if (answerEntry) {
+    ['position','left','top','transform','width','max-height','overflow-y','z-index','padding','border','border-radius','background','box-shadow'].forEach(prop => answerEntry.style.removeProperty(prop));
+  }
 
   currentTeam = winner === 'cpu' ? 1 : Number(winner) || 0;
   faceoffDoneThisRound = true;
@@ -884,7 +888,30 @@ function finishFaceoff(winner) {
     const questionDelay = Math.max(2200, Math.min(12000, Math.round((questionText.length / 12) * 1000 + 1000)));
     const beginAnswering = () => {
       turnResolving = false;
-      $('#answerEntry')?.classList.remove('hidden');
+      const answerEntry = $('#answerEntry');
+      answerEntry?.classList.remove('hidden');
+      // Keep the response controls above the game board so they are not clipped
+      // by the small-height Android WebView layout.
+      if (answerEntry) {
+        answerEntry.style.position = 'fixed';
+        answerEntry.style.left = '50%';
+        answerEntry.style.top = '50%';
+        answerEntry.style.transform = 'translate(-50%, -50%)';
+        answerEntry.style.width = 'min(92vw, 760px)';
+        answerEntry.style.maxHeight = '80dvh';
+        answerEntry.style.overflowY = 'auto';
+        answerEntry.style.zIndex = '10020';
+        answerEntry.style.padding = '18px';
+        answerEntry.style.border = '2px solid #72f5c2';
+        answerEntry.style.borderRadius = '20px';
+        answerEntry.style.background = 'rgba(18, 7, 35, .98)';
+        answerEntry.style.boxShadow = '0 0 0 100vmax rgba(5, 1, 15, .72), 0 0 35px rgba(114,245,194,.25)';
+      }
+      const answerInput = $('#answerText');
+      if (answerInput) {
+        answerInput.placeholder = isEn() ? 'Type your answer…' : 'Escribe tu respuesta…';
+        setTimeout(() => answerInput.focus(), 120);
+      }
       updateTurnUI();
       startTimer(TURN_SECONDS);
       if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
@@ -997,7 +1024,16 @@ function startFaceoff() {
   saveActiveGame();
 
   const fq = $('#faceoffQuestion');
-  if (fq) fq.textContent = qText(questions[roundIndex]);
+  const activeQuestion = questions[roundIndex];
+  const visibleQuestionText = qText(activeQuestion) || activeQuestion?.q || activeQuestion?.open_q || (isEn() ? 'Listen to the question and answer first.' : 'Escucha la pregunta y responde primero.');
+  if (fq) {
+    fq.textContent = visibleQuestionText;
+    fq.style.color = '#ffffff';
+    fq.style.opacity = '1';
+    fq.style.visibility = 'visible';
+  }
+  const boardQuestion = $('#question');
+  if (boardQuestion) boardQuestion.textContent = visibleQuestionText;
 
   faceoff.classList.remove('hidden');
   faceoff.hidden = false;
@@ -1079,12 +1115,17 @@ function beginTurnAfterQuestion(startCareo = false) {
 
   const readQuestionThenFaceoff = () => {
     if (token !== turnNarrationToken || phase === 'over' || !gameVisible() || gamePaused) return;
-    const questionText = qText(q);
+    const questionText = qText(q) || q?.q || q?.open_q || (isEn() ? 'Listen to the question and answer first.' : 'Escucha la pregunta y responde primero.');
     questionVisibleThisRound = true;
     const questionEl = $('#question');
     if (questionEl) questionEl.textContent = questionText;
     const faceoffQuestion = $('#faceoffQuestion');
-    if (faceoffQuestion) faceoffQuestion.textContent = questionText;
+    if (faceoffQuestion) {
+      faceoffQuestion.textContent = questionText;
+      faceoffQuestion.style.color = '#ffffff';
+      faceoffQuestion.style.opacity = '1';
+      faceoffQuestion.style.visibility = 'visible';
+    }
     // Mostrar pregunta y botones antes de iniciar la locución; permanecen visibles
     // mientras la narradora habla para que ambos equipos puedan ver la pregunta.
     turnResolving = false;
