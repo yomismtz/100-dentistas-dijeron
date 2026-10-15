@@ -826,3 +826,18 @@ button{color:var(--text)}
   #game:not(.hidden) .questionRow h1{font-size:clamp(16px,2.5vw,28px)}
   #game:not(.hidden) .careoLaunchRow{margin:2px 0}
 }
+
+/* Keep the faceoff question legible over the dimmed game board. */
+#game:not(.hidden) #faceoffQuestion {
+  color: #fff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: clamp(20px, 2.5vw, 36px);
+  font-weight: 900;
+  line-height: 1.25;
+  padding: 12px 18px;
+}
+/* Answer entry becomes a centered dialog after a team wins the faceoff. */
+#game:not(.hidden) #answerEntry:not(.hidden) {
+  display: flex !important;
+}
