@@ -537,9 +537,64 @@ function shuffle(items) {
   return a;
 }
 
+const RECENT_QUESTION_HISTORY_KEY = 'dentistas-recent-question-history-v1';
+const RECENT_HISTORY_LIMIT = 48;
+
+function readRecentQuestionHistory() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(RECENT_QUESTION_HISTORY_KEY) || '[]');
+    return Array.isArray(stored) ? stored.filter(entry => entry && typeof entry.key === 'string') : [];
+  } catch (_) { return []; }
+}
+
+function questionCategory(q) {
+  return String(areaForQuestion(q) || 'General').trim() || 'General';
+}
+
+function chooseVariedQuestions(pool, count, recentKeys) {
+  const unique = dedupeQuestionPool(pool);
+  if (unique.length <= count) return shuffle(unique);
+  const recentSet = new Set(recentKeys);
+  let fresh = unique.filter(q => !recentSet.has(questionKey(q)));
+  // Si una categoría seleccionada tiene un banco reducido, no dejamos que la rotación se quede sin preguntas.
+  if (fresh.length < count) fresh = unique;
+  const randomized = shuffle(fresh);
+  const picked = [];
+  const categoryCounts = new Map();
+  // Primero distribuir por categoría, priorizando las menos representadas y aleatorizando empates.
+  while (picked.length < count && randomized.length) {
+    let bestCount = Infinity;
+    let bestIndices = [];
+    for (let i = 0; i < randomized.length; i++) {
+      const category = questionCategory(randomized[i]);
+      const used = categoryCounts.get(category) || 0;
+      if (used < bestCount) { bestCount = used; bestIndices = [i]; }
+      else if (used === bestCount) bestIndices.push(i);
+    }
+    const chosenIndex = bestIndices[Math.floor(Math.random() * bestIndices.length)];
+    const q = randomized.splice(chosenIndex, 1)[0];
+    picked.push(q);
+    const category = questionCategory(q);
+    categoryCounts.set(category, (categoryCounts.get(category) || 0) + 1);
+  }
+  return picked;
+}
+
+function recordQuestionHistory(selected) {
+  try {
+    const history = readRecentQuestionHistory();
+    const updated = history.concat(selected.map(q => ({key:questionKey(q), category:questionCategory(q), usedAt:Date.now()})))
+      .filter(entry => entry.key);
+    localStorage.setItem(RECENT_QUESTION_HISTORY_KEY, JSON.stringify(updated.slice(-RECENT_HISTORY_LIMIT)));
+  } catch (_) {}
+}
+
 function chooseGameQuestions() {
   const pool = filteredPool();
-  questions = shuffle(pool).slice(0, Math.min(GAME_SIZE, pool.length));
+  const history = readRecentQuestionHistory();
+  const selected = chooseVariedQuestions(pool, Math.min(GAME_SIZE, pool.length), history.map(entry => entry.key));
+  questions = selected;
+  recordQuestionHistory(selected);
 }
 
 function roundMultiplier(index = roundIndex) {
