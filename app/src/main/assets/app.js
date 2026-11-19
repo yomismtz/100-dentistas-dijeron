@@ -2582,46 +2582,64 @@ function simpleStartFlow(){
 }
 function simpleChooseMode(){
   openModal(`
-    <h2>¿CÓMO QUIERES JUGAR?</h2>
+    <h2>¿CÓMO QUIEREN JUGAR?</h2>
+    <p>Siempre se juega entre personas. No hay rival de computadora.</p>
     <div class="simpleChoiceGrid">
-      <button class="simpleChoice" data-simple-mode="solo">🦷 YO SOLO</button>
-      <button class="simpleChoice" data-simple-mode="cpu">🤖 CONTRA LA COMPUTADORA</button>
-      <button class="simpleChoice" data-simple-mode="duo">👥 CONTRA OTRO JUGADOR</button>
+      <button class="simpleChoice" data-simple-mode="duo">👥 2 JUGADORES</button>
+      <button class="simpleChoice" data-simple-mode="teams">🏆 2 EQUIPOS</button>
     </div>
   `);
   document.querySelectorAll('[data-simple-mode]').forEach(btn=>btn.onclick=()=>{
     const mode=btn.dataset.simpleMode;
-    gameConfig.mode=mode==='cpu'?'cpu':mode==='duo'?'1v1':'teams';
+    gameConfig.mode=mode==='duo'?'1v1':'teams';
     gameConfig.teamSize=1;
-    teamNames=mode==='cpu'?['JUGADOR','COMPUTADORA']:mode==='duo'?['JUGADOR 1','JUGADOR 2']:['JUGADOR','JUGADOR 2'];
+    teamNames=mode==='duo'?['JUGADOR 1','JUGADOR 2']:['EQUIPO 1','EQUIPO 2'];
     teamMemberIndex=[0,0];
-    simpleChooseCharacters(mode);
+    if(mode==='teams') simpleChooseTeamSize();
+    else simpleChooseCharacters('duo',0);
   });
 }
-function simpleChooseCharacters(mode){
-  const chars=typeof window.DentistasCharacterDisplayOrder==='function'
-    ? window.DentistasCharacterDisplayOrder().map(x=>x.character)
-    : (Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[]);
-  const unlocked=chars.filter(ch=>typeof window.DentistasCharacterUnlocked==='function'?window.DentistasCharacterUnlocked(ch):ch.name==='NOVA');
-  const list=unlocked.length?unlocked:chars;
-  const buttons=list.map(ch=>`<button class="simpleChoice" data-simple-character="${ch.name}">${ch.specialty||ch.name}</button>`).join('');
-  openModal(`<h2>ELIGE TU PERSONAJE</h2><div class="simpleChoiceGrid">${buttons}</div>`);
+function simpleChooseTeamSize(){
+  openModal(`
+    <h2>¿CUÁNTOS INTEGRANTES POR EQUIPO?</h2>
+    <div class="simpleChoiceGrid">
+      <button class="simpleChoice" data-team-size="2">2 POR EQUIPO</button>
+      <button class="simpleChoice" data-team-size="3">3 POR EQUIPO</button>
+      <button class="simpleChoice" data-team-size="4">4 POR EQUIPO</button>
+      <button class="simpleChoice" data-team-size="5">5 POR EQUIPO</button>
+    </div>
+  `);
+  document.querySelectorAll('[data-team-size]').forEach(btn=>btn.onclick=()=>{
+    gameConfig.teamSize=Number(btn.dataset.teamSize)||2;
+    teamNames=['EQUIPO 1','EQUIPO 2'];
+    teamMemberIndex=[0,0];
+    simpleChooseCharacters('teams',0);
+  });
+}
+function simpleDefaultCharacters(){
+  const all=Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[];
+  const names=['NOVA','PAULA','IVÁN','OLIVIA','BRUNO','ALEX'];
+  return names.map(n=>all.find(ch=>ch.name===n)).filter(Boolean);
+}
+function simpleChooseCharacters(mode,playerIndex=0){
+  const list=simpleDefaultCharacters();
+  const label=mode==='duo'?(playerIndex===0?'JUGADOR 1':'JUGADOR 2'):(playerIndex===0?'EQUIPO 1':'EQUIPO 2');
+  const buttons=list.map(ch=>`<button class="simpleChoice characterChoice" data-simple-character="${ch.name}"><span class="characterChoiceIcon">${ch.icon||'🦷'}</span><span>${ch.name}</span><small>${ch.specialty||ch.category||'Odontología'}</small></button>`).join('');
+  openModal(`<h2>ELIGE PERSONAJE · ${label}</h2><p>Los seis personajes están disponibles desde el inicio.</p><div class="simpleChoiceGrid">${buttons}</div>`);
   document.querySelectorAll('[data-simple-character]').forEach(btn=>btn.onclick=()=>{
-    gameConfig.playerCharacter=btn.dataset.simpleCharacter;
-    if(mode==='cpu'){
-      const pool=chars.filter(ch=>ch.name!==gameConfig.playerCharacter);
-      gameConfig.cpuCharacter=(pool[Math.floor(Math.random()*pool.length)]||{name:'NOVA'}).name;
-    }else if(mode==='duo'){
-      gameConfig.cpuCharacter='';
-    }else{
-      gameConfig.cpuCharacter='';
+    const selected=btn.dataset.simpleCharacter;
+    if(playerIndex===0){
+      gameConfig.playerCharacter=selected;
+      simpleChooseCharacters(mode,1);
+      return;
     }
+    gameConfig.secondPlayerCharacter=selected;
+    gameConfig.cpuCharacter='';
     gameConfig.difficulty='mixed';
     closeModal(false);
     startNewGame();
   });
 }
-
 $('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
 $('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
 $('#help').onclick = showHelp;
