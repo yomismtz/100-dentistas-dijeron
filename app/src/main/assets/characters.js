@@ -85,6 +85,10 @@ const CHARACTERS = [
     stats:[['Conocimiento',5],['Diagnóstico',5],['Precisión',5],['Velocidad',5],['Complejidad',5]] }
 ]
 
+// Identidad visual de los seis personajes iniciales (emojis exclusivos).
+const STARTER_CHARACTER_EMOJIS = { 'NOVA':'🎓', 'PAULA':'🧠', 'IVÁN':'🧪', 'OLIVIA':'🦋', 'BRUNO':'🛠️', 'ALEX':'🦴' };
+CHARACTERS.forEach(character => { if (STARTER_CHARACTER_EMOJIS[character.name]) character.icon = STARTER_CHARACTER_EMOJIS[character.name]; });
+
 window.DentistasCharacters = CHARACTERS;
 
 
