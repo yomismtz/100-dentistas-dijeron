@@ -2698,7 +2698,7 @@ function simpleChooseCharacters(mode,playerIndex=0){
 $('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
 $('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
 $('#help').onclick = showHelp;
-$('#prev').onclick = previousRound;
+$('#prev')?.addEventListener('click', previousRound);
 $('#next').onclick = nextRound;
 $('#roundContinue')?.addEventListener('click', nextRound);
 $('#teamBack')?.addEventListener('click', toggleTeamBack);
@@ -2711,10 +2711,10 @@ $('#revealRemaining')?.addEventListener('click', () => {
   setRoundAdvanceReady(false);
   revealRemainingAndNarrate(() => showRoundContinueButton());
 });
-$('#buzz').onclick = () => addStrike('manual');
-$('#undo').onclick = undoAward;
-$('#resetRound').onclick = resetRound;
-$('#menu').onclick = showMenu;
+$('#buzz')?.addEventListener('click', () => addStrike('manual'));
+$('#undo')?.addEventListener('click', undoAward);
+$('#resetRound')?.addEventListener('click', resetRound);
+$('#menu')?.addEventListener('click', showMenu);
 const exitGame = $('#exitGame');
 if (exitGame) exitGame.onclick = () => {
   const msg = isEn() ? 'Exit this game and return to the main menu?' : '¿Salir de esta partida y volver al menú principal?';
