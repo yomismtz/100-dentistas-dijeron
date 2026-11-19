@@ -12,18 +12,18 @@
     <button data-lang="es">ES</button><button data-lang="en">EN</button>
     <button id="voiceToggle" class="voiceToggle" aria-label="Narradora" title="Narradora">🔊</button>
   </div>
-  <main id="home" class="screen home">
-    <img src="portada_tiny.jpg" alt="Así los dentistas lo dijeron">
-    <img class="homeLogo" src="logo_app.webp" alt="Así los dentistas lo dijeron"><div class="homeBadge">🦷 JUEGA · APRENDE · DESBLOQUEA</div>
+  <main id="home" class="screen home simpleHome">
     <div class="homeGlow" aria-hidden="true"></div>
-    <div class="homeActions">
-      <button id="mode1v1" class="primary">👤 1 CONTRA 1</button>
-      <button id="modeTeams">👥 EQUIPO CONTRA EQUIPO</button>
-      <button id="modeCpu">🤖 CONTRA LA COMPUTADORA</button>
-      <button id="progression">🏆 PROGRESIÓN · 50 PERSONAJES</button><button id="stats">📊 ESTADÍSTICAS</button><button id="achievements">🏆 LOGROS</button><button id="audioSettings">🔊 AUDIO</button><button id="studyMode">📚 MODO ESTUDIO</button><button id="help">¿CÓMO SE JUEGA?</button>
+    <img class="homeLogo" src="logo_app.webp" alt="Así los dentistas lo dijeron">
+    <h1 class="simpleTitle">Así los dentistas lo dijeron</h1>
+    <p class="simpleSubtitle">Juego de preguntas odontológicas</p>
+    <button id="simplePlay" class="simplePlay" type="button">▶ INICIAR</button>
+    <div class="homeActions legacyHomeControls" aria-hidden="true">
+      <button id="mode1v1" class="primary">1 CONTRA 1</button><button id="modeTeams">EQUIPO CONTRA EQUIPO</button><button id="modeCpu">CONTRA LA COMPUTADORA</button>
+      <button id="progression">PROGRESIÓN</button><button id="stats">ESTADÍSTICAS</button><button id="achievements">LOGROS</button><button id="audioSettings">AUDIO</button><button id="studyMode">MODO ESTUDIO</button><button id="help">¿CÓMO SE JUEGA?</button>
     </div>
   </main>
-  <main id="game" class="screen hidden" aria-live="polite">
+<main id="game" class="screen hidden" aria-live="polite">
     <header class="topbar">
       <button id="prev" class="iconBtn" aria-label="Ronda anterior">◀</button>
       <div class="roundInfo"><span id="round">Ronda 1 · ×1</span><span id="progress">1 / 8</span><span id="turn">TURNO: EQUIPO 1</span></div>
