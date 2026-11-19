@@ -852,3 +852,44 @@ button{color:var(--text)}
 .simpleChoiceGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;max-height:65vh;overflow-y:auto;padding:4px}
 .simpleChoice{min-height:54px;padding:12px;border:2px solid #79f2c0;border-radius:14px;background:linear-gradient(180deg,#32195c,#1b1032);color:white;font-size:15px;font-weight:900}
 .simpleChoice:active{transform:scale(.98);filter:brightness(1.2)}
+
+/* 2026 Simplified game UI: remove legacy controls and center the play flow. */
+#game:not(.hidden) .topbar .iconBtn#prev,
+#game:not(.hidden) .topbar .iconBtn#menu,
+#game:not(.hidden) .careoHint,
+#game:not(.hidden) .team .award,
+#game:not(.hidden) .centerControls #buzz,
+#game:not(.hidden) .centerControls #undo,
+#game:not(.hidden) .centerControls #resetRound { display:none!important; }
+#game:not(.hidden) .topbar { background:#130a24!important;border-bottom:1px solid #50326d!important; }
+#game:not(.hidden) .roundInfo { gap:.5rem!important; }
+#game:not(.hidden) .roundInfo #round { font-size:clamp(14px,3.8vw,20px)!important; }
+#game:not(.hidden) .board { background:#10091e!important;border:2px solid #5b39a3!important;box-shadow:none!important;border-radius:20px!important; }
+#game:not(.hidden) .questionRow h1 { font-size:clamp(20px,5vw,32px)!important; }
+#game:not(.hidden) .timerBox,#game:not(.hidden) .bank { border-color:#7652ad!important;background:#1a102a!important;box-shadow:none!important; }
+#game:not(.hidden) .answers { gap:8px!important; }
+#game:not(.hidden) .answer { border-color:#63468e!important;background:#1b102b!important; }
+#game:not(.hidden) .answer.covered { background:linear-gradient(180deg,#402064,#241339)!important;border-color:#8a58df!important; }
+#game:not(.hidden) .scorebar { background:#130a24!important;border-top:1px solid #50326d!important; }
+#game:not(.hidden) .team { border:0!important;background:transparent!important;box-shadow:none!important; }
+#game:not(.hidden) .team.active { background:#281545!important;border-radius:14px!important; }
+#game:not(.hidden) .teamName { border:0!important;background:transparent!important;font-size:clamp(10px,3vw,14px)!important; }
+#game:not(.hidden) .team strong { font-size:clamp(28px,7vw,44px)!important; }
+#game:not(.hidden) .centerControls { max-width:initial!important; }
+#game:not(.hidden) .centerControls button { border-color:#7652ad!important;background:#291743!important; }
+#game:not(.hidden) .faceoff:not(.hidden) {
+ position:fixed!important;inset:0!important;z-index:10010!important;width:100vw!important;height:100dvh!important;
+ max-width:none!important;margin:0!important;border:0!important;border-radius:0!important;
+ display:flex!important;flex-direction:column!important;justify-content:center!important;gap:clamp(12px,3vh,28px)!important;
+ padding:clamp(18px,5vw,54px)!important;background:rgba(13,7,24,.97)!important;box-shadow:none!important;
+}
+#game:not(.hidden) .faceoffTitle { font-size:clamp(30px,7vw,56px)!important;margin:0!important; }
+#game:not(.hidden) #faceoffQuestion { min-height:0!important;padding:clamp(14px,4vw,34px)!important;border-radius:22px!important;border:2px solid #7c45e6!important;background:#1a0d2c!important;font-size:clamp(22px,5vw,38px)!important; }
+#game:not(.hidden) .faceoff:not(.hidden) p { font-size:clamp(14px,3.6vw,20px)!important;margin:0!important; }
+#game:not(.hidden) .faceoffButtons { display:grid!important;grid-template-columns:1fr 1fr!important;gap:clamp(10px,3vw,26px)!important;width:100%!important; }
+#game:not(.hidden) .faceoffButtons button { min-height:clamp(86px,18vh,150px)!important;border-radius:22px!important;border:2px solid #71f0bd!important;font-size:clamp(20px,5vw,34px)!important;background:linear-gradient(145deg,#6121a2,#28123d)!important; }
+#game:not(.hidden) #faceoffTeam1 { background:linear-gradient(145deg,#b72b9e,#672060)!important; }
+#game:not(.hidden) #answerEntry:not(.hidden) { position:fixed!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:min(92vw,600px)!important;max-height:82dvh!important;overflow-y:auto!important;z-index:10020!important;padding:20px!important;border:2px solid #71f0bd!important;border-radius:22px!important;background:#160b25!important;box-shadow:0 0 0 100vmax #05020dbb!important; }
+#game:not(.hidden) #answerText { font-size:18px!important;padding:14px!important;border-radius:12px!important; }
+#game:not(.hidden) #answerMic { min-height:56px!important;flex:1!important;border-radius:14px!important;background:#54237e!important;border:1px solid #71f0bd!important; }
+#game:not(.hidden) .answerFeedback { font-size:16px!important;text-align:center!important; }
