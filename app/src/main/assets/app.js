@@ -2562,6 +2562,66 @@ window.addEventListener('pagehide', saveActiveGame);
 window.addEventListener('beforeunload', saveActiveGame);
 
 $('#mode1v1').onclick = () => showPlayerCharacterSelector(showOneVsOneSetup);
+$('#simplePlay')?.addEventListener('click', simpleStartFlow);
+
+/* Flujo simplificado de inicio: categoría -> modo -> personajes. */
+function simpleStartFlow(){
+  const loadedAreas = availableAreas();
+  const preferred = ['Ortodoncia','Ortopedia maxilar','Desarrollo craneofacial','Desarrollo de la oclusión','Fisiología','Oclusión funcional y ajuste oclusal avanzado','Oclusión','Anatomía dental'];
+  const choices = preferred.filter(a => loadedAreas.includes(a));
+  const areas = choices.length ? choices : loadedAreas;
+  openModal(`
+    <h2>¿QUÉ CATEGORÍA QUIERES JUGAR?</h2>
+    <p>Selecciona una categoría para esta partida.</p>
+    <div class="simpleChoiceGrid">${areas.map(a=>`<button class="simpleChoice" data-simple-area="${a.replace(/"/g,'&quot;')}">${a}</button>`).join('')}</div>
+  `);
+  document.querySelectorAll('[data-simple-area]').forEach(btn=>btn.onclick=()=>{
+    gameConfig.selectedAreas=[btn.dataset.simpleArea];
+    simpleChooseMode();
+  });
+}
+function simpleChooseMode(){
+  openModal(`
+    <h2>¿CÓMO QUIERES JUGAR?</h2>
+    <div class="simpleChoiceGrid">
+      <button class="simpleChoice" data-simple-mode="solo">🦷 YO SOLO</button>
+      <button class="simpleChoice" data-simple-mode="cpu">🤖 CONTRA LA COMPUTADORA</button>
+      <button class="simpleChoice" data-simple-mode="duo">👥 CONTRA OTRO JUGADOR</button>
+    </div>
+  `);
+  document.querySelectorAll('[data-simple-mode]').forEach(btn=>btn.onclick=()=>{
+    const mode=btn.dataset.simpleMode;
+    gameConfig.mode=mode==='cpu'?'cpu':mode==='duo'?'1v1':'teams';
+    gameConfig.teamSize=1;
+    teamNames=mode==='cpu'?['JUGADOR','COMPUTADORA']:mode==='duo'?['JUGADOR 1','JUGADOR 2']:['JUGADOR','JUGADOR 2'];
+    teamMemberIndex=[0,0];
+    simpleChooseCharacters(mode);
+  });
+}
+function simpleChooseCharacters(mode){
+  const chars=typeof window.DentistasCharacterDisplayOrder==='function'
+    ? window.DentistasCharacterDisplayOrder().map(x=>x.character)
+    : (Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[]);
+  const unlocked=chars.filter(ch=>typeof window.DentistasCharacterUnlocked==='function'?window.DentistasCharacterUnlocked(ch):ch.name==='NOVA');
+  const list=unlocked.length?unlocked:chars;
+  const buttons=list.map(ch=>`<button class="simpleChoice" data-simple-character="${ch.name}">${ch.specialty||ch.name}</button>`).join('');
+  openModal(`<h2>ELIGE TU PERSONAJE</h2><div class="simpleChoiceGrid">${buttons}</div>`);
+  document.querySelectorAll('[data-simple-character]').forEach(btn=>btn.onclick=()=>{
+    gameConfig.playerCharacter=btn.dataset.simpleCharacter;
+    if(mode==='cpu'){
+      const pool=chars.filter(ch=>ch.name!==gameConfig.playerCharacter);
+      gameConfig.cpuCharacter=(pool[Math.floor(Math.random()*pool.length)]||{name:'NOVA'}).name;
+    }else if(mode==='duo'){
+      gameConfig.cpuCharacter='';
+    }else{
+      gameConfig.cpuCharacter='';
+    }
+    gameConfig.difficulty='mixed';
+    closeModal(false);
+    startNewGame();
+  });
+}
+
 $('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
 $('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
 $('#help').onclick = showHelp;
