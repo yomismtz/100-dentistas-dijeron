@@ -117,13 +117,13 @@ button:disabled{cursor:not-allowed;opacity:.48;filter:saturate(.55)}
 .startFaceoffButton{min-height:42px;padding:0 20px;border:0;border-radius:12px;background:linear-gradient(100deg,#ffd36e,#f2a95a);color:#1c2830;font-size:12px;font-weight:1000;letter-spacing:.06em;box-shadow:0 7px 18px #ffd36e24}
 .startFaceoffButton:not(:disabled):hover{filter:brightness(1.08);transform:translateY(-1px)}
 .careoHint{color:#9ab5bd;font-size:11px}
-.faceoff{display:grid;grid-template-columns:minmax(150px,.75fr) minmax(140px,1fr) minmax(270px,1.3fr);align-items:center;gap:13px;padding:13px 16px;border:1px solid #e6b75b66;border-radius:17px;background:linear-gradient(105deg,#42351e,#183442 70%);box-shadow:0 8px 24px #0003}
-.faceoffCopy{display:flex;flex-direction:column;gap:3px}
+.faceoff{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 16px;border:1px solid #e6b75b66;border-radius:17px;background:linear-gradient(105deg,#42351e,#183442 70%);box-shadow:0 8px 24px #0003}
+.faceoffCopy{display:flex;flex:1;flex-direction:column;gap:3px;min-width:180px}
 .faceoffKicker{color:var(--gold);font-size:9px;font-weight:1000;letter-spacing:.16em}
 .faceoffCopy strong{font-size:16px}
 .faceoffCopy small{color:#aec2c7;font-size:10px}
-.faceoffQuestion{color:#fff;font-size:13px;font-weight:750;line-height:1.3}
-.faceoffButtons{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.faceoffQuestion{display:none;color:#fff;font-size:13px;font-weight:750;line-height:1.3}
+.faceoffButtons{display:grid;flex:1.3;grid-template-columns:1fr 1fr;gap:8px}
 .faceoffButtons button{min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:7px 10px;border:1px solid #ffb1a066;border-radius:12px;background:linear-gradient(145deg,#c84850,#8b2537);color:#fff;font-size:11px;font-weight:1000;letter-spacing:.04em;box-shadow:inset 0 1px #ffffff2a,0 6px 14px #0003}
 .faceoffButtons button+button{border-color:#87dced88;background:linear-gradient(145deg,#277e9f,#14506d)}
 .faceoffButtons button span{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#081a2b55;font-size:13px}
@@ -231,7 +231,7 @@ button:disabled{cursor:not-allowed;opacity:.48;filter:saturate(.55)}
   .simpleTitle{font-size:clamp(32px,5vw,48px)}
   .setupPanel{padding:20px}
   .faceoff{grid-template-columns:1fr 1.2fr;gap:8px}
-  .faceoffButtons{grid-column:1/-1}
+  .faceoffButtons{width:100%;flex:none}
 }
 @media(max-width:640px){
   html,body{overflow:auto}
@@ -268,7 +268,7 @@ button:disabled{cursor:not-allowed;opacity:.48;filter:saturate(.55)}
   .careoLaunchRow{gap:8px;flex-wrap:wrap}
   .startFaceoffButton{min-height:38px;padding:0 12px;font-size:10px}
   .careoHint{font-size:9px}
-  .faceoff{grid-template-columns:1fr;padding:10px;gap:7px}
+  .faceoff{flex-direction:column;align-items:stretch;padding:10px;gap:7px}
   .faceoffQuestion{font-size:11px}
   .faceoffButtons button{min-height:40px;font-size:9px}
   .answerInputRow{grid-template-columns:minmax(0,1fr) auto}
