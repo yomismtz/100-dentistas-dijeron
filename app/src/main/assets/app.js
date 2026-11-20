@@ -945,23 +945,8 @@ function finishFaceoff(winner) {
       turnResolving = false;
       const answerEntry = $('#answerEntry');
       answerEntry?.classList.remove('hidden');
-      // Keep the response controls above the game board so they are not clipped
-      // by the small-height Android WebView layout.
-      if (answerEntry) {
-        answerEntry.style.position = 'fixed';
-        answerEntry.style.left = '50%';
-        answerEntry.style.top = '50%';
-        answerEntry.style.transform = 'translate(-50%, -50%)';
-        answerEntry.style.width = 'min(92vw, 760px)';
-        answerEntry.style.maxHeight = '80dvh';
-        answerEntry.style.overflowY = 'auto';
-        answerEntry.style.zIndex = '10020';
-        answerEntry.style.padding = '18px';
-        answerEntry.style.border = '2px solid #72f5c2';
-        answerEntry.style.borderRadius = '20px';
-        answerEntry.style.background = 'rgba(18, 7, 35, .98)';
-        answerEntry.style.boxShadow = '0 0 0 100vmax rgba(5, 1, 15, .72), 0 0 35px rgba(114,245,194,.25)';
-      }
+      // La respuesta aparece dentro del tablero, sin interrumpir la partida como ventana emergente.
+      if (answerEntry) answerEntry.classList.add('answerEntryActive');
       const answerInput = $('#answerText');
       if (answerInput) {
         answerInput.placeholder = isEn() ? 'Type your answer…' : 'Escribe tu respuesta…';
@@ -1338,15 +1323,16 @@ function updateTurnUI() {
     el.classList.toggle('steal', phase === 'steal' && idx === currentTeam);
   });
 
+  const buzz = $('#buzz');
   if (phase === 'steal') {
-    turn.textContent = `${tx('steal')}: ${teamNames[currentTeam]}`;
-    $('#buzz').textContent = tx('failedSteal');
+    if (turn) turn.textContent = `${tx('steal')}: ${teamNames[currentTeam]}`;
+    if (buzz) buzz.textContent = tx('failedSteal');
   } else if (phase === 'over') {
-    turn.textContent = tx('roundOver');
-    $('#buzz').textContent = tx('error');
+    if (turn) turn.textContent = tx('roundOver');
+    if (buzz) buzz.textContent = tx('error');
   } else {
-    turn.textContent = `${tx('turn')}: ${teamNames[currentTeam]}`;
-    $('#buzz').textContent = tx('error');
+    if (turn) turn.textContent = `${tx('turn')}: ${teamNames[currentTeam]}`;
+    if (buzz) buzz.textContent = tx('error');
   }
 
   const turnSignature = `${phase}:${currentTeam}`;
@@ -1358,7 +1344,7 @@ function updateTurnUI() {
     lastTurnSignature = turnSignature;
   }
 
-  $('#buzz').disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound;
+  if (buzz) buzz.disabled = phase === 'over' || gamePaused || turnResolving || faceoffActive || !faceoffDoneThisRound;
   const mic = $('#answerMic');
   if (mic) mic.disabled = phase === 'over' || gamePaused || turnResolving || teamBackActive || faceoffActive || !faceoffDoneThisRound;
   const answerText = $('#answerText');
@@ -1412,7 +1398,6 @@ function showRoundTransition(onDone) {
 function setRoundAdvanceReady(ready) {
   roundAdvanceReady = Boolean(ready);
   const next = $('#next');
-  const continueBtn = $('#roundContinue');
   const isLast = roundIndex >= questions.length - 1;
   const label = isLast
     ? (isEn() ? '🏁 SEE FINAL RESULT' : '🏁 VER RESULTADO FINAL')
@@ -1423,20 +1408,10 @@ function setRoundAdvanceReady(ready) {
     next.textContent = label;
     next.setAttribute('aria-label', label.replace(/[🏁▶]/g,'').trim());
   }
-  if (continueBtn) {
-    continueBtn.classList.toggle('hidden', !roundAdvanceReady);
-    continueBtn.disabled = !roundAdvanceReady;
-    continueBtn.textContent = label;
-  }
 }
 function showRoundContinueButton() {
   setRoundAdvanceReady(true);
-  const continueBtn = $('#roundContinue');
-  if (continueBtn) {
-    continueBtn.classList.remove('hidden');
-    continueBtn.disabled = false;
-    continueBtn.focus?.();
-  }
+  $('#next')?.focus?.();
 }
 
 function showRound(reset = true) {
@@ -1451,6 +1426,7 @@ function showRound(reset = true) {
     teamBackActive = false;
     $('#teamBack')?.classList.add('hidden');
     $('#revealRemaining')?.classList.add('hidden');
+    $('#learningCard')?.classList.add('hidden');
     setAnswerFeedback('');
     revealed = Array(questions[roundIndex].a.length).fill(false);
     strikes = 0;
@@ -1610,6 +1586,7 @@ function revealAnswer(idx, btn) {
   if (phase === 'steal') {
     sessionStealAttempts += 1;
     sessionSteals += 1;
+    showLearningNote(q, idx);
     const answerAnnouncement = `${aText(q, idx)}. ${Number(q.a[idx][1]) || 0} ${tx('points')}.`;
     const finish = () => { turnResolving = false; endRoundAfterSteal(currentTeam, true); };
     showCorrectFeedback(isEn() ? 'STEAL SUCCESSFUL' : '¡ROBO EXITOSO!');
@@ -1621,6 +1598,7 @@ function revealAnswer(idx, btn) {
   }
 
   showCorrectFeedback(isEn() ? 'CORRECT!' : '¡CORRECTO!');
+  showLearningNote(q, idx);
   const gainedPoints = (Number(q.a[idx][1]) || 0) * roundMultiplier();
   bank += gainedPoints;
   updateBankUI();
@@ -1659,6 +1637,22 @@ function showErrorFeedback(message, level = 1) {
   void el.offsetWidth;
   el.classList.add('errorPulse');
   setTimeout(() => { if (el.dataset.level === String(level)) el.classList.remove('errorPulse'); }, 900);
+}
+
+function showLearningNote(question, answerIndex){
+  const card = $('#learningCard');
+  const answer = $('#learningAnswer');
+  const source = $('#learningSource');
+  if (!card || !answer || !source) return;
+  answer.textContent = aText(question, answerIndex);
+  const reference = question?.source
+    ? `Fuente indicada en el banco: ${question.source}`
+    : 'Este registro no incluye una fuente bibliográfica específica.';
+  const note = question?.weighting_note
+    ? question.weighting_note
+    : 'La puntuación es una ponderación del juego; no representa una encuesta ni una jerarquía de corrección clínica.';
+  source.textContent = `${note} ${reference}`;
+  card.classList.remove('hidden');
 }
 
 function showCorrectFeedback(message) {
@@ -2299,13 +2293,10 @@ function finishGame() {
     `${result}
 ${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1–8: <b>×1, ×2, ×3, ×4, ×5, ×6, ×7, ×8</b>.</p><p><b>${questions.length} questions</b> were drawn at random from a bank of <b>${questionPool.length}</b>.</p>` : `<p>Marcador final = suma de los bancos ganados durante las 8 rondas.</p><p>Rondas 1–8: <b>×1, ×2, ×3, ×4, ×5, ×6, ×7, ×8</b>.</p><p>Se jugaron <b>${questions.length} preguntas</b> elegidas al azar de una base de <b>${questionPool.length}</b>.</p>`}
      <div class="menuStack">
-       <button id="mFinal">⚡ RONDA FINAL · META 300</button>
        <button id="mAgain"> ${tx('newGame')} </button>
        <button id="mHomeFinal"> ${tx('backHome')} </button>
      </div>`
   );
-
-  $('#mFinal').onclick = () => { closeModal(false); startFinalChallenge(); };
 
   $('#mAgain').onclick = () => {
     closeModal(false);
@@ -2606,7 +2597,7 @@ async function loadQuestionPool() {
 
 loadState();
 window.DentistasQuestionPool=()=>questionPool;
-loadQuestionPool().then(() => offerResumeGame());
+loadQuestionPool().then(() => { populateQuickSetup(); offerResumeGame(); });
 updateTimerUI();
 setRoundAdvanceReady(false);
 
@@ -2616,88 +2607,65 @@ window.addEventListener('visibilitychange', () => {
 window.addEventListener('pagehide', saveActiveGame);
 window.addEventListener('beforeunload', saveActiveGame);
 
-$('#mode1v1').onclick = () => showPlayerCharacterSelector(showOneVsOneSetup);
-$('#simplePlay')?.addEventListener('click', simpleStartFlow);
+function populateQuickSetup(){
+  const select = $('#setupCategory');
+  if (select) {
+    const current = select.value;
+    const areas = availableAreas();
+    select.innerHTML = '<option value="">Todas las áreas · banco completo</option>' +
+      areas.map(area => {
+        const option = document.createElement('option');
+        option.value = area;
+        option.textContent = area;
+        return option.outerHTML;
+      }).join('');
+    if (areas.includes(current)) select.value = current;
+  }
+  const count = $('#poolSummary');
+  if (count) count.textContent = questionPool.length
+    ? `${questionPool.length.toLocaleString('es-MX')} preguntas disponibles`
+    : 'Preparando banco de preguntas…';
+  const playButton = $('#simplePlay');
+  if (playButton) playButton.disabled = !questionPool.length;
+}
 
-/* Flujo simplificado de inicio: categoría -> modo -> personajes. */
-function simpleStartFlow(){
-  const loadedAreas = availableAreas();
-  const preferred = ['Ortodoncia','Ortopedia maxilar','Desarrollo craneofacial','Desarrollo de la oclusión','Fisiología','Oclusión funcional y ajuste oclusal avanzado','Oclusión','Anatomía dental'];
-  const choices = preferred.filter(a => loadedAreas.includes(a));
-  const areas = choices.length ? choices : loadedAreas;
-  openModal(`
-    <h2>¿QUÉ CATEGORÍA QUIERES JUGAR?</h2>
-    <p>Selecciona una categoría para esta partida.</p>
-    <div class="simpleChoiceGrid">${areas.map(a=>`<button class="simpleChoice" data-simple-area="${a.replace(/"/g,'&quot;')}">${a}</button>`).join('')}</div>
-  `);
-  document.querySelectorAll('[data-simple-area]').forEach(btn=>btn.onclick=()=>{
-    gameConfig.selectedAreas=[btn.dataset.simpleArea];
-    simpleChooseMode();
-  });
+function setQuickMode(mode){
+  const teams = mode === 'teams';
+  gameConfig.mode = teams ? 'teams' : '1v1';
+  gameConfig.teamSize = teams ? (Number($('#setupTeamSize')?.value) || 2) : 1;
+  const duoButton = $('#setupModeDuo');
+  const teamsButton = $('#setupModeTeams');
+  duoButton?.classList.toggle('selected', !teams);
+  teamsButton?.classList.toggle('selected', teams);
+  duoButton?.setAttribute('aria-pressed', String(!teams));
+  teamsButton?.setAttribute('aria-pressed', String(teams));
+  const sizeControl = $('#teamSizeControl');
+  if (sizeControl) sizeControl.hidden = !teams;
 }
-function simpleChooseMode(){
-  openModal(`
-    <h2>¿CÓMO QUIEREN JUGAR?</h2>
-    <p>Siempre se juega entre personas. No hay rival de computadora.</p>
-    <div class="simpleChoiceGrid">
-      <button class="simpleChoice" data-simple-mode="duo">👥 2 JUGADORES</button>
-      <button class="simpleChoice" data-simple-mode="teams">🏆 2 EQUIPOS</button>
-    </div>
-  `);
-  document.querySelectorAll('[data-simple-mode]').forEach(btn=>btn.onclick=()=>{
-    const mode=btn.dataset.simpleMode;
-    gameConfig.mode=mode==='duo'?'1v1':'teams';
-    gameConfig.teamSize=1;
-    teamNames=mode==='duo'?['JUGADOR 1','JUGADOR 2']:['EQUIPO 1','EQUIPO 2'];
-    teamMemberIndex=[0,0];
-    if(mode==='teams') simpleChooseTeamSize();
-    else simpleChooseCharacters('duo',0);
-  });
+
+async function quickStartGame(){
+  if (!questionPool.length) {
+    try { await (questionPoolPromise || loadQuestionPool()); } catch (_) {}
+    populateQuickSetup();
+  }
+  const category = $('#setupCategory')?.value || '';
+  gameConfig.selectedAreas = category ? [category] : [];
+  const mode = $('#setupModeTeams')?.classList.contains('selected') ? 'teams' : 'duo';
+  gameConfig.mode = mode === 'teams' ? 'teams' : '1v1';
+  gameConfig.teamSize = mode === 'teams' ? (Number($('#setupTeamSize')?.value) || 2) : 1;
+  teamNames = mode === 'teams' ? ['EQUIPO 1','EQUIPO 2'] : ['JUGADOR 1','JUGADOR 2'];
+  teamMemberIndex = [0,0];
+  gameConfig.difficulty = 'mixed';
+  await startNewGame();
 }
-function simpleChooseTeamSize(){
-  openModal(`
-    <h2>¿CUÁNTOS INTEGRANTES POR EQUIPO?</h2>
-    <div class="simpleChoiceGrid">
-      <button class="simpleChoice" data-team-size="2">2 POR EQUIPO</button>
-      <button class="simpleChoice" data-team-size="3">3 POR EQUIPO</button>
-      <button class="simpleChoice" data-team-size="4">4 POR EQUIPO</button>
-      <button class="simpleChoice" data-team-size="5">5 POR EQUIPO</button>
-    </div>
-  `);
-  document.querySelectorAll('[data-team-size]').forEach(btn=>btn.onclick=()=>{
-    gameConfig.teamSize=Number(btn.dataset.teamSize)||2;
-    teamNames=['EQUIPO 1','EQUIPO 2'];
-    teamMemberIndex=[0,0];
-    simpleChooseCharacters('teams',0);
-  });
-}
-function simpleDefaultCharacters(){
-  const all=Array.isArray(window.DentistasCharacters)?window.DentistasCharacters:[];
-  const names=['NOVA','PAULA','IVÁN','OLIVIA','BRUNO','ALEX'];
-  return names.map(n=>all.find(ch=>ch.name===n)).filter(Boolean);
-}
-function simpleChooseCharacters(mode,playerIndex=0){
-  const list=simpleDefaultCharacters();
-  const label=mode==='duo'?(playerIndex===0?'JUGADOR 1':'JUGADOR 2'):(playerIndex===0?'EQUIPO 1':'EQUIPO 2');
-  const buttons=list.map(ch=>`<button class="simpleChoice characterChoice" data-simple-character="${ch.name}"><span class="characterChoiceIcon">${ch.icon||'🦷'}</span><span>${ch.name}</span><small>${ch.specialty||ch.category||'Odontología'}</small></button>`).join('');
-  openModal(`<h2>ELIGE PERSONAJE · ${label}</h2><p>Los seis personajes están disponibles desde el inicio.</p><div class="simpleChoiceGrid">${buttons}</div>`);
-  document.querySelectorAll('[data-simple-character]').forEach(btn=>btn.onclick=()=>{
-    const selected=btn.dataset.simpleCharacter;
-    if(playerIndex===0){
-      gameConfig.playerCharacter=selected;
-      simpleChooseCharacters(mode,1);
-      return;
-    }
-    gameConfig.secondPlayerCharacter=selected;
-    gameConfig.cpuCharacter='';
-    gameConfig.difficulty='mixed';
-    closeModal(false);
-    startNewGame();
-  });
-}
-$('#modeTeams').onclick = () => showPlayerCharacterSelector(showTeamSetup);
-$('#modeCpu').onclick = () => showPlayerCharacterSelector(showCpuSetup);
-$('#help').onclick = showHelp;
+
+$('#setupModeDuo')?.addEventListener('click', () => setQuickMode('duo'));
+$('#setupModeTeams')?.addEventListener('click', () => setQuickMode('teams'));
+$('#setupTeamSize')?.addEventListener('change', () => {
+  if (gameConfig.mode === 'teams') gameConfig.teamSize = Number($('#setupTeamSize').value) || 2;
+});
+$('#simplePlay')?.addEventListener('click', quickStartGame);
+setQuickMode('teams');
 $('#prev')?.addEventListener('click', previousRound);
 $('#next').onclick = nextRound;
 $('#roundContinue')?.addEventListener('click', nextRound);
@@ -2732,7 +2700,7 @@ $('#modal').addEventListener('click', (e) => {
   if (e.target === $('#modal')) closeModal(true);
 });
 document.querySelectorAll('.award').forEach(b => b.onclick = () => awardBank(Number(b.dataset.team)));
-document.querySelectorAll('.teamName').forEach(b => b.onclick = () => renameTeam(Number(b.dataset.team)));
+document.querySelectorAll('.teamName[data-team]').forEach(b => b.onclick = () => renameTeam(Number(b.dataset.team)));
 
 window.addEventListener('dentistas-language-changed', () => {
   if (teamNames[0] === 'EQUIPO 1' || teamNames[0] === 'TEAM 1') teamNames[0] = isEn() ? 'TEAM 1' : 'EQUIPO 1';
