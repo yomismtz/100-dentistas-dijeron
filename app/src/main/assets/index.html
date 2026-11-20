@@ -3,49 +3,202 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-  <meta name="theme-color" content="#06131a">
+  <meta name="theme-color" content="#071824">
   <title>Así los dentistas lo dijeron</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="languageSwitch" aria-label="Language selector">
-    <button data-lang="es">ES</button><button data-lang="en">EN</button>
-    <button id="voiceToggle" class="voiceToggle" aria-label="Narradora" title="Narradora">🔊</button>
+  <div class="languageSwitch" aria-label="Idioma y narración">
+    <button type="button" data-lang="es" aria-label="Español">ES</button>
+    <button type="button" data-lang="en" aria-label="English">EN</button>
+    <button id="voiceToggle" class="voiceToggle" type="button" aria-label="Activar o silenciar narradora" title="Narradora">🔊</button>
   </div>
+
   <main id="home" class="screen home simpleHome">
-    <div class="homeGlow" aria-hidden="true"></div>
-    <img class="homeLogo" src="logo_app.webp" alt="Así los dentistas lo dijeron">
-    <h1 class="simpleTitle">Así los dentistas lo dijeron</h1>
-    <p class="simpleSubtitle">Juego de preguntas odontológicas</p>
-    <button id="simplePlay" class="simplePlay" type="button">▶ INICIAR</button>
-    <div class="homeActions legacyHomeControls" aria-hidden="true">
-      <button id="mode1v1" class="primary">1 CONTRA 1</button><button id="modeTeams">EQUIPO CONTRA EQUIPO</button><button id="modeCpu">CONTRA LA COMPUTADORA</button>
-      <button id="progression">PROGRESIÓN</button><button id="stats">ESTADÍSTICAS</button><button id="achievements">LOGROS</button><button id="audioSettings">AUDIO</button><button id="studyMode">MODO ESTUDIO</button><button id="help">¿CÓMO SE JUEGA?</button>
+    <div class="homeGlow homeGlowOne" aria-hidden="true"></div>
+    <div class="homeGlow homeGlowTwo" aria-hidden="true"></div>
+    <div class="homeLayout">
+      <section class="homeHero">
+        <div class="brandTag"><span class="brandDot"></span> CONCURSO ODONTOLÓGICO</div>
+        <img class="homeLogo" src="logo_app.webp" alt="Así los dentistas lo dijeron">
+        <h1 class="simpleTitle">Así los dentistas<br><em>lo dijeron</em></h1>
+        <p class="simpleSubtitle">Piensa rápido. Responde en equipo. Aprende odontología jugando.</p>
+        <div class="gameFacts">
+          <div><strong>08</strong><span>RONDAS</span></div>
+          <div><strong>20″</strong><span>POR TURNO</span></div>
+          <div><strong>4–7</strong><span>RESPUESTAS</span></div>
+        </div>
+      </section>
+
+      <section class="setupPanel" aria-labelledby="setupTitle">
+        <div class="setupPanelTop">
+          <span class="setupStep">PREPARA LA PARTIDA</span>
+          <span class="setupSpark" aria-hidden="true">✦</span>
+        </div>
+        <h2 id="setupTitle">¿Listos para jugar?</h2>
+        <p class="setupIntro">Elige el área y reúne a los equipos. El banco completo está disponible.</p>
+
+        <label class="fieldLabel" for="setupCategory">ÁREA DE ODONTOLOGÍA</label>
+        <select id="setupCategory" class="setupSelect">
+          <option value="">Todas las áreas · banco completo</option>
+        </select>
+
+        <label class="fieldLabel">MODALIDAD</label>
+        <div class="modeChoices" role="group" aria-label="Modalidad de juego">
+          <button id="setupModeDuo" class="modeChoice" type="button" aria-pressed="false">
+            <span class="modeIcon">⚡</span><span><b>Duelo</b><small>1 contra 1</small></span>
+          </button>
+          <button id="setupModeTeams" class="modeChoice selected" type="button" aria-pressed="true">
+            <span class="modeIcon">👥</span><span><b>Equipos</b><small>Compitan en grupo</small></span>
+          </button>
+        </div>
+
+        <div id="teamSizeControl" class="teamSizeControl">
+          <label class="fieldLabel" for="setupTeamSize">INTEGRANTES POR EQUIPO</label>
+          <select id="setupTeamSize" class="setupSelect">
+            <option value="2" selected>2 integrantes</option>
+            <option value="3">3 integrantes</option>
+            <option value="4">4 integrantes</option>
+            <option value="5">5 integrantes</option>
+          </select>
+        </div>
+
+        <button id="simplePlay" class="simplePlay" type="button" disabled>
+          <span>INICIAR PARTIDA</span><span class="playArrow" aria-hidden="true">↗</span>
+        </button>
+        <p id="poolSummary" class="poolSummary" aria-live="polite">Preparando banco de preguntas…</p>
+        <p class="setupNote">La puntuación representa el valor dentro del juego; no sustituye el criterio clínico.</p>
+      </section>
     </div>
+    <div class="homeFooter"><span>🦷 APRENDE · COMPITE · RECUERDA</span><span>Diseñado para estudiantes de odontología</span></div>
   </main>
-<main id="game" class="screen hidden" aria-live="polite">
-    <header class="topbar">
-      
-      <div class="roundInfo"><span id="round">Ronda 1 · ×1</span><span id="progress">1 / 8</span><span id="turn">TURNO: EQUIPO 1</span></div>
-      <button id="exitGame" class="exitGameBtn" aria-label="Salir del juego">SALIR</button><button id="next" class="iconBtn" aria-label="Ronda siguiente">▶</button>
+
+  <main id="game" class="screen gameScreen hidden" aria-live="polite">
+    <header class="gameTopbar">
+      <div class="miniBrand"><span class="miniTooth">🦷</span><span>ASÍ LOS DENTISTAS<br><b>LO DIJERON</b></span></div>
+      <div class="roundInfo">
+        <span id="round" class="roundPill">RONDA 1 · ×1</span>
+        <span id="progress" class="progressPill">1 / 8</span>
+        <span id="turn" class="turnPill">TURNO: EQUIPO 1</span>
+      </div>
+      <div class="topActions">
+        <button id="next" class="nextRoundButton hidden" type="button" disabled>▶ SIGUIENTE RONDA</button>
+        <button id="exitGame" class="exitGameBtn" type="button" aria-label="Salir de la partida">SALIR ×</button>
+      </div>
     </header>
+
     <section class="board">
-      <div class="questionRow"><h1 id="question" aria-live="polite"></h1><div class="timerBox" title="Tiempo para responder"><span>TIEMPO</span><div><strong id="timer">20</strong><small>s</small></div></div><div class="bank" title="Puntos revelados en esta ronda"><span>BANCO</span><strong id="bank">0</strong></div></div>
-      <div class="careoLaunchRow"><button id="startFaceoff" class="startFaceoffButton" type="button">▶ INICIAR RONDA</button><span id="careoHint" class="careoHint" role="status">Pulsa para escuchar la pregunta y comenzar el careo.</span></div>
-      <div id="faceoff" class="faceoff hidden"><div class="faceoffTitle">⚡ CAREO ⚡</div><div id="faceoffQuestion" class="faceoffQuestion"></div><p>Escucha la pregunta y pulsa primero el botón de tu equipo.</p><div class="faceoffButtons"><button id="faceoffTeam1">🦷 EQUIPO 1</button><button id="faceoffTeam2">🦷 EQUIPO 2</button></div></div>
-      <div id="answerEntry" class="answerEntry hidden"><div class="answerInputRow"><button id="answerMic" type="button" title="Responder por voz">🎤 RESPONDER POR VOZ</button></div><button id="teamBack" class="teamBack hidden" type="button">🤝 TEAM BACK · PONERSE DE ACUERDO</button><div id="voiceRecognized" class="voiceRecognized hidden" aria-live="polite"><span id="voiceRecognizedText"></span><div class="voiceConfirmActions"><button id="voiceConfirm" type="button">✓ CONFIRMAR</button><button id="voiceRepeat" type="button">↻ REPETIR</button></div></div><div id="answerFeedback" class="answerFeedback" aria-live="assertive"></div></div>
-      <div id="answers" class="answers"></div><div id="strikes" class="strikes" aria-label="Errores"></div><button id="revealRemaining" class="revealRemaining hidden" type="button" disabled>👁 REVELAR RESPUESTAS RESTANTES</button><button id="roundContinue" class="roundContinue hidden" type="button">▶ PASAR A LA SIGUIENTE RONDA</button>
+      <div class="questionRow">
+        <div class="questionPanel">
+          <div class="questionEyebrow"><span class="liveDot"></span> PREGUNTA DE LA RONDA</div>
+          <h1 id="question" aria-live="polite"></h1>
+        </div>
+        <div class="scoreMeters">
+          <div class="timerBox" title="Tiempo para responder">
+            <span>TIEMPO</span><div><strong id="timer">20</strong><small>s</small></div>
+            <i>ÚLTIMOS 10 s · CUENTA EN BITS</i>
+          </div>
+          <div class="bank" title="Puntos acumulados en esta ronda">
+            <span>BANCO</span><strong id="bank">0</strong><small>PTS</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="careoLaunchRow">
+        <button id="startFaceoff" class="startFaceoffButton" type="button">▶ INICIAR RONDA</button>
+        <span id="careoHint" class="careoHint" role="status">La narradora leerá la pregunta y comenzará el careo.</span>
+      </div>
+
+      <div id="faceoff" class="faceoff hidden" aria-live="polite">
+        <div class="faceoffCopy"><span class="faceoffKicker">⚡ CARA A CARA</span><strong>¿Quién responde primero?</strong><small>Presiona el botón de tu equipo.</small></div>
+        <div id="faceoffQuestion" class="faceoffQuestion"></div>
+        <div class="faceoffButtons">
+          <button id="faceoffTeam1" type="button"><span>1</span> EQUIPO 1</button>
+          <button id="faceoffTeam2" type="button"><span>2</span> EQUIPO 2</button>
+        </div>
+      </div>
+
+      <div id="answerEntry" class="answerEntry hidden">
+        <div class="answerEntryTitle"><span class="answerIcon">✍</span><div><b>¡Es tu turno!</b><small>Escribe la respuesta o dicta con el micrófono.</small></div></div>
+        <div class="answerInputRow">
+          <input id="answerText" type="text" inputmode="text" autocomplete="off" placeholder="Escribe tu respuesta…" aria-label="Respuesta del equipo">
+          <button id="answerSubmit" class="answerSubmit" type="button">RESPONDER</button>
+          <button id="answerMic" class="answerMic" type="button" title="Responder por voz">🎤 VOZ</button>
+        </div>
+        <button id="teamBack" class="teamBack hidden" type="button">🤝 TEAM BACK · PONERSE DE ACUERDO</button>
+        <div id="voiceRecognized" class="voiceRecognized hidden" aria-live="polite">
+          <span id="voiceRecognizedText"></span>
+          <div class="voiceConfirmActions">
+            <button id="voiceConfirm" type="button">✓ CONFIRMAR</button>
+            <button id="voiceRepeat" type="button">↻ REPETIR</button>
+          </div>
+        </div>
+        <div id="answerFeedback" class="answerFeedback" aria-live="assertive"></div>
+      </div>
+
+      <div id="answers" class="answers" aria-label="Tablero de respuestas"></div>
+
+      <aside id="learningCard" class="learningCard hidden" aria-live="polite">
+        <span class="learningKicker">🧠 PARA RECORDAR</span>
+        <strong id="learningAnswer"></strong>
+        <p id="learningSource"></p>
+      </aside>
+
+      <div class="boardBottom">
+        <div id="strikes" class="strikes" aria-label="Errores"></div>
+        <button id="revealRemaining" class="revealRemaining hidden" type="button" disabled>👁 REVELAR RESPUESTAS RESTANTES</button>
+      </div>
     </section>
-    <footer class="scorebar"><section class="team teamOne"><button class="teamName" data-team="1">EQUIPO 1</button><strong id="s1">0</strong></section><section class="team teamTwo"><button class="teamName" data-team="2">EQUIPO 2</button><strong id="s2">0</strong></section></footer>
+
+    <footer class="scorebar">
+      <section class="team teamOne"><div class="teamName">EQUIPO 1</div><strong id="s1">0</strong><small>PUNTOS</small></section>
+      <section class="scoreCenter"><span>MARCADOR</span><b>VS</b><span>8 RONDAS</span></section>
+      <section class="team teamTwo"><div class="teamName">EQUIPO 2</div><strong id="s2">0</strong><small>PUNTOS</small></section>
+    </footer>
   </main>
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modalCard"><button id="closeModal" class="closeBtn">×</button><div id="modalContent"></div></div></div>
-  <div id="strikeFlash" class="strikeFlash hidden"><div>✖ ✖ ✖</div></div>
-  <audio id="sndStart" src="intro_short.mp3" preload="auto"></audio><audio id="sndGood" src="good.mp3" preload="auto"></audio><audio id="sndBad" src="error.mp3" preload="auto"></audio>
-  <script src="i18n.js"></script><script src="narrator.js"></script><script src="english_overrides_01.js"></script><script src="english_overrides_02.js"></script>
-<script src="english_overrides_03.js"></script>
-<script src="english_overrides_03_011_020.js"></script>
-<script src="english_overrides_03_021_030.js"></script>
-<script src="english_overrides_03_031_040.js"></script>
-<script src="english_overrides_03_041_050.js"></script><script src="english_overrides_03_051_075.js"></script><script src="english_overrides_03_076_100.js"></script><script src="english_overrides_04.js"></script><script src="english_overrides_04_031_055.js"></script><script src="english_overrides_04_056_080.js"></script><script src="english_overrides_04_081_100.js"></script><script src="english_overrides_05.js"></script><script src="english_overrides_06.js"></script><script src="english_auto_07_12.js"></script><script src="english_auto_19_24.js"></script><script src="english_auto_13_18.js"></script><script src="english_auto_25_30.js"></script><script src="english_auto_31.js"></script><script src="english_auto_32_45.js"></script><script src="english_auto_global_cleanup.js"></script><script src="english_postprocess.js"></script><script src="app.js"></script><script src="performance.js"></script><script src="flow_polish.js"></script><script src="voice_polish.js"></script><script src="characters.js"></script><script src="progression.js"></script><script src="stats.js"></script><script src="achievements.js"></script><script src="audio_polish.js"></script><script src="study_mode.js"></script><script src="primer_parcial.js"></script>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalCard">
+      <button id="closeModal" class="closeBtn" type="button" aria-label="Cerrar">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <div id="strikeFlash" class="strikeFlash hidden" aria-hidden="true"><div>✖ ✖ ✖</div></div>
+
+  <audio id="sndStart" src="intro_short.mp3" preload="auto"></audio>
+  <audio id="sndGood" src="good.mp3" preload="auto"></audio>
+  <audio id="sndBad" src="error.mp3" preload="auto"></audio>
+
+  <script src="i18n.js"></script>
+  <script src="narrator.js"></script>
+  <script src="english_overrides_01.js"></script>
+  <script src="english_overrides_02.js"></script>
+  <script src="english_overrides_03.js"></script>
+  <script src="english_overrides_03_011_020.js"></script>
+  <script src="english_overrides_03_021_030.js"></script>
+  <script src="english_overrides_03_031_040.js"></script>
+  <script src="english_overrides_03_041_050.js"></script>
+  <script src="english_overrides_03_051_075.js"></script>
+  <script src="english_overrides_03_076_100.js"></script>
+  <script src="english_overrides_04.js"></script>
+  <script src="english_overrides_04_031_055.js"></script>
+  <script src="english_overrides_04_056_080.js"></script>
+  <script src="english_overrides_04_081_100.js"></script>
+  <script src="english_overrides_05.js"></script>
+  <script src="english_overrides_06.js"></script>
+  <script src="english_auto_07_12.js"></script>
+  <script src="english_auto_19_24.js"></script>
+  <script src="english_auto_13_18.js"></script>
+  <script src="english_auto_25_30.js"></script>
+  <script src="english_auto_31.js"></script>
+  <script src="english_auto_32_45.js"></script>
+  <script src="english_auto_global_cleanup.js"></script>
+  <script src="english_postprocess.js"></script>
+  <script src="app.js"></script>
+  <script src="performance.js"></script>
+  <script src="flow_polish.js"></script>
+  <script src="voice_polish.js"></script>
+  <script src="stats.js"></script>
+  <script src="achievements.js"></script>
 </body>
 </html>
