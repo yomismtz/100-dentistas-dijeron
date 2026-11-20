@@ -289,6 +289,24 @@ button:disabled{cursor:not-allowed;opacity:.48;filter:saturate(.55)}
   .scoreCenter span{font-size:6px}
   .scoreCenter b{font-size:14px}
 }
+@media(max-height:520px) and (min-width:641px){
+  .home{align-items:flex-start;overflow-y:auto}
+  .homeLayout{height:auto;min-height:100%;align-items:center;padding:54px 0 26px;gap:16px}
+  .homeHero{padding:0}
+  .homeLogo{width:175px;max-height:95px;margin:5px 0}
+  .simpleTitle{font-size:clamp(30px,3.5vw,42px)}
+  .simpleSubtitle{margin:8px 0 12px;font-size:12px}
+  .gameFacts>div{padding-top:8px;padding-bottom:8px}
+  .gameFacts strong{font-size:20px}
+  .setupPanel{padding:15px 18px}
+  .setupIntro{margin-bottom:8px;font-size:11px}
+  .fieldLabel{margin:8px 0 5px}
+  .setupSelect{min-height:38px;font-size:12px}
+  .modeChoice{min-height:45px;padding:6px 9px}
+  .simplePlay{min-height:46px;margin-top:11px}
+  .poolSummary,.setupNote{margin-top:6px;font-size:9px}
+  .homeFooter{position:relative;left:auto;right:auto;bottom:auto;width:calc(100% - 56px);margin:0 28px 10px}
+}
 @media(max-height:650px) and (min-width:641px){
   .gameTopbar{min-height:52px}
   .board{padding-top:7px;padding-bottom:6px;gap:7px}
