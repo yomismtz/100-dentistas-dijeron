@@ -204,13 +204,17 @@ public class MainActivity extends Activity {
                         Locale voiceLocale = candidate.getLocale();
                         if (!selected.getLanguage().equalsIgnoreCase(voiceLocale.getLanguage())) continue;
 
-                        int score = 200;
-                        if (!selected.getCountry().isEmpty()
-                                && selected.getCountry().equalsIgnoreCase(voiceLocale.getCountry())) score += 320;
+                        int score = 100;
+                        String region = voiceLocale.getCountry().toUpperCase(Locale.ROOT);
+                        if ("MX".equals(region)) score += 520;
+                        else if (isLatinAmericanRegion(region)) score += 360;
+                        else if ("ES".equals(region)) score -= 700;
+                        else if (region.isEmpty()) score += 40;
                         score += Math.max(0, candidate.getQuality()) / 2;
                         String voiceName = String.valueOf(candidate.getName()).toLowerCase(Locale.ROOT);
                         if (voiceName.matches(".*(female|feminine|mujer|sabina|paulina|zira|samantha|victoria|aria|jenny).*")) score += 90;
-                        if (!candidate.isNetworkConnectionRequired()) score += 15;
+                        // Enhanced/network voices can sound less synthetic than basic offline voices.
+                        if (candidate.isNetworkConnectionRequired()) score += 20;
                         if (score > bestScore) {
                             bestScore = score;
                             best = candidate;
@@ -223,6 +227,16 @@ public class MainActivity extends Activity {
             }
         }
         return selected;
+    }
+
+    private boolean isLatinAmericanRegion(String region) {
+        return "419".equals(region) || "US".equals(region)
+                || "AR".equals(region) || "BO".equals(region) || "CL".equals(region)
+                || "CO".equals(region) || "CR".equals(region) || "CU".equals(region)
+                || "DO".equals(region) || "EC".equals(region) || "SV".equals(region)
+                || "GT".equals(region) || "HN".equals(region) || "NI".equals(region)
+                || "PA".equals(region) || "PY".equals(region) || "PE".equals(region)
+                || "PR".equals(region) || "UY".equals(region) || "VE".equals(region);
     }
 
     private float clampSpeechRate(float value) {
