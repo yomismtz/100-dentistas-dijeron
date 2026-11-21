@@ -25,12 +25,16 @@ window.DentistasNarrator = (() => {
     if (!candidates.length) return voices[0] || null;
     const score = voice => {
       const locale = String(voice.lang||'').toLowerCase();
+      const region = locale.split('-')[1] || '';
       const name = String(voice.name||'').toLowerCase();
       let points = 0;
-      if (locale === wanted) points += 300;
-      if (wanted.endsWith('-mx') && locale.endsWith('-mx')) points += 120;
+      if (region === 'mx') points += 520;
+      else if (/^(419|us|ar|bo|cl|co|cr|cu|do|ec|sv|gt|hn|ni|pa|py|pe|pr|uy|ve)$/i.test(region)) points += 360;
+      else if (region === 'es') points -= 700;
+      else if (!region) points += 40;
+      if (locale === wanted) points += 120;
       if (/female|feminine|mujer|sabina|paulina|zira|samantha|victoria|aria|jenny/i.test(name)) points += 70;
-      if (voice.localService === false) points += 8;
+      if (voice.localService === false) points += 20;
       return points;
     };
     return candidates.reduce((best, voice) => !best || score(voice) > score(best) ? voice : best, null);
