@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.speech.tts.Voice;
 import android.speech.RecognizerIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -45,8 +46,9 @@ public class MainActivity extends Activity {
         textToSpeech = new TextToSpeech(this, status -> {
             ttsReady = status == TextToSpeech.SUCCESS;
             if (ttsReady) {
-                textToSpeech.setSpeechRate(0.94f);
-                textToSpeech.setPitch(1.03f);
+                textToSpeech.setSpeechRate(0.90f);
+                textToSpeech.setPitch(1.0f);
+                configureNarratorVoice(new Locale("es", "MX"));
                 textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                     @Override public void onStart(String utteranceId) {}
                     @Override public void onDone(String utteranceId) { notifyNarrationFinished(utteranceId, true); }
@@ -178,6 +180,61 @@ public class MainActivity extends Activity {
         }
     }
 
+
+    private Locale configureNarratorVoice(Locale requested) {
+        if (textToSpeech == null) return requested;
+        Locale selected = requested;
+        int result = textToSpeech.setLanguage(selected);
+        if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+            selected = "en".equalsIgnoreCase(requested.getLanguage())
+                    ? Locale.US : new Locale("es", "MX");
+            textToSpeech.setLanguage(selected);
+        }
+
+        // Prefer the best installed voice for the requested language/region.
+        // A phone may expose only one voice; in that case Android keeps its default.
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            try {
+                java.util.Set<Voice> available = textToSpeech.getVoices();
+                Voice best = null;
+                int bestScore = Integer.MIN_VALUE;
+                if (available != null) {
+                    for (Voice candidate : available) {
+                        if (candidate == null || candidate.getLocale() == null) continue;
+                        Locale voiceLocale = candidate.getLocale();
+                        if (!selected.getLanguage().equalsIgnoreCase(voiceLocale.getLanguage())) continue;
+
+                        int score = 200;
+                        if (!selected.getCountry().isEmpty()
+                                && selected.getCountry().equalsIgnoreCase(voiceLocale.getCountry())) score += 320;
+                        score += Math.max(0, candidate.getQuality()) / 2;
+                        String voiceName = String.valueOf(candidate.getName()).toLowerCase(Locale.ROOT);
+                        if (voiceName.matches(".*(female|feminine|mujer|sabina|paulina|zira|samantha|victoria|aria|jenny).*")) score += 90;
+                        if (!candidate.isNetworkConnectionRequired()) score += 15;
+                        if (score > bestScore) {
+                            bestScore = score;
+                            best = candidate;
+                        }
+                    }
+                }
+                if (best != null) textToSpeech.setVoice(best);
+            } catch (Exception ignored) {
+                // Retain the language selected by Android when voice metadata is unavailable.
+            }
+        }
+        return selected;
+    }
+
+    private float clampSpeechRate(float value) {
+        if (Float.isNaN(value) || Float.isInfinite(value)) return 0.90f;
+        return Math.max(0.82f, Math.min(1.05f, value));
+    }
+
+    private float clampSpeechPitch(float value) {
+        if (Float.isNaN(value) || Float.isInfinite(value)) return 1.0f;
+        return Math.max(0.90f, Math.min(1.10f, value));
+    }
+
     private class NarratorBridge {
         @JavascriptInterface
         public void speak(String text, String languageTag) {
@@ -187,15 +244,9 @@ public class MainActivity extends Activity {
                 Locale requested = Locale.forLanguageTag(
                         languageTag == null || languageTag.trim().isEmpty() ? "es-MX" : languageTag
                 );
-                int result = textToSpeech.setLanguage(requested);
-
-                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    Locale fallback = languageTag != null && languageTag.toLowerCase(Locale.ROOT).startsWith("en")
-                            ? Locale.US
-                            : new Locale("es", "MX");
-                    textToSpeech.setLanguage(fallback);
-                }
-
+                configureNarratorVoice(requested);
+                textToSpeech.setSpeechRate(0.90f);
+                textToSpeech.setPitch(1.0f);
                 textToSpeech.speak(
                         text.trim(),
                         TextToSpeech.QUEUE_FLUSH,
@@ -206,14 +257,13 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
-        public void speakWithId(String text, String languageTag, String utteranceId) {
+        public void speakWithId(String text, String languageTag, String utteranceId, float rate, float pitch) {
             if (!ttsReady || textToSpeech == null || text == null || text.trim().isEmpty()) return;
             runOnUiThread(() -> {
                 Locale requested = Locale.forLanguageTag(languageTag == null || languageTag.trim().isEmpty() ? "es-MX" : languageTag);
-                int result = textToSpeech.setLanguage(requested);
-                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    textToSpeech.setLanguage(languageTag != null && languageTag.toLowerCase(Locale.ROOT).startsWith("en") ? Locale.US : new Locale("es", "MX"));
-                }
+                configureNarratorVoice(requested);
+                textToSpeech.setSpeechRate(clampSpeechRate(rate));
+                textToSpeech.setPitch(clampSpeechPitch(pitch));
                 textToSpeech.speak(text.trim(), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
             });
         }
