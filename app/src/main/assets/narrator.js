@@ -19,12 +19,21 @@ window.DentistasNarrator = (() => {
 
   function chooseVoice(lang){
     if (!voices.length) refreshVoices();
-    const prefix = lang.slice(0,2).toLowerCase();
-    const exact = voices.find(v => String(v.lang||'').toLowerCase() === lang.toLowerCase());
-    if (exact) return exact;
-    const sameLanguage = voices.find(v => String(v.lang||'').toLowerCase().startsWith(prefix));
-    if (sameLanguage) return sameLanguage;
-    return voices.find(v => /female|mujer|sabina|paulina|zira|samantha|victoria|aria|jenny/i.test(v.name)) || voices[0] || null;
+    const wanted = String(lang || currentLang()).toLowerCase();
+    const prefix = wanted.slice(0,2);
+    const candidates = voices.filter(v => String(v.lang||'').toLowerCase().startsWith(prefix));
+    if (!candidates.length) return voices[0] || null;
+    const score = voice => {
+      const locale = String(voice.lang||'').toLowerCase();
+      const name = String(voice.name||'').toLowerCase();
+      let points = 0;
+      if (locale === wanted) points += 300;
+      if (wanted.endsWith('-mx') && locale.endsWith('-mx')) points += 120;
+      if (/female|feminine|mujer|sabina|paulina|zira|samantha|victoria|aria|jenny/i.test(name)) points += 70;
+      if (voice.localService === false) points += 8;
+      return points;
+    };
+    return candidates.reduce((best, voice) => !best || score(voice) > score(best) ? voice : best, null);
   }
 
   function speak(text, opts={}){
@@ -44,7 +53,7 @@ window.DentistasNarrator = (() => {
             window.DentistasNarratorCallbacks = window.DentistasNarratorCallbacks || {};
             window.DentistasNarratorCallbacks[id] = {onend:opts.onend, onerror:opts.onerror};
           }
-          window.AndroidNarrator.speakWithId(clean, lang, id);
+          window.AndroidNarrator.speakWithId(clean, lang, id, Number.isFinite(Number(opts.rate)) ? Number(opts.rate) : 0.90, Number.isFinite(Number(opts.pitch)) ? Number(opts.pitch) : 1.0);
           return true;
         }
       }
@@ -56,9 +65,9 @@ window.DentistasNarrator = (() => {
     u.lang = lang;
     const voice = chooseVoice(lang);
     if (voice) u.voice = voice;
-    u.rate = opts.rate || 0.94;
-    u.pitch = opts.pitch || 1.03;
-    u.volume = opts.volume || 1;
+    u.rate = Math.max(0.82, Math.min(1.05, Number.isFinite(Number(opts.rate)) ? Number(opts.rate) : 0.90));
+    u.pitch = Math.max(0.90, Math.min(1.10, Number.isFinite(Number(opts.pitch)) ? Number(opts.pitch) : 1.0));
+    u.volume = Math.max(0, Math.min(1, Number.isFinite(Number(opts.volume)) ? Number(opts.volume) : 1));
     if (opts.onend) u.onend = opts.onend;
     if (opts.onerror) u.onerror = opts.onerror;
     window.speechSynthesis.speak(u);
