@@ -2128,7 +2128,7 @@ function startFinalChallenge(){
 
     openModal(`<h2>🏆 RONDA FINAL</h2><p>Obtuviste <b>${total} puntos</b>.</p><p>${won?'¡META ALCANZADA! Superaste los 300 puntos.':'La meta era 300 puntos.'}</p><p>Tiempo final: <b>${Math.max(0, finalTotalSeconds)} s</b>.</p>${unlockMsg}<div class="menuStack"><button id="finalAgain">JUGAR OTRA VEZ</button><button id="finalHome">PORTADA</button></div>`);
     $('#finalAgain').onclick=()=>{closeModal(false);startFinalChallenge();};
-    $('#finalHome').onclick=()=>{closeModal(false);$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
+    $('#finalHome').onclick=()=>{closeModal(false);document.body.classList.remove('game-active');$('#game').classList.add('hidden');$('#home').classList.remove('hidden');};
   };
 
   const ask = () => {
