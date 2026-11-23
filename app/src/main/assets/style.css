@@ -341,4 +341,4 @@ button:disabled{cursor:not-allowed;opacity:.48;filter:saturate(.55)}
   .homeLogo { width: min(100%, 340px); }
   .setupPanel { width: 100%; max-width: 720px; justify-self: center; }
 }
-body:has(#game:not(.hidden)) .languageSwitch { display: none !important; }
+body.game-active .languageSwitch { display: none !important; }
