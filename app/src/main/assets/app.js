@@ -490,6 +490,7 @@ function resumeActiveGame(snapshot) {
   careoStartedThisRound = Boolean(snapshot.careoStartedThisRound);
   questionVisibleThisRound = Boolean(snapshot.questionVisibleThisRound || snapshot.faceoffActive || snapshot.faceoffDoneThisRound);
 
+  document.body.classList.add('game-active');
   $('#home').classList.add('hidden');
   $('#game').classList.remove('hidden');
   updateScoreUI();
@@ -2264,6 +2265,7 @@ async function startNewGame() {
   turnResolving = false;
   clearActiveGame();
 
+  document.body.classList.add('game-active');
   $('#home').classList.add('hidden');
   $('#game').classList.remove('hidden');
   updateScoreUI();
@@ -2314,6 +2316,7 @@ ${isEn() ? `<p>Final score = total bank points won over 8 rounds.</p><p>Rounds 1
 
   $('#mHomeFinal').onclick = () => {
     closeModal(false);
+    document.body.classList.remove('game-active');
     $('#game').classList.add('hidden');
     $('#home').classList.remove('hidden');
   };
@@ -2443,6 +2446,7 @@ function showMenu() {
     closeModal(false);
     invalidateTurn();
     stopGameAudio();
+    document.body.classList.remove('game-active');
     $('#game').classList.add('hidden');
     $('#home').classList.remove('hidden');
   };
@@ -2701,7 +2705,8 @@ if (exitGame) exitGame.onclick = () => {
   stopGameAudio();
   phase = 'over';
   clearActiveGame();
-  $('#game').classList.add('hidden');
+  document.body.classList.remove('game-active');
+    $('#game').classList.add('hidden');
   $('#home').classList.remove('hidden');
 };
 $('#closeModal').onclick = () => closeModal(true);
@@ -2738,6 +2743,7 @@ window.DentistasAppBack = function () {
     if (game && !game.classList.contains('hidden')) {
       saveActiveGame();
       stopTimer();
+      document.body.classList.remove('game-active');
       game.classList.add('hidden');
       document.querySelector('#home')?.classList.remove('hidden');
       window.DentistasNarrator?.stop?.();
