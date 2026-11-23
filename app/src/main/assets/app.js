@@ -1169,14 +1169,23 @@ function beginTurnAfterQuestion(startCareo = false) {
     // Mostrar pregunta y botones antes de iniciar la locución; permanecen visibles
     // mientras la narradora habla para que ambos equipos puedan ver la pregunta.
     turnResolving = false;
-    startFaceoff();
     updateCareoButton();
     console.info('[FACE OFF TRACE]', 'QUESTION_VISIBLE_AND_SPEECH_START', {round:roundIndex+1, textLength:questionText.length, faceoffActive});
+    let questionDone = false;
+    const openFaceoffAfterSpeech = () => {
+      if (questionDone || token !== turnNarrationToken || phase === 'over' || !gameVisible() || gamePaused) return;
+      questionDone = true;
+      console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_END_OPENING_FACEOFF', {round:roundIndex+1});
+      startFaceoff();
+      updateCareoButton();
+    };
     const spoken = narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
-      rate:.9
+      rate:.9,
+      onend:openFaceoffAfterSpeech,
+      onerror:openFaceoffAfterSpeech
     }, Math.max(2600, Math.min(14000, Math.round((questionText.length / 12.5) * 1000 + 1000))));
-    if (spoken === false) console.warn('[FACE OFF TRACE]', 'QUESTION_SPEECH_UNAVAILABLE');
+    if (spoken === false) openFaceoffAfterSpeech();
   };
 
   const intro = isEn()
