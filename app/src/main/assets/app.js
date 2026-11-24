@@ -16,7 +16,9 @@ const narrateWithFallback = (text, opts={}, fallbackDelay=null) => {
     try { (ok ? opts.onend : opts.onerror)?.(); } catch (_) {}
   };
   const clean = String(text || '').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
-  const estimate = Math.max(2200, Math.min(14000, Math.round((clean.length / 13.5) * 1000 + 1200)));
+  // Watchdog conservador: jamás debe adelantar el careo por estimar la narración demasiado rápida.
+  // Android TTS usa onDone; este temporizador solo evita bloqueo si el motor no manda callback.
+  const estimate = Math.max(3500, Math.min(22000, Math.round((clean.length / 8.5) * 1000 + 2500)));
   const delay = Number.isFinite(Number(fallbackDelay)) ? Math.max(estimate, Number(fallbackDelay)) : estimate;
   const spoken = narrate(text, {...opts, onend:() => finish(true), onerror:() => finish(false)});
   if (spoken === false) finish(false);
@@ -1203,7 +1205,6 @@ function beginTurnAfterQuestion(startCareo = false) {
     readQuestionThenFaceoff();
   };
   const introDelay = speechEstimateMs(intro, .92);
-  setTimeout(continueToQuestion, introDelay);
   const spokenIntro = narrateWithFallback(intro, {
     lang:isEn()?'en-US':'es-MX',
     rate:.92,
