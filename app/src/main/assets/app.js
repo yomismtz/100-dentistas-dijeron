@@ -975,13 +975,12 @@ function finishFaceoff(winner) {
   const resume = () => {
     if (resumed || phase === 'over' || gamePaused) return;
     resumed = true;
-    const questionText = qText(questions[roundIndex]);
-    const questionDelay = Math.max(2200, Math.min(12000, Math.round((questionText.length / 12) * 1000 + 1000)));
+    // La pregunta ya fue leída antes del careo. Al elegir equipo, no se vuelve
+    // a narrar: se habilita inmediatamente la respuesta del primer jugador.
     const beginAnswering = () => {
       turnResolving = false;
       const answerEntry = $('#answerEntry');
       answerEntry?.classList.remove('hidden');
-      // La respuesta aparece dentro del tablero, sin interrumpir la partida como ventana emergente.
       if (answerEntry) answerEntry.classList.add('answerEntryActive');
       const answerInput = $('#answerText');
       if (answerInput) {
@@ -992,14 +991,11 @@ function finishFaceoff(winner) {
       startTimer(TURN_SECONDS);
       if (gameConfig.mode === 'cpu' && currentTeam === 1) scheduleCpuTurn();
     };
+    const questionText = qText(questions[roundIndex]);
     questionVisibleThisRound = true;
     const questionEl = $('#question');
     if (questionEl) questionEl.textContent = questionText;
-    const spokenQuestion = narrateWithFallback(questionText, {
-      lang:qVoiceLang(questions[roundIndex]), rate:.9,
-      onend:beginAnswering, onerror:beginAnswering
-    }, questionDelay);
-    if (spokenQuestion === false) beginAnswering();
+    beginAnswering();
   };
   // Android WebView puede no emitir onend en algunos motores de voz.
   // Evitar que, tras pulsar el ganador, la respuesta y el cronómetro queden bloqueados.
@@ -1214,30 +1210,17 @@ function beginTurnAfterQuestion(startCareo = false) {
     updateCareoButton();
     console.info('[FACE OFF TRACE]', 'QUESTION_VISIBLE_AND_SPEECH_START', {round:roundIndex+1, textLength:questionText.length, faceoffActive});
     let questionDone = false;
-    const openFaceoffAfterSpeech = () => {
-      if (questionDone || token !== turnNarrationToken || phase === 'over' || !gameVisible() || gamePaused) return;
-      questionDone = true;
-      // El careo es el siguiente paso obligatorio: desbloquear la transición,
-      // mostrar ambos botones y solo después esperar la pulsación del equipo.
-      turnResolving = false;
-      console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_END_OPENING_FACEOFF', {round:roundIndex+1});
-      startFaceoff();
-      const panel = $('#faceoff');
-      if (panel && faceoffActive) {
-        panel.hidden = false;
-        panel.classList.remove('hidden');
-        panel.style.display = 'flex';
-        panel.setAttribute('aria-hidden','false');
-      }
-      updateCareoButton();
-    };
-    const spoken = narrateWithFallback(questionText, {
+    // Mostrar el careo ANTES de comenzar la locución. Los dos botones quedan
+    // disponibles durante toda la lectura; gana quien pulse primero.
+    questionDone = true;
+    turnResolving = false;
+    console.info('[FACE OFF TRACE]', 'OPEN_FACEOFF_BEFORE_QUESTION_SPEECH', {round:roundIndex+1});
+    startFaceoff();
+    updateCareoButton();
+    narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
-      rate:.9,
-      onend:openFaceoffAfterSpeech,
-      onerror:openFaceoffAfterSpeech
-    }, Math.max(2600, Math.min(14000, Math.round((questionText.length / 12.5) * 1000 + 1000))));
-    if (spoken === false) openFaceoffAfterSpeech();
+      rate:.9
+    }, Math.max(2600, Math.min(14000, Math.round((questionText.length / 12.5) * 1000 + 1000)));
   };
 
   const intro = isEn()
