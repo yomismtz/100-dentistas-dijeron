@@ -274,6 +274,8 @@ const audio = {
   start: $('#sndStart'),
   good: $('#sndGood'),
   bad: $('#sndBad'),
+  strike1: $('#sndStrike1'),
+  strike23: $('#sndStrike23'),
   faceoff: $('#sndFaceoff')
 };
 
@@ -1732,7 +1734,7 @@ function addStrike(reason = 'manual') {
 
   if (phase === 'steal') {
     sessionStealAttempts += 1;
-    play(audio.bad);
+    play(audio.strike23);
     showErrorFeedback(isEn() ? 'STEAL FAILED' : 'ROBO FALLIDO', 3);
     setTimeout(() => { turnResolving = false; endRoundAfterSteal(null, false); }, 450);
     return;
@@ -1741,7 +1743,7 @@ function addStrike(reason = 'manual') {
   strikes = Math.min(3, strikes + 1);
   saveActiveGame();
   updateStrikesUI();
-  play(audio.bad);
+  play(strikes === 1 ? audio.strike1 : audio.strike23);
   const labels = isEn()
     ? ['', 'FIRST STRIKE', 'SECOND STRIKE', 'THIRD STRIKE']
     : ['', 'PRIMER STRIKE', 'SEGUNDO STRIKE', 'TERCER STRIKE'];
