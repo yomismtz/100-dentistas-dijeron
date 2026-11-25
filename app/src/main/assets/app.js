@@ -1025,7 +1025,10 @@ function scheduleFaceoffCpuWin() {
 function startFaceoff() {
   // Al terminar la locución de la pregunta, el careo debe abrirse aunque
   // Android WebView conserve un bloqueo de resolución obsoleto.
-  if (phase === 'play' && careoStartedThisRound && !faceoffActive && !faceoffDoneThisRound && turnResolving) {
+  // El inicio del careo no debe quedar bloqueado por el candado de la
+  // narración/turno anterior. Si la ronda sigue activa y aún no hubo ganador,
+  // liberar ese candado antes de evaluar la apertura.
+  if (phase === 'play' && careoStartedThisRound && !faceoffDoneThisRound && turnResolving) {
     console.warn('[FACE OFF TRACE]', 'CLEAR_STALE_LOCK_BEFORE_FACEOFF', {round:roundIndex + 1});
     turnResolving = false;
   }
@@ -1121,6 +1124,15 @@ function startFaceoff() {
   $('#answerEntry')?.classList.add('hidden');
   document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
 
+  // Forzar ambos controles a un estado interactivo al abrir el careo.
+  [b1,b2].forEach(button => {
+    button.disabled = false;
+    button.removeAttribute('disabled');
+    button.style.pointerEvents = 'auto';
+    button.style.position = 'relative';
+    button.style.zIndex = '2';
+    button.setAttribute('aria-disabled','false');
+  });
   b1.textContent = '🦷 ' + (teamNames[0] || 'EQUIPO 1');
   b2.textContent = '🦷 ' + (teamNames[1] || 'EQUIPO 2');
 
