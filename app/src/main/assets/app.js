@@ -273,7 +273,8 @@ let teamBackActive = false;
 const audio = {
   start: $('#sndStart'),
   good: $('#sndGood'),
-  bad: $('#sndBad')
+  bad: $('#sndBad'),
+  faceoff: $('#sndFaceoff')
 };
 
 function tone(freq=440, duration=0.12, type='sine', volume=0.05) {
@@ -2811,6 +2812,6 @@ window.DentistasAppBack = function () {
   document.head.appendChild(st);
 })();
 $('#startFaceoff')?.addEventListener('click', () => beginTurnAfterQuestion(true));
-$('#faceoffTeam1')?.addEventListener('click',()=>{ console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:0, round:roundIndex + 1}); finishFaceoff(0); });
-$('#faceoffTeam2')?.addEventListener('click',()=>{ console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:1, round:roundIndex + 1}); finishFaceoff(1); });
+$('#faceoffTeam1')?.addEventListener('click',()=>{ play(audio.faceoff); console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:0, round:roundIndex + 1}); finishFaceoff(0); });
+$('#faceoffTeam2')?.addEventListener('click',()=>{ play(audio.faceoff); console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:1, round:roundIndex + 1}); finishFaceoff(1); });
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
