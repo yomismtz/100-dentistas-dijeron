@@ -2958,7 +2958,6 @@ $('#answerMic')?.addEventListener('click',startVoiceAnswer);
   stopTimer = function(){ if(timerHandle){ clearInterval(timerHandle); timerHandle=null; } };
   scheduleCpuTurn = function(){ clearCpuTurn(); };
   scheduleFaceoffCpuWin = function(){ clearTimeout(faceoffCpuHandle); faceoffCpuHandle=null; };
-  narrateWithFallback = function(){ return false; };
 
   function setManualButton(id,label,handler){
     let b=document.getElementById(id);
