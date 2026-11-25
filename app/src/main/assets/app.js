@@ -1123,8 +1123,12 @@ function startFaceoff() {
 
   faceoff.classList.remove('hidden');
   faceoff.hidden = false;
-  faceoff.style.removeProperty('display');
-  faceoff.style.display = 'flex';
+  faceoff.removeAttribute('hidden');
+  faceoff.style.setProperty('display', 'flex', 'important');
+  faceoff.style.setProperty('visibility', 'visible', 'important');
+  faceoff.style.setProperty('opacity', '1', 'important');
+  faceoff.style.setProperty('position', 'relative');
+  faceoff.style.setProperty('z-index', '20');
   faceoff.setAttribute('aria-hidden','false');
   $('#answerEntry')?.classList.add('hidden');
   document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
@@ -2747,17 +2751,19 @@ $('#undo')?.addEventListener('click', undoAward);
 $('#resetRound')?.addEventListener('click', resetRound);
 $('#menu')?.addEventListener('click', showMenu);
 const exitGame = $('#exitGame');
-if (exitGame) exitGame.onclick = () => {
-  const msg = isEn() ? 'Exit this game and return to the main menu?' : '¿Salir de esta partida y volver al menú principal?';
-  if (!confirm(msg)) return;
-  closeModal(false);
+if (exitGame) exitGame.onclick = (event) => {
+  event?.preventDefault?.();
+  // Salida directa: los diálogos confirm() pueden no responder en ciertos WebView Android.
+  try { closeModal(false); } catch (_) {}
   invalidateTurn();
   stopGameAudio();
+  gamePaused = false;
+  faceoffActive = false;
   phase = 'over';
   clearActiveGame();
   document.body.classList.remove('game-active');
-    $('#game').classList.add('hidden');
-  $('#home').classList.remove('hidden');
+  $('#game')?.classList.add('hidden');
+  $('#home')?.classList.remove('hidden');
 };
 $('#closeModal').onclick = () => closeModal(true);
 $('#modal').addEventListener('click', (e) => {
@@ -2815,7 +2821,23 @@ window.DentistasAppBack = function () {
   `;
   document.head.appendChild(st);
 })();
-$('#startFaceoff')?.addEventListener('click', () => beginTurnAfterQuestion(true));
-$('#faceoffTeam1')?.addEventListener('click',()=>{ play(audio.faceoff); console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:0, round:roundIndex + 1}); finishFaceoff(0); });
-$('#faceoffTeam2')?.addEventListener('click',()=>{ play(audio.faceoff); console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team:1, round:roundIndex + 1}); finishFaceoff(1); });
+const startFaceoffButton = $('#startFaceoff');
+if (startFaceoffButton) startFaceoffButton.onclick = (event) => {
+  event?.preventDefault?.();
+  if (startFaceoffButton.disabled || gamePaused || phase === 'over') return;
+  beginTurnAfterQuestion(true);
+};
+const bindFaceoffButton = (selector, team) => {
+  const button = $(selector);
+  if (!button) return;
+  button.onclick = (event) => {
+    event?.preventDefault?.();
+    if (!faceoffActive || gamePaused || turnResolving) return;
+    play(audio.faceoff);
+    console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_CLICK', {team, round:roundIndex + 1});
+    finishFaceoff(team);
+  };
+};
+bindFaceoffButton('#faceoffTeam1', 0);
+bindFaceoffButton('#faceoffTeam2', 1);
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
