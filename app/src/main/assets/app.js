@@ -1121,26 +1121,36 @@ function startFaceoff() {
   const boardQuestion = $('#question');
   if (boardQuestion) boardQuestion.textContent = visibleQuestionText;
 
+  // Apertura explícita del panel y de los dos botones para WebView y navegador.
   faceoff.classList.remove('hidden');
   faceoff.hidden = false;
   faceoff.removeAttribute('hidden');
   faceoff.style.setProperty('display', 'flex', 'important');
   faceoff.style.setProperty('visibility', 'visible', 'important');
   faceoff.style.setProperty('opacity', '1', 'important');
-  faceoff.style.setProperty('position', 'relative');
-  faceoff.style.setProperty('z-index', '20');
+  faceoff.style.setProperty('position', 'relative', 'important');
+  faceoff.style.setProperty('z-index', '100', 'important');
   faceoff.setAttribute('aria-hidden','false');
   $('#answerEntry')?.classList.add('hidden');
   document.querySelectorAll('#answers button').forEach(btn => { btn.disabled = true; });
 
-  // Forzar ambos controles a un estado interactivo al abrir el careo.
   [b1,b2].forEach(button => {
     button.disabled = false;
     button.removeAttribute('disabled');
-    button.style.pointerEvents = 'auto';
-    button.style.position = 'relative';
-    button.style.zIndex = '2';
+    button.hidden = false;
+    button.classList.remove('hidden');
+    button.style.setProperty('display','flex','important');
+    button.style.setProperty('visibility','visible','important');
+    button.style.setProperty('opacity','1','important');
+    button.style.setProperty('pointer-events','auto','important');
+    button.style.setProperty('position','relative','important');
+    button.style.setProperty('z-index','101','important');
     button.setAttribute('aria-disabled','false');
+  });
+  console.info('[FACE OFF TRACE]', 'FACEOFF_PANEL_FORCED_VISIBLE', {
+    panelDisplay:getComputedStyle(faceoff).display,
+    team1Display:getComputedStyle(b1).display,
+    team2Display:getComputedStyle(b2).display
   });
   b1.textContent = '🦷 ' + (teamNames[0] || 'EQUIPO 1');
   b2.textContent = '🦷 ' + (teamNames[1] || 'EQUIPO 2');
@@ -2843,37 +2853,35 @@ bindFaceoffButton('#faceoffTeam2', 1);
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
 
 
-/* Delegación de seguridad para controles críticos en WebView Android. */
+/* Controles críticos: enlace directo + delegación de respaldo para WebView Android. */
 (function installCriticalGameControls(){
   function returnToMainMenu(event){
     if(event){
-      event.preventDefault();
-      event.stopPropagation();
+      event.preventDefault?.();
+      event.stopPropagation?.();
       event.stopImmediatePropagation?.();
     }
-    // La salida nunca depende de confirm(), de un modal ni de que una rutina
-    // secundaria termine sin errores.
+    // Ejecutar cada limpieza de forma aislada: un fallo no bloquea la navegación.
     try { turnNarrationToken += 1; } catch (_) {}
+    try { invalidateTurn(); } catch (_) {}
     try { stopTimer(); } catch (_) {}
     try { clearCpuTurn(); } catch (_) {}
     try { clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null; } catch (_) {}
-    try { clearTimeout(roundTransitionHandle); } catch (_) {}
+    try { clearTimeout(roundTransitionHandle); roundTransitionHandle = null; } catch (_) {}
     try { window.DentistasNarrator?.stop?.(); } catch (_) {}
     try { stopGameAudio(); } catch (_) {}
     try { clearActiveGame(); } catch (_) {}
     try { closeModal(false); } catch (_) {}
     try { document.querySelector('#roundTransition')?.remove(); } catch (_) {}
 
-    try {
-      gamePaused = false;
-      faceoffActive = false;
-      faceoffDoneThisRound = false;
-      careoStartedThisRound = false;
-      questionVisibleThisRound = false;
-      turnResolving = false;
-      teamBackActive = false;
-      phase = 'over';
-    } catch (_) {}
+    gamePaused = false;
+    faceoffActive = false;
+    faceoffDoneThisRound = false;
+    careoStartedThisRound = false;
+    questionVisibleThisRound = false;
+    turnResolving = false;
+    teamBackActive = false;
+    phase = 'over';
 
     const game = document.getElementById('game');
     const home = document.getElementById('home');
@@ -2887,46 +2895,53 @@ $('#answerMic')?.addEventListener('click',startVoiceAnswer);
       home.classList.remove('hidden');
       home.removeAttribute('hidden');
       home.removeAttribute('aria-hidden');
-      home.style.removeProperty('display');
+      home.style.setProperty('display','flex','important');
       home.style.removeProperty('visibility');
     }
     if(modal){
       modal.classList.add('hidden');
       modal.setAttribute('aria-hidden','true');
     }
-    document.body.classList.remove('game-active');
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove('game-active','modal-open');
     console.info('[GAME NAV]', 'RETURNED_TO_HOME');
   }
 
+  function selectFaceoffTeam(button){
+    if(!button || !faceoffActive || gamePaused || turnResolving || phase === 'over') return;
+    const winner = button.id === 'faceoffTeam1' ? 0 : 1;
+    try { play(audio.faceoff); } catch (_) {}
+    console.info('[FACE OFF TRACE]', 'FACEOFF_BUTTON_DIRECT_CLICK', {winner, round:roundIndex + 1});
+    finishFaceoff(winner);
+  }
+
+  const exitButton = document.getElementById('exitGame');
+  if(exitButton){
+    exitButton.onclick = returnToMainMenu;
+    exitButton.addEventListener('click', returnToMainMenu, true);
+  }
+  ['faceoffTeam1','faceoffTeam2'].forEach(id => {
+    const button = document.getElementById(id);
+    if(button) button.onclick = () => selectFaceoffTeam(button);
+  });
+  const startButton = document.getElementById('startFaceoff');
+  if(startButton) startButton.onclick = event => {
+    event?.preventDefault?.();
+    if(startButton.disabled || gamePaused || phase === 'over' || faceoffActive) return;
+    beginTurnAfterQuestion(true);
+  };
+
+  // Respaldo para clics delegados en elementos internos de los botones.
   document.addEventListener('click', event => {
     const target = event.target instanceof Element ? event.target : event.target?.parentElement;
     if(!target) return;
-
-    if(target.closest('#exitGame')){
-      returnToMainMenu(event);
-      return;
-    }
-
-    const faceoffButton = target.closest('#faceoffTeam1, #faceoffTeam2');
-    if(faceoffButton){
-      event.preventDefault();
-      event.stopPropagation();
-      event.stopImmediatePropagation?.();
-      if(!faceoffActive || gamePaused || turnResolving || phase === 'over') return;
-      const winner = faceoffButton.id === 'faceoffTeam1' ? 0 : 1;
-      play(audio.faceoff);
-      console.info('[FACE OFF TRACE]', 'FACEOFF_DELEGATED_BUTTON_CLICK', {winner, round:roundIndex + 1});
-      finishFaceoff(winner);
-      return;
-    }
-
-    if(target.closest('#startFaceoff')){
-      event.preventDefault();
-      event.stopPropagation();
-      event.stopImmediatePropagation?.();
-      if(!gamePaused && phase !== 'over' && !faceoffActive && !faceoffDoneThisRound){
-        beginTurnAfterQuestion(true);
+    if(target.closest('#exitGame')) returnToMainMenu(event);
+    else {
+      const button = target.closest('#faceoffTeam1, #faceoffTeam2');
+      if(button){
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation?.();
+        selectFaceoffTeam(button);
       }
     }
   }, true);
