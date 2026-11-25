@@ -1220,7 +1220,7 @@ function beginTurnAfterQuestion(startCareo = false) {
     narrateWithFallback(questionText, {
       lang:qVoiceLang(q),
       rate:.9
-    }, Math.max(2600, Math.min(14000, Math.round((questionText.length / 12.5) * 1000 + 1000)));
+    }, Math.max(2600, Math.min(14000, Math.round((questionText.length / 12.5) * 1000 + 1000))));
   };
 
   const intro = isEn()
