@@ -571,3 +571,61 @@ body{background:radial-gradient(ellipse at 15% 10%,#49216c 0,transparent 42%),ra
     font-size: 8px;
   }
 }
+
+
+/* Botones físicos de careo: ubicados bajo las casillas, como pulsadores de concurso. */
+.faceoff {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 138px;
+  padding: 10px 18px 14px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.faceoffCopy { flex: 0 1 auto; align-items: center; text-align: center; gap: 2px; min-width: 0; }
+.faceoffCopy .faceoffKicker { font-size: 9px; }
+.faceoffCopy strong { font-size: 13px; }
+.faceoffCopy small { font-size: 10px; }
+.faceoffButtons {
+  display: flex;
+  width: min(100%, 900px);
+  flex: 0 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: clamp(40px, 18vw, 260px);
+}
+.faceoffButtons button,
+.faceoffButtons button+button {
+  width: clamp(100px, 13vw, 160px);
+  height: clamp(100px, 13vw, 160px);
+  min-height: 0;
+  padding: 12px;
+  border: 7px solid #ff8a83;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: radial-gradient(circle at 35% 28%, #ff6d68, #d92e43 70%);
+  color: #fff;
+  box-shadow: 0 8px 0 #852238, 0 12px 26px #0006, inset 0 3px 8px #ffffff55;
+  letter-spacing: .04em;
+  font-size: 10px;
+  touch-action: manipulation;
+}
+.faceoffButtons button+button { background: radial-gradient(circle at 35% 28%, #ff6d68, #d92e43 70%); }
+.faceoffButtons button span {
+  width: 30px; height: 30px; font-size: 16px; font-weight: 1000;
+  background: #7f1835aa;
+}
+.faceoffButtons button b { font-size: 10px; }
+.faceoffButtons button:active { transform: translateY(5px) scale(.97); box-shadow: 0 3px 0 #852238, 0 7px 16px #0006; }
+@media(max-width:640px) {
+  .faceoff { min-height: 122px; padding: 8px 6px 12px; gap: 7px; }
+  .faceoffButtons { width: 100%; gap: 24px; justify-content: space-evenly; }
+  .faceoffButtons button, .faceoffButtons button+button { width: 94px; height: 94px; border-width: 5px; }
+  .faceoffCopy strong { font-size: 11px; }
+}
