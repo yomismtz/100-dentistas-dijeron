@@ -1527,7 +1527,7 @@ function showRound(reset = true) {
   });
 
   updateTurnUI();
-  if (reset) showRoundTransition(() => beginTurnAfterQuestion());
+  if (reset) showRoundTransition(() => beginTurnAfterQuestion(true));
   try {
     window.dispatchEvent(new CustomEvent('dentistas-round-shown', {
       detail: { roundIndex, total: questions.length }
