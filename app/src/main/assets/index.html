@@ -109,14 +109,6 @@
         <span id="careoHint" class="careoHint" role="status">La narradora leerá la pregunta y comenzará el careo.</span>
       </div>
 
-      <div id="faceoff" class="faceoff hidden" aria-live="polite">
-        <div class="faceoffCopy"><span class="faceoffKicker">⚡ CARA A CARA</span><strong>¿Quién responde primero?</strong><small>Presiona el botón de tu equipo.</small></div>
-        <div class="faceoffButtons">
-          <button id="faceoffTeam1" type="button"><span>1</span> EQUIPO 1</button>
-          <button id="faceoffTeam2" type="button"><span>2</span> EQUIPO 2</button>
-        </div>
-      </div>
-
       <div id="answerEntry" class="answerEntry hidden">
         <div class="answerEntryTitle"><span class="answerIcon">✍</span><div><b>¡Es tu turno!</b><small>Escribe la respuesta o dicta con el micrófono.</small></div></div>
         <div class="answerInputRow">
@@ -136,6 +128,14 @@
       </div>
 
       <div id="answers" class="answers" aria-label="Tablero de respuestas"></div>
+      <div id="faceoff" class="faceoff hidden" aria-live="polite">
+        <div class="faceoffCopy"><span class="faceoffKicker">⚡ CAREO EN CURSO</span><strong>¡Pulsa antes que el otro equipo!</strong><small>La narradora se detendrá al primer botón.</small></div>
+        <div class="faceoffButtons">
+          <button id="faceoffTeam1" type="button" aria-label="Botón de careo del equipo 1"><span>1</span><b>EQUIPO 1</b></button>
+          <button id="faceoffTeam2" type="button" aria-label="Botón de careo del equipo 2"><span>2</span><b>EQUIPO 2</b></button>
+        </div>
+      </div>
+
 
       <aside id="learningCard" class="learningCard hidden" aria-live="polite">
         <span class="learningKicker">🧠 PARA RECORDAR</span>
