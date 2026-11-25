@@ -941,6 +941,8 @@ function finishFaceoff(winner) {
     return;
   }
   console.info('[FACE OFF TRACE]', 'FACEOFF_WINNER', {winner, mode:gameConfig.mode, round:roundIndex + 1});
+  // El primer pulsador interrumpe de inmediato la lectura en Android y navegador.
+  window.DentistasNarrator?.stop?.();
   faceoffActive = false;
   // Lock answer input until the winner announcement finishes. Without this lock,
   // a fast click can start the answer narration and interrupt the faceoff result.
@@ -970,7 +972,7 @@ function finishFaceoff(winner) {
   const winnerName = gameConfig.mode === 'cpu' && currentTeam === 1
     ? (isEn() ? 'the computer' : 'la computadora')
     : (teamNames[currentTeam] || (isEn() ? `team ${currentTeam + 1}` : `equipo ${currentTeam + 1}`));
-  const announcement = isEn() ? `We go with ${winnerName}.` : `Nos vamos con ${winnerName}.`;
+  const announcement = isEn() ? `We go with ${winnerName}.` : `¡Vamos con ${winnerName}!`;
 
   let resumed = false;
   const resume = () => {
