@@ -592,12 +592,45 @@ function recordQuestionHistory(selected) {
   } catch (_) {}
 }
 
+const RECENT_GAME_SEQUENCE_KEY = 'dentistas-recent-game-sequences-v1';
+const RECENT_GAME_SEQUENCE_LIMIT = 12;
+
+function readRecentGameSequences() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(RECENT_GAME_SEQUENCE_KEY) || '[]');
+    return Array.isArray(stored) ? stored.filter(entry => Array.isArray(entry) && entry.every(key => typeof key === 'string')) : [];
+  } catch (_) { return []; }
+}
+
+function saveRecentGameSequence(selected) {
+  try {
+    const sequences = readRecentGameSequences();
+    sequences.push(selected.map(questionKey));
+    localStorage.setItem(RECENT_GAME_SEQUENCE_KEY, JSON.stringify(sequences.slice(-RECENT_GAME_SEQUENCE_LIMIT)));
+  } catch (_) {}
+}
+
 function chooseGameQuestions() {
   const pool = filteredPool();
   const history = readRecentQuestionHistory();
-  const selected = chooseVariedQuestions(pool, Math.min(GAME_SIZE, pool.length), history.map(entry => entry.key));
+  const count = Math.min(GAME_SIZE, pool.length);
+  const recentSequences = readRecentGameSequences();
+  const sequenceKey = items => JSON.stringify(items.map(questionKey));
+  const recentSequenceSet = new Set(recentSequences.map(sequenceKey));
+  let selected = chooseVariedQuestions(pool, count, history.map(entry => entry.key));
+
+  // Evita repetir el mismo orden de partida; si el banco es pequeño, vuelve a barajar.
+  for (let attempt = 0; attempt < 12 && count > 1 && recentSequenceSet.has(sequenceKey(selected)); attempt += 1) {
+    selected = chooseVariedQuestions(pool, count, history.map(entry => entry.key));
+  }
+  // Garantía adicional cuando el banco solo permite una combinación de preguntas.
+  if (count > 1 && recentSequenceSet.has(sequenceKey(selected))) {
+    selected = selected.slice(1).concat(selected[0]);
+  }
+
   questions = selected;
   recordQuestionHistory(selected);
+  saveRecentGameSequence(selected);
 }
 
 function roundMultiplier(index = roundIndex) {
