@@ -2946,3 +2946,197 @@ $('#answerMic')?.addEventListener('click',startVoiceAnswer);
     }
   }, true);
 })();
+
+
+/* CONTROLES MANUALES: flujo sin cronómetros, locución ni avances automáticos. */
+(function installManualGameFlow(){
+  // El tablero no debe quedar cubierto por animaciones o transiciones temporizadas.
+  window.__DENTISTAS_MANUAL_FLOW__ = true;
+  window.showRoundTransition = function(){ /* transición desactivada */ };
+  showRoundTransition = function(){ /* transición desactivada */ };
+  startTimer = function(){ stopTimer(); timerRemaining = 0; updateTimerUI(); };
+  stopTimer = function(){ if(timerHandle){ clearInterval(timerHandle); timerHandle=null; } };
+  scheduleCpuTurn = function(){ clearCpuTurn(); };
+  scheduleFaceoffCpuWin = function(){ clearTimeout(faceoffCpuHandle); faceoffCpuHandle=null; };
+  narrateWithFallback = function(){ return false; };
+
+  function setManualButton(id,label,handler){
+    let b=document.getElementById(id);
+    if(!b){
+      b=document.createElement('button'); b.id=id; b.type='button';
+      b.className='revealRemaining';
+      const host=document.querySelector('.boardBottom') || document.querySelector('.board');
+      host?.appendChild(b);
+    }
+    b.textContent=label; b.classList.remove('hidden'); b.disabled=false;
+    b.onclick=handler;
+    return b;
+  }
+  function clearManualActions(){
+    ['manualAward','manualStealFail'].forEach(id=>document.getElementById(id)?.classList.add('hidden'));
+  }
+  function setGameVisible(){
+    const g=$('#game'),h=$('#home');
+    if(g){g.classList.remove('hidden');g.style.removeProperty('display');g.removeAttribute('aria-hidden');}
+    if(h){h.classList.add('hidden');h.style.removeProperty('display');}
+    document.body.classList.add('game-active');
+  }
+  function stopEverything(){
+    try{invalidateTurn();}catch(_){}
+    try{stopTimer();}catch(_){}
+    try{clearCpuTurn();}catch(_){}
+    try{clearTimeout(faceoffCpuHandle);faceoffCpuHandle=null;}catch(_){}
+    try{clearTimeout(roundTransitionHandle);roundTransitionHandle=null;}catch(_){}
+    try{window.DentistasNarrator?.stop?.();}catch(_){}
+    try{stopGameAudio();}catch(_){}
+    document.querySelector('#roundTransition')?.remove();
+    document.querySelector('#strikeFlash')?.classList.add('hidden');
+  }
+  function exitToHome(event){
+    event?.preventDefault?.(); event?.stopPropagation?.(); event?.stopImmediatePropagation?.();
+    stopEverything(); clearActiveGame(); closeModal(false);
+    gamePaused=false; faceoffActive=false; faceoffDoneThisRound=false;
+    careoStartedThisRound=false; questionVisibleThisRound=false;
+    turnResolving=false; teamBackActive=false; phase='over';
+    const g=$('#game'),h=$('#home'),modal=$('#modal');
+    if(g){g.classList.add('hidden');g.style.removeProperty('display');g.removeAttribute('aria-hidden');}
+    if(h){h.classList.remove('hidden');h.style.removeProperty('display');h.removeAttribute('hidden');}
+    if(modal)modal.classList.add('hidden');
+    document.body.classList.remove('game-active','modal-open');
+    clearManualActions();
+    return false;
+  }
+  // Reemplaza el listener conflictivo anterior por una salida capturada antes
+  // de cualquier manejador delegado del juego.
+  document.addEventListener('click',event=>{
+    const target=event.target instanceof Element?event.target:event.target?.parentElement;
+    if(target?.closest('#exitGame')) exitToHome(event);
+  },true);
+
+  beginTurnAfterQuestion = function(startCareo=false){
+    if(gamePaused||phase==='over'||!gameVisible())return;
+    if(!startCareo){
+      stopEverything(); faceoffActive=false;faceoffDoneThisRound=false;
+      careoStartedThisRound=false;questionVisibleThisRound=false;
+      $('#faceoff')?.classList.add('hidden');$('#answerEntry')?.classList.add('hidden');
+      if($('#question'))$('#question').textContent='';
+      updateTurnUI();saveActiveGame();return;
+    }
+    if(faceoffActive||faceoffDoneThisRound)return;
+    const q=questions[roundIndex];if(!q)return;
+    stopEverything();careoStartedThisRound=true;questionVisibleThisRound=true;
+    $('#question').textContent=qText(q);
+    const panel=$('#faceoff');panel?.classList.remove('hidden');
+    if(panel){panel.hidden=false;panel.style.display='flex';panel.style.pointerEvents='auto';panel.style.zIndex='20';}
+    $('#answerEntry')?.classList.add('hidden');
+    faceoffActive=true;faceoffDoneThisRound=false;turnResolving=false;
+    [$('#faceoffTeam1'),$('#faceoffTeam2')].forEach((b,i)=>{
+      if(!b)return;b.disabled=false;b.classList.remove('hidden');b.style.pointerEvents='auto';
+      b.textContent='🦷 '+teamNames[i];
+    });
+    updateCareoButton();updateTurnUI();saveActiveGame();
+  };
+  startFaceoff = function(){
+    if(phase==='steal'){
+      faceoffActive=false;$('#faceoff')?.classList.add('hidden');
+      $('#answerEntry')?.classList.remove('hidden');turnResolving=false;updateTurnUI();return;
+    }
+    beginTurnAfterQuestion(true);
+  };
+  finishFaceoff = function(winner){
+    if(!faceoffActive||phase==='over'||gamePaused)return;
+    currentTeam=Number(winner)||0;faceoffActive=false;faceoffDoneThisRound=true;
+    turnResolving=false;questionVisibleThisRound=true;
+    $('#faceoff')?.classList.add('hidden');
+    $('#answerEntry')?.classList.remove('hidden');
+    $('#answerEntry')?.classList.add('answerEntryActive');
+    if($('#answerText')){$('#answerText').disabled=false;$('#answerText').focus();}
+    if($('#answerSubmit'))$('#answerSubmit').disabled=false;
+    if($('#answerMic'))$('#answerMic').disabled=false;
+    updateTurnUI();saveActiveGame();
+  };
+  revealAnswer = function(idx,btn){
+    if(phase==='over'||gamePaused||turnResolving||teamBackActive||revealed[idx]||faceoffActive||!faceoffDoneThisRound)return;
+    const q=questions[roundIndex];if(!q||!q.a[idx])return;
+    revealed[idx]=true;sessionCorrect++;turnResolving=false;
+    btn=btn||document.querySelectorAll('#answers button')[idx];
+    if(btn){btn.classList.remove('covered');btn.classList.add('revealed');btn.disabled=true;}
+    showLearningNote(q,idx);showCorrectFeedback(isEn()?'CORRECT':'¡CORRECTO!');
+    if(phase==='steal'){
+      sessionStealAttempts++;sessionSteals++;
+      const stolen=bank; scores[currentTeam]+=stolen; awardHistory.push({team:currentTeam,points:stolen});
+      bank=0;phase='over';updateScoreUI();updateBankUI();updateTurnUI();
+      setManualButton('manualAward',isEn()?'STEAL AWARDED · CONTINUE':'ROBO ASIGNADO · CONTINUAR',()=>finishManualRound());
+    }else{
+      const gained=(Number(q.a[idx][1])||0)*roundMultiplier();
+      bank+=gained;updateBankUI();updateTurnUI();
+      if(revealed.every(Boolean)){
+        setManualButton('manualAward',isEn()?'AWARD BANK TO '+teamNames[currentTeam]:'ASIGNAR BANCO A '+teamNames[currentTeam],()=>manualAwardBank(currentTeam));
+      }
+    }
+    turnResolving=false;saveActiveGame();
+  };
+  function finishManualRound(){
+    clearManualActions();showRoundContinueButton();saveActiveGame();
+  }
+  function manualAwardBank(team){
+    if(phase==='over'&&roundAdvanceReady){finishManualRound();return;}
+    const idx=Number(team)||0;const points=Math.max(0,Number(bank)||0);
+    if(points){scores[idx]+=points;awardHistory.push({team:idx,points});}
+    bank=0;phase='over';turnResolving=false;
+    updateScoreUI();updateBankUI();updateTurnUI();
+    clearManualActions();finishManualRound();
+  }
+  window.DentistasManualAwardBank=manualAwardBank;
+  addStrike = function(){
+    if(phase==='over'||gamePaused||turnResolving)return;
+    stopEverything();turnResolving=false;
+    if(phase==='steal'){
+      sessionStealAttempts++;showErrorFeedback(isEn()?'STEAL FAILED':'ROBO FALLIDO',3);
+      const originalTeam=1-currentTeam;
+      setManualButton('manualStealFail',isEn()?'AWARD BANK TO '+teamNames[originalTeam]:'ASIGNAR BANCO A '+teamNames[originalTeam],()=>manualAwardBank(originalTeam));
+      return;
+    }
+    strikes=Math.min(3,strikes+1);sessionStrikes++;updateStrikesUI();
+    showErrorFeedback((isEn()?'STRIKE ':'ERROR ')+strikes,strikes);
+    if(strikes===3){
+      teamBackActive=false;$('#teamBack')?.classList.add('hidden');
+      currentTeam=1-currentTeam;phase='steal';
+      $('#answerEntry')?.classList.remove('hidden');
+      setAnswerFeedback(isEn()?'Steal attempt: enter one answer.':'Turno de robo: escribe una respuesta.', 'hint');
+    }else{
+      if(strikes===2){$('#teamBack')?.classList.remove('hidden');}
+      setAnswerFeedback(isEn()?'Continue when ready.':'Continúen cuando estén listos.','hint');
+    }
+    turnResolving=false;updateTurnUI();saveActiveGame();
+  };
+  awardBank = function(team){manualAwardBank((Number(team)||1)-1);};
+  showRoundTransition = function(){ /* sin temporizador ni pantalla bloqueante */ };
+  const start=$('#startFaceoff');
+  if(start){start.onclick=e=>{e.preventDefault();beginTurnAfterQuestion(true);};}
+  const b1=$('#faceoffTeam1'),b2=$('#faceoffTeam2');
+  if(b1)b1.onclick=e=>{e.preventDefault();finishFaceoff(0);};
+  if(b2)b2.onclick=e=>{e.preventDefault();finishFaceoff(1);};
+  const exit=$('#exitGame');if(exit)exit.onclick=exitToHome;
+  // El moderador decide cuándo revelar el resto y cuándo asignar el banco.
+  const reveal=$('#revealRemaining');
+  if(reveal){reveal.disabled=false;reveal.onclick=()=>{
+    questions[roundIndex].a.forEach((_,i)=>{if(!revealed[i]){revealed[i]=true;const b=document.querySelectorAll('#answers button')[i];b?.classList.remove('covered');b?.classList.add('revealed');}});
+    updateStrikesUI();setManualButton('manualAward',isEn()?'AWARD BANK TO '+teamNames[currentTeam]:'ASIGNAR BANCO A '+teamNames[currentTeam],()=>manualAwardBank(currentTeam));
+  };}
+  const bottom=document.querySelector('.boardBottom');
+  if(bottom){
+    let manual=document.getElementById('manualAward');
+    if(!manual){manual=document.createElement('button');manual.id='manualAward';manual.type='button';manual.className='revealRemaining';bottom.appendChild(manual);}
+    manual.classList.add('hidden');
+    let fail=document.getElementById('manualStealFail');
+    if(!fail){fail=document.createElement('button');fail.id='manualStealFail';fail.type='button';fail.className='revealRemaining';bottom.appendChild(fail);}
+    fail.classList.add('hidden');
+  }
+  const timerBox=document.querySelector('.timerBox');
+  if(timerBox){timerBox.innerHTML='<span>TIEMPO</span><div><strong>—</strong></div><i>SIN CRONÓMETRO · CONTROL MANUAL</i>';}
+  const hint=$('#careoHint');if(hint)hint.textContent='Pulsa INICIAR RONDA cuando quieras mostrar la pregunta y abrir el careo.';
+  document.querySelectorAll('#answers button').forEach(b=>{b.disabled=true;b.style.pointerEvents='none';});
+  document.querySelectorAll('.award').forEach(b=>b.disabled=false);
+  console.info('[MANUAL FLOW] enabled');
+})();
