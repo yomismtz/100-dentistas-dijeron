@@ -41,6 +41,7 @@ button:disabled{cursor:not-allowed;opacity:.48;filter:saturate(.55)}
 .simpleTitle{margin:0;color:#fff;font-size:clamp(34px,4.2vw,62px);line-height:.99;letter-spacing:-.055em;font-weight:1000}
 .simpleTitle em{font-style:normal;color:var(--gold)}
 .simpleSubtitle{max-width:480px;margin:17px 0 28px;color:#b6cbd1;font-size:clamp(14px,1.45vw,18px);line-height:1.55}
+.brandSlogan{display:block;width:min(420px,100%);max-height:105px;object-fit:contain;object-position:left center;margin:16px 0 26px;filter:drop-shadow(0 8px 16px #0005)}
 .gameFacts{display:flex;gap:0;max-width:450px;border-top:1px solid #ffffff20;border-bottom:1px solid #ffffff20}
 .gameFacts>div{flex:1;padding:13px 18px 13px 0}
 .gameFacts>div+div{border-left:1px solid #ffffff20;padding-left:18px}
