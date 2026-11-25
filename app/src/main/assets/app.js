@@ -2841,3 +2841,93 @@ const bindFaceoffButton = (selector, team) => {
 bindFaceoffButton('#faceoffTeam1', 0);
 bindFaceoffButton('#faceoffTeam2', 1);
 $('#answerMic')?.addEventListener('click',startVoiceAnswer);
+
+
+/* Delegación de seguridad para controles críticos en WebView Android. */
+(function installCriticalGameControls(){
+  function returnToMainMenu(event){
+    if(event){
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation?.();
+    }
+    // La salida nunca depende de confirm(), de un modal ni de que una rutina
+    // secundaria termine sin errores.
+    try { turnNarrationToken += 1; } catch (_) {}
+    try { stopTimer(); } catch (_) {}
+    try { clearCpuTurn(); } catch (_) {}
+    try { clearTimeout(faceoffCpuHandle); faceoffCpuHandle = null; } catch (_) {}
+    try { clearTimeout(roundTransitionHandle); } catch (_) {}
+    try { window.DentistasNarrator?.stop?.(); } catch (_) {}
+    try { stopGameAudio(); } catch (_) {}
+    try { clearActiveGame(); } catch (_) {}
+    try { closeModal(false); } catch (_) {}
+    try { document.querySelector('#roundTransition')?.remove(); } catch (_) {}
+
+    try {
+      gamePaused = false;
+      faceoffActive = false;
+      faceoffDoneThisRound = false;
+      careoStartedThisRound = false;
+      questionVisibleThisRound = false;
+      turnResolving = false;
+      teamBackActive = false;
+      phase = 'over';
+    } catch (_) {}
+
+    const game = document.getElementById('game');
+    const home = document.getElementById('home');
+    const modal = document.getElementById('modal');
+    if(game){
+      game.classList.add('hidden');
+      game.setAttribute('aria-hidden','true');
+      game.style.setProperty('display','none','important');
+    }
+    if(home){
+      home.classList.remove('hidden');
+      home.removeAttribute('hidden');
+      home.removeAttribute('aria-hidden');
+      home.style.removeProperty('display');
+      home.style.removeProperty('visibility');
+    }
+    if(modal){
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden','true');
+    }
+    document.body.classList.remove('game-active');
+    document.body.classList.remove('modal-open');
+    console.info('[GAME NAV]', 'RETURNED_TO_HOME');
+  }
+
+  document.addEventListener('click', event => {
+    const target = event.target instanceof Element ? event.target : event.target?.parentElement;
+    if(!target) return;
+
+    if(target.closest('#exitGame')){
+      returnToMainMenu(event);
+      return;
+    }
+
+    const faceoffButton = target.closest('#faceoffTeam1, #faceoffTeam2');
+    if(faceoffButton){
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation?.();
+      if(!faceoffActive || gamePaused || turnResolving || phase === 'over') return;
+      const winner = faceoffButton.id === 'faceoffTeam1' ? 0 : 1;
+      play(audio.faceoff);
+      console.info('[FACE OFF TRACE]', 'FACEOFF_DELEGATED_BUTTON_CLICK', {winner, round:roundIndex + 1});
+      finishFaceoff(winner);
+      return;
+    }
+
+    if(target.closest('#startFaceoff')){
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation?.();
+      if(!gamePaused && phase !== 'over' && !faceoffActive && !faceoffDoneThisRound){
+        beginTurnAfterQuestion(true);
+      }
+    }
+  }, true);
+})();
