@@ -1027,6 +1027,12 @@ function scheduleFaceoffCpuWin() {
 }
 
 function startFaceoff() {
+  // Al terminar la locución de la pregunta, el careo debe abrirse aunque
+  // Android WebView conserve un bloqueo de resolución obsoleto.
+  if (phase === 'play' && careoStartedThisRound && !faceoffActive && !faceoffDoneThisRound && turnResolving) {
+    console.warn('[FACE OFF TRACE]', 'CLEAR_STALE_LOCK_BEFORE_FACEOFF', {round:roundIndex + 1});
+    turnResolving = false;
+  }
   console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN_REQUEST', {gamePaused, turnResolving, phase, faceoffActive, faceoffDoneThisRound, round:roundIndex + 1});
   if (gamePaused || turnResolving || phase === 'over') {
     console.info('[FACE OFF TRACE]', 'FACEOFF_OPEN_BLOCKED', {gamePaused, turnResolving, phase});
@@ -1211,8 +1217,18 @@ function beginTurnAfterQuestion(startCareo = false) {
     const openFaceoffAfterSpeech = () => {
       if (questionDone || token !== turnNarrationToken || phase === 'over' || !gameVisible() || gamePaused) return;
       questionDone = true;
+      // El careo es el siguiente paso obligatorio: desbloquear la transición,
+      // mostrar ambos botones y solo después esperar la pulsación del equipo.
+      turnResolving = false;
       console.info('[FACE OFF TRACE]', 'QUESTION_SPEECH_END_OPENING_FACEOFF', {round:roundIndex+1});
       startFaceoff();
+      const panel = $('#faceoff');
+      if (panel && faceoffActive) {
+        panel.hidden = false;
+        panel.classList.remove('hidden');
+        panel.style.display = 'flex';
+        panel.setAttribute('aria-hidden','false');
+      }
       updateCareoButton();
     };
     const spoken = narrateWithFallback(questionText, {
