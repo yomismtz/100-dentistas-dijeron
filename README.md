@@ -1,10 +1,10 @@
-# 100 Dentistas Dijeron 🦷🎤
+# Así los dentistas lo dijeron 🦜🦷
 
-Juego educativo Android de odontología para dos equipos, inspirado en la dinámica de concursos de respuestas populares.
+Juego educativo de odontología para Android y web, inspirado en la dinámica de concursos de respuestas populares. Su nombre oficial es **Así los dentistas lo dijeron**.
 
 ## Sitio oficial
 
-- Web: https://yomismtz.github.io/100-dentistas-dijeron/
+- Web: https://yomismtz.github.io/100-dentistas-dijeron/ (la ruta conserva el nombre histórico del repositorio; el título oficial del juego es **Así los dentistas lo dijeron**).
 - Política de privacidad: https://yomismtz.github.io/100-dentistas-dijeron/privacy.html
 - Seguridad de datos: https://yomismtz.github.io/100-dentistas-dijeron/data-safety.html
 - Términos de uso: https://yomismtz.github.io/100-dentistas-dijeron/terms.html
@@ -41,4 +41,4 @@ gradle assembleDebug
 
 El APK queda en `app/build/outputs/apk/debug/app-debug.apk`.
 
-También puede compilarse desde **GitHub Actions**. El workflow valida primero el banco de preguntas y después genera el artefacto `100-dentistas-dijeron-debug-apk`.
+También puede compilarse desde **GitHub Actions**. El workflow valida primero el banco de preguntas y después genera el artefacto `asi-los-dentistas-lo-dijeron-debug-apk`.
