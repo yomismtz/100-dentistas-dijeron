@@ -3010,7 +3010,14 @@ $('#answerMic')?.addEventListener('click',startVoiceAnswer);
   // de cualquier manejador delegado del juego.
   document.addEventListener('click',event=>{
     const target=event.target instanceof Element?event.target:event.target?.parentElement;
-    if(target?.closest('#exitGame')) exitToHome(event);
+    if(!target)return;
+    if(target.closest('#exitGame')){exitToHome(event);return;}
+    if(target.closest('#revealRemaining')){
+      event.preventDefault();event.stopPropagation();event.stopImmediatePropagation?.();
+      questions[roundIndex]?.a?.forEach((_,i)=>{if(!revealed[i]){revealed[i]=true;const b=document.querySelectorAll('#answers button')[i];b?.classList.remove('covered');b?.classList.add('revealed');}});
+      updateStrikesUI();setManualButton('manualAward',isEn()?'AWARD BANK TO '+teamNames[currentTeam]:'ASIGNAR BANCO A '+teamNames[currentTeam],()=>manualAwardBank(currentTeam));
+      return;
+    }
   },true);
 
   beginTurnAfterQuestion = function(startCareo=false){
@@ -3070,9 +3077,7 @@ $('#answerMic')?.addEventListener('click',startVoiceAnswer);
     }else{
       const gained=(Number(q.a[idx][1])||0)*roundMultiplier();
       bank+=gained;updateBankUI();updateTurnUI();
-      if(revealed.every(Boolean)){
-        setManualButton('manualAward',isEn()?'AWARD BANK TO '+teamNames[currentTeam]:'ASIGNAR BANCO A '+teamNames[currentTeam],()=>manualAwardBank(currentTeam));
-      }
+      setManualButton('manualAward',isEn()?'AWARD BANK TO '+teamNames[currentTeam]:'ASIGNAR BANCO A '+teamNames[currentTeam],()=>manualAwardBank(currentTeam));
     }
     turnResolving=false;saveActiveGame();
   };
