@@ -761,3 +761,108 @@ img,video,canvas{max-width:100%}
 @media(max-width:560px){.careoBuzzers{gap:10px}.careoBuzzer{min-height:112px;border-width:5px;border-radius:18px}.careoBuzzer b{font-size:10px}.careoPrimary,.careoSecondary{width:100%}}
 
 .careoAnswerEntry{display:flex;gap:8px;align-items:stretch}.careoAnswerEntry input{flex:1;min-width:0}.careoAnswerEntry button{flex:0 0 auto;min-width:76px}
+
+
+
+/* Careo: respeta la identidad cromática original y se adapta al viewport. */
+.careoModal{
+  width:100%;
+  min-width:0;
+  max-height:100%;
+  color:var(--text);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(10px,2vh,18px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding:clamp(2px,1vh,10px);
+}
+.modalCard:has(.careoModal){
+  width:min(940px,calc(100vw - 2*clamp(10px,2.5vw,28px)));
+  max-height:calc(100dvh - 2*env(safe-area-inset-top) - 2*env(safe-area-inset-bottom) - 16px);
+  padding:clamp(14px,2.6vw,30px);
+  border-color:#55d9df77;
+  background:linear-gradient(145deg,#153848,#0b2330 72%,#102b3a);
+}
+.careoModal h2{
+  max-width:100%;
+  margin:0;
+  color:var(--text);
+  font-size:clamp(19px,3.3vw,34px);
+  line-height:1.18;
+  overflow-wrap:anywhere;
+}
+.careoModal p{max-width:760px;color:var(--muted);font-size:clamp(12px,1.6vw,15px);line-height:1.45}
+.careoKicker{color:var(--gold);font-size:clamp(9px,1.2vw,11px);font-weight:1000;letter-spacing:.15em}
+.careoListenState{width:100%;padding:clamp(9px,1.5vw,14px);border:1px solid #55d9df55;border-radius:12px;background:#102b3a;color:var(--mint)!important}
+.careoActions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;width:100%}
+.careoPrimary,.careoSecondary{
+  min-width:min(220px,100%);
+  min-height:clamp(44px,7vh,58px);
+  padding:12px clamp(14px,2vw,22px);
+  border-radius:13px;
+  font-size:clamp(11px,1.4vw,14px);
+  font-weight:1000;
+  letter-spacing:.035em;
+  overflow-wrap:anywhere;
+}
+.careoPrimary{border:1px solid #ffd36e;background:linear-gradient(100deg,#ffd36e,#e8ad42);color:#102b3a;box-shadow:0 8px 22px #0003}
+.careoSecondary{border:1px solid #55d9df88;background:#123746;color:var(--text)}
+.careoBuzzers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(9px,2vw,22px);width:100%;margin:clamp(4px,1vh,10px) 0}
+.careoBuzzer{
+  min-width:0;
+  min-height:clamp(104px,22vh,190px);
+  padding:clamp(10px,2vw,22px);
+  border:clamp(3px,.65vw,6px) solid var(--cyan);
+  border-radius:clamp(14px,2vw,24px);
+  background:linear-gradient(145deg,#1b5964,#102b3a);
+  color:var(--text);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(8px,1.5vh,14px);
+  font-weight:1000;
+  box-shadow:0 7px 0 #071824,0 12px 24px #0005;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.careoBuzzer.teamB{border-color:var(--mint);background:linear-gradient(145deg,#205e58,#102b3a)}
+.careoBuzzer span{font-size:clamp(14px,2.5vw,24px);overflow-wrap:anywhere}
+.careoBuzzer b{font-size:clamp(10px,1.4vw,13px);letter-spacing:.08em}
+.careoBuzzer:disabled{opacity:.4;filter:saturate(.5)}
+.careoBuzzer.buzzWinner{outline:4px solid var(--gold);outline-offset:3px;opacity:1}
+.careoAnswerEntry{display:flex;align-items:stretch;gap:8px;width:100%;max-width:680px}
+.careoAnswerEntry input{
+  flex:1;min-width:0;min-height:52px;padding:12px 15px;
+  border:1px solid var(--cyan);border-radius:12px;
+  background:#071824;color:var(--text);font-size:clamp(15px,2vw,18px);
+  user-select:text;
+}
+.careoAnswerEntry button{min-width:78px}
+.careoFeedback{color:var(--gold)!important;font-weight:800}
+.careoBigX{font-size:clamp(42px,8vw,64px);font-weight:1000;color:var(--red)}
+.careoQuestionSmall{font-size:clamp(12px,1.5vw,14px);color:var(--muted)!important}
+@media(max-width:560px){
+  .modal{padding:calc(8px + env(safe-area-inset-top)) 8px calc(8px + env(safe-area-inset-bottom))}
+  .modalCard:has(.careoModal){width:100%;max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 16px);padding:13px;border-radius:16px}
+  .careoModal{justify-content:flex-start;gap:10px}
+  .careoBuzzers{gap:8px}
+  .careoBuzzer{min-height:clamp(100px,19vh,145px);padding:8px;border-radius:14px}
+  .careoActions{flex-direction:column}
+  .careoPrimary,.careoSecondary{width:100%;min-width:0}
+}
+@media(max-width:360px){
+  .careoModal h2{font-size:18px}
+  .careoBuzzer span{font-size:13px}
+  .careoBuzzer b{font-size:9px}
+  .careoAnswerEntry{flex-direction:column}
+  .careoAnswerEntry button{width:100%}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .modal{padding:6px}
+  .modalCard:has(.careoModal){max-height:calc(100dvh - 12px);padding:10px 16px}
+  .careoModal{gap:7px}
+  .careoBuzzer{min-height:86px}
+  .careoModal h2{font-size:clamp(17px,3.5vh,25px)}
+}
