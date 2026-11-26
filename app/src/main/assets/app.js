@@ -1537,9 +1537,18 @@ function showRound(reset = true) {
   });
 
   updateTurnUI();
-  // En el flujo manual, la ronda espera a que el moderador pulse INICIAR RONDA.
-  // En el flujo automático anterior, se conserva el inicio directo del careo.
-  if (reset) showRoundTransition(() => beginTurnAfterQuestion(!window.__DENTISTAS_MANUAL_FLOW__));
+  if (reset) {
+    if (window.__DENTISTAS_MANUAL_FLOW__) {
+      // La transición manual no ejecuta callbacks: dejar habilitado el inicio explícito.
+      const startButton = $('#startFaceoff');
+      if (startButton && phase === 'play' && !gamePaused) {
+        startButton.disabled = false;
+        startButton.removeAttribute('aria-disabled');
+      }
+    } else {
+      showRoundTransition(() => beginTurnAfterQuestion(true));
+    }
+  }
   try {
     window.dispatchEvent(new CustomEvent('dentistas-round-shown', {
       detail: { roundIndex, total: questions.length }
@@ -3013,6 +3022,13 @@ $('#answerMic')?.addEventListener('click',startVoiceAnswer);
     const target=event.target instanceof Element?event.target:event.target?.parentElement;
     if(!target)return;
     if(target.closest('#exitGame')){exitToHome(event);return;}
+    if(target.closest('#startFaceoff')) {
+      event.preventDefault(); event.stopPropagation(); event.stopImmediatePropagation?.();
+      if (phase !== 'over' && !gamePaused && gameVisible() && !faceoffActive && !faceoffDoneThisRound) {
+        beginTurnAfterQuestion(true);
+      }
+      return;
+    }
     if(target.closest('#revealRemaining')){
       event.preventDefault();event.stopPropagation();event.stopImmediatePropagation?.();
       questions[roundIndex]?.a?.forEach((_,i)=>{if(!revealed[i]){revealed[i]=true;const b=document.querySelectorAll('#answers button')[i];b?.classList.remove('covered');b?.classList.add('revealed');}});
