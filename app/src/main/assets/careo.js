@@ -34,6 +34,9 @@
   function questionScreen() {
     const q = question();
     if (!q || phase === 'over' || gamePaused) return;
+    // Una misma ronda solo puede abrir un careo. Evita reiniciar el estado
+    // si el botón de inicio recibe doble clic o un evento duplicado.
+    if (state || careoStartedThisRound || faceoffDoneThisRound) return;
     stopTimer();
     window.DentistasNarrator?.stop?.();
     state = { first:null, second:null, attempts:0 };
@@ -100,7 +103,12 @@
     saveActiveGame();
   }
   function ask(team, second) {
-    if (!state || phase === 'over') return;
+    if (!state || phase === 'over' || !Number.isInteger(team) || (team !== 0 && team !== 1)) return;
+    if (second) {
+      if (state.first === null || team !== state.second || state.attempts !== 1) return;
+    } else if (state.first !== team || state.attempts !== 0) {
+      return;
+    }
     state.attempts = second ? 2 : 1;
     state.activeTeam = team;
     faceoffActive = false;
@@ -141,6 +149,7 @@
     try { rec.start(); } catch (_) {}
   }
   function check(team, second) {
+    if (!state || state.activeTeam !== team || state.attempts !== (second ? 2 : 1) || state.resolving) return;
     const input = document.getElementById('careoInput');
     const raw = String(input?.value || '').trim();
     if (!raw) { input?.focus(); return; }
@@ -155,10 +164,13 @@
       }
       return;
     }
+    state.resolving = true;
     if (result.status === 'correct') return correct(team,result.index);
+    state.resolving = false;
     fail(team,second);
   }
   function fail(team, second) {
+    if (!state || state.activeTeam !== team || state.attempts !== (second ? 2 : 1)) return;
     sound(second ? 'sndStrike23' : 'sndBad');
     if (!second) {
       state.attempts = 1;
@@ -184,11 +196,20 @@
       '<h2>Ningún equipo acertó</h2><p>El banco queda en cero. El moderador decide cuándo continuar.</p>' +
       '<button id="careoNextRound" class="careoPrimary">SIGUIENTE RONDA ▶</button>'
     );
-    setModalAction('careoNextRound', () => { closeCareo(); state=null; nextRound(); });
+    // nextRound() solo avanza cuando roundAdvanceReady está activo.
+    // Marcarlo aquí evita que el botón del modal parezca funcionar sin avanzar.
+    if (typeof setRoundAdvanceReady === 'function') setRoundAdvanceReady(true);
+    else if (typeof showRoundContinueButton === 'function') showRoundContinueButton();
+    setModalAction('careoNextRound', () => {
+      closeCareo();
+      state = null;
+      nextRound();
+    });
     updateTurnUI();
     saveActiveGame();
   }
   function correct(team,index) {
+    if (!state || state.activeTeam !== team || state.resolving !== true) return;
     const q = question();
     const btn = document.querySelectorAll('#answers button')[index];
     if (!q || !btn) return;
@@ -205,7 +226,10 @@
     state = null;
     saveActiveGame();
   }
-  function startCareo() { questionScreen(); }
+  function startCareo() {
+    if (state || careoStartedThisRound || faceoffDoneThisRound || phase === 'over' || gamePaused) return;
+    questionScreen();
+  }
   beginTurnAfterQuestion = function(startCareo=false) {
     if (!startCareo) return;
     if (gamePaused || phase === 'over' || !gameVisible() || careoStartedThisRound) return;
@@ -230,7 +254,11 @@
     ask(team,false);
   };
   const start = document.getElementById('startFaceoff');
-  if (start) start.onclick = e => { e.preventDefault(); startCareo(); };
+  if (start) start.onclick = e => {
+    e.preventDefault();
+    if (gamePaused || phase === 'over' || careoStartedThisRound || faceoffDoneThisRound || state) return;
+    beginTurnAfterQuestion(true);
+  };
   document.querySelector('#modal')?.addEventListener('click', event => {
     if (state && event.target === document.querySelector('#modal')) {
       event.preventDefault(); event.stopPropagation(); event.stopImmediatePropagation?.();
