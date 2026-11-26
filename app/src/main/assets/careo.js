@@ -101,6 +101,7 @@ function careoShowBuzzers(){
   const buzz=(team)=>{
     if(!careoState || careoState.first!==null)return;
     careoState.first=team;careoState.second=1-team;
+    const faceoffSound=$('#sndFaceoff'); if(faceoffSound){try{faceoffSound.currentTime=0;const soundPromise=faceoffSound.play();if(soundPromise&&soundPromise.catch)soundPromise.catch(()=>{});}catch(_){}}
     const a=$('#careoBuzz1'),b=$('#careoBuzz2');
     [a,b].forEach(x=>{if(x)x.disabled=true;});
     const winner=team===0?a:b;
