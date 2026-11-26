@@ -759,3 +759,5 @@ img,video,canvas{max-width:100%}
 .careoBigX{font-size:56px;font-weight:1000;color:#ff6a72}
 .careoQuestionSmall{font-size:14px;color:#cfc2df!important}
 @media(max-width:560px){.careoBuzzers{gap:10px}.careoBuzzer{min-height:112px;border-width:5px;border-radius:18px}.careoBuzzer b{font-size:10px}.careoPrimary,.careoSecondary{width:100%}}
+
+.careoAnswerEntry{display:flex;gap:8px;align-items:stretch}.careoAnswerEntry input{flex:1;min-width:0}.careoAnswerEntry button{flex:0 0 auto;min-width:76px}
