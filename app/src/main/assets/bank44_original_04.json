@@ -1,0 +1,2198 @@
+[
+  {
+    "id": "ORG4-001",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué etapas generales atraviesa la dentición durante el crecimiento?",
+    "a": [
+      [
+        "Temporal",
+        45
+      ],
+      [
+        "Mixta",
+        35
+      ],
+      [
+        "Permanente",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-002",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué secuencia describe mejor el recambio dentario desde la infancia hasta la dentición adulta?",
+    "a": [
+      [
+        "Temporal",
+        45
+      ],
+      [
+        "Mixta",
+        35
+      ],
+      [
+        "Permanente",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-003",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué características pueden observarse en una dentición temporal favorable?",
+    "a": [
+      [
+        "Espacios interdentales",
+        45
+      ],
+      [
+        "Espacios primates",
+        35
+      ],
+      [
+        "Arcos amplios",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-004",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué características del arco temporal pueden aportar espacio para la erupción de los incisivos permanentes?",
+    "a": [
+      [
+        "Espacios interdentales",
+        45
+      ],
+      [
+        "Espacios primates",
+        35
+      ],
+      [
+        "Arcos amplios",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-005",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué tipos de plano terminal pueden presentar los segundos molares temporales?",
+    "a": [
+      [
+        "Plano recto",
+        45
+      ],
+      [
+        "Escalón mesial",
+        35
+      ],
+      [
+        "Escalón distal",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-006",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué tres relaciones del plano terminal de los segundos molares temporales deben registrarse clínicamente?",
+    "a": [
+      [
+        "Plano recto",
+        45
+      ],
+      [
+        "Escalón mesial",
+        35
+      ],
+      [
+        "Escalón distal",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-007",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué relaciones caninas pueden observarse en dentición temporal?",
+    "a": [
+      [
+        "Clase I",
+        45
+      ],
+      [
+        "Clase II",
+        35
+      ],
+      [
+        "Clase III",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-008",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué categorías se utilizan para describir la relación canina en dentición temporal?",
+    "a": [
+      [
+        "Clase I",
+        45
+      ],
+      [
+        "Clase II",
+        35
+      ],
+      [
+        "Clase III",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-009",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Dónde se ubican los espacios primates superiores?",
+    "a": [
+      [
+        "Lateral-canino",
+        45
+      ],
+      [
+        "Anterior al canino",
+        35
+      ],
+      [
+        "Sector anterior",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-010",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Entre qué dientes se localiza clásicamente el espacio primate del maxilar?",
+    "a": [
+      [
+        "Lateral-canino",
+        45
+      ],
+      [
+        "Anterior al canino",
+        35
+      ],
+      [
+        "Sector anterior",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-011",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Dónde se ubican los espacios primates inferiores?",
+    "a": [
+      [
+        "Canino-molar",
+        45
+      ],
+      [
+        "Posterior al canino",
+        35
+      ],
+      [
+        "Sector lateral",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-012",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Entre qué dientes se localiza clásicamente el espacio primate mandibular?",
+    "a": [
+      [
+        "Canino-molar",
+        45
+      ],
+      [
+        "Posterior al canino",
+        35
+      ],
+      [
+        "Sector lateral",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-013",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué dientes marcan con frecuencia el inicio de dentición mixta?",
+    "a": [
+      [
+        "Primer molar",
+        45
+      ],
+      [
+        "Incisivo central",
+        35
+      ],
+      [
+        "Incisivo inferior",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-014",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué dientes suelen aparecer al inicio de la transición hacia dentición mixta?",
+    "a": [
+      [
+        "Primer molar",
+        45
+      ],
+      [
+        "Incisivo central",
+        35
+      ],
+      [
+        "Incisivo inferior",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-015",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué fenómenos ayudan a acomodar los incisivos permanentes más anchos?",
+    "a": [
+      [
+        "Espacios temporales",
+        45
+      ],
+      [
+        "Aumento intercanino",
+        35
+      ],
+      [
+        "Proclinación incisiva",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-016",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué mecanismos contribuyen a crear espacio para los incisivos permanentes durante el recambio?",
+    "a": [
+      [
+        "Espacios temporales",
+        45
+      ],
+      [
+        "Aumento intercanino",
+        35
+      ],
+      [
+        "Proclinación incisiva",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-017",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué espacio diferencial se aprovecha al cambiar molares temporales por premolares?",
+    "a": [
+      [
+        "Leeway space",
+        45
+      ],
+      [
+        "Espacio de deriva",
+        35
+      ],
+      [
+        "Espacio E",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-018",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Cómo se denomina también el espacio diferencial que queda tras el recambio de caninos y molares temporales?",
+    "a": [
+      [
+        "Leeway space",
+        45
+      ],
+      [
+        "Espacio de deriva",
+        35
+      ],
+      [
+        "Espacio E",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-019",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué cambios pueden ocurrir en la relación molar durante crecimiento?",
+    "a": [
+      [
+        "Desplazamiento mesial",
+        45
+      ],
+      [
+        "Leeway space",
+        35
+      ],
+      [
+        "Crecimiento mandibular",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-020",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué factores pueden contribuir al cambio de la relación molar durante la transición a dentición permanente?",
+    "a": [
+      [
+        "Desplazamiento mesial",
+        45
+      ],
+      [
+        "Leeway space",
+        35
+      ],
+      [
+        "Crecimiento mandibular",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-021",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué elementos favorecen el desplazamiento mesial temprano del primer molar permanente?",
+    "a": [
+      [
+        "Desplazamiento mesial",
+        40
+      ],
+      [
+        "Leeway space",
+        35
+      ],
+      [
+        "Crecimiento mandibular",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-022",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué condiciones permiten el desplazamiento mesial temprano del primer molar permanente?",
+    "a": [
+      [
+        "Espacios primates",
+        40
+      ],
+      [
+        "Plano terminal recto",
+        35
+      ],
+      [
+        "Fuerza eruptiva",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-023",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué describe el desplazamiento mesial tardío?",
+    "a": [
+      [
+        "Espacios primates",
+        40
+      ],
+      [
+        "Plano terminal recto",
+        35
+      ],
+      [
+        "Fuerza eruptiva",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-024",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué mecanismo explica el desplazamiento mesial tardío de los primeros molares permanentes?",
+    "a": [
+      [
+        "Leeway space",
+        40
+      ],
+      [
+        "Pérdida de molares temporales",
+        35
+      ],
+      [
+        "Migración mesial",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-025",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué evolución puede seguir un plano terminal recto?",
+    "a": [
+      [
+        "Aprovechamiento del leeway space",
+        45
+      ],
+      [
+        "Diferencia de tamaño entre molares temporales y premolares",
+        35
+      ],
+      [
+        "Migración mesial",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-026",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué relación permanente puede resultar de un plano terminal recto según el crecimiento y el desplazamiento mesial?",
+    "a": [
+      [
+        "Clase I",
+        45
+      ],
+      [
+        "Clase II",
+        35
+      ],
+      [
+        "Persistencia de una relación molar similar",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-027",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué evolución se asocia con un escalón distal persistente?",
+    "a": [
+      [
+        "Clase II",
+        45
+      ],
+      [
+        "Distoclusión",
+        35
+      ],
+      [
+        "Relación molar distal",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-028",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué relación permanente suele asociarse con un escalón distal persistente?",
+    "a": [
+      [
+        "Clase II",
+        45
+      ],
+      [
+        "Distoclusión",
+        35
+      ],
+      [
+        "Relación molar distal",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-029",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué posibilidades deben considerarse ante un escalón mesial marcado?",
+    "a": [
+      [
+        "Tendencia a Clase I",
+        40
+      ],
+      [
+        "Tendencia a Clase III",
+        35
+      ],
+      [
+        "Magnitud y crecimiento",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-030",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "facil",
+    "q": "¿Qué variables deben considerarse al interpretar un escalón mesial en un paciente en crecimiento?",
+    "a": [
+      [
+        "Tendencia a Clase I",
+        40
+      ],
+      [
+        "Tendencia a Clase III",
+        35
+      ],
+      [
+        "Magnitud del escalón y patrón de crecimiento",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-031",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes caracterizan principalmente la fase temprana de la dentición mixta?",
+    "a": [
+      [
+        "Incisivos permanentes",
+        45
+      ],
+      [
+        "Primeros molares",
+        35
+      ],
+      [
+        "Temporales posteriores",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-032",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué combinación de dientes es característica de la primera fase de dentición mixta?",
+    "a": [
+      [
+        "Incisivos permanentes",
+        45
+      ],
+      [
+        "Primeros molares",
+        35
+      ],
+      [
+        "Temporales posteriores",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-033",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes caracterizan principalmente la fase tardía de la dentición mixta?",
+    "a": [
+      [
+        "Caninos permanentes",
+        45
+      ],
+      [
+        "Premolares",
+        35
+      ],
+      [
+        "Segundos molares",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-034",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes aparecen principalmente durante la segunda fase de la dentición mixta?",
+    "a": [
+      [
+        "Caninos permanentes",
+        45
+      ],
+      [
+        "Premolares",
+        35
+      ],
+      [
+        "Segundos molares",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-035",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes temporales son sucedidos por premolares?",
+    "a": [
+      [
+        "Primer molar temporal",
+        45
+      ],
+      [
+        "Segundo molar temporal",
+        35
+      ],
+      [
+        "Molares deciduos",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-036",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes temporales deben exfoliarse para permitir la erupción de los premolares?",
+    "a": [
+      [
+        "Primer molar temporal",
+        45
+      ],
+      [
+        "Segundo molar temporal",
+        35
+      ],
+      [
+        "Molares deciduos",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-037",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes permanentes no sustituyen dientes temporales?",
+    "a": [
+      [
+        "Molares permanentes",
+        45
+      ],
+      [
+        "Primer molar",
+        35
+      ],
+      [
+        "Segundo molar",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-038",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué grupo de dientes permanentes se incorpora sin reemplazar a un diente temporal?",
+    "a": [
+      [
+        "Molares permanentes",
+        45
+      ],
+      [
+        "Primer molar",
+        35
+      ],
+      [
+        "Segundo molar",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-039",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué grupos son dientes sucedáneos?",
+    "a": [
+      [
+        "Incisivos",
+        45
+      ],
+      [
+        "Caninos",
+        35
+      ],
+      [
+        "Premolares",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-040",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué dientes permanentes se consideran sucesores de los dientes temporales?",
+    "a": [
+      [
+        "Incisivos",
+        45
+      ],
+      [
+        "Caninos",
+        35
+      ],
+      [
+        "Premolares",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-041",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué espacios se valoran en análisis de dentición mixta?",
+    "a": [
+      [
+        "Espacio disponible",
+        45
+      ],
+      [
+        "Espacio requerido",
+        35
+      ],
+      [
+        "Leeway space",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-042",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué mediciones permiten comparar el espacio disponible con el espacio requerido en dentición mixta?",
+    "a": [
+      [
+        "Espacio disponible",
+        45
+      ],
+      [
+        "Espacio requerido",
+        35
+      ],
+      [
+        "Leeway space",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-043",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué métodos pueden estimar tamaño de caninos y premolares no erupcionados?",
+    "a": [
+      [
+        "Moyers",
+        40
+      ],
+      [
+        "Tanaka-Johnston",
+        35
+      ],
+      [
+        "Métodos radiográficos/medición directa",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-044",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué herramientas clásicas se utilizan para predecir el tamaño de caninos y premolares no erupcionados?",
+    "a": [
+      [
+        "Moyers",
+        40
+      ],
+      [
+        "Tanaka-Johnston",
+        35
+      ],
+      [
+        "Métodos radiográficos/medición directa",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-045",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué factores pueden reducir longitud de arco?",
+    "a": [
+      [
+        "Pérdida prematura",
+        45
+      ],
+      [
+        "Caries proximal",
+        35
+      ],
+      [
+        "Migración mesial",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-046",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué situaciones clínicas pueden favorecer la pérdida de espacio después de una alteración de la dentición temporal?",
+    "a": [
+      [
+        "Pérdida prematura",
+        45
+      ],
+      [
+        "Caries proximal",
+        35
+      ],
+      [
+        "Migración mesial",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-047",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué factores pueden aumentar riesgo de apiñamiento incisivo?",
+    "a": [
+      [
+        "Arco estrecho",
+        45
+      ],
+      [
+        "Dientes grandes",
+        35
+      ],
+      [
+        "Pérdida espacio",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-048",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué hallazgos pueden producir una discrepancia negativa entre espacio disponible y requerido?",
+    "a": [
+      [
+        "Arco estrecho",
+        45
+      ],
+      [
+        "Dientes grandes",
+        35
+      ],
+      [
+        "Pérdida espacio",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-049",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué hábitos pueden modificar el desarrollo oclusal?",
+    "a": [
+      [
+        "Succión digital",
+        35
+      ],
+      [
+        "Chupón prolongado",
+        30
+      ],
+      [
+        "Interposición lingual",
+        20
+      ],
+      [
+        "Respiración oral",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-050",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "medio",
+    "q": "¿Qué conductas orales pueden tener repercusión sobre la posición dentoalveolar?",
+    "a": [
+      [
+        "Succión digital",
+        35
+      ],
+      [
+        "Chupón prolongado",
+        30
+      ],
+      [
+        "Interposición lingual",
+        20
+      ],
+      [
+        "Respiración oral",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-051",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones transversales deben detectarse durante crecimiento?",
+    "a": [
+      [
+        "Mordida cruzada",
+        45
+      ],
+      [
+        "Mordida tijera",
+        35
+      ],
+      [
+        "Desviación funcional",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-052",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué hallazgos transversales justifican una valoración durante el crecimiento?",
+    "a": [
+      [
+        "Mordida cruzada",
+        45
+      ],
+      [
+        "Mordida tijera",
+        35
+      ],
+      [
+        "Desviación funcional",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-053",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones verticales pueden aparecer durante desarrollo?",
+    "a": [
+      [
+        "Mordida abierta",
+        45
+      ],
+      [
+        "Mordida profunda",
+        35
+      ],
+      [
+        "Borde a borde",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-054",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones verticales deben buscarse en un paciente con dentición en desarrollo?",
+    "a": [
+      [
+        "Mordida abierta",
+        45
+      ],
+      [
+        "Mordida profunda",
+        35
+      ],
+      [
+        "Borde a borde",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-055",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones sagitales pueden desarrollarse?",
+    "a": [
+      [
+        "Clase II",
+        45
+      ],
+      [
+        "Clase III",
+        35
+      ],
+      [
+        "Resalte aumentado",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-056",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué relaciones sagitales deben vigilarse durante el desarrollo de la oclusión?",
+    "a": [
+      [
+        "Clase II",
+        45
+      ],
+      [
+        "Clase III",
+        35
+      ],
+      [
+        "Resalte aumentado",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-057",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué hallazgos pueden sugerir erupción ectópica?",
+    "a": [
+      [
+        "Erupción desviada",
+        45
+      ],
+      [
+        "Reabsorción atípica",
+        35
+      ],
+      [
+        "Retención prolongada",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-058",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué hallazgos clínicos pueden alertar sobre una trayectoria eruptiva anormal?",
+    "a": [
+      [
+        "Erupción desviada",
+        45
+      ],
+      [
+        "Reabsorción atípica",
+        35
+      ],
+      [
+        "Retención prolongada",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-059",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué problemas pueden acompañar una pérdida prematura temporal?",
+    "a": [
+      [
+        "Pérdida espacio",
+        45
+      ],
+      [
+        "Migración dental",
+        35
+      ],
+      [
+        "Desviación eruptiva",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-060",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué efectos puede producir la pérdida prematura de un diente temporal sobre el espacio de la arcada?",
+    "a": [
+      [
+        "Pérdida espacio",
+        45
+      ],
+      [
+        "Migración dental",
+        35
+      ],
+      [
+        "Desviación eruptiva",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-061",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué objetivos tiene un mantenedor de espacio?",
+    "a": [
+      [
+        "Longitud arco",
+        45
+      ],
+      [
+        "Espacio sucesor",
+        35
+      ],
+      [
+        "Posición dental",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-062",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué debe conservar un mantenedor de espacio después de la pérdida prematura de un temporal?",
+    "a": [
+      [
+        "Longitud arco",
+        45
+      ],
+      [
+        "Espacio sucesor",
+        35
+      ],
+      [
+        "Posición dental",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-063",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué objetivos tiene recuperar espacio perdido?",
+    "a": [
+      [
+        "Reabrir espacio",
+        45
+      ],
+      [
+        "Corregir migración",
+        35
+      ],
+      [
+        "Facilitar erupción",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-064",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Cuál es la finalidad de un recuperador de espacio cuando ya existe pérdida de longitud de arcada?",
+    "a": [
+      [
+        "Reabrir espacio",
+        45
+      ],
+      [
+        "Corregir migración",
+        35
+      ],
+      [
+        "Facilitar erupción",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-065",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué registros ayudan a valorar dentición en desarrollo?",
+    "a": [
+      [
+        "Examen clínico",
+        35
+      ],
+      [
+        "Radiografías",
+        30
+      ],
+      [
+        "Modelos",
+        20
+      ],
+      [
+        "Fotografías",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-066",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué conjunto de registros puede apoyar la decisión de una intervención interceptiva?",
+    "a": [
+      [
+        "Examen clínico",
+        35
+      ],
+      [
+        "Radiografías",
+        30
+      ],
+      [
+        "Modelos",
+        20
+      ],
+      [
+        "Fotografías",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-067",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué datos se revisan antes de indicar mantenimiento de espacio?",
+    "a": [
+      [
+        "Diente perdido",
+        35
+      ],
+      [
+        "Sucesor permanente",
+        30
+      ],
+      [
+        "Edad dental",
+        20
+      ],
+      [
+        "Espacio disponible",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-068",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué variables deben ponderarse antes de decidir si un espacio debe conservarse?",
+    "a": [
+      [
+        "Diente perdido",
+        35
+      ],
+      [
+        "Sucesor permanente",
+        30
+      ],
+      [
+        "Edad dental",
+        20
+      ],
+      [
+        "Espacio disponible",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-069",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué alteraciones pueden modificar la cronología o trayectoria de erupción?",
+    "a": [
+      [
+        "Diente supernumerario",
+        35
+      ],
+      [
+        "Anquilosis",
+        30
+      ],
+      [
+        "Ectopia eruptiva",
+        20
+      ],
+      [
+        "Ausencia congénita",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-070",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "dificil",
+    "q": "¿Qué condiciones pueden interferir con la trayectoria eruptiva normal?",
+    "a": [
+      [
+        "Diente supernumerario",
+        35
+      ],
+      [
+        "Anquilosis",
+        30
+      ],
+      [
+        "Ectopia eruptiva",
+        20
+      ],
+      [
+        "Ausencia congénita",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-071",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué signos clínicos pueden apoyar la sospecha de anquilosis de un diente temporal?",
+    "a": [
+      [
+        "Infraoclusión",
+        45
+      ],
+      [
+        "Sonido metálico a la percusión",
+        35
+      ],
+      [
+        "Movilidad reducida o ausente",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-072",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué combinación de hallazgos clínicos es compatible con anquilosis de un temporal?",
+    "a": [
+      [
+        "Infraoclusión",
+        45
+      ],
+      [
+        "Sonido metálico a la percusión",
+        35
+      ],
+      [
+        "Movilidad reducida o ausente",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-073",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué alteraciones eruptivas puede ocasionar un diente supernumerario?",
+    "a": [
+      [
+        "Retraso eruptivo",
+        45
+      ],
+      [
+        "Desplazamiento del diente sucesor",
+        35
+      ],
+      [
+        "Alteración del espacio o apiñamiento",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-074",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué efectos puede producir un diente supernumerario sobre la erupción?",
+    "a": [
+      [
+        "Retraso eruptivo",
+        45
+      ],
+      [
+        "Desplazamiento del diente sucesor",
+        35
+      ],
+      [
+        "Alteración del espacio o apiñamiento",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-075",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué consecuencias oclusales pueden asociarse con la ausencia congénita de un diente?",
+    "a": [
+      [
+        "Espacios",
+        45
+      ],
+      [
+        "Migración dentaria",
+        35
+      ],
+      [
+        "Alteración de la posición de dientes vecinos",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-076",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué cambios pueden asociarse con la ausencia congénita de un diente?",
+    "a": [
+      [
+        "Espacios",
+        45
+      ],
+      [
+        "Migración dentaria",
+        35
+      ],
+      [
+        "Alteración de la posición de dientes vecinos",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-077",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué variables ayudan a decidir el momento de una intervención interceptiva?",
+    "a": [
+      [
+        "Edad dental",
+        35
+      ],
+      [
+        "Patrón de crecimiento",
+        30
+      ],
+      [
+        "Severidad",
+        20
+      ],
+      [
+        "Cooperación esperada",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-078",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué elementos deben integrarse al decidir si una alteración requiere tratamiento durante el crecimiento?",
+    "a": [
+      [
+        "Edad dental",
+        35
+      ],
+      [
+        "Patrón de crecimiento",
+        30
+      ],
+      [
+        "Severidad",
+        20
+      ],
+      [
+        "Cooperación esperada",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-079",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué objetivos puede perseguir una intervención ortodóncica interceptiva correctamente indicada?",
+    "a": [
+      [
+        "Guiar la erupción",
+        35
+      ],
+      [
+        "Preservar o recuperar espacio",
+        30
+      ],
+      [
+        "Corregir una alteración oclusal",
+        20
+      ],
+      [
+        "Reducir su severidad o complicaciones",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-080",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué resultados puede buscar una intervención interceptiva durante el desarrollo dentario?",
+    "a": [
+      [
+        "Guiar la erupción",
+        35
+      ],
+      [
+        "Preservar o recuperar espacio",
+        30
+      ],
+      [
+        "Corregir una alteración oclusal",
+        20
+      ],
+      [
+        "Reducir su severidad o complicaciones",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-081",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué dimensiones o características del arco se observan durante su desarrollo?",
+    "a": [
+      [
+        "Anchura",
+        35
+      ],
+      [
+        "Longitud",
+        30
+      ],
+      [
+        "Simetría",
+        20
+      ],
+      [
+        "Forma",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-082",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué características deben compararse al estudiar el desarrollo del arco dental?",
+    "a": [
+      [
+        "Anchura",
+        35
+      ],
+      [
+        "Longitud",
+        30
+      ],
+      [
+        "Simetría",
+        20
+      ],
+      [
+        "Forma",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-083",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué cambios pueden observarse en la distancia intercanina durante el desarrollo?",
+    "a": [
+      [
+        "Aumento",
+        45
+      ],
+      [
+        "Estabilidad relativa",
+        35
+      ],
+      [
+        "Cambio asimétrico",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-084",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué evolución de la anchura anterior puede observarse durante la erupción de los incisivos?",
+    "a": [
+      [
+        "Aumento",
+        45
+      ],
+      [
+        "Estabilidad relativa",
+        35
+      ],
+      [
+        "Cambio asimétrico",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-085",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué evoluciones pueden observarse en la sobremordida durante el crecimiento?",
+    "a": [
+      [
+        "Aumento",
+        40
+      ],
+      [
+        "Disminución",
+        35
+      ],
+      [
+        "Estabilidad relativa",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-086",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué cambios de sobremordida pueden presentarse durante el desarrollo?",
+    "a": [
+      [
+        "Aumento",
+        40
+      ],
+      [
+        "Disminución",
+        35
+      ],
+      [
+        "Estabilidad relativa",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-087",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué evoluciones pueden observarse en el resalte horizontal durante el crecimiento?",
+    "a": [
+      [
+        "Aumento",
+        40
+      ],
+      [
+        "Disminución",
+        35
+      ],
+      [
+        "Estabilidad relativa",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-088",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué cambios del resalte horizontal pueden presentarse durante el desarrollo?",
+    "a": [
+      [
+        "Aumento",
+        40
+      ],
+      [
+        "Disminución",
+        35
+      ],
+      [
+        "Estabilidad relativa",
+        25
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-089",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué relaciones deben revisarse al erupcionar primeros molares permanentes?",
+    "a": [
+      [
+        "Relación molar",
+        45
+      ],
+      [
+        "Plano terminal",
+        35
+      ],
+      [
+        "Espacio disponible",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-090",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué elementos deben comprobarse clínicamente cuando erupcionan los primeros molares permanentes?",
+    "a": [
+      [
+        "Relación molar",
+        45
+      ],
+      [
+        "Plano terminal",
+        35
+      ],
+      [
+        "Espacio disponible",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-091",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué se evalúa cuando erupcionan incisivos permanentes?",
+    "a": [
+      [
+        "Alineación",
+        35
+      ],
+      [
+        "Espacio",
+        30
+      ],
+      [
+        "Overjet",
+        20
+      ],
+      [
+        "Overbite",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-092",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué aspectos conviene valorar durante la fase de erupción de los incisivos permanentes?",
+    "a": [
+      [
+        "Alineación",
+        35
+      ],
+      [
+        "Espacio",
+        30
+      ],
+      [
+        "Overjet",
+        20
+      ],
+      [
+        "Overbite",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-093",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué elementos ayudan a valorar el riesgo de alteración en la erupción de los caninos permanentes?",
+    "a": [
+      [
+        "Espacio disponible",
+        35
+      ],
+      [
+        "Trayectoria eruptiva",
+        30
+      ],
+      [
+        "Palpación clínica",
+        20
+      ],
+      [
+        "Estudios radiográficos cuando están indicados",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-094",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué información puede ayudar a valorar una posible alteración de la erupción de los caninos permanentes?",
+    "a": [
+      [
+        "Espacio disponible",
+        35
+      ],
+      [
+        "Trayectoria eruptiva",
+        30
+      ],
+      [
+        "Palpación clínica",
+        20
+      ],
+      [
+        "Estudios radiográficos cuando están indicados",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-095",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué hallazgos pueden sugerir riesgo de ectopia o impactación canina?",
+    "a": [
+      [
+        "Apiñamiento",
+        35
+      ],
+      [
+        "Ausencia del abultamiento esperado",
+        30
+      ],
+      [
+        "Trayectoria ectópica",
+        20
+      ],
+      [
+        "Persistencia del canino temporal",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-096",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué hallazgos pueden justificar una evaluación más detallada de la erupción canina?",
+    "a": [
+      [
+        "Apiñamiento",
+        35
+      ],
+      [
+        "Ausencia del abultamiento esperado",
+        30
+      ],
+      [
+        "Trayectoria ectópica",
+        20
+      ],
+      [
+        "Persistencia del canino temporal",
+        15
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-097",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué objetivos puede tener la conservación del leeway space?",
+    "a": [
+      [
+        "Reducir pérdida de espacio",
+        45
+      ],
+      [
+        "Favorecer la relación molar deseada",
+        35
+      ],
+      [
+        "Conservar longitud del arco",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-098",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué objetivos clínicos puede perseguir la conservación del espacio de deriva?",
+    "a": [
+      [
+        "Reducir pérdida de espacio",
+        45
+      ],
+      [
+        "Favorecer la relación molar deseada",
+        35
+      ],
+      [
+        "Conservar longitud del arco",
+        20
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-099",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué dominios deben integrarse en la evaluación de la oclusión durante el crecimiento?",
+    "a": [
+      [
+        "Dental",
+        30
+      ],
+      [
+        "Esquelético",
+        25
+      ],
+      [
+        "Funcional",
+        20
+      ],
+      [
+        "Tejidos blandos",
+        15
+      ],
+      [
+        "Crecimiento",
+        10
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  },
+  {
+    "id": "ORG4-100",
+    "cat": "Desarrollo de la oclusión",
+    "difficulty": "extremo",
+    "q": "¿Qué áreas deben combinarse antes de planear tratamiento en un paciente en crecimiento?",
+    "a": [
+      [
+        "Dental",
+        30
+      ],
+      [
+        "Esquelético",
+        25
+      ],
+      [
+        "Funcional",
+        20
+      ],
+      [
+        "Tejidos blandos",
+        15
+      ],
+      [
+        "Crecimiento",
+        10
+      ]
+    ],
+    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
+  }
+]

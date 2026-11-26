@@ -4,7 +4,7 @@
 // dentro del WebView Android. Esto evita los bloqueos de fetch(file://...).
 (function installQuestionAssetLoader() {
   const originalFetch = typeof window.fetch === 'function' ? window.fetch.bind(window) : null;
-  const questionFile = /^questions(?:_[a-z0-9_]+)?\.json$/i;
+  const questionFile = /^(?:questions(?:_[a-z0-9_]+)?|bank44_[a-z0-9_]+)\.json$/i;
 
   window.fetch = function dentistasFetch(input, init) {
     const requested = typeof input === 'string' ? input : (input && input.url) || '';
