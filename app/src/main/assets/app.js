@@ -1537,7 +1537,9 @@ function showRound(reset = true) {
   });
 
   updateTurnUI();
-  if (reset) showRoundTransition(() => beginTurnAfterQuestion(true));
+  // En el flujo manual, la ronda espera a que el moderador pulse INICIAR RONDA.
+  // En el flujo automático anterior, se conserva el inicio directo del careo.
+  if (reset) showRoundTransition(() => beginTurnAfterQuestion(!window.__DENTISTAS_MANUAL_FLOW__));
   try {
     window.dispatchEvent(new CustomEvent('dentistas-round-shown', {
       detail: { roundIndex, total: questions.length }
