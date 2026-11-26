@@ -20,7 +20,7 @@ function careoLockBoard(locked=true){
 }
 
 function careoPlayLongIntro(){
-  const s=$('#sndStart');
+  const s=$('#sndPrincipal');
   if(!s || (typeof v2Sound!=='undefined' && !v2Sound)) return;
   try{
     clearTimeout(careoIntroStopHandle);
@@ -37,7 +37,7 @@ function careoPlayLongIntro(){
 
 function careoStopIntro(fade=false){
   clearTimeout(careoIntroStopHandle);
-  const s=$('#sndStart'); if(!s)return;
+  const s=$('#sndPrincipal'); if(!s)return;
   if(!fade){try{s.loop=false;s.pause();s.currentTime=0;}catch(_){} return;}
   let vol=Number(s.volume)||.72;
   const id=setInterval(()=>{
