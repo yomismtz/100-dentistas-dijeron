@@ -111,15 +111,34 @@
     showModal(
       '<div class="careoKicker">' + (second ? '↪ SEGUNDA OPORTUNIDAD' : '⚡ RESPONDE EL EQUIPO') + '</div>' +
       '<h2>' + teamLabel(team) + '</h2><p class="careoQuestionSmall">' + esc(qText(q)) + '</p>' +
-      '<div class="careoAnswerEntry"><input id="careoInput" autocomplete="off" placeholder="Respuesta del equipo" aria-label="Respuesta del equipo"></div>' +
+      '<div class="careoAnswerEntry"><input id="careoInput" autocomplete="off" placeholder="Respuesta del equipo" aria-label="Respuesta del equipo"><button id="careoMic" class="careoSecondary" type="button">🎤 VOZ</button></div>' +
       '<button id="careoSubmit" class="careoPrimary">COMPROBAR RESPUESTA</button>'
     );
     const input = document.getElementById('careoInput');
     setModalAction('careoSubmit', () => check(team,second));
+    setModalAction('careoMic', startCareoVoice);
     input?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check(team,second);}});
     input?.focus();
     updateTurnUI();
     saveActiveGame();
+  }
+  function startCareoVoice() {
+    const input = document.getElementById('careoInput');
+    const lang = isEn() ? 'en-US' : 'es-MX';
+    if (window.AndroidVoice?.isAvailable?.()) {
+      window.__finalVoiceHandler = (text,ok) => {
+        window.__finalVoiceHandler = null;
+        if (ok && input) { input.value = String(text || ''); input.focus(); }
+      };
+      window.AndroidVoice.start(lang);
+      return;
+    }
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { const p=document.getElementById('careoFeedback') || document.createElement('p'); p.id='careoFeedback'; p.className='careoFeedback'; p.textContent='El reconocimiento de voz no está disponible.'; input?.after(p); return; }
+    const rec = new SR(); rec.lang=lang; rec.interimResults=false; rec.maxAlternatives=1;
+    rec.onresult=e=>{ if(input){input.value=e.results?.[0]?.[0]?.transcript || '';input.focus();} };
+    rec.onerror=()=>{ const p=document.getElementById('careoFeedback') || document.createElement('p'); p.id='careoFeedback'; p.className='careoFeedback'; p.textContent='No se entendió la respuesta. Intenta de nuevo.'; input?.after(p); };
+    try { rec.start(); } catch (_) {}
   }
   function check(team, second) {
     const input = document.getElementById('careoInput');
