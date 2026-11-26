@@ -231,6 +231,11 @@
   };
   const start = document.getElementById('startFaceoff');
   if (start) start.onclick = e => { e.preventDefault(); startCareo(); };
+  document.querySelector('#modal')?.addEventListener('click', event => {
+    if (state && event.target === document.querySelector('#modal')) {
+      event.preventDefault(); event.stopPropagation(); event.stopImmediatePropagation?.();
+    }
+  }, true);
   window.DentistasCareo = {start:startCareo, showBuzzers, ask, check, fail, getState:()=>state, version:'restored-manual-1'};
   window.addEventListener('dentistas-language-changed', () => {
     if (state && !document.querySelector('#modal')?.classList.contains('hidden')) {
