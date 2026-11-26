@@ -91,7 +91,9 @@ let timerHandle = null;
 const audio = {
   start: $('#sndStart'),
   good: $('#sndGood'),
-  bad: $('#sndBad')
+  bad: $('#sndBad'),
+  strike1: $('#sndStrike1'),
+  strike23: $('#sndStrike23')
 };
 
 function play(sound) {
@@ -316,7 +318,7 @@ function addStrike(reason = 'manual') {
 
   strikes += 1;
   updateStrikesUI();
-  play(audio.bad);
+  play(strikes === 1 ? audio.strike1 : audio.strike23);
 
   if (strikes === 3) {
     flashThreeStrikes();
