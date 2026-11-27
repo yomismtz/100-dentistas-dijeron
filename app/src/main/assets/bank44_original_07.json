@@ -234,18 +234,18 @@
     "id": "ORG7-12",
     "cat": "Hábitos y parafunciones",
     "difficulty": "facil",
-    "q": "¿Qué alteración oclusal puede asociarse con una postura lingual anterior persistente?",
+    "q": "¿Qué alteración oclusal puede coexistir con una postura lingual anterior persistente?",
     "a": [
       [
-        "interposición de la lengua entre incisivos",
+        "Mordida abierta anterior",
         45
       ],
       [
-        "mordida abierta anterior",
+        "Alteraciones de inclinación o posición incisiva",
         35
       ],
       [
-        "sellado labial y función lingual",
+        "La postura lingual puede ser adaptativa y no demuestra por sí sola causalidad",
         20
       ]
     ],
@@ -339,18 +339,18 @@
     "id": "ORG7-17",
     "cat": "Hábitos y parafunciones",
     "difficulty": "facil",
-    "q": "¿Qué factor etiológico debe descartarse ante respiración oral persistente?",
+    "q": "¿Qué factor etiológico debe investigarse ante respiración oral persistente?",
     "a": [
       [
-        "permeabilidad nasal",
+        "Obstrucción nasal",
         45
       ],
       [
-        "obstrucción nasal o nasofaríngea",
+        "Hipertrofia adenoidea o amigdalar",
         35
       ],
       [
-        "postura labial abierta",
+        "Rinitis u otra condición que limite la respiración nasal",
         20
       ]
     ],
@@ -465,18 +465,18 @@
     "id": "ORG7-23",
     "cat": "Hábitos y parafunciones",
     "difficulty": "facil",
-    "q": "¿Qué manifestación muscular puede acompañar al bruxismo?",
+    "q": "¿Qué manifestaciones musculares pueden acompañar al bruxismo del sueño?",
     "a": [
       [
-        "actividad repetitiva de los músculos masticatorios durante el sueño",
+        "Fatiga o dolor de músculos masticatorios al despertar",
         45
       ],
       [
-        "desgaste dental",
+        "Sensibilidad muscular a la palpación",
         35
       ],
       [
-        "fatiga o dolor muscular",
+        "Cefalea temporal asociada en algunos pacientes",
         20
       ]
     ],
@@ -528,18 +528,18 @@
     "id": "ORG7-26",
     "cat": "Hábitos y parafunciones",
     "difficulty": "facil",
-    "q": "¿Qué hábito corresponde a la onicofagia?",
+    "q": "¿Qué conducta corresponde a la onicofagia?",
     "a": [
       [
-        "morder las uñas",
+        "Morderse las uñas de forma repetitiva",
         45
       ],
       [
-        "incisivos y tejidos periungueales",
+        "Hábito de mordedura de uñas",
         35
       ],
       [
-        "frecuencia y situaciones desencadenantes",
+        "Parafunción oral que implica contacto repetido de los dientes con las uñas",
         20
       ]
     ],
@@ -549,18 +549,18 @@
     "id": "ORG7-27",
     "cat": "Hábitos y parafunciones",
     "difficulty": "facil",
-    "q": "¿Qué estructuras pueden presentar lesiones por onicofagia persistente?",
+    "q": "¿Qué estructuras pueden sufrir microtraumatismos por onicofagia?",
     "a": [
       [
-        "Bordes incisales y superficies dentarias",
+        "Lámina ungueal y tejidos periungueales",
         45
       ],
       [
-        "Uñas y tejidos periungueales",
+        "Bordes incisales y superficies dentarias",
         35
       ],
       [
-        "Mucosa oral o tejidos blandos por traumatismo",
+        "Mucosa oral o tejidos blandos por contacto traumático",
         20
       ]
     ],
@@ -738,18 +738,18 @@
     "id": "ORG7-36",
     "cat": "Hábitos y parafunciones",
     "difficulty": "medio",
-    "q": "¿Qué hábito describe la mordedura crónica del labio inferior?",
+    "q": "¿Qué características pueden describir una mordedura crónica del labio inferior?",
     "a": [
       [
-        "presión repetida del labio sobre los incisivos",
+        "Presión o atrapamiento repetido del labio contra los incisivos",
         45
       ],
       [
-        "alteración de la posición de los incisivos",
+        "Alteración de la posición incisiva en casos persistentes",
         35
       ],
       [
-        "irritación o lesión del labio",
+        "Irritación o lesión del tejido labial",
         20
       ]
     ],
@@ -759,18 +759,18 @@
     "id": "ORG7-37",
     "cat": "Hábitos y parafunciones",
     "difficulty": "medio",
-    "q": "¿Qué alteración dentoalveolar puede asociarse con una presión labial anormal persistente?",
+    "q": "¿Qué alteraciones dentoalveolares pueden asociarse con una presión labial anormal persistente?",
     "a": [
       [
-        "presión repetida del labio sobre los incisivos",
+        "Cambios en la inclinación de los incisivos",
         45
       ],
       [
-        "alteración de la posición de los incisivos",
+        "Alteración del resalte horizontal",
         35
       ],
       [
-        "irritación o lesión del labio",
+        "Cambios dependientes de la dirección y magnitud de la fuerza",
         20
       ]
     ],
@@ -780,18 +780,18 @@
     "id": "ORG7-38",
     "cat": "Hábitos y parafunciones",
     "difficulty": "medio",
-    "q": "¿Qué hallazgo de tejidos blandos puede acompañar al hábito?",
+    "q": "¿Qué hallazgos de tejidos blandos pueden acompañar a la mordedura crónica del labio?",
     "a": [
       [
-        "presión repetida del labio sobre los incisivos",
+        "Eritema o irritación localizada",
         45
       ],
       [
-        "alteración de la posición de los incisivos",
+        "Hiperqueratosis por fricción",
         35
       ],
       [
-        "irritación o lesión del labio",
+        "Ulceración o fisuras recurrentes",
         20
       ]
     ],
@@ -864,18 +864,18 @@
     "id": "ORG7-42",
     "cat": "Hábitos y parafunciones",
     "difficulty": "medio",
-    "q": "¿Qué puede ocurrir con los contactos oclusales durante una masticación unilateral persistente?",
+    "q": "¿Qué cambios deben explorarse en los contactos oclusales ante masticación unilateral persistente?",
     "a": [
       [
-        "lado preferido de masticación",
+        "Distribución y simetría de los contactos",
         45
       ],
       [
-        "asimetría funcional de los contactos",
+        "Facetas de desgaste o interferencias",
         35
       ],
       [
-        "dolor o interferencia oclusal",
+        "Dolor o limitación durante la función",
         20
       ]
     ],
@@ -969,18 +969,18 @@
     "id": "ORG7-47",
     "cat": "Hábitos y parafunciones",
     "difficulty": "medio",
-    "q": "¿Qué síntoma nocturno debe motivar una evaluación adicional?",
+    "q": "¿Qué síntoma nocturno debe motivar una evaluación adicional del sueño infantil?",
     "a": [
       [
-        "calidad y patrón del sueño",
+        "Ronquido habitual",
         45
       ],
       [
-        "ronquido habitual o pausas respiratorias",
+        "Pausas respiratorias observadas o jadeos nocturnos",
         35
       ],
       [
-        "coexistencia temporal y clínica",
+        "Sueño fragmentado o inquieto con síntomas diurnos",
         20
       ]
     ],
@@ -990,18 +990,18 @@
     "id": "ORG7-48",
     "cat": "Hábitos y parafunciones",
     "difficulty": "medio",
-    "q": "¿Qué relación clínica debe explorarse entre sueño y bruxismo?",
+    "q": "¿Qué relación clínica debe explorarse entre sueño y bruxismo infantil?",
     "a": [
       [
-        "calidad y patrón del sueño",
+        "Coexistencia con ronquido o síntomas de trastorno respiratorio del sueño",
         45
       ],
       [
-        "ronquido habitual o pausas respiratorias",
+        "Despertares o fragmentación del sueño",
         35
       ],
       [
-        "coexistencia temporal y clínica",
+        "La coexistencia no demuestra que el bruxismo sea causado por un trastorno específico",
         20
       ]
     ],
@@ -1077,15 +1077,15 @@
     "q": "¿Qué hallazgo puede indicar una deglución atípica con empuje lingual?",
     "a": [
       [
-        "coordinación de lengua, labios y musculatura",
+        "Interposición o empuje anterior de la lengua durante la deglución",
         45
       ],
       [
-        "empuje lingual anterior",
+        "Persistencia del patrón más allá de la etapa de maduración esperada",
         35
       ],
       [
-        "labios, músculos orofaciales y faringe",
+        "Asociación con alteraciones oclusales que deben evaluarse individualmente",
         20
       ]
     ],
