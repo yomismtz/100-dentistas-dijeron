@@ -688,27 +688,6 @@
       "source": "IADT Guidelines for traumatic dental injuries: fractures/luxations, avulsion of permanent teeth and primary dentition (PMIDs 32475015, 32460393, 32458553); IADT/ASD prevention guidance (PMID 38363701)."
     },
     {
-      "id": "ORG39-036",
-      "category": "Traumatología dental",
-      "difficulty": "medio",
-      "question": "¿Qué conjunto de 3 elementos corresponde a subluxación?",
-      "answers": [
-        {
-          "text": "movilidad aumentada",
-          "points": 45
-        },
-        {
-          "text": "sin desplazamiento",
-          "points": 30
-        },
-        {
-          "text": "sangrado gingival posible",
-          "points": 25
-        }
-      ],
-      "source": "IADT Guidelines for traumatic dental injuries: fractures/luxations, avulsion of permanent teeth and primary dentition (PMIDs 32475015, 32460393, 32458553); IADT/ASD prevention guidance (PMID 38363701)."
-    },
-    {
       "id": "ORG39-037",
       "category": "Traumatología dental",
       "difficulty": "medio",
