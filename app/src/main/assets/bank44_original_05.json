@@ -150,18 +150,18 @@
     "id": "ORG5-008",
     "cat": "Desarrollo craneofacial",
     "difficulty": "facil",
-    "q": "¿Qué estructuras forman el paladar secundario?",
+    "q": "¿Qué estructuras participan en la formación y cierre del paladar secundario?",
     "a": [
       [
-        "Procesos palatinos laterales",
+        "Procesos o láminas palatinas laterales derivadas de las prominencias maxilares",
         45
       ],
       [
-        "Procesos maxilares",
+        "Fusión de ambos procesos palatinos en la línea media",
         35
       ],
       [
-        "Tabique nasal como estructura relacionada con la separación de las cavidades",
+        "Unión con el tabique nasal en la región superior",
         20
       ]
     ],
@@ -325,11 +325,11 @@
         45
       ],
       [
-        "Células osteoformadoras",
+        "Células que sintetizan osteoide y matriz ósea",
         35
       ],
       [
-        "Osteocitos durante la mineralización y mantenimiento",
+        "Células responsables de la formación de tejido óseo nuevo",
         20
       ]
     ],
@@ -969,18 +969,18 @@
     "id": "ORG5-047",
     "cat": "Desarrollo craneofacial",
     "difficulty": "medio",
-    "q": "¿Qué estructuras pueden actuar como centros o sitios de crecimiento?",
+    "q": "¿Qué estructuras o regiones contribuyen al crecimiento craneofacial?",
     "a": [
       [
-        "Cartílagos de crecimiento",
+        "Cartílagos de crecimiento y sincondrosis",
         45
       ],
       [
-        "Suturas",
+        "Suturas craneofaciales",
         35
       ],
       [
-        "Regiones condilares según el hueso y etapa",
+        "Superficies óseas mediante aposición y remodelado",
         20
       ]
     ],
