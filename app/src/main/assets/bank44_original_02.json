@@ -716,37 +716,8 @@
     "q": "¿Qué enzima salival inicia digestión del almidón?",
     "a": [
       [
-        "Amilasa",
-        45
-      ],
-      [
-        "Ptialina",
-        35
-      ],
-      [
-        "Alfa-amilasa",
-        20
-      ]
-    ],
-    "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
-  },
-  {
-    "id": "ORG2-032",
-    "cat": "Fisiología",
-    "difficulty": "medio",
-    "q": "¿Qué enzima de la saliva participa en digestión de carbohidratos?",
-    "a": [
-      [
-        "Amilasa",
-        45
-      ],
-      [
-        "Ptialina",
-        35
-      ],
-      [
-        "Alfa-amilasa",
-        20
+        "Amilasa salival (alfa-amilasa o ptialina)",
+        100
       ]
     ],
     "source": "Proctor GB. Periodontol 2000. 2016;70:11-25. PMID 26662479; Pedersen AML et al. Oral Dis. 2018. DOI 10.1111/odi.12867."
