@@ -30,7 +30,7 @@
     <div class="homeActions">
       <button id="start" class="primary">PARTIDA EN EQUIPO</button>
       <button id="help">¿CÓMO SE JUEGA?</button>
-      <button id="paletteOpen" type="button">🎨 PALETA DE AVES</button>
+      <button id="paletteOpen" type="button">⚙️ CONFIGURACIÓN</button>
     </div>
     <footer id="yomdentalCredits" class="yomdentalCredits" aria-label="Créditos de autoría">
       <img src="yomdental-logo.svg" alt="Logotipo de YomDental" loading="lazy">
@@ -79,7 +79,11 @@
       </section>
     </footer>
   </main>
-  <div id="paletteModal" hidden><section class="palettePanel" role="dialog" aria-modal="true" aria-labelledby="paletteTitle"><button id="paletteClose" class="paletteClose" type="button" aria-label="Cerrar">✕</button><h2 id="paletteTitle">🎨 Paletas inspiradas en aves</h2><p>Selecciona un ave para cambiar los 8 colores de la interfaz y escuchar su canto.</p><div id="paletteGrid" class="paletteGrid"></div><p class="paletteHint">El sonido se reproduce si está instalado el archivo correspondiente.</p></section></div>
+  <div id="paletteModal" hidden><section class="palettePanel" role="dialog" aria-modal="true" aria-labelledby="paletteTitle"><button id="paletteClose" class="paletteClose" type="button" aria-label="Cerrar">✕</button><h2 id="paletteTitle">⚙️ Configuración del juego</h2>
+  <section class="appearanceSettings"><h3>🎨 Paleta de aves</h3><p>Elige una paleta; sus ocho colores se aplicarán a toda la interfaz.</p><div id="paletteGrid" class="paletteGrid"></div></section>
+  <section class="appearanceSettings"><h3>🔤 Tipografía</h3><label for="fontChoice">Tipo de letra</label><select id="fontChoice" class="appearanceSelect"><option value="system">1. Sistema</option><option value="rounded">2. Redondeada</option><option value="serif">3. Serif clásica</option><option value="humanist">4. Humanista</option><option value="mono">5. Monoespaciada</option><option value="condensed">6. Condensada</option><option value="georgia">7. Georgia</option><option value="trebuchet">8. Trebuchet</option></select><div id="fontPreview" class="fontPreview">Así los Dentistas lo Dijeron · Vista previa</div>
+  <label for="fontSizeChoice">Tamaño de letra <strong id="fontSizeValue">100%</strong></label><input id="fontSizeChoice" type="range" min="85" max="130" step="5" value="100"></section>
+  <p class="paletteHint">La configuración se guarda en este dispositivo y funciona sin conexión. El canto se reproduce al seleccionar un ave.</p></section></div>
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modalCard">
       <button id="closeModal" class="closeBtn">×</button>
