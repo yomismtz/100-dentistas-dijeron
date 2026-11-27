@@ -426,15 +426,15 @@
     "q": "¿Qué elementos favorecen el desplazamiento mesial temprano del primer molar permanente?",
     "a": [
       [
-        "Desplazamiento mesial",
+        "Espacios primates disponibles",
         40
       ],
       [
-        "Leeway space",
+        "Plano terminal recto que permite desplazamiento mesial temprano",
         35
       ],
       [
-        "Crecimiento mandibular",
+        "Fuerza eruptiva del primer molar permanente",
         25
       ]
     ],
@@ -465,18 +465,18 @@
     "id": "ORG4-023",
     "cat": "Desarrollo de la oclusión",
     "difficulty": "facil",
-    "q": "¿Qué describe el desplazamiento mesial tardío?",
+    "q": "¿Qué describe el desplazamiento mesial tardío del primer molar permanente?",
     "a": [
       [
-        "Espacios primates",
+        "Migración mesial después de la exfoliación de los segundos molares temporales",
         40
       ],
       [
-        "Plano terminal recto",
+        "Aprovechamiento del espacio diferencial o leeway space",
         35
       ],
       [
-        "Fuerza eruptiva",
+        "Diferencia de tamaño entre molares temporales y premolares sucesores",
         25
       ]
     ],
