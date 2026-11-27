@@ -292,27 +292,6 @@
       "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
     },
     {
-      "id": "ORG35-011",
-      "category": "Salud pública y odontología comunitaria",
-      "difficulty": "facil",
-      "question": "En la evaluación epidemiológica de la incidencia, ¿cuáles son 3 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "casos nuevos",
-          "points": 45
-        },
-        {
-          "text": "periodo de observación",
-          "points": 30
-        },
-        {
-          "text": "población en riesgo",
-          "points": 25
-        }
-      ],
-      "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
-    },
-    {
       "id": "ORG35-012",
       "category": "Salud pública y odontología comunitaria",
       "difficulty": "facil",
@@ -432,27 +411,6 @@
         {
           "text": "estandarización del examen",
           "points": 8
-        }
-      ],
-      "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
-    },
-    {
-      "id": "ORG35-016",
-      "category": "Salud pública y odontología comunitaria",
-      "difficulty": "facil",
-      "question": "¿Qué conjunto de 3 elementos corresponde a el índice CPOD/DMFT?",
-      "answers": [
-        {
-          "text": "dientes cariados",
-          "points": 45
-        },
-        {
-          "text": "dientes perdidos por caries",
-          "points": 30
-        },
-        {
-          "text": "dientes obturados",
-          "points": 25
         }
       ],
       "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
@@ -2193,60 +2151,6 @@
         {
           "text": "denominador cuando corresponda",
           "points": 25
-        }
-      ],
-      "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
-    },
-    {
-      "id": "ORG35-077",
-      "category": "Salud pública y odontología comunitaria",
-      "difficulty": "extremo",
-      "question": "¿Cuáles son 4 elementos que caracterizan la promoción de la salud?",
-      "answers": [
-        {
-          "text": "participación comunitaria",
-          "points": 35
-        },
-        {
-          "text": "entornos saludables",
-          "points": 30
-        },
-        {
-          "text": "educación",
-          "points": 20
-        },
-        {
-          "text": "políticas públicas",
-          "points": 15
-        }
-      ],
-      "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
-    },
-    {
-      "id": "ORG35-078",
-      "category": "Salud pública y odontología comunitaria",
-      "difficulty": "extremo",
-      "question": "¿Qué 5 aspectos fundamentales deben considerarse en la promoción de la salud?",
-      "answers": [
-        {
-          "text": "participación comunitaria",
-          "points": 30
-        },
-        {
-          "text": "entornos saludables",
-          "points": 25
-        },
-        {
-          "text": "educación",
-          "points": 20
-        },
-        {
-          "text": "políticas públicas",
-          "points": 15
-        },
-        {
-          "text": "acción intersectorial",
-          "points": 10
         }
       ],
       "source": "OMS Oral Health Surveys: Basic Methods, 5th ed.; WHO Global Oral Health Action Plan 2023-2030; CDC oral health surveillance and community water fluoridation resources."
