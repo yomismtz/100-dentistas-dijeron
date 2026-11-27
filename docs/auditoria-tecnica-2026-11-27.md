@@ -14,7 +14,7 @@
 
 La aplicación compila y los validadores incluidos en CI terminan correctamente. La arquitectura principal combina una WebView local con dos servidores TCP (HTTP y WebSocket) para el modo aula, además de almacenamiento local para partidas, resultados y configuración.
 
-**No recomiendo usar todavía el modo aula para una evaluación académica de alto impacto ni recopilar datos de investigación como si la deduplicación de respuestas fuera una garantía.** Se encontraron debilidades de autenticación y transporte en la red local, y la batería de pruebas actual es principalmente estática. La partida individual sin conexión y la compilación pueden probarse, pero el modo multi-dispositivo requiere corregir y verificar los hallazgos prioritarios.
+**La aplicación debe evaluarse como un juego educativo para estudiar odontología, no como una plataforma de exámenes ni de evaluación académica formal.** Se encontraron debilidades de autenticación y transporte en la red local, y la batería de pruebas actual es principalmente estática. La partida individual sin conexión y la compilación pueden probarse, pero el modo aula multi-dispositivo requiere corregir y verificar los hallazgos prioritarios para proteger la partida, el control docente y la estabilidad de la conexión.
 
 ## Hallazgos
 
@@ -36,39 +36,39 @@ Recomendación:
 3. Cerrar ambos servicios al salir del modo aula, no solo al destruir la Activity.
 4. Documentar que el aula debe operar en una red controlada y sin invitados.
 
-### H-02 — Examen individual sin autenticación robusta y deduplicación evadible
+### H-02 — Protección básica contra envíos repetidos en el modo de participación
 **Severidad: ALTA**
 
 Evidencia:
-- El endpoint HTTP `/api/exam` acepta respuestas sin PIN ni token.
+- El endpoint HTTP `/api/exam` acepta envíos de participación sin PIN ni token.
 - El WebSocket acepta clientes con `role=exam` sin autenticación.
 - La clave de deduplicación se obtiene de `device`, valor enviado por el propio navegador.
 - `LocalClassroomServer` y `ClassroomWebSocketServer` mantienen conjuntos `examSubmissions` independientes.
 
 Impacto posible:
-- Un cliente puede cambiar el identificador `device` y enviar más de una respuesta.
-- Una respuesta puede aceptarse por HTTP y otra por WebSocket porque las listas de duplicados no se comparten.
-- Un dispositivo ajeno a la actividad puede inyectar respuestas en la sesión.
+- Un cliente puede cambiar el identificador `device` y repetir envíos.
+- Un mismo envío puede repetirse por HTTP y WebSocket porque las listas de duplicados no se comparten.
+- Un dispositivo ajeno a la actividad puede enviar participaciones no solicitadas a la sesión.
 
-La deduplicación actual evita algunos envíos repetidos desde el mismo navegador sin manipulación; no prueba una participación única por estudiante.
+La deduplicación actual evita algunos envíos repetidos accidentales desde el mismo navegador, pero puede evadirse. No debe interpretarse como identificación única de estudiantes ni como garantía de validez de resultados; el juego no necesita verificar identidad académica.
 
 Recomendación:
-1. Emitir desde el anfitrión un token aleatorio de inscripción por alumno/dispositivo y validarlo en ambos transportes.
-2. Mantener una única tabla de inscripciones y respuestas compartida por HTTP y WebSocket.
+1. Emitir desde el anfitrión un token temporal por dispositivo participante y validarlo en ambos transportes.
+2. Compartir el control de duplicados entre HTTP y WebSocket para evitar repeticiones accidentales.
 3. Asociar cada envío a un identificador de sesión y de pregunta/ronda generado por el servidor.
-4. Rechazar envíos fuera de la ventana de respuesta y limitar tamaño/frecuencia.
-5. Registrar intentos duplicados y rechazos sin almacenar más datos personales de los necesarios.
+4. Limitar tamaño y frecuencia de los envíos.
+5. No implementar identificación única de estudiantes ni controles propios de un examen supervisado: no corresponden a la finalidad del juego.
 
 ### H-03 — PIN docente de cuatro dígitos sin limitación de intentos
 **Severidad: ALTA**
 
 Evidencia:
-- El PIN se genera con cuatro dígitos (`0000`–`9999`).
+- El PIN docente se genera con cuatro dígitos (`0000`–`9999`).
 - Se comprueba en `/api/teacher-state`, `/api/cmd` y en el handshake WebSocket.
 - No se observó bloqueo progresivo, límite de intentos ni caducidad de sesión.
 - En el modo HTTP el PIN se envía como parámetro de consulta; la conexión local es HTTP sin cifrar.
 
-Impacto posible: adivinación automatizada en la LAN y exposición del PIN a quien pueda observar el tráfico local.
+Impacto posible: una persona conectada a la misma red podría adivinar el PIN o interceptarlo y tomar el control docente de la partida.
 
 Recomendación:
 1. Sustituir el PIN corto por un token aleatorio de al menos 128 bits, generado por sesión.
@@ -227,7 +227,7 @@ Recomendación:
 ## Dictamen
 
 **Estado de compilación: APROBADO.**
-**Estado de seguridad del modo aula: NO APROBADO para redes compartidas o evaluaciones sensibles hasta corregir H-01 a H-05.**
+**Estado de seguridad del modo aula: requiere correcciones antes de recomendarlo en redes compartidas; H-01 a H-05 afectan la protección de la partida, el control docente y la estabilidad, no la validez de un examen.**
 **Estado de pruebas funcionales: INSUFICIENTE; requiere emulador/dispositivo real.**
 **Estado de publicación Play Store: NO LISTO hasta configurar y verificar firma release y completar revisión de privacidad.**
 
