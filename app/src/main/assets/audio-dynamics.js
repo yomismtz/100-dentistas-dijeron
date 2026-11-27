@@ -260,3 +260,61 @@ document.addEventListener('click',e=>{
 
 adMuteMedia(v3MasterMuted);
 adUpdateButtons();
+
+// Efectos externos CC0: se reproducen cuando hay conexión.
+// Si el recurso remoto no está disponible (por ejemplo, sin conexión), se conserva
+// el efecto sintetizado original como respaldo. Los audios se añaden al DOM para
+// que el control maestro de silencio existente también los silencie.
+const adRemoteSfx = {
+  correct: 'https://sfxmint.com/dl/game-show-win-02.mp3',
+  topAnswer: 'https://sfxmint.com/dl/game-show-win-02.mp3',
+  buzz: 'https://sfxmint.com/dl/feedback-buzzer-13.mp3',
+  drumroll: 'https://sfxmint.com/dl/drum-roll-09.mp3',
+  fanfare: 'https://sfxmint.com/dl/trumpet-fanfare-07.mp3',
+  startGame: 'https://sfxmint.com/dl/trumpet-fanfare-07.mp3',
+  applause: 'https://sfxmint.com/dl/crowd-applause-01.mp3',
+  bigApplause: 'https://sfxmint.com/dl/crowd-applause-01.mp3'
+};
+const adRemoteAudio = Object.create(null);
+function adPlayRemoteSfx(name, fallback) {
+  const src = adRemoteSfx[name];
+  if (!src || v3MasterMuted) { fallback(); return; }
+  if ((name === 'applause' || name === 'bigApplause') && !tvSettings.applause) return;
+  if ((name === 'fanfare' || name === 'startGame') && !tvSettings.music) return;
+  let a = adRemoteAudio[name];
+  if (!a) {
+    a = document.createElement('audio');
+    a.preload = 'none';
+    a.src = src;
+    a.volume = 0.82;
+    a.setAttribute('aria-hidden', 'true');
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    adRemoteAudio[name] = a;
+  }
+  let settled = false;
+  const useFallback = () => {
+    if (settled) return;
+    settled = true;
+    fallback();
+  };
+  a.onerror = useFallback;
+  try {
+    a.pause();
+    a.currentTime = 0;
+    a.muted = !!v3MasterMuted;
+    const result = a.play();
+    if (result && typeof result.catch === 'function') result.catch(useFallback);
+  } catch (_) { useFallback(); }
+}
+if (typeof tvSfx === 'function') {
+  const adOriginalTvSfx = tvSfx;
+  tvSfx = function(name) {
+    const remoteNames = Object.prototype.hasOwnProperty.call(adRemoteSfx, name);
+    if (!remoteNames) return adOriginalTvSfx(name);
+    if (!tvSettings.effects && !['applause','bigApplause','fanfare','drumroll'].includes(name)) {
+      return adOriginalTvSfx(name);
+    }
+    return adPlayRemoteSfx(name, () => adOriginalTvSfx(name));
+  };
+}
