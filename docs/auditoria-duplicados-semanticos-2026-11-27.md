@@ -318,3 +318,32 @@ La similitud léxica se utilizó únicamente para generar candidatos. Las opcion
 - No se modificó `BANK_FILES`, el normalizador ni el motor del juego.
 - No se cambió de rama, no se tocó `main` y no se hizo merge.
 
+## Etapa C — revisión clínica y editorial focalizada
+
+Se revisaron de forma focalizada los reactivos que habían quedado señalados en la Etapa B. En esta pasada se corrigieron cuatro reactivos con problemas verificables de alcance, solapamiento o redacción; no se modificaron los demás candidatos cuya distinción clínica requiere más contexto.
+
+| ID | Hallazgo | Decisión aplicada |
+|---|---|---|
+| `ORG13-69` | El enunciado preguntaba por sensibilidad general del nervio lingual, pero incluía el gusto como respuesta; el gusto de los dos tercios anteriores viaja por la cuerda del tímpano, mientras que el nervio lingual aporta sensibilidad general. | Se reformuló el enunciado y se dejó una lista de cuatro territorios/tejidos compatibles con sensibilidad general: dos tercios anteriores de la lengua, piso de boca, encía lingual mandibular y mucosa lingual adyacente. |
+| `ORG14-31` | Las respuestas “molares”, “dientes multirradiculares” y “molares mandibulares” se incluían entre sí; “algunos premolares superiores” necesitaba precisión anatómica. | Se reformuló la pregunta y se distinguieron molares mandibulares, molares maxilares y primeros premolares maxilares birradiculares. |
+| `ORG43-041` | “Requisitos del expediente clínico” y “expediente clínico” se solapaban y el enunciado no delimitaba qué aspecto de la NOM-004 se evaluaba. | Se preguntan ahora los aspectos regulados por la NOM-004-SSA3-2012: elaboración e integración; uso, manejo y archivo; conservación, propiedad, titularidad y confidencialidad. |
+| `ORG43-046` | Enunciado duplicado y opciones que no distinguían claramente el objetivo de la norma. | Se pregunta por el objetivo de la NOM-013-SSA2-2015, con tres componentes diferenciados. |
+| `ORG43-047` | Enunciado defectuoso y mezcla de opciones de alcance con fragmentos de la plantilla anterior. | Se pregunta por sujetos y ámbitos de aplicación obligatoria, conforme al apartado 2. |
+| `ORG43-048` | Enunciado defectuoso y opciones solapadas. | Se pregunta por las áreas de actuación de la norma: acciones comunitarias, acciones individuales, prevención de riesgos, expediente clínico y vigilancia epidemiológica. |
+
+### Fuentes primarias y de apoyo consultadas
+
+- Diario Oficial de la Federación. **NOM-013-SSA2-2015, Para la prevención y control de enfermedades bucales**, apartados 1 y 2 e índice de los capítulos 6–10. https://sidof.segob.gob.mx/notas/docFuente/5462039
+- Diario Oficial de la Federación. **NOM-004-SSA3-2012, Del expediente clínico**, apartado 1. https://sidof.segob.gob.mx/notas/docFuente/5272787
+- Fagan SE, Roy W. **Anatomy, Head and Neck: Lingual Nerve**. StatPearls, NCBI Bookshelf. https://www.ncbi.nlm.nih.gov/books/NBK546652/
+- **Furcation Involvement in Periodontal Disease: A Narrative Review**. Cureus. 2024;16(3):e55924. doi:10.7759/cureus.55924. https://pmc.ncbi.nlm.nih.gov/articles/PMC11004587/
+- Palmer R, Floyd P. **Periodontology**. 4th ed. BDJ Clinician's Guides; 2021.
+
+Las ponderaciones de los reactivos modificados se comprobaron: todas suman 100. Se conservaron los identificadores, categoría y dificultad. Las fuentes específicas se incorporaron en los campos `source` de los reactivos modificados.
+
+Esta etapa es una revisión focalizada, no una validación clínica completa de los 90 bancos. Los casos restantes anotados en Etapa B continúan pendientes y no se marcaron como validados.
+
+### Verificación de compilación
+
+La compilación solicitada se ejecuta mediante el flujo GitHub Actions `.github/workflows/build-apk.yml`, que valida los bancos, ejecuta comprobaciones estáticas, compila el APK debug y genera el AAB release. El resultado de esa ejecución se documentará cuando GitHub Actions informe su estado; no se presume éxito por el solo hecho de enviar los cambios.
+
