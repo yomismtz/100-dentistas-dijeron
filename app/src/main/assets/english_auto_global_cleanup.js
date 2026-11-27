@@ -77,6 +77,7 @@ for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate
 
 (function(){const R={"necesidad":"need","mecánico":"mechanical","depósitos":"deposits","metabólico":"metabolic","dificultar":"make difficult","afirmaciones":"statements","estos":"these","forma parte":"is part of","forma":"form","parte":"part","no elimina todos":"does not eliminate all","aumento":"increase","control mecánico":"mechanical control","control metabólico":"metabolic control"};function e(s){return s.replace(/[.*+?^$()|[\\]\\\\]/g,"\\\\$&")}for(const k of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate1318","DentistasEnglishAutoTranslate1924","DentistasEnglishAutoTranslate2530","DentistasEnglishAutoTranslate31","DentistasEnglishAutoTranslate3245"]){const o=window[k];if(!o?.translate)continue;window[k]={translate:s=>{let x=o.translate(s);for(const q of Object.keys(R).sort((a,b)=>b.length-a.length))x=x.replace(new RegExp("(?<![\\\\p{L}\\\\p{N}])"+e(q)+"(?![\\\\p{L}\\\\p{N}])","giu"),R[q]);return x.replace(/\\bwhat\\s+what\\b/gi,"what")}}}})();
 })();
+
 /* Targeted terminology completion for the ORG7 habit/function bank. */
 (function(){
   const M={
@@ -114,21 +115,18 @@ for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate
     "apropiada":"appropriate","lesión":"lesion","tejidos blandos":"soft tissues","persiste":"persists","identificar":"identify",
     "eliminar":"eliminate","factores traumáticos":"traumatic factors","reevaluar":"reassess","plazo clínico apropiado":"appropriate clinical interval",
     "documentar":"document","evolución":"progression","estudio adicional":"additional evaluation","no cicatriza":"does not heal",
-    "signos de alarma":"warning signs","traumáticos":"traumatic","posibles":"possible","eliminater":"eliminate","or":"or","u":"or","ni":"or","sin":"without","durante":"during","entre":"between",
-    "sobre":"on","ante":"in the presence of","al":"when","del":"of the","de":"of","la":"the","el":"the","las":"the","los":"the",
-    "una":"a","un":"a","y":"and","en":"in","para":"for","con":"with","que":"that","qué":"what"
+    "signos de alarma":"warning signs","traumáticos":"traumatic","posibles":"possible","eliminater":"eliminate",
+    "or":"or","u":"or","ni":"or","sin":"without","durante":"during","entre":"between","sobre":"on","ante":"in the presence of",
+    "al":"when","del":"of the","de":"of","la":"the","el":"the","las":"the","los":"the","una":"a","un":"a",
+    "y":"and","en":"in","para":"for","con":"with","que":"that","qué":"what"
   };
-  function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+  const esc=s=>s.replace(/[.*+?^${}()|[\\]\\]/g,"\\$&");
+  const alternatives=Object.keys(M).sort((a,b)=>b.length-a.length).map(esc).join("|");
+  const tokenPattern=new RegExp("(?<![\\p{L}\\p{N}])(?:"+alternatives+")(?![\\p{L}\\p{N}])","giu");
   function clean(s){
-    let x=String(s||"");
-    for(const k of Object.keys(M).sort((a,b)=>b.length-a.length)){
-      const re=new RegExp("(?<![\\p{L}\\p{N}])"+esc(k)+"(?![\\p{L}\\p{N}])","giu");
-      x=x.replace(re,M[k]);
-    }
-    return x.replace(/\babout the teeth\b/gi,"on the teeth").replace(/\s+/g," ").trim();
+    return String(s||"").replace(tokenPattern,match=>M[match.toLowerCase()]||match)
+      .replace(/\\babout the teeth\\b/gi,"on the teeth").replace(/\\s+/g," ").trim();
   }
   const old=window.DentistasEnglishAutoTranslate;
-  if(old&&typeof old.translate==="function"){
-    window.DentistasEnglishAutoTranslate={translate:s=>clean(old.translate(s))};
-  }
+  if(old&&typeof old.translate==="function")window.DentistasEnglishAutoTranslate={translate:s=>clean(old.translate(s))};
 })();
