@@ -77,3 +77,58 @@ for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate
 
 (function(){const R={"necesidad":"need","mecánico":"mechanical","depósitos":"deposits","metabólico":"metabolic","dificultar":"make difficult","afirmaciones":"statements","estos":"these","forma parte":"is part of","forma":"form","parte":"part","no elimina todos":"does not eliminate all","aumento":"increase","control mecánico":"mechanical control","control metabólico":"metabolic control"};function e(s){return s.replace(/[.*+?^$()|[\\]\\\\]/g,"\\\\$&")}for(const k of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate1318","DentistasEnglishAutoTranslate1924","DentistasEnglishAutoTranslate2530","DentistasEnglishAutoTranslate31","DentistasEnglishAutoTranslate3245"]){const o=window[k];if(!o?.translate)continue;window[k]={translate:s=>{let x=o.translate(s);for(const q of Object.keys(R).sort((a,b)=>b.length-a.length))x=x.replace(new RegExp("(?<![\\\\p{L}\\\\p{N}])"+e(q)+"(?![\\\\p{L}\\\\p{N}])","giu"),R[q]);return x.replace(/\\bwhat\\s+what\\b/gi,"what")}}}})();
 })();
+/* Targeted terminology completion for the ORG7 habit/function bank. */
+(function(){
+  const M={
+    "persistencia":"persistence","día":"day","noche":"night","amenazas":"threats","castigos":"punishments","humillación":"humiliation",
+    "indicar":"recommend","terapia miofuncional":"myofunctional therapy","fonoaudiológica":"speech-language","justificada":"indicated",
+    "amígdalas":"tonsils","otras":"other","estructuras":"structures","orofaríngeas":"oropharyngeal",
+    "solicitar":"seek","médica":"medical","otorrinolaringológica":"otolaryngologic","sospecha":"suspected",
+    "coordinar":"coordinate","abordaje":"approach","odontológico":"dental","asumir":"assuming","causalidad":"causation",
+    "fatiga":"fatigue","dolor":"pain","músculos":"muscles","masticatorios":"masticatory","despertar":"awakening",
+    "lámina":"nail plate","ungueal":"nail","tejidos":"tissues","periungueales":"periungual",
+    "derivar":"refer","apoyo":"support","adicional":"additional","existe":"there is","afectación":"impact","emocional":"emotional","significativa":"significant",
+    "desgaste":"wear","abrasión":"abrasion","localizada":"localized","variables":"variables","biomecánicas":"biomechanical",
+    "fuerzas":"forces","repetitivas":"repetitive","hiperqueratosis":"hyperkeratosis","fricción":"friction",
+    "limitación":"limitation","función":"function","relacionado":"related","preferencia":"preference","síntomas":"symptoms",
+    "variación":"variation","requieren":"require","evaluación":"evaluation","clínica":"clinical","distribución":"distribution",
+    "simetría":"symmetry","contactos":"contacts","facetas":"facets","interferencias":"interferences",
+    "causa":"cause","descartar":"rule out","primero":"first","periodontal":"periodontal","restauración":"restoration",
+    "alta":"high","articulación":"joint","coexistencia":"coexistence","ronquido":"snoring","despertares":"awakenings",
+    "fragmentación":"fragmentation","demuestra":"demonstrates","causado":"caused","trastorno":"disorder","específico":"specific",
+    "propulsión":"propulsion","bolo":"bolus","contacto":"contact","adecuado":"appropriate","empuje":"thrust",
+    "interdental":"interdental","coordinación":"coordination","fase":"phase","faríngea":"pharyngeal","protección":"protection",
+    "vía aérea":"airway","labios":"lips","buccinadores":"buccinator muscles","suprahioideos":"suprahyoid",
+    "faríngeos":"pharyngeal","paladar":"palate","mandíbula":"mandible","laríngeas":"laryngeal","coordinadas":"coordinated",
+    "principio":"principle","ayuda":"helps","evitar":"avoid","sobrediagnóstico":"overdiagnosis","considerar":"consider",
+    "edad":"age","maduración":"maturation","patrón":"pattern","reposo":"rest","correlacionar":"correlate","habla":"speech",
+    "debe":"should","descartarse":"be ruled out","incompetencia labial":"lip incompetence","persistente":"persistent",
+    "alteraciones dentoalveolares":"dentoalveolar alterations","esqueléticas":"skeletal","características anatómicas":"anatomical features",
+    "objetivo":"objective","manejo":"management","interposición labial":"lip interposition","asociada":"associated",
+    "maloclusión":"malocclusion","reducir":"reduce","hábito":"habit","estrategias conductuales":"behavioral strategies",
+    "factores funcionales":"functional factors","anatómicos":"anatomic","tratamiento ortodóncico":"orthodontic treatment",
+    "indicación diagnóstica":"diagnostic indication","ventaja":"benefit","hábitos":"habits","respiratorios":"respiratory",
+    "musculares":"muscular","dentoesqueléticos":"dentoskeletal","atribuir":"attribute","hallazgo aislado":"isolated finding",
+    "cambio sagital":"sagittal change","observarse":"be observed","succión":"sucking","aumento del resalte":"increased overjet",
+    "proclinación":"proclination","incisivos":"incisors","retroinclinación":"retroclination","conducta":"action",
+    "apropiada":"appropriate","lesión":"lesion","tejidos blandos":"soft tissues","persiste":"persists","identificar":"identify",
+    "eliminar":"eliminate","factores traumáticos":"traumatic factors","reevaluar":"reassess","plazo clínico apropiado":"appropriate clinical interval",
+    "documentar":"document","evolución":"progression","estudio adicional":"additional evaluation","no cicatriza":"does not heal",
+    "signos de alarma":"warning signs","or":"or","u":"or","ni":"or","sin":"without","durante":"during","entre":"between",
+    "sobre":"on","ante":"in the presence of","al":"when","del":"of the","de":"of","la":"the","el":"the","las":"the","los":"the",
+    "una":"a","un":"a","y":"and","en":"in","para":"for","con":"with","que":"that","qué":"what"
+  };
+  function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+  function clean(s){
+    let x=String(s||"");
+    for(const k of Object.keys(M).sort((a,b)=>b.length-a.length)){
+      const re=new RegExp("(?<![\\p{L}\\p{N}])"+esc(k)+"(?![\\p{L}\\p{N}])","giu");
+      x=x.replace(re,M[k]);
+    }
+    return x.replace(/\\babout the teeth\\b/gi,"on the teeth").replace(/\\s+/g," ").trim();
+  }
+  const old=window.DentistasEnglishAutoTranslate;
+  if(old&&typeof old.translate==="function"){
+    window.DentistasEnglishAutoTranslate={translate:s=>clean(old.translate(s))};
+  }
+})();
