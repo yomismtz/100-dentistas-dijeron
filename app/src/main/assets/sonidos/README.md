@@ -30,7 +30,8 @@ Se añadieron cinco recursos CC0 de SFXMint. Se reproducen en línea; si falla l
 
 | Evento | Archivo / recurso | Fuente |
 |---|---|---|
-| Respuesta correcta y respuesta popular | `game-show-win-02.mp3` | https://sfxmint.com/sounds/game-show-win-02 |
+| Respuesta correcta | `game-show-win-02.mp3` | https://sfxmint.com/sounds/game-show-win-02 |
+| Respuesta más popular | `game-show-win-01.mp3` (campanas y público) | https://sfxmint.com/sounds/game-show-win-01 |
 | Respuesta incorrecta / strike | `feedback-buzzer-13.mp3` | https://sfxmint.com/sounds/feedback-buzzer-13 |
 | Redoble / desempate / anuncio | `drum-roll-09.mp3` | https://sfxmint.com/sounds/drum-roll-09 |
 | Inicio y fanfarria | `trumpet-fanfare-07.mp3` | https://sfxmint.com/sounds/trumpet-fanfare-07 |
