@@ -14,11 +14,11 @@
 
 El conteo directo de registros recuperables en los 90 archivos activos antes de esta auditoría fue de **7,171**, no 7,170. La diferencia es de un registro respecto del conteo comunicado anteriormente. Se conserva esta discrepancia como punto de conciliación; no se ajustó artificialmente ningún archivo para forzar el total histórico.
 
-Después de esta etapa se retiraron **1,789 registros redundantes**. El conteo actual calculado para los 90 archivos activos es de **5,382 registros**.
+Al cierre de la Etapa A se habían retirado **1,789 registros redundantes**, con 5,382 registros. La Etapa B retiró una pregunta que también era duplicado semántico; el conteo actual de los 90 archivos activos es de **5,381 registros**.
 
 Este total es un conteo de registros presentes, no una declaración de validación clínica. La unicidad semántica global todavía requiere resolver los candidatos pendientes descritos abajo.
 
-Se verificó la unicidad textual exacta dentro de cada uno de los 90 archivos activos: **5,382 enunciados únicos dentro de sus respectivos bancos y cero grupos de enunciados exactamente repetidos dentro de un mismo archivo**. Esta cifra no debe interpretarse como unicidad semántica global entre todos los bancos: las comparaciones cruzadas se realizaron entre bancos relacionados por especialidad o contenido, y los candidatos restantes siguen pendientes de revisión.
+Se verificó la unicidad textual exacta dentro de cada uno de los 90 archivos activos: **5,381 enunciados únicos dentro de sus respectivos bancos y cero grupos de enunciados exactamente repetidos dentro de un mismo archivo**. Esta cifra no debe interpretarse como unicidad semántica global entre todos los bancos: las comparaciones cruzadas se realizaron entre bancos relacionados por especialidad o contenido, y los candidatos restantes siguen pendientes de revisión.
 
 ## Método de detección
 
@@ -220,7 +220,9 @@ Tener menos de 100 preguntas no significa que el banco esté clínicamente valid
 - `bank44_odontologia_preventiva.json` (99)
 - `bank44_salud_publica_comunitaria.json` (98)
 
-**Total: 62 de los 90 bancos activos tienen menos de 100 registros.**
+- `bank44_original_02.json` (99), después de retirar una pregunta duplicada en la Etapa B.
+
+**Total actualizado: 63 de los 90 bancos activos tienen menos de 100 registros.**
 
 ## Integridad y pruebas
 
@@ -239,3 +241,80 @@ Tener menos de 100 preguntas no significa que el banco esté clínicamente valid
 3. Auditar respuestas duplicadas dentro de cada pregunta y opciones incorrectas potencialmente correctas.
 4. Revisar calidad clínica, redacción, dificultad y respaldo de fuentes.
 5. Ejecutar las pruebas del juego y recalcular el total desde el mismo normalizador que utiliza la aplicación.
+
+## Etapa B — auditoría de respuestas duplicadas (actualización 2026-11-27)
+
+### Cobertura y resultados
+
+- Se revisaron los 90 archivos declarados en `BANK_FILES` en la rama de trabajo.
+- Conteo de preguntas antes de esta etapa: 5,382.
+- Conteo actual después de la etapa: **5,381**.
+- No se encontraron opciones exactamente repetidas dentro de una misma pregunta mediante normalización de mayúsculas, acentos y puntuación.
+- Se detectaron **9 opciones semánticamente redundantes** en 8 preguntas.
+- Se retiró una pregunta completa que era duplicado semántico de otra pregunta del mismo banco.
+- No se encontraron preguntas con lista de respuestas vacía.
+- Se comprobó que las ponderaciones de las respuestas suman 100 puntos en los 5,381 registros de los 90 bancos activos.
+
+### Modificaciones realizadas
+
+| Archivo | ID | Modificación | Puntuación resultante |
+|---|---|---|---|
+| `bank44_original_02.json` | `ORG2-031` | Se consolidaron «Amilasa», «Ptialina» y «Alfa-amilasa» en una sola respuesta: «Amilasa salival (alfa-amilasa o ptialina)». | 100 |
+| `bank44_original_02.json` | `ORG2-032` | Se retiró porque preguntaba lo mismo que `ORG2-031`, con idénticas respuestas y fuente. | Registro eliminado |
+| `bank44_original_13.json` | `ORG13-11` | «procedimiento» y «procedimiento autorizado» se consolidaron en «procedimiento autorizado». El enunciado pasó de cinco a cuatro aspectos. | 40 + 37 + 15 + 8 = 100 |
+| `bank44_original_13.json` | `ORG13-51` | «tejido de granulación» y «formación de tejido de granulación» se consolidaron. El enunciado pasó de cinco a cuatro aspectos. | 48 + 25 + 15 + 12 = 100 |
+| `bank44_original_13.json` | `ORG13-56` | Se conservó «dolor intenso» y se retiró «dolor» como repetición genérica del mismo hallazgo. El enunciado pasó de cinco a cuatro hallazgos. | 52 + 25 + 15 + 8 = 100 |
+| `bank44_original_13.json` | `ORG13-58` | «drenaje indicado» y «drenaje» se consolidaron. El enunciado pasó de cinco a cuatro principios. | 40 + 33 + 15 + 12 = 100 |
+| `bank44_original_13.json` | `ORG13-96` | Se conservó «infección progresiva» y se retiró «infección» como formulación genérica redundante. El enunciado pasó de cinco a cuatro factores. | 40 + 37 + 15 + 8 = 100 |
+| `bank44_original_42.json` | `ORG42-057` | «anchura de los ápices abiertos» y «anchura de ápices abiertos» eran la misma respuesta. Se consolidaron y el enunciado pasó de tres a dos elementos. | 75 + 25 = 100 |
+| `bank44_original_43.json` | `ORG43-045` | Se retiró la opción paraguas «prevención y control de enfermedades bucales» y se conservaron por separado prevención y control. El enunciado pasó de tres a dos componentes. | 55 + 45 = 100 |
+
+Los identificadores de las preguntas conservadas no se modificaron. Se conservaron categoría, dificultad y fuente. No se alteró la puntuación total de 100 puntos de ninguna pregunta modificada.
+
+### Candidatos revisados y conservados
+
+No se eliminaron estas opciones porque expresan distinciones clínicas, anatómicas o terapéuticas:
+
+- `ORG2-079` y `ORG2-080`: fibras A-delta y fibras C son tipos distintos de fibras nociceptivas.
+- `ORG8-003` y `ORG8-004`: cubetas metálicas y plásticas son alternativas distintas.
+- `ORG8-027` a `ORG8-031`: resortes de dedo, helicoidales, en Z y de Coffin no son sinónimos.
+- `ORG13-41` a `ORG13-44`: materiales absorbibles y no absorbibles son categorías diferentes.
+- `ORG13-69`: sensibilidad general del nervio lingual y gusto de los dos tercios anteriores de la lengua son modalidades distintas; se conserva para revisión de precisión del enunciado.
+- `ORG14-14`: severidad y complejidad en la clasificación periodontal son dimensiones distintas.
+- `ORG14-31`: molares, molares mandibulares, dientes multirradiculares y algunos premolares superiores se solapan por inclusión anatómica; no se eliminaron sin revisión clínica.
+- `ORG19-1`: dentición temporal y permanente tienen composición dentaria diferente.
+- `ORG28-59`: monómero y monómero residual son conceptos relacionados, pero no equivalentes.
+- `ORG34-013` a `ORG34-016`: ancho y longitud coronaria no son lo mismo que la relación ancho/longitud.
+- `ORG36-018` a `ORG36-020`: producción de ácido y tolerancia al ácido son propiedades distintas.
+- `ORG42-013` a `ORG42-016`: hallazgos ante mortem, post mortem y su concordancia representan elementos relacionados, pero diferentes.
+- `ORG43-041`: «expediente clínico» y «requisitos del expediente clínico» se solapan; queda pendiente revisar la construcción del reactivo.
+- `ORG43-046` a `ORG43-048`: comparten núcleo de respuestas sobre NOM-013 y varían en cantidad y alcance; quedan pendientes de comparación semántica entre preguntas.
+- `FAR-017`: amoxicilina y amoxicilina con clavulanato son formulaciones diferentes.
+- `MAT-006`: sílice y zirconia-sílice no son equivalentes.
+- `MIC-080`: HPV-16 y HPV-18 son genotipos diferentes.
+- `PAT-033`: granuloma central y periférico de células gigantes son entidades diferentes.
+- `PFI-006`: hombro y hombro redondeado son diseños de terminación distintos.
+- `PFI-018`: conectores rígidos y no rígidos son categorías opuestas, no duplicadas.
+- `PRE-010`: las clases I, II y III de Kennedy son categorías diferentes.
+- `PTO-039`: los sonidos F/V y S son pruebas fonéticas diferentes.
+- `TRA-007`: fractura de esmalte y fractura de esmalte-dentina son lesiones distintas.
+
+La similitud léxica se utilizó únicamente para generar candidatos. Las opciones parecidas que expresan categorías diferentes se conservaron.
+
+### Observaciones para Etapa C
+
+- `ORG13-69`: el enunciado restringe la pregunta a sensibilidad general, pero una opción aborda gusto; revisar si debe reformularse para abarcar todas las funciones del nervio lingual o limitarse a sensibilidad general.
+- `ORG14-31`: varias respuestas son categorías superpuestas; conviene reformular el reactivo para evitar contar molares mandibulares dentro de «molares» y dentro de «dientes multirradiculares».
+- `ORG43-041`: revisar si «expediente clínico» y «requisitos del expediente clínico» evalúan aspectos suficientemente distintos.
+- `ORG43-046`, `ORG43-047` y `ORG43-048`: además del solapamiento de respuestas, los enunciados contienen texto repetido y requieren corrección editorial.
+- Las opciones que podrían ser correctas en más de un contexto se dejaron sin cambios cuando no se pudo confirmar el alcance clínico con suficiente certeza.
+
+### Integridad después de la Etapa B
+
+- Los cuatro archivos modificados se serializaron y validaron con `JSON.parse` antes de actualizarse.
+- Se revisaron las sumas de puntos de todos los registros de los 90 archivos activos: no se encontraron preguntas con total distinto de 100 ni listas sin ponderación.
+- No se ejecutó build, test automatizado ni prueba del juego en navegador.
+- No se marcaron preguntas ni bancos como clínicamente validados.
+- No se modificó `BANK_FILES`, el normalizador ni el motor del juego.
+- No se cambió de rama, no se tocó `main` y no se hizo merge.
+
