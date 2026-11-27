@@ -174,15 +174,15 @@
     "q": "¿Dónde se ubican los espacios primates superiores?",
     "a": [
       [
-        "Lateral-canino",
+        "Entre el incisivo lateral superior y el canino temporal",
         45
       ],
       [
-        "Anterior al canino",
+        "En la región anterior del arco maxilar",
         35
       ],
       [
-        "Sector anterior",
+        "Por mesial del canino temporal superior",
         20
       ]
     ],
@@ -195,15 +195,15 @@
     "q": "¿Entre qué dientes se localiza clásicamente el espacio primate del maxilar?",
     "a": [
       [
-        "Lateral-canino",
+        "Incisivo lateral superior y canino temporal superior",
         45
       ],
       [
-        "Anterior al canino",
+        "Región interproximal lateral-canina del maxilar",
         35
       ],
       [
-        "Sector anterior",
+        "Espacio primate maxilar",
         20
       ]
     ],
@@ -216,15 +216,15 @@
     "q": "¿Dónde se ubican los espacios primates inferiores?",
     "a": [
       [
-        "Canino-molar",
+        "Entre el canino temporal inferior y el primer molar temporal",
         45
       ],
       [
-        "Posterior al canino",
+        "En la región lateral mandibular",
         35
       ],
       [
-        "Sector lateral",
+        "Por distal del canino temporal inferior",
         20
       ]
     ],
@@ -237,15 +237,15 @@
     "q": "¿Entre qué dientes se localiza clásicamente el espacio primate mandibular?",
     "a": [
       [
-        "Canino-molar",
+        "Canino temporal inferior y primer molar temporal inferior",
         45
       ],
       [
-        "Posterior al canino",
+        "Región interproximal canino-molar de la mandíbula",
         35
       ],
       [
-        "Sector lateral",
+        "Espacio primate mandibular",
         20
       ]
     ],
@@ -507,18 +507,18 @@
     "id": "ORG4-025",
     "cat": "Desarrollo de la oclusión",
     "difficulty": "facil",
-    "q": "¿Qué evolución puede seguir un plano terminal recto?",
+    "q": "¿Qué factores permiten que un plano terminal recto evolucione hacia una relación molar Clase I?",
     "a": [
       [
-        "Aprovechamiento del leeway space",
+        "Desplazamiento mesial temprano o tardío del primer molar permanente",
         45
       ],
       [
-        "Diferencia de tamaño entre molares temporales y premolares",
+        "Aprovechamiento de los espacios primates o del leeway space",
         35
       ],
       [
-        "Migración mesial",
+        "Diferencia de tamaño entre molares temporales y premolares sucesores",
         20
       ]
     ],
