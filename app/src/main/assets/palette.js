@@ -19,11 +19,44 @@ const keys=['primary','secondary','accent','background','surface','text','muted'
 const audioFiles={agaporni:'agaporni.mp3','buho-real':'buho-real.mp3',colibri:'colibri.mp3',cuervo:'cuervo.mp3',faisan:'faisan.mp3',gallo:'gallo.mp3','guacamaya-roja':'guacamaya-roja.mp3','guacamayo-azul':'guacamayo-azul.mp3',ninfa:'ninfa.mp3','pavo-real':'pavo-real.mp3',quetzal:'quetzal.mp3',tucan:'tucan.mp3'};
 const birdImages={agaporni:'agaporni.png','buho-real':'buho-real.png',colibri:'colibri.png',cuervo:'cuervo.png',faisan:'faisan.png',gallo:'gallo.png','guacamaya-roja':'guacamaya-roja.png','guacamayo-azul':'guacamayo-azul.png',ninfa:'ninfa.png','pavo-real':'pavo-real.png',quetzal:'quetzal.png',tucan:'tucan.png'};
 const audioBase='bird-sounds/';let active='tucan',currentAudio=null;
+const fontStacks={
+ system:'Inter, "Segoe UI", Roboto, Arial, sans-serif',
+ rounded:'"Trebuchet MS", "Arial Rounded MT Bold", Arial, sans-serif',
+ serif:'"Palatino Linotype", Palatino, serif',
+ humanist:'Candara, "Segoe UI", sans-serif',
+ mono:'"Courier New", monospace',
+ condensed:'"Arial Narrow", "Roboto Condensed", sans-serif',
+ georgia:'Georgia, serif',
+ trebuchet:'"Trebuchet MS", sans-serif'
+};
+const SETTINGS_KEY='dentistas-appearance-settings-v1';
+let appearance={palette:'tucan',font:'system',fontSize:100};
 function playBirdSound(id){if(currentAudio){currentAudio.pause();currentAudio.currentTime=0;currentAudio=null;}const file=audioFiles[id];if(!file)return;try{currentAudio=new Audio(audioBase+file);currentAudio.preload='auto';const result=currentAudio.play();if(result&&result.catch)result.catch(()=>{});}catch(_){}}
-function apply(id,playSound){const p=palettes[id]||palettes.tucan;active=id;keys.forEach(k=>document.documentElement.style.setProperty('--bird-'+k,p[k]));document.documentElement.style.setProperty('--bird-success',p.secondary);document.documentElement.style.setProperty('--bird-danger',p.accent);document.documentElement.dataset.birdPalette=id;try{localStorage.setItem('dentistas-bird-palette',id);}catch(_){}document.querySelectorAll('[data-bird-palette]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.birdPalette===id)));if(playSound)playBirdSound(id);}
+function saveAppearance(){try{localStorage.setItem(SETTINGS_KEY,JSON.stringify(appearance));localStorage.setItem('dentistas-bird-palette',appearance.palette);}catch(_){}}
+function apply(id,playSound){const p=palettes[id]||palettes.tucan;active=id;appearance.palette=id;keys.forEach(k=>document.documentElement.style.setProperty('--bird-'+k,p[k]));document.documentElement.style.setProperty('--bird-success',p.secondary);document.documentElement.style.setProperty('--bird-danger',p.accent);document.documentElement.dataset.birdPalette=id;saveAppearance();document.querySelectorAll('[data-bird-palette]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.birdPalette===id)));if(playSound)playBirdSound(id);}
+function applyTypography(){
+ const font=fontStacks[appearance.font]?appearance.font:'system';
+ const size=Math.max(85,Math.min(130,Number(appearance.fontSize)||100));
+ document.documentElement.style.setProperty('--game-font-family',fontStacks[font]);
+ document.documentElement.style.setProperty('--game-font-scale',(size/100).toFixed(2));
+ document.documentElement.dataset.gameFont=font;
+ const select=document.getElementById('fontChoice'),range=document.getElementById('fontSizeChoice'),value=document.getElementById('fontSizeValue');
+ if(select)select.value=font;if(range)range.value=String(size);if(value)value.textContent=size+'%';
+}
 function open(){const m=document.getElementById('paletteModal');if(m)m.hidden=false;}
 function close(){const m=document.getElementById('paletteModal');if(m)m.hidden=true;}
-function init(){try{active=localStorage.getItem('dentistas-bird-palette')||'tucan';}catch(_){}apply(active,false);const btn=document.getElementById('paletteOpen');if(btn)btn.addEventListener('click',open);const cb=document.getElementById('paletteClose');if(cb)cb.addEventListener('click',close);const modal=document.getElementById('paletteModal');if(modal)modal.addEventListener('click',e=>{if(e.target===modal)close();});const grid=document.getElementById('paletteGrid');if(grid){grid.innerHTML=Object.entries(palettes).map(([id,p])=>'<button type="button" class="paletteChoice" data-bird-palette="'+id+'" aria-pressed="false"><img class="paletteBirdIcon" src="birds/'+birdImages[id]+'" alt="'+p.name+'" loading="lazy"><span class="paletteChoiceInfo"><span class="paletteName">'+p.name+'</span><span class="paletteSwatches">'+keys.map(k=>'<i style="background:'+p[k]+'"></i>').join('')+'</span><span class="paletteHint">8 colores · escuchar canto</span></span></button>').join('');grid.addEventListener('click',e=>{const b=e.target.closest('[data-bird-palette]');if(b)apply(b.dataset.birdPalette,true);});}}
+function init(){
+ try{const saved=JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}');appearance={...appearance,...saved};if(!saved.palette)appearance.palette=localStorage.getItem('dentistas-bird-palette')||'tucan';}catch(_){}
+ const grid=document.getElementById('paletteGrid');
+ if(grid){grid.innerHTML=Object.entries(palettes).map(([id,p])=>'<button type="button" class="paletteChoice" data-bird-palette="'+id+'" aria-pressed="false"><img class="paletteBirdIcon" src="birds/'+birdImages[id]+'" alt="'+p.name+'" loading="lazy"><span class="paletteChoiceInfo"><span class="paletteName">'+p.name+'</span><span class="paletteSwatches">'+keys.map(k=>'<i style="background:'+p[k]+'"></i>').join('')+'</span><span class="paletteHint">8 colores · escuchar canto</span></span></button>').join('');grid.addEventListener('click',e=>{const b=e.target.closest('[data-bird-palette]');if(b)apply(b.dataset.birdPalette,true);});}
+ apply(appearance.palette,false);applyTypography();
+ const btn=document.getElementById('paletteOpen');if(btn)btn.addEventListener('click',open);
+ const cb=document.getElementById('paletteClose');if(cb)cb.addEventListener('click',close);
+ const modal=document.getElementById('paletteModal');if(modal)modal.addEventListener('click',e=>{if(e.target===modal)close();});
+ const font=document.getElementById('fontChoice'),range=document.getElementById('fontSizeChoice');
+ if(font)font.addEventListener('change',()=>{appearance.font=font.value;applyTypography();saveAppearance();});
+ if(range)range.addEventListener('input',()=>{appearance.fontSize=Number(range.value);applyTypography();saveAppearance();});
+}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-window.BirdPalettes={apply,list:()=>Object.entries(palettes).map(([id,p])=>({id,name:p.name,colors:keys.map(k=>p[k])}))};
+window.BirdPalettes={apply,list:()=>Object.entries(palettes).map(([id,p])=>({id,name:p.name,colors:keys.map(k=>p[k])})),getSettings:()=>({...appearance})};
 })();
