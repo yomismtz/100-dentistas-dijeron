@@ -1193,19 +1193,15 @@
       "id": "ORG43-045",
       "category": "Bioética y legislación odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son tres elementos relevantes en NOM-013?",
+      "question": "¿Cuáles son los dos componentes centrales de la NOM-013-SSA2-2015?",
       "answers": [
         {
-          "text": "prevención y control de enfermedades bucales",
-          "points": 45
-        },
-        {
           "text": "prevención de enfermedades bucales",
-          "points": 30
+          "points": 55
         },
         {
           "text": "control de enfermedades bucales",
-          "points": 25
+          "points": 45
         }
       ],
       "source": "Marco jurídico mexicano vigente; Ley General de Salud, NOM-004-SSA3-2012 del expediente clínico, NOM-013-SSA2-2015 para la prevención y control de enfermedades bucales, y principios de bioética clínica."
