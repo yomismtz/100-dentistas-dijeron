@@ -719,5 +719,30 @@
       ]
     ],
     "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
+  },
+  {
+    "specialty": "anatomia",
+    "difficulty": "basic",
+    "subtopic": "musculos_suprahioideos",
+    "q": "¿Qué músculos integran el grupo suprahioideo?",
+    "a": [
+      [
+        "Digástrico",
+        40
+      ],
+      [
+        "Estilohioideo",
+        30
+      ],
+      [
+        "Milohioideo",
+        20
+      ],
+      [
+        "Genihioideo",
+        10
+      ]
+    ],
+    "source": "Khan YS, Fakoya AO, Bordoni B. Anatomy, Head and Neck: Suprahyoid Muscle. StatPearls [Internet]. NCBI Bookshelf; actualización 2025. https://www.ncbi.nlm.nih.gov/books/NBK546710/"
   }
 ]
