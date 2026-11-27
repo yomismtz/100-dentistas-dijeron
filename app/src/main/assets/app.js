@@ -148,8 +148,29 @@ function shuffle(items) {
   return a;
 }
 
+function questionOrderKey(items) {
+  // Firma estable del contenido para recordar el orden anterior incluso
+  // cuando la aplicación se cierra y vuelve a abrirse (sin conexión).
+  return JSON.stringify(items.map(q => [q.q, q.a]));
+}
+
 function chooseGameQuestions() {
-  questions = shuffle(questionPool).slice(0, Math.min(GAME_SIZE, questionPool.length));
+  const count = Math.min(GAME_SIZE, questionPool.length);
+  const previousKey = localStorage.getItem('dentistas-last-question-order') || '';
+  const nextQuestions = shuffle(questionPool).slice(0, count);
+
+  // El sorteo es nuevo en cada partida. Además, impedimos que dos partidas
+  // consecutivas reproduzcan exactamente la misma secuencia de preguntas.
+  if (count > 1 && questionOrderKey(nextQuestions) === previousKey) {
+    const swapIndex = 1 + Math.floor(Math.random() * (count - 1));
+    [nextQuestions[0], nextQuestions[swapIndex]] =
+      [nextQuestions[swapIndex], nextQuestions[0]];
+  }
+
+  questions = nextQuestions;
+  try {
+    localStorage.setItem('dentistas-last-question-order', questionOrderKey(questions));
+  } catch (_) {}
 }
 
 function roundMultiplier(index = roundIndex) {
