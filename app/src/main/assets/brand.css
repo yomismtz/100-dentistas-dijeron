@@ -235,3 +235,18 @@ a{color:var(--brand-blue)}
 .yomdentalCredits strong{font-size:clamp(13px,1.5vw,16px);color:#8d187e;letter-spacing:.02em}
 .yomdentalCredits span{font-size:clamp(10px,1.15vw,12px);line-height:1.3;color:#55434f}
 @media(max-width:520px){.yomdentalCredits{gap:9px;padding:8px 10px}.yomdentalCredits img{width:52px}.yomdentalCredits span{font-size:10px}}
+
+/* Acción principal para avanzar: botón de siguiente ronda más visible y cómodo al tacto */
+#careoNextNow{
+  display:block;
+  width:min(100%,560px);
+  min-height:clamp(64px,10vh,92px);
+  margin:22px auto 8px;
+  padding:18px 28px!important;
+  border-radius:18px!important;
+  font-size:clamp(22px,3.2vw,34px)!important;
+  font-weight:1000!important;
+  letter-spacing:.025em;
+  box-shadow:0 8px 0 color-mix(in srgb,var(--bird-primary) 62%,#000),0 14px 28px rgba(0,0,0,.18)!important;
+}
+#careoNextNow:active{transform:translateY(3px);box-shadow:0 4px 0 color-mix(in srgb,var(--bird-primary) 62%,#000),0 8px 16px rgba(0,0,0,.16)!important}
