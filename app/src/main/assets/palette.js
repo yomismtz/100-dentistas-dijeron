@@ -1,19 +1,19 @@
-/* 12 paletas de aves: 8 tonos inspirados en su plumaje característico. */
+/* 12 paletas de aves: ocho colores basados en el plumaje característico. */
 (function(){
 'use strict';
 const palettes={
  agaporni:{name:'Agapornis',primary:'#269447',secondary:'#1876B8',accent:'#F2D52E',background:'#FFFDF4',surface:'#FFFFFF',text:'#E98A55',muted:'#35B9B0',border:'#9B78B8'},
  'buho-real':{name:'Búho real',primary:'#765238',secondary:'#B58A5A',accent:'#D9C49B',background:'#F6F0E4',surface:'#FFFFFF',text:'#33271F',muted:'#8B8D88',border:'#4A4037'},
- colibri:{name:'Colibrí',primary:'#087F65',secondary:'#13B8A6',accent:'#1768B0',background:'#F1FCF8',surface:'#FFFFFF',text:'#183E39',muted:'#9BCE4A',border:'#7652A4'},
- cuervo:{name:'Cuervo',primary:'#17191F',secondary:'#343943',accent:'#59616D',background:'#F3F4F5',surface:'#FFFFFF',text:'#252A32',muted:'#777E88',border:'#66527E'},
- faisan:{name:'Faisán',primary:'#A64E25',secondary:'#D18A32',accent:'#285B3E',background:'#F8F0E5',surface:'#FFFFFF',text:'#392A23',muted:'#376C8A',border:'#22272A'},
- gallo:{name:'Gallo',primary:'#C52232',secondary:'#202126',accent:'#F1F0E9',background:'#F7F5F0',surface:'#FFFFFF',text:'#E87532',muted:'#92979B',border:'#6A3438'},
- 'guacamaya-roja':{name:'Guacamaya roja',primary:'#D3262E',secondary:'#F08A24',accent:'#F4D43A',background:'#FFF9EA',surface:'#FFFFFF',text:'#1766A8',muted:'#28764B',border:'#292B31'},
- 'guacamayo-azul':{name:'Guacamayo azul',primary:'#0754A4',secondary:'#168CC2',accent:'#F2D12E',background:'#F3FAFC',surface:'#FFFFFF',text:'#20262D',muted:'#42B7B0',border:'#E7A53A'},
- ninfa:{name:'Ninfa',primary:'#858783',secondary:'#B9B9B2',accent:'#F0D34A',background:'#FAF8F0',surface:'#FFFFFF',text:'#4B4D4C',muted:'#E98A37',border:'#D7D2C8'},
- 'pavo-real':{name:'Pavo real',primary:'#075B83',secondary:'#087F68',accent:'#20AFC0',background:'#F1F8F6',surface:'#FFFFFF',text:'#C7A13A',muted:'#315A87',border:'#263A46'},
- quetzal:{name:'Quetzal',primary:'#08764D',secondary:'#20A88B',accent:'#D52D35',background:'#F0F8F1',surface:'#FFFFFF',text:'#155C78',muted:'#D6C16B',border:'#263A32'},
- tucan:{name:'Tucán',primary:'#17191D',secondary:'#F2D52E',accent:'#F28A24',background:'#FFFDF5',surface:'#FFFFFF',text:'#F4F0E6',muted:'#D94B2B',border:'#343B43'}
+ colibri:{name:'Colibrí',primary:'#168B55',secondary:'#20B9A8',accent:'#1676B8',background:'#E7F5E9',surface:'#FFFFFF',text:'#14543D',muted:'#B6D94A',border:'#7655A8'},
+ cuervo:{name:'Cuervo',primary:'#171717',secondary:'#343434',accent:'#777777',background:'#E8E8E8',surface:'#FFFFFF',text:'#252525',muted:'#A5A5A5',border:'#62566E'},
+ faisan:{name:'Faisán',primary:'#A94F24',secondary:'#D58A25',accent:'#426B38',background:'#F3E6CE',surface:'#FFFFFF',text:'#4B3025',muted:'#315A83',border:'#171717'},
+ gallo:{name:'Gallo',primary:'#C62828',secondary:'#171717',accent:'#FFFFFF',background:'#F5EBDD',surface:'#FFFDF7',text:'#E87524',muted:'#888888',border:'#7D1717'},
+ 'guacamaya-roja':{name:'Guacamaya roja',primary:'#D51F26',secondary:'#F07822',accent:'#F2D32D',background:'#F7EBD7',surface:'#FFFFFF',text:'#1766A5',muted:'#278447',border:'#171717'},
+ 'guacamayo-azul':{name:'Guacamayo azul',primary:'#1476B8',secondary:'#20AFC0',accent:'#F1D02D',background:'#E5F3F7',surface:'#FFFFFF',text:'#171717',muted:'#76D5D0',border:'#D5A52B'},
+ ninfa:{name:'Ninfa',primary:'#888B8D',secondary:'#D5D5D2',accent:'#EBCB42',background:'#F4EBDD',surface:'#FFFFFF',text:'#55585A',muted:'#E77B32',border:'#B7AA91'},
+ 'pavo-real':{name:'Pavo real',primary:'#176A9D',secondary:'#16845D',accent:'#20B8B0',background:'#E5F1EC',surface:'#FFFFFF',text:'#244E86',muted:'#C69A35',border:'#718A9B'},
+ quetzal:{name:'Quetzal',primary:'#087C50',secondary:'#16A99A',accent:'#C92C32',background:'#E5F1E7',surface:'#FFFFFF',text:'#176B91',muted:'#C5A044',border:'#064B37'},
+ tucan:{name:'Tucán',primary:'#171717',secondary:'#F2D12D',accent:'#EF7625',background:'#FFFDF4',surface:'#FFFFFF',text:'#555555',muted:'#D94B2B',border:'#F4E4C8'}
 };
 const keys=['primary','secondary','accent','background','surface','text','muted','border'];
 const audioFiles={agaporni:'agaporni.mp3','buho-real':'buho-real.mp3',colibri:'colibri.mp3',cuervo:'cuervo.mp3',faisan:'faisan.mp3',gallo:'gallo.mp3','guacamaya-roja':'guacamaya-roja.mp3','guacamayo-azul':'guacamayo-azul.mp3',ninfa:'ninfa.mp3','pavo-real':'pavo-real.mp3',quetzal:'quetzal.mp3',tucan:'tucan.mp3'};
