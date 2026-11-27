@@ -1,6 +1,6 @@
 # Así los Dentistas lo Dijeron 🦷🎤
 
-Juego educativo Android de odontología para dos equipos, inspirado en la dinámica de concursos de respuestas populares.
+Juego educativo de odontología para estudiar y repasar contenidos mediante una dinámica de concurso de respuestas populares. Está diseñado para el aprendizaje lúdico, individual o en grupo; no es una plataforma de exámenes, certificación ni evaluación académica formal.
 
 ## Sitio oficial
 
@@ -9,7 +9,7 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 - Seguridad de datos: https://yomismtz.github.io/100-dentistas-dijeron/data-safety.html
 - Términos de uso: https://yomismtz.github.io/100-dentistas-dijeron/terms.html
 
-## Classroom Research v3.0.2
+## Juego y herramientas de aprendizaje — versión 3.0.2
 
 - 476 preguntas cargadas localmente, organizadas por 12 especialidades, dificultad y subtema.
 - 8 rondas: 1–2 ×1, 3–4 ×2 y 5–8 ×3, con muerte súbita en caso de empate.
@@ -18,7 +18,7 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 - Pulsadores de dos celulares y control docente por WebSocket local, con HTTP como respaldo y PIN docente.
 - Autoguardado, recuperación de partidas e historial local; recupera también el estado de pausa y reinicia un careo interrumpido de forma neutral para ambos equipos.
 - Exportación CSV, archivo compatible con Excel y tarjeta PNG del equipo campeón.
-- Modo investigación con código anónimo y registro de versión/configuración.
+- Herramientas opcionales de práctica y seguimiento de actividades de aprendizaje; no constituyen un sistema de evaluación formal ni acreditan competencias.
 - Pretest/postest con reactivos distintos emparejados por subtema y dificultad cuando es posible; cada postest queda enlazado al pretest que utilizó como plantilla.
 - Reportes por grupo, especialidad y subtema; detección automática de reactivos que requieren revisión.
 - Editor local de preguntas, respuestas, puntos, sinónimos, fuente, explicación, revisor, versión y estado editorial.
@@ -31,9 +31,9 @@ Juego educativo Android de odontología para dos equipos, inspirado en la dinám
 - Personajes vectoriales offline y tarjeta final exportable.
 - Intro original completa de 28 segundos, de una sola reproducción, sin bucle.
 
-## Contenido académico
+## Propósito educativo y contenido académico
 
-Los puntos del tablero son ponderaciones lúdicas y no porcentajes obtenidos de una encuesta real de dentistas. El semáforo editorial distingue reactivos revisados de los que requieren revisión, pero el estado “verificado” depende de que el reactivo tenga fuente, fecha, revisor y versión registrados. La validación estructural automática no sustituye una revisión científica individual del contenido.
+El objetivo principal es que estudiantes de odontología estudien, recuperen conocimientos y discutan contenidos mediante el juego. Los puntos del tablero son ponderaciones lúdicas y no porcentajes obtenidos de una encuesta real de dentistas. Las partidas y sus puntuaciones no deben interpretarse como calificaciones, exámenes ni mediciones psicométricas. El semáforo editorial distingue reactivos revisados de los que requieren revisión, pero el estado “verificado” depende de que el reactivo tenga fuente, fecha, revisor y versión registrados. La validación estructural automática no sustituye una revisión científica individual del contenido. Las herramientas de registro o seguimiento son auxiliares para actividades de aprendizaje y no cambian la finalidad lúdica del proyecto.
 
 ## Privacidad
 
