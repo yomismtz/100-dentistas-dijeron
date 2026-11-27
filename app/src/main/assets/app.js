@@ -588,17 +588,76 @@ function showMenu() {
   };
 }
 
+// Convierte los formatos históricos del banco a la estructura que consume el juego.
+// Acepta arrays directos, objetos contenedores y los alias usados en los bancos originales.
+function normalizeQuestionBankPayload(payload, fileName = 'unknown.json') {
+  const CONTAINER_KEYS = ['questions', 'preguntas', 'items', 'data', 'records', 'bank', 'banco'];
+  const inheritedCategory = payload && !Array.isArray(payload) && typeof payload === 'object'
+    ? (payload.category || payload.cat || payload.specialty || payload.especialidad || '')
+    : '';
+
+  function extractRecords(value, depth = 0) {
+    if (depth > 5 || value == null) return [];
+    if (Array.isArray(value)) {
+      if (value.some(item => item && typeof item === 'object' &&
+          ('q' in item || 'question' in item || 'pregunta' in item))) return value;
+      return value.flatMap(item => extractRecords(item, depth + 1));
+    }
+    if (typeof value !== 'object') return [];
+    for (const key of CONTAINER_KEYS) {
+      if (Object.prototype.hasOwnProperty.call(value, key)) {
+        const found = extractRecords(value[key], depth + 1);
+        if (found.length) return found;
+      }
+    }
+    if ('q' in value || 'question' in value || 'pregunta' in value) return [value];
+    return [];
+  }
+
+  function normalizeAnswer(answer) {
+    if (Array.isArray(answer)) {
+      const label = answer[0];
+      const points = answer[1];
+      return [String(label == null ? '' : label).trim(), Number.isFinite(Number(points)) ? Number(points) : 0];
+    }
+    if (answer && typeof answer === 'object') {
+      const label = answer.text ?? answer.answer ?? answer.respuesta ?? answer.label ?? answer.name ?? '';
+      const rawPoints = answer.points ?? answer.score ?? answer.puntos ?? answer.value ?? 0;
+      return [String(label).trim(), Number.isFinite(Number(rawPoints)) ? Number(rawPoints) : 0];
+    }
+    return [String(answer == null ? '' : answer).trim(), 0];
+  }
+
+  return extractRecords(payload).map((record, index) => {
+    if (!record || typeof record !== 'object') return null;
+    const questionText = record.q ?? record.question ?? record.pregunta ?? record.prompt ?? record.text ?? '';
+    const rawAnswers = record.a ?? record.answers ?? record.respuestas ?? record.options ?? record.opciones ?? [];
+    const answers = Array.isArray(rawAnswers) ? rawAnswers.map(normalizeAnswer).filter(item => item[0]) : [];
+    const category = record.cat ?? record.category ?? record.specialty ?? record.especialidad ?? inheritedCategory ?? '';
+    const normalized = {
+      ...record,
+      q: String(questionText).trim(),
+      a: answers,
+      cat: String(category).trim(),
+      source: record.source ?? record.fuente ?? '',
+      _sourceFile: fileName,
+      _sourceId: record.id ?? `${fileName}#${index + 1}`
+    };
+    return normalized.q && normalized.a.length ? normalized : null;
+  }).filter(Boolean);
+}
+
 async function loadQuestionPool() {
   try {
     const banks = await Promise.all(
       BANK_FILES.map(file =>
         fetch(file).then(r => {
           if (!r.ok) throw new Error(file);
-          return r.json();
+          return r.json().then(payload => normalizeQuestionBankPayload(payload, file));
         })
       )
     );
-    questionPool = banks.flat().filter(q => q && q.q && Array.isArray(q.a) && q.a.length);
+    questionPool = banks.flat();
     updateScoreUI();
   } catch (err) {
     openModal(`<h2>Error</h2><p>No se pudo cargar la base completa de preguntas.</p><p>${String(err.message || err)}</p>`);
