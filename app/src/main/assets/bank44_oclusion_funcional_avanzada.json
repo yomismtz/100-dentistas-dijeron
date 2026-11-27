@@ -108,7 +108,7 @@
     "id": "OCL-006",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué componentes deben integrarse en un análisis oclusal clínico",
+    "q": "Menciona tres aspectos de un análisis oclusal clínico, integrando contactos, movimientos mandibulares y síntomas.",
     "a": [
       [
         "Evaluación de contactos en máxima intercuspidación y excursiones",
@@ -129,7 +129,7 @@
     "id": "OCL-007",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué aspectos deben considerarse al utilizar papel articular para analizar contactos oclusales",
+    "q": "Menciona tres aspectos al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -150,7 +150,7 @@
     "id": "OCL-008",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué información puede aportar un sistema digital de análisis oclusal",
+    "q": "Menciona tres aspectos que puede aportar un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -171,7 +171,7 @@
     "id": "OCL-009",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué principios deben respetarse antes de realizar un ajuste oclusal selectivo",
+    "q": "Menciona tres aspectos que deben respetarse antes de realizar un ajuste oclusal selectivo.",
     "a": [
       [
         "Establecer un diagnóstico y una indicación justificada",
@@ -213,7 +213,7 @@
     "id": "OCL-011",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué dimensiones deben valorarse al evaluar la dimensión vertical oclusal",
+    "q": "Menciona tres aspectos para evaluar la dimensión vertical oclusal.",
     "a": [
       [
         "Proporciones y soporte facial",
@@ -234,7 +234,7 @@
     "id": "OCL-012",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué funciones cumple un articulador semiajustable en el análisis protésico",
+    "q": "Menciona tres aspectos de las funciones de un articulador semiajustable en el análisis protésico.",
     "a": [
       [
         "Permitir el montaje de modelos con registros interoclusales",
@@ -255,7 +255,7 @@
     "id": "OCL-013",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué requisitos debe cumplir un registro interoclusal confiable",
+    "q": "Menciona tres aspectos que debe cumplir un registro interoclusal confiable.",
     "a": [
       [
         "Estabilidad del material y ausencia de deformación",
@@ -297,7 +297,7 @@
     "id": "OCL-015",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué objetivos puede cumplir un encerado diagnóstico en rehabilitación oral",
+    "q": "Menciona tres aspectos de un encerado diagnóstico en rehabilitación oral.",
     "a": [
       [
         "Planificar la forma y proporción de las restauraciones",
@@ -318,7 +318,7 @@
     "id": "OCL-016",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué factores deben considerarse al diseñar la oclusión de una prótesis implantosoportada",
+    "q": "Menciona tres aspectos para diseñar la oclusión de una prótesis implantosoportada.",
     "a": [
       [
         "Dirección y distribución de las cargas sobre los implantes",
@@ -381,7 +381,7 @@
     "id": "OCL-019",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué principios deben guiar la evaluación y el manejo de los trastornos temporomandibulares",
+    "q": "Menciona tres aspectos que deben guiar la evaluación y el manejo de los trastornos temporomandibulares.",
     "a": [
       [
         "Evaluación biopsicosocial y diagnóstico específico",
@@ -465,7 +465,7 @@
     "id": "OCL-023",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué etapas deben considerarse en una rehabilitación oral con objetivos funcionales",
+    "q": "Menciona tres aspectos de una rehabilitación oral con objetivos funcionales.",
     "a": [
       [
         "Diagnóstico integral y planificación individualizada",
@@ -507,7 +507,7 @@
     "id": "OCL-025",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos: Qué criterios deben guiar cualquier ajuste oclusal indicado",
+    "q": "Menciona tres aspectos que deben guiar un ajuste oclusal clínicamente indicado.",
     "a": [
       [
         "Diagnóstico preciso y justificación clínica",
@@ -633,7 +633,7 @@
     "id": "OCL-031",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué componentes deben integrarse en un análisis oclusal clínico",
+    "q": "Identifica tres principios de un análisis oclusal clínico, integrando contactos, movimientos mandibulares y síntomas.",
     "a": [
       [
         "Evaluación de contactos en máxima intercuspidación y excursiones",
@@ -654,7 +654,7 @@
     "id": "OCL-032",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué aspectos deben considerarse al utilizar papel articular para analizar contactos oclusales",
+    "q": "Identifica tres principios al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -675,7 +675,7 @@
     "id": "OCL-033",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué información puede aportar un sistema digital de análisis oclusal",
+    "q": "Identifica tres principios que puede aportar un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -696,7 +696,7 @@
     "id": "OCL-034",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué principios deben respetarse antes de realizar un ajuste oclusal selectivo",
+    "q": "Identifica tres principios que deben respetarse antes de realizar un ajuste oclusal selectivo.",
     "a": [
       [
         "Establecer un diagnóstico y una indicación justificada",
@@ -738,7 +738,7 @@
     "id": "OCL-036",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué dimensiones deben valorarse al evaluar la dimensión vertical oclusal",
+    "q": "Identifica tres principios para evaluar la dimensión vertical oclusal.",
     "a": [
       [
         "Proporciones y soporte facial",
@@ -759,7 +759,7 @@
     "id": "OCL-037",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué funciones cumple un articulador semiajustable en el análisis protésico",
+    "q": "Identifica tres principios de las funciones de un articulador semiajustable en el análisis protésico.",
     "a": [
       [
         "Permitir el montaje de modelos con registros interoclusales",
@@ -780,7 +780,7 @@
     "id": "OCL-038",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué requisitos debe cumplir un registro interoclusal confiable",
+    "q": "Identifica tres principios que debe cumplir un registro interoclusal confiable.",
     "a": [
       [
         "Estabilidad del material y ausencia de deformación",
@@ -822,7 +822,7 @@
     "id": "OCL-040",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué objetivos puede cumplir un encerado diagnóstico en rehabilitación oral",
+    "q": "Identifica tres principios de un encerado diagnóstico en rehabilitación oral.",
     "a": [
       [
         "Planificar la forma y proporción de las restauraciones",
@@ -843,7 +843,7 @@
     "id": "OCL-041",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué factores deben considerarse al diseñar la oclusión de una prótesis implantosoportada",
+    "q": "Identifica tres principios para diseñar la oclusión de una prótesis implantosoportada.",
     "a": [
       [
         "Dirección y distribución de las cargas sobre los implantes",
@@ -906,7 +906,7 @@
     "id": "OCL-044",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué principios deben guiar la evaluación y el manejo de los trastornos temporomandibulares",
+    "q": "Identifica tres principios que deben guiar la evaluación y el manejo de los trastornos temporomandibulares.",
     "a": [
       [
         "Evaluación biopsicosocial y diagnóstico específico",
@@ -990,7 +990,7 @@
     "id": "OCL-048",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué etapas deben considerarse en una rehabilitación oral con objetivos funcionales",
+    "q": "Identifica tres principios de una rehabilitación oral con objetivos funcionales.",
     "a": [
       [
         "Diagnóstico integral y planificación individualizada",
@@ -1032,7 +1032,7 @@
     "id": "OCL-050",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios: Qué criterios deben guiar cualquier ajuste oclusal indicado",
+    "q": "Identifica tres principios que deben guiar un ajuste oclusal clínicamente indicado.",
     "a": [
       [
         "Diagnóstico preciso y justificación clínica",
@@ -1158,7 +1158,7 @@
     "id": "OCL-056",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué componentes deben integrarse en un análisis oclusal clínico",
+    "q": "Señala tres aspectos clínicos de un análisis oclusal clínico, integrando contactos, movimientos mandibulares y síntomas.",
     "a": [
       [
         "Evaluación de contactos en máxima intercuspidación y excursiones",
@@ -1179,7 +1179,7 @@
     "id": "OCL-057",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué aspectos deben considerarse al utilizar papel articular para analizar contactos oclusales",
+    "q": "Señala tres aspectos clínicos al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -1200,7 +1200,7 @@
     "id": "OCL-058",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué información puede aportar un sistema digital de análisis oclusal",
+    "q": "Señala tres aspectos clínicos que puede aportar un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -1221,7 +1221,7 @@
     "id": "OCL-059",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué principios deben respetarse antes de realizar un ajuste oclusal selectivo",
+    "q": "Señala tres aspectos clínicos que deben respetarse antes de realizar un ajuste oclusal selectivo.",
     "a": [
       [
         "Establecer un diagnóstico y una indicación justificada",
@@ -1263,7 +1263,7 @@
     "id": "OCL-061",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué dimensiones deben valorarse al evaluar la dimensión vertical oclusal",
+    "q": "Señala tres aspectos clínicos para evaluar la dimensión vertical oclusal.",
     "a": [
       [
         "Proporciones y soporte facial",
@@ -1284,7 +1284,7 @@
     "id": "OCL-062",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué funciones cumple un articulador semiajustable en el análisis protésico",
+    "q": "Señala tres aspectos clínicos de las funciones de un articulador semiajustable en el análisis protésico.",
     "a": [
       [
         "Permitir el montaje de modelos con registros interoclusales",
@@ -1305,7 +1305,7 @@
     "id": "OCL-063",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué requisitos debe cumplir un registro interoclusal confiable",
+    "q": "Señala tres aspectos clínicos que debe cumplir un registro interoclusal confiable.",
     "a": [
       [
         "Estabilidad del material y ausencia de deformación",
@@ -1347,7 +1347,7 @@
     "id": "OCL-065",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué objetivos puede cumplir un encerado diagnóstico en rehabilitación oral",
+    "q": "Señala tres aspectos clínicos de un encerado diagnóstico en rehabilitación oral.",
     "a": [
       [
         "Planificar la forma y proporción de las restauraciones",
@@ -1368,7 +1368,7 @@
     "id": "OCL-066",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué factores deben considerarse al diseñar la oclusión de una prótesis implantosoportada",
+    "q": "Señala tres aspectos clínicos para diseñar la oclusión de una prótesis implantosoportada.",
     "a": [
       [
         "Dirección y distribución de las cargas sobre los implantes",
@@ -1431,7 +1431,7 @@
     "id": "OCL-069",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos: Qué principios deben guiar la evaluación y el manejo de los trastornos temporomandibulares",
+    "q": "Señala tres aspectos clínicos que deben guiar la evaluación y el manejo de los trastornos temporomandibulares.",
     "a": [
       [
         "Evaluación biopsicosocial y diagnóstico específico",
@@ -1515,7 +1515,7 @@
     "id": "OCL-073",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Señala tres aspectos clínicos: Qué etapas deben considerarse en una rehabilitación oral con objetivos funcionales",
+    "q": "Señala tres aspectos clínicos de una rehabilitación oral con objetivos funcionales.",
     "a": [
       [
         "Diagnóstico integral y planificación individualizada",
@@ -1557,7 +1557,7 @@
     "id": "OCL-075",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Señala tres aspectos clínicos: Qué criterios deben guiar cualquier ajuste oclusal indicado",
+    "q": "Señala tres aspectos clínicos que deben guiar un ajuste oclusal clínicamente indicado.",
     "a": [
       [
         "Diagnóstico preciso y justificación clínica",
@@ -1683,7 +1683,7 @@
     "id": "OCL-081",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué componentes deben integrarse en un análisis oclusal clínico",
+    "q": "Enumera tres criterios de un análisis oclusal clínico, integrando contactos, movimientos mandibulares y síntomas.",
     "a": [
       [
         "Evaluación de contactos en máxima intercuspidación y excursiones",
@@ -1704,7 +1704,7 @@
     "id": "OCL-082",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué aspectos deben considerarse al utilizar papel articular para analizar contactos oclusales",
+    "q": "Enumera tres criterios al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -1725,7 +1725,7 @@
     "id": "OCL-083",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué información puede aportar un sistema digital de análisis oclusal",
+    "q": "Enumera tres criterios que puede aportar un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -1746,7 +1746,7 @@
     "id": "OCL-084",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué principios deben respetarse antes de realizar un ajuste oclusal selectivo",
+    "q": "Enumera tres criterios que deben respetarse antes de realizar un ajuste oclusal selectivo.",
     "a": [
       [
         "Establecer un diagnóstico y una indicación justificada",
@@ -1788,7 +1788,7 @@
     "id": "OCL-086",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué dimensiones deben valorarse al evaluar la dimensión vertical oclusal",
+    "q": "Enumera tres criterios para evaluar la dimensión vertical oclusal.",
     "a": [
       [
         "Proporciones y soporte facial",
@@ -1809,7 +1809,7 @@
     "id": "OCL-087",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué funciones cumple un articulador semiajustable en el análisis protésico",
+    "q": "Enumera tres criterios de las funciones de un articulador semiajustable en el análisis protésico.",
     "a": [
       [
         "Permitir el montaje de modelos con registros interoclusales",
@@ -1830,7 +1830,7 @@
     "id": "OCL-088",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué requisitos debe cumplir un registro interoclusal confiable",
+    "q": "Enumera tres criterios que debe cumplir un registro interoclusal confiable.",
     "a": [
       [
         "Estabilidad del material y ausencia de deformación",
@@ -1872,7 +1872,7 @@
     "id": "OCL-090",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué objetivos puede cumplir un encerado diagnóstico en rehabilitación oral",
+    "q": "Enumera tres criterios de un encerado diagnóstico en rehabilitación oral.",
     "a": [
       [
         "Planificar la forma y proporción de las restauraciones",
@@ -1893,7 +1893,7 @@
     "id": "OCL-091",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué factores deben considerarse al diseñar la oclusión de una prótesis implantosoportada",
+    "q": "Enumera tres criterios para diseñar la oclusión de una prótesis implantosoportada.",
     "a": [
       [
         "Dirección y distribución de las cargas sobre los implantes",
@@ -1956,7 +1956,7 @@
     "id": "OCL-094",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué principios deben guiar la evaluación y el manejo de los trastornos temporomandibulares",
+    "q": "Enumera tres criterios que deben guiar la evaluación y el manejo de los trastornos temporomandibulares.",
     "a": [
       [
         "Evaluación biopsicosocial y diagnóstico específico",
@@ -2040,7 +2040,7 @@
     "id": "OCL-098",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué etapas deben considerarse en una rehabilitación oral con objetivos funcionales",
+    "q": "Enumera tres criterios de una rehabilitación oral con objetivos funcionales.",
     "a": [
       [
         "Diagnóstico integral y planificación individualizada",
@@ -2082,7 +2082,7 @@
     "id": "OCL-100",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios: Qué criterios deben guiar cualquier ajuste oclusal indicado",
+    "q": "Enumera tres criterios que deben guiar un ajuste oclusal clínicamente indicado.",
     "a": [
       [
         "Diagnóstico preciso y justificación clínica",
