@@ -281,7 +281,6 @@ function spEnsureCategoryDefs(){
 function spTagsForQuestion(q){
   spEnsureCategoryDefs();
   const cat=spNorm(q?.cat||'');
-  const classification=spClassificationForQuestion(q);
   const text=spNorm((q?.q||'')+' '+cat);
   const tags=new Set();
   if(q?.specialty && SPECIALTY_DEFS.some(d=>d.id===q.specialty)) tags.add(q.specialty);
@@ -321,7 +320,7 @@ function spTagsForQuestion(q){
 function spPrimaryTag(q){
   const tags=spTagsForQuestion(q);
   const priority=['operatoria','anestesia','ortopedia','ortho_preventiva','ortho_interceptiva','ortho_correctiva','odontopediatria','cirugia','periodoncia','protesis','endodoncia','anatomia'];
-  return priority.find(x=>tags.includes(x)) || 'general';
+  return priority.find(x=>tags.includes(x)) || spClassificationForQuestion(q).primaryArea;
 }
 
 function spBank(id){
