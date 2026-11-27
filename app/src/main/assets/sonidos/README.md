@@ -24,20 +24,34 @@ No son archivos faltantes; `tvshow.js` los sintetiza mediante Web Audio API:
 - Puntuación y cierre: `bank`, `review`, `applause`, `bigApplause`, `drumroll`, `fanfare`.
 - Controles: `nav`, `undo`, `reset`, `startGame`, `muteOff`, `click`, `select`, `listen`.
 
+## Efectos CC0 integrados mediante URL
+
+Se añadieron cinco recursos CC0 de SFXMint. Se reproducen en línea; si falla la descarga o no hay conexión, el juego conserva el efecto sintetizado original como respaldo. **No están empaquetados localmente en el APK**, por lo que esta integración no equivale a una descarga offline.
+
+| Evento | Archivo / recurso | Fuente |
+|---|---|---|
+| Respuesta correcta y respuesta popular | `game-show-win-02.mp3` | https://sfxmint.com/sounds/game-show-win-02 |
+| Respuesta incorrecta / strike | `feedback-buzzer-13.mp3` | https://sfxmint.com/sounds/feedback-buzzer-13 |
+| Redoble / desempate / anuncio | `drum-roll-09.mp3` | https://sfxmint.com/sounds/drum-roll-09 |
+| Inicio y fanfarria | `trumpet-fanfare-07.mp3` | https://sfxmint.com/sounds/trumpet-fanfare-07 |
+| Aplausos y victoria | `crowd-applause-01.mp3` | https://sfxmint.com/sounds/crowd-applause-01 |
+
+Las páginas de origen declaran licencia **CC0 1.0**, uso comercial permitido y sin atribución obligatoria. Se conserva esta tabla como registro de procedencia.
+
 ## Lista de sonidos opcionales para buscar
 
 Estos recursos pueden sustituir o enriquecer los efectos sintetizados. Mantenerlos libres de derechos o con licencia compatible con el proyecto.
 
-- [ ] Aplausos reales de público (cortos y largos).
-- [ ] Redoble de tambores.
-- [ ] Fanfarrias de victoria e inicio de ronda.
-- [ ] Sonido de buzzer de concurso.
-- [ ] Campanilla de respuesta correcta.
-- [ ] Sonido breve de respuesta incorrecta.
+- [ ] Música instrumental de fondo en bucle, con licencia CC0 y sin voces.
+- [x] Redoble de tambores (integrado en línea; falta empaquetarlo localmente para uso sin conexión).
+- [x] Fanfarrias de victoria e inicio de ronda (integradas en línea; falta empaquetarlas localmente).
+- [x] Sonido de buzzer de concurso (integrado en línea; falta empaquetarlo localmente).
+- [x] Campanilla de respuesta correcta (integrada en línea; falta empaquetarla localmente).
+- [x] Sonido breve de respuesta incorrecta (integrado en línea; falta empaquetarlo localmente).
 - [ ] Transición musical para ronda doble y triple.
 - [ ] Efecto de oportunidad de robo.
 - [ ] Sonido de puntuación / banco.
-- [ ] Cuenta regresiva de los últimos cinco segundos.
+- [ ] Cuenta regresiva de los últimos cinco segundos (actualmente sintetizada por el juego).
 
 ## Convención de nombres sugerida
 
