@@ -125,7 +125,7 @@ for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate
       const re=new RegExp("(?<![\\p{L}\\p{N}])"+esc(k)+"(?![\\p{L}\\p{N}])","giu");
       x=x.replace(re,M[k]);
     }
-    return x.replace(/\\babout the teeth\\b/gi,"on the teeth").replace(/\\s+/g," ").trim();
+    return x.replace(/\babout the teeth\b/gi,"on the teeth").replace(/\s+/g," ").trim();
   }
   const old=window.DentistasEnglishAutoTranslate;
   if(old&&typeof old.translate==="function"){
