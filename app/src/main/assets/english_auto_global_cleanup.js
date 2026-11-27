@@ -114,7 +114,7 @@ for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate
     "apropiada":"appropriate","lesión":"lesion","tejidos blandos":"soft tissues","persiste":"persists","identificar":"identify",
     "eliminar":"eliminate","factores traumáticos":"traumatic factors","reevaluar":"reassess","plazo clínico apropiado":"appropriate clinical interval",
     "documentar":"document","evolución":"progression","estudio adicional":"additional evaluation","no cicatriza":"does not heal",
-    "signos de alarma":"warning signs","or":"or","u":"or","ni":"or","sin":"without","durante":"during","entre":"between",
+    "signos de alarma":"warning signs","traumáticos":"traumatic","posibles":"possible","eliminater":"eliminate","or":"or","u":"or","ni":"or","sin":"without","durante":"during","entre":"between",
     "sobre":"on","ante":"in the presence of","al":"when","del":"of the","de":"of","la":"the","el":"the","las":"the","los":"the",
     "una":"a","un":"a","y":"and","en":"in","para":"for","con":"with","que":"that","qué":"what"
   };
