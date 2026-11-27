@@ -247,35 +247,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-010",
-      "category": "Microbiologia oral",
-      "difficulty": "facil",
-      "question": "¿Qué 5 aspectos fundamentales deben considerarse en la película adquirida?",
-      "answers": [
-        {
-          "text": "proteinas salivales",
-          "points": 30
-        },
-        {
-          "text": "glucoproteinas",
-          "points": 25
-        },
-        {
-          "text": "superficie dental",
-          "points": 20
-        },
-        {
-          "text": "adhesion",
-          "points": 15
-        },
-        {
-          "text": "colonizacion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-011",
       "category": "Microbiologia oral",
       "difficulty": "facil",
@@ -326,64 +297,6 @@
       "category": "Microbiologia oral",
       "difficulty": "facil",
       "question": "¿Cuáles son 5 elementos que caracterizan los colonizadores tempranos?",
-      "answers": [
-        {
-          "text": "estreptococos",
-          "points": 30
-        },
-        {
-          "text": "Actinomyces",
-          "points": 25
-        },
-        {
-          "text": "adhesion",
-          "points": 20
-        },
-        {
-          "text": "coagregacion",
-          "points": 15
-        },
-        {
-          "text": "sucesion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-014",
-      "category": "Microbiologia oral",
-      "difficulty": "facil",
-      "question": "¿Qué 5 aspectos fundamentales deben considerarse en los colonizadores tempranos?",
-      "answers": [
-        {
-          "text": "estreptococos",
-          "points": 30
-        },
-        {
-          "text": "Actinomyces",
-          "points": 25
-        },
-        {
-          "text": "adhesion",
-          "points": 20
-        },
-        {
-          "text": "coagregacion",
-          "points": 15
-        },
-        {
-          "text": "sucesion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-015",
-      "category": "Microbiologia oral",
-      "difficulty": "facil",
-      "question": "En la evaluación clínica de los colonizadores tempranos, ¿cuáles son 5 aspectos relevantes?",
       "answers": [
         {
           "text": "estreptococos",
@@ -629,35 +542,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-024",
-      "category": "Microbiologia oral",
-      "difficulty": "facil",
-      "question": "¿Qué conjunto de 5 elementos corresponde a los estreptococos comensales?",
-      "answers": [
-        {
-          "text": "S. sanguinis",
-          "points": 30
-        },
-        {
-          "text": "S. gordonii",
-          "points": 25
-        },
-        {
-          "text": "S. mitis",
-          "points": 20
-        },
-        {
-          "text": "competencia",
-          "points": 15
-        },
-        {
-          "text": "colonizacion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-025",
       "category": "Microbiologia oral",
       "difficulty": "facil",
@@ -733,68 +617,10 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-028",
-      "category": "Microbiologia oral",
-      "difficulty": "facil",
-      "question": "¿Qué conjunto de 5 elementos corresponde a Lactobacillus?",
-      "answers": [
-        {
-          "text": "acidogenicidad",
-          "points": 30
-        },
-        {
-          "text": "aciduricidad",
-          "points": 25
-        },
-        {
-          "text": "progresion",
-          "points": 20
-        },
-        {
-          "text": "ambiente acido",
-          "points": 15
-        },
-        {
-          "text": "carbohidratos",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-029",
       "category": "Microbiologia oral",
       "difficulty": "facil",
       "question": "¿Cuáles son 5 elementos que caracterizan Veillonella?",
-      "answers": [
-        {
-          "text": "gramnegativas",
-          "points": 30
-        },
-        {
-          "text": "anaerobias",
-          "points": 25
-        },
-        {
-          "text": "uso de lactato",
-          "points": 20
-        },
-        {
-          "text": "interacciones",
-          "points": 15
-        },
-        {
-          "text": "biofilm",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-030",
-      "category": "Microbiologia oral",
-      "difficulty": "facil",
-      "question": "¿Qué 5 aspectos fundamentales deben considerarse en Veillonella?",
       "answers": [
         {
           "text": "gramnegativas",
@@ -870,56 +696,6 @@
       "category": "Microbiologia oral",
       "difficulty": "medio",
       "question": "¿Cuáles son 4 elementos que caracterizan Fusobacterium nucleatum?",
-      "answers": [
-        {
-          "text": "gramnegativo anaerobio",
-          "points": 35
-        },
-        {
-          "text": "coagregacion",
-          "points": 30
-        },
-        {
-          "text": "puente ecologico",
-          "points": 20
-        },
-        {
-          "text": "biofilm",
-          "points": 15
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-034",
-      "category": "Microbiologia oral",
-      "difficulty": "medio",
-      "question": "¿Qué 4 aspectos fundamentales deben considerarse en Fusobacterium nucleatum?",
-      "answers": [
-        {
-          "text": "gramnegativo anaerobio",
-          "points": 35
-        },
-        {
-          "text": "coagregacion",
-          "points": 30
-        },
-        {
-          "text": "puente ecologico",
-          "points": 20
-        },
-        {
-          "text": "biofilm",
-          "points": 15
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-035",
-      "category": "Microbiologia oral",
-      "difficulty": "medio",
-      "question": "En la evaluación clínica de Fusobacterium nucleatum, ¿cuáles son 4 aspectos relevantes?",
       "answers": [
         {
           "text": "gramnegativo anaerobio",
@@ -1049,39 +825,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-040",
-      "category": "Microbiologia oral",
-      "difficulty": "medio",
-      "question": "¿Qué conjunto de 6 elementos corresponde a Porphyromonas gingivalis?",
-      "answers": [
-        {
-          "text": "gramnegativo anaerobio",
-          "points": 25
-        },
-        {
-          "text": "periodontitis",
-          "points": 20
-        },
-        {
-          "text": "virulencia",
-          "points": 18
-        },
-        {
-          "text": "gingipainas",
-          "points": 15
-        },
-        {
-          "text": "disbiosis",
-          "points": 12
-        },
-        {
-          "text": "biofilm",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-041",
       "category": "Microbiologia oral",
       "difficulty": "medio",
@@ -1132,35 +875,6 @@
       "category": "Microbiologia oral",
       "difficulty": "medio",
       "question": "En la evaluación clínica de Tannerella forsythia, ¿cuáles son 5 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "gramnegativa anaerobia",
-          "points": 30
-        },
-        {
-          "text": "periodontitis",
-          "points": 25
-        },
-        {
-          "text": "biofilm",
-          "points": 20
-        },
-        {
-          "text": "disbiosis",
-          "points": 15
-        },
-        {
-          "text": "interacciones",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-044",
-      "category": "Microbiologia oral",
-      "difficulty": "medio",
-      "question": "¿Qué conjunto de 5 elementos corresponde a Tannerella forsythia?",
       "answers": [
         {
           "text": "gramnegativa anaerobia",
@@ -1261,68 +975,10 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-048",
-      "category": "Microbiologia oral",
-      "difficulty": "medio",
-      "question": "¿Qué conjunto de 5 elementos corresponde a Treponema denticola?",
-      "answers": [
-        {
-          "text": "espiroqueta",
-          "points": 30
-        },
-        {
-          "text": "anaerobio",
-          "points": 25
-        },
-        {
-          "text": "periodontitis",
-          "points": 20
-        },
-        {
-          "text": "motilidad",
-          "points": 15
-        },
-        {
-          "text": "proteasas",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-049",
       "category": "Microbiologia oral",
       "difficulty": "medio",
       "question": "¿Cuáles son 5 elementos que caracterizan Aggregatibacter actinomycetemcomitans?",
-      "answers": [
-        {
-          "text": "cocobacilo gramnegativo",
-          "points": 30
-        },
-        {
-          "text": "periodontitis",
-          "points": 25
-        },
-        {
-          "text": "virulencia",
-          "points": 20
-        },
-        {
-          "text": "leucotoxina",
-          "points": 15
-        },
-        {
-          "text": "biofilm",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-050",
-      "category": "Microbiologia oral",
-      "difficulty": "medio",
-      "question": "¿Qué 5 aspectos fundamentales deben considerarse en Aggregatibacter actinomycetemcomitans?",
       "answers": [
         {
           "text": "cocobacilo gramnegativo",
@@ -1456,39 +1112,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-055",
-      "category": "Microbiologia oral",
-      "difficulty": "dificil",
-      "question": "En la evaluación clínica de Candida albicans, ¿cuáles son 6 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "hongo",
-          "points": 25
-        },
-        {
-          "text": "comensalidad",
-          "points": 20
-        },
-        {
-          "text": "candidiasis",
-          "points": 18
-        },
-        {
-          "text": "hifas",
-          "points": 15
-        },
-        {
-          "text": "biofilm",
-          "points": 12
-        },
-        {
-          "text": "oportunismo",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-056",
       "category": "Microbiologia oral",
       "difficulty": "dificil",
@@ -1539,64 +1162,6 @@
       "category": "Microbiologia oral",
       "difficulty": "dificil",
       "question": "¿Qué 5 aspectos fundamentales deben considerarse en la interacción Candida-Streptococcus?",
-      "answers": [
-        {
-          "text": "coagregacion",
-          "points": 30
-        },
-        {
-          "text": "glucanos",
-          "points": 25
-        },
-        {
-          "text": "biofilm mixto",
-          "points": 20
-        },
-        {
-          "text": "azucares",
-          "points": 15
-        },
-        {
-          "text": "interaccion interespecifica",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-059",
-      "category": "Microbiologia oral",
-      "difficulty": "dificil",
-      "question": "En la evaluación clínica de la interacción Candida-Streptococcus, ¿cuáles son 5 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "coagregacion",
-          "points": 30
-        },
-        {
-          "text": "glucanos",
-          "points": 25
-        },
-        {
-          "text": "biofilm mixto",
-          "points": 20
-        },
-        {
-          "text": "azucares",
-          "points": 15
-        },
-        {
-          "text": "interaccion interespecifica",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-060",
-      "category": "Microbiologia oral",
-      "difficulty": "dificil",
-      "question": "¿Qué conjunto de 5 elementos corresponde a la interacción Candida-Streptococcus?",
       "answers": [
         {
           "text": "coagregacion",
@@ -1871,39 +1436,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-070",
-      "category": "Microbiologia oral",
-      "difficulty": "dificil",
-      "question": "¿Qué 6 aspectos fundamentales deben considerarse en los carbohidratos y el biofilm?",
-      "answers": [
-        {
-          "text": "sacarosa",
-          "points": 25
-        },
-        {
-          "text": "glucosa",
-          "points": 20
-        },
-        {
-          "text": "fructosa",
-          "points": 18
-        },
-        {
-          "text": "acidos",
-          "points": 15
-        },
-        {
-          "text": "polisacaridos",
-          "points": 12
-        },
-        {
-          "text": "adhesion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-071",
       "category": "Microbiologia oral",
       "difficulty": "extremo",
@@ -2012,39 +1544,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-075",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "En la evaluación clínica de la matriz extracelular, ¿cuáles son 6 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "polisacaridos",
-          "points": 25
-        },
-        {
-          "text": "proteinas",
-          "points": 20
-        },
-        {
-          "text": "ADN extracelular",
-          "points": 18
-        },
-        {
-          "text": "adhesion",
-          "points": 15
-        },
-        {
-          "text": "proteccion",
-          "points": 12
-        },
-        {
-          "text": "difusion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-076",
       "category": "Microbiologia oral",
       "difficulty": "extremo",
@@ -2095,64 +1594,6 @@
       "category": "Microbiologia oral",
       "difficulty": "extremo",
       "question": "¿Qué 5 aspectos fundamentales deben considerarse en el quorum sensing?",
-      "answers": [
-        {
-          "text": "comunicacion",
-          "points": 30
-        },
-        {
-          "text": "senales quimicas",
-          "points": 25
-        },
-        {
-          "text": "regulacion genica",
-          "points": 20
-        },
-        {
-          "text": "biofilm",
-          "points": 15
-        },
-        {
-          "text": "coordinacion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-079",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "En la evaluación clínica de el quorum sensing, ¿cuáles son 5 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "comunicacion",
-          "points": 30
-        },
-        {
-          "text": "senales quimicas",
-          "points": 25
-        },
-        {
-          "text": "regulacion genica",
-          "points": 20
-        },
-        {
-          "text": "biofilm",
-          "points": 15
-        },
-        {
-          "text": "coordinacion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-080",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "¿Qué conjunto de 5 elementos corresponde a el quorum sensing?",
       "answers": [
         {
           "text": "comunicacion",
@@ -2253,35 +1694,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-084",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "¿Qué conjunto de 5 elementos corresponde a la resistencia antimicrobiana oral?",
-      "answers": [
-        {
-          "text": "presion selectiva",
-          "points": 30
-        },
-        {
-          "text": "biofilm",
-          "points": 25
-        },
-        {
-          "text": "transferencia genetica",
-          "points": 20
-        },
-        {
-          "text": "uso prudente",
-          "points": 15
-        },
-        {
-          "text": "resistencia",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-085",
       "category": "Microbiologia oral",
       "difficulty": "extremo",
@@ -2357,72 +1769,10 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-088",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "¿Qué conjunto de 5 elementos corresponde a el microbioma periodontal?",
-      "answers": [
-        {
-          "text": "comunidad subgingival",
-          "points": 30
-        },
-        {
-          "text": "disbiosis",
-          "points": 25
-        },
-        {
-          "text": "inflamacion",
-          "points": 20
-        },
-        {
-          "text": "interacciones",
-          "points": 15
-        },
-        {
-          "text": "huesped",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-089",
       "category": "Microbiologia oral",
       "difficulty": "extremo",
       "question": "¿Cuáles son 6 elementos que caracterizan la microbiología de la caries?",
-      "answers": [
-        {
-          "text": "biofilm cariogenico",
-          "points": 25
-        },
-        {
-          "text": "acidogenicidad",
-          "points": 20
-        },
-        {
-          "text": "aciduricidad",
-          "points": 18
-        },
-        {
-          "text": "azucares",
-          "points": 15
-        },
-        {
-          "text": "pH",
-          "points": 12
-        },
-        {
-          "text": "desmineralizacion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-090",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "¿Qué 6 aspectos fundamentales deben considerarse en la microbiología de la caries?",
       "answers": [
         {
           "text": "biofilm cariogenico",
@@ -2560,39 +1910,6 @@
       "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
     },
     {
-      "id": "ORG36-095",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "En la evaluación clínica de la saliva y la microbiología, ¿cuáles son 6 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "depuracion",
-          "points": 25
-        },
-        {
-          "text": "proteinas",
-          "points": 20
-        },
-        {
-          "text": "inmunoglobulinas",
-          "points": 18
-        },
-        {
-          "text": "lisozima",
-          "points": 15
-        },
-        {
-          "text": "lactoferrina",
-          "points": 12
-        },
-        {
-          "text": "peroxidasas",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
       "id": "ORG36-096",
       "category": "Microbiologia oral",
       "difficulty": "extremo",
@@ -2672,39 +1989,6 @@
       "category": "Microbiologia oral",
       "difficulty": "extremo",
       "question": "En la evaluación clínica de los métodos microbiológicos, ¿cuáles son 6 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "cultivo",
-          "points": 25
-        },
-        {
-          "text": "PCR",
-          "points": 20
-        },
-        {
-          "text": "secuenciacion 16S",
-          "points": 18
-        },
-        {
-          "text": "metagenomica",
-          "points": 15
-        },
-        {
-          "text": "microscopia",
-          "points": 12
-        },
-        {
-          "text": "cuantificacion",
-          "points": 10
-        }
-      ],
-      "source": "Literatura contemporanea de microbiologia oral, biofilms y microbioma oral."
-    },
-    {
-      "id": "ORG36-100",
-      "category": "Microbiologia oral",
-      "difficulty": "extremo",
-      "question": "¿Qué conjunto de 6 elementos corresponde a los métodos microbiológicos?",
       "answers": [
         {
           "text": "cultivo",
