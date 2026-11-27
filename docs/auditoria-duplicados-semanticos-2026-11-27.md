@@ -347,3 +347,35 @@ Esta etapa es una revisión focalizada, no una validación clínica completa de 
 
 La compilación solicitada se ejecuta mediante el flujo GitHub Actions `.github/workflows/build-apk.yml`, que valida los bancos, ejecuta comprobaciones estáticas, compila el APK debug y genera el AAB release. El resultado de esa ejecución se documentará cuando GitHub Actions informe su estado; no se presume éxito por el solo hecho de enviar los cambios.
 
+### Ajustes para recuperar la validación automatizada del conjunto de preguntas
+
+La primera ejecución del flujo de compilación detectó que el conjunto `questions*.json` contenía 474 preguntas frente a las 476 exigidas por el validador; el banco `questions_specialty_anatomia.json` tenía 29/30 (faltaba una básica) y `questions_materiales_implantes.json` tenía 9/10. No se restauró el reactivo redundante retirado en la auditoría.
+
+Para conservar el objetivo de 30 reactivos por especialidad y el tamaño esperado del conjunto, se añadieron dos preguntas nuevas, con contenido distinto y fuentes:
+- Anatomía básica: músculos del grupo suprahioideo; fuente StatPearls/NCBI Bookshelf.
+- Materiales e implantes: propiedades del titanio como biomaterial para implantes dentales; revisión de 2025, DOI 10.1016/j.bonr.2025.101846.
+
+Después del ajuste, el validador confirmó 476 preguntas totales y 30 preguntas de anatomía distribuidas en 10 básicas, 10 intermedias y 10 avanzadas. Los demás bancos de especialidad cumplieron el esquema 10/10/10. Todas las preguntas verificadas cumplieron el formato de 3–5 respuestas y 100 puntos.
+
+### Resultado de compilación Android
+
+La ejecución de GitHub Actions asociada al commit `9baeaed9088127154afb27fd47c2cd00bca13d52` terminó con **éxito**:
+- Validación de preguntas: correcta.
+- Generación y validación de duración de la intro: correcta.
+- Sintaxis JavaScript: correcta.
+- Smoke tests estáticos de aula local: correctos.
+- `assembleDebug`: correcto.
+- `bundleRelease`: correcto.
+- Verificación de APK y SHA-256: correcta.
+- Carga de artefactos: correcta.
+
+Ejecución: https://github.com/yomismtz/asi-los-dentistas-lo-dijeron/actions/runs/46031111148
+
+Artefactos publicados por esa ejecución (retención hasta el 25 de febrero de 2027):
+- `100-dentistas-dijeron-debug-apk`
+- `100-dentistas-dijeron-release-aab`
+- `100-dentistas-dijeron-retrace-mapping`
+- `100-dentistas-dijeron-native-symbols-status`
+
+La compilación se ejecutó en GitHub Actions; no se ejecutó en un equipo Android físico ni se realizó una prueba funcional manual de la aplicación. El APK generado es de depuración. El AAB de release se generó correctamente, pero este resultado no equivale a una publicación en Google Play.
+
