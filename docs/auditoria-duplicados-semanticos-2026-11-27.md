@@ -18,6 +18,8 @@ Después de esta etapa se retiraron **1,789 registros redundantes**. El conteo a
 
 Este total es un conteo de registros presentes, no una declaración de validación clínica. La unicidad semántica global todavía requiere resolver los candidatos pendientes descritos abajo.
 
+Se verificó la unicidad textual exacta dentro de cada uno de los 90 archivos activos: **5,382 enunciados únicos dentro de sus respectivos bancos y cero grupos de enunciados exactamente repetidos dentro de un mismo archivo**. Esta cifra no debe interpretarse como unicidad semántica global entre todos los bancos: las comparaciones cruzadas se realizaron entre bancos relacionados por especialidad o contenido, y los candidatos restantes siguen pendientes de revisión.
+
 ## Método de detección
 
 Se compararon los enunciados y las respuestas, no solo palabras compartidas. Se usaron como señales:
