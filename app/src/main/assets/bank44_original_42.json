@@ -1517,15 +1517,11 @@
       "id": "ORG42-057",
       "category": "Odontología forense",
       "difficulty": "dificil",
-      "question": "¿Cuáles son tres elementos relevantes en Método de Cameriere?",
+      "question": "¿Cuáles son dos elementos relevantes en el método de Cameriere?",
       "answers": [
         {
           "text": "anchura de los ápices abiertos",
-          "points": 45
-        },
-        {
-          "text": "anchura de ápices abiertos",
-          "points": 30
+          "points": 75
         },
         {
           "text": "longitud dental",
