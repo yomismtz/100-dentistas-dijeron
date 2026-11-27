@@ -148,27 +148,6 @@
   {
     "specialty": "anatomia",
     "difficulty": "basic",
-    "subtopic": "saliva",
-    "q": "¿Cuáles son las glándulas salivales mayores?",
-    "a": [
-      [
-        "Parótida",
-        45
-      ],
-      [
-        "Submandibular",
-        35
-      ],
-      [
-        "Sublingual",
-        20
-      ]
-    ],
-    "source": "https://www.ncbi.nlm.nih.gov/books/NBK557543/"
-  },
-  {
-    "specialty": "anatomia",
-    "difficulty": "basic",
     "subtopic": "dientes temporales",
     "q": "¿Qué rasgos anatómicos generales caracterizan a la dentición temporal?",
     "a": [
