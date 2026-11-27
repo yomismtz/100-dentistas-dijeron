@@ -284,7 +284,7 @@ function spApplyClassification(q){
 }
 
 function spQuestionKey(value){
-  return spNorm(value).replace(/[^a-z0-9]+/g,' ').trim().replace(/\\s+/g,' ');
+  return spNorm(value).replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
 }
 
 function spAuditBank(){
