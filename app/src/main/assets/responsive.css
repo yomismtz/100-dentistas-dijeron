@@ -133,3 +133,127 @@ img,video,canvas,svg{max-width:100%}
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 :focus-visible{outline:3px solid #19B7C6;outline-offset:2px}
+
+
+/* LANDSCAPE FIRST: composición fluida para móvil, tablet, portátil y proyector.
+   Se evita depender de una resolución concreta; el tablero ocupa el espacio disponible. */
+@media (orientation:landscape){
+  html,body{width:100%;height:100%;height:100dvh;min-width:0;min-height:0;overflow:hidden}
+  #game.screen:not(.hidden){
+    width:100%;height:100%;height:100dvh;min-height:0;
+    display:grid;grid-template-rows:minmax(42px,9dvh) minmax(0,1fr) minmax(68px,21dvh);
+    overflow:hidden;
+  }
+  #game .topbar{
+    height:auto;min-height:0;min-width:0;
+    padding: max(3px,var(--ui-safe-top)) max(8px,var(--ui-safe-right)) 3px max(8px,var(--ui-safe-left));
+    gap:clamp(4px,1vw,12px);
+  }
+  #game .iconBtn{height:auto;min-width:clamp(34px,5.5vw,64px);min-height:36px;padding:4px 8px;font-size:clamp(15px,2.4vw,28px)}
+  #game .roundInfo{min-width:0;gap:clamp(4px,1vw,14px);flex-wrap:nowrap}
+  #game .roundInfo #round{font-size:clamp(13px,2.2vw,30px);white-space:nowrap}
+  #game .roundInfo #progress{font-size:clamp(10px,1.35vw,18px);white-space:nowrap}
+  #game .roundInfo #turn{font-size:clamp(9px,1.25vw,17px);white-space:nowrap;padding:.2em .55em}
+  #game .board{
+    width:auto;height:auto;min-width:0;min-height:0;
+    margin:clamp(3px,.7vh,9px) max(7px,var(--ui-safe-right)) clamp(3px,.7vh,9px) max(7px,var(--ui-safe-left));
+    padding:clamp(6px,1.25vh,16px) clamp(10px,2.5vw,42px);
+    border-width:clamp(1px,.25vw,3px);border-radius:clamp(10px,1.8vw,22px);
+    overflow:hidden;
+  }
+  #game .questionRow{min-width:0;align-items:center;gap:clamp(5px,1vw,14px);margin-bottom:clamp(3px,.6vh,8px)}
+  #game .questionRow h1{
+    min-width:0;font-size:clamp(16px,2.4vw,40px);line-height:1.08;
+    overflow-wrap:anywhere;max-height:2.25em;overflow:auto;
+  }
+  #game .timerBox,#game .bank{min-width:clamp(58px,8vw,120px);padding:clamp(3px,.5vh,7px) clamp(5px,.8vw,12px)}
+  #game .timerBox span,#game .bank span{font-size:clamp(8px,.85vw,13px)}
+  #game .timerBox strong,#game .bank strong{font-size:clamp(19px,3.2vw,42px)}
+  #game .answers{flex:1 1 auto;min-height:0;min-width:0;justify-content:space-evenly;gap:clamp(2px,.45vh,6px);overflow-y:auto;overscroll-behavior:contain;padding:1px 3px}
+  #game .answer{
+    flex:1 0 auto;min-height:clamp(25px,5.2vh,54px);height:auto;min-width:0;
+    gap:clamp(5px,.8vw,12px);padding:clamp(3px,.45vh,7px) clamp(6px,.8vw,12px);
+    font-size:clamp(12px,1.8vw,28px);line-height:1.08;border-width:1px;
+  }
+  #game .answer .num{width:1.65em;height:1.65em;flex:0 0 1.65em}
+  #game .answer .txt{min-width:0;overflow-wrap:anywhere}
+  #game .answer .pts{min-width:2.5ch}
+  #game .strikes{min-height:.85em;padding-top:2px;font-size:clamp(17px,2.6vw,36px);line-height:.9}
+  #game .scorebar{
+    height:auto;min-height:0;min-width:0;
+    padding:3px max(8px,var(--ui-safe-right)) max(3px,var(--ui-safe-bottom)) max(8px,var(--ui-safe-left));
+    display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    gap:clamp(4px,1vw,14px);align-items:center;overflow:hidden;
+  }
+  #game .team{min-width:0;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:clamp(3px,.6vw,9px);padding:clamp(2px,.35vh,5px)}
+  #game .teamName{max-width:100%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:clamp(9px,1.25vw,17px);padding:clamp(4px,.55vh,8px)}
+  #game .team strong{font-size:clamp(22px,3.7vw,52px);white-space:nowrap}
+  #game .award{font-size:clamp(8px,1vw,14px);padding:clamp(4px,.55vh,8px);white-space:nowrap}
+  #game .centerControls{min-width:0;gap:clamp(3px,.5vw,8px);flex-wrap:nowrap}
+  #game .centerControls button{min-height:34px;font-size:clamp(9px,1.05vw,15px);padding:clamp(4px,.55vh,8px) clamp(5px,.7vw,10px);white-space:nowrap}
+  .modal{overflow:auto}
+  .modalCard{width:min(920px,calc(100vw - 24px));max-height:calc(100dvh - 16px);padding:clamp(12px,2vh,24px)}
+  #paletteModal{padding:max(8px,var(--ui-safe-top)) max(8px,var(--ui-safe-right)) max(8px,var(--ui-safe-bottom)) max(8px,var(--ui-safe-left))}
+  #paletteModal .palettePanel{width:min(900px,96vw);max-height:calc(100dvh - 16px);padding:clamp(12px,2vh,20px)}
+}
+
+/* Teléfonos apaisados de poca altura (incluye 16:9 y 20:9). */
+@media (orientation:landscape) and (max-height:440px){
+  #game.screen:not(.hidden){grid-template-rows:minmax(34px,8dvh) minmax(0,1fr) minmax(56px,20dvh)}
+  #game .topbar{gap:3px;padding-top:max(1px,var(--ui-safe-top));padding-bottom:1px}
+  #game .iconBtn{min-width:30px;min-height:30px;padding:2px 5px}
+  #game .roundInfo{gap:3px}
+  #game .roundInfo #round{font-size:clamp(11px,2vw,18px)}
+  #game .roundInfo #progress{font-size:clamp(9px,1.2vw,12px)}
+  #game .roundInfo #turn{font-size:clamp(8px,1.15vw,11px);padding:1px 4px}
+  #game .board{margin-top:2px;margin-bottom:2px;padding:3px 8px}
+  #game .questionRow{margin-bottom:2px}
+  #game .questionRow h1{font-size:clamp(13px,2.5vw,22px);max-height:2.15em}
+  #game .timerBox,#game .bank{min-width:52px;padding:2px 4px}
+  #game .timerBox strong,#game .bank strong{font-size:clamp(16px,3vw,24px)}
+  #game .answers{gap:1px}
+  #game .answer{min-height:22px;padding:1px 5px;font-size:clamp(10px,1.75vw,16px)}
+  #game .answer .num{width:1.45em;height:1.45em}
+  #game .strikes{font-size:clamp(13px,2.3vw,20px)}
+  #game .scorebar{gap:3px;padding-top:2px}
+  #game .team{gap:2px;padding:1px}
+  #game .teamName,#game .award{font-size:clamp(7px,.95vw,10px);padding:2px 3px}
+  #game .team strong{font-size:clamp(17px,3vw,26px)}
+  #game .centerControls{gap:2px}
+  #game .centerControls button{min-height:26px;font-size:clamp(7px,.9vw,10px);padding:2px 4px}
+  .home{padding-top:max(4px,var(--ui-safe-top));padding-bottom:max(4px,var(--ui-safe-bottom))}
+  .homeHero{gap:2px}
+  .homeLogo{width:min(25vw,180px);max-height:34dvh}
+  .homeTitle{font-size:clamp(17px,3.3vw,30px)}
+  .homeSubtitle{font-size:clamp(7px,1vw,10px);letter-spacing:.1em}
+  .homeActions{gap:4px;padding-top:2px}
+  .homeActions button{min-width:0!important;padding:5px 9px!important;font-size:clamp(9px,1.45vw,13px)!important}
+  .yomdentalCredits{gap:5px;margin-top:3px;padding:3px 6px;width:min(95%,520px);font-size:clamp(7px,.85vw,10px)}
+  .yomdentalCredits img{width:clamp(24px,4vw,38px)}
+  .yomdentalCredits span{display:inline;margin-right:5px}
+}
+
+/* Móviles estrechos en horizontal: libera espacio de los equipos sin ocultar acciones. */
+@media (orientation:landscape) and (max-width:700px){
+  #game .topbar{gap:2px}
+  #game .iconBtn{min-width:28px;padding-left:3px;padding-right:3px}
+  #game .roundInfo{gap:2px}
+  #game .roundInfo #turn{max-width:26vw;overflow:hidden;text-overflow:ellipsis}
+  #game .team{grid-template-columns:minmax(0,1fr) auto;gap:2px}
+  #game .teamName{grid-column:1;grid-row:1}
+  #game .team strong{grid-column:2;grid-row:1}
+  #game .team .award{grid-column:1/-1;grid-row:2}
+  #game .centerControls button{font-size:clamp(7px,1.5vw,10px);padding:3px 4px}
+}
+
+/* Evita desbordes de paneles largos en dispositivos con poca altura. */
+@media (orientation:landscape) and (max-height:600px){
+  .specialtyGrid{max-height:42dvh;grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
+  .specialtyCard{min-height:86px;padding:5px}
+  .specialtyBottom{gap:5px;margin-top:5px}
+  .bankProgressList{max-height:40dvh}
+  .careoBuzzer{min-height:clamp(72px,24dvh,125px)}
+  .careoBuzzers{gap:clamp(6px,1vw,14px);margin:.5rem 0}
+  .careoQuestionScreen h2,.careoBuzzScreen h2{font-size:clamp(18px,3.2vw,36px);margin:.25rem auto}
+  .careoAnswerScreen h2{font-size:clamp(20px,3.5vw,40px)}
+}
