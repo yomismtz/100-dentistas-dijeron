@@ -226,3 +226,12 @@ a{color:var(--brand-blue)}
 }
 @keyframes audioBeat{50%{transform:scale(1.6);opacity:.55}}
 .reduceMotion .soundToggle.audioOn:after{animation:none}
+
+
+/* Créditos YomDental */
+.yomdentalCredits{display:flex;align-items:center;justify-content:center;gap:14px;width:min(760px,94%);margin:clamp(12px,2vh,22px) auto 0;padding:10px 14px;border:1px solid rgba(133,35,125,.18);border-radius:16px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(70,20,70,.06);color:#512044;text-align:left}
+.yomdentalCredits img{display:block;width:clamp(54px,8vw,78px);height:auto;flex:0 0 auto}
+.yomdentalCredits div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.yomdentalCredits strong{font-size:clamp(13px,1.5vw,16px);color:#8d187e;letter-spacing:.02em}
+.yomdentalCredits span{font-size:clamp(10px,1.15vw,12px);line-height:1.3;color:#55434f}
+@media(max-width:520px){.yomdentalCredits{gap:9px;padding:8px 10px}.yomdentalCredits img{width:52px}.yomdentalCredits span{font-size:10px}}
