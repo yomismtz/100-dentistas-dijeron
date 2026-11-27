@@ -1085,22 +1085,22 @@
       "id": "ORG43-041",
       "category": "Bioética y legislación odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son tres elementos relevantes en NOM-004?",
+      "question": "¿Qué aspectos regula la NOM-004-SSA3-2012 del expediente clínico?",
       "answers": [
         {
-          "text": "requisitos del expediente clínico",
-          "points": 45
+          "text": "elaboración e integración del expediente clínico",
+          "points": 40
         },
         {
-          "text": "expediente clínico",
-          "points": 30
+          "text": "uso, manejo y archivo",
+          "points": 35
         },
         {
-          "text": "integración",
+          "text": "conservación, propiedad, titularidad y confidencialidad",
           "points": 25
         }
       ],
-      "source": "Marco jurídico mexicano vigente; Ley General de Salud, NOM-004-SSA3-2012 del expediente clínico, NOM-013-SSA2-2015 para la prevención y control de enfermedades bucales, y principios de bioética clínica."
+      "source": "Diario Oficial de la Federación. NOM-004-SSA3-2012, Del expediente clínico (apartado 1); NOM-013-SSA2-2015, Para la prevención y control de enfermedades bucales (apartados 1, 2 y capítulos 6–10)."
     },
     {
       "id": "ORG43-042",
@@ -1210,88 +1210,76 @@
       "id": "ORG43-046",
       "category": "Bioética y legislación odontológica",
       "difficulty": "medio",
-      "question": "¿Cuáles son cuatro aspectos fundamentales de ¿Cuáles son aspectos fundamentales de NOM-013?",
+      "question": "¿Cuál es el objetivo de la NOM-013-SSA2-2015?",
       "answers": [
         {
-          "text": "¿Qué materia aborda la NOM-013-SSA2-2015?",
+          "text": "establecer y uniformar criterios y procedimientos para la atención de enfermedades bucales",
+          "points": 40
+        },
+        {
+          "text": "orientar la prevención, detección, diagnóstico y tratamiento de las enfermedades bucales frecuentes",
           "points": 35
         },
         {
-          "text": "prevención de enfermedades bucales",
-          "points": 30
-        },
-        {
-          "text": "control de enfermedades bucales",
-          "points": 20
-        },
-        {
-          "text": "acciones de salud bucal",
-          "points": 15
+          "text": "establecer estrategias de control y vigilancia epidemiológica en salud pública",
+          "points": 25
         }
       ],
-      "source": "Marco jurídico mexicano vigente; Ley General de Salud, NOM-004-SSA3-2012 del expediente clínico, NOM-013-SSA2-2015 para la prevención y control de enfermedades bucales, y principios de bioética clínica."
+      "source": "Diario Oficial de la Federación. NOM-004-SSA3-2012, Del expediente clínico (apartado 1); NOM-013-SSA2-2015, Para la prevención y control de enfermedades bucales (apartados 1, 2 y capítulos 6–10)."
     },
     {
       "id": "ORG43-047",
       "category": "Bioética y legislación odontológica",
       "difficulty": "medio",
-      "question": "¿Qué cinco factores deben considerarse al evaluar ¿Qué factores deben considerarse al evaluar NOM-013?",
+      "question": "¿A quiénes y en qué ámbitos es obligatoria la NOM-013-SSA2-2015?",
       "answers": [
         {
-          "text": "¿Qué materia aborda la NOM-013-SSA2-2015?",
+          "text": "personal de salud",
           "points": 30
         },
         {
-          "text": "prevención de enfermedades bucales",
+          "text": "establecimientos para la atención médica",
+          "points": 30
+        },
+        {
+          "text": "consultorios de los sectores público, social y privado",
           "points": 25
         },
         {
-          "text": "control de enfermedades bucales",
-          "points": 20
-        },
-        {
-          "text": "acciones de salud bucal",
+          "text": "instituciones formadoras de recursos humanos y gremiales en estomatología",
           "points": 15
-        },
-        {
-          "text": "referencias normativas",
-          "points": 10
         }
       ],
-      "source": "Marco jurídico mexicano vigente; Ley General de Salud, NOM-004-SSA3-2012 del expediente clínico, NOM-013-SSA2-2015 para la prevención y control de enfermedades bucales, y principios de bioética clínica."
+      "source": "Diario Oficial de la Federación. NOM-004-SSA3-2012, Del expediente clínico (apartado 1); NOM-013-SSA2-2015, Para la prevención y control de enfermedades bucales (apartados 1, 2 y capítulos 6–10)."
     },
     {
       "id": "ORG43-048",
       "category": "Bioética y legislación odontológica",
       "difficulty": "medio",
-      "question": "¿Qué seis elementos corresponden a ¿Qué conjunto de elementos corresponde a NOM-013?",
+      "question": "¿Qué áreas de actuación contempla la NOM-013-SSA2-2015?",
       "answers": [
         {
-          "text": "¿Qué materia aborda la NOM-013-SSA2-2015?",
+          "text": "acciones educativo-preventivas dirigidas a la comunidad",
           "points": 25
         },
         {
-          "text": "prevención de enfermedades bucales",
+          "text": "acciones educativo-preventivas dirigidas a la persona",
           "points": 20
         },
         {
-          "text": "control de enfermedades bucales",
-          "points": 18
+          "text": "medidas básicas de prevención de riesgos",
+          "points": 20
         },
         {
-          "text": "acciones de salud bucal",
+          "text": "integración del expediente clínico",
+          "points": 20
+        },
+        {
+          "text": "registro y notificación epidemiológica",
           "points": 15
-        },
-        {
-          "text": "referencias normativas",
-          "points": 12
-        },
-        {
-          "text": "responsabilidades sanitarias",
-          "points": 10
         }
       ],
-      "source": "Marco jurídico mexicano vigente; Ley General de Salud, NOM-004-SSA3-2012 del expediente clínico, NOM-013-SSA2-2015 para la prevención y control de enfermedades bucales, y principios de bioética clínica."
+      "source": "Diario Oficial de la Federación. NOM-004-SSA3-2012, Del expediente clínico (apartado 1); NOM-013-SSA2-2015, Para la prevención y control de enfermedades bucales (apartados 1, 2 y capítulos 6–10)."
     },
     {
       "id": "ORG43-049",
