@@ -48,6 +48,211 @@ const SP_BASE_CATEGORY_NAMES = new Set([
   'endodoncia','anatomia dental','anatomia','anestesia','cirugia',
   'operatoria','protesis','odontologia preventiva'
 ].map(spNorm));
+// Clasificación editorial de categorías de origen. No sustituye la revisión individual del reactivo.
+const SP_CATEGORY_CLASSIFICATION = {
+  "anestesia dental": [
+    "Anestesiología odontológica",
+    "Anestésicos locales, selección y técnicas"
+  ],
+  "anatomía dental": [
+    "Ciencias básicas",
+    "Morfología dentaria y dentición"
+  ],
+  "articulación temporomandibular y trastornos temporomandibulares": [
+    "Oclusión y dolor orofacial",
+    "Anatomía funcional de ATM y TTM"
+  ],
+  "bioética y legislación odontológica": [
+    "Ética y gestión profesional",
+    "Autonomía, consentimiento y legislación"
+  ],
+  "cariología": [
+    "Operatoria y cariología",
+    "Proceso de caries, riesgo y diagnóstico"
+  ],
+  "cirugía bucal": [
+    "Cirugía bucal y maxilofacial",
+    "Valoración y procedimientos quirúrgicos"
+  ],
+  "desarrollo craneofacial": [
+    "Crecimiento y desarrollo craneofacial",
+    "Embriología y crecimiento de los maxilares"
+  ],
+  "desarrollo de la oclusión": [
+    "Odontopediatría y ortodoncia",
+    "Dentición, recambio y oclusión en desarrollo"
+  ],
+  "embriología dental": [
+    "Ciencias básicas",
+    "Origen embrionario de tejidos dentales"
+  ],
+  "endodoncia": [
+    "Endodoncia",
+    "Diagnóstico pulpar y periapical"
+  ],
+  "farmacología odontológica": [
+    "Farmacología",
+    "Prescripción y seguridad farmacológica"
+  ],
+  "fisiología": [
+    "Ciencias básicas",
+    "Fisiología general y oral"
+  ],
+  "fotografía y documentación clínica odontológica": [
+    "Diagnóstico y documentación",
+    "Fotografía y registros clínicos"
+  ],
+  "hábitos y parafunciones": [
+    "Ortodoncia preventiva y terapia miofuncional",
+    "Hábitos y efectos dentofaciales"
+  ],
+  "implantología": [
+    "Implantología oral",
+    "Indicación y planificación implantaria"
+  ],
+  "infecciones odontogénicas": [
+    "Cirugía e infectología odontológica",
+    "Etiología y propagación de infecciones"
+  ],
+  "laboratorio de ortodoncia y ortopedia": [
+    "Ortodoncia y ortopedia maxilar",
+    "Modelos, aparatos y laboratorio"
+  ],
+  "materiales dentales": [
+    "Biomateriales odontológicos",
+    "Propiedades y manipulación"
+  ],
+  "medicina bucal": [
+    "Medicina bucal",
+    "Valoración médica y atención odontológica"
+  ],
+  "microbiología oral": [
+    "Ciencias básicas",
+    "Microbiota y biofilm oral"
+  ],
+  "microbiologia oral": [
+    "Ciencias básicas",
+    "Microbiota y biofilm oral"
+  ],
+  "nomenclatura y etimología médica": [
+    "Ciencias básicas",
+    "Terminología médica"
+  ],
+  "odontología estética": [
+    "Odontología estética",
+    "Análisis facial y sonrisa"
+  ],
+  "odontología forense": [
+    "Odontología forense",
+    "Identificación y procedimientos forenses"
+  ],
+  "odontología geriátrica": [
+    "Odontogeriatría",
+    "Envejecimiento y salud oral"
+  ],
+  "odontologia geriatrica": [
+    "Odontogeriatría",
+    "Envejecimiento y salud oral"
+  ],
+  "odontología para pacientes con necesidades especiales": [
+    "Atención a pacientes con necesidades especiales",
+    "Valoración y adaptación de atención"
+  ],
+  "odontología preventiva": [
+    "Prevención y salud pública bucal",
+    "Prevención individual y control de caries"
+  ],
+  "odontopediatría": [
+    "Odontopediatría",
+    "Atención integral infantil"
+  ],
+  "oclusión": [
+    "Oclusión y rehabilitación oral",
+    "Relaciones oclusales y movimientos mandibulares"
+  ],
+  "oclusión funcional y ajuste oclusal avanzado": [
+    "Oclusión y rehabilitación oral",
+    "Oclusión funcional y ajuste"
+  ],
+  "operatoria dental": [
+    "Operatoria y cariología",
+    "Diagnóstico y restauración"
+  ],
+  "ortodoncia": [
+    "Ortodoncia",
+    "Diagnóstico de maloclusiones y tratamiento"
+  ],
+  "ortopedia maxilar": [
+    "Ortopedia dentofacial",
+    "Crecimiento y terapéutica ortopédica"
+  ],
+  "ortopedia dental": [
+    "Ortopedia dentofacial",
+    "Denominación por confirmar"
+  ],
+  "patología bucal": [
+    "Patología y medicina bucal",
+    "Lesiones y diagnóstico oral"
+  ],
+  "periodoncia": [
+    "Periodoncia",
+    "Salud y enfermedad periodontal"
+  ],
+  "psicología infantil": [
+    "Odontopediatría",
+    "Manejo conductual infantil"
+  ],
+  "prótesis dental": [
+    "Rehabilitación oral y prótesis",
+    "Diagnóstico y planificación protésica"
+  ],
+  "prótesis fija": [
+    "Prótesis bucal",
+    "Coronas, puentes y preparaciones"
+  ],
+  "prótesis removible": [
+    "Prótesis bucal",
+    "Prótesis parcial removible"
+  ],
+  "prótesis total": [
+    "Prótesis bucal",
+    "Paciente edéntulo y prótesis total"
+  ],
+  "prótesis bucal": [
+    "Prótesis bucal",
+    "Prótesis fija, removible y total"
+  ],
+  "radiología oral y maxilofacial": [
+    "Imagenología odontológica",
+    "Selección e interpretación de estudios"
+  ],
+  "realización del expediente clínico": [
+    "Diagnóstico y documentación",
+    "Integración y registro clínico"
+  ],
+  "rehabilitación oral": [
+    "Rehabilitación oral",
+    "Diagnóstico integral y plan de tratamiento"
+  ],
+  "salud pública y odontología comunitaria": [
+    "Salud pública bucal",
+    "Epidemiología y prevención colectiva"
+  ],
+  "traumatología dental": [
+    "Traumatología dentoalveolar",
+    "Evaluación y manejo del trauma"
+  ],
+  "urgencias médicas en odontología": [
+    "Urgencias médicas odontológicas",
+    "Reconocimiento y respuesta inicial"
+  ]
+};
+function spClassificationForQuestion(q){
+  const key=spNorm(q?.cat||'');
+  const entry=SP_CATEGORY_CLASSIFICATION[key];
+  return entry ? {sourceCategory:String(q?.cat||''),primaryArea:entry[0],subarea:entry[1]} : {sourceCategory:String(q?.cat||''),primaryArea:'Pendiente de clasificación',subarea:'Revisión requerida'};
+}
+
 let spExtraCategoriesReady = false;
 function spCategoryId(value){
   return 'cat_' + spNorm(value).replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
@@ -67,7 +272,7 @@ function spEnsureCategoryDefs(){
   counts.forEach(item=>{
     const id=spCategoryId(item.name);
     if(SPECIALTY_DEFS.some(d=>d.id===id)) return;
-    SPECIALTY_DEFS.push({id,name:item.name.toLocaleUpperCase('es-MX'),icon:'📚',desc:'Categoría independiente del banco de preguntas',categoryValue:item.name,categoryExact:true});
+    SPECIALTY_DEFS.push({id,name:item.name.toLocaleUpperCase('es-MX'),icon:'📚',desc:(SP_CATEGORY_CLASSIFICATION[spNorm(item.name)]||['Pendiente de clasificación','Revisión requerida'])[0],categoryValue:item.name,categoryExact:true,primaryArea:(SP_CATEGORY_CLASSIFICATION[spNorm(item.name)]||['Pendiente de clasificación','Revisión requerida'])[0],subarea:(SP_CATEGORY_CLASSIFICATION[spNorm(item.name)]||['Pendiente de clasificación','Revisión requerida'])[1]});
   });
   spExtraCategoriesReady=true;
   specialtyStatsCache=null;
@@ -76,6 +281,7 @@ function spEnsureCategoryDefs(){
 function spTagsForQuestion(q){
   spEnsureCategoryDefs();
   const cat=spNorm(q?.cat||'');
+  const classification=spClassificationForQuestion(q);
   const text=spNorm((q?.q||'')+' '+cat);
   const tags=new Set();
   if(q?.specialty && SPECIALTY_DEFS.some(d=>d.id===q.specialty)) tags.add(q.specialty);
