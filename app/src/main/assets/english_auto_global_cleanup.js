@@ -120,12 +120,11 @@ for(const key of ["DentistasEnglishAutoTranslate","DentistasEnglishAutoTranslate
     "al":"when","del":"of the","de":"of","la":"the","el":"the","las":"the","los":"the","una":"a","un":"a",
     "y":"and","en":"in","para":"for","con":"with","que":"that","qué":"what"
   };
-  const esc=s=>s.replace(/[.*+?^${}()|[\\]\\]/g,"\\$&");
-  const alternatives=Object.keys(M).sort((a,b)=>b.length-a.length).map(esc).join("|");
+  const alternatives=Object.keys(M).sort((a,b)=>b.length-a.length).join("|");
   const tokenPattern=new RegExp("(?<![\\p{L}\\p{N}])(?:"+alternatives+")(?![\\p{L}\\p{N}])","giu");
   function clean(s){
     return String(s||"").replace(tokenPattern,match=>M[match.toLowerCase()]||match)
-      .replace(/\\babout the teeth\\b/gi,"on the teeth").replace(/\\s+/g," ").trim();
+      .replace(/\babout the teeth\b/gi,"on the teeth").replace(/\s+/g," ").trim();
   }
   const old=window.DentistasEnglishAutoTranslate;
   if(old&&typeof old.translate==="function")window.DentistasEnglishAutoTranslate={translate:s=>clean(old.translate(s))};
