@@ -129,7 +129,7 @@
     "id": "OCL-007",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos al utilizar papel articular para analizar contactos oclusales.",
+    "q": "Menciona tres aspectos que deben considerarse al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -150,7 +150,7 @@
     "id": "OCL-008",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "facil",
-    "q": "Menciona tres aspectos que puede aportar un sistema digital de análisis oclusal.",
+    "q": "Menciona tres tipos de información que proporciona un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -654,7 +654,7 @@
     "id": "OCL-032",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios al utilizar papel articular para analizar contactos oclusales.",
+    "q": "Identifica tres principios que deben seguirse al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -675,7 +675,7 @@
     "id": "OCL-033",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "medio",
-    "q": "Identifica tres principios que puede aportar un sistema digital de análisis oclusal.",
+    "q": "Identifica tres tipos de información que proporciona un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -1179,7 +1179,7 @@
     "id": "OCL-057",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos al utilizar papel articular para analizar contactos oclusales.",
+    "q": "Señala tres aspectos clínicos que deben considerarse al utilizar papel articular para analizar contactos oclusales.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -1200,7 +1200,7 @@
     "id": "OCL-058",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "dificil",
-    "q": "Señala tres aspectos clínicos que puede aportar un sistema digital de análisis oclusal.",
+    "q": "Señala tres tipos de información que proporciona un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
@@ -1704,7 +1704,7 @@
     "id": "OCL-082",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios al utilizar papel articular para analizar contactos oclusales.",
+    "q": "Enumera tres criterios para interpretar las marcas del papel articular junto con el examen clínico.",
     "a": [
       [
         "Distribución y localización de las marcas",
@@ -1725,7 +1725,7 @@
     "id": "OCL-083",
     "cat": "Oclusión funcional y ajuste oclusal avanzado",
     "difficulty": "extremo",
-    "q": "Enumera tres criterios que puede aportar un sistema digital de análisis oclusal.",
+    "q": "Enumera tres tipos de información que proporciona un sistema digital de análisis oclusal.",
     "a": [
       [
         "Secuencia temporal de los contactos",
