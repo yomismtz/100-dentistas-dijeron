@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · Bancos por especialidad
-const SPECIALTY_VERSION = '3.0.14-full-bank-random-sampling';
+const SPECIALTY_VERSION = '3.0.15-independent-source-categories';
 const SPECIALTY_TARGET = 100;
 const SPECIALTY_HISTORY_KEY = 'dentistas-specialty-history-v1';
 const SPECIALTY_PREF_KEY = 'dentistas-specialty-preferences-v1';
@@ -39,11 +39,49 @@ function spNorm(s){
 }
 function spHas(text, words){ return words.some(w=>text.includes(w)); }
 
+// Categorías adicionales: se generan desde los nombres reales de categoría del banco.
+// Las especialidades ya representadas conservan su opción original; las demás
+// aparecen como bancos independientes, sin inferir su área por palabras del enunciado.
+const SP_BASE_CATEGORY_NAMES = new Set([
+  'operatoria dental','anestesia dental','ortopedia maxilar','ortodoncia',
+  'odontopediatria','cirugia bucal','periodoncia','protesis dental',
+  'endodoncia','anatomia dental','anatomia','anestesia','cirugia',
+  'operatoria','protesis','odontologia preventiva'
+].map(spNorm));
+let spExtraCategoriesReady = false;
+function spCategoryId(value){
+  return 'cat_' + spNorm(value).replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
+}
+function spEnsureCategoryDefs(){
+  if(spExtraCategoriesReady || !Array.isArray(questionPool)) return;
+  const counts=new Map();
+  questionPool.forEach(q=>{
+    const value=String(q?.cat||'').trim();
+    if(!value) return;
+    const key=spNorm(value);
+    if(!key || SP_BASE_CATEGORY_NAMES.has(key) || SPECIALTY_DEFS.some(d=>spNorm(d.id)===key || spNorm(d.name)===key)) return;
+    const item=counts.get(key)||{name:value,count:0};
+    item.count++;
+    counts.set(key,item);
+  });
+  counts.forEach(item=>{
+    const id=spCategoryId(item.name);
+    if(SPECIALTY_DEFS.some(d=>d.id===id)) return;
+    SPECIALTY_DEFS.push({id,name:item.name.toLocaleUpperCase('es-MX'),icon:'📚',desc:'Categoría independiente del banco de preguntas',categoryValue:item.name,categoryExact:true});
+  });
+  spExtraCategoriesReady=true;
+  specialtyStatsCache=null;
+}
+
 function spTagsForQuestion(q){
+  spEnsureCategoryDefs();
   const cat=spNorm(q?.cat||'');
   const text=spNorm((q?.q||'')+' '+cat);
   const tags=new Set();
   if(q?.specialty && SPECIALTY_DEFS.some(d=>d.id===q.specialty)) tags.add(q.specialty);
+  SPECIALTY_DEFS.forEach(d=>{
+    if(d.categoryExact && spNorm(q?.cat||'')===spNorm(d.categoryValue)) tags.add(d.id);
+  });
 
   if(cat.includes('anatomia y fisiologia') || spHas(text,['tejidos forman un diente','periodonto','glandulas salivales','musculos de la masticacion','nervio trigemino','superficies anatomicas','grupos dentarios','articulacion temporomandibular'])) tags.add('anatomia');
 
@@ -100,6 +138,7 @@ function spFilteredBank(id){
 }
 
 function spStats(){
+  spEnsureCategoryDefs();
   const result={};
   SPECIALTY_DEFS.forEach(d=>{
     const n=spBank(d.id).length;
@@ -270,6 +309,7 @@ function spShowTeamSetup(){
 }
 
 function spShowSpecialties(){
+  spEnsureCategoryDefs();
   const stats=spStats();
   openModal(`
     <h2>2 · ELIGE LA ESPECIALIDAD</h2>
