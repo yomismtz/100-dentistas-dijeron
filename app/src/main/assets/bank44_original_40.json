@@ -2078,27 +2078,6 @@
       "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
     },
     {
-      "id": "ORG40-091",
-      "category": "Odontologia geriatrica",
-      "difficulty": "extremo",
-      "question": "En la evaluación clínica de candidiasis oral, ¿cuáles son 3 aspectos relevantes?",
-      "answers": [
-        {
-          "text": "xerostomia",
-          "points": 45
-        },
-        {
-          "text": "protesis",
-          "points": 30
-        },
-        {
-          "text": "inmunosupresion",
-          "points": 25
-        }
-      ],
-      "source": "Gerodontology and oral health literature; WHO healthy ageing framework; evidence on xerostomia, polypharmacy, frailty and oral care."
-    },
-    {
       "id": "ORG40-092",
       "category": "Odontologia geriatrica",
       "difficulty": "extremo",
