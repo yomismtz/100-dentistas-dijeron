@@ -4104,9 +4104,9 @@
     "accepted_answers": [
       "botón de Nance",
       "arco transpalatino",
-      "banda y asa",
-      "arco lingual",
-      "placa de Hawley modificada"
+      "banda y asa en arcada superior",
+      "corona y asa en arcada superior",
+      "placa removible mantenedora superior"
     ],
     "game_weights": [
       30,
@@ -4116,8 +4116,8 @@
       10
     ],
     "multi_answer": true,
-    "weighting_note": "Las cinco respuestas son aceptables para la consigna abierta. La primera funciona como respuesta principal/más reconocida dentro del diseño del juego; los pesos son lúdicos y no representan resultados de una encuesta real.",
-    "context": "Mantenedores de espacio. Respuestas válidas: botón de Nance, arco transpalatino, banda y asa, arco lingual, placa de Hawley modificada. Respuesta principal del juego: botón de Nance.",
+    "weighting_note": "Las cinco opciones son alternativas superiores posibles según la indicación clínica; los pesos son lúdicos y no representan resultados de una encuesta real.",
+    "context": "Mantenedores de espacio. En la arcada superior pueden considerarse dispositivos como botón de Nance, arco transpalatino, mantenedores de banda y asa o corona y asa, y placas removibles, según el diente perdido y la indicación. El arco lingual es un aparato característico de la arcada inferior y no debe figurar como respuesta para esta consigna. Respuestas válidas: botón de Nance, arco transpalatino, banda y asa en arcada superior, corona y asa en arcada superior, placa removible mantenedora superior. Respuesta principal del juego: botón de Nance.",
     "q_en": "In study mode, which is the primary answer for this prompt: “Name one valid option related to Botón de Nance in orthodontic/orthopedic laboratory work.”?",
     "options_en": [
       "botón de Nance",
@@ -4521,8 +4521,8 @@
     "type": "Laboratorio de ortodoncia y ortopedia",
     "category": "Laboratorio de ortodoncia y ortopedia",
     "subdomain": "Mantenedores de espacio",
-    "open_q": "Menciona un mantenedor de espacio que pueda considerarse ante pérdida prematura antes de la erupción del primer molar permanente.",
-    "q": "En el modo de estudio, ¿cuál es la respuesta principal del juego para esta consigna: “Menciona un mantenedor de espacio que pueda considerarse ante pérdida prematura antes de la erupción del primer molar permanente.”?",
+    "open_q": "¿Qué mantenedor está específicamente indicado cuando se pierde prematuramente el segundo molar temporal antes de la erupción del primer molar permanente?",
+    "q": "En el modo de estudio, ¿cuál es la respuesta principal del juego para esta consigna: “¿Qué mantenedor está específicamente indicado cuando se pierde prematuramente el segundo molar temporal antes de la erupción del primer molar permanente?”?",
     "options": [
       "zapato distal",
       "quad-helix",
@@ -4533,10 +4533,10 @@
     "primary_answer": "zapato distal",
     "accepted_answers": [
       "zapato distal",
-      "banda y asa",
-      "corona y asa",
-      "botón de Nance",
-      "arco lingual"
+      "zapata distal",
+      "mantenedor tipo zapata distal",
+      "distal shoe",
+      "mantenedor distal intraalveolar"
     ],
     "game_weights": [
       30,
@@ -4546,8 +4546,8 @@
       10
     ],
     "multi_answer": true,
-    "weighting_note": "Las cinco respuestas son aceptables para la consigna abierta. La primera funciona como respuesta principal/más reconocida dentro del diseño del juego; los pesos son lúdicos y no representan resultados de una encuesta real.",
-    "context": "Mantenedores de espacio. Respuestas válidas: zapato distal, banda y asa, corona y asa, botón de Nance, arco lingual. Respuesta principal del juego: zapato distal.",
+    "weighting_note": "Las respuestas aceptadas son denominaciones equivalentes del dispositivo indicado, no cinco aparatos diferentes. Los pesos representan equivalencias del juego y no resultados de una encuesta real.",
+    "context": "Mantenedores de espacio. El zapato distal o distal shoe puede indicarse de manera selectiva ante pérdida prematura del segundo molar temporal antes de la erupción del primer molar permanente, con valoración clínica, radiográfica, seguimiento y consideración de contraindicaciones. No debe confundirse con mantenedores convencionales de banda y asa, botón de Nance o arco lingual. Respuestas válidas: zapato distal, zapata distal, mantenedor tipo zapata distal, distal shoe, mantenedor distal intraalveolar. Respuesta principal del juego: zapato distal.",
     "q_en": "In study mode, which is the primary answer for this prompt: “Name one valid option related to Zapato distal in orthodontic/orthopedic laboratory work.”?",
     "options_en": [
       "zapato distal",
