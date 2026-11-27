@@ -1597,27 +1597,6 @@
       "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
     },
     {
-      "id": "ORG38-056",
-      "category": "Urgencias médicas en odontología",
-      "difficulty": "dificil",
-      "question": "¿Qué conjunto de 3 elementos corresponde a el síndrome coronario agudo?",
-      "answers": [
-        {
-          "text": "dolor torácico persistente",
-          "points": 45
-        },
-        {
-          "text": "disnea",
-          "points": 30
-        },
-        {
-          "text": "sudoración",
-          "points": 25
-        }
-      ],
-      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
-    },
-    {
       "id": "ORG38-057",
       "category": "Urgencias médicas en odontología",
       "difficulty": "dificil",
@@ -1737,27 +1716,6 @@
         {
           "text": "reanudar RCP tras descarga cuando corresponda",
           "points": 8
-        }
-      ],
-      "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
-    },
-    {
-      "id": "ORG38-061",
-      "category": "Urgencias médicas en odontología",
-      "difficulty": "dificil",
-      "question": "¿Cuáles son 3 elementos que caracterizan el accidente cerebrovascular?",
-      "answers": [
-        {
-          "text": "debilidad facial",
-          "points": 45
-        },
-        {
-          "text": "debilidad de un brazo",
-          "points": 30
-        },
-        {
-          "text": "alteración del habla",
-          "points": 25
         }
       ],
       "source": "American Dental Association medical emergencies guidance; AHA/Red Cross first aid guidance; contemporary dental emergency reviews (PMIDs 36710159, 39540278, 41640727, 34479666)."
