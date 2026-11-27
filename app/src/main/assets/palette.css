@@ -53,3 +53,14 @@ a{color:var(--bird-primary)!important}
 .paletteChoiceInfo{display:flex;flex-direction:column;gap:5px;min-width:0}
 .paletteChoiceInfo .paletteSwatches{display:grid;grid-template-columns:repeat(4,12px);gap:3px}
 @media(max-width:520px){.paletteBirdIcon{width:48px;height:48px;flex-basis:48px}.paletteChoiceInfo{gap:3px}}
+
+/* Configuración de apariencia: tipografía y escala, persistentes y offline */
+html,body,button,input,select,textarea{font-family:var(--game-font-family,Inter,"Segoe UI",Roboto,Arial,sans-serif)!important}
+html{font-size:calc(16px * var(--game-font-scale,1))}
+.appearanceSettings{margin:16px 0;padding:14px;border:1px solid var(--bird-border);border-radius:14px;background:var(--bird-background)}
+.appearanceSettings h3{margin:0 0 8px;color:var(--bird-primary)}
+.appearanceSettings p{margin:4px 0 10px}
+.appearanceSettings label{display:flex;justify-content:space-between;gap:12px;margin:12px 0 6px;font-weight:700}
+.appearanceSelect{width:100%;min-height:44px;padding:9px 12px;border:1px solid var(--bird-border);border-radius:10px}
+.appearanceSettings input[type=range]{width:100%;accent-color:var(--bird-primary)}
+.fontPreview{margin-top:10px;padding:12px;border-radius:10px;background:var(--bird-surface);border:1px solid var(--bird-border);font-size:1.15rem}
