@@ -46,3 +46,10 @@ a{color:var(--bird-primary)!important}
 #paletteModal .palettePanel h2{margin:0 44px 6px 0;color:var(--bird-primary)}
 #paletteModal .paletteClose{float:right;padding:6px 12px!important}
 @media(max-width:520px){.paletteGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.paletteChoice{padding:7px!important;gap:6px}.paletteSwatches{grid-template-columns:repeat(4,9px)}.paletteSwatches i{width:9px;height:16px}}
+
+/* Iconos de las 12 aves que identifican cada paleta */
+.paletteChoice{min-height:86px}
+.paletteBirdIcon{width:64px;height:64px;flex:0 0 64px;object-fit:contain;border-radius:10px;background:var(--bird-background)}
+.paletteChoiceInfo{display:flex;flex-direction:column;gap:5px;min-width:0}
+.paletteChoiceInfo .paletteSwatches{display:grid;grid-template-columns:repeat(4,12px);gap:3px}
+@media(max-width:520px){.paletteBirdIcon{width:48px;height:48px;flex-basis:48px}.paletteChoiceInfo{gap:3px}}
