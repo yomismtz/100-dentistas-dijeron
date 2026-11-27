@@ -267,7 +267,7 @@ adUpdateButtons();
 // que el control maestro de silencio existente también los silencie.
 const adRemoteSfx = {
   correct: 'https://sfxmint.com/dl/game-show-win-02.mp3',
-  topAnswer: 'https://sfxmint.com/dl/game-show-win-02.mp3',
+  topAnswer: 'https://sfxmint.com/dl/game-show-win-01.mp3',
   buzz: 'https://sfxmint.com/dl/feedback-buzzer-13.mp3',
   drumroll: 'https://sfxmint.com/dl/drum-roll-09.mp3',
   fanfare: 'https://sfxmint.com/dl/trumpet-fanfare-07.mp3',
