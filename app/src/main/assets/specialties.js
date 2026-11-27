@@ -1,7 +1,7 @@
 'use strict';
 
 // 100 Dentistas Dijeron · Bancos por especialidad
-const SPECIALTY_VERSION = '3.0.15-independent-source-categories';
+const SPECIALTY_VERSION = '3.0.16-clinical-classification-audit';
 const SPECIALTY_TARGET = 100;
 const SPECIALTY_HISTORY_KEY = 'dentistas-specialty-history-v1';
 const SPECIALTY_PREF_KEY = 'dentistas-specialty-preferences-v1';
@@ -250,6 +250,63 @@ const SP_CATEGORY_CLASSIFICATION = {
 function spClassificationForQuestion(q){
   const key=spNorm(q?.cat||'');
   const entry=SP_CATEGORY_CLASSIFICATION[key];
+  const specialtyFallback={
+    operatoria:['Operatoria y cariología','Restauración dental'],
+    anestesia:['Anestesiología odontológica','Anestésicos y técnicas'],
+    ortopedia:['Ortopedia dentofacial','Crecimiento y terapéutica'],
+    ortho_preventiva:['Ortodoncia preventiva','Hábitos y prevención'],
+    ortho_interceptiva:['Ortodoncia interceptiva','Tratamiento temprano'],
+    ortho_correctiva:['Ortodoncia','Diagnóstico y tratamiento'],
+    odontopediatria:['Odontopediatría','Atención infantil'],
+    cirugia:['Cirugía bucal y maxilofacial','Procedimientos quirúrgicos'],
+    periodoncia:['Periodoncia','Salud periodontal'],
+    protesis:['Prótesis bucal','Rehabilitación protésica'],
+    endodoncia:['Endodoncia','Diagnóstico y tratamiento pulpar'],
+    anatomia:['Ciencias básicas','Anatomía dental']
+  };
+  const fallback=specialtyFallback[q?.specialty];
+  return {
+    sourceCategory:String(q?.cat||''),
+    primaryArea:entry?.[0]||fallback?.[0]||'Pendiente de clasificación',
+    subarea:entry?.[1]||fallback?.[1]||'Revisión requerida',
+    status:entry||fallback?'classified':'pending'
+  };
+}
+
+function spApplyClassification(q){
+  if(!q || typeof q!=='object') return q;
+  const c=spClassificationForQuestion(q);
+  q.sourceCategory=q.sourceCategory||c.sourceCategory;
+  q.primaryArea=c.primaryArea;
+  q.subarea=c.subarea;
+  q.classificationStatus=c.status;
+  return q;
+}
+
+function spQuestionKey(value){
+  return spNorm(value).replace(/[^a-z0-9]+/g,' ').trim().replace(/\\s+/g,' ');
+}
+
+function spAuditBank(){
+  const exact=new Map();
+  const byArea={};
+  let pending=0, withoutCategory=0, emptyAnswers=0;
+  questionPool.forEach(q=>{
+    spApplyClassification(q);
+    const area=q.primaryArea||'Pendiente de clasificación';
+    byArea[area]=(byArea[area]||0)+1;
+    if(q.classificationStatus!=='classified') pending++;
+    if(!q.cat) withoutCategory++;
+    if(!Array.isArray(q.a)||!q.a.length) emptyAnswers++;
+    const key=spQuestionKey(q.q||'');
+    if(key){if(!exact.has(key))exact.set(key,[]);exact.get(key).push(q);}
+  });
+  const exactGroups=[...exact.values()].filter(group=>group.length>1);
+  const duplicateRecords=exactGroups.reduce((n,g)=>n+g.length-1,0);
+  return {total:questionPool.length,byArea,pending,withoutCategory,emptyAnswers,exactDuplicateGroups:exactGroups.length,exactDuplicateRecords:duplicateRecords};
+}
+  const key=spNorm(q?.cat||'');
+  const entry=SP_CATEGORY_CLASSIFICATION[key];
   return entry ? {sourceCategory:String(q?.cat||''),primaryArea:entry[0],subarea:entry[1]} : {sourceCategory:String(q?.cat||''),primaryArea:'Pendiente de clasificación',subarea:'Revisión requerida'};
 }
 
@@ -258,7 +315,9 @@ function spCategoryId(value){
   return 'cat_' + spNorm(value).replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
 }
 function spEnsureCategoryDefs(){
-  if(spExtraCategoriesReady || !Array.isArray(questionPool)) return;
+  if(!Array.isArray(questionPool)) return;
+  questionPool.forEach(spApplyClassification);
+  if(spExtraCategoriesReady) return;
   const counts=new Map();
   questionPool.forEach(q=>{
     const value=String(q?.cat||'').trim();
@@ -596,11 +655,13 @@ function spResetHistory(id=specialtySelected){
 
 function spBankStatusModal(){
   const stats=spStats();
+  const audit=spAuditBank();
   openModal(`<h2>📚 ESTADO DE LOS BANCOS</h2>
     <div class="bankProgressList">
       ${SPECIALTY_DEFS.map(d=>`<div><span>${d.icon} ${d.name}</span><b>${d.id==='general'?stats[d.id].count:stats[d.id].count+'/100'}</b></div>`).join('')}
     </div>
-    <p>Solo se habilitan especialidades con al menos 8 preguntas verificadas. La meta editorial es 100 por especialidad.</p>
+    <p>Solo se habilitan bancos con al menos 8 registros. Meta editorial: 100 preguntas únicas y revisadas.</p>
+    <p><b>Auditoría del banco:</b> ${audit.total} registros · ${audit.pending} pendientes de clasificación · ${audit.withoutCategory} sin categoría de origen · ${audit.exactDuplicateRecords} posibles duplicados exactos en ${audit.exactDuplicateGroups} grupos · ${audit.emptyAnswers} sin respuestas.</p>
     <button id="spResetCurrent" class="secondaryWide">↻ REINICIAR PREGUNTAS RECIENTES DE ${spSpecialtyName()}</button>`);
   $('#spResetCurrent').onclick=()=>{spResetHistory();alert('Historial de este banco reiniciado.');};
 }
