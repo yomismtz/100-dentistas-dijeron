@@ -256,27 +256,6 @@
       "source": "ADA antibiotic guideline; contemporary systematic reviews and clinical reviews of odontogenic infections (PMIDs 37926767, 39966906, 38968489, 40708609)."
     },
     {
-      "id": "ORG37-016",
-      "category": "Infecciones odontogénicas",
-      "difficulty": "facil",
-      "question": "¿Qué conjunto de 3 elementos corresponde a el absceso odontogénico?",
-      "answers": [
-        {
-          "text": "colección purulenta",
-          "points": 45
-        },
-        {
-          "text": "dolor",
-          "points": 30
-        },
-        {
-          "text": "tumefacción",
-          "points": 25
-        }
-      ],
-      "source": "ADA antibiotic guideline; contemporary systematic reviews and clinical reviews of odontogenic infections (PMIDs 37926767, 39966906, 38968489, 40708609)."
-    },
-    {
       "id": "ORG37-017",
       "category": "Infecciones odontogénicas",
       "difficulty": "facil",
