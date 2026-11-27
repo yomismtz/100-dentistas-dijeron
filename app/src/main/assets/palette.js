@@ -1,50 +1,41 @@
-/* Selector de paletas inspiradas en aves. Cada tema define exactamente 10 colores. */
+/* Paletas cromáticas derivadas de las aves cuyos cantos están incluidos en el proyecto. */
 (function(){
 'use strict';
 const palettes={
- tucan:{name:'Tucán',primary:'#35105E',secondary:'#12AFAE',accent:'#A8E600',background:'#F7F5FB',surface:'#FFFFFF',text:'#26183A',muted:'#756A83',border:'#D8C9E8',success:'#DDF4E9',danger:'#C83D5A'},
- guacamaya:{name:'Guacamaya',primary:'#A51D32',secondary:'#087E8B',accent:'#F4B400',background:'#FFF8F0',surface:'#FFFFFF',text:'#38212A',muted:'#866C70',border:'#F0C8B8',success:'#DDF2E2',danger:'#B42332'},
- colibri:{name:'Colibrí',primary:'#145B75',secondary:'#13A89E',accent:'#B6D936',background:'#F1FAF8',surface:'#FFFFFF',text:'#16343B',muted:'#668087',border:'#BDE5DE',success:'#D9F2E6',danger:'#C34D67'},
- flamingo:{name:'Flamenco',primary:'#9D315F',secondary:'#E887A8',accent:'#F4C95D',background:'#FFF5F8',surface:'#FFFFFF',text:'#48283A',muted:'#8B687A',border:'#F1C7D8',success:'#E1F1E5',danger:'#B92E4C'},
- cardenal:{name:'Cardenal',primary:'#8F1D2C',secondary:'#365C48',accent:'#D6AD58',background:'#FAF7F0',surface:'#FFFFFF',text:'#302A26',muted:'#7B7167',border:'#E5D8C2',success:'#E2F0E4',danger:'#B42332'},
- martin:{name:'Martín pescador',primary:'#075A78',secondary:'#00A6A6',accent:'#F0A83A',background:'#F1F9FC',surface:'#FFFFFF',text:'#183440',muted:'#66808C',border:'#BBDCE7',success:'#DDF2E9',danger:'#C33B50'},
- pavo:{name:'Pavo real',primary:'#173F78',secondary:'#087F82',accent:'#9B6ACB',background:'#F4F6FC',surface:'#FFFFFF',text:'#202C45',muted:'#6D7890',border:'#C9D4EA',success:'#DDF1E8',danger:'#C4475A'},
- canario:{name:'Canario',primary:'#76520A',secondary:'#D9A900',accent:'#4D9B61',background:'#FFFBEB',surface:'#FFFFFF',text:'#3C321A',muted:'#82764F',border:'#E9DCA9',success:'#E4F3D9',danger:'#BD3E42'},
- lechuza:{name:'Lechuza',primary:'#55433A',secondary:'#A58A6A',accent:'#7C9A78',background:'#F8F5F0',surface:'#FFFFFF',text:'#302B27',muted:'#81766C',border:'#DED3C4',success:'#E4F0E2',danger:'#B84A4A'},
- pinguino:{name:'Pingüino',primary:'#243B53',secondary:'#5C9EAD',accent:'#E7B95C',background:'#F2F7FA',surface:'#FFFFFF',text:'#1D2A35',muted:'#697B89',border:'#C9D9E2',success:'#DDEFE7',danger:'#BE4653'}
+ agaporni:{name:'Agapornis',primary:'#287347',secondary:'#8BCB45',accent:'#F08A32',background:'#F4FAEF',surface:'#FFFFFF',text:'#243B2C',muted:'#66806D',border:'#C8E2B5',success:'#DDF1D6',danger:'#C84D4D'},
+ 'buho-real':{name:'Búho real',primary:'#59402C',secondary:'#A77B4D',accent:'#D5B66A',background:'#F8F4EC',surface:'#FFFFFF',text:'#352B22',muted:'#807365',border:'#E1D2B9',success:'#E2EBDD',danger:'#B94B42'},
+ colibri:{name:'Colibrí',primary:'#075C69',secondary:'#18A99B',accent:'#B7D93B',background:'#F0FAF8',surface:'#FFFFFF',text:'#16373A',muted:'#66858A',border:'#B8E2D9',success:'#DDF2E7',danger:'#C44C64'},
+ cuervo:{name:'Cuervo',primary:'#252936',secondary:'#515A6B',accent:'#7664A8',background:'#F2F3F7',surface:'#FFFFFF',text:'#242733',muted:'#737887',border:'#D0D3DD',success:'#DFEDE8',danger:'#B94350'},
+ faisan:{name:'Faisán',primary:'#75412D',secondary:'#35634A',accent:'#C78A35',background:'#FAF4EC',surface:'#FFFFFF',text:'#392B24',muted:'#847064',border:'#E5CDB4',success:'#E2EBDD',danger:'#B9473E'},
+ gallo:{name:'Gallo',primary:'#9E2934',secondary:'#E2A52F',accent:'#273C32',background:'#FFF8ED',surface:'#FFFFFF',text:'#3C2925',muted:'#85706A',border:'#EBD3B5',success:'#E1F0DF',danger:'#B52636'},
+ 'guacamaya-roja':{name:'Guacamaya roja',primary:'#B52832',secondary:'#E97925',accent:'#F3C83F',background:'#FFF6ED',surface:'#FFFFFF',text:'#482B26',muted:'#896E62',border:'#F0C8A7',success:'#E1F0DA',danger:'#A91F35'},
+ 'guacamayo-azul':{name:'Guacamayo azul',primary:'#1556A3',secondary:'#18A6C7',accent:'#F1C43C',background:'#F0F8FC',surface:'#FFFFFF',text:'#1B3045',muted:'#6C8292',border:'#BBD8EA',success:'#DDF1E8',danger:'#C2434B'},
+ ninfa:{name:'Ninfa',primary:'#665F57',secondary:'#A7A49A',accent:'#E99A35',background:'#F7F6F1',surface:'#FFFFFF',text:'#35332F',muted:'#817E75',border:'#DDD9CE',success:'#E3EFE1',danger:'#C44D4B'},
+ 'pavo-real':{name:'Pavo real',primary:'#164C77',secondary:'#078B83',accent:'#C5A34A',background:'#F1F8F8',surface:'#FFFFFF',text:'#203746',muted:'#6D838A',border:'#C0DCD9',success:'#DDF1E8',danger:'#C34B5C'},
+ quetzal:{name:'Quetzal',primary:'#12664F',secondary:'#1C9B83',accent:'#C9A64A',background:'#F0F8F2',surface:'#FFFFFF',text:'#1F3B32',muted:'#6B8378',border:'#BBDCC9',success:'#DDF0E2',danger:'#B94745'},
+ tucan:{name:'Tucán',primary:'#35105E',secondary:'#12AFAE',accent:'#A8E600',background:'#F7F5FB',surface:'#FFFFFF',text:'#26183A',muted:'#756A83',border:'#D8C9E8',success:'#DDF4E9',danger:'#C83D5A'}
 };
 const keys=['primary','secondary','accent','background','surface','text','muted','border','success','danger'];
-const audioBase='bird-sounds/';
-let active='tucan';
+const audioFiles={agaporni:'agaporni.mp3','buho-real':'buho-real.mp3',colibri:'colibri.mp3',cuervo:'cuervo.mp3',faisan:'faisan.mp3',gallo:'gallo.mp3','guacamaya-roja':'guacamaya-roja.mp3','guacamayo-azul':'guacamayo-azul.mp3',ninfa:'ninfa.mp3','pavo-real':'pavo-real.mp3',quetzal:'quetzal.mp3',tucan:'tucan.mp3'};
+const audioBase='bird-sounds/';let active='tucan',currentAudio=null;
 function apply(id,playSound){
  const p=palettes[id]||palettes.tucan;active=id;
- const root=document.documentElement;
- keys.forEach(k=>root.style.setProperty('--bird-'+k,p[k]));
- root.dataset.birdPalette=id;
+ keys.forEach(k=>document.documentElement.style.setProperty('--bird-'+k,p[k]));
+ document.documentElement.dataset.birdPalette=id;
  try{localStorage.setItem('dentistas-bird-palette',id);}catch(_){}
  document.querySelectorAll('[data-bird-palette]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.birdPalette===id)));
- if(playSound){
-   const a=new Audio(audioBase+id+'.mp3');a.preload='auto';
-   a.play().catch(()=>{});
- }
+ if(playSound&&audioFiles[id])try{if(currentAudio){currentAudio.pause();currentAudio.currentTime=0;}currentAudio=new Audio(audioBase+audioFiles[id]);currentAudio.preload='auto';const p=currentAudio.play();if(p&&p.catch)p.catch(()=>{});}catch(_){}
 }
-function open(){
- const modal=document.getElementById('paletteModal');if(!modal)return;
- modal.hidden=false;
-}
+function open(){const m=document.getElementById('paletteModal');if(m)m.hidden=false;}
 function close(){const m=document.getElementById('paletteModal');if(m)m.hidden=true;}
 function init(){
  try{active=localStorage.getItem('dentistas-bird-palette')||'tucan';}catch(_){}
  apply(active,false);
  const btn=document.getElementById('paletteOpen');if(btn)btn.addEventListener('click',open);
- const closeBtn=document.getElementById('paletteClose');if(closeBtn)closeBtn.addEventListener('click',close);
- const modal=document.getElementById('paletteModal');
- if(modal)modal.addEventListener('click',e=>{if(e.target===modal)close();});
+ const cb=document.getElementById('paletteClose');if(cb)cb.addEventListener('click',close);
+ const modal=document.getElementById('paletteModal');if(modal)modal.addEventListener('click',e=>{if(e.target===modal)close();});
  const grid=document.getElementById('paletteGrid');
- if(grid){
-   grid.innerHTML=Object.entries(palettes).map(([id,p])=>'<button type="button" class="paletteChoice" data-bird-palette="'+id+'" aria-pressed="false"><span class="paletteSwatches">'+[p.primary,p.secondary,p.accent,p.background,p.border].map(c=>'<i style="background:'+c+'"></i>').join('')+'</span><span><span class="paletteName">'+p.name+'</span><br><span class="paletteHint">10 colores · sonido del ave</span></span></button>').join('');
-   grid.addEventListener('click',e=>{const b=e.target.closest('[data-bird-palette]');if(!b)return;apply(b.dataset.birdPalette,true);});
- }
+ if(grid){grid.innerHTML=Object.entries(palettes).map(([id,p])=>'<button type="button" class="paletteChoice" data-bird-palette="'+id+'" aria-pressed="false"><span class="paletteSwatches">'+[p.primary,p.secondary,p.accent,p.background,p.border].map(c=>'<i style="background:'+c+'"></i>').join('')+'</span><span><span class="paletteName">'+p.name+'</span><br><span class="paletteHint">10 colores · canto del ave</span></span></button>').join('');grid.addEventListener('click',e=>{const b=e.target.closest('[data-bird-palette]');if(b)apply(b.dataset.birdPalette,true);});}
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 window.BirdPalettes={apply,list:()=>Object.entries(palettes).map(([id,p])=>({id,name:p.name,colors:keys.map(k=>p[k])}))};
