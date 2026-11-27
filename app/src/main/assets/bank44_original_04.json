@@ -105,27 +105,6 @@
     "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
   },
   {
-    "id": "ORG4-006",
-    "cat": "Desarrollo de la oclusión",
-    "difficulty": "facil",
-    "q": "¿Qué tres relaciones del plano terminal de los segundos molares temporales deben registrarse clínicamente?",
-    "a": [
-      [
-        "Plano recto",
-        45
-      ],
-      [
-        "Escalón mesial",
-        35
-      ],
-      [
-        "Escalón distal",
-        20
-      ]
-    ],
-    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
-  },
-  {
     "id": "ORG4-007",
     "cat": "Desarrollo de la oclusión",
     "difficulty": "facil",
@@ -676,27 +655,6 @@
     "cat": "Desarrollo de la oclusión",
     "difficulty": "medio",
     "q": "¿Qué dientes caracterizan principalmente la fase tardía de la dentición mixta?",
-    "a": [
-      [
-        "Caninos permanentes",
-        45
-      ],
-      [
-        "Premolares",
-        35
-      ],
-      [
-        "Segundos molares",
-        20
-      ]
-    ],
-    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
-  },
-  {
-    "id": "ORG4-034",
-    "cat": "Desarrollo de la oclusión",
-    "difficulty": "medio",
-    "q": "¿Qué dientes aparecen principalmente durante la segunda fase de la dentición mixta?",
     "a": [
       [
         "Caninos permanentes",
@@ -1607,27 +1565,6 @@
     "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
   },
   {
-    "id": "ORG4-076",
-    "cat": "Desarrollo de la oclusión",
-    "difficulty": "extremo",
-    "q": "¿Qué cambios pueden asociarse con la ausencia congénita de un diente?",
-    "a": [
-      [
-        "Espacios",
-        45
-      ],
-      [
-        "Migración dentaria",
-        35
-      ],
-      [
-        "Alteración de la posición de dientes vecinos",
-        20
-      ]
-    ],
-    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
-  },
-  {
     "id": "ORG4-077",
     "cat": "Desarrollo de la oclusión",
     "difficulty": "extremo",
@@ -2000,31 +1937,6 @@
     "cat": "Desarrollo de la oclusión",
     "difficulty": "extremo",
     "q": "¿Qué elementos ayudan a valorar el riesgo de alteración en la erupción de los caninos permanentes?",
-    "a": [
-      [
-        "Espacio disponible",
-        35
-      ],
-      [
-        "Trayectoria eruptiva",
-        30
-      ],
-      [
-        "Palpación clínica",
-        20
-      ],
-      [
-        "Estudios radiográficos cuando están indicados",
-        15
-      ]
-    ],
-    "source": "AAPD. Management of the Developing Dentition and Occlusion; literatura indexada sobre desarrollo dentario, erupción, mantenimiento de espacio y ortodoncia interceptiva."
-  },
-  {
-    "id": "ORG4-094",
-    "cat": "Desarrollo de la oclusión",
-    "difficulty": "extremo",
-    "q": "¿Qué información puede ayudar a valorar una posible alteración de la erupción de los caninos permanentes?",
     "a": [
       [
         "Espacio disponible",
