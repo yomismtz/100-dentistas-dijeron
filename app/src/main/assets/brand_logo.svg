@@ -1,35 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="t d">
-<title id="t">Así los Dentistas lo Dijeron</title><desc id="d">Identidad educativa odontológica en azul, turquesa, lila y dorado</desc>
-<defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#effcff"/><stop offset=".48" stop-color="#dcfaf2"/><stop offset="1" stop-color="#eee5ff"/></linearGradient>
- <linearGradient id="tooth" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eaf7ff"/></linearGradient>
- <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e4ed8"/><stop offset="1" stop-color="#19b7c6"/></linearGradient>
- <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7b53e8"/><stop offset="1" stop-color="#cdb7ff"/></linearGradient>
- <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f6d365"/><stop offset=".5" stop-color="#d8b45f"/><stop offset="1" stop-color="#f7e39d"/></linearGradient>
- <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#234d7a" flood-opacity=".20"/></filter>
-</defs>
-<rect x="10" y="10" width="940" height="600" rx="92" fill="url(#bg)"/>
-<path d="M132 166C201 82 328 60 438 102c73 28 92 28 169-1 113-42 231-4 269 79-69-29-136-13-184 34-41 40-72 84-102 127-36 51-75 99-134 116-69 20-141-4-188-54-33-35-53-81-80-121-27-41-59-78-99-99-21-11-44-17-67-17z" fill="none" stroke="url(#gold)" stroke-width="16" opacity=".85"/>
-<g filter="url(#s)">
- <path d="M246 111c-86 11-122 80-101 151 14 49 47 79 57 133 13 73 18 138 65 149 43 10 55-93 101-93 44 0 54 104 97 94 50-12 50-86 67-152 11-44 42-75 54-117 23-80-18-154-104-166-61-8-85 29-114 29-32 0-58-38-122-28z" fill="url(#tooth)" stroke="#bdeef2" stroke-width="8"/>
- <circle cx="292" cy="246" r="27" fill="#12376f"/><circle cx="442" cy="246" r="27" fill="#12376f"/>
- <circle cx="301" cy="238" r="8" fill="#fff"/><circle cx="451" cy="238" r="8" fill="#fff"/>
- <path d="M292 315c39 42 111 42 150 0" fill="none" stroke="#173665" stroke-width="13" stroke-linecap="round"/>
- <path d="M181 124h363l-69-54H248z" fill="#4d2d84"/><path d="M365 69v-23l136 35-136 35z" fill="#7b53e8"/>
- <circle cx="515" cy="88" r="10" fill="#d8b45f"/><path d="M515 98v58" stroke="#d8b45f" stroke-width="7"/><path d="M503 157h24l-12 28z" fill="#d8b45f"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" role="img" aria-labelledby="title desc">
+<title id="title">Así los Dentistas lo Dijeron</title><desc id="desc">Tucán de trazos morados integrado con un diente sonriente. Odontología también se juega.</desc>
+<g stroke="#35105E" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+<!-- toucan body and head -->
+<path fill="#5B2390" d="M72 286c-3-82 25-166 92-207 48-29 105-17 134 19 19 24 25 56 14 85-8 21-24 39-42 54-29 25-50 58-63 97l-20 59H91z"/>
+<path fill="#FFFFFF" d="M173 108c-23 15-36 42-31 70 4 22 20 39 43 45 23 6 49-4 62-23 13-18 15-42 4-61-15-26-51-44-78-31z" stroke="none"/>
+<path fill="#A8E600" d="M219 91c69-34 157-5 198 40 15 17 23 36 24 54-54-18-104-13-150 10-28-29-57-61-72-104z"/>
+<path fill="#F06B25" d="M441 185c-54-17-105-17-150 10 44 26 94 36 148 20 13-4 23-13 25-22-4-4-12-6-23-8z" stroke="none"/>
+<path fill="#FFFFFF" d="M91 284c20-54 54-91 99-106 35-12 75-7 105 16 22 17 35 41 36 69 1 32-14 61-41 80-30 21-70 27-108 17l-73-20z"/>
+<!-- tooth -->
+<path fill="#FFFFFF" d="M280 214c-27-18-65-17-88 4-21 19-24 52-11 81 10 22 17 48 24 77 5 24 13 42 28 42 19 0 25-47 45-66 10-10 23-10 33 0 20 19 26 66 45 66 15 0 23-18 28-42 7-29 14-55 24-77 13-29 10-62-11-81-23-21-61-22-88-4-10 7-19 7-29 0z"/>
+<path fill="none" stroke="#12AFAE" stroke-width="12" d="M229 315c29 28 66 28 95 0"/>
+<path fill="none" stroke="#35105E" stroke-width="11" d="M245 277h1"/>
+<!-- graduation cap -->
+<path fill="#35105E" d="M92 57 205 20l120 37-118 43z"/>
+<path fill="#5B2390" d="m139 76 66 22 68-22-5 30c-36 25-88 25-125 0z" stroke="none"/>
+<path fill="none" stroke="#A8E600" stroke-width="9" d="M95 57 87 133"/>
+<path fill="#A8E600" d="M73 134h28l-4 36H77z" stroke="none"/>
 </g>
-<g transform="translate(565 118)">
- <circle cx="89" cy="72" r="53" fill="#dff9ff" stroke="#d8b45f" stroke-width="10"/>
- <circle cx="89" cy="72" r="34" fill="#9fe6ff" stroke="#1e4ed8" stroke-width="5"/>
- <path d="M48 112-2 217" stroke="url(#gold)" stroke-width="19" stroke-linecap="round"/>
+<!-- title lockup -->
+<g font-family="Arial, sans-serif" font-weight="900">
+<text x="510" y="115" font-size="62" fill="#35105E">Así los</text>
+<text x="500" y="205" font-size="88" fill="#9B174B">Dentistas</text>
+<text x="500" y="292" font-size="82" fill="#35105E">lo Dijeron</text>
 </g>
-<g filter="url(#s)">
- <rect x="436" y="338" width="430" height="168" rx="42" fill="url(#blue)"/>
- <rect x="486" y="309" width="134" height="52" rx="20" fill="#19b7c6"/>
- <text x="553" y="346" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="30" font-weight="800">ASÍ LOS</text>
- <text x="652" y="415" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="60" font-weight="900">DENTISTAS</text>
- <rect x="520" y="438" width="270" height="51" rx="25" fill="url(#gold)"/>
- <text x="655" y="474" text-anchor="middle" fill="#352568" font-family="Arial,sans-serif" font-size="31" font-weight="900">LO DIJERON</text>
-</g>
-<text x="650" y="552" text-anchor="middle" fill="#4d2d84" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="5">ODONTOLOGÍA TAMBIÉN SE JUEGA</text>
+<path d="M500 316 Q760 350 1040 316" fill="none" stroke="#A8E600" stroke-width="12" stroke-linecap="round"/>
+<text x="770" y="385" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-style="italic" font-weight="700" fill="#35105E">Odontología también se juega</text>
+<path d="M505 371h45m490 0h45" stroke="#A8E600" stroke-width="8" stroke-linecap="round"/>
 </svg>
