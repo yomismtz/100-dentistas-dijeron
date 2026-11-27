@@ -84,6 +84,27 @@
     "source": "WHO Global Oral Health Action Plan/monitoring framework; WHO Oral Health fact sheet 2025; CDC Oral Health Surveillance and community prevention"
   },
   {
+    "id": "SPC-005",
+    "cat": "Salud pública y odontología comunitaria",
+    "difficulty": "facil",
+    "q": "Menciona tres componentes de incidencia.",
+    "a": [
+      [
+        "Casos nuevos",
+        45
+      ],
+      [
+        "Población en riesgo",
+        35
+      ],
+      [
+        "Periodo de observación",
+        20
+      ]
+    ],
+    "source": "WHO Global Oral Health Action Plan/monitoring framework; WHO Oral Health fact sheet 2025; CDC Oral Health Surveillance and community prevention"
+  },
+  {
     "id": "SPC-006",
     "cat": "Salud pública y odontología comunitaria",
     "difficulty": "facil",
@@ -309,6 +330,27 @@
       ],
       [
         "Evaluar tendencias",
+        20
+      ]
+    ],
+    "source": "WHO Global Oral Health Action Plan/monitoring framework; WHO Oral Health fact sheet 2025; CDC Oral Health Surveillance and community prevention"
+  },
+  {
+    "id": "SPC-019",
+    "cat": "Salud pública y odontología comunitaria",
+    "difficulty": "facil",
+    "q": "Señala tres componentes del índice CPOD.",
+    "a": [
+      [
+        "Dientes cariados",
+        45
+      ],
+      [
+        "Dientes perdidos por caries",
+        35
+      ],
+      [
+        "Dientes obturados",
         20
       ]
     ],
