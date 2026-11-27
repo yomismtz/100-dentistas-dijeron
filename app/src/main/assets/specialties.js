@@ -402,7 +402,7 @@ function spStats(){
   const result={};
   SPECIALTY_DEFS.forEach(d=>{
     const n=spBank(d.id).length;
-    result[d.id]={count:n,ready:d.id==='general'||n>=GAME_SIZE,complete:d.id!=='general'&&n>=SPECIALTY_TARGET};
+    result[d.id]={count:n,ready:d.id==='general'||n>=GAME_SIZE,complete:false};
   });
   specialtyStatsCache=result;
   return result;
@@ -529,8 +529,8 @@ chooseGameQuestions=function(){
 
 function spBadgeText(stat,id){
   if(id==='general') return questionPool.length+' disponibles';
-  if(stat.complete) return '✓ 100/100 COMPLETO';
-  if(stat.ready) return stat.count+'/100 verificadas';
+  if(stat.count>=SPECIALTY_TARGET) return stat.count+'/100 registros · pendiente de validación';
+  if(stat.ready) return stat.count+'/100 registros';
   return stat.count+'/100 · faltan '+Math.max(0,GAME_SIZE-stat.count)+' para jugar';
 }
 
@@ -654,7 +654,7 @@ function spBankStatusModal(){
   const audit=spAuditBank();
   openModal(`<h2>📚 ESTADO DE LOS BANCOS</h2>
     <div class="bankProgressList">
-      ${SPECIALTY_DEFS.map(d=>`<div><span>${d.icon} ${d.name}</span><b>${d.id==='general'?stats[d.id].count:stats[d.id].count+'/100'}</b></div>`).join('')}
+      ${SPECIALTY_DEFS.map(d=>`<div><span>${d.icon} ${d.name}</span><b>${d.id==='general'?stats[d.id].count:stats[d.id].count+'/100 registros'}</b></div>`).join('')}
     </div>
     <p>Solo se habilitan bancos con al menos 8 registros. Meta editorial: 100 preguntas únicas y revisadas.</p>
     <p><b>Auditoría del banco:</b> ${audit.total} registros · ${audit.pending} pendientes de clasificación · ${audit.withoutCategory} sin categoría de origen · ${audit.exactDuplicateRecords} posibles duplicados exactos en ${audit.exactDuplicateGroups} grupos · ${audit.emptyAnswers} sin respuestas.</p>
