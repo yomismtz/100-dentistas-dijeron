@@ -293,23 +293,19 @@
     "id": "ORG13-11",
     "cat": "Cirugía bucal",
     "difficulty": "facil",
-    "q": "¿Cuáles son cinco aspectos clave para responder al tema «qué debe comprobarse antes de comenzar»?",
+    "q": "¿Cuáles son cuatro aspectos clave que deben comprobarse antes de comenzar el procedimiento?",
     "a": [
       [
         "identidad",
         40
       ],
       [
-        "procedimiento",
-        25
+        "procedimiento autorizado",
+        37
       ],
       [
         "consentimiento",
         15
-      ],
-      [
-        "procedimiento autorizado",
-        12
       ],
       [
         "posibles complicaciones",
@@ -1449,11 +1445,11 @@
     "id": "ORG13-51",
     "cat": "Cirugía bucal",
     "difficulty": "dificil",
-    "q": "¿Cuáles son cinco aspectos clave para responder al tema «qué caracteriza la fase proliferativa»?",
+    "q": "¿Cuáles son cuatro aspectos clave que caracterizan la fase proliferativa?",
     "a": [
       [
         "tejido de granulación",
-        40
+        48
       ],
       [
         "angiogénesis",
@@ -1466,10 +1462,6 @@
       [
         "formación de coágulo",
         12
-      ],
-      [
-        "formación de tejido de granulación",
-        8
       ]
     ],
     "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
@@ -1594,11 +1586,11 @@
     "id": "ORG13-56",
     "cat": "Cirugía bucal",
     "difficulty": "dificil",
-    "q": "¿Cuáles son cinco aspectos clave para responder al tema «qué hallazgo caracteriza mejor la alveolitis»?",
+    "q": "¿Cuáles son cuatro hallazgos que caracterizan la alveolitis?",
     "a": [
       [
         "dolor intenso",
-        40
+        52
       ],
       [
         "alveolo sin coágulo adecuado",
@@ -1607,10 +1599,6 @@
       [
         "ausencia de una colección purulenta como hallazgo principal",
         15
-      ],
-      [
-        "dolor",
-        12
       ],
       [
         "mal olor o sabor",
@@ -1652,7 +1640,7 @@
     "id": "ORG13-58",
     "cat": "Cirugía bucal",
     "difficulty": "dificil",
-    "q": "¿Cuáles son cinco aspectos clave para responder al tema «cuál es un principio central ante una colección purulenta»?",
+    "q": "¿Cuáles son cuatro principios ante una colección purulenta de origen odontogénico?",
     "a": [
       [
         "control del foco",
@@ -1660,7 +1648,7 @@
       ],
       [
         "drenaje indicado",
-        25
+        33
       ],
       [
         "tratamiento del diente causal",
@@ -1669,10 +1657,6 @@
       [
         "cultivo cuando esté indicado",
         12
-      ],
-      [
-        "drenaje",
-        8
       ]
     ],
     "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
@@ -2754,7 +2738,7 @@
     "id": "ORG13-96",
     "cat": "Cirugía bucal",
     "difficulty": "extremo",
-    "q": "¿Cuáles son cinco aspectos clave para responder al tema «qué puede aumentar la prioridad de un procedimiento»?",
+    "q": "¿Cuáles son cuatro factores que pueden aumentar la prioridad de un procedimiento?",
     "a": [
       [
         "dolor no controlado",
@@ -2762,15 +2746,11 @@
       ],
       [
         "infección progresiva",
-        25
+        37
       ],
       [
         "compromiso funcional",
         15
-      ],
-      [
-        "infección",
-        12
       ],
       [
         "dehiscencia",
