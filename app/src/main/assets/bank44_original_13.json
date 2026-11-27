@@ -1955,30 +1955,26 @@
     "id": "ORG13-69",
     "cat": "Cirugía bucal",
     "difficulty": "dificil",
-    "q": "¿Cuáles son cinco aspectos clave para responder al tema «qué territorios tienen sensibilidad general del nervio lingual»?",
+    "q": "¿Qué territorios reciben sensibilidad general a través del nervio lingual?",
     "a": [
       [
-        "mucosa lingual anterior",
+        "dos tercios anteriores de la lengua",
         40
       ],
       [
-        "encía lingual mandibular",
+        "mucosa del piso de la boca",
         25
       ],
       [
-        "dos tercios anteriores de la lengua",
+        "encía lingual mandibular",
+        20
+      ],
+      [
+        "mucosa lingual adyacente",
         15
-      ],
-      [
-        "gusto de los dos tercios anteriores",
-        12
-      ],
-      [
-        "sensibilidad de mucosa",
-        8
       ]
     ],
-    "source": "Guías clínicas de cirugía bucal y literatura indexada; SECIB Clinical Practice Guideline sobre terceros molares (2024) y literatura quirúrgica oral reciente."
+    "source": "Fagan SE, Roy W. Anatomy, Head and Neck: Lingual Nerve. StatPearls [Internet]. NCBI Bookshelf; actualización 2023."
   },
   {
     "id": "ORG13-70",
