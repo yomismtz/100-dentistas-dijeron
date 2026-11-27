@@ -305,10 +305,6 @@ function spAuditBank(){
   const duplicateRecords=exactGroups.reduce((n,g)=>n+g.length-1,0);
   return {total:questionPool.length,byArea,pending,withoutCategory,emptyAnswers,exactDuplicateGroups:exactGroups.length,exactDuplicateRecords:duplicateRecords};
 }
-  const key=spNorm(q?.cat||'');
-  const entry=SP_CATEGORY_CLASSIFICATION[key];
-  return entry ? {sourceCategory:String(q?.cat||''),primaryArea:entry[0],subarea:entry[1]} : {sourceCategory:String(q?.cat||''),primaryArea:'Pendiente de clasificación',subarea:'Revisión requerida'};
-}
 
 let spExtraCategoriesReady = false;
 function spCategoryId(value){
