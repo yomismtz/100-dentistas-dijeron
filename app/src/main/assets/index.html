@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="engagement.css">
   <link rel="stylesheet" href="cpu-opponent.css">
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="palette.css">
 </head>
 <body>
   <main id="home" class="screen home">
@@ -29,6 +30,7 @@
     <div class="homeActions">
       <button id="start" class="primary">PARTIDA EN EQUIPO</button>
       <button id="help">¿CÓMO SE JUEGA?</button>
+      <button id="paletteOpen" type="button">🎨 PALETA DE AVES</button>
     </div>
   </main>
   <main id="game" class="screen hidden" aria-live="polite">
@@ -73,6 +75,7 @@
       </section>
     </footer>
   </main>
+  <div id="paletteModal" hidden><section class="palettePanel" role="dialog" aria-modal="true" aria-labelledby="paletteTitle"><button id="paletteClose" class="paletteClose" type="button" aria-label="Cerrar">✕</button><h2 id="paletteTitle">🎨 Paletas inspiradas en aves</h2><p>Selecciona un ave para cambiar los 10 colores de la interfaz y escuchar su canto.</p><div id="paletteGrid" class="paletteGrid"></div><p class="paletteHint">El sonido se reproduce si está instalado el archivo correspondiente.</p></section></div>
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modalCard">
       <button id="closeModal" class="closeBtn">×</button>
@@ -118,5 +121,6 @@
   <script src="quick-streak.js"></script>
   <script src="engagement.js"></script>
   <script src="cpu-opponent.js"></script>
+  <script src="palette.js"></script>
 </body>
 </html>
