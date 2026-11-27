@@ -192,5 +192,28 @@
         25
       ]
     ]
+  },
+  {
+    "cat": "Materiales, estética e implantes",
+    "q": "Propiedades del titanio que favorecen su uso como biomaterial para implantes dentales:",
+    "a": [
+      [
+        "Biocompatibilidad",
+        30
+      ],
+      [
+        "Resistencia a la corrosión por su capa pasiva de óxido",
+        30
+      ],
+      [
+        "Propiedades mecánicas adecuadas",
+        20
+      ],
+      [
+        "Superficie capaz de favorecer la oseointegración",
+        20
+      ]
+    ],
+    "source": "Ghodrati H et al. A narrative review of recent developments in osseointegration and anti-corrosion of titanium dental implants with nano surface. Bone Reports. 2025;25:101846. doi:10.1016/j.bonr.2025.101846."
   }
 ]
